@@ -15,8 +15,6 @@ WITH source_data AS (
   SELECT * FROM json_populate_recordset(
     NULL::record,
     '[
-  {
-    "json_agg": [
       {
         "id": "a9c65aac-6d58-44f7-b343-26335e91704c",
         "name": "Aix-en-Provence",
@@ -1403,8 +1401,6 @@ WITH source_data AS (
         "longitude": null,
         "created_at": "2026-01-24T23:34:28.480305+00:00"
       }
-    ]
-  }
 ]
   ) AS (
     id          UUID,
