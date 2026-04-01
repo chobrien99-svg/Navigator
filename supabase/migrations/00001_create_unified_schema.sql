@@ -128,6 +128,40 @@ CREATE TYPE alert_type AS ENUM (
   'new_organization'
 );
 
+CREATE TYPE subscription_tier AS ENUM (
+  'free',
+  'pro',
+  'enterprise'
+);
+
+CREATE TYPE technology_layer_type AS ENUM (
+  'infrastructure',
+  'model',
+  'application',
+  'tooling',
+  'data',
+  'other'
+);
+
+CREATE TYPE product_modality_type AS ENUM (
+  'software',
+  'hardware',
+  'api',
+  'platform',
+  'marketplace',
+  'saas',
+  'other'
+);
+
+CREATE TYPE fundraising_status_type AS ENUM (
+  'not_raising',
+  'exploring',
+  'actively_raising',
+  'closing',
+  'recently_closed',
+  'unknown'
+);
+
 -- =============================================================================
 -- 1. CORE ENTITY LAYER
 -- =============================================================================
@@ -176,8 +210,18 @@ CREATE TABLE organizations (
   founded_date       DATE,
   employee_count     INTEGER,
   employee_range     TEXT,
+  founded_year       INTEGER,
   first_seen_at      TIMESTAMPTZ,
   is_stealth         BOOLEAN NOT NULL DEFAULT FALSE,
+  -- Funding summary (denormalized for quick access)
+  total_raised_eur   NUMERIC(15, 2),
+  last_round         TEXT,
+  fundraising_status fundraising_status_type DEFAULT 'unknown',
+  -- AI/tech classification (from AI Radar)
+  technology_layer   technology_layer_type,
+  -- Denormalized counters
+  signal_count       INTEGER DEFAULT 0,
+  last_signal_date   TIMESTAMPTZ,
   -- Migration provenance
   legacy_source      TEXT,
   legacy_id          TEXT,
@@ -308,6 +352,8 @@ CREATE TABLE sectors (
   slug        TEXT UNIQUE NOT NULL,
   parent_id   UUID REFERENCES sectors(id) ON DELETE SET NULL,
   description TEXT,
+  icon        TEXT,
+  color       TEXT,
   created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -339,6 +385,7 @@ CREATE TABLE organization_tags (
   id              UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   organization_id UUID NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
   tag             TEXT NOT NULL,
+  strength        INTEGER CHECK (strength BETWEEN 1 AND 5),
   created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   UNIQUE(organization_id, tag)
 );
@@ -426,7 +473,9 @@ CREATE TABLE products (
   organization_id UUID NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
   name            TEXT NOT NULL,
   description     TEXT,
+  product_type    TEXT,
   product_url     TEXT,
+  modality        product_modality_type DEFAULT 'software',
   launch_date     DATE,
   status          TEXT DEFAULT 'active',
   created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -441,11 +490,20 @@ CREATE INDEX idx_products_org ON products(organization_id);
 -- -----------------------------------------------------------------------------
 CREATE TABLE organization_profiles (
   id                       UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  organization_id          UUID UNIQUE NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
-  what_they_are_building   TEXT,
-  why_it_matters           TEXT,
-  investor_brief           TEXT,
-  analyst_note             TEXT,
+  organization_id              UUID UNIQUE NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
+  what_they_are_building       TEXT,
+  why_it_matters               TEXT,
+  investor_brief               TEXT,
+  analyst_note                 TEXT,
+  product_description          TEXT,
+  target_market                TEXT,
+  competitive_landscape        TEXT,
+  current_strategy             TEXT,
+  business_model_hypothesis    TEXT,
+  technical_thesis             TEXT,
+  fundraising_signal_summary   TEXT,
+  est_next_raise               TEXT,
+  entity_complexity            TEXT,
   created_at               TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at               TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -473,7 +531,10 @@ CREATE TABLE funding_rounds (
   is_estimated      BOOLEAN NOT NULL DEFAULT FALSE,
   source_url        TEXT,
   source_name       TEXT,
+  press_release_url TEXT,
+  notes             TEXT,
   valuation_eur     NUMERIC(15, 2),
+  is_verified       BOOLEAN NOT NULL DEFAULT FALSE,
   -- Migration provenance
   legacy_source     TEXT,
   legacy_id         TEXT,
@@ -493,9 +554,10 @@ CREATE INDEX idx_funding_legacy ON funding_rounds(legacy_source, legacy_id);
 CREATE TABLE funding_round_investors (
   id               UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   funding_round_id UUID NOT NULL REFERENCES funding_rounds(id) ON DELETE CASCADE,
-  investor_id      UUID NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
-  is_lead          BOOLEAN NOT NULL DEFAULT FALSE,
-  investor_name    TEXT,
+  investor_id          UUID NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
+  is_lead              BOOLEAN NOT NULL DEFAULT FALSE,
+  investor_name        TEXT,
+  investment_amount_eur NUMERIC(15, 2),
   created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   UNIQUE(funding_round_id, investor_id)
 );
@@ -606,14 +668,35 @@ CREATE INDEX idx_grants_date ON grants(awarded_date DESC);
 -- User profiles (linked to Supabase Auth)
 -- -----------------------------------------------------------------------------
 CREATE TABLE profiles (
-  id         UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
-  email      TEXT,
-  full_name  TEXT,
-  avatar_url TEXT,
-  role       TEXT DEFAULT 'user',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  id                        UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  email                     TEXT,
+  full_name                 TEXT,
+  avatar_url                TEXT,
+  role                      TEXT DEFAULT 'user',
+  is_admin                  BOOLEAN NOT NULL DEFAULT FALSE,
+  subscription_tier         subscription_tier DEFAULT 'free',
+  stripe_customer_id        TEXT,
+  stripe_subscription_id    TEXT,
+  subscription_status       TEXT DEFAULT 'inactive',
+  subscription_period_end   TIMESTAMPTZ,
+  created_at                TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at                TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- -----------------------------------------------------------------------------
+-- export_usage
+-- Tracks export quotas per user per billing period
+-- -----------------------------------------------------------------------------
+CREATE TABLE export_usage (
+  id           UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_id      UUID NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
+  period       TEXT NOT NULL,
+  export_count INTEGER NOT NULL DEFAULT 0,
+  created_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE(user_id, period)
+);
+
+CREATE INDEX idx_export_usage_user ON export_usage(user_id);
 
 -- -----------------------------------------------------------------------------
 -- watchlist
@@ -843,6 +926,7 @@ ALTER TABLE alerts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE lists ENABLE ROW LEVEL SECURITY;
 ALTER TABLE list_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE saved_searches ENABLE ROW LEVEL SECURITY;
+ALTER TABLE export_usage ENABLE ROW LEVEL SECURITY;
 ALTER TABLE organization_merge_map ENABLE ROW LEVEL SECURITY;
 ALTER TABLE person_merge_map ENABLE ROW LEVEL SECURITY;
 
@@ -899,3 +983,6 @@ CREATE POLICY "Public list items are readable" ON list_items
 
 CREATE POLICY "Users can manage own saved searches" ON saved_searches
   FOR ALL USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can read own export usage" ON export_usage
+  FOR SELECT USING (auth.uid() = user_id);
