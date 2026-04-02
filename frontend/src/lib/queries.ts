@@ -200,7 +200,7 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
     .from("funding_rounds")
     .select(
       `*,
-      organizations:organization_id(name, slug, organization_type),
+      organizations:organization_id(name, slug, organization_type, organization_sectors(is_primary, sectors(name, slug))),
       funding_round_investors(is_lead, investor_name, organizations:investor_id(name, slug))`
     )
     .order("announced_date", { ascending: false });

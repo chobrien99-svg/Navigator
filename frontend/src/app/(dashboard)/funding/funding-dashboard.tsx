@@ -30,6 +30,10 @@ interface Round {
     name: string;
     slug: string;
     organization_type: string;
+    organization_sectors?: {
+      is_primary: boolean;
+      sectors: { name: string; slug: string } | null;
+    }[];
   } | null;
   funding_round_investors?: {
     is_lead: boolean;
@@ -60,6 +64,24 @@ function formatStage(stage: string): string {
 function getYear(dateStr: string | null): number | null {
   if (!dateStr) return null;
   return new Date(dateStr).getFullYear();
+}
+
+function getMonthKey(dateStr: string | null): string | null {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
+
+function formatMonthLabel(key: string): string {
+  const [year, month] = key.split("-");
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+
+function getSector(r: Round): string {
+  const sectors = r.organizations?.organization_sectors ?? [];
+  const primary = sectors.find((s) => s.is_primary);
+  return primary?.sectors?.name ?? sectors[0]?.sectors?.name ?? "Unknown";
 }
 
 const STAGE_ORDER = [
@@ -270,6 +292,47 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
       }));
   }, [stageData]);
 
+  // Monthly timeline (recent 24 months)
+  const monthlyData = useMemo(() => {
+    const byMonth: Record<string, { capital: number; count: number }> = {};
+    filtered.forEach((r) => {
+      const mk = getMonthKey(r.announced_date);
+      if (!mk) return;
+      if (!byMonth[mk]) byMonth[mk] = { capital: 0, count: 0 };
+      byMonth[mk].capital += r.amount_eur ?? 0;
+      byMonth[mk].count += 1;
+    });
+    return Object.entries(byMonth)
+      .map(([month, d]) => ({
+        month,
+        label: formatMonthLabel(month),
+        capital: d.capital,
+        count: d.count,
+      }))
+      .sort((a, b) => a.month.localeCompare(b.month))
+      .slice(-24);
+  }, [filtered]);
+
+  // Sector breakdown
+  const sectorData = useMemo(() => {
+    const bySector: Record<string, { capital: number; count: number }> = {};
+    filtered.forEach((r) => {
+      const sector = getSector(r);
+      if (!bySector[sector]) bySector[sector] = { capital: 0, count: 0 };
+      bySector[sector].capital += r.amount_eur ?? 0;
+      bySector[sector].count += 1;
+    });
+    return Object.entries(bySector)
+      .map(([sector, d], i) => ({
+        sector,
+        capital: d.capital,
+        count: d.count,
+        color: CHART_COLORS[i % CHART_COLORS.length],
+      }))
+      .sort((a, b) => b.capital - a.capital)
+      .slice(0, 12);
+  }, [filtered]);
+
   // Toggle sort
   function toggleSort(key: SortKey) {
     if (sortKey === key) {
@@ -385,6 +448,18 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
           </p>
         </div>
       </div>
+
+      {/* Amount diagnostic — shows raw values to debug unit issues */}
+      {stats.roundCount > 0 && stats.totalCapital < 100_000 && (
+        <div className="mt-4 bg-secondary-container/30 px-6 py-3 text-xs text-on-surface-variant">
+          <span className="font-semibold text-secondary">Data note:</span>{" "}
+          Total capital appears low (raw sum: €{stats.totalCapital.toLocaleString()}).
+          Amounts in the database may be stored in thousands or millions rather
+          than raw euros. Check the <code className="font-mono">amount_eur</code> column
+          in Supabase — e.g. if Mistral shows 2000 it likely means €2,000M
+          (amounts stored in thousands).
+        </div>
+      )}
 
       {/* Filters */}
       <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -566,8 +641,99 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
             </div>
           </div>
 
-          {/* Row 2: Capital by Stage + Deal Count by Year */}
+          {/* Row 2: Monthly Timeline (recent 24 months) */}
+          <div className="grid grid-cols-1 gap-8">
+            <div className="bg-surface-container-lowest p-6">
+              <h2 className="diplomatic-label mb-4">
+                Monthly Capital Flow (Recent 24 Months)
+              </h2>
+              {monthlyData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={280}>
+                  <BarChart data={monthlyData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#c1c7ce30" />
+                    <XAxis
+                      dataKey="label"
+                      tick={{ fontSize: 10, fill: "#41474d" }}
+                      axisLine={false}
+                      tickLine={false}
+                      interval={1}
+                      angle={-45}
+                      textAnchor="end"
+                      height={60}
+                    />
+                    <YAxis
+                      tick={{ fontSize: 11, fill: "#41474d" }}
+                      axisLine={false}
+                      tickLine={false}
+                      tickFormatter={(v) => formatEur(v)}
+                    />
+                    <Tooltip content={<ChartTooltip />} />
+                    <Bar dataKey="capital" fill="#2f5d7c" />
+                  </BarChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="flex h-[280px] items-center justify-center">
+                  <p className="font-headline italic text-on-surface-variant">
+                    No monthly data to display
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Row 3: Sector Breakdown + Capital by Stage */}
           <div className="grid grid-cols-2 gap-8">
+            {/* Sector Breakdown */}
+            <div className="bg-surface-container-lowest p-6">
+              <h2 className="diplomatic-label mb-4">Funding by Sector</h2>
+              {sectorData.length > 0 ? (
+                <>
+                  <ResponsiveContainer width="100%" height={260}>
+                    <BarChart data={sectorData} layout="vertical">
+                      <CartesianGrid
+                        strokeDasharray="3 3"
+                        stroke="#c1c7ce30"
+                        horizontal={false}
+                      />
+                      <XAxis
+                        type="number"
+                        tick={{ fontSize: 11, fill: "#41474d" }}
+                        axisLine={false}
+                        tickLine={false}
+                        tickFormatter={(v) => formatEur(v)}
+                      />
+                      <YAxis
+                        type="category"
+                        dataKey="sector"
+                        tick={{ fontSize: 10, fill: "#41474d" }}
+                        axisLine={false}
+                        tickLine={false}
+                        width={120}
+                      />
+                      <Tooltip content={<ChartTooltip />} />
+                      <Bar dataKey="capital" fill="#503863" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {sectorData.map((s) => (
+                      <span
+                        key={s.sector}
+                        className="bg-primary-fixed/60 px-2 py-0.5 text-[0.6rem] text-on-primary-fixed"
+                      >
+                        {s.sector}: {s.count} rounds
+                      </span>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <div className="flex h-[260px] items-center justify-center">
+                  <p className="font-headline italic text-on-surface-variant">
+                    No sector data — link organizations to sectors
+                  </p>
+                </div>
+              )}
+            </div>
+
             {/* Capital by Stage */}
             <div className="bg-surface-container-lowest p-6">
               <h2 className="diplomatic-label mb-4">Capital by Stage</h2>
@@ -607,7 +773,10 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
               )}
             </div>
 
-            {/* Deal Count by Year */}
+          </div>
+
+          {/* Row 4: Deal Count by Year */}
+          <div className="grid grid-cols-1 gap-8">
             <div className="bg-surface-container-lowest p-6">
               <h2 className="diplomatic-label mb-4">Deal Count by Year</h2>
               {annualData.length > 0 ? (
@@ -644,7 +813,7 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
             </div>
           </div>
 
-          {/* Row 3: Top Companies + Top Investors */}
+          {/* Row 5: Top Companies + Top Investors */}
           <div className="grid grid-cols-2 gap-8">
             {/* Top Funded Companies */}
             <div className="bg-surface-container-lowest p-6">
