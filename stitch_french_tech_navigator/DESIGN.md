@@ -1,87 +1,72 @@
-```markdown
-# Design System Document
+# Design System Strategy: The Editorial Diplomat
 
-## 1. Overview & Creative North Star: "The Digital Curator"
+## 1. Overview & Creative North Star
+**The Creative North Star: "The Modern Archivist"**
+This design system rejects the "template-ready" aesthetic of modern SaaS in favor of the authoritative, tactile feel of prestigious print journalism. It is inspired by the legendary layout of *Le Monde* and the quiet power of diplomatic correspondence. 
 
-This design system is built to evoke the "French Institutional Intelligence" archetype. It rejects the frantic, neon-soaked tropes of modern SaaS in favor of a **"Digital Curator"** aesthetic—one that feels like a prestigious archival document brought into a high-performance digital space.
+The system moves beyond a standard digital grid by prioritizing **intentional asymmetry** and **tonal depth**. Rather than using lines to divide information, we use the "printed page" philosophy: hierarchy is established through extreme typographic contrast, expansive white space, and a sophisticated layering of bone, charcoal, and ochre. The result is a digital experience that feels curated, permanent, and deeply prestigious.
 
-The system prioritizes **intellectual authority, sovereignty, and endurance.** We move away from "cards" and "widgets" to focus on **Spatial Cartography**: the UI is a landscape of information where depth is defined by tonal shifts and precise, thin-line relationships rather than drop shadows. It is a "Calm Interface" designed for deep work, where the density of data is high but the visual noise is non-existent.
+## 2. Colors & Surface Architecture
+The palette is rooted in a high-contrast relationship between deep charcoals and warm, organic whites, punctuated by a regal bronze.
 
----
+### The "No-Line" Rule
+**Explicit Instruction:** Designers are prohibited from using 1px solid borders for sectioning. Structural boundaries must be defined solely through background color shifts. Use `surface-container-low` (#f4f4f0) sections sitting on a `surface` (#faf9f5) background to indicate transition.
 
-## 2. Colors & Surface Logic
+### Surface Hierarchy & Nesting
+Treat the UI as a series of physical layers—like stacked sheets of fine vellum.
+*   **Base:** `surface` (#faf9f5) for the primary page background.
+*   **Containers:** Use `surface-container-low` through `surface-container-highest` to create "nested" depth. 
+*   **Signature Textures:** For hero sections or high-impact CTAs, use a subtle linear gradient from `primary` (#181512) to `primary-container` (#2d2926) at a 15-degree angle. This provides a "carbon" finish that flat hex codes cannot replicate.
 
-The palette is rooted in a heritage-inspired spectrum—creams, linens, and deep architectural blues—supplemented by muted domain-specific tones.
+### The "Glass & Gradient" Rule
+Floating elements (such as navigation bars or utility drawers) should utilize **Glassmorphism**. Use `surface` colors at 85% opacity with a `20px` backdrop-blur. This allows the prestigious typography of the layer below to bleed through, softening the layout's rigid edges.
 
-### Surface Hierarchy & The "No-Line" Rule
-To maintain a premium editorial feel, **1px solid borders for sectioning are strictly prohibited.** We define boundaries through tonal transitions.
-- **Base Canvas:** `surface` (#FEF9EE) serves as the primary "paper" background.
-- **Structural Paneling:** Use `surface-container` (#F2EDE2) for sidebars or persistent navigation.
-- **Information Layers:** Use `surface-container-low` (#F8F3E8) to create subtle inset areas and `surface-container-lowest` (#FFFFFF) for active data workspaces or "focal" documents.
-- **Nesting:** Always shift by one tier (e.g., a white `surface-container-lowest` workspace should sit on a `surface-container-low` background) to create a sense of stacked vellum.
+## 3. Typography
+Typography is the primary architect of this system. We pair the intellectual weight of a high-contrast serif with the functional clarity of a modern geometric sans.
 
-### Glass & Tone
-- **The Glassmorphism Rule:** For floating menus or contextual overlays, use `surface` at 80% opacity with a `20px` backdrop-blur. This ensures the "institutional" background colors bleed through, preventing the UI from feeling "pasted on."
-- **Signature Textures:** For high-level actions, use a subtle linear gradient from `primary` (#114563) to `primary_container` (#2F5D7C) at 135°. Avoid vibrant gradients; keep them architectural and deep.
+*   **Display & Headlines (Newsreader):** Use these for the "voice" of the system. `display-lg` (3.5rem) should be used with tight letter-spacing (-0.02em) to mimic premium editorial mastheads.
+*   **Body & Titles (DM Sans/Public Sans):** DM Sans provides a neutral, highly readable counterpoint. It should be used for all functional data, navigation, and long-form reading.
+*   **The Contrast Rule:** Never pair a serif headline with a serif subline. Use `headline-lg` (Newsreader) followed immediately by `label-md` (Public Sans) in all-caps with 0.1rem tracking to create a "Diplomatic Header" style.
 
----
+## 4. Elevation & Depth
+In this design system, shadows are an admission of failure in tonal layering. Use them sparingly.
 
-## 3. Typography: Intellectual Authority
+*   **The Layering Principle:** Achieve lift by placing a `surface-container-lowest` (#ffffff) card on a `surface-container-low` (#f4f4f0) section. This "paper-on-paper" look is more prestigious than a drop shadow.
+*   **Ambient Shadows:** If an element must float (e.g., a modal), use an ultra-diffused shadow: `box-shadow: 0 20px 50px rgba(45, 41, 38, 0.05)`. The shadow color must be a tint of `primary`, never pure black.
+*   **The "Ghost Border" Fallback:** For accessibility in form fields, use a "Ghost Border": the `outline-variant` token at 15% opacity. High-contrast, 100% opaque borders are strictly forbidden.
 
-The typographic system utilizes a "High-Contrast Pairing" to balance heritage with technical precision.
+## 5. Components
 
-- **Headlines (Spectral / Newsreader):** Used for titles, section headers, and data storytelling. The serif typeface provides the "Institutional" voice—serious, historical, and credible.
-  - *Display-LG (3.5rem):* Reserved for major landing moments.
-  - *Headline-SM (1.5rem):* The standard for report titles.
-- **Body & UI (Source Sans 3 / Public Sans):** Used for data, labels, and functional interface elements. 
-  - *Body-MD (0.875rem):* The primary reading size.
-  - *Label-SM (0.6875rem):* Used for high-density metadata. Use `on_surface_variant` (#41474D) for these to reduce visual weight.
+### Buttons
+*   **Primary:** `primary` background with `on-primary` text. Square corners (`0px` radius).
+*   **Secondary:** `secondary` (Deep Ochre) background. Reserved for high-priority global actions (e.g., "Submit Credentials").
+*   **Tertiary:** No background or border. Text-only using `primary` with a `2px` underline in `secondary_fixed_dim` (#edbf74).
 
----
+### Input Fields
+*   **Style:** Minimalist. No enclosing box. Only a bottom stroke using `outline-variant` (#cfc4bd). 
+*   **Focus State:** The bottom stroke transitions to `secondary` (#7a5817) and the label (Newsreader) shifts upward.
 
-## 4. Elevation & Depth: Tonal Layering
+### Cards & Editorial Modules
+*   **Rule:** Forbid the use of divider lines. 
+*   **Spacing:** Use the `12` (4rem) or `16` (5.5rem) spacing tokens to separate content blocks. 
+*   **Composition:** Place an `icy blue wash` (`tertiary_container`) block behind images to create a "mounting" effect, making photography feel like a framed exhibit.
 
-Traditional drop shadows represent "weight"; this system uses **Tonal Layering** to represent "focus."
+### Chips & Tags
+*   **Style:** Rectangular, `0px` radius. Use `primary_fixed` (#e9e1dc) backgrounds with `on-primary_fixed` text for a subtle, archival look.
 
-- **The Layering Principle:** Depth is achieved by stacking. A `surface-container-lowest` (white) workspace on a `surface-dim` (#DEDACF) background creates a natural lift without a single pixel of shadow.
-- **Ambient Shadows:** Only use shadows for "Temporary Overlays" (Popovers, Tooltips). Use a `32px` blur with `4%` opacity of `on_surface`. The shadow should feel like a soft atmospheric occlusion, not a physical lift.
-- **The Ghost Border:** If high-density data requires containment (e.g., a complex data table), use a **Ghost Border**: `outline_variant` (#C1C7CE) at `15%` opacity. 
-- **The "Thin Line" Rule:** For connecting entities (Graph Links), use `Graph Links` (#C9C1B3) at `0.5px` or `1px` thickness. These lines represent relationships, not containers.
-
----
-
-## 5. Components & Data Objects
-
-### Buttons: The Formal Signature
-- **Primary:** Solid `primary` (#114563) with `on_primary` (White) text. 0px corner radius.
-- **Secondary:** `surface-container-highest` background with `primary` text. No border.
-- **Tertiary/Ghost:** `on_surface` text with no background. Underline on hover (1px offset).
-
-### Input Fields: Minimalist Precision
-Forget the "box." Use a bottom-only border (Ghost Border style) for inputs. Labels are always `label-sm` and persistent above the field. Error states use `error` (#BA1A1A) text only, no red boxes.
-
-### Chips & Domain Markers
-Instead of "pills," use small, square-edged indicators.
-- **Funding:** `secondary` (#3C6840)
-- **Government:** `tertiary` (#503863)
-- **Research:** `Research/Academia Domain` (#7C8C9E)
-Use a subtle `10%` opacity background of the color with a solid `2px` vertical accent line on the left.
-
-### Lists & Data Density
-- **Forbid Dividers:** Use `spacing-4` (0.9rem) of vertical white space to separate items.
-- **Progressive Disclosure:** Data rows should show only "Core Identity" (Name, Type). Hovering reveals "Secondary Intelligence" (Tags, Links, Metadata) via a soft fade-in (200ms ease-out).
-
----
-
-## 6. Do’s and Don’ts
+## 6. Do's and Don'ts
 
 ### Do:
-- **Use "Asymmetric Breathing":** Allow larger margins on the left (e.g., `spacing-16`) and tighter margins on the right to mimic a high-end editorial magazine layout.
-- **Embrace the 0px Radius:** Everything is sharp-edged. The "softness" comes from the colors (creams/linens), not the corners.
-- **Focus on Micro-interactions:** Transitions should be "Calm"—use `300ms cubic-bezier(0.4, 0, 0.2, 1)` for all surface transitions.
+*   **Do** embrace extreme white space. A single line of Newsreader text in the center of a `surface` screen is a valid layout choice.
+*   **Do** use `secondary` (Ochre) for accents only. It is the "wax seal" on the document; use it once per view to draw the eye to the most critical action.
+*   **Do** use asymmetrical layouts. Align a headline to the left and the body text to a narrow right-side column to mimic a broadsheet newspaper.
 
 ### Don't:
-- **No KPI Tiles:** Do not wrap single numbers in boxes. Present them as "Display" typography directly on the surface.
-- **No Vibrant Badges:** Avoid bright red/green/yellow status indicators. Use the muted Domain Palette to categorize information.
-- **No Icons as Decorations:** Icons must be functional and sparse. Use the `outline` (#72787E) token for icon strokes.
-- **No Aggressive Animations:** No "sliding" or "bouncing" panels. Surfaces should fade or expand with precise, linear-esque ease.```
+*   **Don't** use rounded corners. Every element must have a hard, 90-degree edge. Rounded corners break the "official document" metaphor.
+*   **Don't** use standard "Success" green or "Warning" yellow if possible. Lean on typographic weight and `error` (#ba1a1a) for critical states.
+*   **Don't** use icons as primary navigation. The system relies on the beauty of DM Sans; use text labels wherever possible to maintain the high-end editorial feel.
+
+## 7. Spacing Scale
+The spacing is generous to ensure the "Diplomatic" feel of exclusivity and calm.
+*   **Large-scale separation:** Use `20` (7rem) or `24` (8.5rem) for section breaks.
+*   **Component internal padding:** Standardize on `4` (1.4rem) for a breathable, "un-crowded" feel.
