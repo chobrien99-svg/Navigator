@@ -9,6 +9,7 @@ import {
   getOrganizationTags,
   getInvestorPortfolio,
   formatEur,
+  formatEurFromDb,
   formatStage,
 } from "@/lib/queries";
 
@@ -112,7 +113,7 @@ export default async function EntityDossierPage({
             <>
               <p className="diplomatic-label">Total Raised</p>
               <p className="mt-1 font-headline text-4xl font-bold text-primary">
-                {formatEur(org.total_raised_eur)}
+                {formatEurFromDb(org.total_raised_eur)}
               </p>
             </>
           ) : (
@@ -388,7 +389,7 @@ export default async function EntityDossierPage({
                           </span>
                         )}
                         <p className="text-sm font-medium text-on-surface">
-                          {round ? formatEur(round.amount_eur) : "—"}
+                          {round ? formatEurFromDb(round.amount_eur) : "—"}
                         </p>
                       </div>
                     </div>
@@ -477,7 +478,7 @@ export default async function EntityDossierPage({
                       </div>
                       <div className="text-right">
                         <p className="text-sm font-medium text-on-surface">
-                          {formatEur(round.amount_eur)}
+                          {formatEurFromDb(round.amount_eur)}
                         </p>
                         <p className="text-xs text-on-surface-variant">
                           {round.announced_date

@@ -49,12 +49,29 @@ interface Props {
 
 // ─── Helpers ──────────────────────────────────────────────
 
+// DB stores amounts in millions — convert to raw euros for display
+const AMOUNT_MULTIPLIER = 1_000_000;
+
+function toRaw(amount: number | null): number | null {
+  if (amount == null) return null;
+  return amount * AMOUNT_MULTIPLIER;
+}
+
 function formatEur(amount: number | null): string {
-  if (amount == null) return "—";
-  if (amount >= 1_000_000_000) return `€${(amount / 1_000_000_000).toFixed(1)}B`;
-  if (amount >= 1_000_000) return `€${(amount / 1_000_000).toFixed(1)}M`;
-  if (amount >= 1_000) return `€${(amount / 1_000).toFixed(0)}K`;
-  return `€${amount.toLocaleString()}`;
+  const raw = toRaw(amount);
+  if (raw == null) return "—";
+  if (raw >= 1_000_000_000) return `€${(raw / 1_000_000_000).toFixed(1)}B`;
+  if (raw >= 1_000_000) return `€${(raw / 1_000_000).toFixed(1)}M`;
+  if (raw >= 1_000) return `€${(raw / 1_000).toFixed(0)}K`;
+  return `€${raw.toLocaleString()}`;
+}
+
+function formatEurRaw(rawAmount: number | null): string {
+  if (rawAmount == null) return "—";
+  if (rawAmount >= 1_000_000_000) return `€${(rawAmount / 1_000_000_000).toFixed(1)}B`;
+  if (rawAmount >= 1_000_000) return `€${(rawAmount / 1_000_000).toFixed(1)}M`;
+  if (rawAmount >= 1_000) return `€${(rawAmount / 1_000).toFixed(0)}K`;
+  return `€${rawAmount.toLocaleString()}`;
 }
 
 function formatStage(stage: string): string {
@@ -448,18 +465,6 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
           </p>
         </div>
       </div>
-
-      {/* Amount diagnostic — shows raw values to debug unit issues */}
-      {stats.roundCount > 0 && stats.totalCapital < 100_000 && (
-        <div className="mt-4 bg-secondary-container/30 px-6 py-3 text-xs text-on-surface-variant">
-          <span className="font-semibold text-secondary">Data note:</span>{" "}
-          Total capital appears low (raw sum: €{stats.totalCapital.toLocaleString()}).
-          Amounts in the database may be stored in thousands or millions rather
-          than raw euros. Check the <code className="font-mono">amount_eur</code> column
-          in Supabase — e.g. if Mistral shows 2000 it likely means €2,000M
-          (amounts stored in thousands).
-        </div>
-      )}
 
       {/* Filters */}
       <div className="mt-6 flex flex-wrap items-center gap-4">

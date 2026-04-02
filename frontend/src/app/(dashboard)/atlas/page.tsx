@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDashboardStats, getOrganizations, formatEur } from "@/lib/queries";
+import { getDashboardStats, getOrganizations, formatEurFromDb } from "@/lib/queries";
 
 export default async function EcosystemAtlas() {
   let stats = { organizations: 0, people: 0, fundingRounds: 0, totalRaised: 0 };
@@ -40,7 +40,7 @@ export default async function EcosystemAtlas() {
           <div className="text-right">
             <p className="diplomatic-label">Capital Tracked</p>
             <p className="font-headline text-3xl font-semibold tracking-tight text-on-surface">
-              {formatEur(stats.totalRaised)}
+              {formatEurFromDb(stats.totalRaised)}
             </p>
           </div>
           <div className="text-right">

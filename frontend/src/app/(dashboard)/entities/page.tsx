@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getOrganizations, formatEur } from "@/lib/queries";
+import { getOrganizations, formatEurFromDb } from "@/lib/queries";
 import type { Organization } from "@/lib/types";
 
 const typeLabels: Record<string, { label: string; color: string }> = {
@@ -135,7 +135,7 @@ export default async function EntitiesPage() {
                 <div>
                   <p className="diplomatic-label">Total Raised</p>
                   <p className="mt-0.5 text-sm font-medium text-on-surface">
-                    {formatEur(org.total_raised_eur)}
+                    {formatEurFromDb(org.total_raised_eur)}
                   </p>
                 </div>
               </div>
