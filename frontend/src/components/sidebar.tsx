@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const navigation = [
   {
     name: "Ecosystem Atlas",
-    href: "/",
+    href: "/atlas",
     icon: "public",
   },
   {
@@ -61,10 +61,7 @@ export function Sidebar() {
       <nav className="flex-1 px-3">
         <ul className="space-y-1">
           {navigation.map((item) => {
-            const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+            const isActive = pathname.startsWith(item.href);
             return (
               <li key={item.name}>
                 <Link
