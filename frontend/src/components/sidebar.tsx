@@ -25,9 +25,14 @@ const navigation = [
     icon: "payments",
   },
   {
-    name: "Sector Maps",
-    href: "/sectors",
-    icon: "hub",
+    name: "Institutions",
+    href: "/institutions",
+    icon: "school",
+  },
+  {
+    name: "Research Intel",
+    href: "/research",
+    icon: "science",
   },
   {
     name: "Network Navigator",
