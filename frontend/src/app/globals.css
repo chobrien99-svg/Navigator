@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ========================================
+     THE NAVIGATOR — Design System Tokens
+     "The Modern Archivist" / Editorial Diplomat
+     ======================================== */
+
+  /* --- Fonts --- */
+  --font-headline: "Newsreader", serif;
+  --font-body: "Public Sans", sans-serif;
+
+  /* --- Primary Palette --- */
+  --color-primary: #114563;
+  --color-primary-container: #2f5d7c;
+  --color-primary-fixed: #c9e6ff;
+  --color-primary-fixed-dim: #9fccef;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #a8d5f9;
+  --color-on-primary-fixed: #001e2f;
+  --color-on-primary-fixed-variant: #194b69;
+  --color-inverse-primary: #9fccef;
+
+  /* --- Secondary Palette (Funding / Growth) --- */
+  --color-secondary: #3c6840;
+  --color-secondary-container: #baecba;
+  --color-secondary-fixed: #bdefbd;
+  --color-secondary-fixed-dim: #a2d3a2;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #406c44;
+  --color-on-secondary-fixed: #002108;
+  --color-on-secondary-fixed-variant: #24502b;
+
+  /* --- Tertiary Palette (Government / Policy) --- */
+  --color-tertiary: #503863;
+  --color-tertiary-container: #684f7c;
+  --color-tertiary-fixed: #f2daff;
+  --color-tertiary-fixed-dim: #dabbef;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #e4c5f9;
+  --color-on-tertiary-fixed: #27113a;
+  --color-on-tertiary-fixed-variant: #553d68;
+
+  /* --- Surface / Background (Warm Parchment) --- */
+  --color-background: #fef9ee;
+  --color-surface: #fef9ee;
+  --color-surface-dim: #dedacf;
+  --color-surface-bright: #fef9ee;
+  --color-surface-variant: #e7e2d7;
+  --color-surface-tint: #356382;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f3e8;
+  --color-surface-container: #f2ede2;
+  --color-surface-container-high: #ede8dd;
+  --color-surface-container-highest: #e7e2d7;
+
+  /* --- On Surface --- */
+  --color-on-surface: #1d1c15;
+  --color-on-surface-variant: #41474d;
+  --color-on-background: #1d1c15;
+
+  /* --- Inverse --- */
+  --color-inverse-surface: #323029;
+  --color-inverse-on-surface: #f5f0e5;
+
+  /* --- Outline & Borders --- */
+  --color-outline: #72787e;
+  --color-outline-variant: #c1c7ce;
+
+  /* --- Error --- */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* --- Domain-Specific Semantic Colors --- */
+  --color-research: #7C8C9E;
+  --color-funding: #5E8C61;
+  --color-graph-links: #C9C1B3;
+
+  /* --- Border Radius: Sharp Edges (0px) --- */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
+
+/* Institutional gradient for hero CTAs */
+.institutional-gradient {
+  background: linear-gradient(135deg, #114563 0%, #2f5d7c 100%);
+}
+
+/* Ghost border — the only permitted border style */
+.ghost-border {
+  border: 1px solid rgba(193, 199, 206, 0.15);
+}
+.ghost-border-bottom {
+  border-bottom: 1px solid rgba(193, 199, 206, 0.25);
+}
+
+/* Glassmorphism for floating panels */
+.glass-panel {
+  background: rgba(254, 249, 238, 0.80);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Diplomatic Header pattern: serif headline + sans-serif uppercase label */
+.diplomatic-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+/* Ambient shadow for floating elements */
+.ambient-shadow {
+  box-shadow: 0 20px 50px rgba(29, 28, 21, 0.05);
+}
+
+/* Calm transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
