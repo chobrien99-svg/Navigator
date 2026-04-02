@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import {
   BarChart,
   Bar,
@@ -302,16 +303,18 @@ export function ResearchDashboard({
               <div className="w-20 text-right"><span className="diplomatic-label">Partners</span></div>
             </ListHeader>
             {filteredFunding.map((f, i) => (
-              <ListRow key={i}>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-on-surface">{f.acronym ?? f.label ?? "—"}</p>
-                  {f.label && f.acronym && <p className="mt-0.5 truncate text-xs text-on-surface-variant">{f.label}</p>}
-                </div>
-                <div className="w-24"><span className="text-xs text-on-surface-variant">{f.type ?? "—"}</span></div>
-                <div className="w-20 text-right"><span className="text-xs text-on-surface">{f.year ?? "—"}</span></div>
-                <div className="w-64 min-w-0"><span className="truncate text-xs text-on-surface-variant">{f.call ?? "—"}</span></div>
-                <div className="w-20 text-right"><span className="text-xs text-on-surface">{f.participantcount ?? "—"}</span></div>
-              </ListRow>
+              <Link key={i} href={`/research/grant/${f.id}`}>
+                <ListRow>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-on-surface">{f.acronym ?? f.label ?? "—"}</p>
+                    {f.label && f.acronym && <p className="mt-0.5 truncate text-xs text-on-surface-variant">{f.label}</p>}
+                  </div>
+                  <div className="w-24"><span className="text-xs text-on-surface-variant">{f.type ?? "—"}</span></div>
+                  <div className="w-20 text-right"><span className="text-xs text-on-surface">{f.year ?? "—"}</span></div>
+                  <div className="w-64 min-w-0"><span className="truncate text-xs text-on-surface-variant">{f.call ?? "—"}</span></div>
+                  <div className="w-20 text-right"><span className="text-xs text-on-surface">{f.participantcount ?? "—"}</span></div>
+                </ListRow>
+              </Link>
             ))}
             <p className="mt-2 text-xs text-on-surface-variant">
               Showing {filteredFunding.length} of {fundingTotal.toLocaleString()} grants
