@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import {
   BarChart,
   Bar,
@@ -303,8 +304,9 @@ export function InstitutionsDashboard({
               <div className="w-24 text-right"><span className="diplomatic-label">Students</span></div>
             </div>
             {filteredInst.map((inst, i) => (
-              <div
+              <Link
                 key={i}
+                href={`/institutions/${inst.uai ?? inst.siren ?? i}`}
                 className="flex items-center gap-4 bg-surface-container-lowest px-5 py-4 transition-colors hover:bg-surface-container-low"
               >
                 <div className="flex-1 min-w-0">
@@ -347,7 +349,7 @@ export function InstitutionsDashboard({
                     {inst.inscrits?.toLocaleString() ?? "—"}
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
             <p className="mt-2 text-xs text-on-surface-variant">
               Showing {filteredInst.length} of {instTotal.toLocaleString()} institutions
