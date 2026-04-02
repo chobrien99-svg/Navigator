@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDashboardStats, formatEur } from "@/lib/queries";
+import { getDashboardStats, formatEurFromDb } from "@/lib/queries";
 
 export default async function HomePage() {
   let stats = {
@@ -95,7 +95,7 @@ export default async function HomePage() {
           <div>
             <p className="diplomatic-label">Capital Tracked</p>
             <p className="mt-1 font-headline text-4xl font-semibold tracking-tight text-on-surface">
-              {formatEur(stats.totalRaised)}
+              {formatEurFromDb(stats.totalRaised)}
             </p>
           </div>
           <div>

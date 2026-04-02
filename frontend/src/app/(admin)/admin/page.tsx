@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getDashboardStats, formatEur } from "@/lib/queries";
+import { getDashboardStats, formatEurFromDb } from "@/lib/queries";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -48,7 +48,7 @@ export default function AdminDashboard() {
         <div className="bg-surface-container-lowest p-6">
           <p className="diplomatic-label">Capital Tracked</p>
           <p className="mt-2 font-headline text-3xl font-semibold text-on-surface">
-            {formatEur(stats.totalRaised)}
+            {formatEurFromDb(stats.totalRaised)}
           </p>
         </div>
       </div>
