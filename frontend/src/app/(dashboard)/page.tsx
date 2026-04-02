@@ -1,7 +1,30 @@
-export default function EcosystemAtlas() {
+import Link from "next/link";
+import { getDashboardStats, getOrganizations, formatEur } from "@/lib/queries";
+
+export default async function EcosystemAtlas() {
+  let stats = { organizations: 0, people: 0, fundingRounds: 0, totalRaised: 0 };
+  let recentOrgs: { name: string; slug: string; organization_type: string }[] =
+    [];
+
+  try {
+    stats = await getDashboardStats();
+  } catch {
+    // Stats will show zeros
+  }
+  try {
+    const orgs = await getOrganizations({ limit: 5 });
+    recentOrgs = orgs.map((o) => ({
+      name: o.name,
+      slug: o.slug,
+      organization_type: o.organization_type,
+    }));
+  } catch {
+    // Will show empty
+  }
+
   return (
     <div className="px-10 py-8">
-      {/* Hero Header — asymmetric editorial layout */}
+      {/* Hero Header */}
       <div className="flex items-start justify-between">
         <div className="max-w-xl">
           <h1 className="font-headline text-4xl font-semibold tracking-tight text-primary">
@@ -12,24 +35,30 @@ export default function EcosystemAtlas() {
           </p>
         </div>
 
-        {/* Key Metrics — editorial display typography */}
+        {/* Key Metrics */}
         <div className="flex gap-10">
           <div className="text-right">
-            <p className="diplomatic-label">Capital Flows</p>
+            <p className="diplomatic-label">Capital Tracked</p>
             <p className="font-headline text-3xl font-semibold tracking-tight text-on-surface">
-              €14.2B
+              {formatEur(stats.totalRaised)}
             </p>
           </div>
           <div className="text-right">
-            <p className="diplomatic-label">Active Patents</p>
+            <p className="diplomatic-label">Entities</p>
             <p className="font-headline text-3xl font-semibold tracking-tight text-on-surface">
-              8.4K
+              {stats.organizations.toLocaleString()}
             </p>
           </div>
           <div className="text-right">
-            <p className="diplomatic-label">Live Signals</p>
+            <p className="diplomatic-label">People</p>
             <p className="font-headline text-3xl font-semibold tracking-tight text-on-surface">
-              212
+              {stats.people.toLocaleString()}
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="diplomatic-label">Funding Rounds</p>
+            <p className="font-headline text-3xl font-semibold tracking-tight text-on-surface">
+              {stats.fundingRounds.toLocaleString()}
             </p>
           </div>
         </div>
@@ -37,7 +66,7 @@ export default function EcosystemAtlas() {
 
       {/* Content Grid */}
       <div className="mt-12 grid grid-cols-3 gap-8">
-        {/* Sector Clusters — left 2 columns */}
+        {/* Main area */}
         <div className="col-span-2 bg-surface-container-low p-8">
           <h2 className="diplomatic-label mb-6">Sector Clusters</h2>
           <div className="flex min-h-[400px] items-center justify-center text-on-surface-variant">
@@ -47,37 +76,66 @@ export default function EcosystemAtlas() {
           </div>
         </div>
 
-        {/* Active Node Card */}
-        <div className="bg-surface-container-lowest p-6 ambient-shadow">
-          <span className="inline-block bg-primary px-2 py-0.5 text-xs font-semibold text-on-primary">
-            ACTIVE NODE
-          </span>
-          <h3 className="mt-4 font-headline text-xl font-semibold text-on-surface">
-            Station F Cluster
-          </h3>
-          <div className="mt-4">
-            <p className="diplomatic-label">Concentration Index</p>
-            <p className="mt-1 font-headline text-2xl font-semibold text-on-surface">
-              0.92{" "}
-              <span className="text-sm font-normal text-secondary">+4%</span>
-            </p>
+        {/* Quick access card */}
+        <div className="space-y-6">
+          {/* Quick Nav */}
+          <div className="bg-surface-container-lowest p-6 ambient-shadow">
+            <h3 className="diplomatic-label mb-4">Quick Access</h3>
+            <div className="space-y-2">
+              <Link
+                href="/entities"
+                className="flex items-center gap-3 py-2 text-sm text-on-surface transition-colors hover:text-primary"
+              >
+                <span className="material-symbols-outlined text-[18px]">
+                  domain
+                </span>
+                Browse All Entities
+              </Link>
+              <Link
+                href="/people"
+                className="flex items-center gap-3 py-2 text-sm text-on-surface transition-colors hover:text-primary"
+              >
+                <span className="material-symbols-outlined text-[18px]">
+                  person
+                </span>
+                Browse People
+              </Link>
+              <Link
+                href="/funding"
+                className="flex items-center gap-3 py-2 text-sm text-on-surface transition-colors hover:text-primary"
+              >
+                <span className="material-symbols-outlined text-[18px]">
+                  payments
+                </span>
+                Funding Tracker
+              </Link>
+            </div>
           </div>
-          <div className="mt-4">
-            <p className="diplomatic-label">Primary Investors</p>
-            <p className="mt-1 text-sm text-on-surface">
-              Eurazeo, Bpifrance, Kima
-            </p>
-          </div>
-          <button
-            type="button"
-            className="institutional-gradient mt-6 w-full py-3 text-sm font-semibold text-on-primary transition-opacity duration-200 hover:opacity-90"
-          >
-            Investigate Entities
-          </button>
+
+          {/* Recent Entities */}
+          {recentOrgs.length > 0 && (
+            <div className="bg-surface-container-lowest p-6 ambient-shadow">
+              <h3 className="diplomatic-label mb-4">Recent Entities</h3>
+              <div className="space-y-2">
+                {recentOrgs.map((org) => (
+                  <Link
+                    key={org.slug}
+                    href={`/entities/${org.slug}`}
+                    className="flex items-center justify-between py-1.5 text-sm text-on-surface transition-colors hover:text-primary"
+                  >
+                    <span>{org.name}</span>
+                    <span className="text-[0.6rem] text-on-surface-variant">
+                      {org.organization_type.replace(/_/g, " ")}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Cartography Legend */}
+      {/* Legend */}
       <div className="mt-10">
         <h3 className="font-headline text-base italic text-on-surface">
           Cartography Legend

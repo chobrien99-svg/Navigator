@@ -10,14 +10,24 @@ const navigation = [
     icon: "public",
   },
   {
-    name: "Sector Maps",
-    href: "/sectors",
-    icon: "hub",
-  },
-  {
     name: "Entity Explorer",
     href: "/entities",
     icon: "domain",
+  },
+  {
+    name: "People",
+    href: "/people",
+    icon: "person",
+  },
+  {
+    name: "Funding Tracker",
+    href: "/funding",
+    icon: "payments",
+  },
+  {
+    name: "Sector Maps",
+    href: "/sectors",
+    icon: "hub",
   },
   {
     name: "Network Navigator",
@@ -39,9 +49,11 @@ export function Sidebar() {
     <aside className="flex h-full w-[240px] shrink-0 flex-col bg-surface-container-low">
       {/* Masthead */}
       <div className="px-6 pt-6 pb-8">
-        <h1 className="font-headline text-xl font-semibold tracking-tight text-primary">
-          The Navigator
-        </h1>
+        <Link href="/">
+          <h1 className="font-headline text-xl font-semibold tracking-tight text-primary">
+            The Navigator
+          </h1>
+        </Link>
         <p className="diplomatic-label mt-1">Institutional Intelligence</p>
       </div>
 
