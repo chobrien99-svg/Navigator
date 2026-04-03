@@ -56,20 +56,18 @@ export default async function HomePage() {
       <section className="px-8 pt-16 pb-20">
         <div className="mx-auto max-w-5xl">
           <p className="diplomatic-label">
-            The French Innovation Intelligence Compass
           </p>
           <h2 className="mt-4 max-w-3xl font-headline text-6xl font-semibold leading-[1.1] tracking-tight text-on-surface">
-            Mapping the sovereign
+            The
             <br />
             <span className="text-primary">intelligence landscape</span>
             <br />
-            of France
+            Navigator
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
-            A curated intelligence platform tracking the French tech ecosystem —
-            companies, investors, research clusters, talent, and government
-            policy. Built for institutional decision-makers who require depth
-            over noise.
+            A unified intelligence platform covering companies, capital, research, talent, 
+            and public institutions across France — with a global view of French innovation. 
+            Built for decision-makers who require depth over noise.
           </p>
 
           <div className="mt-10 flex items-center gap-4">
