@@ -58,13 +58,12 @@ export default async function HomePage() {
           <p className="diplomatic-label">
           </p>
           <h2 className="mt-4 max-w-3xl font-headline text-6xl font-semibold leading-[1.1] tracking-tight text-on-surface">
-<<<<<<< HEAD
-            <h2>THE <span className="text-primary">NAVIGATOR</span></h2>
-            <br/>
+            THE <span className="text-primary">NAVIGATOR</span>
+          </h2>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
-            A unified intelligence platform covering companies, capital, research, talent, 
-            and public institutions across France — with a global view of French innovation. 
+            A unified intelligence platform covering companies, capital, research, talent,
+            and public institutions across France — with a global view of French innovation.
             Built for decision-makers who require depth over noise.
           </p>
 
@@ -204,11 +203,7 @@ export default async function HomePage() {
               The Navigator
             </p>
             <p className="mt-1 text-xs text-on-surface-variant">
-<<<<<<< HEAD
               French Innovation Intelligence Compass
-=======
-              The French Innovation Intelligence System
->>>>>>> origin/claude/french-tech-hub-3Bnk0
             </p>
           </div>
           <div className="flex items-center gap-6 text-xs text-on-surface-variant">
