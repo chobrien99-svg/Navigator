@@ -58,11 +58,10 @@ export default async function HomePage() {
           <p className="diplomatic-label">
           </p>
           <h2 className="mt-4 max-w-3xl font-headline text-6xl font-semibold leading-[1.1] tracking-tight text-on-surface">
-            The
+            THE
             <br />
-            <span className="text-primary">intelligence landscape</span>
-            <br />
-            Navigator
+            <span className="text-primary">NAVIGAOTR</span>
+            <br/>
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
             A unified intelligence platform covering companies, capital, research, talent, 
