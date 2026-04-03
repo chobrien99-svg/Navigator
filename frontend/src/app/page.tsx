@@ -58,9 +58,7 @@ export default async function HomePage() {
           <p className="diplomatic-label">
           </p>
           <h2 className="mt-4 max-w-3xl font-headline text-6xl font-semibold leading-[1.1] tracking-tight text-on-surface">
-            THE
-            <br />
-            <span className="text-primary">NAVIGAOTR</span>
+            THE <span className="text-primary">NAVIGATOR</span>
             <br/>
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
