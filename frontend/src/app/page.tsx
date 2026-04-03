@@ -59,24 +59,13 @@ export default async function HomePage() {
           </p>
           <h2 className="mt-4 max-w-3xl font-headline text-6xl font-semibold leading-[1.1] tracking-tight text-on-surface">
 <<<<<<< HEAD
-            THE <span className="text-primary">NAVIGATOR</span>
+            <h2>THE <span className="text-primary">NAVIGATOR</span></h2>
             <br/>
-          </h2>
+
           <p className="mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
             A unified intelligence platform covering companies, capital, research, talent, 
             and public institutions across France — with a global view of French innovation. 
             Built for decision-makers who require depth over noise.
-=======
-            The Navigator
-          </h2>
-          <p className="mt-4 font-headline text-2xl font-medium tracking-tight text-primary">
-            The French Innovation Intelligence System
-          </p>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
-            A unified intelligence platform covering companies, capital, research, talent,
-            and public institutions across France with a global view of French innovation.
-            Built for institutional decision-makers who require depth over noise.
->>>>>>> origin/claude/french-tech-hub-3Bnk0
           </p>
 
           <div className="mt-10 flex items-center gap-4">
