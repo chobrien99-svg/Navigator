@@ -231,23 +231,28 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
 
 export async function getFrenchTechNextMembers() {
   // Step 1: Get the program ID
-  const { data: program, error: progErr } = await supabase
+  const { data: programs, error: progErr } = await supabase
     .from("programs")
     .select("id")
-    .eq("slug", "french-tech-next40-120")
-    .single();
+    .eq("slug", "french-tech-next40-120");
 
-  if (progErr || !program) return [];
+  if (progErr) throw progErr;
+  if (!programs || programs.length === 0) {
+    throw new Error("Program 'french-tech-next40-120' not found. Check RLS policies on the programs table.");
+  }
+  const programId = programs[0].id;
 
   // Step 2: Get edition IDs for this program
   const { data: editions, error: edErr } = await supabase
     .from("program_editions")
     .select("id")
-    .eq("program_id", program.id);
+    .eq("program_id", programId);
 
   if (edErr) throw edErr;
-  const editionIds = editions?.map((e: { id: string }) => e.id) ?? [];
-  if (editionIds.length === 0) return [];
+  if (!editions || editions.length === 0) {
+    throw new Error("No program editions found. Check RLS policies on the program_editions table.");
+  }
+  const editionIds = editions.map((e: { id: string }) => e.id);
 
   // Step 3: Get program organizations with their editions and orgs
   const { data, error } = await supabase
