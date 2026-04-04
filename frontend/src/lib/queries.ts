@@ -230,17 +230,26 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
 // ─── Programs ────────────────────────────────────────────────
 
 export async function getFrenchTechNextMembers() {
-  // Step 1: Get edition IDs for this program
+  // Step 1: Get the program ID
+  const { data: program, error: progErr } = await supabase
+    .from("programs")
+    .select("id")
+    .eq("slug", "french-tech-next40-120")
+    .single();
+
+  if (progErr || !program) return [];
+
+  // Step 2: Get edition IDs for this program
   const { data: editions, error: edErr } = await supabase
     .from("program_editions")
-    .select("id, programs!inner(slug)")
-    .eq("programs.slug", "french-tech-next40-120");
+    .select("id")
+    .eq("program_id", program.id);
 
   if (edErr) throw edErr;
   const editionIds = editions?.map((e: { id: string }) => e.id) ?? [];
   if (editionIds.length === 0) return [];
 
-  // Step 2: Get program organizations for those editions
+  // Step 3: Get program organizations with their editions and orgs
   const { data, error } = await supabase
     .from("program_organizations")
     .select(
