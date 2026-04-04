@@ -8,7 +8,7 @@ import type {
   LegalEntity,
   OrganizationRelationship,
   OrganizationTag,
-  OrganizationProgram,
+  ProgramOrganization,
 } from "./types";
 
 // ─── Helpers ──────────────────────────────────────────────────
@@ -231,32 +231,36 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
 
 export async function getFrenchTechNextMembers() {
   const { data, error } = await supabase
-    .from("organization_programs")
+    .from("program_organizations")
     .select(
       `*,
-      organizations:organization_id(
+      program_editions!inner(
+        id, year, cohort_label, slug, source_url,
+        programs!inner(slug)
+      ),
+      organizations(
         id, name, slug, organization_type, status, description, short_description,
         website, logo_url, country, total_raised_eur, employee_range, founded_year,
         cities(name, slug, region),
         organization_sectors(is_primary, sectors(name, slug))
       )`
     )
-    .eq("program_name", "french_tech_next")
-    .order("year", { ascending: false });
+    .eq("program_editions.programs.slug", "french-tech-next40-120");
 
   if (error) throw error;
-  return data as OrganizationProgram[];
+  return data as ProgramOrganization[];
 }
 
 export async function getOrganizationPrograms(orgId: string) {
   const { data, error } = await supabase
-    .from("organization_programs")
-    .select("*")
-    .eq("organization_id", orgId)
-    .order("year", { ascending: false });
+    .from("program_organizations")
+    .select(
+      `*, program_editions(*, programs(name, slug))`
+    )
+    .eq("organization_id", orgId);
 
   if (error) throw error;
-  return data as OrganizationProgram[];
+  return data as ProgramOrganization[];
 }
 
 // ─── Stats ────────────────────────────────────────────────────

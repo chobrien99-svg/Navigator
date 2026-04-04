@@ -268,18 +268,51 @@ export interface OrganizationTag {
   strength: number | null;
 }
 
-export type ProgramTier = "next40" | "120";
+// --- Programs ---
 
-export interface OrganizationProgram {
+export interface Program {
   id: string;
-  organization_id: string;
-  program_name: string;
-  tier: ProgramTier | null;
-  year: number;
+  name: string;
+  slug: string;
+  program_type: string;
+  description: string | null;
+  host_organization_id: string | null;
+  operator_organization_id: string | null;
+  country: string;
+  city_id: string | null;
   source_url: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ProgramEdition {
+  id: string;
+  program_id: string;
+  name: string | null;
+  slug: string | null;
+  year: number | null;
+  cohort_label: string | null;
+  start_date: string | null;
+  end_date: string | null;
+  announcement_date: string | null;
+  description: string | null;
+  source_url: string | null;
+  created_at: string;
+  updated_at: string;
+  // Joined
+  programs?: Program;
+}
+
+export interface ProgramOrganization {
+  id: string;
+  program_edition_id: string;
+  organization_id: string;
+  membership_role: string | null;
+  group_label: string | null;
   notes: string | null;
   created_at: string;
   updated_at: string;
   // Joined
   organizations?: Organization;
+  program_editions?: ProgramEdition;
 }
