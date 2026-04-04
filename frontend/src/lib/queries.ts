@@ -8,6 +8,7 @@ import type {
   LegalEntity,
   OrganizationRelationship,
   OrganizationTag,
+  OrganizationProgram,
 } from "./types";
 
 // ─── Helpers ──────────────────────────────────────────────────
@@ -224,6 +225,38 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
   const { data, error } = await query;
   if (error) throw error;
   return data as FundingRound[];
+}
+
+// ─── Programs ────────────────────────────────────────────────
+
+export async function getFrenchTechNextMembers() {
+  const { data, error } = await supabase
+    .from("organization_programs")
+    .select(
+      `*,
+      organizations:organization_id(
+        id, name, slug, organization_type, status, description, short_description,
+        website, logo_url, country, total_raised_eur, employee_range, founded_year,
+        cities(name, slug, region),
+        organization_sectors(is_primary, sectors(name, slug))
+      )`
+    )
+    .eq("program_name", "french_tech_next")
+    .order("year", { ascending: false });
+
+  if (error) throw error;
+  return data as OrganizationProgram[];
+}
+
+export async function getOrganizationPrograms(orgId: string) {
+  const { data, error } = await supabase
+    .from("organization_programs")
+    .select("*")
+    .eq("organization_id", orgId)
+    .order("year", { ascending: false });
+
+  if (error) throw error;
+  return data as OrganizationProgram[];
 }
 
 // ─── Stats ────────────────────────────────────────────────────

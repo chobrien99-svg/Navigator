@@ -41,6 +41,14 @@ const navigation = [
   },
 ];
 
+const programsNavigation = [
+  {
+    name: "French Tech Next 40/120",
+    href: "/programs/french-tech-next40-120",
+    icon: "emoji_events",
+  },
+];
+
 const secondaryNavigation = [
   { name: "Export", href: "/export", icon: "download" },
   { name: "Settings", href: "/settings", icon: "tune" },
@@ -96,6 +104,35 @@ export function Sidebar() {
         >
           New Analysis
         </Link>
+      </div>
+
+      {/* Programs */}
+      <div className="border-t border-outline-variant/15 px-3 py-3">
+        <p className="mb-1 px-3 text-[0.65rem] font-semibold uppercase tracking-widest text-on-surface-variant/60">
+          Programs
+        </p>
+        <ul className="space-y-0.5">
+          {programsNavigation.map((item) => {
+            const isActive = pathname.startsWith(item.href);
+            return (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className={`flex items-center gap-3 px-3 py-2 text-sm transition-colors duration-200 ${
+                    isActive
+                      ? "bg-surface-container-highest text-primary font-medium"
+                      : "text-on-surface-variant hover:text-on-surface"
+                  }`}
+                >
+                  <span className="material-symbols-outlined text-[18px]">
+                    {item.icon}
+                  </span>
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
 
       {/* Secondary Navigation */}
