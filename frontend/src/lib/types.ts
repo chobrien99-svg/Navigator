@@ -267,3 +267,19 @@ export interface OrganizationTag {
   tag: string;
   strength: number | null;
 }
+
+export type ProgramTier = "next40" | "120";
+
+export interface OrganizationProgram {
+  id: string;
+  organization_id: string;
+  program_name: string;
+  tier: ProgramTier | null;
+  year: number;
+  source_url: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+  // Joined
+  organizations?: Organization;
+}
