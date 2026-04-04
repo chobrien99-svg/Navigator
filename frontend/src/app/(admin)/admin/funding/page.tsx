@@ -40,7 +40,7 @@ export default function AdminFundingPage() {
         .range(page * PAGE_SIZE, (page + 1) * PAGE_SIZE - 1);
 
       if (!error && data) {
-        setRounds(data as FundingRow[]);
+        setRounds(data as unknown as FundingRow[]);
       }
       setLoading(false);
     }
