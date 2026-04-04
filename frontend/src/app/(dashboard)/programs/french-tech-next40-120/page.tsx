@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { getFrenchTechNextMembers, formatEurFromDb } from "@/lib/queries";
-import type { OrganizationProgram, Organization } from "@/lib/types";
+import type { ProgramOrganization, Organization } from "@/lib/types";
 
-const tierLabels: Record<string, { label: string; color: string }> = {
-  next40: {
+const groupLabels: Record<string, { label: string; color: string }> = {
+  "Next 40": {
     label: "Next 40",
     color: "bg-primary/15 text-primary",
   },
-  "120": {
+  "FT 120": {
     label: "FT 120",
     color: "bg-secondary/10 text-secondary",
   },
@@ -24,8 +24,16 @@ function getCityName(org: Organization): string {
   return (org.cities as { name: string } | null)?.name ?? org.country ?? "—";
 }
 
+function getYear(entry: ProgramOrganization): number {
+  return entry.program_editions?.year ?? 0;
+}
+
+function getGroupLabel(entry: ProgramOrganization): string {
+  return entry.group_label ?? "—";
+}
+
 export default async function FrenchTechNextPage() {
-  let members: OrganizationProgram[] = [];
+  let members: ProgramOrganization[] = [];
   let error: string | null = null;
 
   try {
@@ -35,11 +43,12 @@ export default async function FrenchTechNextPage() {
   }
 
   // Group by year
-  const byYear = new Map<number, OrganizationProgram[]>();
+  const byYear = new Map<number, ProgramOrganization[]>();
   for (const m of members) {
-    const list = byYear.get(m.year) ?? [];
+    const year = getYear(m);
+    const list = byYear.get(year) ?? [];
     list.push(m);
-    byYear.set(m.year, list);
+    byYear.set(year, list);
   }
   const years = Array.from(byYear.keys()).sort((a, b) => b - a);
 
@@ -95,8 +104,8 @@ export default async function FrenchTechNextPage() {
       {/* Cohort Years */}
       {years.map((year) => {
         const cohort = byYear.get(year) ?? [];
-        const next40 = cohort.filter((m) => m.tier === "next40");
-        const ft120 = cohort.filter((m) => m.tier === "120");
+        const next40 = cohort.filter((m) => getGroupLabel(m) === "Next 40");
+        const ft120 = cohort.filter((m) => getGroupLabel(m) === "FT 120");
 
         return (
           <div key={year} className="mt-10">
@@ -122,9 +131,11 @@ export default async function FrenchTechNextPage() {
             <div className="mt-4 space-y-3">
               {cohort
                 .sort((a, b) => {
-                  // Next40 first, then alphabetical
-                  if (a.tier === "next40" && b.tier !== "next40") return -1;
-                  if (a.tier !== "next40" && b.tier === "next40") return 1;
+                  // Next 40 first, then alphabetical
+                  const aIsNext40 = getGroupLabel(a) === "Next 40";
+                  const bIsNext40 = getGroupLabel(b) === "Next 40";
+                  if (aIsNext40 && !bIsNext40) return -1;
+                  if (!aIsNext40 && bIsNext40) return 1;
                   const nameA = a.organizations?.name ?? "";
                   const nameB = b.organizations?.name ?? "";
                   return nameA.localeCompare(nameB);
@@ -132,8 +143,9 @@ export default async function FrenchTechNextPage() {
                 .map((entry) => {
                   const org = entry.organizations;
                   if (!org) return null;
-                  const tierInfo = tierLabels[entry.tier ?? ""] ?? {
-                    label: entry.tier ?? "—",
+                  const label = getGroupLabel(entry);
+                  const labelInfo = groupLabels[label] ?? {
+                    label,
                     color:
                       "bg-surface-container-high text-on-surface-variant",
                   };
@@ -151,9 +163,9 @@ export default async function FrenchTechNextPage() {
                             {org.name}
                           </h3>
                           <span
-                            className={`shrink-0 px-2 py-0.5 text-xs font-semibold ${tierInfo.color}`}
+                            className={`shrink-0 px-2 py-0.5 text-xs font-semibold ${labelInfo.color}`}
                           >
-                            {tierInfo.label}
+                            {labelInfo.label}
                           </span>
                           <span
                             className={`shrink-0 px-1.5 py-0.5 text-[0.6rem] font-semibold ${
@@ -213,8 +225,8 @@ export default async function FrenchTechNextPage() {
             No French Tech Next 40/120 data imported yet.
           </p>
           <p className="mt-2 text-sm text-on-surface-variant">
-            Companies will appear here once cohort data is added to the
-            organization_programs table.
+            Companies will appear here once cohort data is added via program
+            editions and program organizations.
           </p>
         </div>
       )}
