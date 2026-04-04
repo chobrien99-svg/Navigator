@@ -230,14 +230,22 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
 // ─── Programs ────────────────────────────────────────────────
 
 export async function getFrenchTechNextMembers() {
+  // Step 1: Get edition IDs for this program
+  const { data: editions, error: edErr } = await supabase
+    .from("program_editions")
+    .select("id, programs!inner(slug)")
+    .eq("programs.slug", "french-tech-next40-120");
+
+  if (edErr) throw edErr;
+  const editionIds = editions?.map((e: { id: string }) => e.id) ?? [];
+  if (editionIds.length === 0) return [];
+
+  // Step 2: Get program organizations for those editions
   const { data, error } = await supabase
     .from("program_organizations")
     .select(
       `*,
-      program_editions!inner(
-        id, year, cohort_label, slug, source_url,
-        programs!inner(slug)
-      ),
+      program_editions(id, year, cohort_label, slug, source_url),
       organizations(
         id, name, slug, organization_type, status, description, short_description,
         website, logo_url, country, total_raised_eur, employee_range, founded_year,
@@ -245,7 +253,7 @@ export async function getFrenchTechNextMembers() {
         organization_sectors(is_primary, sectors(name, slug))
       )`
     )
-    .eq("program_editions.programs.slug", "french-tech-next40-120");
+    .in("program_edition_id", editionIds);
 
   if (error) throw error;
   return data as ProgramOrganization[];
