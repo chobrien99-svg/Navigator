@@ -83,6 +83,48 @@ interface ProfileForm {
   technical_thesis: string;
 }
 
+interface FundingRoundRow {
+  id: string;
+  stage: string;
+  amount_eur: number | null;
+  currency_original: string | null;
+  amount_original: number | null;
+  announced_date: string | null;
+  source_name: string | null;
+  notes: string | null;
+  funding_round_investors?: { investor_name: string | null; is_lead: boolean }[];
+}
+
+const stageOptions = [
+  "pre_seed",
+  "seed",
+  "series_a",
+  "series_b",
+  "series_c",
+  "series_d",
+  "series_e",
+  "series_f",
+  "growth",
+  "bridge",
+  "debt",
+  "grant",
+  "ipo",
+  "secondary",
+  "undisclosed",
+  "other",
+];
+
+const AMOUNT_MULTIPLIER = 1_000_000;
+
+function formatEurDisplay(amountInMillions: number | null): string {
+  if (amountInMillions == null) return "—";
+  const raw = amountInMillions * AMOUNT_MULTIPLIER;
+  if (raw >= 1_000_000_000) return `€${(raw / 1_000_000_000).toFixed(1)}B`;
+  if (raw >= 1_000_000) return `€${(raw / 1_000_000).toFixed(1)}M`;
+  if (raw >= 1_000) return `€${(raw / 1_000).toFixed(0)}K`;
+  return `€${raw.toLocaleString()}`;
+}
+
 const emptyProfile: ProfileForm = {
   what_they_are_building: "",
   why_it_matters: "",
@@ -124,6 +166,15 @@ export default function EditOrganizationPage() {
   });
   const [profile, setProfile] = useState<ProfileForm>(emptyProfile);
   const [hasProfile, setHasProfile] = useState(false);
+  const [fundingRounds, setFundingRounds] = useState<FundingRoundRow[]>([]);
+  const [showAddRound, setShowAddRound] = useState(false);
+  const [newRound, setNewRound] = useState({
+    stage: "seed",
+    amount_eur: "",
+    announced_date: "",
+    notes: "",
+  });
+  const [addingRound, setAddingRound] = useState(false);
 
   useEffect(() => {
     async function load() {
@@ -183,6 +234,17 @@ export default function EditOrganizationPage() {
             profileData.business_model_hypothesis ?? "",
           technical_thesis: profileData.technical_thesis ?? "",
         });
+      }
+
+      // Load funding rounds
+      const { data: roundsData } = await supabase
+        .from("funding_rounds")
+        .select("*, funding_round_investors(investor_name, is_lead)")
+        .eq("organization_id", id)
+        .order("announced_date", { ascending: false });
+
+      if (roundsData) {
+        setFundingRounds(roundsData as FundingRoundRow[]);
       }
 
       setLoading(false);
@@ -261,6 +323,55 @@ export default function EditOrganizationPage() {
       setError(e instanceof Error ? e.message : "Failed to save");
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleAddRound() {
+    setAddingRound(true);
+    setError(null);
+    try {
+      const amountEur = newRound.amount_eur
+        ? parseFloat(newRound.amount_eur) / AMOUNT_MULTIPLIER
+        : null;
+
+      const { data: inserted, error: insertErr } = await supabase
+        .from("funding_rounds")
+        .insert({
+          organization_id: id,
+          stage: newRound.stage,
+          amount_eur: amountEur,
+          announced_date: newRound.announced_date || null,
+          notes: newRound.notes || null,
+          is_estimated: false,
+          is_verified: false,
+          source_name: "admin_manual",
+        })
+        .select("*, funding_round_investors(investor_name, is_lead)")
+        .single();
+
+      if (insertErr) throw insertErr;
+      if (inserted) {
+        setFundingRounds((prev) => [inserted as FundingRoundRow, ...prev]);
+      }
+      setShowAddRound(false);
+      setNewRound({ stage: "seed", amount_eur: "", announced_date: "", notes: "" });
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Failed to add funding round");
+    } finally {
+      setAddingRound(false);
+    }
+  }
+
+  async function handleDeleteRound(roundId: string) {
+    const { error: delErr } = await supabase
+      .from("funding_rounds")
+      .delete()
+      .eq("id", roundId);
+
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setFundingRounds((prev) => prev.filter((r) => r.id !== roundId));
     }
   }
 
@@ -395,6 +506,128 @@ export default function EditOrganizationPage() {
           <TextArea label="Current Strategy" value={profile.current_strategy} onChange={(v) => updateProfile("current_strategy", v)} />
           <TextArea label="Business Model Hypothesis" value={profile.business_model_hypothesis} onChange={(v) => updateProfile("business_model_hypothesis", v)} />
           <TextArea label="Technical Thesis" value={profile.technical_thesis} onChange={(v) => updateProfile("technical_thesis", v)} />
+        </div>
+      </div>
+
+      {/* Funding Rounds Section */}
+      <div className="mt-12">
+        <div className="flex items-center justify-between">
+          <h2 className="diplomatic-label">Funding Rounds ({fundingRounds.length})</h2>
+          <button
+            onClick={() => setShowAddRound(!showAddRound)}
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/5 transition-colors"
+          >
+            <span className="material-symbols-outlined text-[16px]">
+              {showAddRound ? "close" : "add"}
+            </span>
+            {showAddRound ? "Cancel" : "Add Round"}
+          </button>
+        </div>
+
+        {/* Add Round Form */}
+        {showAddRound && (
+          <div className="mt-4 bg-surface-container-lowest p-5 space-y-4">
+            <div className="grid grid-cols-3 gap-4">
+              <SelectField
+                label="Stage"
+                value={newRound.stage}
+                options={stageOptions}
+                onChange={(v) => setNewRound((r) => ({ ...r, stage: v }))}
+              />
+              <Field
+                label="Amount (EUR, raw)"
+                value={newRound.amount_eur}
+                onChange={(v) => setNewRound((r) => ({ ...r, amount_eur: v }))}
+                type="number"
+                placeholder="e.g. 5000000"
+              />
+              <Field
+                label="Announced Date"
+                value={newRound.announced_date}
+                onChange={(v) => setNewRound((r) => ({ ...r, announced_date: v }))}
+                type="date"
+              />
+            </div>
+            <Field
+              label="Notes"
+              value={newRound.notes}
+              onChange={(v) => setNewRound((r) => ({ ...r, notes: v }))}
+              placeholder="Optional notes about this round"
+            />
+            <button
+              onClick={handleAddRound}
+              disabled={addingRound}
+              className="institutional-gradient px-5 py-2 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 disabled:opacity-50"
+            >
+              {addingRound ? "Adding..." : "Add Funding Round"}
+            </button>
+          </div>
+        )}
+
+        {/* Rounds List */}
+        <div className="mt-4 space-y-2">
+          {fundingRounds.map((round) => {
+            const investors = round.funding_round_investors ?? [];
+            const leadInvestors = investors.filter((i) => i.is_lead).map((i) => i.investor_name).filter(Boolean);
+            const otherInvestors = investors.filter((i) => !i.is_lead).map((i) => i.investor_name).filter(Boolean);
+
+            return (
+              <div
+                key={round.id}
+                className="flex items-start gap-4 bg-surface-container-lowest p-4"
+              >
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-3">
+                    <span className="px-2 py-0.5 text-[0.65rem] font-semibold bg-primary/10 text-primary">
+                      {round.stage?.replace(/_/g, " ") ?? "—"}
+                    </span>
+                    <span className="text-sm font-medium text-on-surface">
+                      {formatEurDisplay(round.amount_eur)}
+                    </span>
+                    <span className="text-xs text-on-surface-variant">
+                      {round.announced_date ?? "No date"}
+                    </span>
+                    {round.currency_original && round.currency_original !== "EUR" && (
+                      <span className="text-[0.6rem] text-outline-variant">
+                        (original: {round.amount_original?.toLocaleString()} {round.currency_original})
+                      </span>
+                    )}
+                  </div>
+                  {investors.length > 0 && (
+                    <p className="mt-1.5 text-xs text-on-surface-variant">
+                      {leadInvestors.length > 0 && (
+                        <span>
+                          <strong>Lead:</strong> {leadInvestors.join(", ")}
+                          {otherInvestors.length > 0 && " · "}
+                        </span>
+                      )}
+                      {otherInvestors.join(", ")}
+                    </p>
+                  )}
+                  {round.notes && (
+                    <p className="mt-1 text-[0.7rem] italic text-outline-variant">
+                      {round.notes}
+                    </p>
+                  )}
+                </div>
+                <button
+                  onClick={() => handleDeleteRound(round.id)}
+                  className="shrink-0 p-1 text-outline-variant hover:text-error transition-colors"
+                  title="Delete round"
+                >
+                  <span className="material-symbols-outlined text-[16px]">
+                    delete
+                  </span>
+                </button>
+              </div>
+            );
+          })}
+
+          {fundingRounds.length === 0 && (
+            <p className="py-6 text-center text-sm italic text-on-surface-variant">
+              No funding rounds recorded for this organization.
+            </p>
+          )}
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ const adminNav = [
   { name: "Dashboard", href: "/admin", icon: "dashboard" },
   { name: "Organizations", href: "/admin/organizations", icon: "domain" },
   { name: "People", href: "/admin/people", icon: "person" },
+  { name: "Funding", href: "/admin/funding", icon: "payments" },
 ];
 
 export default function AdminLayout({

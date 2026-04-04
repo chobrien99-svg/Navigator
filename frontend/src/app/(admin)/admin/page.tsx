@@ -86,8 +86,11 @@ export default function AdminDashboard() {
               Edit person profiles, bios, roles, and background attributes.
             </p>
           </Link>
-          <div className="bg-surface-container-lowest p-6 opacity-60">
-            <span className="material-symbols-outlined text-[24px] text-outline">
+          <Link
+            href="/admin/funding"
+            className="group bg-surface-container-lowest p-6 transition-colors hover:bg-surface-container-low"
+          >
+            <span className="material-symbols-outlined text-[24px] text-primary">
               payments
             </span>
             <h3 className="mt-3 font-headline text-base font-semibold text-on-surface">
@@ -96,8 +99,7 @@ export default function AdminDashboard() {
             <p className="mt-1 text-sm text-on-surface-variant">
               Edit funding rounds, investors, and amounts.
             </p>
-            <p className="mt-2 text-xs italic text-outline">Coming soon</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
