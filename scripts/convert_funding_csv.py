@@ -282,13 +282,51 @@ JOIN organizations o ON o.slug = lower(regexp_replace(
 ));
 """)
 
-    # Step 4: Funding round investors
-    # We need to link investors to the rounds we just created.
-    # Since we can't easily reference the just-inserted rounds by idx,
-    # we'll use a separate step that matches on org + date + amount.
+    # Step 4: Collect unique investor names and create them as organizations
+    all_investor_names = set()
+    for row in rows:
+        investors_str = row.get('Investors', '').strip()
+        if not investors_str:
+            continue
+        for inv in investors_str.split(','):
+            inv = inv.strip()
+            if inv:
+                all_investor_names.add(inv)
+
+    investor_org_json = [{'name': name} for name in sorted(all_investor_names)]
+
+    sql_parts.append(f"""
+-- Step 4a: Create investor organizations
+WITH source AS (
+  SELECT * FROM json_populate_recordset(
+    NULL::record,
+    $json${json.dumps(investor_org_json, ensure_ascii=False)}$json$
+  ) AS (name TEXT)
+)
+INSERT INTO organizations (
+  id, name, slug, organization_type, status, country,
+  legacy_source, created_at, updated_at
+)
+SELECT
+  uuid_generate_v4(),
+  s.name,
+  lower(regexp_replace(
+    regexp_replace(unaccent(s.name), '[^a-zA-Z0-9\\s-]', '', 'g'),
+    '\\s+', '-', 'g'
+  )),
+  'investor'::organization_type,
+  'active'::organization_status,
+  'France',
+  'funding_deals_2024',
+  NOW(),
+  NOW()
+FROM source s
+ON CONFLICT (slug) DO NOTHING;
+""")
+
+    # Step 4b: Funding round investors
     sql_parts.append("""
--- Step 4: Create funding round investors
--- Match rounds by org slug + announced_date + amount to link investors
+-- Step 4b: Create funding round investors
 WITH source AS (
   SELECT * FROM json_populate_recordset(
     NULL::record,
@@ -325,13 +363,17 @@ INSERT INTO funding_round_investors (
 SELECT
   uuid_generate_v4(),
   fr.id,
-  NULL,  -- no investor org link for now
+  inv_org.id,
   s.is_lead,
   s.investor_name,
   NOW()
 FROM source s
 JOIN organizations o ON o.slug = lower(regexp_replace(
   regexp_replace(unaccent(s.org_name), '[^a-zA-Z0-9\\s-]', '', 'g'),
+  '\\s+', '-', 'g'
+))
+JOIN organizations inv_org ON inv_org.slug = lower(regexp_replace(
+  regexp_replace(unaccent(s.investor_name), '[^a-zA-Z0-9\\s-]', '', 'g'),
   '\\s+', '-', 'g'
 ))
 JOIN funding_rounds fr ON fr.organization_id = o.id
