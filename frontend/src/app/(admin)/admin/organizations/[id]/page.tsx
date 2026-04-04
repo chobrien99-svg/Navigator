@@ -83,6 +83,13 @@ interface ProfileForm {
   technical_thesis: string;
 }
 
+interface FundingRoundInvestorRow {
+  id: string;
+  investor_name: string | null;
+  is_lead: boolean;
+  funding_round_id: string;
+}
+
 interface FundingRoundRow {
   id: string;
   stage: string;
@@ -92,7 +99,7 @@ interface FundingRoundRow {
   announced_date: string | null;
   source_name: string | null;
   notes: string | null;
-  funding_round_investors?: { investor_name: string | null; is_lead: boolean }[];
+  funding_round_investors?: FundingRoundInvestorRow[];
 }
 
 const stageOptions = [
@@ -167,14 +174,21 @@ export default function EditOrganizationPage() {
   const [profile, setProfile] = useState<ProfileForm>(emptyProfile);
   const [hasProfile, setHasProfile] = useState(false);
   const [fundingRounds, setFundingRounds] = useState<FundingRoundRow[]>([]);
+  const [editingRoundId, setEditingRoundId] = useState<string | null>(null);
   const [showAddRound, setShowAddRound] = useState(false);
   const [newRound, setNewRound] = useState({
     stage: "seed",
     amount_eur: "",
     announced_date: "",
     notes: "",
+    investors: "",
   });
   const [addingRound, setAddingRound] = useState(false);
+  const [investorSuggestions, setInvestorSuggestions] = useState<string[]>([]);
+  const [newInvestorName, setNewInvestorName] = useState("");
+  const [newInvestorIsLead, setNewInvestorIsLead] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   useEffect(() => {
     async function load() {
@@ -244,7 +258,19 @@ export default function EditOrganizationPage() {
         .order("announced_date", { ascending: false });
 
       if (roundsData) {
-        setFundingRounds(roundsData as FundingRoundRow[]);
+        setFundingRounds(roundsData as unknown as FundingRoundRow[]);
+      }
+
+      // Load investor name suggestions for autocomplete
+      const { data: investorNames } = await supabase
+        .from("organizations")
+        .select("name")
+        .eq("organization_type", "investor")
+        .order("name")
+        .limit(2000);
+
+      if (investorNames) {
+        setInvestorSuggestions(investorNames.map((i: { name: string }) => i.name));
       }
 
       setLoading(false);
@@ -346,15 +372,58 @@ export default function EditOrganizationPage() {
           is_verified: false,
           source_name: "admin_manual",
         })
-        .select("*, funding_round_investors(investor_name, is_lead)")
+        .select("*, funding_round_investors(id, investor_name, is_lead, funding_round_id)")
         .single();
 
       if (insertErr) throw insertErr;
-      if (inserted) {
-        setFundingRounds((prev) => [inserted as FundingRoundRow, ...prev]);
+
+      // Add investors if provided
+      if (inserted && newRound.investors.trim()) {
+        const investorNames = newRound.investors.split(",").map((n) => n.trim()).filter(Boolean);
+        for (let i = 0; i < investorNames.length; i++) {
+          const invName = investorNames[i];
+          // Ensure investor org exists
+          const invSlug = invName.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+          const { data: existingOrg } = await supabase
+            .from("organizations")
+            .select("id")
+            .eq("slug", invSlug)
+            .single();
+
+          let investorOrgId = existingOrg?.id;
+          if (!investorOrgId) {
+            const { data: newOrg } = await supabase
+              .from("organizations")
+              .insert({ name: invName, slug: invSlug, organization_type: "investor", status: "active", country: "France" })
+              .select("id")
+              .single();
+            investorOrgId = newOrg?.id;
+          }
+
+          if (investorOrgId) {
+            await supabase.from("funding_round_investors").insert({
+              funding_round_id: inserted.id,
+              investor_id: investorOrgId,
+              investor_name: invName,
+              is_lead: i === 0,
+            });
+          }
+        }
+        // Reload the round with investors
+        const { data: reloaded } = await supabase
+          .from("funding_rounds")
+          .select("*, funding_round_investors(id, investor_name, is_lead, funding_round_id)")
+          .eq("id", inserted.id)
+          .single();
+        if (reloaded) {
+          setFundingRounds((prev) => [reloaded as unknown as FundingRoundRow, ...prev]);
+        }
+      } else if (inserted) {
+        setFundingRounds((prev) => [inserted as unknown as FundingRoundRow, ...prev]);
       }
+
       setShowAddRound(false);
-      setNewRound({ stage: "seed", amount_eur: "", announced_date: "", notes: "" });
+      setNewRound({ stage: "seed", amount_eur: "", announced_date: "", notes: "", investors: "" });
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to add funding round");
     } finally {
@@ -362,7 +431,24 @@ export default function EditOrganizationPage() {
     }
   }
 
+  async function handleUpdateRound(roundId: string, updates: { stage?: string; amount_eur?: number | null; announced_date?: string | null; notes?: string | null }) {
+    setError(null);
+    const { error: updErr } = await supabase
+      .from("funding_rounds")
+      .update(updates)
+      .eq("id", roundId);
+
+    if (updErr) {
+      setError(updErr.message);
+    } else {
+      setFundingRounds((prev) =>
+        prev.map((r) => (r.id === roundId ? { ...r, ...updates } : r))
+      );
+    }
+  }
+
   async function handleDeleteRound(roundId: string) {
+    if (!confirm("Delete this funding round? This cannot be undone.")) return;
     const { error: delErr } = await supabase
       .from("funding_rounds")
       .delete()
@@ -372,6 +458,95 @@ export default function EditOrganizationPage() {
       setError(delErr.message);
     } else {
       setFundingRounds((prev) => prev.filter((r) => r.id !== roundId));
+    }
+  }
+
+  async function handleAddInvestor(roundId: string) {
+    if (!newInvestorName.trim()) return;
+    setError(null);
+
+    const invName = newInvestorName.trim();
+    const invSlug = invName.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+
+    // Find or create investor org
+    const { data: existingOrg } = await supabase
+      .from("organizations")
+      .select("id")
+      .eq("slug", invSlug)
+      .single();
+
+    let investorOrgId = existingOrg?.id;
+    if (!investorOrgId) {
+      const { data: newOrg } = await supabase
+        .from("organizations")
+        .insert({ name: invName, slug: invSlug, organization_type: "investor", status: "active", country: "France" })
+        .select("id")
+        .single();
+      investorOrgId = newOrg?.id;
+      if (invName && !investorSuggestions.includes(invName)) {
+        setInvestorSuggestions((prev) => [...prev, invName].sort());
+      }
+    }
+
+    if (!investorOrgId) {
+      setError("Failed to create investor organization");
+      return;
+    }
+
+    const { data: inv, error: invErr } = await supabase
+      .from("funding_round_investors")
+      .insert({
+        funding_round_id: roundId,
+        investor_id: investorOrgId,
+        investor_name: invName,
+        is_lead: newInvestorIsLead,
+      })
+      .select("id, investor_name, is_lead, funding_round_id")
+      .single();
+
+    if (invErr) {
+      setError(invErr.message);
+    } else if (inv) {
+      setFundingRounds((prev) =>
+        prev.map((r) =>
+          r.id === roundId
+            ? { ...r, funding_round_investors: [...(r.funding_round_investors ?? []), inv as FundingRoundInvestorRow] }
+            : r
+        )
+      );
+      setNewInvestorName("");
+      setNewInvestorIsLead(false);
+      setShowSuggestions(false);
+    }
+  }
+
+  async function handleRemoveInvestor(roundId: string, investorRowId: string) {
+    const { error: delErr } = await supabase
+      .from("funding_round_investors")
+      .delete()
+      .eq("id", investorRowId);
+
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setFundingRounds((prev) =>
+        prev.map((r) =>
+          r.id === roundId
+            ? { ...r, funding_round_investors: (r.funding_round_investors ?? []).filter((i) => i.id !== investorRowId) }
+            : r
+        )
+      );
+    }
+  }
+
+  function handleInvestorSearch(value: string) {
+    setNewInvestorName(value);
+    if (value.trim().length >= 2) {
+      const q = value.toLowerCase();
+      setFilteredSuggestions(investorSuggestions.filter((s) => s.toLowerCase().includes(q)).slice(0, 8));
+      setShowSuggestions(true);
+    } else {
+      setShowSuggestions(false);
     }
   }
 
@@ -514,7 +689,7 @@ export default function EditOrganizationPage() {
         <div className="flex items-center justify-between">
           <h2 className="diplomatic-label">Funding Rounds ({fundingRounds.length})</h2>
           <button
-            onClick={() => setShowAddRound(!showAddRound)}
+            onClick={() => { setShowAddRound(!showAddRound); setEditingRoundId(null); }}
             className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/5 transition-colors"
           >
             <span className="material-symbols-outlined text-[16px]">
@@ -549,6 +724,13 @@ export default function EditOrganizationPage() {
               />
             </div>
             <Field
+              label="Investors (comma-separated)"
+              value={newRound.investors}
+              onChange={(v) => setNewRound((r) => ({ ...r, investors: v }))}
+              placeholder="e.g. Bpifrance, Sequoia Capital, Y Combinator"
+            />
+            <p className="text-[0.6rem] text-outline-variant -mt-2">First investor listed is marked as lead.</p>
+            <Field
               label="Notes"
               value={newRound.notes}
               onChange={(v) => setNewRound((r) => ({ ...r, notes: v }))}
@@ -565,60 +747,190 @@ export default function EditOrganizationPage() {
         )}
 
         {/* Rounds List */}
-        <div className="mt-4 space-y-2">
+        <div className="mt-4 space-y-3">
           {fundingRounds.map((round) => {
             const investors = round.funding_round_investors ?? [];
-            const leadInvestors = investors.filter((i) => i.is_lead).map((i) => i.investor_name).filter(Boolean);
-            const otherInvestors = investors.filter((i) => !i.is_lead).map((i) => i.investor_name).filter(Boolean);
+            const isEditing = editingRoundId === round.id;
 
             return (
-              <div
-                key={round.id}
-                className="flex items-start gap-4 bg-surface-container-lowest p-4"
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3">
-                    <span className="px-2 py-0.5 text-[0.65rem] font-semibold bg-primary/10 text-primary">
-                      {round.stage?.replace(/_/g, " ") ?? "—"}
-                    </span>
-                    <span className="text-sm font-medium text-on-surface">
-                      {formatEurDisplay(round.amount_eur)}
-                    </span>
-                    <span className="text-xs text-on-surface-variant">
-                      {round.announced_date ?? "No date"}
-                    </span>
-                    {round.currency_original && round.currency_original !== "EUR" && (
-                      <span className="text-[0.6rem] text-outline-variant">
-                        (original: {round.amount_original?.toLocaleString()} {round.currency_original})
-                      </span>
+              <div key={round.id} className="bg-surface-container-lowest p-5">
+                {/* Round header with edit toggle */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-1 min-w-0">
+                    {isEditing ? (
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-3 gap-4">
+                          <SelectField
+                            label="Stage"
+                            value={round.stage ?? ""}
+                            options={stageOptions}
+                            onChange={(v) => handleUpdateRound(round.id, { stage: v })}
+                          />
+                          <div>
+                            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">Amount (EUR, raw)</label>
+                            <input
+                              type="number"
+                              defaultValue={round.amount_eur != null ? Math.round(round.amount_eur * AMOUNT_MULTIPLIER) : ""}
+                              onBlur={(e) => {
+                                const val = e.target.value;
+                                handleUpdateRound(round.id, {
+                                  amount_eur: val ? parseFloat(val) / AMOUNT_MULTIPLIER : null,
+                                });
+                              }}
+                              placeholder="e.g. 5000000"
+                              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                            />
+                          </div>
+                          <div>
+                            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">Announced Date</label>
+                            <input
+                              type="date"
+                              defaultValue={round.announced_date ?? ""}
+                              onBlur={(e) => handleUpdateRound(round.id, { announced_date: e.target.value || null })}
+                              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <label className="diplomatic-label mb-1.5 block text-[0.6rem]">Notes</label>
+                          <input
+                            type="text"
+                            defaultValue={round.notes ?? ""}
+                            onBlur={(e) => handleUpdateRound(round.id, { notes: e.target.value || null })}
+                            placeholder="Optional notes"
+                            className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex items-center gap-3">
+                          <span className="px-2 py-0.5 text-[0.65rem] font-semibold bg-primary/10 text-primary">
+                            {round.stage?.replace(/_/g, " ") ?? "—"}
+                          </span>
+                          <span className="text-sm font-medium text-on-surface">
+                            {formatEurDisplay(round.amount_eur)}
+                          </span>
+                          <span className="text-xs text-on-surface-variant">
+                            {round.announced_date ?? "No date"}
+                          </span>
+                          {round.currency_original && round.currency_original !== "EUR" && (
+                            <span className="text-[0.6rem] text-outline-variant">
+                              (original: {round.amount_original?.toLocaleString()} {round.currency_original})
+                            </span>
+                          )}
+                        </div>
+                        {round.notes && (
+                          <p className="mt-1 text-[0.7rem] italic text-outline-variant">
+                            {round.notes}
+                          </p>
+                        )}
+                      </>
                     )}
                   </div>
-                  {investors.length > 0 && (
-                    <p className="mt-1.5 text-xs text-on-surface-variant">
-                      {leadInvestors.length > 0 && (
-                        <span>
-                          <strong>Lead:</strong> {leadInvestors.join(", ")}
-                          {otherInvestors.length > 0 && " · "}
-                        </span>
-                      )}
-                      {otherInvestors.join(", ")}
-                    </p>
-                  )}
-                  {round.notes && (
-                    <p className="mt-1 text-[0.7rem] italic text-outline-variant">
-                      {round.notes}
-                    </p>
+                  <div className="flex shrink-0 items-center gap-1">
+                    <button
+                      onClick={() => setEditingRoundId(isEditing ? null : round.id)}
+                      className="p-1 text-outline-variant hover:text-primary transition-colors"
+                      title={isEditing ? "Done editing" : "Edit round"}
+                    >
+                      <span className="material-symbols-outlined text-[16px]">
+                        {isEditing ? "check" : "edit"}
+                      </span>
+                    </button>
+                    <button
+                      onClick={() => handleDeleteRound(round.id)}
+                      className="p-1 text-outline-variant hover:text-error transition-colors"
+                      title="Delete round"
+                    >
+                      <span className="material-symbols-outlined text-[16px]">
+                        delete
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Investors */}
+                <div className="mt-3 border-t border-outline-variant/10 pt-3">
+                  <p className="text-[0.6rem] uppercase tracking-wider text-on-surface-variant/60 mb-2">
+                    Investors ({investors.length})
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {investors.map((inv) => (
+                      <span
+                        key={inv.id}
+                        className={`inline-flex items-center gap-1 px-2 py-1 text-xs ${
+                          inv.is_lead ? "bg-primary/10 text-primary" : "bg-surface-container text-on-surface-variant"
+                        }`}
+                      >
+                        {inv.is_lead && (
+                          <span className="material-symbols-outlined text-[12px]">star</span>
+                        )}
+                        {inv.investor_name}
+                        {isEditing && (
+                          <button
+                            onClick={() => handleRemoveInvestor(round.id, inv.id)}
+                            className="ml-1 hover:text-error"
+                          >
+                            <span className="material-symbols-outlined text-[12px]">close</span>
+                          </button>
+                        )}
+                      </span>
+                    ))}
+                    {investors.length === 0 && !isEditing && (
+                      <span className="text-xs italic text-outline-variant">No investors listed</span>
+                    )}
+                  </div>
+
+                  {/* Add investor (visible when editing) */}
+                  {isEditing && (
+                    <div className="mt-3 flex items-end gap-3">
+                      <div className="relative flex-1 max-w-xs">
+                        <label className="diplomatic-label mb-1.5 block text-[0.6rem]">Add Investor</label>
+                        <input
+                          type="text"
+                          value={newInvestorName}
+                          onChange={(e) => handleInvestorSearch(e.target.value)}
+                          onFocus={() => { if (newInvestorName.length >= 2) setShowSuggestions(true); }}
+                          onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                          placeholder="Type investor name..."
+                          className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                        />
+                        {showSuggestions && filteredSuggestions.length > 0 && (
+                          <div className="absolute z-10 mt-1 w-full bg-surface-container-lowest border border-outline-variant/20 shadow-lg max-h-40 overflow-y-auto">
+                            {filteredSuggestions.map((s) => (
+                              <button
+                                key={s}
+                                className="w-full px-3 py-2 text-left text-sm text-on-surface hover:bg-surface-container-low"
+                                onMouseDown={() => {
+                                  setNewInvestorName(s);
+                                  setShowSuggestions(false);
+                                }}
+                              >
+                                {s}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <label className="flex items-center gap-2 pb-2">
+                        <input
+                          type="checkbox"
+                          checked={newInvestorIsLead}
+                          onChange={(e) => setNewInvestorIsLead(e.target.checked)}
+                          className="accent-primary"
+                        />
+                        <span className="text-xs text-on-surface-variant">Lead</span>
+                      </label>
+                      <button
+                        onClick={() => handleAddInvestor(round.id)}
+                        className="px-3 py-2 text-xs font-medium text-primary hover:bg-primary/5 transition-colors"
+                      >
+                        Add
+                      </button>
+                    </div>
                   )}
                 </div>
-                <button
-                  onClick={() => handleDeleteRound(round.id)}
-                  className="shrink-0 p-1 text-outline-variant hover:text-error transition-colors"
-                  title="Delete round"
-                >
-                  <span className="material-symbols-outlined text-[16px]">
-                    delete
-                  </span>
-                </button>
               </div>
             );
           })}
