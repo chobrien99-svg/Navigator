@@ -273,6 +273,50 @@ export async function getFrenchTechNextMembers() {
   return data as ProgramOrganization[];
 }
 
+export async function getILabMembers() {
+  // Step 1: Get the program ID
+  const { data: programs, error: progErr } = await supabase
+    .from("programs")
+    .select("id")
+    .eq("slug", "i-lab");
+
+  if (progErr) throw progErr;
+  if (!programs || programs.length === 0) {
+    throw new Error("Program 'i-lab' not found.");
+  }
+  const programId = programs[0].id;
+
+  // Step 2: Get edition IDs
+  const { data: editions, error: edErr } = await supabase
+    .from("program_editions")
+    .select("id")
+    .eq("program_id", programId);
+
+  if (edErr) throw edErr;
+  if (!editions || editions.length === 0) {
+    throw new Error("No i-Lab editions found.");
+  }
+  const editionIds = editions.map((e: { id: string }) => e.id);
+
+  // Step 3: Get program organizations with editions and orgs
+  const { data, error } = await supabase
+    .from("program_organizations")
+    .select(
+      `*,
+      program_editions(id, year, cohort_label, slug, source_url),
+      organizations(
+        id, name, slug, organization_type, status, description, short_description,
+        website, logo_url, country, total_raised_eur, employee_range, founded_year,
+        cities(name, slug, region),
+        organization_sectors(is_primary, sectors(name, slug))
+      )`
+    )
+    .in("program_edition_id", editionIds);
+
+  if (error) throw error;
+  return data as ProgramOrganization[];
+}
+
 export async function getOrganizationPrograms(orgId: string) {
   const { data, error } = await supabase
     .from("program_organizations")

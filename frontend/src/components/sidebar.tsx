@@ -47,6 +47,11 @@ const programsNavigation = [
     href: "/programs/french-tech-next40-120",
     icon: "emoji_events",
   },
+  {
+    name: "i-Lab Laureates",
+    href: "/programs/i-lab",
+    icon: "science",
+  },
 ];
 
 const secondaryNavigation = [
