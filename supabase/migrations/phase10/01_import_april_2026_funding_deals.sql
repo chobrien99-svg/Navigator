@@ -76,12 +76,12 @@ WITH source AS (
       {
         "name": "Omniscient",
         "stage": "seed",
-        "amount_eur": 3.6,
-        "currency_original": "EUR",
-        "amount_original": 3600000,
+        "amount_eur": 3.772,
+        "currency_original": "USD",
+        "amount_original": 4100000,
         "announced_date": "2026-04-02",
         "source_url": "https://siliconangle.com/2026/04/02/omniscient-raises-4-1m-ai-driven-decision-intelligence-platform/",
-        "notes": "Reported as $4.1M (~\u20ac3.6M). Founded 2024 by ex-McKinsey consultants. Clients include Renault. Aggregates 100,000+ sources."
+        "notes": "Reported as $4.1M. Converted from USD at 0.92 EUR/USD. Founded 2024 by ex-McKinsey consultants. Clients include Renault. Aggregates 100,000+ sources."
       }
     ]$json$
   ) AS (name TEXT, stage TEXT, amount_eur NUMERIC, currency_original TEXT,
@@ -100,7 +100,7 @@ SELECT
   s.currency_original,
   s.amount_original,
   s.announced_date::DATE,
-  FALSE,
+  CASE WHEN s.currency_original != 'EUR' AND s.amount_eur IS NOT NULL THEN TRUE ELSE FALSE END,
   FALSE,
   'funding_deals_april_2026',
   s.source_url,
@@ -167,14 +167,14 @@ WITH source AS (
       {"org_name": "Generare", "announced_date": "2026-04-01", "amount_eur": 15.0, "investor_name": "Galion.exe", "is_lead": false},
       {"org_name": "Generare", "announced_date": "2026-04-01", "amount_eur": 15.0, "investor_name": "Teampact Ventures", "is_lead": false},
       {"org_name": "Generare", "announced_date": "2026-04-01", "amount_eur": 15.0, "investor_name": "Vives Partners", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "Seedcamp", "is_lead": true},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "Drysdale Ventures", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "Plug and Play", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "MS & AD", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "Raise", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "Anamcara", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "xdeck", "is_lead": false},
-      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.6, "investor_name": "Bpifrance", "is_lead": false}
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "Seedcamp", "is_lead": true},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "Drysdale Ventures", "is_lead": false},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "Plug and Play", "is_lead": false},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "MS & AD", "is_lead": false},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "Raise", "is_lead": false},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "Anamcara", "is_lead": false},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "xdeck", "is_lead": false},
+      {"org_name": "Omniscient", "announced_date": "2026-04-02", "amount_eur": 3.772, "investor_name": "Bpifrance", "is_lead": false}
     ]$json$
   ) AS (org_name TEXT, announced_date TEXT, amount_eur NUMERIC, investor_name TEXT, is_lead BOOLEAN)
 )
