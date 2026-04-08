@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getOrganizations, formatEurFromDb } from "@/lib/queries";
 import type { Organization } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
+
 const typeLabels: Record<string, { label: string; color: string }> = {
   startup: { label: "Startup", color: "bg-primary/10 text-primary" },
   corporate: { label: "Corporate", color: "bg-primary/10 text-primary" },
