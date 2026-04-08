@@ -1,6 +1,8 @@
 import { getFrenchTechNextMembers } from "@/lib/queries";
 import { FrenchTechDashboard } from "./french-tech-dashboard";
 
+export const dynamic = "force-dynamic";
+
 export default async function FrenchTechNextPage() {
   let members: never[] = [];
   let error: string | null = null;
