@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Omniscient",
+    "website": "https://www.omniscient.so/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "omniscient"
+  },
+  {
+    "name": "Generare",
+    "website": "https://generare.bio/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "generare"
+  },
+  {
+    "name": "Kestra",
+    "website": "https://kestra.io/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "kestra"
+  },
+  {
+    "name": "AI6 Technologies",
+    "website": "https://ai6technologies.fr/",
+    "siren": "135768632",
+    "source_url": "https://ai6technologies.fr/a-propos",
+    "luhn_valid": false,
+    "method": "(?:soci[ée]t[ée]|SAS|SARL|SA\\s",
+    "slug": "ai6-technologies"
+  },
+  {
+    "name": "DiappyMed",
+    "website": "https://diappymed.com/en/",
+    "siren": "893114405",
+    "source_url": "https://diappymed.com/en/mentions-legales",
+    "luhn_valid": true,
+    "method": "immatricul[ée]\\w*\\s+.*?(\\d{3}\\",
+    "slug": "diappymed"
+  },
+  {
+    "name": "Hynaero",
+    "website": "https://hynaero.com/",
+    "siren": "683301771",
+    "source_url": "https://hynaero.com",
+    "luhn_valid": false,
+    "method": "(?:soci[ée]t[ée]|SAS|SARL|SA\\s",
+    "slug": "hynaero"
+  },
+  {
+    "name": "Homaio",
+    "website": "http://homaio.com/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "homaio"
+  },
+  {
+    "name": "Cleavr",
+    "website": "https://www.cleavr.fr/en",
+    "siren": "989360615",
+    "source_url": "https://www.cleavr.fr/en",
+    "luhn_valid": true,
+    "method": "R\\.?C\\.?S\\.?\\s+\\w+\\s+(?:B\\s+)?",
+    "slug": "cleavr"
+  },
+  {
+    "name": "Parallel",
+    "website": "http://www.beparallel.com/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "parallel"
+  },
+  {
+    "name": "Kervalion",
+    "website": "https://kervalion.com/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "kervalion"
+  }
+]
