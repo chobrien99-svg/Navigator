@@ -43,6 +43,10 @@ interface MemberEntry {
 interface Props {
   members: MemberEntry[];
   error: string | null;
+  title?: string;
+  description?: string;
+  officialUrl?: string;
+  icon?: string;
 }
 
 // ─── Helpers ──────────────────────────────────────────────
@@ -68,7 +72,14 @@ function getRegion(org: OrgData): string {
 
 // ─── Component ────────────────────────────────────────────
 
-export function ILabDashboard({ members, error }: Props) {
+export function ILabDashboard({
+  members,
+  error,
+  title = "i-Lab Laureates",
+  description = "France\u2019s national deep-tech startup competition, run by Bpifrance since 1999. Recognizes the most innovative technology ventures emerging from French research labs and universities.",
+  officialUrl = "https://www.bpifrance.fr/catalogue-offres/soutien-a-linnovation/concours-dinnovation-i-lab",
+  icon = "science",
+}: Props) {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [domainFilter, setDomainFilter] = useState<string>("all");
   const [roleFilter, setRoleFilter] = useState<string>("all");
@@ -161,12 +172,10 @@ export function ILabDashboard({ members, error }: Props) {
       <div className="flex items-end justify-between">
         <div>
           <h1 className="font-headline text-3xl font-semibold tracking-tight text-primary">
-            i-Lab Laureates
+            {title}
           </h1>
           <p className="mt-1 max-w-2xl text-sm leading-relaxed text-on-surface-variant">
-            France&apos;s national deep-tech startup competition, run by
-            Bpifrance since 1999. Recognizes the most innovative technology
-            ventures emerging from French research labs and universities.
+            {description}
           </p>
           <div className="mt-3 flex items-center gap-6 text-xs text-on-surface-variant">
             <span>
@@ -187,7 +196,7 @@ export function ILabDashboard({ members, error }: Props) {
             </span>
             <span className="text-outline-variant">·</span>
             <a
-              href="https://www.bpifrance.fr/catalogue-offres/soutien-a-linnovation/concours-dinnovation-i-lab"
+              href={officialUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -207,10 +216,10 @@ export function ILabDashboard({ members, error }: Props) {
       {members.length === 0 && !error && (
         <div className="mt-16 py-20 text-center">
           <span className="material-symbols-outlined text-5xl text-on-surface-variant/40">
-            science
+            {icon}
           </span>
           <p className="mt-4 font-headline text-lg italic text-on-surface-variant">
-            No i-Lab data imported yet.
+            No data imported yet.
           </p>
         </div>
       )}
@@ -358,7 +367,7 @@ export function ILabDashboard({ members, error }: Props) {
                         isGrandPrix ? "text-amber-600" : "text-on-surface-variant"
                       }`}
                     >
-                      {isGrandPrix ? "emoji_events" : "science"}
+                      {isGrandPrix ? "emoji_events" : icon}
                     </span>
                   </div>
 

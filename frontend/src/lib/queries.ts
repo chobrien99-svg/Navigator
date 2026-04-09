@@ -274,15 +274,23 @@ export async function getFrenchTechNextMembers() {
 }
 
 export async function getILabMembers() {
+  return getProgramMembers("i-lab");
+}
+
+export async function getINovMembers() {
+  return getProgramMembers("i-nov");
+}
+
+async function getProgramMembers(programSlug: string) {
   // Step 1: Get the program ID
   const { data: programs, error: progErr } = await supabase
     .from("programs")
     .select("id")
-    .eq("slug", "i-lab");
+    .eq("slug", programSlug);
 
   if (progErr) throw progErr;
   if (!programs || programs.length === 0) {
-    throw new Error("Program 'i-lab' not found.");
+    throw new Error(`Program '${programSlug}' not found.`);
   }
   const programId = programs[0].id;
 
@@ -294,7 +302,7 @@ export async function getILabMembers() {
 
   if (edErr) throw edErr;
   if (!editions || editions.length === 0) {
-    throw new Error("No i-Lab editions found.");
+    throw new Error(`No editions found for '${programSlug}'.`);
   }
   const editionIds = editions.map((e: { id: string }) => e.id);
 

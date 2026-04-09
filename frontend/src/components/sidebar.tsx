@@ -52,6 +52,11 @@ const programsNavigation = [
     href: "/programs/i-lab",
     icon: "science",
   },
+  {
+    name: "i-Nov Laureates",
+    href: "/programs/i-nov",
+    icon: "rocket_launch",
+  },
 ];
 
 const secondaryNavigation = [
