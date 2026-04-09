@@ -1,92 +1,142 @@
 [
   {
-    "name": "Omniscient",
-    "website": "https://www.omniscient.so/",
-    "siren": null,
-    "source_url": null,
-    "luhn_valid": null,
-    "method": null,
-    "slug": "omniscient"
-  },
-  {
-    "name": "Generare",
-    "website": "https://generare.bio/",
-    "siren": null,
-    "source_url": null,
-    "luhn_valid": null,
-    "method": null,
-    "slug": "generare"
-  },
-  {
-    "name": "Kestra",
-    "website": "https://kestra.io/",
-    "siren": null,
-    "source_url": null,
-    "luhn_valid": null,
-    "method": null,
-    "slug": "kestra"
-  },
-  {
-    "name": "AI6 Technologies",
-    "website": "https://ai6technologies.fr/",
-    "siren": "135768632",
-    "source_url": "https://ai6technologies.fr/a-propos",
-    "luhn_valid": false,
-    "method": "(?:soci[ée]t[ée]|SAS|SARL|SA\\s",
-    "slug": "ai6-technologies"
-  },
-  {
     "name": "DiappyMed",
-    "website": "https://diappymed.com/en/",
     "siren": "893114405",
-    "source_url": "https://diappymed.com/en/mentions-legales",
-    "luhn_valid": true,
-    "method": "immatricul[ée]\\w*\\s+.*?(\\d{3}\\",
-    "slug": "diappymed"
-  },
-  {
-    "name": "Hynaero",
-    "website": "https://hynaero.com/",
-    "siren": "683301771",
-    "source_url": "https://hynaero.com",
-    "luhn_valid": false,
-    "method": "(?:soci[ée]t[ée]|SAS|SARL|SA\\s",
-    "slug": "hynaero"
-  },
-  {
-    "name": "Homaio",
-    "website": "http://homaio.com/",
-    "siren": null,
-    "source_url": null,
-    "luhn_valid": null,
-    "method": null,
-    "slug": "homaio"
+    "website": "https://diappymed.com/en/"
   },
   {
     "name": "Cleavr",
-    "website": "https://www.cleavr.fr/en",
     "siren": "989360615",
-    "source_url": "https://www.cleavr.fr/en",
-    "luhn_valid": true,
-    "method": "R\\.?C\\.?S\\.?\\s+\\w+\\s+(?:B\\s+)?",
-    "slug": "cleavr"
+    "website": "https://www.cleavr.fr/en"
   },
   {
-    "name": "Parallel",
-    "website": "http://www.beparallel.com/",
-    "siren": null,
-    "source_url": null,
-    "luhn_valid": null,
-    "method": null,
-    "slug": "parallel"
+    "name": "Topograph",
+    "siren": "932884117",
+    "website": "https://www.topograph.co/"
   },
   {
-    "name": "Kervalion",
-    "website": "https://kervalion.com/",
-    "siren": null,
-    "source_url": null,
-    "luhn_valid": null,
-    "method": null,
-    "slug": "kervalion"
+    "name": "Drinkee",
+    "siren": "917500126",
+    "website": "https://www.drinkee.io/fr"
+  },
+  {
+    "name": "Aerix Systems",
+    "siren": "889844510",
+    "website": "https://www.aerix-systems.com/"
+  },
+  {
+    "name": "Leviathan Dynamics",
+    "siren": "824215537",
+    "website": "https://leviathan-dynamics.com/fr/"
+  },
+  {
+    "name": "SCorp-io",
+    "siren": "904328234",
+    "website": "https://www.scorp-io.com/"
+  },
+  {
+    "name": "Metavonics",
+    "siren": "902658376",
+    "website": "https://www.metavonics.com/"
+  },
+  {
+    "name": "Escape",
+    "siren": "888699584",
+    "website": "https://escape.tech/"
+  },
+  {
+    "name": "Santexpat",
+    "siren": "788571834",
+    "website": "https://santexpat.fr/"
+  },
+  {
+    "name": "Heliup",
+    "siren": "919555938",
+    "website": "https://www.heliup-solar.com/"
+  },
+  {
+    "name": "Calogena",
+    "siren": "908713043",
+    "website": "https://calogena.com/"
+  },
+  {
+    "name": "Fairglow",
+    "siren": "953334455",
+    "website": "https://www.fairglow.io/"
+  },
+  {
+    "name": "K-Motors",
+    "siren": "850505744",
+    "website": "https://www.kmotors.tech/en/"
+  },
+  {
+    "name": "Solaya",
+    "siren": "928050343",
+    "website": "https://www.solaya.ai"
+  },
+  {
+    "name": "4Moving Biotech",
+    "siren": "537407926",
+    "website": "https://www.4movingbiotech.com"
+  },
+  {
+    "name": "Vizzia",
+    "siren": "899832901",
+    "website": "https://www.vizzia.fr/"
+  },
+  {
+    "name": "Skydrone Robotics",
+    "siren": "821433893",
+    "website": "https://skydrone-robotics.com/"
+  },
+  {
+    "name": "hummingbirds",
+    "siren": "914539366",
+    "website": "https://hummingbirds.eu/"
+  },
+  {
+    "name": "DentalMonitoring",
+    "siren": "824001259",
+    "website": "https://dentalmonitoring.com"
+  },
+  {
+    "name": "Mecaware",
+    "siren": "892414566",
+    "website": "https://mecaware.com/"
+  },
+  {
+    "name": "Meelo",
+    "siren": "829051317",
+    "website": "https://www.getmeelo.com/"
+  },
+  {
+    "name": "Desk",
+    "siren": "899774087",
+    "website": "https://desk.community/"
+  },
+  {
+    "name": "MadeForMed",
+    "siren": "419632286",
+    "website": "https://www.madeformed.com/"
+  },
+  {
+    "name": "Newable",
+    "siren": "984815498",
+    "website": "https://newable.energy/"
+  },
+  {
+    "name": "Bobine",
+    "siren": "510909807",
+    "website": "https://bobine-chemistry.com/"
+  },
+  {
+    "name": "Viti-Tunnel",
+    "siren": "931417489",
+    "website": "https://www.viti-tunnel.com/"
+  },
+  {
+    "name": "DermaScan",
+    "siren": "939721817",
+    "website": "https://www.dermascan.fr/"
   }
 ]

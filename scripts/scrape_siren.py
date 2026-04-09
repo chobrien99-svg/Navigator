@@ -8,12 +8,21 @@ This script finds the legal page and extracts the SIREN number.
 
 import json
 import re
+import signal
 import sys
 import time
 import urllib.request
 import urllib.error
 import ssl
 from pathlib import Path
+
+
+class TimeoutError(Exception):
+    pass
+
+
+def timeout_handler(signum, frame):
+    raise TimeoutError("Request timed out")
 
 # Common legal page URL patterns to try
 LEGAL_PATHS = [
@@ -89,25 +98,31 @@ def luhn_check(siren: str) -> bool:
 
 
 def fetch_page(url: str, timeout: int = 5) -> str | None:
-    """Fetch a page and return its text content."""
+    """Fetch a page and return its text content. Hard timeout via signal."""
     try:
-        req = urllib.request.Request(url, headers={
-            'User-Agent': 'Mozilla/5.0 (compatible; NavigatorBot/1.0; SIREN lookup)',
-            'Accept': 'text/html,application/xhtml+xml',
-            'Accept-Language': 'fr-FR,fr;q=0.9,en;q=0.5',
-        })
-        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
-            content_type = resp.headers.get('Content-Type', '')
-            if 'text' not in content_type and 'html' not in content_type:
-                return None
-            raw = resp.read()
-            # Try UTF-8 first, then latin-1
-            for enc in ['utf-8', 'latin-1', 'iso-8859-1']:
-                try:
-                    return raw.decode(enc)
-                except UnicodeDecodeError:
-                    continue
-            return raw.decode('utf-8', errors='replace')
+        # Set a hard 8-second deadline per page fetch
+        old_handler = signal.signal(signal.SIGALRM, timeout_handler)
+        signal.alarm(8)
+        try:
+            req = urllib.request.Request(url, headers={
+                'User-Agent': 'Mozilla/5.0 (compatible; NavigatorBot/1.0; SIREN lookup)',
+                'Accept': 'text/html,application/xhtml+xml',
+                'Accept-Language': 'fr-FR,fr;q=0.9,en;q=0.5',
+            })
+            with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
+                content_type = resp.headers.get('Content-Type', '')
+                if 'text' not in content_type and 'html' not in content_type:
+                    return None
+                raw = resp.read()
+                for enc in ['utf-8', 'latin-1', 'iso-8859-1']:
+                    try:
+                        return raw.decode(enc)
+                    except UnicodeDecodeError:
+                        continue
+                return raw.decode('utf-8', errors='replace')
+        finally:
+            signal.alarm(0)
+            signal.signal(signal.SIGALRM, old_handler)
     except Exception:
         return None
 
