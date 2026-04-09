@@ -1,0 +1,697 @@
+[
+  {
+    "name": "Drinkee",
+    "website": "https://www.drinkee.io/fr",
+    "slug": "drinkee"
+  },
+  {
+    "name": "Aerix Systems",
+    "website": "https://www.aerix-systems.com/",
+    "slug": "aerix-systems"
+  },
+  {
+    "name": "Leviathan Dynamics",
+    "website": "https://leviathan-dynamics.com/fr/",
+    "slug": "leviathan-dynamics"
+  },
+  {
+    "name": "Novacium",
+    "website": "https://www.novacium.com/",
+    "slug": "novacium"
+  },
+  {
+    "name": "Loamics",
+    "website": "http://loamics.com/",
+    "slug": "loamics"
+  },
+  {
+    "name": "SCorp-io",
+    "website": "https://www.scorp-io.com/",
+    "slug": "scorp-io"
+  },
+  {
+    "name": "Bitstack",
+    "website": "https://www.bitstack-app.com/en",
+    "slug": "bitstack"
+  },
+  {
+    "name": "Meteoria",
+    "website": "https://meteoria.ai/",
+    "slug": "meteoria"
+  },
+  {
+    "name": "Advanced Machine Intelligence",
+    "website": "https://amilabs.xyz/",
+    "slug": "advanced-machine-intelligence"
+  },
+  {
+    "name": "Lemrock",
+    "website": "https://www.lemrock.com/",
+    "slug": "lemrock"
+  },
+  {
+    "name": "Metavonics",
+    "website": "https://www.metavonics.com/",
+    "slug": "metavonics"
+  },
+  {
+    "name": "Living Models",
+    "website": "https://www.livingmodels.ai",
+    "slug": "living-models"
+  },
+  {
+    "name": "Escape",
+    "website": "https://escape.tech/",
+    "slug": "escape"
+  },
+  {
+    "name": "Waiv",
+    "website": "https://wearewaiv.com/",
+    "slug": "waiv"
+  },
+  {
+    "name": "EGIDE",
+    "website": "https://www.egide-tech.com/",
+    "slug": "egide"
+  },
+  {
+    "name": "MindDay",
+    "website": "http://mindday.com/",
+    "slug": "mindday"
+  },
+  {
+    "name": "Santexpat",
+    "website": "https://santexpat.fr/",
+    "slug": "santexpat"
+  },
+  {
+    "name": "Heliup",
+    "website": "https://www.heliup-solar.com/",
+    "slug": "heliup"
+  },
+  {
+    "name": "Calogena",
+    "website": "https://calogena.com/",
+    "slug": "calogena"
+  },
+  {
+    "name": "Fairglow",
+    "website": "https://www.fairglow.io/",
+    "slug": "fairglow"
+  },
+  {
+    "name": "May Health",
+    "website": "https://mayhealth.com/",
+    "slug": "may-health"
+  },
+  {
+    "name": "K-Motors",
+    "website": "https://www.kmotors.tech/en/",
+    "slug": "k-motors"
+  },
+  {
+    "name": "Solaya",
+    "website": "https://www.solaya.ai",
+    "slug": "solaya"
+  },
+  {
+    "name": "Rivage",
+    "website": "https://www.rivage.tech",
+    "slug": "rivage"
+  },
+  {
+    "name": "4Moving Biotech",
+    "website": "https://www.4movingbiotech.com",
+    "slug": "4moving-biotech"
+  },
+  {
+    "name": "Vizzia",
+    "website": "https://www.vizzia.fr/",
+    "slug": "vizzia"
+  },
+  {
+    "name": "OOrion",
+    "website": "https://www.oorion.fr/",
+    "slug": "oorion"
+  },
+  {
+    "name": "Verley",
+    "website": "https://verley-food.com/",
+    "slug": "verley"
+  },
+  {
+    "name": "fxhash",
+    "website": "https://www.fxhash.xyz/",
+    "slug": "fxhash"
+  },
+  {
+    "name": "Skydrone Robotics",
+    "website": "https://skydrone-robotics.com/",
+    "slug": "skydrone-robotics"
+  },
+  {
+    "name": "Opus Aerospace",
+    "website": "https://www.opus-aerospace.com/",
+    "slug": "opus-aerospace"
+  },
+  {
+    "name": "Lifeaz",
+    "website": "https://defibrillateur.lifeaz.co/int/en",
+    "slug": "lifeaz"
+  },
+  {
+    "name": "hummingbirds",
+    "website": "https://hummingbirds.eu/",
+    "slug": "hummingbirds"
+  },
+  {
+    "name": "DentalMonitoring",
+    "website": "https://dentalmonitoring.com",
+    "slug": "dentalmonitoring"
+  },
+  {
+    "name": "Formel AI",
+    "website": "https://formel.ai/",
+    "slug": "formel-ai"
+  },
+  {
+    "name": "Mecaware",
+    "website": "https://mecaware.com/",
+    "slug": "mecaware"
+  },
+  {
+    "name": "Meelo",
+    "website": "https://www.getmeelo.com/",
+    "slug": "meelo"
+  },
+  {
+    "name": "Greez",
+    "website": "https://greez.fr",
+    "slug": "greez"
+  },
+  {
+    "name": "Alpa",
+    "website": "http://www.getalpa.com/",
+    "slug": "alpa"
+  },
+  {
+    "name": "Archimed",
+    "website": "https://www.archimed.fr",
+    "slug": "archimed"
+  },
+  {
+    "name": "THE 8 IMPACT",
+    "website": "https://www.the8impact.com/",
+    "slug": "the-8-impact"
+  },
+  {
+    "name": "Weytop",
+    "website": "http://weytop.com/",
+    "slug": "weytop"
+  },
+  {
+    "name": "Desk",
+    "website": "https://desk.community/",
+    "slug": "desk"
+  },
+  {
+    "name": "Getinside",
+    "website": "https://www.getinside.fr",
+    "slug": "getinside"
+  },
+  {
+    "name": "Ocellus",
+    "website": "https://ocellus-studio.com/",
+    "slug": "ocellus"
+  },
+  {
+    "name": "MoneyShape",
+    "website": "http://www.moneyshape.com/",
+    "slug": "moneyshape"
+  },
+  {
+    "name": "Linkeat",
+    "website": "https://www.linkeat.io",
+    "slug": "linkeat"
+  },
+  {
+    "name": "MadeForMed",
+    "website": "https://www.madeformed.com/",
+    "slug": "madeformed"
+  },
+  {
+    "name": "Eclore",
+    "website": "https://eclore-actuators.com",
+    "slug": "eclore"
+  },
+  {
+    "name": "PGP Farmer",
+    "website": "https://www.pgpfarmer.fr",
+    "slug": "pgp-farmer"
+  },
+  {
+    "name": "Stairling",
+    "website": "https://hydroclimat.com/fr/",
+    "slug": "stairling"
+  },
+  {
+    "name": "Newable",
+    "website": "https://newable.energy/",
+    "slug": "newable"
+  },
+  {
+    "name": "PRESAGE",
+    "website": "https://presagelabs.ai/",
+    "slug": "presage"
+  },
+  {
+    "name": "GoCanopy",
+    "website": "https://www.gocanopy.tech/",
+    "slug": "gocanopy"
+  },
+  {
+    "name": "newcleo",
+    "website": "https://www.newcleo.com/",
+    "slug": "newcleo"
+  },
+  {
+    "name": "Bobine",
+    "website": "https://bobine-chemistry.com/",
+    "slug": "bobine"
+  },
+  {
+    "name": "Atlas V Group",
+    "website": "https://atlasv.io/",
+    "slug": "atlas-v-group"
+  },
+  {
+    "name": "Viti-Tunnel",
+    "website": "https://www.viti-tunnel.com/",
+    "slug": "viti-tunnel"
+  },
+  {
+    "name": "Revox",
+    "website": "https://www.getrevox.com/",
+    "slug": "revox"
+  },
+  {
+    "name": "DermaScan",
+    "website": "https://www.dermascan.fr/",
+    "slug": "dermascan"
+  },
+  {
+    "name": "Twin",
+    "website": "https://builder.twin.so/",
+    "slug": "twin"
+  },
+  {
+    "name": "Sailiz",
+    "website": "https://sailiz.fr/",
+    "slug": "sailiz"
+  },
+  {
+    "name": "BW Ideol",
+    "website": "https://www.bw-ideol.com/",
+    "slug": "bw-ideol"
+  },
+  {
+    "name": "Linkup",
+    "website": "https://www.linkup.so/",
+    "slug": "linkup"
+  },
+  {
+    "name": "Aviwell",
+    "website": "https://www.aviwell.fr/",
+    "slug": "aviwell"
+  },
+  {
+    "name": "checkDPE",
+    "website": "https://www.checkdpe.fr",
+    "slug": "checkdpe"
+  },
+  {
+    "name": "UBEES",
+    "website": "https://www.ubees.com/",
+    "slug": "ubees"
+  },
+  {
+    "name": "Geolinks Services",
+    "website": "https://geolinks-services.com/",
+    "slug": "geolinks-services"
+  },
+  {
+    "name": "Lexip",
+    "website": "https://www.lexip.co/",
+    "slug": "lexip-formerly-pixminds"
+  },
+  {
+    "name": "Annette",
+    "website": "https://www.annette.care/",
+    "slug": "annette"
+  },
+  {
+    "name": "Neosylva",
+    "website": "https://www.neosylva.fr",
+    "slug": "neosylva"
+  },
+  {
+    "name": "VoilaChef",
+    "website": "https://voilachef.com",
+    "slug": "voilachef"
+  },
+  {
+    "name": "ROB OCC",
+    "website": "https://www.robocc.fr/",
+    "slug": "robocc"
+  },
+  {
+    "name": "Keria",
+    "website": "https://keria.tech/",
+    "slug": "keria-formerly-cezam"
+  },
+  {
+    "name": "C12",
+    "website": "https://www.c12-quantum.com",
+    "slug": "c12"
+  },
+  {
+    "name": "Ray Studios",
+    "website": "https://www.ray-studios.com/",
+    "slug": "ray-studios"
+  },
+  {
+    "name": "ECAIR",
+    "website": "https://www.ecair.eco/",
+    "slug": "ecair"
+  },
+  {
+    "name": "Drive Innov",
+    "website": "https://www.drive-innov.com/",
+    "slug": "drive-innov"
+  },
+  {
+    "name": "Cube",
+    "website": "https://www.lecube.io/",
+    "slug": "cube-formerly-cube3"
+  },
+  {
+    "name": "GetMint",
+    "website": "https://getmint.ai/",
+    "slug": "getmint"
+  },
+  {
+    "name": "Arcads.ai",
+    "website": "https://www.arcads.ai",
+    "slug": "arcadsai"
+  },
+  {
+    "name": "Basalt",
+    "website": "https://getbasalt.ai/",
+    "slug": "basalt"
+  },
+  {
+    "name": "Monomeris Chemicals",
+    "website": "https://monomeris-chemicals.com/",
+    "slug": "monomeris-chemicals"
+  },
+  {
+    "name": "Innerskin",
+    "website": "https://www.innerskin.com",
+    "slug": "innerskin"
+  },
+  {
+    "name": "Rutile.bike",
+    "website": "https://rutile.bike/",
+    "slug": "rutilebike"
+  },
+  {
+    "name": "Upway",
+    "website": "https://upway.shop",
+    "slug": "upway"
+  },
+  {
+    "name": "Revolt.eco",
+    "website": "https://www.revolt.eco/",
+    "slug": "revolteco"
+  },
+  {
+    "name": "Dialog",
+    "website": "https://www.askdialog.com",
+    "slug": "dialog"
+  },
+  {
+    "name": "ReGeneration",
+    "website": "https://regeneration.eu",
+    "slug": "regeneration"
+  },
+  {
+    "name": "CWS",
+    "website": "https://computedwingsail.com/en/",
+    "slug": "cws-computed-wing-sails"
+  },
+  {
+    "name": "Hoora",
+    "website": "https://www.hooragames.com",
+    "slug": "hoora"
+  },
+  {
+    "name": "DotBlocks",
+    "website": "https://dotblocks.com/",
+    "slug": "dotblocks"
+  },
+  {
+    "name": "Zero Industries",
+    "website": "https://www.zeroindustries.eu/",
+    "slug": "zero-industries"
+  },
+  {
+    "name": "NOLT",
+    "website": "https://www.wearenolt.com/en/",
+    "slug": "nolt"
+  },
+  {
+    "name": "LaFraise",
+    "website": "https://lafraise.pro/",
+    "slug": "lafraise"
+  },
+  {
+    "name": "HyPrSpace",
+    "website": "https://hypr-space.com/",
+    "slug": "hyprspace"
+  },
+  {
+    "name": "Zaiffer",
+    "website": "https://www.zaiffer.org/",
+    "slug": "zaiffer"
+  },
+  {
+    "name": "Tsuga",
+    "website": "https://www.tsuga.com/",
+    "slug": "tsuga"
+  },
+  {
+    "name": "Goud",
+    "website": "https://www.goudsante.fr/",
+    "slug": "goud"
+  },
+  {
+    "name": "KLODIOS",
+    "website": "https://klodios.com",
+    "slug": "klodios"
+  },
+  {
+    "name": "The Mobile-First Company",
+    "website": "http://themobilefirstcompany.com/",
+    "slug": "the-mobile-first-company"
+  },
+  {
+    "name": "Komu",
+    "website": "https://www.komu.eu/",
+    "slug": "komu-ex-contestio"
+  },
+  {
+    "name": "Initiativ",
+    "website": "https://takeinitiativ.com/",
+    "slug": "initiativ"
+  },
+  {
+    "name": "Diffusely",
+    "website": "https://www.diffusely.com/",
+    "slug": "diffusely-ex-meero"
+  },
+  {
+    "name": "Cellura",
+    "website": "http://www.cellura.io/",
+    "slug": "cellura-formerly-softcell-therapeutics"
+  },
+  {
+    "name": "Ewake",
+    "website": "https://www.ewake.ai/",
+    "slug": "ewake"
+  },
+  {
+    "name": "Sonar Clarity",
+    "website": "https://avanoo.com",
+    "slug": "sonar-clarity-rebranded-as-avanoo"
+  },
+  {
+    "name": "UP&CHARGE",
+    "website": "https://upandcharge.com",
+    "slug": "upcharge"
+  },
+  {
+    "name": "OneTake AI",
+    "website": "https://onetake.ai",
+    "slug": "onetake-ai"
+  },
+  {
+    "name": "Kotcha",
+    "website": "https://www.kotcha.com/",
+    "slug": "kotcha"
+  },
+  {
+    "name": "Skyld AI",
+    "website": "https://www.skyld.io/",
+    "slug": "skyld-ai"
+  },
+  {
+    "name": "vebo",
+    "website": "https://www.vebo.eco",
+    "slug": "vebo"
+  },
+  {
+    "name": "Vibe",
+    "website": "https://www.vibe.co/",
+    "slug": "vibe"
+  },
+  {
+    "name": "Volta Software",
+    "website": "https://volta.software",
+    "slug": "volta-software"
+  },
+  {
+    "name": "MNGRS.AI",
+    "website": "https://www.mngrs.ai",
+    "slug": "mngrsai"
+  },
+  {
+    "name": "Jint",
+    "website": "https://www.jint.ai",
+    "slug": "jint-formerly-mozzaik365"
+  },
+  {
+    "name": "Ficha",
+    "website": "https://ficha.fr/en/",
+    "slug": "ficha"
+  },
+  {
+    "name": "Qovery",
+    "website": "https://www.qovery.com/",
+    "slug": "qovery"
+  },
+  {
+    "name": "MyFit Solutions",
+    "website": "https://myfit-solutions.com/",
+    "slug": "myfit-solutions"
+  },
+  {
+    "name": "Carsup",
+    "website": "https://www.carsup.io/",
+    "slug": "carsup"
+  },
+  {
+    "name": "Elmut",
+    "website": "https://elmut.fr/",
+    "slug": "elmut"
+  },
+  {
+    "name": "Loft Orbital",
+    "website": "https://loftorbital.com",
+    "slug": "loft-orbital"
+  },
+  {
+    "name": "Standing Ovation",
+    "website": "https://standingo.co/",
+    "slug": "standing-ovation"
+  },
+  {
+    "name": "Lifebloom",
+    "website": "https://lifebloom.co/",
+    "slug": "lifebloom"
+  },
+  {
+    "name": "Upway",
+    "website": "https://upway.shop",
+    "slug": "upway"
+  },
+  {
+    "name": "HappyVore",
+    "website": "https://happyvore.com",
+    "slug": "happyvore"
+  },
+  {
+    "name": "Dalma",
+    "website": "https://www.dalma.co",
+    "slug": "dalma"
+  },
+  {
+    "name": "Nabla",
+    "website": "https://www.nabla.com/",
+    "slug": "nabla"
+  },
+  {
+    "name": "Riot",
+    "website": "https://tryriot.com",
+    "slug": "riot"
+  },
+  {
+    "name": "ScorePlay",
+    "website": "https://www.scoreplay.io/",
+    "slug": "scoreplay"
+  },
+  {
+    "name": "Formance",
+    "website": "https://www.formance.com",
+    "slug": "formance"
+  },
+  {
+    "name": "Epsor",
+    "website": "https://www.epsor.fr",
+    "slug": "epsor"
+  },
+  {
+    "name": "Tomorro",
+    "website": "http://tomorro.com",
+    "slug": "tomorro"
+  },
+  {
+    "name": "Qomon",
+    "website": "https://qomon.com/",
+    "slug": "qomon"
+  },
+  {
+    "name": "Fabriq",
+    "website": "http://fabriq.tech",
+    "slug": "fabriq"
+  },
+  {
+    "name": "Didask",
+    "website": "https://www.didask.com",
+    "slug": "didask"
+  },
+  {
+    "name": "Underdog",
+    "website": "https://underdog.shop/",
+    "slug": "underdog"
+  },
+  {
+    "name": "Grace",
+    "website": "https://grace.io/",
+    "slug": "grace"
+  },
+  {
+    "name": "newcleo",
+    "website": "https://www.newcleo.com/",
+    "slug": "newcleo"
+  }
+]
