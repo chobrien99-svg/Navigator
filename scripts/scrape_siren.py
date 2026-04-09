@@ -88,7 +88,7 @@ def luhn_check(siren: str) -> bool:
     return total % 10 == 0
 
 
-def fetch_page(url: str, timeout: int = 10) -> str | None:
+def fetch_page(url: str, timeout: int = 5) -> str | None:
     """Fetch a page and return its text content."""
     try:
         req = urllib.request.Request(url, headers={
