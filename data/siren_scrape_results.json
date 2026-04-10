@@ -1330,5 +1330,86 @@
     "luhn_valid": false,
     "method": "(?:soci[ée]t[ée]|SAS|SARL|SA\\s",
     "slug": "riot"
+  },
+  {
+    "name": "ScorePlay",
+    "website": "https://www.scoreplay.io/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "scoreplay"
+  },
+  {
+    "name": "Formance",
+    "website": "https://www.formance.com",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "formance"
+  },
+  {
+    "name": "Epsor",
+    "website": "https://www.epsor.fr",
+    "siren": "832966956",
+    "source_url": "https://www.epsor.fr",
+    "luhn_valid": true,
+    "method": "immatricul[ée]\\w*\\s+.*?(\\d{3}\\",
+    "slug": "epsor"
+  },
+  {
+    "name": "Tomorro",
+    "website": "http://tomorro.com",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "tomorro"
+  },
+  {
+    "name": "Qomon",
+    "website": "https://qomon.com/",
+    "siren": "560375085",
+    "source_url": "https://qomon.com/mentions-legales",
+    "luhn_valid": false,
+    "method": "(?:soci[ée]t[ée]|SAS|SARL|SA\\s",
+    "slug": "qomon"
+  },
+  {
+    "name": "Fabriq",
+    "website": "http://fabriq.tech",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "fabriq"
+  },
+  {
+    "name": "Didask",
+    "website": "https://www.didask.com",
+    "siren": "808859276",
+    "source_url": "https://www.didask.com/mentions-legales",
+    "luhn_valid": true,
+    "method": "immatricul[ée]\\w*\\s+.*?(\\d{3}\\",
+    "slug": "didask"
+  },
+  {
+    "name": "Underdog",
+    "website": "https://underdog.shop/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "underdog"
+  },
+  {
+    "name": "Grace",
+    "website": "https://grace.io/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "grace"
   }
 ]
