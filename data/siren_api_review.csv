@@ -1,9 +1,10 @@
 name,website,siren,matched_name,confidence,city,activity,creation_date
 May Health,https://mayhealth.com/,831705751,MAY HEALTH (MAY HEALTH),0.6,PARIS,72.19Z,2026-01-08
-Lifeaz,https://defibrillateur.lifeaz.co/int/en,814042958,LIFEAZ (LIFE),0.7,PARIS,70.10Z,2025-02-10
 Revox,https://www.getrevox.com/,528034150,REVOX GMBH,0.66,,70.10Z,2010-09-01
 Aviwell,https://www.aviwell.fr/,430213900,AVIWELL 3000,0.64,SAINT-LAURENT-DU-VAR,68.20A,1997-01-01
 LaFraise,https://lafraise.pro/,917725970,LES LAFRAISE,0.78,HOUPLINES,68.20B,2022-07-12
 UP&CHARGE,https://upandcharge.com,842404352,UP CHARGES DOWM,0.62,BOBIGNY,46.69C,2018-09-15
 OneTake AI,https://onetake.ai,504188814,ONETAK,0.67,EPERNAY,73.11Z,2008-04-09
+Lifeaz,https://defibrillateur.lifeaz.co/int/en,814042958,LIFEAZ (LIFE),0.7,PARIS,70.10Z,2025-02-10
+Cellura,http://www.cellura.io/,433487386,MARC CELLURA,0.69,TOULOUSE,01.49Z,2016-10-01
 Skyld AI,https://www.skyld.io/,977899020,SKYLD,0.81,RENNES,62.01Z,2025-08-13

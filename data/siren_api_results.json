@@ -2104,5 +2104,616 @@
         "creation_date": "2025-06-07"
       }
     ]
+  },
+  {
+    "name": "Verley",
+    "website": "https://verley-food.com/",
+    "slug": "verley",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Linkup",
+    "website": "https://www.linkup.so/",
+    "slug": "linkup",
+    "siren": "512532482",
+    "confidence": 1.0,
+    "matched_name": "LINKUP",
+    "activity": "46.90Z",
+    "city": "PARIS",
+    "creation_date": "2009-05-04",
+    "candidates": [
+      {
+        "name": "LINKUP (LINKUP)",
+        "siren": "940631021",
+        "city": "CLICHY",
+        "activity": "70.22Z",
+        "creation_date": "2025-01-17"
+      },
+      {
+        "name": "LINKUP (LINKUP)",
+        "siren": "914428651",
+        "city": "LILLE",
+        "activity": "85.59A",
+        "creation_date": "2022-06-07"
+      },
+      {
+        "name": "LINKUP (WEISSY)",
+        "siren": "102534435",
+        "city": "PARIS",
+        "activity": "63.12Z",
+        "creation_date": "2026-03-31"
+      }
+    ]
+  },
+  {
+    "name": "UBEES",
+    "website": "https://www.ubees.com/",
+    "slug": "ubees",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "UBEES FRANCE",
+        "siren": "889023289",
+        "city": "PARIS",
+        "activity": "72.19Z",
+        "creation_date": "2020-09-09"
+      },
+      {
+        "name": "UBEES GLOBAL",
+        "siren": "988860128",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2025-07-02"
+      }
+    ]
+  },
+  {
+    "name": "Annette",
+    "website": "https://www.annette.care/",
+    "slug": "annette",
+    "siren": "933867483",
+    "confidence": 1.0,
+    "matched_name": "ANNETTE",
+    "activity": "62.01Z",
+    "city": "PARIS",
+    "creation_date": "2024-10-01",
+    "candidates": [
+      {
+        "name": "ANNETTE",
+        "siren": "933867483",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2024-10-01"
+      },
+      {
+        "name": "ANNETTE",
+        "siren": "512220138",
+        "city": "NARBONNE",
+        "activity": "43.33Z",
+        "creation_date": "2016-03-01"
+      },
+      {
+        "name": "ANNETTE",
+        "siren": "752453175",
+        "city": "SAINT-BARTHELEMY",
+        "activity": "68.20B",
+        "creation_date": "2024-08-07"
+      }
+    ]
+  },
+  {
+    "name": "Neosylva",
+    "website": "https://www.neosylva.fr",
+    "slug": "neosylva",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NEOSYLVA INVESTISSEMENT FORESTIER",
+        "siren": "843567215",
+        "city": "NANTES",
+        "activity": "70.22Z",
+        "creation_date": "2025-08-18"
+      },
+      {
+        "name": "BONGARANT (NEOSYLVA)",
+        "siren": "839898210",
+        "city": "SAINT-ETIENNE-DE-MONTLUC",
+        "activity": "02.40Z",
+        "creation_date": "2018-05-01"
+      }
+    ]
+  },
+  {
+    "name": "C12",
+    "website": "https://www.c12-quantum.com",
+    "slug": "c12",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "C12 ACADEMIE (C12 ACADEMIE)",
+        "siren": "995087376",
+        "city": "BORDEAUX",
+        "activity": "70.22Z",
+        "creation_date": "2025-12-12"
+      },
+      {
+        "name": "JP4-C12",
+        "siren": "833614258",
+        "city": "L'ISLE-SUR-LA-SORGUE",
+        "activity": "68.32A",
+        "creation_date": "2017-11-08"
+      },
+      {
+        "name": "C12 BTP",
+        "siren": "881018717",
+        "city": "LABASTIDE-GABAUSSE",
+        "activity": "43.11Z",
+        "creation_date": "2024-10-23"
+      }
+    ]
+  },
+  {
+    "name": "Rutile.bike",
+    "website": "https://rutile.bike/",
+    "slug": "rutilebike",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Upway",
+    "website": "https://upway.shop",
+    "slug": "upway",
+    "siren": "904972536",
+    "confidence": 1.0,
+    "matched_name": "UPWAY",
+    "activity": "68.31Z",
+    "city": "SAINT-LAURENT-DU-MARONI",
+    "creation_date": "2021-10-01",
+    "candidates": [
+      {
+        "name": "UPWAY",
+        "siren": "904972536",
+        "city": "SAINT-LAURENT-DU-MARONI",
+        "activity": "68.31Z",
+        "creation_date": "2021-10-01"
+      },
+      {
+        "name": "UPWAY",
+        "siren": "985338946",
+        "city": "MONTEREAU-SUR-LE-JARD",
+        "activity": "62.01Z",
+        "creation_date": "2024-03-01"
+      },
+      {
+        "name": "UPWAY",
+        "siren": "817558836",
+        "city": "PARIS 8",
+        "activity": "64.20Z",
+        "creation_date": "2016-01-01"
+      }
+    ]
+  },
+  {
+    "name": "Dialog",
+    "website": "https://www.askdialog.com",
+    "slug": "dialog",
+    "siren": "437956485",
+    "confidence": 1.0,
+    "matched_name": "DIALOG",
+    "activity": "52.29B",
+    "city": "CHERBOURG-EN-COTENTIN",
+    "creation_date": "2003-06-30",
+    "candidates": [
+      {
+        "name": "DIALOG",
+        "siren": "437956485",
+        "city": "CHERBOURG-EN-COTENTIN",
+        "activity": "52.29B",
+        "creation_date": "2003-06-30"
+      },
+      {
+        "name": "DIALOG",
+        "siren": "394385041",
+        "city": "ARNAGE",
+        "activity": "62.02A",
+        "creation_date": "1994-07-01"
+      },
+      {
+        "name": "DIALOG",
+        "siren": "922195300",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2023-09-20"
+      }
+    ]
+  },
+  {
+    "name": "Zaiffer",
+    "website": "https://www.zaiffer.org/",
+    "slug": "zaiffer",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NASIR ZAIF",
+        "siren": "922336649",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2023-01-01"
+      },
+      {
+        "name": "ABDULQADIR ZAIF",
+        "siren": "982906133",
+        "city": "PARIS",
+        "activity": "53.20Z",
+        "creation_date": "2023-12-27"
+      },
+      {
+        "name": "ALI ZAIF",
+        "siren": "833896129",
+        "city": "PIERREFITTE-SUR-SEINE",
+        "activity": "53.20Z",
+        "creation_date": "2017-12-15"
+      }
+    ]
+  },
+  {
+    "name": "Tsuga",
+    "website": "https://www.tsuga.com/",
+    "slug": "tsuga",
+    "siren": "750314429",
+    "confidence": 1.0,
+    "matched_name": "TSUGA",
+    "activity": "62.02A",
+    "city": "SAINT-REMY-LES-CHEVREUSE",
+    "creation_date": "2012-04-02",
+    "candidates": [
+      {
+        "name": "TSUGA",
+        "siren": "750314429",
+        "city": "SAINT-REMY-LES-CHEVREUSE",
+        "activity": "62.02A",
+        "creation_date": "2012-04-02"
+      },
+      {
+        "name": "TSUGA",
+        "siren": "837981828",
+        "city": "DULLIN",
+        "activity": "70.22Z",
+        "creation_date": "2018-03-01"
+      },
+      {
+        "name": "TSUGA",
+        "siren": "900719378",
+        "city": "CHAMONIX-MONT-BLANC",
+        "activity": "70.10Z",
+        "creation_date": "2023-01-31"
+      }
+    ]
+  },
+  {
+    "name": "KLODIOS",
+    "website": "https://klodios.com",
+    "slug": "klodios",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Initiativ",
+    "website": "https://takeinitiativ.com/",
+    "slug": "initiativ",
+    "siren": "987788965",
+    "confidence": 1.0,
+    "matched_name": "INITIATIV",
+    "activity": "58.29C",
+    "city": "PARIS",
+    "creation_date": "2025-10-03",
+    "candidates": [
+      {
+        "name": "INITIATIV",
+        "siren": "987788965",
+        "city": "PARIS",
+        "activity": "58.29C",
+        "creation_date": "2025-10-03"
+      },
+      {
+        "name": "AJ INITIATIVE",
+        "siren": "908422793",
+        "city": "LYON",
+        "activity": "81.21Z",
+        "creation_date": "2023-03-10"
+      },
+      {
+        "name": "FAC INITIATIVES (FAC'IN)",
+        "siren": "800429888",
+        "city": "PARIS",
+        "activity": "94.99Z",
+        "creation_date": "2012-09-25"
+      }
+    ]
+  },
+  {
+    "name": "Cellura",
+    "website": "http://www.cellura.io/",
+    "slug": "cellura-formerly-softcell-therapeutics",
+    "siren": "433487386",
+    "confidence": 0.69,
+    "matched_name": "MARC CELLURA",
+    "activity": "01.49Z",
+    "city": "TOULOUSE",
+    "creation_date": "2016-10-01",
+    "candidates": [
+      {
+        "name": "MARC CELLURA",
+        "siren": "433487386",
+        "city": "TOULOUSE",
+        "activity": "01.49Z",
+        "creation_date": "2016-10-01"
+      },
+      {
+        "name": "JEREMY CELLURA",
+        "siren": "920666013",
+        "city": "ARLES",
+        "activity": "25.11Z",
+        "creation_date": "2022-11-20"
+      },
+      {
+        "name": "FLORIANE CELLURA",
+        "siren": "923934871",
+        "city": "SAINT-CHAMOND",
+        "activity": "86.90D",
+        "creation_date": "2024-07-01"
+      }
+    ]
+  },
+  {
+    "name": "Ewake",
+    "website": "https://www.ewake.ai/",
+    "slug": "ewake",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Skyld AI",
+    "website": "https://www.skyld.io/",
+    "slug": "skyld-ai",
+    "siren": "977899020",
+    "confidence": 0.81,
+    "matched_name": "SKYLD",
+    "activity": "62.01Z",
+    "city": "RENNES",
+    "creation_date": "2025-08-13",
+    "candidates": [
+      {
+        "name": "SKYLD",
+        "siren": "977899020",
+        "city": "RENNES",
+        "activity": "62.01Z",
+        "creation_date": "2025-08-13"
+      }
+    ]
+  },
+  {
+    "name": "Loft Orbital",
+    "website": "https://loftorbital.com",
+    "slug": "loft-orbital",
+    "siren": "878678051",
+    "confidence": 1.0,
+    "matched_name": "LOFT ORBITAL TECHNOLOGIES",
+    "activity": "62.02A",
+    "city": "TOULOUSE",
+    "creation_date": "2023-01-17",
+    "candidates": [
+      {
+        "name": "LOFT ORBITAL TECHNOLOGIES",
+        "siren": "878678051",
+        "city": "TOULOUSE",
+        "activity": "62.02A",
+        "creation_date": "2023-01-17"
+      },
+      {
+        "name": "CSE LOFT ORBITAL",
+        "siren": "102582798",
+        "city": "TOULOUSE",
+        "activity": "94.20Z",
+        "creation_date": "2025-10-21"
+      }
+    ]
+  },
+  {
+    "name": "ScorePlay",
+    "website": "https://www.scoreplay.io/",
+    "slug": "scoreplay",
+    "siren": "841118375",
+    "confidence": 1.0,
+    "matched_name": "SCOREPLAY",
+    "activity": "62.01Z",
+    "city": "NEUILLY-SUR-SEINE",
+    "creation_date": "2018-07-05",
+    "candidates": [
+      {
+        "name": "SCOREPLAY",
+        "siren": "841118375",
+        "city": "NEUILLY-SUR-SEINE",
+        "activity": "62.01Z",
+        "creation_date": "2018-07-05"
+      }
+    ]
+  },
+  {
+    "name": "Formance",
+    "website": "https://www.formance.com",
+    "slug": "formance",
+    "siren": "409983756",
+    "confidence": 1.0,
+    "matched_name": "FORMANCE",
+    "activity": "94.99Z",
+    "city": "NICE",
+    "creation_date": "1996-03-01",
+    "candidates": [
+      {
+        "name": "FORMANCE",
+        "siren": "409983756",
+        "city": "NICE",
+        "activity": "94.99Z",
+        "creation_date": "1996-03-01"
+      },
+      {
+        "name": "FORMANCE",
+        "siren": "353339625",
+        "city": "SAINT-DIDIER",
+        "activity": "85.59A",
+        "creation_date": "1993-09-16"
+      },
+      {
+        "name": "FORMANCE",
+        "siren": "753327139",
+        "city": "TOULOUSE",
+        "activity": "85.59A",
+        "creation_date": "2012-09-01"
+      }
+    ]
+  },
+  {
+    "name": "Qomon",
+    "website": "https://qomon.com/",
+    "slug": "qomon",
+    "siren": "889601506",
+    "confidence": 0.93,
+    "matched_name": "QOMONS",
+    "activity": "63.12Z",
+    "city": "LYON",
+    "creation_date": "2023-06-30",
+    "candidates": [
+      {
+        "name": "QOMONS",
+        "siren": "889601506",
+        "city": "LYON",
+        "activity": "63.12Z",
+        "creation_date": "2023-06-30"
+      },
+      {
+        "name": "ASTERION SIDE QOMON",
+        "siren": "929321040",
+        "city": "PARIS",
+        "activity": "64.20Z",
+        "creation_date": "2024-05-16"
+      },
+      {
+        "name": "ROUNDTABLE X GOOD ONLY X QOMON",
+        "siren": "930219480",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2024-06-17"
+      }
+    ]
+  },
+  {
+    "name": "Fabriq",
+    "website": "http://fabriq.tech",
+    "slug": "fabriq",
+    "siren": "851998476",
+    "confidence": 1.0,
+    "matched_name": "FABRIQ",
+    "activity": "58.29C",
+    "city": "BOULOGNE-BILLANCOURT",
+    "creation_date": "2021-07-28",
+    "candidates": [
+      {
+        "name": "FABRIQ",
+        "siren": "851998476",
+        "city": "BOULOGNE-BILLANCOURT",
+        "activity": "58.29C",
+        "creation_date": "2021-07-28"
+      },
+      {
+        "name": "FABRIQ",
+        "siren": "812116622",
+        "city": "CHASSIEU",
+        "activity": "90.02Z",
+        "creation_date": "2017-07-25"
+      },
+      {
+        "name": "FABRIQ PUBLIC RELATIONS (FABRIQ)",
+        "siren": "793262494",
+        "city": "NEUILLY-SUR-SEINE",
+        "activity": "70.21Z",
+        "creation_date": "2017-04-22"
+      }
+    ]
+  },
+  {
+    "name": "Underdog",
+    "website": "https://underdog.shop/",
+    "slug": "underdog",
+    "siren": "849998646",
+    "confidence": 1.0,
+    "matched_name": "UNDERDOG",
+    "activity": "90.01Z",
+    "city": "ALLEINS",
+    "creation_date": "2020-09-18",
+    "candidates": [
+      {
+        "name": "UNDERDOG",
+        "siren": "849998646",
+        "city": "ALLEINS",
+        "activity": "90.01Z",
+        "creation_date": "2020-09-18"
+      },
+      {
+        "name": "UNDERDOG",
+        "siren": "937523694",
+        "city": "BORDEAUX",
+        "activity": "90.03A",
+        "creation_date": "2023-10-21"
+      },
+      {
+        "name": "UNDERDOGS",
+        "siren": "828130203",
+        "city": "ROUEN",
+        "activity": "56.30Z",
+        "creation_date": "2017-03-06"
+      }
+    ]
   }
 ]
