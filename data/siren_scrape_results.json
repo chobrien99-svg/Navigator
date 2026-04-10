@@ -772,5 +772,59 @@
     "source_url": null,
     "method": "log",
     "slug": "checkdpe"
+  },
+  {
+    "name": "UBEES",
+    "website": "https://www.ubees.com/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "ubees"
+  },
+  {
+    "name": "Geolinks Services",
+    "website": "https://geolinks-services.com/",
+    "siren": "880788054",
+    "source_url": "https://geolinks-services.com/mentions-legales",
+    "luhn_valid": true,
+    "method": "immatricul[ée]\\w*\\s+.*?(\\d{3}\\",
+    "slug": "geolinks-services"
+  },
+  {
+    "name": "Lexip",
+    "website": "https://www.lexip.co/",
+    "siren": "425010451",
+    "source_url": "https://www.lexip.co/mentions-legales",
+    "luhn_valid": true,
+    "method": "num[ée]ro.*?(\\d{3}\\s\\d{3}\\s\\d{",
+    "slug": "lexip-formerly-pixminds"
+  },
+  {
+    "name": "Annette",
+    "website": "https://www.annette.care/",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "annette"
+  },
+  {
+    "name": "Neosylva",
+    "website": "https://www.neosylva.fr",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "neosylva"
+  },
+  {
+    "name": "VoilaChef",
+    "website": "https://voilachef.com",
+    "siren": null,
+    "source_url": null,
+    "luhn_valid": null,
+    "method": null,
+    "slug": "voilachef"
   }
 ]
