@@ -104,17 +104,27 @@ def search_company(name: str, limit: int = 5) -> list[dict]:
     })
     url = f"{API_BASE}?{params}"
 
-    try:
-        req = urllib.request.Request(url, headers={
-            "User-Agent": "NavigatorBot/1.0 (SIREN enrichment)",
-            "Accept": "application/json",
-        })
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data.get("results", [])
-    except Exception as e:
-        print(f"    API error: {e}")
-        return []
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(url, headers={
+                "User-Agent": "NavigatorBot/1.0 (SIREN enrichment)",
+                "Accept": "application/json",
+            })
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                return data.get("results", [])
+        except urllib.error.HTTPError as e:
+            if e.code == 429:  # rate limit — exponential backoff
+                wait = 2 ** attempt
+                print(f"    rate limited, waiting {wait}s...", end=" ", flush=True)
+                time.sleep(wait)
+                continue
+            print(f"    HTTP {e.code}")
+            return []
+        except Exception as e:
+            print(f"    error: {e}")
+            return []
+    return []
 
 
 def pick_best_match(name: str, candidates: list[dict]) -> tuple[dict | None, float]:
