@@ -204,18 +204,49 @@ def main():
     print(f"Scraping SIREN for {len(companies)} companies...")
     print()
 
-    results = []
-    found = 0
-    valid = 0
+    # Save progress incrementally to support resuming
+    output_dir = Path(__file__).parent.parent / 'data'
+    output_path = output_dir / 'siren_scrape_results.json'
+
+    # Load existing results if any (for resume)
+    existing = {}
+    if output_path.exists():
+        try:
+            with open(output_path) as f:
+                prev = json.load(f)
+                for r in prev:
+                    existing[r['slug']] = r
+            print(f"Loaded {len(existing)} existing results — resuming.")
+        except Exception:
+            pass
+
+    results = list(existing.values())
+    found = sum(1 for r in results if r.get('siren'))
+    valid = sum(1 for r in results if r.get('siren') and r.get('luhn_valid'))
 
     for i, company in enumerate(companies):
         name = company['name']
         website = company['website']
         slug = company.get('slug', '')
 
+        # Skip if already attempted
+        if slug in existing:
+            continue
+
         print(f"[{i+1}/{len(companies)}] {name} ({website})...", end=" ", flush=True)
 
-        result = find_siren_for_company(name, website)
+        try:
+            result = find_siren_for_company(name, website)
+        except Exception as e:
+            result = {'name': name, 'website': website, 'siren': None, 'source_url': None, 'luhn_valid': None, 'method': None}
+            print(f"error: {e}")
+            result['slug'] = slug
+            results.append(result)
+            # Save progress
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(results, f, ensure_ascii=False, indent=2)
+            continue
+
         result['slug'] = slug
         results.append(result)
 
@@ -232,13 +263,11 @@ def main():
         else:
             print("not found")
 
-        time.sleep(0.5)  # Be polite
+        # Save after every company so we can resume on crash
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(results, f, ensure_ascii=False, indent=2)
 
-    # Save results
-    output_dir = Path(__file__).parent.parent / 'data'
-    output_path = output_dir / 'siren_scrape_results.json'
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
+        time.sleep(0.3)
 
     print(f"\n{'='*60}")
     print(f"Results: {found}/{len(companies)} SIREN found ({found*100//len(companies)}%)")

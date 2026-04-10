@@ -1,142 +1,776 @@
 [
   {
+    "name": "Omniscient",
+    "website": "https://www.omniscient.so/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "omniscient"
+  },
+  {
+    "name": "Generare",
+    "website": "https://generare.bio/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "generare"
+  },
+  {
+    "name": "Kestra",
+    "website": "https://kestra.io/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "kestra"
+  },
+  {
+    "name": "AI6 Technologies",
+    "website": "https://ai6technologies.fr/",
+    "siren": "135768632",
+    "luhn_valid": false,
+    "source_url": null,
+    "method": "log",
+    "slug": "ai6-technologies"
+  },
+  {
     "name": "DiappyMed",
+    "website": "https://diappymed.com/en/",
     "siren": "893114405",
-    "website": "https://diappymed.com/en/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "diappymed"
+  },
+  {
+    "name": "Hynaero",
+    "website": "https://hynaero.com/",
+    "siren": "683301771",
+    "luhn_valid": false,
+    "source_url": null,
+    "method": "log",
+    "slug": "hynaero"
+  },
+  {
+    "name": "Homaio",
+    "website": "http://homaio.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "homaio"
   },
   {
     "name": "Cleavr",
+    "website": "https://www.cleavr.fr/en",
     "siren": "989360615",
-    "website": "https://www.cleavr.fr/en"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "cleavr"
+  },
+  {
+    "name": "Parallel",
+    "website": "http://www.beparallel.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "parallel"
+  },
+  {
+    "name": "Kervalion",
+    "website": "https://kervalion.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "kervalion"
+  },
+  {
+    "name": "Blify",
+    "website": "http://blify.co/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "blify"
+  },
+  {
+    "name": "Yaarz",
+    "website": "https://www.yaarz.io/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "yaarz"
+  },
+  {
+    "name": "games2gether",
+    "website": "https://games2gether.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "games2gether"
   },
   {
     "name": "Topograph",
+    "website": "https://www.topograph.co/",
     "siren": "932884117",
-    "website": "https://www.topograph.co/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "topograph"
+  },
+  {
+    "name": "Flotte",
+    "website": "https://www.flotte.fr/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "flotte"
+  },
+  {
+    "name": "Jay&Joy",
+    "website": "https://www.jay-joy.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "jayjoy"
+  },
+  {
+    "name": "Lupin & Holmes",
+    "website": "https://www.landh.tech/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "lupin-holmes"
+  },
+  {
+    "name": "Enersweet",
+    "website": "https://www.enersweet.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "enersweet"
+  },
+  {
+    "name": "Nabu",
+    "website": "https://www.nabu.io/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "nabu"
+  },
+  {
+    "name": "Piston",
+    "website": "https://pistonhq.app/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "piston"
   },
   {
     "name": "Drinkee",
+    "website": "https://www.drinkee.io/fr",
     "siren": "917500126",
-    "website": "https://www.drinkee.io/fr"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "drinkee"
   },
   {
     "name": "Aerix Systems",
+    "website": "https://www.aerix-systems.com/",
     "siren": "889844510",
-    "website": "https://www.aerix-systems.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "aerix-systems"
   },
   {
     "name": "Leviathan Dynamics",
+    "website": "https://leviathan-dynamics.com/fr/",
     "siren": "824215537",
-    "website": "https://leviathan-dynamics.com/fr/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "leviathan-dynamics"
+  },
+  {
+    "name": "Novacium",
+    "website": "https://www.novacium.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "novacium"
+  },
+  {
+    "name": "Loamics",
+    "website": "http://loamics.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "loamics"
   },
   {
     "name": "SCorp-io",
+    "website": "https://www.scorp-io.com/",
     "siren": "904328234",
-    "website": "https://www.scorp-io.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "scorp-io"
+  },
+  {
+    "name": "Bitstack",
+    "website": "https://www.bitstack-app.com/en",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "bitstack"
+  },
+  {
+    "name": "Meteoria",
+    "website": "https://meteoria.ai/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "meteoria"
+  },
+  {
+    "name": "Advanced Machine Intelligence",
+    "website": "https://amilabs.xyz/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "advanced-machine-intelligence"
+  },
+  {
+    "name": "Lemrock",
+    "website": "https://www.lemrock.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "lemrock"
   },
   {
     "name": "Metavonics",
+    "website": "https://www.metavonics.com/",
     "siren": "902658376",
-    "website": "https://www.metavonics.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "metavonics"
+  },
+  {
+    "name": "Living Models",
+    "website": "https://www.livingmodels.ai",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "living-models"
   },
   {
     "name": "Escape",
+    "website": "https://escape.tech/",
     "siren": "888699584",
-    "website": "https://escape.tech/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "escape"
+  },
+  {
+    "name": "Waiv",
+    "website": "https://wearewaiv.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "waiv"
+  },
+  {
+    "name": "EGIDE",
+    "website": "https://www.egide-tech.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "egide"
+  },
+  {
+    "name": "MindDay",
+    "website": "http://mindday.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "mindday"
   },
   {
     "name": "Santexpat",
+    "website": "https://santexpat.fr/",
     "siren": "788571834",
-    "website": "https://santexpat.fr/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "santexpat"
   },
   {
     "name": "Heliup",
+    "website": "https://www.heliup-solar.com/",
     "siren": "919555938",
-    "website": "https://www.heliup-solar.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "heliup"
   },
   {
     "name": "Calogena",
+    "website": "https://calogena.com/",
     "siren": "908713043",
-    "website": "https://calogena.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "calogena"
   },
   {
     "name": "Fairglow",
+    "website": "https://www.fairglow.io/",
     "siren": "953334455",
-    "website": "https://www.fairglow.io/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "fairglow"
+  },
+  {
+    "name": "May Health",
+    "website": "https://mayhealth.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "may-health"
   },
   {
     "name": "K-Motors",
+    "website": "https://www.kmotors.tech/en/",
     "siren": "850505744",
-    "website": "https://www.kmotors.tech/en/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "k-motors"
   },
   {
     "name": "Solaya",
+    "website": "https://www.solaya.ai",
     "siren": "928050343",
-    "website": "https://www.solaya.ai"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "solaya"
+  },
+  {
+    "name": "Rivage",
+    "website": "https://www.rivage.tech",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "rivage"
   },
   {
     "name": "4Moving Biotech",
+    "website": "https://www.4movingbiotech.com",
     "siren": "537407926",
-    "website": "https://www.4movingbiotech.com"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "4moving-biotech"
   },
   {
     "name": "Vizzia",
+    "website": "https://www.vizzia.fr/",
     "siren": "899832901",
-    "website": "https://www.vizzia.fr/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "vizzia"
+  },
+  {
+    "name": "OOrion",
+    "website": "https://www.oorion.fr/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "oorion"
+  },
+  {
+    "name": "fxhash",
+    "website": "https://www.fxhash.xyz/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "fxhash"
   },
   {
     "name": "Skydrone Robotics",
+    "website": "https://skydrone-robotics.com/",
     "siren": "821433893",
-    "website": "https://skydrone-robotics.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "skydrone-robotics"
+  },
+  {
+    "name": "Opus Aerospace",
+    "website": "https://www.opus-aerospace.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "opus-aerospace"
+  },
+  {
+    "name": "Lifeaz",
+    "website": "https://defibrillateur.lifeaz.co/int/en",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "lifeaz"
   },
   {
     "name": "hummingbirds",
+    "website": "https://hummingbirds.eu/",
     "siren": "914539366",
-    "website": "https://hummingbirds.eu/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "hummingbirds"
   },
   {
     "name": "DentalMonitoring",
+    "website": "https://dentalmonitoring.com",
     "siren": "824001259",
-    "website": "https://dentalmonitoring.com"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "dentalmonitoring"
+  },
+  {
+    "name": "Formel AI",
+    "website": "https://formel.ai/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "formel-ai"
   },
   {
     "name": "Mecaware",
+    "website": "https://mecaware.com/",
     "siren": "892414566",
-    "website": "https://mecaware.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "mecaware"
   },
   {
     "name": "Meelo",
+    "website": "https://www.getmeelo.com/",
     "siren": "829051317",
-    "website": "https://www.getmeelo.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "meelo"
+  },
+  {
+    "name": "Greez",
+    "website": "https://greez.fr",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "greez"
+  },
+  {
+    "name": "Alpa",
+    "website": "http://www.getalpa.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "alpa"
+  },
+  {
+    "name": "Archimed",
+    "website": "https://www.archimed.fr",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "archimed"
+  },
+  {
+    "name": "THE 8 IMPACT",
+    "website": "https://www.the8impact.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "the-8-impact"
+  },
+  {
+    "name": "Weytop",
+    "website": "http://weytop.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "weytop"
   },
   {
     "name": "Desk",
+    "website": "https://desk.community/",
     "siren": "899774087",
-    "website": "https://desk.community/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "desk"
+  },
+  {
+    "name": "Getinside",
+    "website": "https://www.getinside.fr",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "getinside"
+  },
+  {
+    "name": "Ocellus",
+    "website": "https://ocellus-studio.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "ocellus"
+  },
+  {
+    "name": "MoneyShape",
+    "website": "http://www.moneyshape.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "moneyshape"
+  },
+  {
+    "name": "Linkeat",
+    "website": "https://www.linkeat.io",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "linkeat"
   },
   {
     "name": "MadeForMed",
+    "website": "https://www.madeformed.com/",
     "siren": "419632286",
-    "website": "https://www.madeformed.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "madeformed"
+  },
+  {
+    "name": "Eclore",
+    "website": "https://eclore-actuators.com",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "eclore"
+  },
+  {
+    "name": "PGP Farmer",
+    "website": "https://www.pgpfarmer.fr",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "pgp-farmer"
+  },
+  {
+    "name": "Stairling",
+    "website": "https://hydroclimat.com/fr/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "stairling"
   },
   {
     "name": "Newable",
+    "website": "https://newable.energy/",
     "siren": "984815498",
-    "website": "https://newable.energy/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "newable"
+  },
+  {
+    "name": "PRESAGE",
+    "website": "https://presagelabs.ai/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "presage"
+  },
+  {
+    "name": "GoCanopy",
+    "website": "https://www.gocanopy.tech/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "gocanopy"
+  },
+  {
+    "name": "newcleo",
+    "website": "https://www.newcleo.com/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "newcleo"
   },
   {
     "name": "Bobine",
+    "website": "https://bobine-chemistry.com/",
     "siren": "510909807",
-    "website": "https://bobine-chemistry.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "bobine"
+  },
+  {
+    "name": "Atlas V Group",
+    "website": "https://atlasv.io/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "atlas-v-group"
   },
   {
     "name": "Viti-Tunnel",
+    "website": "https://www.viti-tunnel.com/",
     "siren": "931417489",
-    "website": "https://www.viti-tunnel.com/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "viti-tunnel"
+  },
+  {
+    "name": "Revox",
+    "website": "https://www.getrevox.com/",
+    "siren": "522252247",
+    "luhn_valid": false,
+    "source_url": null,
+    "method": "log",
+    "slug": "revox"
   },
   {
     "name": "DermaScan",
+    "website": "https://www.dermascan.fr/",
     "siren": "939721817",
-    "website": "https://www.dermascan.fr/"
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "dermascan"
+  },
+  {
+    "name": "Twin",
+    "website": "https://builder.twin.so/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "twin"
+  },
+  {
+    "name": "Verley",
+    "website": "https://verley-food.com/",
+    "siren": "566994660",
+    "luhn_valid": false,
+    "source_url": null,
+    "method": "log",
+    "slug": "verley"
+  },
+  {
+    "name": "Sailiz",
+    "website": "https://sailiz.fr/",
+    "siren": "952461689",
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "sailiz"
+  },
+  {
+    "name": "BW Ideol",
+    "website": "https://www.bw-ideol.com/",
+    "siren": "524724820",
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "bw-ideol"
+  },
+  {
+    "name": "Linkup",
+    "website": "https://www.linkup.so/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "linkup"
+  },
+  {
+    "name": "Aviwell",
+    "website": "https://www.aviwell.fr/",
+    "siren": null,
+    "luhn_valid": null,
+    "source_url": null,
+    "method": null,
+    "slug": "aviwell"
+  },
+  {
+    "name": "checkDPE",
+    "website": "https://www.checkdpe.fr",
+    "siren": "938757325",
+    "luhn_valid": true,
+    "source_url": null,
+    "method": "log",
+    "slug": "checkdpe"
   }
 ]
