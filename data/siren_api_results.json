@@ -34,78 +34,6 @@
     ]
   },
   {
-    "name": "Generare",
-    "website": "https://generare.bio/",
-    "slug": "generare",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
-    "name": "Kestra",
-    "website": "https://kestra.io/",
-    "slug": "kestra",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
-    "name": "AI6 Technologies",
-    "website": "https://ai6technologies.fr/",
-    "slug": "ai6-technologies",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
-    "name": "Hynaero",
-    "website": "https://hynaero.com/",
-    "slug": "hynaero",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
-    "name": "Homaio",
-    "website": "http://homaio.com/",
-    "slug": "homaio",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
-    "name": "Parallel",
-    "website": "http://www.beparallel.com/",
-    "slug": "parallel",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
     "name": "Kervalion",
     "website": "https://kervalion.com/",
     "slug": "kervalion",
@@ -490,52 +418,6 @@
     ]
   },
   {
-    "name": "Lemrock",
-    "website": "https://www.lemrock.com/",
-    "slug": "lemrock",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
-  },
-  {
-    "name": "Living Models",
-    "website": "https://www.livingmodels.ai",
-    "slug": "living-models",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": [
-      {
-        "name": "LIVING",
-        "siren": "994225175",
-        "city": "PARIS",
-        "activity": "68.20B",
-        "creation_date": "2025-11-17"
-      },
-      {
-        "name": "LIVING (LIVING EXTENSION)",
-        "siren": "829032515",
-        "city": "TOULOUSE",
-        "activity": "41.20A",
-        "creation_date": "2017-03-31"
-      },
-      {
-        "name": "LIVING",
-        "siren": "898673488",
-        "city": "ANNECY",
-        "activity": "46.47Z",
-        "creation_date": "2021-04-23"
-      }
-    ]
-  },
-  {
     "name": "Waiv",
     "website": "https://wearewaiv.com/",
     "slug": "waiv",
@@ -724,26 +606,6 @@
     ]
   },
   {
-    "name": "Lifeaz",
-    "website": "https://defibrillateur.lifeaz.co/int/en",
-    "slug": "lifeaz",
-    "siren": "814042958",
-    "confidence": 0.7,
-    "matched_name": "LIFEAZ (LIFE)",
-    "activity": "70.10Z",
-    "city": "PARIS",
-    "creation_date": "2025-02-10",
-    "candidates": [
-      {
-        "name": "LIFEAZ (LIFE)",
-        "siren": "814042958",
-        "city": "PARIS",
-        "activity": "70.10Z",
-        "creation_date": "2025-02-10"
-      }
-    ]
-  },
-  {
     "name": "Formel AI",
     "website": "https://formel.ai/",
     "slug": "formel-ai",
@@ -776,18 +638,6 @@
         "creation_date": "2019-11-06"
       }
     ]
-  },
-  {
-    "name": "Greez",
-    "website": "https://greez.fr",
-    "slug": "greez",
-    "siren": null,
-    "confidence": null,
-    "matched_name": null,
-    "activity": null,
-    "city": null,
-    "creation_date": null,
-    "candidates": []
   },
   {
     "name": "Alpa",
@@ -824,9 +674,43 @@
     ]
   },
   {
-    "name": "Archimed",
-    "website": "https://www.archimed.fr",
-    "slug": "archimed",
+    "name": "Ocellus",
+    "website": "https://ocellus-studio.com/",
+    "slug": "ocellus",
+    "siren": "505149351",
+    "confidence": 1.0,
+    "matched_name": "OCELLUS",
+    "activity": "23.19Z",
+    "city": "SAINTE-ANNE",
+    "creation_date": "2011-12-26",
+    "candidates": [
+      {
+        "name": "OCELLUS",
+        "siren": "505149351",
+        "city": "SAINTE-ANNE",
+        "activity": "23.19Z",
+        "creation_date": "2011-12-26"
+      },
+      {
+        "name": "OCELLUS",
+        "siren": "393726450",
+        "city": "PARIS",
+        "activity": "46.90Z",
+        "creation_date": "1996-08-01"
+      },
+      {
+        "name": "OCELLUS",
+        "siren": "387767387",
+        "city": "PARIS 1",
+        "activity": "32.50B",
+        "creation_date": "2017-04-03"
+      }
+    ]
+  },
+  {
+    "name": "MoneyShape",
+    "website": "http://www.moneyshape.com/",
+    "slug": "moneyshape",
     "siren": null,
     "confidence": null,
     "matched_name": null,
@@ -836,9 +720,233 @@
     "candidates": []
   },
   {
-    "name": "THE 8 IMPACT",
-    "website": "https://www.the8impact.com/",
-    "slug": "the-8-impact",
+    "name": "Revox",
+    "website": "https://www.getrevox.com/",
+    "slug": "revox",
+    "siren": "528034150",
+    "confidence": 0.66,
+    "matched_name": "REVOX GMBH",
+    "activity": "70.10Z",
+    "city": null,
+    "creation_date": "2010-09-01",
+    "candidates": [
+      {
+        "name": "REVOX GMBH",
+        "siren": "528034150",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2010-09-01"
+      },
+      {
+        "name": "REVOX FRANCE SA",
+        "siren": "652059700",
+        "city": "PARIS 8",
+        "activity": "51.4F",
+        "creation_date": null
+      },
+      {
+        "name": "FORMAMEDIA",
+        "siren": "393147681",
+        "city": "PARIS",
+        "activity": "74.1G",
+        "creation_date": "1997-09-04"
+      }
+    ]
+  },
+  {
+    "name": "Twin",
+    "website": "https://builder.twin.so/",
+    "slug": "twin",
+    "siren": "381143775",
+    "confidence": 1.0,
+    "matched_name": "TWIN",
+    "activity": "68.31Z",
+    "city": "GUYANCOURT",
+    "creation_date": "2005-09-01",
+    "candidates": [
+      {
+        "name": "TWIN",
+        "siren": "381143775",
+        "city": "GUYANCOURT",
+        "activity": "68.31Z",
+        "creation_date": "2005-09-01"
+      },
+      {
+        "name": "TWIN",
+        "siren": "492699707",
+        "city": "SETE",
+        "activity": "68.20B",
+        "creation_date": "2006-10-10"
+      },
+      {
+        "name": "TWIN",
+        "siren": "519413850",
+        "city": "SAINT-JULIEN-EN-GENEVOIS",
+        "activity": "68.20B",
+        "creation_date": "2009-12-23"
+      }
+    ]
+  },
+  {
+    "name": "Aviwell",
+    "website": "https://www.aviwell.fr/",
+    "slug": "aviwell",
+    "siren": "430213900",
+    "confidence": 0.64,
+    "matched_name": "AVIWELL 3000",
+    "activity": "68.20A",
+    "city": "SAINT-LAURENT-DU-VAR",
+    "creation_date": "1997-01-01",
+    "candidates": [
+      {
+        "name": "WICAP AVIWELL",
+        "siren": "840094932",
+        "city": "BALMA",
+        "activity": "64.20Z",
+        "creation_date": "2021-06-18"
+      },
+      {
+        "name": "AVIWELL LIMITED",
+        "siren": "814088910",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2010-01-01"
+      },
+      {
+        "name": "AVIWELL 3000",
+        "siren": "430213900",
+        "city": "SAINT-LAURENT-DU-VAR",
+        "activity": "68.20A",
+        "creation_date": "1997-01-01"
+      }
+    ]
+  },
+  {
+    "name": "VoilaChef",
+    "website": "https://voilachef.com",
+    "slug": "voilachef",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "THIBAULT MOREL (VOILACHEF)",
+        "siren": "919618165",
+        "city": "MALABAT",
+        "activity": "63.12Z",
+        "creation_date": "2026-01-26"
+      }
+    ]
+  },
+  {
+    "name": "ECAIR",
+    "website": "https://www.ecair.eco/",
+    "slug": "ecair",
+    "siren": "533087532",
+    "confidence": 1.0,
+    "matched_name": "ECAIR",
+    "activity": "85.59A",
+    "city": "GUJAN-MESTRAS",
+    "creation_date": "2023-11-20",
+    "candidates": [
+      {
+        "name": "ECAIR",
+        "siren": "533087532",
+        "city": "GUJAN-MESTRAS",
+        "activity": "85.59A",
+        "creation_date": "2023-11-20"
+      },
+      {
+        "name": "ECAIR SARL",
+        "siren": "327561296",
+        "city": "LYON 2EME",
+        "activity": "74.2C",
+        "creation_date": null
+      },
+      {
+        "name": "EQUATORIAL CONGO AIRLINES EN ABREGE ECAIR",
+        "siren": "752996330",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2012-07-21"
+      }
+    ]
+  },
+  {
+    "name": "Cube",
+    "website": "https://www.lecube.io/",
+    "slug": "cube-formerly-cube3",
+    "siren": "751518168",
+    "confidence": 1.0,
+    "matched_name": "CUBE",
+    "activity": "70.10Z",
+    "city": "LYON",
+    "creation_date": "2012-05-07",
+    "candidates": [
+      {
+        "name": "CUBE (GROUPE CB)",
+        "siren": "440009157",
+        "city": "LEULINGHEN-BERNES",
+        "activity": "70.10Z",
+        "creation_date": "2015-01-01"
+      },
+      {
+        "name": "CUBE (DIEDRE ETUDES)",
+        "siren": "499985893",
+        "city": "CHABEUIL",
+        "activity": "71.12A",
+        "creation_date": "2016-11-30"
+      },
+      {
+        "name": "CUBE (BABAZULA)",
+        "siren": "803494004",
+        "city": "RENNES",
+        "activity": "56.10A",
+        "creation_date": "2014-07-11"
+      }
+    ]
+  },
+  {
+    "name": "Basalt",
+    "website": "https://getbasalt.ai/",
+    "slug": "basalt",
+    "siren": "101150928",
+    "confidence": 1.0,
+    "matched_name": "BASALT",
+    "activity": "70.22Z",
+    "city": "PARIS",
+    "creation_date": "2026-02-12",
+    "candidates": [
+      {
+        "name": "BASALT",
+        "siren": "101150928",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2026-02-12"
+      },
+      {
+        "name": "BASALT",
+        "siren": "101775120",
+        "city": "SAINT-CYR-L'ECOLE",
+        "activity": "70.10Z",
+        "creation_date": "2026-02-23"
+      },
+      {
+        "name": "BASALT",
+        "siren": "994022069",
+        "city": "PARIS",
+        "activity": "66.22Z",
+        "creation_date": "2025-11-13"
+      }
+    ]
+  },
+  {
+    "name": "Revolt.eco",
+    "website": "https://www.revolt.eco/",
+    "slug": "revolteco",
     "siren": null,
     "confidence": null,
     "matched_name": null,
@@ -846,6 +954,873 @@
     "city": null,
     "creation_date": null,
     "candidates": []
+  },
+  {
+    "name": "CWS",
+    "website": "https://computedwingsail.com/en/",
+    "slug": "cws-computed-wing-sails",
+    "siren": "518891452",
+    "confidence": 1.0,
+    "matched_name": "CWS",
+    "activity": "64.30Z",
+    "city": "CORMONTREUIL",
+    "creation_date": "2009-12-14",
+    "candidates": [
+      {
+        "name": "CWS",
+        "siren": "518891452",
+        "city": "CORMONTREUIL",
+        "activity": "64.30Z",
+        "creation_date": "2009-12-14"
+      },
+      {
+        "name": "CWS",
+        "siren": "799460779",
+        "city": "BRISSAY-CHOIGNY",
+        "activity": "68.20B",
+        "creation_date": "2014-01-01"
+      },
+      {
+        "name": "CWS",
+        "siren": "948030853",
+        "city": "SEYSSINET-PARISET",
+        "activity": "70.22Z",
+        "creation_date": "2023-01-05"
+      }
+    ]
+  },
+  {
+    "name": "DotBlocks",
+    "website": "https://dotblocks.com/",
+    "slug": "dotblocks",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "DOTBLOCKS SOLUTIONS (DOTBLOCKS) (DBS)",
+        "siren": "978969376",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2023-09-11"
+      },
+      {
+        "name": "ERWAN CLOITRE (DOTBLOCK STUDIO)",
+        "siren": "920843760",
+        "city": "HAGONDANGE",
+        "activity": "62.01Z",
+        "creation_date": "2022-10-01"
+      }
+    ]
+  },
+  {
+    "name": "Zero Industries",
+    "website": "https://www.zeroindustries.eu/",
+    "slug": "zero-industries",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "GROUP ZERO (GZ) (GZ)",
+        "siren": "841297229",
+        "city": "ATHIS-MONS",
+        "activity": "85.59A",
+        "creation_date": "2023-11-30"
+      },
+      {
+        "name": "POINT ZERO SOCIETE D ARCHITECTURE",
+        "siren": "494181621",
+        "city": "LA GRANDE-MOTTE",
+        "activity": "71.11Z",
+        "creation_date": "2011-08-29"
+      },
+      {
+        "name": "ZERO",
+        "siren": "753711548",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2004-11-09"
+      }
+    ]
+  },
+  {
+    "name": "LaFraise",
+    "website": "https://lafraise.pro/",
+    "slug": "lafraise",
+    "siren": "917725970",
+    "confidence": 0.78,
+    "matched_name": "LES LAFRAISE",
+    "activity": "68.20B",
+    "city": "HOUPLINES",
+    "creation_date": "2022-07-12",
+    "candidates": [
+      {
+        "name": "LES LAFRAISE",
+        "siren": "917725970",
+        "city": "HOUPLINES",
+        "activity": "68.20B",
+        "creation_date": "2022-07-12"
+      },
+      {
+        "name": "ANAIS LAFRAISE (OPTIMISME ET CONFIANCE)",
+        "siren": "920607991",
+        "city": "WATTIGNIES",
+        "activity": "81.21Z",
+        "creation_date": "2022-10-20"
+      },
+      {
+        "name": "ISABELLE BROVIA (LAFRAISE)",
+        "siren": "378684534",
+        "city": "CHAMBLY",
+        "activity": "86.90D",
+        "creation_date": "1990-07-03"
+      }
+    ]
+  },
+  {
+    "name": "HyPrSpace",
+    "website": "https://hypr-space.com/",
+    "slug": "hyprspace",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "The Mobile-First Company",
+    "website": "http://themobilefirstcompany.com/",
+    "slug": "the-mobile-first-company",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Diffusely",
+    "website": "https://www.diffusely.com/",
+    "slug": "diffusely-ex-meero",
+    "siren": "800523664",
+    "confidence": 1.0,
+    "matched_name": "DIFFUSELY",
+    "activity": "74.20Z",
+    "city": "PARIS",
+    "creation_date": "2023-09-12",
+    "candidates": [
+      {
+        "name": "DIFFUSELY",
+        "siren": "800523664",
+        "city": "PARIS",
+        "activity": "74.20Z",
+        "creation_date": "2023-09-12"
+      }
+    ]
+  },
+  {
+    "name": "Sonar Clarity",
+    "website": "https://avanoo.com",
+    "slug": "sonar-clarity-rebranded-as-avanoo",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "AVANOO (AVANOO)",
+        "siren": "925197519",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2025-07-01"
+      },
+      {
+        "name": "SONAR",
+        "siren": "518224977",
+        "city": "NOYERS-SUR-CHER",
+        "activity": "90.02Z",
+        "creation_date": "2009-10-13"
+      },
+      {
+        "name": "SONAR",
+        "siren": "813880762",
+        "city": "CAEN",
+        "activity": "94.99Z",
+        "creation_date": "2024-09-11"
+      }
+    ]
+  },
+  {
+    "name": "UP&CHARGE",
+    "website": "https://upandcharge.com",
+    "slug": "upcharge",
+    "siren": "842404352",
+    "confidence": 0.62,
+    "matched_name": "UP CHARGES DOWM",
+    "activity": "46.69C",
+    "city": "BOBIGNY",
+    "creation_date": "2018-09-15",
+    "candidates": [
+      {
+        "name": "GO CHARGE UP",
+        "siren": "929653061",
+        "city": "LA CHEVROLIERE",
+        "activity": "35.14Z",
+        "creation_date": "2024-05-23"
+      },
+      {
+        "name": "UP CHARGES DOWN CIE",
+        "siren": "978124212",
+        "city": "PARIS",
+        "activity": "43.29B",
+        "creation_date": "2024-03-27"
+      },
+      {
+        "name": "ROUNDTABLE - PARADISE CLUB - UP AND CHARGE",
+        "siren": "941028441",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2025-01-07"
+      }
+    ]
+  },
+  {
+    "name": "OneTake AI",
+    "website": "https://onetake.ai",
+    "slug": "onetake-ai",
+    "siren": "504188814",
+    "confidence": 0.67,
+    "matched_name": "ONETAK",
+    "activity": "73.11Z",
+    "city": "EPERNAY",
+    "creation_date": "2008-04-09",
+    "candidates": [
+      {
+        "name": "ONETAK",
+        "siren": "504188814",
+        "city": "EPERNAY",
+        "activity": "73.11Z",
+        "creation_date": "2008-04-09"
+      }
+    ]
+  },
+  {
+    "name": "Vibe",
+    "website": "https://www.vibe.co/",
+    "slug": "vibe",
+    "siren": "447490202",
+    "confidence": 1.0,
+    "matched_name": "VIBE",
+    "activity": "47.71Z",
+    "city": "TOULON",
+    "creation_date": "2006-10-02",
+    "candidates": [
+      {
+        "name": "VIBE",
+        "siren": "447490202",
+        "city": "TOULON",
+        "activity": "47.71Z",
+        "creation_date": "2006-10-02"
+      },
+      {
+        "name": "VIBE",
+        "siren": "803626050",
+        "city": "FORT-DE-FRANCE",
+        "activity": "27.40Z",
+        "creation_date": "2014-07-21"
+      },
+      {
+        "name": "VIBE",
+        "siren": "913887956",
+        "city": "SOYAUX",
+        "activity": "56.10C",
+        "creation_date": "2022-05-02"
+      }
+    ]
+  },
+  {
+    "name": "Volta Software",
+    "website": "https://volta.software",
+    "slug": "volta-software",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "EASYSS SOFTWARE",
+        "siren": "751522905",
+        "city": "CARQUEFOU",
+        "activity": "62.01Z",
+        "creation_date": "2012-05-01"
+      }
+    ]
+  },
+  {
+    "name": "Jint",
+    "website": "https://www.jint.ai",
+    "slug": "jint-formerly-mozzaik365",
+    "siren": "948651252",
+    "confidence": 1.0,
+    "matched_name": "JINT",
+    "activity": "78.20Z",
+    "city": "PARIS",
+    "creation_date": "2023-02-02",
+    "candidates": [
+      {
+        "name": "JINT",
+        "siren": "948651252",
+        "city": "PARIS",
+        "activity": "78.20Z",
+        "creation_date": "2023-02-02"
+      },
+      {
+        "name": "JINT",
+        "siren": "443792395",
+        "city": "VILLEFRANCHE-SUR-MER",
+        "activity": "46.14Z",
+        "creation_date": "2005-02-10"
+      },
+      {
+        "name": "J.I.N.T (FIT-PATRIMOINE)",
+        "siren": "823089255",
+        "city": "PONTOISE",
+        "activity": "66.22Z",
+        "creation_date": "2023-12-18"
+      }
+    ]
+  },
+  {
+    "name": "Qovery",
+    "website": "https://www.qovery.com/",
+    "slug": "qovery",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Standing Ovation",
+    "website": "https://standingo.co/",
+    "slug": "standing-ovation",
+    "siren": "884522582",
+    "confidence": 1.0,
+    "matched_name": "STANDING OVATION",
+    "activity": "10.89Z",
+    "city": "PARIS",
+    "creation_date": "2020-06-24",
+    "candidates": [
+      {
+        "name": "STANDING OVATION",
+        "siren": "884522582",
+        "city": "PARIS",
+        "activity": "10.89Z",
+        "creation_date": "2020-06-24"
+      },
+      {
+        "name": "STANDING OVATION",
+        "siren": "832956825",
+        "city": "SAINT-CLOUD",
+        "activity": "74.20Z",
+        "creation_date": "2017-10-06"
+      },
+      {
+        "name": "STANDING OVATION",
+        "siren": "398623744",
+        "city": "PARIS",
+        "activity": "90.02Z",
+        "creation_date": "1994-10-01"
+      }
+    ]
+  },
+  {
+    "name": "Lifebloom",
+    "website": "https://lifebloom.co/",
+    "slug": "lifebloom",
+    "siren": "849823240",
+    "confidence": 1.0,
+    "matched_name": "LIFEBLOOM",
+    "activity": "71.12B",
+    "city": "VILLENEUVE-D'ASCQ",
+    "creation_date": "2026-02-04",
+    "candidates": [
+      {
+        "name": "LIFEBLOOM",
+        "siren": "849823240",
+        "city": "VILLENEUVE-D'ASCQ",
+        "activity": "71.12B",
+        "creation_date": "2026-02-04"
+      },
+      {
+        "name": "LIFEBLOOM INVEST",
+        "siren": "938896123",
+        "city": "SAINT-MANDE",
+        "activity": "66.30Z",
+        "creation_date": "2024-12-19"
+      },
+      {
+        "name": "LIFEBLOOM GLOBAL",
+        "siren": "937725844",
+        "city": "VILLENEUVE-D'ASCQ",
+        "activity": "71.12B",
+        "creation_date": "2026-02-04"
+      }
+    ]
+  },
+  {
+    "name": "Dalma",
+    "website": "https://www.dalma.co",
+    "slug": "dalma",
+    "siren": "430348482",
+    "confidence": 1.0,
+    "matched_name": "DALMA",
+    "activity": "90.01Z",
+    "city": "MIMET",
+    "creation_date": "1999-03-22",
+    "candidates": [
+      {
+        "name": "DALMA",
+        "siren": "430348482",
+        "city": "MIMET",
+        "activity": "90.01Z",
+        "creation_date": "1999-03-22"
+      },
+      {
+        "name": "DALMA (SCI DALMA)",
+        "siren": "478568595",
+        "city": "RUVIGNY",
+        "activity": "68.20B",
+        "creation_date": "2004-08-10"
+      },
+      {
+        "name": "DALMA",
+        "siren": "830122958",
+        "city": "CLERIEUX",
+        "activity": "68.20B",
+        "creation_date": "2017-06-15"
+      }
+    ]
+  },
+  {
+    "name": "Riot",
+    "website": "https://tryriot.com",
+    "slug": "riot",
+    "siren": "818910168",
+    "confidence": 1.0,
+    "matched_name": "RIOT",
+    "activity": "59.20Z",
+    "city": "AMIENS",
+    "creation_date": "2020-05-31",
+    "candidates": [
+      {
+        "name": "RIOT",
+        "siren": "818910168",
+        "city": "AMIENS",
+        "activity": "59.20Z",
+        "creation_date": "2020-05-31"
+      },
+      {
+        "name": "RIOT (APLIK BATIMENT)",
+        "siren": "529640724",
+        "city": "PUCEUL",
+        "activity": "43.29A",
+        "creation_date": "2022-06-01"
+      },
+      {
+        "name": "RIOT",
+        "siren": "848224861",
+        "city": "MONTROUGE",
+        "activity": "47.91A",
+        "creation_date": "2019-02-11"
+      }
+    ]
+  },
+  {
+    "name": "Tomorro",
+    "website": "http://tomorro.com",
+    "slug": "tomorro",
+    "siren": "881239800",
+    "confidence": 1.0,
+    "matched_name": "TOMORRO",
+    "activity": "62.09Z",
+    "city": "TOULOUSE",
+    "creation_date": "2020-02-03",
+    "candidates": [
+      {
+        "name": "TOMORRO",
+        "siren": "881239800",
+        "city": "TOULOUSE",
+        "activity": "62.09Z",
+        "creation_date": "2020-02-03"
+      }
+    ]
+  },
+  {
+    "name": "Grace",
+    "website": "https://grace.io/",
+    "slug": "grace",
+    "siren": "914099155",
+    "confidence": 1.0,
+    "matched_name": "GRACE",
+    "activity": "66.22Z",
+    "city": "PARIS",
+    "creation_date": "2024-09-13",
+    "candidates": [
+      {
+        "name": "GRACE (GRACE)",
+        "siren": "952444321",
+        "city": "GUJAN-MESTRAS",
+        "activity": "47.71Z",
+        "creation_date": "2023-03-29"
+      },
+      {
+        "name": "GRACE",
+        "siren": "914099155",
+        "city": "PARIS",
+        "activity": "66.22Z",
+        "creation_date": "2024-09-13"
+      },
+      {
+        "name": "GRACE (GRACE MARIAGE)",
+        "siren": "818224800",
+        "city": "VALENCE",
+        "activity": "47.71Z",
+        "creation_date": "2017-05-01"
+      }
+    ]
+  },
+  {
+    "name": "Generare",
+    "website": "https://generare.bio/",
+    "slug": "generare",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Kestra",
+    "website": "https://kestra.io/",
+    "slug": "kestra",
+    "siren": "900427873",
+    "confidence": 1.0,
+    "matched_name": "KESTRA TECHNOLOGIES",
+    "activity": "62.01Z",
+    "city": "LA MADELEINE",
+    "creation_date": "2021-06-07",
+    "candidates": [
+      {
+        "name": "KESTRA TECHNOLOGIES",
+        "siren": "900427873",
+        "city": "LA MADELEINE",
+        "activity": "62.01Z",
+        "creation_date": "2021-06-07"
+      },
+      {
+        "name": "ROUNDTABLE - KESTRA",
+        "siren": "920958550",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2023-09-14"
+      },
+      {
+        "name": "SARL KESRA (SARL KESTRA)",
+        "siren": "792211435",
+        "city": "PARIS 12",
+        "activity": "56.10C",
+        "creation_date": "2013-04-01"
+      }
+    ]
+  },
+  {
+    "name": "AI6 Technologies",
+    "website": "https://ai6technologies.fr/",
+    "slug": "ai6-technologies",
+    "siren": "938439742",
+    "confidence": 1.0,
+    "matched_name": "AI6 TECHNOLOGIES",
+    "activity": "62.01Z",
+    "city": "PARIS",
+    "creation_date": "2024-12-05",
+    "candidates": [
+      {
+        "name": "AI6 TECHNOLOGIES",
+        "siren": "938439742",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2024-12-05"
+      }
+    ]
+  },
+  {
+    "name": "Hynaero",
+    "website": "https://hynaero.com/",
+    "slug": "hynaero",
+    "siren": "980145049",
+    "confidence": 1.0,
+    "matched_name": "HYNAERO",
+    "activity": "30.30Z",
+    "city": "ISTRES",
+    "creation_date": "2025-09-01",
+    "candidates": [
+      {
+        "name": "HYNAERO",
+        "siren": "980145049",
+        "city": "ISTRES",
+        "activity": "30.30Z",
+        "creation_date": "2025-09-01"
+      }
+    ]
+  },
+  {
+    "name": "Homaio",
+    "website": "http://homaio.com/",
+    "slug": "homaio",
+    "siren": "923522338",
+    "confidence": 1.0,
+    "matched_name": "HOMAIO",
+    "activity": "62.01Z",
+    "city": "PARIS",
+    "creation_date": "2023-12-08",
+    "candidates": [
+      {
+        "name": "HOMAIO",
+        "siren": "923522338",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2023-12-08"
+      },
+      {
+        "name": "HOMAIO CARBON HOLDINGS",
+        "siren": "978819720",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2023-12-08"
+      }
+    ]
+  },
+  {
+    "name": "Parallel",
+    "website": "http://www.beparallel.com/",
+    "slug": "parallel",
+    "siren": "914557103",
+    "confidence": 1.0,
+    "matched_name": "PARALLEL",
+    "activity": "70.10Z",
+    "city": null,
+    "creation_date": "2022-02-24",
+    "candidates": [
+      {
+        "name": "PARALLEL",
+        "siren": "914557103",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2022-02-24"
+      },
+      {
+        "name": "PARALLEL",
+        "siren": "815103650",
+        "city": "SAINT-MEDARD-EN-JALLES",
+        "activity": "68.31Z",
+        "creation_date": "2015-12-01"
+      },
+      {
+        "name": "PARALLEL",
+        "siren": "919986638",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2022-10-01"
+      }
+    ]
+  },
+  {
+    "name": "Lemrock",
+    "website": "https://www.lemrock.com/",
+    "slug": "lemrock",
+    "siren": "995358173",
+    "confidence": 0.88,
+    "matched_name": "LEMROCK AI",
+    "activity": "62.01Z",
+    "city": "SAINT-OUEN-SUR-SEINE",
+    "creation_date": "2025-12-17",
+    "candidates": [
+      {
+        "name": "LEMROCK AI",
+        "siren": "995358173",
+        "city": "SAINT-OUEN-SUR-SEINE",
+        "activity": "62.01Z",
+        "creation_date": "2025-12-17"
+      },
+      {
+        "name": "SOWEFUNDED LEMROCK",
+        "siren": "102771318",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2026-03-11"
+      }
+    ]
+  },
+  {
+    "name": "Living Models",
+    "website": "https://www.livingmodels.ai",
+    "slug": "living-models",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "LIVING",
+        "siren": "994225175",
+        "city": "PARIS",
+        "activity": "68.20B",
+        "creation_date": "2025-11-17"
+      },
+      {
+        "name": "LIVING (LIVING EXTENSION)",
+        "siren": "829032515",
+        "city": "TOULOUSE",
+        "activity": "41.20A",
+        "creation_date": "2017-03-31"
+      },
+      {
+        "name": "LIVING",
+        "siren": "898673488",
+        "city": "ANNECY",
+        "activity": "46.47Z",
+        "creation_date": "2021-04-23"
+      }
+    ]
+  },
+  {
+    "name": "Lifeaz",
+    "website": "https://defibrillateur.lifeaz.co/int/en",
+    "slug": "lifeaz",
+    "siren": "814042958",
+    "confidence": 0.7,
+    "matched_name": "LIFEAZ (LIFE)",
+    "activity": "70.10Z",
+    "city": "PARIS",
+    "creation_date": "2025-02-10",
+    "candidates": [
+      {
+        "name": "LIFEAZ (LIFE)",
+        "siren": "814042958",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2025-02-10"
+      }
+    ]
+  },
+  {
+    "name": "Greez",
+    "website": "https://greez.fr",
+    "slug": "greez",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "GREEZ (GREEZ) (Z)",
+        "siren": "977577600",
+        "city": "CHARTRES",
+        "activity": "47.91B",
+        "creation_date": "2023-07-07"
+      },
+      {
+        "name": "COMMUNE DE GREEZ SUR ROC",
+        "siren": "217201441",
+        "city": "GREEZ-SUR-ROC",
+        "activity": "84.11Z",
+        "creation_date": "1983-03-01"
+      },
+      {
+        "name": "ROUNDTABLE - GREEZ",
+        "siren": "945165538",
+        "city": "PARIS",
+        "activity": "64.20Z",
+        "creation_date": "2025-05-19"
+      }
+    ]
+  },
+  {
+    "name": "Archimed",
+    "website": "https://www.archimed.fr",
+    "slug": "archimed",
+    "siren": "519635999",
+    "confidence": 1.0,
+    "matched_name": "ARCHIMED",
+    "activity": "70.10Z",
+    "city": "ROBECQ",
+    "creation_date": "2010-02-15",
+    "candidates": [
+      {
+        "name": "ARCHIMED",
+        "siren": "519635999",
+        "city": "ROBECQ",
+        "activity": "70.10Z",
+        "creation_date": "2010-02-15"
+      },
+      {
+        "name": "ARCHIMED",
+        "siren": "889895843",
+        "city": "LILLE",
+        "activity": "62.02A",
+        "creation_date": "2020-07-17"
+      },
+      {
+        "name": "ARCHIMED",
+        "siren": "480218874",
+        "city": "MONT-SAINT-AIGNAN",
+        "activity": "74.90A",
+        "creation_date": "2019-01-11"
+      }
+    ]
+  },
+  {
+    "name": "THE 8 IMPACT",
+    "website": "https://www.the8impact.com/",
+    "slug": "the-8-impact",
+    "siren": "899646038",
+    "confidence": 1.0,
+    "matched_name": "THE 8 IMPACT",
+    "activity": "38.32Z",
+    "city": "SAINT-REMY",
+    "creation_date": "2023-12-06",
+    "candidates": [
+      {
+        "name": "THE 8 IMPACT",
+        "siren": "899646038",
+        "city": "SAINT-REMY",
+        "activity": "38.32Z",
+        "creation_date": "2023-12-06"
+      }
+    ]
   },
   {
     "name": "Weytop",
@@ -857,12 +1832,203 @@
     "activity": null,
     "city": null,
     "creation_date": null,
-    "candidates": []
+    "candidates": [
+      {
+        "name": "WEYTOP (AIRTOP)",
+        "siren": "885341420",
+        "city": "ARCUEIL",
+        "activity": "58.29C",
+        "creation_date": "2020-07-01"
+      }
+    ]
   },
   {
     "name": "Getinside",
     "website": "https://www.getinside.fr",
     "slug": "getinside",
+    "siren": "913526877",
+    "confidence": 1.0,
+    "matched_name": "GETINSIDE",
+    "activity": "70.22Z",
+    "city": "TOULOUSE",
+    "creation_date": "2022-10-13",
+    "candidates": [
+      {
+        "name": "GETINSIDE",
+        "siren": "913526877",
+        "city": "TOULOUSE",
+        "activity": "70.22Z",
+        "creation_date": "2022-10-13"
+      }
+    ]
+  },
+  {
+    "name": "Linkeat",
+    "website": "https://www.linkeat.io",
+    "slug": "linkeat",
+    "siren": "821580990",
+    "confidence": 1.0,
+    "matched_name": "LINKEAT",
+    "activity": "49.41B",
+    "city": "LYON",
+    "creation_date": "2016-07-11",
+    "candidates": [
+      {
+        "name": "LINKEAT",
+        "siren": "821580990",
+        "city": "LYON",
+        "activity": "49.41B",
+        "creation_date": "2016-07-11"
+      },
+      {
+        "name": "LINKEAT",
+        "siren": "931684815",
+        "city": "BORDEAUX",
+        "activity": "82.99Z",
+        "creation_date": "2024-07-30"
+      },
+      {
+        "name": "AP COMPANY (LINKEAT)",
+        "siren": "818185241",
+        "city": "PARIS 17",
+        "activity": "47.91A",
+        "creation_date": "2016-01-01"
+      }
+    ]
+  },
+  {
+    "name": "Eclore",
+    "website": "https://eclore-actuators.com",
+    "slug": "eclore",
+    "siren": "402529374",
+    "confidence": 1.0,
+    "matched_name": "ECLORE",
+    "activity": "71.11Z",
+    "city": "CHAMBERY",
+    "creation_date": "2008-06-13",
+    "candidates": [
+      {
+        "name": "ECLORE (ECLORE)",
+        "siren": "804382786",
+        "city": "GEVEZE",
+        "activity": "86.90F",
+        "creation_date": "2014-08-09"
+      },
+      {
+        "name": "ECLORE",
+        "siren": "402529374",
+        "city": "CHAMBERY",
+        "activity": "71.11Z",
+        "creation_date": "2008-06-13"
+      },
+      {
+        "name": "ECLORE",
+        "siren": "798592481",
+        "city": "BESANCON",
+        "activity": "70.10Z",
+        "creation_date": "2013-11-12"
+      }
+    ]
+  },
+  {
+    "name": "PGP Farmer",
+    "website": "https://www.pgpfarmer.fr",
+    "slug": "pgp-farmer",
+    "siren": "911033983",
+    "confidence": 1.0,
+    "matched_name": "PGP FARMER",
+    "activity": "70.10Z",
+    "city": "PARCOUL-CHENAUD",
+    "creation_date": "2022-03-01",
+    "candidates": [
+      {
+        "name": "PGP FARMER",
+        "siren": "911033983",
+        "city": "PARCOUL-CHENAUD",
+        "activity": "70.10Z",
+        "creation_date": "2022-03-01"
+      },
+      {
+        "name": "AFRD 77",
+        "siren": "912777810",
+        "city": "LAGRAVE",
+        "activity": "35.11Z",
+        "creation_date": "2022-04-15"
+      }
+    ]
+  },
+  {
+    "name": "Stairling",
+    "website": "https://hydroclimat.com/fr/",
+    "slug": "stairling",
+    "siren": "927854141",
+    "confidence": 1.0,
+    "matched_name": "STAIRLING TECHNOLOGIES",
+    "activity": "62.01Z",
+    "city": "PARIS",
+    "creation_date": "2024-04-12",
+    "candidates": [
+      {
+        "name": "STAIRLING UNION",
+        "siren": "928978279",
+        "city": "SAINT-DENIS",
+        "activity": "49.32Z",
+        "creation_date": "2024-05-20"
+      },
+      {
+        "name": "STAIRLING TECHNOLOGIES",
+        "siren": "927854141",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2024-04-12"
+      },
+      {
+        "name": "SIDE STAIRLING",
+        "siren": "989847330",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2025-07-07"
+      }
+    ]
+  },
+  {
+    "name": "PRESAGE",
+    "website": "https://presagelabs.ai/",
+    "slug": "presage",
+    "siren": "488353673",
+    "confidence": 1.0,
+    "matched_name": "PRESAGE",
+    "activity": "47.71Z",
+    "city": "BEZIERS",
+    "creation_date": "2005-12-13",
+    "candidates": [
+      {
+        "name": "PRESAGE",
+        "siren": "488353673",
+        "city": "BEZIERS",
+        "activity": "47.71Z",
+        "creation_date": "2005-12-13"
+      },
+      {
+        "name": "PRESAGE",
+        "siren": "521194431",
+        "city": "PARIS",
+        "activity": "47.71Z",
+        "creation_date": "2010-03-01"
+      },
+      {
+        "name": "PRESAGE",
+        "siren": "915188908",
+        "city": "SAINT-MANVIEU-NORREY",
+        "activity": "68.20B",
+        "creation_date": "2022-07-01"
+      }
+    ]
+  },
+  {
+    "name": "GoCanopy",
+    "website": "https://www.gocanopy.tech/",
+    "slug": "gocanopy",
     "siren": null,
     "confidence": null,
     "matched_name": null,
@@ -870,5 +2036,73 @@
     "city": null,
     "creation_date": null,
     "candidates": []
+  },
+  {
+    "name": "newcleo",
+    "website": "https://www.newcleo.com/",
+    "slug": "newcleo",
+    "siren": "929009140",
+    "confidence": 1.0,
+    "matched_name": "NEWCLEO",
+    "activity": "35.11Z",
+    "city": "PARIS",
+    "creation_date": "2024-04-26",
+    "candidates": [
+      {
+        "name": "NEWCLEO",
+        "siren": "929009140",
+        "city": "PARIS",
+        "activity": "35.11Z",
+        "creation_date": "2024-04-26"
+      },
+      {
+        "name": "NEWCLEO OPERATIONS (NEWCLEO)",
+        "siren": "912522240",
+        "city": "LYON",
+        "activity": "74.90B",
+        "creation_date": "2022-05-16"
+      },
+      {
+        "name": "NEWCLEO 1",
+        "siren": "995224268",
+        "city": "LYON",
+        "activity": "71.12B",
+        "creation_date": "2025-12-01"
+      }
+    ]
+  },
+  {
+    "name": "Atlas V Group",
+    "website": "https://atlasv.io/",
+    "slug": "atlas-v-group",
+    "siren": "838987758",
+    "confidence": 0.93,
+    "matched_name": "ATLAS",
+    "activity": "70.10Z",
+    "city": "SANILHAC",
+    "creation_date": "2023-08-01",
+    "candidates": [
+      {
+        "name": "QUALITE ENTREPRISES",
+        "siren": "392670501",
+        "city": "TERRASSON-LAVILLEDIEU",
+        "activity": "82.99Z",
+        "creation_date": "2023-07-17"
+      },
+      {
+        "name": "ATLAS",
+        "siren": "334836863",
+        "city": "MORANGIS",
+        "activity": "77.11A",
+        "creation_date": "2018-02-01"
+      },
+      {
+        "name": "ATLAS (ATLAS)",
+        "siren": "951724780",
+        "city": "MONTEILS",
+        "activity": "68.20B",
+        "creation_date": "2025-06-07"
+      }
+    ]
   }
 ]
