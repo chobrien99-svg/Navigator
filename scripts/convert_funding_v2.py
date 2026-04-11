@@ -212,13 +212,23 @@ def main():
                 })
 
     # Deduplicate sector_links (slug + sector)
-    seen = set()
+    # Also: ensure each org has at most ONE is_primary=TRUE to respect
+    # the idx_one_primary_sector_per_org unique constraint in the DB.
+    seen_pairs = set()
+    seen_primary_for_org = set()
     sector_links_dedup = []
     for link in sector_links:
         key = (link['org_slug'], link['sector'])
-        if key not in seen:
-            seen.add(key)
-            sector_links_dedup.append(link)
+        if key in seen_pairs:
+            continue
+        seen_pairs.add(key)
+        # If this link is primary but the org already has a primary, demote it
+        if link['is_primary']:
+            if link['org_slug'] in seen_primary_for_org:
+                link = {**link, 'is_primary': False}
+            else:
+                seen_primary_for_org.add(link['org_slug'])
+        sector_links_dedup.append(link)
 
     # Funding rounds
     rounds_json = []
