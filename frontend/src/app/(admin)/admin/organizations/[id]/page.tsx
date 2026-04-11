@@ -229,6 +229,48 @@ export default function EditOrganizationPage() {
   }
   const [portfolio, setPortfolio] = useState<PortfolioEntry[]>([]);
 
+  // Team (founders, execs) — uses organization_people
+  interface TeamMember {
+    id: string;
+    person_id: string;
+    role: string | null;
+    title: string | null;
+    is_founder: boolean;
+    is_current: boolean;
+    people: { id: string; full_name: string; slug: string } | null;
+  }
+  const [team, setTeam] = useState<TeamMember[]>([]);
+  const [peopleSuggestions, setPeopleSuggestions] = useState<
+    { id: string; full_name: string }[]
+  >([]);
+  const [newTeamName, setNewTeamName] = useState("");
+  const [newTeamTitle, setNewTeamTitle] = useState("");
+  const [newTeamIsFounder, setNewTeamIsFounder] = useState(false);
+  const [filteredPeople, setFilteredPeople] = useState<
+    { id: string; full_name: string }[]
+  >([]);
+  const [showPeopleSuggestions, setShowPeopleSuggestions] = useState(false);
+  const [selectedPersonId, setSelectedPersonId] = useState<string | null>(null);
+
+  // Events / milestones — uses organization_events
+  interface OrgEvent {
+    id: string;
+    event_type: string;
+    event_date: string | null;
+    title: string;
+    description: string | null;
+    source_url: string | null;
+  }
+  const [events, setEvents] = useState<OrgEvent[]>([]);
+  const [showAddEvent, setShowAddEvent] = useState(false);
+  const [newEvent, setNewEvent] = useState({
+    event_type: "media_mention",
+    event_date: "",
+    title: "",
+    description: "",
+    source_url: "",
+  });
+
   useEffect(() => {
     async function load() {
       const { data: org, error: orgErr } = await supabase
@@ -342,6 +384,36 @@ export default function EditOrganizationPage() {
         .limit(500);
       if (portfolioData) {
         setPortfolio(portfolioData as unknown as PortfolioEntry[]);
+      }
+
+      // Load team (founders, execs)
+      const { data: teamData } = await supabase
+        .from("organization_people")
+        .select("id, person_id, role, title, is_founder, is_current, people(id, full_name, slug)")
+        .eq("organization_id", id)
+        .order("is_founder", { ascending: false });
+      if (teamData) {
+        setTeam(teamData as unknown as TeamMember[]);
+      }
+
+      // Load people suggestions for autocomplete (up to 2000)
+      const { data: peopleData } = await supabase
+        .from("people")
+        .select("id, full_name")
+        .order("full_name")
+        .limit(2000);
+      if (peopleData) {
+        setPeopleSuggestions(peopleData as { id: string; full_name: string }[]);
+      }
+
+      // Load events / milestones
+      const { data: eventsData } = await supabase
+        .from("organization_events")
+        .select("id, event_type, event_date, title, description, source_url")
+        .eq("organization_id", id)
+        .order("event_date", { ascending: false });
+      if (eventsData) {
+        setEvents(eventsData as OrgEvent[]);
       }
 
       setLoading(false);
@@ -675,6 +747,168 @@ export default function EditOrganizationPage() {
       setError(delErr.message);
     } else {
       setOrgSectors((prev) => prev.filter((s) => s.id !== rowId));
+    }
+  }
+
+  // ─── Team (organization_people) handlers ───────────────
+  function handleTeamPersonSearch(value: string) {
+    setNewTeamName(value);
+    setSelectedPersonId(null);
+    if (value.trim().length >= 2) {
+      const q = value.toLowerCase();
+      setFilteredPeople(
+        peopleSuggestions
+          .filter((p) => p.full_name.toLowerCase().includes(q))
+          .slice(0, 8)
+      );
+      setShowPeopleSuggestions(true);
+    } else {
+      setShowPeopleSuggestions(false);
+    }
+  }
+
+  async function handleAddTeamMember() {
+    if (!newTeamName.trim()) return;
+    setError(null);
+
+    let personId = selectedPersonId;
+
+    // If no selected existing person, create a new one
+    if (!personId) {
+      const name = newTeamName.trim();
+      const slug = name
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-");
+      const parts = name.split(/\s+/);
+      const first_name = parts.length >= 2 ? parts[0] : null;
+      const last_name = parts.length >= 2 ? parts.slice(1).join(" ") : parts[0];
+
+      const { data: created, error: createErr } = await supabase
+        .from("people")
+        .insert({
+          full_name: name,
+          slug,
+          first_name,
+          last_name,
+        })
+        .select("id, full_name")
+        .single();
+
+      if (createErr) {
+        // Maybe the slug already exists — try to look up by slug
+        const { data: existing } = await supabase
+          .from("people")
+          .select("id, full_name")
+          .eq("slug", slug)
+          .single();
+        if (existing) {
+          personId = existing.id;
+        } else {
+          setError(createErr.message);
+          return;
+        }
+      } else if (created) {
+        personId = created.id;
+        setPeopleSuggestions((prev) => [
+          ...prev,
+          { id: created.id, full_name: created.full_name },
+        ]);
+      }
+    }
+
+    if (!personId) {
+      setError("Failed to resolve person.");
+      return;
+    }
+
+    const { data: inserted, error: insErr } = await supabase
+      .from("organization_people")
+      .insert({
+        organization_id: id,
+        person_id: personId,
+        title: newTeamTitle || null,
+        role: newTeamIsFounder ? "founder" : "executive",
+        is_founder: newTeamIsFounder,
+        is_current: true,
+      })
+      .select("id, person_id, role, title, is_founder, is_current, people(id, full_name, slug)")
+      .single();
+
+    if (insErr) {
+      setError(insErr.message);
+      return;
+    }
+    if (inserted) {
+      setTeam((prev) => [...prev, inserted as unknown as TeamMember]);
+      setNewTeamName("");
+      setNewTeamTitle("");
+      setNewTeamIsFounder(false);
+      setSelectedPersonId(null);
+      setShowPeopleSuggestions(false);
+    }
+  }
+
+  async function handleRemoveTeamMember(rowId: string) {
+    const { error: delErr } = await supabase
+      .from("organization_people")
+      .delete()
+      .eq("id", rowId);
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setTeam((prev) => prev.filter((t) => t.id !== rowId));
+    }
+  }
+
+  // ─── Events / milestones handlers ──────────────────────
+  async function handleAddEvent() {
+    if (!newEvent.title.trim()) {
+      setError("Event title is required.");
+      return;
+    }
+    setError(null);
+    const { data: inserted, error: insErr } = await supabase
+      .from("organization_events")
+      .insert({
+        organization_id: id,
+        event_type: newEvent.event_type,
+        event_date: newEvent.event_date || null,
+        title: newEvent.title.trim(),
+        description: newEvent.description || null,
+        source_url: newEvent.source_url || null,
+      })
+      .select("id, event_type, event_date, title, description, source_url")
+      .single();
+    if (insErr) {
+      setError(insErr.message);
+      return;
+    }
+    if (inserted) {
+      setEvents((prev) => [inserted as OrgEvent, ...prev]);
+      setShowAddEvent(false);
+      setNewEvent({
+        event_type: "media_mention",
+        event_date: "",
+        title: "",
+        description: "",
+        source_url: "",
+      });
+    }
+  }
+
+  async function handleDeleteEvent(eventId: string) {
+    if (!confirm("Delete this event?")) return;
+    const { error: delErr } = await supabase
+      .from("organization_events")
+      .delete()
+      .eq("id", eventId);
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setEvents((prev) => prev.filter((e) => e.id !== eventId));
     }
   }
 
@@ -1034,6 +1268,309 @@ export default function EditOrganizationPage() {
           </div>
         </div>
       )}
+
+      {/* Team Section (founders, execs) */}
+      <div className="mt-12">
+        <h2 className="diplomatic-label">Team ({team.length})</h2>
+        <div className="mt-4 space-y-2">
+          {team.map((member) => (
+            <div
+              key={member.id}
+              className="flex items-center gap-4 bg-surface-container-lowest px-4 py-3"
+            >
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2.5">
+                  {member.people?.slug ? (
+                    <Link
+                      href={`/admin/people/${member.person_id}`}
+                      className="text-sm font-medium text-on-surface hover:text-primary"
+                    >
+                      {member.people.full_name}
+                    </Link>
+                  ) : (
+                    <span className="text-sm font-medium text-on-surface">
+                      {member.people?.full_name ?? "Unknown"}
+                    </span>
+                  )}
+                  {member.is_founder && (
+                    <span className="px-1.5 py-0.5 text-[0.6rem] font-semibold bg-primary/10 text-primary">
+                      Founder
+                    </span>
+                  )}
+                  {!member.is_current && (
+                    <span className="px-1.5 py-0.5 text-[0.6rem] font-semibold bg-outline/10 text-outline">
+                      Former
+                    </span>
+                  )}
+                </div>
+                {member.title && (
+                  <p className="mt-0.5 text-xs text-on-surface-variant">
+                    {member.title}
+                  </p>
+                )}
+              </div>
+              <button
+                onClick={() => handleRemoveTeamMember(member.id)}
+                className="shrink-0 p-1 text-outline-variant hover:text-error transition-colors"
+                title="Remove from team"
+              >
+                <span className="material-symbols-outlined text-[16px]">
+                  delete
+                </span>
+              </button>
+            </div>
+          ))}
+          {team.length === 0 && (
+            <p className="text-xs italic text-outline-variant">
+              No team members recorded yet.
+            </p>
+          )}
+        </div>
+
+        {/* Add team member */}
+        <div className="mt-4 bg-surface-container-lowest p-4 space-y-3">
+          <p className="text-[0.65rem] uppercase tracking-wider text-on-surface-variant/60">
+            Add team member
+          </p>
+          <div className="flex items-end gap-3">
+            <div className="relative flex-1">
+              <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                Name
+              </label>
+              <input
+                type="text"
+                value={newTeamName}
+                onChange={(e) => handleTeamPersonSearch(e.target.value)}
+                onFocus={() => {
+                  if (newTeamName.length >= 2) setShowPeopleSuggestions(true);
+                }}
+                onBlur={() =>
+                  setTimeout(() => setShowPeopleSuggestions(false), 200)
+                }
+                placeholder="Type a name..."
+                className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+              {showPeopleSuggestions && filteredPeople.length > 0 && (
+                <div className="absolute z-10 mt-1 w-full bg-surface-container-lowest border border-outline-variant/20 shadow-lg max-h-40 overflow-y-auto">
+                  {filteredPeople.map((p) => (
+                    <button
+                      key={p.id}
+                      className="w-full px-3 py-2 text-left text-sm text-on-surface hover:bg-surface-container-low"
+                      onMouseDown={() => {
+                        setNewTeamName(p.full_name);
+                        setSelectedPersonId(p.id);
+                        setShowPeopleSuggestions(false);
+                      }}
+                    >
+                      {p.full_name}
+                    </button>
+                  ))}
+                </div>
+              )}
+              {newTeamName.trim().length >= 2 && !selectedPersonId && (
+                <p className="mt-1 text-[0.6rem] italic text-outline-variant">
+                  No match — will create a new person on add.
+                </p>
+              )}
+            </div>
+            <div className="flex-1">
+              <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                Title
+              </label>
+              <input
+                type="text"
+                value={newTeamTitle}
+                onChange={(e) => setNewTeamTitle(e.target.value)}
+                placeholder="e.g. CEO & Co-founder"
+                className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+            </div>
+            <label className="flex items-center gap-2 pb-2">
+              <input
+                type="checkbox"
+                checked={newTeamIsFounder}
+                onChange={(e) => setNewTeamIsFounder(e.target.checked)}
+                className="accent-primary"
+              />
+              <span className="text-xs text-on-surface-variant">Founder</span>
+            </label>
+            <button
+              onClick={handleAddTeamMember}
+              disabled={!newTeamName.trim()}
+              className="px-4 py-2 text-xs font-medium text-primary hover:bg-primary/5 transition-colors disabled:opacity-30"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Events / Milestones Section */}
+      <div className="mt-12">
+        <div className="flex items-center justify-between">
+          <h2 className="diplomatic-label">
+            Events & Milestones ({events.length})
+          </h2>
+          <button
+            onClick={() => setShowAddEvent(!showAddEvent)}
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/5 transition-colors"
+          >
+            <span className="material-symbols-outlined text-[16px]">
+              {showAddEvent ? "close" : "add"}
+            </span>
+            {showAddEvent ? "Cancel" : "Add Event"}
+          </button>
+        </div>
+
+        {showAddEvent && (
+          <div className="mt-4 bg-surface-container-lowest p-5 space-y-3">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                  Type
+                </label>
+                <select
+                  value={newEvent.event_type}
+                  onChange={(e) =>
+                    setNewEvent({ ...newEvent, event_type: e.target.value })
+                  }
+                  className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+                >
+                  <option value="founded">Founded</option>
+                  <option value="funding_round">Funding Round</option>
+                  <option value="product_launch">Product Launch</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="expansion">Expansion</option>
+                  <option value="acquisition">Acquisition</option>
+                  <option value="pivot">Pivot</option>
+                  <option value="rebrand">Rebrand</option>
+                  <option value="leadership_change">Leadership Change</option>
+                  <option value="media_mention">Media Mention</option>
+                  <option value="layoff">Layoff</option>
+                  <option value="shutdown">Shutdown</option>
+                  <option value="merger">Merger</option>
+                  <option value="ipo">IPO</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                  Date
+                </label>
+                <input
+                  type="date"
+                  value={newEvent.event_date}
+                  onChange={(e) =>
+                    setNewEvent({ ...newEvent, event_date: e.target.value })
+                  }
+                  className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                Title <span className="text-error">*</span>
+              </label>
+              <input
+                type="text"
+                value={newEvent.title}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, title: e.target.value })
+                }
+                placeholder="e.g. Named to French Tech Next 40"
+                className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+            </div>
+            <div>
+              <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                Description
+              </label>
+              <textarea
+                value={newEvent.description}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, description: e.target.value })
+                }
+                rows={2}
+                className="w-full border border-outline-variant/15 bg-surface-container-lowest p-3 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+            </div>
+            <div>
+              <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                Source URL
+              </label>
+              <input
+                type="text"
+                value={newEvent.source_url}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, source_url: e.target.value })
+                }
+                placeholder="https://..."
+                className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+            </div>
+            <button
+              onClick={handleAddEvent}
+              className="institutional-gradient px-5 py-2 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+            >
+              Add Event
+            </button>
+          </div>
+        )}
+
+        <div className="mt-4 space-y-2">
+          {events.map((ev) => (
+            <div
+              key={ev.id}
+              className="flex items-start gap-4 bg-surface-container-lowest p-4"
+            >
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2.5">
+                  <span className="px-1.5 py-0.5 text-[0.6rem] font-semibold bg-primary/10 text-primary">
+                    {ev.event_type.replace(/_/g, " ")}
+                  </span>
+                  {ev.event_date && (
+                    <span className="text-xs text-on-surface-variant">
+                      {ev.event_date}
+                    </span>
+                  )}
+                  <span className="text-sm font-medium text-on-surface">
+                    {ev.title}
+                  </span>
+                </div>
+                {ev.description && (
+                  <p className="mt-1 text-xs text-on-surface-variant">
+                    {ev.description}
+                  </p>
+                )}
+                {ev.source_url && (
+                  <a
+                    href={ev.source_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block text-[0.7rem] text-primary hover:underline"
+                  >
+                    Source ↗
+                  </a>
+                )}
+              </div>
+              <button
+                onClick={() => handleDeleteEvent(ev.id)}
+                className="shrink-0 p-1 text-outline-variant hover:text-error transition-colors"
+                title="Delete event"
+              >
+                <span className="material-symbols-outlined text-[16px]">
+                  delete
+                </span>
+              </button>
+            </div>
+          ))}
+          {events.length === 0 && (
+            <p className="py-2 text-xs italic text-outline-variant">
+              No events recorded yet.
+            </p>
+          )}
+        </div>
+      </div>
 
       {/* Funding Rounds Section */}
       <div className="mt-12">
