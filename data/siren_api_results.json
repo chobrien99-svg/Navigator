@@ -32162,5 +32162,1134 @@
         "creation_date": "2023-03-01"
       }
     ]
+  },
+  {
+    "name": "NewSpace Capital",
+    "website": null,
+    "slug": "newspace-capital",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "KAYRROS",
+        "siren": "818399651",
+        "city": "PARIS",
+        "activity": "63.11Z",
+        "creation_date": "2025-01-01"
+      },
+      {
+        "name": "NEWSPACE (NEWSPACE)",
+        "siren": "811038520",
+        "city": "LA ROCHELLE",
+        "activity": "68.31Z",
+        "creation_date": "2024-01-01"
+      },
+      {
+        "name": "ZONE 02 (ZONE 02)",
+        "siren": "811456466",
+        "city": "SAINT-QUENTIN",
+        "activity": "68.31Z",
+        "creation_date": "2023-01-09"
+      }
+    ]
+  },
+  {
+    "name": "Newtree Impact",
+    "website": null,
+    "slug": "newtree-impact",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NEWTREE",
+        "siren": "913189494",
+        "city": "PUTEAUX",
+        "activity": "68.20A",
+        "creation_date": "2022-03-25"
+      },
+      {
+        "name": "NEWTREE SARL (NEWTREE)",
+        "siren": "442077293",
+        "city": "LYON",
+        "activity": "46.38B",
+        "creation_date": "2020-10-06"
+      }
+    ]
+  },
+  {
+    "name": "Nexpring Health",
+    "website": null,
+    "slug": "nexpring-health",
+    "siren": "939843439",
+    "confidence": 0.75,
+    "matched_name": "NEXPRING HEALTH FRANCE",
+    "activity": "46.46Z",
+    "city": "PARIS",
+    "creation_date": "2025-02-01",
+    "candidates": [
+      {
+        "name": "NEXPRING HEALTH FRANCE",
+        "siren": "939843439",
+        "city": "PARIS",
+        "activity": "46.46Z",
+        "creation_date": "2025-02-01"
+      }
+    ]
+  },
+  {
+    "name": "NextChem",
+    "website": null,
+    "slug": "nextchem",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "NextView Ventures",
+    "website": null,
+    "slug": "nextview-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NEXTVIEW",
+        "siren": "822581146",
+        "city": "MAUREPAS",
+        "activity": "62.02A",
+        "creation_date": "2016-09-15"
+      },
+      {
+        "name": "NEXTVIEW",
+        "siren": "501695670",
+        "city": "SCHOELCHER",
+        "activity": "62.02A",
+        "creation_date": "2013-12-16"
+      }
+    ]
+  },
+  {
+    "name": "NGP Capital",
+    "website": null,
+    "slug": "ngp-capital",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Nickleby Capital",
+    "website": null,
+    "slug": "nickleby-capital",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Nicolas Bacca",
+    "website": null,
+    "slug": "nicolas-bacca",
+    "siren": "801689142",
+    "confidence": 0.68,
+    "matched_name": "NICOLAS",
+    "activity": "70.10Z",
+    "city": "SORBIERS",
+    "creation_date": "2014-04-09",
+    "candidates": [
+      {
+        "name": "BARDAK",
+        "siren": "909781726",
+        "city": "PARIS",
+        "activity": "71.12B",
+        "creation_date": "2022-01-01"
+      },
+      {
+        "name": "ZKNOX (ZKNOX)",
+        "siren": "942364886",
+        "city": "PARIS",
+        "activity": "72.19Z",
+        "creation_date": "2025-02-01"
+      },
+      {
+        "name": "GROUPEMENT FONCIER AGRICOLE AUGUSTE CHAMPAGNE",
+        "siren": "914971759",
+        "city": "COURCELLES-SAPICOURT",
+        "activity": "01.21Z",
+        "creation_date": "2022-06-27"
+      }
+    ]
+  },
+  {
+    "name": "Nicolas Dessaigne",
+    "website": null,
+    "slug": "nicolas-dessaigne",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "SCI 4D",
+        "siren": "429987878",
+        "city": "LAVAL",
+        "activity": "68.20A",
+        "creation_date": "2023-01-16"
+      },
+      {
+        "name": "SCI ARMAGA",
+        "siren": "813298148",
+        "city": "LAVAL",
+        "activity": "68.20B",
+        "creation_date": "2023-01-16"
+      },
+      {
+        "name": "SCI ARNI",
+        "siren": "481017630",
+        "city": "LAVAL",
+        "activity": "68.20A",
+        "creation_date": "2023-01-16"
+      }
+    ]
+  },
+  {
+    "name": "Nicolas Julia",
+    "website": null,
+    "slug": "nicolas-julia",
+    "siren": "951824424",
+    "confidence": 1.0,
+    "matched_name": "NICOLAS JULIA",
+    "activity": "01.11Z",
+    "city": "CASTRES",
+    "creation_date": "2023-01-01",
+    "candidates": [
+      {
+        "name": "NICOLAS JULIA",
+        "siren": "951824424",
+        "city": "CASTRES",
+        "activity": "01.11Z",
+        "creation_date": "2023-01-01"
+      },
+      {
+        "name": "NICOLAS JULIA",
+        "siren": "813515293",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2015-09-14"
+      },
+      {
+        "name": "JULIA NICOLAS (JULIA PUB DECO)",
+        "siren": "482768975",
+        "city": "ANTIBES",
+        "activity": "73.11Z",
+        "creation_date": "2014-06-01"
+      }
+    ]
+  },
+  {
+    "name": "Nicolas Lombard",
+    "website": null,
+    "slug": "nicolas-lombard",
+    "siren": "439944299",
+    "confidence": 1.0,
+    "matched_name": "NICOLAS LOMBARD",
+    "activity": "01.45Z",
+    "city": "MILLAC",
+    "creation_date": "2001-11-01",
+    "candidates": [
+      {
+        "name": "NICOLAS LOMBARD",
+        "siren": "439944299",
+        "city": "MILLAC",
+        "activity": "01.45Z",
+        "creation_date": "2001-11-01"
+      },
+      {
+        "name": "NICOLAS LOMBARD (NICO.DINE.SERRURIE)",
+        "siren": "790318661",
+        "city": "VENON",
+        "activity": "25.72Z",
+        "creation_date": "2026-01-05"
+      },
+      {
+        "name": "NICOLAS LOMBARD (NICO NATURE)",
+        "siren": "978169829",
+        "city": "SEMEAC",
+        "activity": "01.19Z",
+        "creation_date": "2023-07-18"
+      }
+    ]
+  },
+  {
+    "name": "Nicolas Steegmann",
+    "website": null,
+    "slug": "nicolas-steegmann",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "RANDOM WALK",
+        "siren": "928186881",
+        "city": "PARIS",
+        "activity": "58.29C",
+        "creation_date": "2024-04-23"
+      },
+      {
+        "name": "THEFAMILY COEOS",
+        "siren": "821547221",
+        "city": "PARIS",
+        "activity": "64.20Z",
+        "creation_date": "2021-03-30"
+      },
+      {
+        "name": "GFA DU PAS DU MEUNIER",
+        "siren": "353744733",
+        "city": "CHATEAUNEUF-DU-PAPE",
+        "activity": "01.21Z",
+        "creation_date": "1990-02-12"
+      }
+    ]
+  },
+  {
+    "name": "Nik Storonsky",
+    "website": null,
+    "slug": "nik-storonsky",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Nina Ventures",
+    "website": null,
+    "slug": "nina-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "C 2 B",
+        "siren": "529867236",
+        "city": "BAIE-MAHAULT",
+        "activity": "64.30Z",
+        "creation_date": "2010-12-14"
+      },
+      {
+        "name": "NINA",
+        "siren": "898003199",
+        "city": "CARGESE",
+        "activity": "47.59B",
+        "creation_date": "2021-04-06"
+      },
+      {
+        "name": "NINA",
+        "siren": "489904177",
+        "city": "CAGNES-SUR-MER",
+        "activity": "86.90D",
+        "creation_date": "2006-04-06"
+      }
+    ]
+  },
+  {
+    "name": "No Label Ventures",
+    "website": null,
+    "slug": "no-label-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "noa",
+    "website": null,
+    "slug": "noa",
+    "siren": "517530762",
+    "confidence": 1.0,
+    "matched_name": "NOA",
+    "activity": "47.71Z",
+    "city": "LYON",
+    "creation_date": "2009-11-01",
+    "candidates": [
+      {
+        "name": "NOA",
+        "siren": "517530762",
+        "city": "LYON",
+        "activity": "47.71Z",
+        "creation_date": "2009-11-01"
+      },
+      {
+        "name": "NOA",
+        "siren": "447824467",
+        "city": "BOBIGNY",
+        "activity": "47.72A",
+        "creation_date": "2013-05-15"
+      },
+      {
+        "name": "NOA",
+        "siren": "514417187",
+        "city": "SAINT-MEDARD-EN-JALLES",
+        "activity": "56.10A",
+        "creation_date": "2009-09-01"
+      }
+    ]
+  },
+  {
+    "name": "Node Capital",
+    "website": null,
+    "slug": "node-capital",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NODE",
+        "siren": "938673100",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2024-02-11"
+      },
+      {
+        "name": "NODE",
+        "siren": "529904963",
+        "city": "PARIS",
+        "activity": "94.99Z",
+        "creation_date": "2010-09-09"
+      },
+      {
+        "name": "NODE (NODE ARCHITECTES)",
+        "siren": "910090083",
+        "city": "ARRADON",
+        "activity": "71.11Z",
+        "creation_date": "2022-01-28"
+      }
+    ]
+  },
+  {
+    "name": "Nord France Amorçage",
+    "website": null,
+    "slug": "nord-france-amorcage",
+    "siren": "752975631",
+    "confidence": 0.7,
+    "matched_name": "NORD FRANCE AMORCAGE (NORD FRANCE AMORCAGE)",
+    "activity": "64.99Z",
+    "city": "LILLE",
+    "creation_date": "2012-09-01",
+    "candidates": [
+      {
+        "name": "NORD FRANCE AMORCAGE (NORD FRANCE AMORCAGE)",
+        "siren": "752975631",
+        "city": "LILLE",
+        "activity": "64.99Z",
+        "creation_date": "2012-09-01"
+      }
+    ]
+  },
+  {
+    "name": "Norfoalk",
+    "website": null,
+    "slug": "norfoalk",
+    "siren": "890302185",
+    "confidence": 1.0,
+    "matched_name": "NORFOALK",
+    "activity": "64.20Z",
+    "city": "LYON",
+    "creation_date": "2021-11-08",
+    "candidates": [
+      {
+        "name": "NORFOALK",
+        "siren": "890302185",
+        "city": "LYON",
+        "activity": "64.20Z",
+        "creation_date": "2021-11-08"
+      },
+      {
+        "name": "NORFOALK REAL ESTATE",
+        "siren": "929698918",
+        "city": "LYON",
+        "activity": "68.20B",
+        "creation_date": "2024-06-06"
+      },
+      {
+        "name": "NORFOALK BIOSCIENCE (NORFOALK BIOSCIENCE)",
+        "siren": "101630044",
+        "city": "LYON",
+        "activity": "77.40Z",
+        "creation_date": "2026-02-23"
+      }
+    ]
+  },
+  {
+    "name": "Normandie Business Angels",
+    "website": null,
+    "slug": "normandie-business-angels",
+    "siren": "509559522",
+    "confidence": 1.0,
+    "matched_name": "NORMANDIE BUSINESS ANGELS",
+    "activity": "82.99Z",
+    "city": "ROUEN",
+    "creation_date": "2007-07-06",
+    "candidates": [
+      {
+        "name": "NORMANDIE BUSINESS ANGELS",
+        "siren": "509559522",
+        "city": "ROUEN",
+        "activity": "82.99Z",
+        "creation_date": "2007-07-06"
+      },
+      {
+        "name": "NORMANDIE BUSINESS ANGELS",
+        "siren": "883535544",
+        "city": "COLOMBELLES",
+        "activity": "94.11Z",
+        "creation_date": "2020-03-17"
+      },
+      {
+        "name": "NORMANDIE BUSINESS ANGELS LE HAVRE",
+        "siren": "440252823",
+        "city": "LE HAVRE",
+        "activity": "94.99Z",
+        "creation_date": "2019-02-13"
+      }
+    ]
+  },
+  {
+    "name": "Normandie Capital Investissement",
+    "website": null,
+    "slug": "normandie-capital-investissement",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "HOPITAL PRIVE DE LA MANCHE",
+        "siren": "931143416",
+        "city": "SAINT-LO",
+        "activity": "86.10Z",
+        "creation_date": "2024-07-12"
+      },
+      {
+        "name": "UR NANTES 2133",
+        "siren": "821540283",
+        "city": "RENNES",
+        "activity": "68.20B",
+        "creation_date": "2024-10-17"
+      },
+      {
+        "name": "GECICA",
+        "siren": "347956757",
+        "city": "PARIS",
+        "activity": "82.99Z",
+        "creation_date": "1988-08-03"
+      }
+    ]
+  },
+  {
+    "name": "Normandie Participations",
+    "website": null,
+    "slug": "normandie-participations",
+    "siren": "821080025",
+    "confidence": 1.0,
+    "matched_name": "NORMANDIE PARTICIPATIONS",
+    "activity": "64.30Z",
+    "city": "CAEN",
+    "creation_date": "2016-06-06",
+    "candidates": [
+      {
+        "name": "NORMANDIE PARTICIPATIONS",
+        "siren": "821080025",
+        "city": "CAEN",
+        "activity": "64.30Z",
+        "creation_date": "2016-06-06"
+      },
+      {
+        "name": "SOCIETE DE PARTICIPATION PARIS NORMANDIE",
+        "siren": "538041625",
+        "city": "VIMOUTIERS",
+        "activity": "64.30Z",
+        "creation_date": "2018-06-30"
+      },
+      {
+        "name": "SOCIETE IMMOBILIERE ET DE PARTICIPATION DE HAUTE NORMANDIE (SIPHN)",
+        "siren": "387663156",
+        "city": "BLANGY-SUR-BRESLE",
+        "activity": "68.20B",
+        "creation_date": "2010-06-25"
+      }
+    ]
+  },
+  {
+    "name": "Normandy Development Agency",
+    "website": null,
+    "slug": "normandy-development-agency",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NORMANDY (NORMANDY 1)",
+        "siren": "316713726",
+        "city": "GRANVILLE",
+        "activity": "86.10Z",
+        "creation_date": "1979-01-01"
+      },
+      {
+        "name": "NORMANDY",
+        "siren": "484001961",
+        "city": "DIVES-SUR-MER",
+        "activity": "68.20B",
+        "creation_date": "2005-04-20"
+      },
+      {
+        "name": "NORMANDY",
+        "siren": "382789907",
+        "city": "ARGENTEUIL",
+        "activity": "68.20B",
+        "creation_date": "1991-07-05"
+      }
+    ]
+  },
+  {
+    "name": "Norrsken",
+    "website": null,
+    "slug": "norrsken",
+    "siren": "918864588",
+    "confidence": 1.0,
+    "matched_name": "NORRSKEN",
+    "activity": "63.11Z",
+    "city": "MILLERY",
+    "creation_date": "2022-08-31",
+    "candidates": [
+      {
+        "name": "NORRSKEN",
+        "siren": "918864588",
+        "city": "MILLERY",
+        "activity": "63.11Z",
+        "creation_date": "2022-08-31"
+      },
+      {
+        "name": "NORRSKEN FINANCE",
+        "siren": "414701334",
+        "city": "PARIS 9",
+        "activity": "66.19B",
+        "creation_date": "2008-04-10"
+      },
+      {
+        "name": "KEVIN JUGE (NORRSKEN HABITAT)",
+        "siren": "832596647",
+        "city": "LANVALLAY",
+        "activity": "43.99C",
+        "creation_date": "2025-10-14"
+      }
+    ]
+  },
+  {
+    "name": "Norrsken VC",
+    "website": null,
+    "slug": "norrsken-vc",
+    "siren": "918864588",
+    "confidence": 0.9,
+    "matched_name": "NORRSKEN",
+    "activity": "63.11Z",
+    "city": "MILLERY",
+    "creation_date": "2022-08-31",
+    "candidates": [
+      {
+        "name": "NORRSKEN",
+        "siren": "918864588",
+        "city": "MILLERY",
+        "activity": "63.11Z",
+        "creation_date": "2022-08-31"
+      },
+      {
+        "name": "NORRSKEN FINANCE",
+        "siren": "414701334",
+        "city": "PARIS 9",
+        "activity": "66.19B",
+        "creation_date": "2008-04-10"
+      },
+      {
+        "name": "KEVIN JUGE (NORRSKEN HABITAT)",
+        "siren": "832596647",
+        "city": "LANVALLAY",
+        "activity": "43.99C",
+        "creation_date": "2025-10-14"
+      }
+    ]
+  },
+  {
+    "name": "North South Ventures",
+    "website": null,
+    "slug": "north-south-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NORTH",
+        "siren": "988580981",
+        "city": "BUSSAC",
+        "activity": "01.11Z",
+        "creation_date": "2025-05-02"
+      },
+      {
+        "name": "NORTH (NORTH)",
+        "siren": "849348693",
+        "city": "ROUBAIX",
+        "activity": "47.59B",
+        "creation_date": "2019-02-08"
+      },
+      {
+        "name": "NORTH",
+        "siren": "830927240",
+        "city": "HEROUVILLE-SAINT-CLAIR",
+        "activity": "59.20Z",
+        "creation_date": "2017-03-14"
+      }
+    ]
+  },
+  {
+    "name": "Northzone",
+    "website": null,
+    "slug": "northzone",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Noshaq",
+    "website": null,
+    "slug": "noshaq",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "EWATTCH",
+        "siren": "750606246",
+        "city": "SAINT-DIE-DES-VOSGES",
+        "activity": "74.90B",
+        "creation_date": "2016-09-09"
+      },
+      {
+        "name": "AEROSPACELAB",
+        "siren": "942188251",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2024-10-01"
+      },
+      {
+        "name": "SAMABRIVA",
+        "siren": "533617049",
+        "city": "AMIENS",
+        "activity": "74.90B",
+        "creation_date": "2014-07-15"
+      }
+    ]
+  },
+  {
+    "name": "Notion Capital",
+    "website": null,
+    "slug": "notion-capital",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "TEAM NOTION",
+        "siren": "479594079",
+        "city": "LE TAMPON",
+        "activity": "46.90Z",
+        "creation_date": "2024-09-01"
+      },
+      {
+        "name": "NOTION EDGE FRANCE",
+        "siren": "828497719",
+        "city": "PARIS",
+        "activity": "62.02A",
+        "creation_date": "2017-06-01"
+      },
+      {
+        "name": "NOTION WORLD",
+        "siren": "817885395",
+        "city": "PARIS",
+        "activity": "46.90Z",
+        "creation_date": "2016-01-01"
+      }
+    ]
+  },
+  {
+    "name": "Notus Technologies",
+    "website": null,
+    "slug": "notus-technologies",
+    "siren": "502580822",
+    "confidence": 1.0,
+    "matched_name": "NOTUS TECHNOLOGIES",
+    "activity": "64.20Z",
+    "city": "PARIS",
+    "creation_date": "2021-01-07",
+    "candidates": [
+      {
+        "name": "NOTUS TECHNOLOGIES",
+        "siren": "502580822",
+        "city": "PARIS",
+        "activity": "64.20Z",
+        "creation_date": "2021-01-07"
+      },
+      {
+        "name": "LE FONDANT BAULOIS",
+        "siren": "435329891",
+        "city": "LA BAULE-ESCOUBLAC",
+        "activity": "10.72Z",
+        "creation_date": "2015-07-01"
+      },
+      {
+        "name": "AMSTERDAM AIR",
+        "siren": "445163868",
+        "city": "MONTAIGU-VENDEE",
+        "activity": "47.91B",
+        "creation_date": "2020-03-16"
+      }
+    ]
+  },
+  {
+    "name": "Novax",
+    "website": null,
+    "slug": "novax",
+    "siren": "993677913",
+    "confidence": 1.0,
+    "matched_name": "NOVAX",
+    "activity": "62.01Z",
+    "city": "PARIS",
+    "creation_date": "2025-11-06",
+    "candidates": [
+      {
+        "name": "NOVAX",
+        "siren": "993677913",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2025-11-06"
+      },
+      {
+        "name": "NOVAX",
+        "siren": "423789353",
+        "city": "SAINT-MEDARD-EN-JALLES",
+        "activity": "26.12Z",
+        "creation_date": "1999-07-01"
+      },
+      {
+        "name": "NOVAX (COMFIBRE TECH)",
+        "siren": "917600827",
+        "city": "ROSNY-SOUS-BOIS",
+        "activity": "61.90Z",
+        "creation_date": "2024-07-16"
+      }
+    ]
+  },
+  {
+    "name": "Novax (Sweden – Axel Johnson Group)",
+    "website": null,
+    "slug": "novax-sweden---axel-johnson-group",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "NOVAX",
+        "siren": "993677913",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2025-11-06"
+      },
+      {
+        "name": "NOVAX",
+        "siren": "423789353",
+        "city": "SAINT-MEDARD-EN-JALLES",
+        "activity": "26.12Z",
+        "creation_date": "1999-07-01"
+      },
+      {
+        "name": "NOVAX (COMFIBRE TECH)",
+        "siren": "917600827",
+        "city": "ROSNY-SOUS-BOIS",
+        "activity": "61.90Z",
+        "creation_date": "2024-07-16"
+      }
+    ]
+  },
+  {
+    "name": "Novo Holdings",
+    "website": null,
+    "slug": "novo-holdings",
+    "siren": "943085928",
+    "confidence": 0.91,
+    "matched_name": "NOVO HOLDINGS A S",
+    "activity": "64.30Z",
+    "city": null,
+    "creation_date": "2025-07-01",
+    "candidates": [
+      {
+        "name": "NOVO HOLDINGS A S",
+        "siren": "943085928",
+        "city": null,
+        "activity": "64.30Z",
+        "creation_date": "2025-07-01"
+      },
+      {
+        "name": "NOVO BURGER HOLDING",
+        "siren": "995262706",
+        "city": "TOULOUSE",
+        "activity": "70.10Z",
+        "creation_date": "2026-01-02"
+      },
+      {
+        "name": "NOVEA",
+        "siren": "995019866",
+        "city": "SARROLA-CARCOPINO",
+        "activity": "68.20B",
+        "creation_date": "2025-11-17"
+      }
+    ]
+  },
+  {
+    "name": "Nvidia",
+    "website": null,
+    "slug": "nvidia",
+    "siren": "432108355",
+    "confidence": 1.0,
+    "matched_name": "NVIDIA LTD",
+    "activity": "70.10Z",
+    "city": null,
+    "creation_date": "2000-07-04",
+    "candidates": [
+      {
+        "name": "NVIDIA LTD",
+        "siren": "432108355",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2000-07-04"
+      },
+      {
+        "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+        "siren": "479973455",
+        "city": "BIOT",
+        "activity": "70.10Z",
+        "creation_date": "2016-03-25"
+      }
+    ]
+  },
+  {
+    "name": "NYX Ventures",
+    "website": null,
+    "slug": "nyx-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "OCCIBOT Industrie",
+    "website": null,
+    "slug": "occibot-industrie",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "SAS OCCIBOT INDUSTRIE (OCCIBOT INDUSTRIE)",
+        "siren": "932111834",
+        "city": "TOULOUSE",
+        "activity": "64.20Z",
+        "creation_date": "2025-07-11"
+      }
+    ]
+  },
+  {
+    "name": "Océan Participations",
+    "website": null,
+    "slug": "ocean-participations",
+    "siren": "343371902",
+    "confidence": 0.79,
+    "matched_name": "OCEAN PARTICIPATIONS",
+    "activity": "64.30Z",
+    "city": "LA ROCHE-SUR-YON",
+    "creation_date": "1988-01-01",
+    "candidates": [
+      {
+        "name": "OCEAN PARTICIPATIONS",
+        "siren": "343371902",
+        "city": "LA ROCHE-SUR-YON",
+        "activity": "64.30Z",
+        "creation_date": "1988-01-01"
+      },
+      {
+        "name": "OCEANE PARTICIPATIONS",
+        "siren": "893905513",
+        "city": "PLOUGASTEL-DAOULAS",
+        "activity": "68.20B",
+        "creation_date": "2021-01-28"
+      },
+      {
+        "name": "OCEAN BLEU PARTICIPATIONS",
+        "siren": "509382958",
+        "city": "ROUBAIX",
+        "activity": "66.30Z",
+        "creation_date": "2008-12-04"
+      }
+    ]
+  },
+  {
+    "name": "Octalfa",
+    "website": null,
+    "slug": "octalfa",
+    "siren": "488818469",
+    "confidence": 1.0,
+    "matched_name": "OCTALFA",
+    "activity": "70.10Z",
+    "city": "LYON",
+    "creation_date": "2025-06-23",
+    "candidates": [
+      {
+        "name": "OCTALFA",
+        "siren": "488818469",
+        "city": "LYON",
+        "activity": "70.10Z",
+        "creation_date": "2025-06-23"
+      },
+      {
+        "name": "FONDATION D'ENTREPRISE DOMINIQUE ALBERICI-OCTALFA",
+        "siren": "507955490",
+        "city": "LYON",
+        "activity": "94.99Z",
+        "creation_date": "2025-09-15"
+      },
+      {
+        "name": "OTONNALE",
+        "siren": "539195438",
+        "city": "LYON",
+        "activity": "70.10Z",
+        "creation_date": "2025-09-15"
+      }
+    ]
+  },
+  {
+    "name": "Odiem Capital",
+    "website": null,
+    "slug": "odiem-capital",
+    "siren": "402673719",
+    "confidence": 1.0,
+    "matched_name": "ODIEM CAPITAL",
+    "activity": "64.20Z",
+    "city": "MONTIGNY-LE-BRETONNEUX",
+    "creation_date": "1995-10-12",
+    "candidates": [
+      {
+        "name": "ODIEM CAPITAL",
+        "siren": "402673719",
+        "city": "MONTIGNY-LE-BRETONNEUX",
+        "activity": "64.20Z",
+        "creation_date": "1995-10-12"
+      }
+    ]
+  },
+  {
+    "name": "Odyssée Venture",
+    "website": null,
+    "slug": "odyssee-venture",
+    "siren": "425130937",
+    "confidence": 0.82,
+    "matched_name": "ODYSSEE VENTURE",
+    "activity": "66.30Z",
+    "city": "PARIS",
+    "creation_date": "2006-08-29",
+    "candidates": [
+      {
+        "name": "ODYSSEE VENTURE",
+        "siren": "425130937",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2006-08-29"
+      },
+      {
+        "name": "THE FULL ROOM (WYSIWYW)",
+        "siren": "453758047",
+        "city": "PARIS",
+        "activity": "59.11A",
+        "creation_date": "2016-06-28"
+      },
+      {
+        "name": "KAMELEOON",
+        "siren": "507754570",
+        "city": "AIX-EN-PROVENCE",
+        "activity": "70.10Z",
+        "creation_date": "2019-06-27"
+      }
+    ]
   }
 ]
