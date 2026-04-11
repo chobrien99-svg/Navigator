@@ -190,6 +190,23 @@ export default function EditOrganizationPage() {
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  // Sectors state
+  interface OrgSectorRow {
+    id: string;
+    sector_id: string;
+    is_primary: boolean;
+    sectors: { id: string; name: string; slug: string } | null;
+  }
+  interface SectorOption {
+    id: string;
+    name: string;
+    slug: string;
+  }
+  const [orgSectors, setOrgSectors] = useState<OrgSectorRow[]>([]);
+  const [allSectors, setAllSectors] = useState<SectorOption[]>([]);
+  const [newSectorId, setNewSectorId] = useState("");
+  const [newSectorIsPrimary, setNewSectorIsPrimary] = useState(false);
+
   useEffect(() => {
     async function load() {
       const { data: org, error: orgErr } = await supabase
@@ -271,6 +288,24 @@ export default function EditOrganizationPage() {
 
       if (investorNames) {
         setInvestorSuggestions(investorNames.map((i: { name: string }) => i.name));
+      }
+
+      // Load organization sectors
+      const { data: orgSectorsData } = await supabase
+        .from("organization_sectors")
+        .select("id, sector_id, is_primary, sectors(id, name, slug)")
+        .eq("organization_id", id);
+      if (orgSectorsData) {
+        setOrgSectors(orgSectorsData as unknown as OrgSectorRow[]);
+      }
+
+      // Load all sectors for the dropdown
+      const { data: allSectorsData } = await supabase
+        .from("sectors")
+        .select("id, name, slug")
+        .order("name");
+      if (allSectorsData) {
+        setAllSectors(allSectorsData as SectorOption[]);
       }
 
       setLoading(false);
@@ -550,6 +585,108 @@ export default function EditOrganizationPage() {
     }
   }
 
+  // ─── Sector handlers ──────────────────────────────────
+  async function handleAddSector() {
+    if (!newSectorId) return;
+    setError(null);
+    // If marking primary but another primary already exists, demote the existing one
+    if (newSectorIsPrimary) {
+      const existingPrimary = orgSectors.find((s) => s.is_primary);
+      if (existingPrimary) {
+        const { error: demoteErr } = await supabase
+          .from("organization_sectors")
+          .update({ is_primary: false })
+          .eq("id", existingPrimary.id);
+        if (demoteErr) {
+          setError(demoteErr.message);
+          return;
+        }
+      }
+    }
+
+    const { data: inserted, error: insErr } = await supabase
+      .from("organization_sectors")
+      .insert({
+        organization_id: id,
+        sector_id: newSectorId,
+        is_primary: newSectorIsPrimary,
+      })
+      .select("id, sector_id, is_primary, sectors(id, name, slug)")
+      .single();
+
+    if (insErr) {
+      setError(insErr.message);
+      return;
+    }
+    if (inserted) {
+      setOrgSectors((prev) => {
+        const demoted = newSectorIsPrimary
+          ? prev.map((s) => ({ ...s, is_primary: false }))
+          : prev;
+        return [...demoted, inserted as unknown as OrgSectorRow];
+      });
+      setNewSectorId("");
+      setNewSectorIsPrimary(false);
+    }
+  }
+
+  async function handleRemoveSector(rowId: string) {
+    const { error: delErr } = await supabase
+      .from("organization_sectors")
+      .delete()
+      .eq("id", rowId);
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setOrgSectors((prev) => prev.filter((s) => s.id !== rowId));
+    }
+  }
+
+  async function handleTogglePrimary(rowId: string) {
+    // Demote any existing primary, then mark this one primary
+    setError(null);
+    const target = orgSectors.find((s) => s.id === rowId);
+    if (!target) return;
+    if (target.is_primary) {
+      // Toggle off
+      const { error: updErr } = await supabase
+        .from("organization_sectors")
+        .update({ is_primary: false })
+        .eq("id", rowId);
+      if (updErr) {
+        setError(updErr.message);
+        return;
+      }
+      setOrgSectors((prev) =>
+        prev.map((s) => (s.id === rowId ? { ...s, is_primary: false } : s))
+      );
+      return;
+    }
+    // Demote existing primary
+    const existing = orgSectors.find((s) => s.is_primary);
+    if (existing) {
+      await supabase
+        .from("organization_sectors")
+        .update({ is_primary: false })
+        .eq("id", existing.id);
+    }
+    // Promote this one
+    const { error: updErr } = await supabase
+      .from("organization_sectors")
+      .update({ is_primary: true })
+      .eq("id", rowId);
+    if (updErr) {
+      setError(updErr.message);
+      return;
+    }
+    setOrgSectors((prev) =>
+      prev.map((s) => ({
+        ...s,
+        is_primary: s.id === rowId,
+      }))
+    );
+  }
+
   if (loading) {
     return (
       <div className="flex h-64 items-center justify-center">
@@ -681,6 +818,88 @@ export default function EditOrganizationPage() {
           <TextArea label="Current Strategy" value={profile.current_strategy} onChange={(v) => updateProfile("current_strategy", v)} />
           <TextArea label="Business Model Hypothesis" value={profile.business_model_hypothesis} onChange={(v) => updateProfile("business_model_hypothesis", v)} />
           <TextArea label="Technical Thesis" value={profile.technical_thesis} onChange={(v) => updateProfile("technical_thesis", v)} />
+        </div>
+      </div>
+
+      {/* Sectors Section */}
+      <div className="mt-12">
+        <h2 className="diplomatic-label">Sectors ({orgSectors.length})</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {orgSectors.map((s) => (
+            <span
+              key={s.id}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs ${
+                s.is_primary
+                  ? "bg-primary/15 text-primary"
+                  : "bg-surface-container text-on-surface-variant"
+              }`}
+            >
+              {s.is_primary && (
+                <span className="material-symbols-outlined text-[12px]">star</span>
+              )}
+              {s.sectors?.name ?? "?"}
+              <button
+                onClick={() => handleTogglePrimary(s.id)}
+                className="ml-1 text-outline-variant hover:text-primary"
+                title={s.is_primary ? "Demote from primary" : "Set as primary"}
+              >
+                <span className="material-symbols-outlined text-[12px]">
+                  {s.is_primary ? "star" : "star_outline"}
+                </span>
+              </button>
+              <button
+                onClick={() => handleRemoveSector(s.id)}
+                className="ml-0.5 text-outline-variant hover:text-error"
+                title="Remove sector"
+              >
+                <span className="material-symbols-outlined text-[12px]">close</span>
+              </button>
+            </span>
+          ))}
+          {orgSectors.length === 0 && (
+            <span className="text-xs italic text-outline-variant">
+              No sectors assigned
+            </span>
+          )}
+        </div>
+
+        {/* Add sector form */}
+        <div className="mt-4 flex items-end gap-3">
+          <div className="flex-1 max-w-xs">
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              Add sector
+            </label>
+            <select
+              value={newSectorId}
+              onChange={(e) => setNewSectorId(e.target.value)}
+              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+            >
+              <option value="">— select —</option>
+              {allSectors
+                .filter((s) => !orgSectors.find((os) => os.sector_id === s.id))
+                .map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.name}
+                  </option>
+                ))}
+            </select>
+          </div>
+          <label className="flex items-center gap-2 pb-2">
+            <input
+              type="checkbox"
+              checked={newSectorIsPrimary}
+              onChange={(e) => setNewSectorIsPrimary(e.target.checked)}
+              className="accent-primary"
+            />
+            <span className="text-xs text-on-surface-variant">Primary</span>
+          </label>
+          <button
+            onClick={handleAddSector}
+            disabled={!newSectorId}
+            className="px-3 py-2 text-xs font-medium text-primary hover:bg-primary/5 transition-colors disabled:opacity-30"
+          >
+            Add
+          </button>
         </div>
       </div>
 
