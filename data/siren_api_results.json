@@ -15766,5 +15766,1242 @@
         "creation_date": "2022-01-01"
       }
     ]
+  },
+  {
+    "name": "Elad Gil",
+    "website": null,
+    "slug": "elad-gil",
+    "siren": "390140598",
+    "confidence": 0.62,
+    "matched_name": "ELAD",
+    "activity": "68.20B",
+    "city": "ANDREZIEUX-BOUTHEON",
+    "creation_date": "1992-12-29",
+    "candidates": [
+      {
+        "name": "KEDEM (KEDEM)",
+        "siren": "951210772",
+        "city": "BORDEAUX",
+        "activity": "56.10A",
+        "creation_date": "2023-04-03"
+      },
+      {
+        "name": "COMMUNE DE VIOLES",
+        "siren": "218401495",
+        "city": "VIOLES",
+        "activity": "84.11Z",
+        "creation_date": "1983-12-21"
+      },
+      {
+        "name": "SCI TABI",
+        "siren": "849726799",
+        "city": "BORDEAUX",
+        "activity": "68.20B",
+        "creation_date": "2019-03-29"
+      }
+    ]
+  },
+  {
+    "name": "Elaia",
+    "website": null,
+    "slug": "elaia",
+    "siren": "934325143",
+    "confidence": 1.0,
+    "matched_name": "ELAIA",
+    "activity": "86.22C",
+    "city": "MARSEILLE",
+    "creation_date": "2024-12-29",
+    "candidates": [
+      {
+        "name": "ELAIA",
+        "siren": "934325143",
+        "city": "MARSEILLE",
+        "activity": "86.22C",
+        "creation_date": "2024-12-29"
+      },
+      {
+        "name": "ELAIA",
+        "siren": "903893147",
+        "city": "SALON-DE-PROVENCE",
+        "activity": "70.10Z",
+        "creation_date": "2021-10-06"
+      },
+      {
+        "name": "ELAIA",
+        "siren": "494250251",
+        "city": "CHAINGY",
+        "activity": "47.81Z",
+        "creation_date": "2007-02-03"
+      }
+    ]
+  },
+  {
+    "name": "Elemental Impact",
+    "website": null,
+    "slug": "elemental-impact",
+    "siren": "789236866",
+    "confidence": 0.7,
+    "matched_name": "ELEMENTAL TECHNOLOGIES",
+    "activity": "62.01Z",
+    "city": null,
+    "creation_date": "2012-09-03",
+    "candidates": [
+      {
+        "name": "ELEMENTAL",
+        "siren": "892265497",
+        "city": "SAINT BARTHELEMY",
+        "activity": "82.11Z",
+        "creation_date": "2020-12-01"
+      },
+      {
+        "name": "ELEMENTAL",
+        "siren": "395404163",
+        "city": "PARIS",
+        "activity": "74.4B",
+        "creation_date": "1994-08-23"
+      },
+      {
+        "name": "ELEMENTAL",
+        "siren": "429351281",
+        "city": "PONT-A-VENDIN",
+        "activity": "68.20B",
+        "creation_date": "2000-01-15"
+      }
+    ]
+  },
+  {
+    "name": "Elephant",
+    "website": null,
+    "slug": "elephant",
+    "siren": "101916955",
+    "confidence": 1.0,
+    "matched_name": "ELEPHANT",
+    "activity": "49.32Z",
+    "city": "MARSEILLE",
+    "creation_date": "2026-02-26",
+    "candidates": [
+      {
+        "name": "ELEPHANT",
+        "siren": "101916955",
+        "city": "MARSEILLE",
+        "activity": "49.32Z",
+        "creation_date": "2026-02-26"
+      },
+      {
+        "name": "ELEPHANT",
+        "siren": "384884334",
+        "city": "STRASBOURG",
+        "activity": "68.20B",
+        "creation_date": "1992-02-10"
+      },
+      {
+        "name": "ELEPHANT",
+        "siren": "440702652",
+        "city": "MARSEILLE",
+        "activity": "88.99B",
+        "creation_date": "1999-01-01"
+      }
+    ]
+  },
+  {
+    "name": "Elevation Capital",
+    "website": null,
+    "slug": "elevation-capital",
+    "siren": "898438684",
+    "confidence": 1.0,
+    "matched_name": "ELEVATION CAPITAL",
+    "activity": "70.22Z",
+    "city": "PARIS",
+    "creation_date": "2022-02-01",
+    "candidates": [
+      {
+        "name": "ELEVATION CAPITAL",
+        "siren": "898438684",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2022-02-01"
+      },
+      {
+        "name": "ELEVATION CAPITAL PARTNERS",
+        "siren": "809672165",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2018-05-18"
+      },
+      {
+        "name": "SAS LE 73 SEBASTOPOL",
+        "siren": "102469798",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2026-03-13"
+      }
+    ]
+  },
+  {
+    "name": "Elige Capital",
+    "website": null,
+    "slug": "elige-capital",
+    "siren": "809972581",
+    "confidence": 1.0,
+    "matched_name": "ELIGE CAPITAL",
+    "activity": "64.99Z",
+    "city": "LYON",
+    "creation_date": "2018-04-16",
+    "candidates": [
+      {
+        "name": "ELIGE CAPITAL",
+        "siren": "809972581",
+        "city": "LYON",
+        "activity": "64.99Z",
+        "creation_date": "2018-04-16"
+      }
+    ]
+  },
+  {
+    "name": "Emblem",
+    "website": null,
+    "slug": "emblem",
+    "siren": "841001449",
+    "confidence": 1.0,
+    "matched_name": "EMBLEM",
+    "activity": "68.20B",
+    "city": "POISY",
+    "creation_date": "2018-06-08",
+    "candidates": [
+      {
+        "name": "EMBLEM (EMBLEM)",
+        "siren": "812941862",
+        "city": "PARIS",
+        "activity": "74.10Z",
+        "creation_date": "2020-10-20"
+      },
+      {
+        "name": "EMBLEM",
+        "siren": "841001449",
+        "city": "POISY",
+        "activity": "68.20B",
+        "creation_date": "2018-06-08"
+      },
+      {
+        "name": "EMBLEM",
+        "siren": "902716455",
+        "city": "BORDEAUX",
+        "activity": "68.20B",
+        "creation_date": "2021-08-23"
+      }
+    ]
+  },
+  {
+    "name": "Emergent Ventures",
+    "website": null,
+    "slug": "emergent-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "L'EMERGENTE",
+        "siren": "504868845",
+        "city": "TIL-CHATEL",
+        "activity": "93.12Z",
+        "creation_date": "2001-09-25"
+      },
+      {
+        "name": "LES EMERGENTES",
+        "siren": "939673778",
+        "city": "SENONES",
+        "activity": "93.29Z",
+        "creation_date": "2024-11-20"
+      },
+      {
+        "name": "EMERGENT + (EMERGENT +)",
+        "siren": "918070541",
+        "city": "ROUBAIX",
+        "activity": "81.22Z",
+        "creation_date": "2022-07-01"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Cassimatis",
+    "website": null,
+    "slug": "emmanuel-cassimatis",
+    "siren": "751580259",
+    "confidence": 1.0,
+    "matched_name": "EMMANUEL CASSIMATIS",
+    "activity": "70.22Z",
+    "city": "PARIS",
+    "creation_date": "2012-04-17",
+    "candidates": [
+      {
+        "name": "EMMANUEL CASSIMATIS",
+        "siren": "751580259",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2012-04-17"
+      },
+      {
+        "name": "ALPHA OMEGA",
+        "siren": "903290997",
+        "city": "LA GARENNE-COLOMBES",
+        "activity": "64.20Z",
+        "creation_date": "2021-09-15"
+      },
+      {
+        "name": "SCI DU BOSCHET",
+        "siren": "423339332",
+        "city": "SOSPEL",
+        "activity": "68.20B",
+        "creation_date": "2022-06-02"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Grenier",
+    "website": null,
+    "slug": "emmanuel-grenier",
+    "siren": "403830367",
+    "confidence": 1.0,
+    "matched_name": "EMMANUEL GRENIER",
+    "activity": "01.50Z",
+    "city": "GENISSIEUX",
+    "creation_date": "1996-01-01",
+    "candidates": [
+      {
+        "name": "EMMANUEL GRENIER",
+        "siren": "403830367",
+        "city": "GENISSIEUX",
+        "activity": "01.50Z",
+        "creation_date": "1996-01-01"
+      },
+      {
+        "name": "EMMANUEL GRENIER",
+        "siren": "483293114",
+        "city": "ROUEN",
+        "activity": "66.22Z",
+        "creation_date": "2015-06-01"
+      },
+      {
+        "name": "EMMANUEL GRENIER",
+        "siren": "941182537",
+        "city": "LUE",
+        "activity": "73.20Z",
+        "creation_date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Martin-Chave",
+    "website": null,
+    "slug": "emmanuel-martin-chave",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "SCI MAMIKI",
+        "siren": "521728311",
+        "city": "CARNOUX-EN-PROVENCE",
+        "activity": "68.20B",
+        "creation_date": "2023-11-28"
+      },
+      {
+        "name": "ARMAL SCI",
+        "siren": "412569584",
+        "city": "CARNOUX-EN-PROVENCE",
+        "activity": "68.20A",
+        "creation_date": "2023-04-13"
+      },
+      {
+        "name": "YVES MARTIN-CHAVE",
+        "siren": "394746242",
+        "city": "AUBAGNE",
+        "activity": "70.22Z",
+        "creation_date": "2021-06-01"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Picot",
+    "website": null,
+    "slug": "emmanuel-picot",
+    "siren": "999617756",
+    "confidence": 1.0,
+    "matched_name": "EMMANUEL PICOT",
+    "activity": "35.11Z",
+    "city": "FRONTON",
+    "creation_date": "2025-12-12",
+    "candidates": [
+      {
+        "name": "EMMANUEL PICOT",
+        "siren": "999617756",
+        "city": "FRONTON",
+        "activity": "35.11Z",
+        "creation_date": "2025-12-12"
+      },
+      {
+        "name": "EMMANUEL PICOT (MP AUTOS)",
+        "siren": "834479214",
+        "city": "FLOTTEMANVILLE",
+        "activity": "45.11Z",
+        "creation_date": "2018-01-09"
+      },
+      {
+        "name": "EMMANUEL PICOT",
+        "siren": "380237149",
+        "city": "IS-SUR-TILLE",
+        "activity": "86.90E",
+        "creation_date": "1994-01-01"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuelle Brizay",
+    "website": null,
+    "slug": "emmanuelle-brizay",
+    "siren": "979178068",
+    "confidence": 0.73,
+    "matched_name": "EMMANUELLE",
+    "activity": "70.21Z",
+    "city": "PARIS",
+    "creation_date": "2023-09-01",
+    "candidates": [
+      {
+        "name": "COMMUNE DE NOYAL SUR VILAINE",
+        "siren": "213502073",
+        "city": "NOYAL-SUR-VILAINE",
+        "activity": "84.11Z",
+        "creation_date": "1983-03-01"
+      },
+      {
+        "name": "SPORT FIELD",
+        "siren": "914300140",
+        "city": "PARIS",
+        "activity": "93.11Z",
+        "creation_date": "2022-06-05"
+      },
+      {
+        "name": "SCI NADEM FEBVAY",
+        "siren": "478415912",
+        "city": "PARIS",
+        "activity": "68.20B",
+        "creation_date": "2004-09-01"
+      }
+    ]
+  },
+  {
+    "name": "Endeit Capital",
+    "website": null,
+    "slug": "endeit-capital",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Endgame",
+    "website": null,
+    "slug": "endgame",
+    "siren": "878315829",
+    "confidence": 1.0,
+    "matched_name": "ENDGAME",
+    "activity": "59.20Z",
+    "city": "MONTECH",
+    "creation_date": "2019-10-10",
+    "candidates": [
+      {
+        "name": "ENDGAME",
+        "siren": "878315829",
+        "city": "MONTECH",
+        "activity": "59.20Z",
+        "creation_date": "2019-10-10"
+      },
+      {
+        "name": "ENDGAME",
+        "siren": "982457897",
+        "city": "TOURS",
+        "activity": "68.20B",
+        "creation_date": "2023-12-11"
+      },
+      {
+        "name": "ENDGAME MUSIC (ENDGAME MUSIC)",
+        "siren": "940549009",
+        "city": "SARCELLES",
+        "activity": "59.20Z",
+        "creation_date": "2024-12-26"
+      }
+    ]
+  },
+  {
+    "name": "Enerfip",
+    "website": null,
+    "slug": "enerfip",
+    "siren": "804231546",
+    "confidence": 0.6,
+    "matched_name": "ENERFIP (ENERFIP)",
+    "activity": "70.22Z",
+    "city": "MONTPELLIER",
+    "creation_date": "2023-09-28",
+    "candidates": [
+      {
+        "name": "ENERFIP (ENERFIP)",
+        "siren": "804231546",
+        "city": "MONTPELLIER",
+        "activity": "70.22Z",
+        "creation_date": "2023-09-28"
+      },
+      {
+        "name": "ENERFIP INTERNATIONAL (ENERFIP INTERNATIONAL)",
+        "siren": "913807194",
+        "city": "MONTPELLIER",
+        "activity": "70.22Z",
+        "creation_date": "2022-05-12"
+      },
+      {
+        "name": "OPALE ENERFIP INVEST",
+        "siren": "910641174",
+        "city": "MONTPELLIER",
+        "activity": "70.10Z",
+        "creation_date": "2024-10-30"
+      }
+    ]
+  },
+  {
+    "name": "Engie New Ventures",
+    "website": null,
+    "slug": "engie-new-ventures",
+    "siren": "775583263",
+    "confidence": 1.0,
+    "matched_name": "ENGIE NEW VENTURES",
+    "activity": "66.30Z",
+    "city": "LA GARENNE-COLOMBES",
+    "creation_date": "2026-01-01",
+    "candidates": [
+      {
+        "name": "ENGIE NEW VENTURES",
+        "siren": "775583263",
+        "city": "LA GARENNE-COLOMBES",
+        "activity": "66.30Z",
+        "creation_date": "2026-01-01"
+      },
+      {
+        "name": "GRDF",
+        "siren": "444786511",
+        "city": "SAINT-DENIS",
+        "activity": "35.22Z",
+        "creation_date": "2024-12-01"
+      },
+      {
+        "name": "NATRAN (NATRAN)",
+        "siren": "440117620",
+        "city": "BOIS-COLOMBES",
+        "activity": "49.50Z",
+        "creation_date": "2010-09-01"
+      }
+    ]
+  },
+  {
+    "name": "ENGIE Rassembleurs d'Énergies",
+    "website": null,
+    "slug": "engie-rassembleurs-denergies",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "FONCIERE CHENELET",
+        "siren": "515161248",
+        "city": "LANDRETHUN-LE-NORD",
+        "activity": "68.31Z",
+        "creation_date": "2009-09-22"
+      },
+      {
+        "name": "ENGIE",
+        "siren": "542107651",
+        "city": "LA GARENNE-COLOMBES",
+        "activity": "35.22Z",
+        "creation_date": "2025-08-01"
+      },
+      {
+        "name": "ENGIE ENERGIE SERVICES (ENGIE E.S.)",
+        "siren": "552046955",
+        "city": "LA GARENNE-COLOMBES",
+        "activity": "35.30Z",
+        "creation_date": "2025-11-01"
+      }
+    ]
+  },
+  {
+    "name": "Engine Ventures",
+    "website": null,
+    "slug": "engine-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "ENGINE",
+        "siren": "523969251",
+        "city": "ORLEANS",
+        "activity": "90.01Z",
+        "creation_date": "2010-07-06"
+      },
+      {
+        "name": "ENGINE",
+        "siren": "444702252",
+        "city": "PARIS",
+        "activity": "73.11Z",
+        "creation_date": "2002-11-22"
+      },
+      {
+        "name": "SAFRAN AIRCRAFT ENGINES",
+        "siren": "414815217",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "1997-12-01"
+      }
+    ]
+  },
+  {
+    "name": "Entourage",
+    "website": null,
+    "slug": "entourage",
+    "siren": "777345539",
+    "confidence": 1.0,
+    "matched_name": "ENTOURAGE",
+    "activity": "46.76Z",
+    "city": "CHATEAUNEUF-SUR-ISERE",
+    "creation_date": "2021-03-31",
+    "candidates": [
+      {
+        "name": "ENTOURAGE",
+        "siren": "777345539",
+        "city": "CHATEAUNEUF-SUR-ISERE",
+        "activity": "46.76Z",
+        "creation_date": "2021-03-31"
+      },
+      {
+        "name": "ENTOURAGE",
+        "siren": "813792405",
+        "city": "PARIS",
+        "activity": "94.99Z",
+        "creation_date": "2024-10-01"
+      },
+      {
+        "name": "ENTOURAGE",
+        "siren": "823838107",
+        "city": "PARIS",
+        "activity": "70.22Z",
+        "creation_date": "2019-07-22"
+      }
+    ]
+  },
+  {
+    "name": "Entrepreneur First",
+    "website": null,
+    "slug": "entrepreneur-first",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "ENTREPRENEURS FIRST OPERATIONS LIMITED",
+        "siren": "840803431",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2018-07-01"
+      },
+      {
+        "name": "FIRST STOP AYME",
+        "siren": "722620119",
+        "city": "SAINT-PRIEST",
+        "activity": "45.31Z",
+        "creation_date": "2020-10-01"
+      },
+      {
+        "name": "FORVIS MAZARS ENTREPRENEURS",
+        "siren": "384762589",
+        "city": "LE PUY-EN-VELAY",
+        "activity": "69.20Z",
+        "creation_date": "2015-10-05"
+      }
+    ]
+  },
+  {
+    "name": "Entropy Industrial",
+    "website": null,
+    "slug": "entropy-industrial",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "ENTROPY",
+        "siren": "807874177",
+        "city": "FIGEAC",
+        "activity": "25.62B",
+        "creation_date": "2019-07-01"
+      },
+      {
+        "name": "ENTROPY",
+        "siren": "877529768",
+        "city": "VERSAILLES",
+        "activity": "62.01Z",
+        "creation_date": "2022-06-07"
+      },
+      {
+        "name": "ENTROPY",
+        "siren": "982315798",
+        "city": "PARIS",
+        "activity": "69.10Z",
+        "creation_date": "2023-12-01"
+      }
+    ]
+  },
+  {
+    "name": "ENVIRONNEMENT MASSIF CENTRAL",
+    "website": null,
+    "slug": "environnement-massif-central",
+    "siren": "414369173",
+    "confidence": 1.0,
+    "matched_name": "ENVIRONNEMENT MASSIF CENTRAL",
+    "activity": "38.32Z",
+    "city": "MENDE",
+    "creation_date": "2004-06-07",
+    "candidates": [
+      {
+        "name": "ENVIRONNEMENT MASSIF CENTRAL",
+        "siren": "414369173",
+        "city": "MENDE",
+        "activity": "38.32Z",
+        "creation_date": "2004-06-07"
+      },
+      {
+        "name": "QUALITE ENTREPRISES",
+        "siren": "392670501",
+        "city": "TERRASSON-LAVILLEDIEU",
+        "activity": "82.99Z",
+        "creation_date": "2023-07-17"
+      }
+    ]
+  },
+  {
+    "name": "Enzo Mattioli Ferrari",
+    "website": null,
+    "slug": "enzo-mattioli-ferrari",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "ENZO (ENZO)",
+        "siren": "501822191",
+        "city": "MARSEILLE",
+        "activity": "56.30Z",
+        "creation_date": "2008-01-01"
+      },
+      {
+        "name": "ENZO",
+        "siren": "490331386",
+        "city": "ANGLET",
+        "activity": "70.10Z",
+        "creation_date": "2008-10-23"
+      },
+      {
+        "name": "ENZO",
+        "siren": "752488379",
+        "city": "SAINT-PIERRE-D'OLERON",
+        "activity": "56.10A",
+        "creation_date": "2012-07-01"
+      }
+    ]
+  },
+  {
+    "name": "Epopée Gestion",
+    "website": null,
+    "slug": "epopee-gestion",
+    "siren": "888655404",
+    "confidence": 0.69,
+    "matched_name": "EPOPEE GESTION (EPOPEE)",
+    "activity": "66.30Z",
+    "city": "GUIPAVAS",
+    "creation_date": "2020-09-01",
+    "candidates": [
+      {
+        "name": "EPOPEE GESTION (EPOPEE)",
+        "siren": "888655404",
+        "city": "GUIPAVAS",
+        "activity": "66.30Z",
+        "creation_date": "2020-09-01"
+      },
+      {
+        "name": "EPOPEE HOTELS GP",
+        "siren": "980451462",
+        "city": "GUIPAVAS",
+        "activity": "70.10Z",
+        "creation_date": "2023-09-08"
+      },
+      {
+        "name": "EPOPEE INFRA GP",
+        "siren": "922921531",
+        "city": "GUIPAVAS",
+        "activity": "66.30Z",
+        "creation_date": "2023-01-20"
+      }
+    ]
+  },
+  {
+    "name": "Epsilon Value",
+    "website": null,
+    "slug": "epsilon-value",
+    "siren": "939062303",
+    "confidence": 1.0,
+    "matched_name": "EPSILON VALUE",
+    "activity": "70.10Z",
+    "city": "PARIS",
+    "creation_date": "2024-12-30",
+    "candidates": [
+      {
+        "name": "EPSILON VALUE",
+        "siren": "939062303",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2024-12-30"
+      }
+    ]
+  },
+  {
+    "name": "Epsilon Venture Partners",
+    "website": null,
+    "slug": "epsilon-venture-partners",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "EPSILON (EPSILON)",
+        "siren": "950400291",
+        "city": "THONON-LES-BAINS",
+        "activity": "69.10Z",
+        "creation_date": "2011-07-21"
+      },
+      {
+        "name": "EPSILON",
+        "siren": "813607728",
+        "city": "LAPTE",
+        "activity": "70.10Z",
+        "creation_date": "2015-09-14"
+      },
+      {
+        "name": "EPSILON",
+        "siren": "433389707",
+        "city": "CUXAC-D'AUDE",
+        "activity": "70.10Z",
+        "creation_date": "2000-10-11"
+      }
+    ]
+  },
+  {
+    "name": "EQT Ventures",
+    "website": null,
+    "slug": "eqt-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Equinor Ventures",
+    "website": null,
+    "slug": "equinor-ventures",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "EQUINOX",
+        "siren": "385060967",
+        "city": "AVIGNON",
+        "activity": "80.10Z",
+        "creation_date": "2006-06-21"
+      },
+      {
+        "name": "EQUINOX (EQUINOX - LES SAVEURS OCEANES)",
+        "siren": "450324215",
+        "city": "SAINT-PIERRE-D'OLERON",
+        "activity": "47.23Z",
+        "creation_date": "2017-01-01"
+      },
+      {
+        "name": "EQUINOX",
+        "siren": "387576309",
+        "city": "TOULOUSE",
+        "activity": "18.20Z",
+        "creation_date": "2014-01-01"
+      }
+    ]
+  },
+  {
+    "name": "EREN Groupe",
+    "website": null,
+    "slug": "eren-groupe",
+    "siren": "884401423",
+    "confidence": 1.0,
+    "matched_name": "EREN",
+    "activity": "68.20B",
+    "city": "LIVRY-GARGAN",
+    "creation_date": "2020-06-18",
+    "candidates": [
+      {
+        "name": "EREN GROUPE (EREN GROUPE)",
+        "siren": "752544395",
+        "city": "AUCAMVILLE",
+        "activity": "70.10Z",
+        "creation_date": "2012-06-01"
+      },
+      {
+        "name": "CARRELAGE EREN GROUP (CARRELAGE EREN GROUP)",
+        "siren": "912971454",
+        "city": "STRASBOURG",
+        "activity": "47.52A",
+        "creation_date": "2022-02-26"
+      },
+      {
+        "name": "GROUPE HOLDING EREN",
+        "siren": "881641336",
+        "city": "STRASBOURG",
+        "activity": "66.30Z",
+        "creation_date": "2020-01-02"
+      }
+    ]
+  },
+  {
+    "name": "Eren Industries",
+    "website": null,
+    "slug": "eren-industries",
+    "siren": "905191144",
+    "confidence": 1.0,
+    "matched_name": "EREN INDUSTRIES SAS",
+    "activity": "70.10Z",
+    "city": "PARIS",
+    "creation_date": "2021-10-19",
+    "candidates": [
+      {
+        "name": "EREN INDUSTRIES SAS",
+        "siren": "905191144",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2021-10-19"
+      },
+      {
+        "name": "EREN BLUE CAP",
+        "siren": "102826971",
+        "city": "PARIS",
+        "activity": "66.30Z",
+        "creation_date": "2026-03-09"
+      },
+      {
+        "name": "HEXEREN",
+        "siren": "995195492",
+        "city": "PARIS",
+        "activity": "35.11Z",
+        "creation_date": "2025-12-04"
+      }
+    ]
+  },
+  {
+    "name": "Eric Fourrier",
+    "website": null,
+    "slug": "eric-fourrier",
+    "siren": "415285899",
+    "confidence": 1.0,
+    "matched_name": "ERIC FOURRIER",
+    "activity": "49.41A",
+    "city": "MALAFRETAZ",
+    "creation_date": "2008-01-15",
+    "candidates": [
+      {
+        "name": "ERIC FOURRIER",
+        "siren": "415285899",
+        "city": "MALAFRETAZ",
+        "activity": "49.41A",
+        "creation_date": "2008-01-15"
+      },
+      {
+        "name": "ERIC FOURRIER",
+        "siren": "931341556",
+        "city": "OULLINS-PIERRE-BENITE",
+        "activity": "85.51Z",
+        "creation_date": "2024-07-20"
+      },
+      {
+        "name": "ERIC FOURRIER",
+        "siren": "828004184",
+        "city": "PARIS",
+        "activity": "62.01Z",
+        "creation_date": "2017-02-27"
+      }
+    ]
+  },
+  {
+    "name": "Eric Ibled​",
+    "website": null,
+    "slug": "eric-ibled",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "SCI LAFRERAL",
+        "siren": "332335132",
+        "city": "VILLENEUVE D ASCQ",
+        "activity": "68.20A",
+        "creation_date": "2015-12-19"
+      },
+      {
+        "name": "CORCOVADO INVEST (CORCOVADO INVEST)",
+        "siren": "789429362",
+        "city": "MARCQ-EN-BARŒUL",
+        "activity": "64.99Z",
+        "creation_date": "2012-10-30"
+      },
+      {
+        "name": "PANACEE",
+        "siren": "428911515",
+        "city": "LILLE",
+        "activity": "64.30Z",
+        "creation_date": "1999-12-15"
+      }
+    ]
+  },
+  {
+    "name": "Eric Schmidt",
+    "website": null,
+    "slug": "eric-schmidt",
+    "siren": "951038405",
+    "confidence": 1.0,
+    "matched_name": "ERIC SCHMIDT",
+    "activity": "55.20Z",
+    "city": "JOUE-LES-TOURS",
+    "creation_date": "2022-05-24",
+    "candidates": [
+      {
+        "name": "ERIC SCHMIDT (SCHMIDT)",
+        "siren": "820806479",
+        "city": "NANTERRE",
+        "activity": "47.89Z",
+        "creation_date": "2016-06-01"
+      },
+      {
+        "name": "ERIC SCHMIDT",
+        "siren": "951038405",
+        "city": "JOUE-LES-TOURS",
+        "activity": "55.20Z",
+        "creation_date": "2022-05-24"
+      },
+      {
+        "name": "ERIC SCHMIDT",
+        "siren": "897638870",
+        "city": "TOULOUSE",
+        "activity": "86.22B",
+        "creation_date": "2021-03-01"
+      }
+    ]
+  },
+  {
+    "name": "ESA",
+    "website": null,
+    "slug": "esa",
+    "siren": "810316562",
+    "confidence": 1.0,
+    "matched_name": "ESA",
+    "activity": "70.10Z",
+    "city": "CHARENTON-LE-PONT",
+    "creation_date": "2018-07-10",
+    "candidates": [
+      {
+        "name": "ESA",
+        "siren": "810316562",
+        "city": "CHARENTON-LE-PONT",
+        "activity": "70.10Z",
+        "creation_date": "2018-07-10"
+      },
+      {
+        "name": "ESA",
+        "siren": "419344932",
+        "city": "PARIS",
+        "activity": "66.19A",
+        "creation_date": "2019-12-14"
+      },
+      {
+        "name": "ESA",
+        "siren": "912205986",
+        "city": "NICE",
+        "activity": "70.10Z",
+        "creation_date": "2022-04-06"
+      }
+    ]
+  },
+  {
+    "name": "ESA (European Space Agency)",
+    "website": null,
+    "slug": "esa-european-space-agency",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "ETF Partners",
+    "website": null,
+    "slug": "etf-partners",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": []
+  },
+  {
+    "name": "Eurazeo",
+    "website": null,
+    "slug": "eurazeo",
+    "siren": "944230598",
+    "confidence": 1.0,
+    "matched_name": "EURAZEO",
+    "activity": "52.10B",
+    "city": "BETHUNE",
+    "creation_date": "2025-05-06",
+    "candidates": [
+      {
+        "name": "EURAZEO",
+        "siren": "944230598",
+        "city": "BETHUNE",
+        "activity": "52.10B",
+        "creation_date": "2025-05-06"
+      },
+      {
+        "name": "EURAZEO",
+        "siren": "692030992",
+        "city": "PARIS",
+        "activity": "70.10Z",
+        "creation_date": "2024-11-08"
+      },
+      {
+        "name": "EURAZEO SERVICES LUX",
+        "siren": "482026051",
+        "city": null,
+        "activity": "70.10Z",
+        "creation_date": "2004-12-01"
+      }
+    ]
+  },
+  {
+    "name": "Eurobail",
+    "website": null,
+    "slug": "eurobail",
+    "siren": "722052586",
+    "confidence": 1.0,
+    "matched_name": "EUROBAIL",
+    "activity": "68.20B",
+    "city": "PARIS",
+    "creation_date": "1900-01-01",
+    "candidates": [
+      {
+        "name": "EUROBAIL",
+        "siren": "722052586",
+        "city": "PARIS",
+        "activity": "68.20B",
+        "creation_date": "1900-01-01"
+      },
+      {
+        "name": "EUROBAIL FORMATION",
+        "siren": "910619584",
+        "city": "LILLE",
+        "activity": "85.59A",
+        "creation_date": "2022-02-15"
+      },
+      {
+        "name": "SCI EUROBAIL",
+        "siren": "400220034",
+        "city": "VILLENEUVE-D'ASCQ",
+        "activity": "68.20B",
+        "creation_date": "1995-02-27"
+      }
+    ]
+  },
+  {
+    "name": "European Innovation Council",
+    "website": null,
+    "slug": "european-innovation-council",
+    "siren": null,
+    "confidence": null,
+    "matched_name": null,
+    "activity": null,
+    "city": null,
+    "creation_date": null,
+    "candidates": [
+      {
+        "name": "EUROPEAN",
+        "siren": "795150465",
+        "city": "L'HERMENAULT",
+        "activity": "68.20B",
+        "creation_date": "2013-09-16"
+      },
+      {
+        "name": "EUROPEAN",
+        "siren": "428713333",
+        "city": null,
+        "activity": "49.41A",
+        "creation_date": "1999-12-01"
+      },
+      {
+        "name": "EUROPEAN",
+        "siren": "434738647",
+        "city": "NANCY",
+        "activity": "94.99Z",
+        "creation_date": "2005-07-18"
+      }
+    ]
   }
 ]
