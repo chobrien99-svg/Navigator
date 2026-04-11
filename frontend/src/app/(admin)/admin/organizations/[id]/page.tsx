@@ -207,6 +207,28 @@ export default function EditOrganizationPage() {
   const [newSectorId, setNewSectorId] = useState("");
   const [newSectorIsPrimary, setNewSectorIsPrimary] = useState(false);
 
+  // Delete state
+  const [deleting, setDeleting] = useState(false);
+
+  // Portfolio (for investor-type orgs)
+  interface PortfolioEntry {
+    id: string;
+    is_lead: boolean;
+    investment_amount_eur: number | null;
+    funding_round: {
+      id: string;
+      stage: string;
+      amount_eur: number | null;
+      announced_date: string | null;
+      organization: {
+        id: string;
+        name: string;
+        slug: string;
+      } | null;
+    } | null;
+  }
+  const [portfolio, setPortfolio] = useState<PortfolioEntry[]>([]);
+
   useEffect(() => {
     async function load() {
       const { data: org, error: orgErr } = await supabase
@@ -306,6 +328,20 @@ export default function EditOrganizationPage() {
         .order("name");
       if (allSectorsData) {
         setAllSectors(allSectorsData as SectorOption[]);
+      }
+
+      // Load portfolio (only meaningful for investors, but we fetch either way
+      // — empty list if the org isn't an investor).
+      const { data: portfolioData } = await supabase
+        .from("funding_round_investors")
+        .select(
+          "id, is_lead, investment_amount_eur, funding_round:funding_round_id(id, stage, amount_eur, announced_date, organization:organization_id(id, name, slug))"
+        )
+        .eq("investor_id", id)
+        .order("funding_round(announced_date)", { ascending: false })
+        .limit(500);
+      if (portfolioData) {
+        setPortfolio(portfolioData as unknown as PortfolioEntry[]);
       }
 
       setLoading(false);
@@ -642,6 +678,28 @@ export default function EditOrganizationPage() {
     }
   }
 
+  async function handleDeleteOrg() {
+    const prompt = `Delete "${form.name}"? This cannot be undone.\n\nAll linked data (funding rounds, sectors, legal entities, people links, program memberships) will be removed via cascade.\n\nType the organization name to confirm:`;
+    const confirmation = window.prompt(prompt);
+    if (confirmation == null) return;
+    if (confirmation.trim() !== form.name.trim()) {
+      setError("Name did not match — deletion cancelled.");
+      return;
+    }
+    setDeleting(true);
+    setError(null);
+    const { error: delErr } = await supabase
+      .from("organizations")
+      .delete()
+      .eq("id", id);
+    if (delErr) {
+      setError(delErr.message);
+      setDeleting(false);
+    } else {
+      router.push("/admin/organizations");
+    }
+  }
+
   async function handleTogglePrimary(rowId: string) {
     // Demote any existing primary, then mark this one primary
     setError(null);
@@ -724,6 +782,13 @@ export default function EditOrganizationPage() {
             View Public Page
           </Link>
           <button
+            onClick={handleDeleteOrg}
+            disabled={saving || deleting}
+            className="px-4 py-2 text-sm text-error transition-colors hover:bg-error-container/50 disabled:opacity-50"
+          >
+            {deleting ? "Deleting..." : "Delete"}
+          </button>
+          <button
             onClick={handleSave}
             disabled={saving}
             className="institutional-gradient px-6 py-2 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 disabled:opacity-50"
@@ -804,20 +869,34 @@ export default function EditOrganizationPage() {
           <Field label="Email" value={form.email} onChange={(v) => updateField("email", v)} />
         </div>
 
-        {/* Right: Profile / Intelligence */}
+        {/* Right: Profile / Intelligence — fields vary by organization type */}
         <div className="space-y-6">
           <h2 className="diplomatic-label">Intelligence Profile</h2>
 
-          <TextArea label="What They're Building" value={profile.what_they_are_building} onChange={(v) => updateProfile("what_they_are_building", v)} />
-          <TextArea label="Why It Matters" value={profile.why_it_matters} onChange={(v) => updateProfile("why_it_matters", v)} />
-          <TextArea label="Investor Brief" value={profile.investor_brief} onChange={(v) => updateProfile("investor_brief", v)} />
-          <TextArea label="Analyst Note" value={profile.analyst_note} onChange={(v) => updateProfile("analyst_note", v)} />
-          <TextArea label="Product Description" value={profile.product_description} onChange={(v) => updateProfile("product_description", v)} />
-          <TextArea label="Target Market" value={profile.target_market} onChange={(v) => updateProfile("target_market", v)} />
-          <TextArea label="Competitive Landscape" value={profile.competitive_landscape} onChange={(v) => updateProfile("competitive_landscape", v)} />
-          <TextArea label="Current Strategy" value={profile.current_strategy} onChange={(v) => updateProfile("current_strategy", v)} />
-          <TextArea label="Business Model Hypothesis" value={profile.business_model_hypothesis} onChange={(v) => updateProfile("business_model_hypothesis", v)} />
-          <TextArea label="Technical Thesis" value={profile.technical_thesis} onChange={(v) => updateProfile("technical_thesis", v)} />
+          {form.organization_type === "investor" ? (
+            <>
+              <TextArea label="What They Invest In" value={profile.what_they_are_building} onChange={(v) => updateProfile("what_they_are_building", v)} />
+              <TextArea label="Why They Matter" value={profile.why_it_matters} onChange={(v) => updateProfile("why_it_matters", v)} />
+              <TextArea label="Firm Brief" value={profile.investor_brief} onChange={(v) => updateProfile("investor_brief", v)} />
+              <TextArea label="Analyst Note" value={profile.analyst_note} onChange={(v) => updateProfile("analyst_note", v)} />
+              <TextArea label="Geographic Focus" value={profile.target_market} onChange={(v) => updateProfile("target_market", v)} />
+              <TextArea label="Investment Focus / Stage Preference" value={profile.current_strategy} onChange={(v) => updateProfile("current_strategy", v)} />
+              <TextArea label="Sector Thesis" value={profile.technical_thesis} onChange={(v) => updateProfile("technical_thesis", v)} />
+            </>
+          ) : (
+            <>
+              <TextArea label="What They're Building" value={profile.what_they_are_building} onChange={(v) => updateProfile("what_they_are_building", v)} />
+              <TextArea label="Why It Matters" value={profile.why_it_matters} onChange={(v) => updateProfile("why_it_matters", v)} />
+              <TextArea label="Investor Brief" value={profile.investor_brief} onChange={(v) => updateProfile("investor_brief", v)} />
+              <TextArea label="Analyst Note" value={profile.analyst_note} onChange={(v) => updateProfile("analyst_note", v)} />
+              <TextArea label="Product Description" value={profile.product_description} onChange={(v) => updateProfile("product_description", v)} />
+              <TextArea label="Target Market" value={profile.target_market} onChange={(v) => updateProfile("target_market", v)} />
+              <TextArea label="Competitive Landscape" value={profile.competitive_landscape} onChange={(v) => updateProfile("competitive_landscape", v)} />
+              <TextArea label="Current Strategy" value={profile.current_strategy} onChange={(v) => updateProfile("current_strategy", v)} />
+              <TextArea label="Business Model Hypothesis" value={profile.business_model_hypothesis} onChange={(v) => updateProfile("business_model_hypothesis", v)} />
+              <TextArea label="Technical Thesis" value={profile.technical_thesis} onChange={(v) => updateProfile("technical_thesis", v)} />
+            </>
+          )}
         </div>
       </div>
 
@@ -902,6 +981,59 @@ export default function EditOrganizationPage() {
           </button>
         </div>
       </div>
+
+      {/* Portfolio Section — only for investors */}
+      {form.organization_type === "investor" && (
+        <div className="mt-12">
+          <h2 className="diplomatic-label">
+            Portfolio ({portfolio.length} {portfolio.length === 1 ? "investment" : "investments"})
+          </h2>
+          <div className="mt-4 space-y-2">
+            {portfolio.length === 0 && (
+              <p className="text-xs italic text-on-surface-variant">
+                No portfolio investments recorded. As funding rounds are added
+                with this firm as an investor, they will appear here.
+              </p>
+            )}
+            {portfolio.map((entry) => {
+              const round = entry.funding_round;
+              const org = round?.organization;
+              if (!round || !org) return null;
+              return (
+                <Link
+                  key={entry.id}
+                  href={`/admin/organizations/${org.id}`}
+                  className="group flex items-center gap-4 bg-surface-container-lowest px-4 py-3 transition-colors hover:bg-surface-container-low"
+                >
+                  {entry.is_lead && (
+                    <span className="material-symbols-outlined text-[14px] text-primary" title="Lead investor">
+                      star
+                    </span>
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3">
+                      <p className="text-sm font-medium text-on-surface group-hover:text-primary">
+                        {org.name}
+                      </p>
+                      {round.stage && (
+                        <span className="px-1.5 py-0.5 text-[0.6rem] font-semibold bg-primary/10 text-primary">
+                          {round.stage.replace(/_/g, " ")}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span className="text-xs text-on-surface-variant">
+                    {round.announced_date ?? "—"}
+                  </span>
+                  <span className="text-sm font-medium text-on-surface text-right w-24">
+                    {formatEurDisplay(round.amount_eur)}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Funding Rounds Section */}
       <div className="mt-12">
