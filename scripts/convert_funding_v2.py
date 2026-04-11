@@ -407,7 +407,7 @@ SELECT
   uuid_generate_v4(),
   o.id,
   sec.id,
-  s.is_primary,
+  CASE WHEN s.is_primary AND NOT EXISTS (SELECT 1 FROM organization_sectors os2 WHERE os2.organization_id = o.id AND os2.is_primary = TRUE) THEN TRUE ELSE FALSE END,
   NOW()
 FROM source s
 JOIN organizations o ON o.slug = s.org_slug
