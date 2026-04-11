@@ -90,6 +90,15 @@ def parse_amount(val: str) -> float | None:
         return None
 
 
+def to_millions(amount_raw: float | None) -> float | None:
+    """Convert raw EUR to millions and round to 2 decimals.
+    The DB stores amount_eur as NUMERIC(15,2), so we must pre-round
+    so Python values match what Postgres will store after casting."""
+    if amount_raw is None:
+        return None
+    return round(amount_raw / AMOUNT_DIVISOR, 2)
+
+
 def parse_investors(val: str) -> list[str]:
     if not val:
         return []
@@ -238,7 +247,7 @@ def main():
             continue
         slug = slugify(name)
         amount_raw = parse_amount(row.get('amount_raised', ''))
-        amount_millions = round(amount_raw / AMOUNT_DIVISOR, 6) if amount_raw else None
+        amount_millions = to_millions(amount_raw)
         stage = map_stage(row.get('round', ''))
         date = (row.get('date_announced') or '').strip() or None
         rounds_json.append({
@@ -258,7 +267,7 @@ def main():
         slug = slugify(name)
         date = (row.get('date_announced') or '').strip() or None
         amount_raw = parse_amount(row.get('amount_raised', ''))
-        amount_millions = round(amount_raw / AMOUNT_DIVISOR, 6) if amount_raw else None
+        amount_millions = to_millions(amount_raw)
         investors = parse_investors(investors_str)
         for i, inv in enumerate(investors):
             round_investors_json.append({
