@@ -9,45 +9,39 @@ AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id 
 
 -- Revox → REVOX GMBH (confidence: 0.66)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Revox', '528034150', 'France', TRUE, NOW(), NOW()
+SELECT uuid_generate_v4(), o.id, 'Revox', '994346021', 'France', TRUE, NOW(), NOW()
 FROM organizations o WHERE o.slug = 'revox'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '528034150');
+AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '994346021');
 
 -- Aviwell → AVIWELL 3000 (confidence: 0.64)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Aviwell', '430213900', 'France', TRUE, NOW(), NOW()
+SELECT uuid_generate_v4(), o.id, 'Aviwell', '813632247', 'France', TRUE, NOW(), NOW()
 FROM organizations o WHERE o.slug = 'aviwell'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '430213900');
+AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '813632247');
 
 -- LaFraise → LES LAFRAISE (confidence: 0.78)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'LaFraise', '917725970', 'France', TRUE, NOW(), NOW()
+SELECT uuid_generate_v4(), o.id, 'LaFraise', '934850561', 'France', TRUE, NOW(), NOW()
 FROM organizations o WHERE o.slug = 'lafraise'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '917725970');
+AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '934850561');
 
 -- UP&CHARGE → UP CHARGES DOWM (confidence: 0.62)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'UP&CHARGE', '842404352', 'France', TRUE, NOW(), NOW()
+SELECT uuid_generate_v4(), o.id, 'UP&CHARGE', '902281823', 'France', TRUE, NOW(), NOW()
 FROM organizations o WHERE o.slug = 'upcharge'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '842404352');
-
--- OneTake AI → ONETAK (confidence: 0.67)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'OneTake AI', '504188814', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'onetake-ai'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '504188814');
+AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '902281823');
 
 -- Lifeaz → LIFEAZ (LIFE) (confidence: 0.7)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Lifeaz', '814042958', 'France', TRUE, NOW(), NOW()
+SELECT uuid_generate_v4(), o.id, 'Lifeaz', '814042958, 'France', TRUE, NOW(), NOW()
 FROM organizations o WHERE o.slug = 'lifeaz'
 AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '814042958');
 
 -- Cellura → MARC CELLURA (confidence: 0.69)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Cellura', '433487386', 'France', TRUE, NOW(), NOW()
+SELECT uuid_generate_v4(), o.id, 'Cellura', '917498362', 'France', TRUE, NOW(), NOW()
 FROM organizations o WHERE o.slug = 'cellura-formerly-softcell-therapeutics'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '433487386');
+AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '917498362');
 
 -- Skyld AI → SKYLD (confidence: 0.81)
 INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
