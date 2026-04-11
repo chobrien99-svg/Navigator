@@ -1,393 +1,130 @@
--- SIREN updates from recherche-entreprises API
--- 65 high-confidence matches (confidence >= 0.85)
-
--- Omniscient → OMNISCIENT (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Omniscient', '985294396', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'omniscient'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '985294396');
-
--- Kervalion → KERVALION (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Kervalion', '940346729', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'kervalion'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '940346729');
-
--- Blify → BLIFY (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Blify', '941613739', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'blify'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '941613739');
-
--- games2gether → GAMES2GETHER (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'games2gether', '988435442', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'games2gether'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '988435442');
-
--- Flotte → FLOTTE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Flotte', '830788311', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'flotte'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '830788311');
-
--- Jay&Joy → JAY & JOY (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Jay&Joy', '809890510', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'jayjoy'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '809890510');
-
--- Lupin & Holmes → LUPIN & HOLMES (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Lupin & Holmes', '951639186', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'lupin-holmes'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '951639186');
-
--- Nabu → NABU (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Nabu', '753402171', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'nabu'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '753402171');
-
--- Piston → PISTON (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Piston', '949092068', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'piston'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '949092068');
-
--- Novacium → NOVACIUM (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Novacium', '915142871', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'novacium'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '915142871');
-
--- Loamics → LOAMICS (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Loamics', '889707402', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'loamics'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '889707402');
-
--- Bitstack → BITSTACK SAS (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Bitstack', '100244722', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'bitstack'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '100244722');
-
--- Meteoria → METEORIA (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Meteoria', '993360262', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'meteoria'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '993360262');
-
--- Advanced Machine Intelligence → ADVANCED MACHINE INTELLIGENCE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Advanced Machine Intelligence', '994675254', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'advanced-machine-intelligence'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '994675254');
-
--- Waiv → WAIV (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Waiv', '930879580', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'waiv'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '930879580');
-
--- EGIDE → EGIDE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'EGIDE', '522287689', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'egide'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '522287689');
-
--- MindDay → MINDDAY (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'MindDay', '898335047', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'mindday'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '898335047');
-
--- Rivage → RIVAGE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Rivage', '940386303', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'rivage'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '940386303');
-
--- OOrion → OORION (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'OOrion', '888454212', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'oorion'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '888454212');
-
--- Opus Aerospace → OPUS AEROSPACE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Opus Aerospace', '880887583', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'opus-aerospace'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '880887583');
-
--- Formel AI → FORMEL AI (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Formel AI', '993939370', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'formel-ai'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '993939370');
-
--- Alpa → ALPA (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Alpa', '400989042', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'alpa'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '400989042');
-
--- Ocellus → OCELLUS (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Ocellus', '505149351', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'ocellus'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '505149351');
-
--- Twin → TWIN (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Twin', '381143775', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'twin'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '381143775');
-
--- ECAIR → ECAIR (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'ECAIR', '533087532', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'ecair'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '533087532');
-
--- Cube → CUBE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Cube', '751518168', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'cube-formerly-cube3'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '751518168');
-
--- Basalt → BASALT (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Basalt', '101150928', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'basalt'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '101150928');
-
--- CWS → CWS (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'CWS', '518891452', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'cws-computed-wing-sails'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '518891452');
-
--- Diffusely → DIFFUSELY (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Diffusely', '800523664', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'diffusely-ex-meero'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '800523664');
-
--- Vibe → VIBE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Vibe', '447490202', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'vibe'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '447490202');
-
--- Jint → JINT (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Jint', '948651252', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'jint-formerly-mozzaik365'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '948651252');
-
--- Standing Ovation → STANDING OVATION (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Standing Ovation', '884522582', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'standing-ovation'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '884522582');
-
--- Lifebloom → LIFEBLOOM (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Lifebloom', '849823240', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'lifebloom'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '849823240');
-
--- Dalma → DALMA (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Dalma', '430348482', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'dalma'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '430348482');
-
--- Riot → RIOT (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Riot', '818910168', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'riot'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '818910168');
-
--- Tomorro → TOMORRO (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Tomorro', '881239800', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'tomorro'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '881239800');
-
--- Grace → GRACE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Grace', '914099155', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'grace'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '914099155');
-
--- Kestra → KESTRA TECHNOLOGIES (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Kestra', '900427873', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'kestra'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '900427873');
-
--- AI6 Technologies → AI6 TECHNOLOGIES (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'AI6 Technologies', '938439742', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'ai6-technologies'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '938439742');
-
--- Hynaero → HYNAERO (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Hynaero', '980145049', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'hynaero'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '980145049');
-
--- Homaio → HOMAIO (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Homaio', '923522338', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'homaio'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '923522338');
-
--- Parallel → PARALLEL (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Parallel', '914557103', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'parallel'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '914557103');
-
--- Lemrock → LEMROCK AI (confidence: 0.88)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Lemrock', '995358173', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'lemrock'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '995358173');
-
--- Archimed → ARCHIMED (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Archimed', '519635999', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'archimed'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '519635999');
-
--- THE 8 IMPACT → THE 8 IMPACT (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'THE 8 IMPACT', '899646038', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'the-8-impact'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '899646038');
-
--- Getinside → GETINSIDE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Getinside', '913526877', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'getinside'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '913526877');
-
--- Linkeat → LINKEAT (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Linkeat', '821580990', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'linkeat'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '821580990');
-
--- Eclore → ECLORE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Eclore', '402529374', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'eclore'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '402529374');
-
--- PGP Farmer → PGP FARMER (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'PGP Farmer', '911033983', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'pgp-farmer'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '911033983');
-
--- Stairling → STAIRLING TECHNOLOGIES (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Stairling', '927854141', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'stairling'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '927854141');
-
--- PRESAGE → PRESAGE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'PRESAGE', '488353673', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'presage'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '488353673');
-
--- newcleo → NEWCLEO (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'newcleo', '929009140', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'newcleo'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '929009140');
-
--- Atlas V Group → ATLAS (confidence: 0.93)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Atlas V Group', '838987758', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'atlas-v-group'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '838987758');
-
--- Linkup → LINKUP (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Linkup', '512532482', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'linkup'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '512532482');
-
--- Annette → ANNETTE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Annette', '933867483', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'annette'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '933867483');
-
--- Upway → UPWAY (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Upway', '904972536', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'upway'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '904972536');
-
--- Dialog → DIALOG (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Dialog', '437956485', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'dialog'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '437956485');
-
--- Tsuga → TSUGA (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Tsuga', '750314429', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'tsuga'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '750314429');
-
--- Initiativ → INITIATIV (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Initiativ', '987788965', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'initiativ'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '987788965');
-
--- Loft Orbital → LOFT ORBITAL TECHNOLOGIES (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Loft Orbital', '878678051', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'loft-orbital'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '878678051');
-
--- ScorePlay → SCOREPLAY (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'ScorePlay', '841118375', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'scoreplay'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '841118375');
-
--- Formance → FORMANCE (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Formance', '409983756', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'formance'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '409983756');
-
--- Qomon → QOMONS (confidence: 0.93)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Qomon', '889601506', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'qomon'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '889601506');
-
--- Fabriq → FABRIQ (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Fabriq', '851998476', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'fabriq'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '851998476');
-
--- Underdog → UNDERDOG (confidence: 1.0)
-INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at)
-SELECT uuid_generate_v4(), o.id, 'Underdog', '849998646', 'France', TRUE, NOW(), NOW()
-FROM organizations o WHERE o.slug = 'underdog'
-AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '849998646');
-
+-- SIREN updates from recherche-entreprises API (full DB pass)
+-- 127 high-confidence matches (confidence >= 0.85)
+
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Adagio', '531952893', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'adagio' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '531952893');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Agriconomie', '981482235', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'agriconomie' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '981482235');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Aircall', '807437595', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'aircall' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '807437595');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'All Mol Technology', '794178749', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'all-mol-technology' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '794178749');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Amolyt Pharma', '803919729', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'amolyt-pharma' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '803919729');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Anemon', '508105764', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'anemon' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '508105764');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Ankorstore', '852870658', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ankorstore' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '852870658');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Arlequin AI', '927627034', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'arlequin-ai' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '927627034');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Axone', '389675935', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'axone' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '389675935');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'BARY', '389700295', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'bary' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '389700295');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Believe', '481625853', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'believe' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '481625853');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Biolog-id', '481216430', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'biolog-id' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '481216430');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'CALINOV', '497483727', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'calinov' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '497483727');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Campings.com', '508290947', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'campingscom' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '508290947');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Cityscoot', '800862021', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'cityscoot' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '800862021');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'ClearDrop', '930862297', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'cleardrop' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '930862297');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Crosscall', '518706890', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'crosscall' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '518706890');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Cubyn', '804477834', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'cubyn' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '804477834');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'CybelAngel', '791341274', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'cybelangel' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '791341274');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Dark', '479654063', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'dark' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '479654063');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Daven', '414759241', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'daven' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '414759241');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Deezer', '898969852', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'deezer' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '898969852');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Devialet', '502155682', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'devialet' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '502155682');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Diago', '852606797', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'diago' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '852606797');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Digital Insure', '831382601', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'digital-insure' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '831382601');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Dreem', '803359850', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'dreem' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '803359850');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Dynacure', '817666217', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'dynacure' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '817666217');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'E.Z Drive', '807525548', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ez-drive' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '807525548');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'EasyMile', '803184845', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'easymile' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '803184845');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Ecomer', '830645743', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ecomer' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '830645743');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Evaneos', '929582161', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'evaneos' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '929582161');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Evera​', '805046588', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'evera' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '805046588');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Faks', '353097017', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'faks' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '353097017');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Feed', '913714200', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'feed' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '913714200');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'FiGaRo', '101748655', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'figaro' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '101748655');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Fortia Financial Solutions', '539733881', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'fortia-financial-solutions' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '539733881');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Fretlink', '814527735', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'fretlink' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '814527735');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Frichti', '811534809', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'frichti' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '811534809');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Genial', '344013784', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'genial' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '344013784');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Geosat', '429123771', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'geosat' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '429123771');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'GetVocal', '984783555', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'getvocal' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '984783555');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'HighLife', '529237695', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'highlife' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '529237695');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Hopia', '824677066', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'hopia' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '824677066');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Hoppen', '809111982', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'hoppen' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '809111982');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'HR Path', '513144766', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'hr-path' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '513144766');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Hubside', '808905921', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'hubside' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '808905921');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'IAD France', '332901404', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'iad-france' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '332901404');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'iAdvize', '519698914', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'iadvize' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '519698914');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Igyxos', '830854808', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'igyxos' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '830854808');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Ilek', '802076521', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ilek' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '802076521');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Inicio', '987361409', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'inicio' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '987361409');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Innovascope', '448683235', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'innovascope' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '448683235');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'INVA', '892958521', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'inva' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '892958521');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'IPM France', '788665388', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ipm-france' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '788665388');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Ivalua', '428796858', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ivalua' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '428796858');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Iziwork', '842070138', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'iziwork' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '842070138');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Jay & Joy', '809890510', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'jay-joy' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '809890510');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'JobTeaser', '508271715', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'jobteaser' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '508271715');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Jool', '981868474', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'jool' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '981868474');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Kayrros', '818399651', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'kayrros' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '818399651');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Keranova', '813346350', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'keranova' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '813346350');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Kineis', '841489123', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'kineis' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '841489123');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Klaro', '488983065', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'klaro' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '488983065');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Klaxoon', '808578801', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'klaxoon' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '808578801');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'LGO', '840203103', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'lgo' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '840203103');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Lifen', '890385677', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'lifen' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '890385677');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Little Worker', '820334951', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'little-worker' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '820334951');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Lucca', '441637691', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'lucca' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '441637691');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Luko', '801246810', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'luko' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '801246810');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Lumapps', '788743474', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'lumapps' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '788743474');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Lydia', '753222520', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'lydia' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '753222520');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Mantle8', '844719500', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'mantle8' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '844719500');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'MASSAR', '888076064', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'massar' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '888076064');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Meero', '882201932', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'meero' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '882201932');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Meilleurtaux', '424264281', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'meilleurtaux' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '424264281');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'METAMORPH', '802700377', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'metamorph' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '802700377');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Microphyt', '498354497', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'microphyt' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '498354497');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Mnemo Therapeutics', '844975755', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'mnemo-therapeutics' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '844975755');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Molecular Simulation For All (MS4ALL)', '980087845', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'molecular-simulation-for-all-ms4all' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '980087845');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Molotov', '807393111', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'molotov' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '807393111');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Moments Lab', '934636226', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'moments-lab' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '934636226');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Myditek', '825017361', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'myditek' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '825017361');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'MYM', '441682622', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'mym' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '441682622');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'NOMOS', '420483844', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'nomos' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '420483844');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Nona', '830004636', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'nona' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '830004636');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'NovaMind AI', '990247298', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'novamind-ai' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '990247298');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Novem', '512756941', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'novem' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '512756941');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'October', '804264174', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'october' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '804264174');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Okwind', '511888026', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'okwind' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '511888026');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Olimpe Technology', '908568009', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'olimpe-technology' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '908568009');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Ostrea', '443918834', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ostrea' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '443918834');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'OVH', '844454868', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'ovh' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '844454868');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Pharmedistore', '832933030', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'pharmedistore' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '832933030');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'PHENIX', '821914769', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'phenix' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '821914769');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'PlayPlay', '828572099', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'playplay' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '828572099');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Pletor', '533961702', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'pletor' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '533961702');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'QAPA', '533208161', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'qapa' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '533208161');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Qare', '921071882', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'qare' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '921071882');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Recommerce', '538346792', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'recommerce' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '538346792');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Retab', '478104367', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'retab' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '478104367');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'REVEAL', '912304169', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'reveal' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '912304169');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Revolty', '931359541', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'revolty' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '931359541');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'S4M', '913536322', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 's4m' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '913536322');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'SAFTI', '523964328', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'safti' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '523964328');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Sarbacane', '343336897', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'sarbacane' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '343336897');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Scality', '512955089', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'scality' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '512955089');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Selectra', '499807147', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'selectra' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '499807147');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Shadow', '897508628', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'shadow' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '897508628');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Singulart', '827756495', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'singulart' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '827756495');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Skeepers', '879038990', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'skeepers' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '879038990');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Skello', '820275956', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'skello' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '820275956');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Smallable', '503044323', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'smallable' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '503044323');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'smartTrade Technologies', '421663774', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'smarttrade-technologies' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '421663774');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Sorare', '844355727', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'sorare' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '844355727');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Stellaria', '837707512', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'stellaria' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '837707512');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Sumeria', '828845446', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'sumeria' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '828845446');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Suzaku', '500171921', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'suzaku' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '500171921');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Technologies & Habitats', '799451877', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'technologies-habitats' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '799451877');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Unlimited Driving Corporation (UDC)', '939862728', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'unlimited-driving-corporation-udc' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '939862728');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Verley', '908328487', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'verley' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '908328487');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Versant', '912279304', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'versant' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '912279304');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Virtuo', '481759959', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'virtuo' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '481759959');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'VISIOON', '924652647', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'visioon' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '924652647');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Visiperf', '803825025', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'visiperf' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '803825025');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Waypoint AI', '422148353', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'waypoint-ai' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '422148353');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'WeMaintain', '830852844', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'wemaintain' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '830852844');
+INSERT INTO legal_entities (id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at) SELECT uuid_generate_v4(), o.id, 'Wifirst', '441757614', 'France', TRUE, NOW(), NOW() FROM organizations o WHERE o.slug = 'wifirst' AND NOT EXISTS (SELECT 1 FROM legal_entities le WHERE le.organization_id = o.id AND le.siren = '441757614');
