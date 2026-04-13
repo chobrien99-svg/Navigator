@@ -16,6 +16,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 90,private,Fujitsu AI Lab,Fujitsu AI Research Center,,Private R&D Lab,Paris,Fujitsu,Fujitsu,,2019,
 90,private,Google Brain Paris,Google Brain / DeepMind Paris,,Private R&D Lab,Paris,Alphabet (Google),Alphabet (Google),,2018,
 90,private,Kyutai,Kyutai,,Private R&D Lab,Paris,Kyutai (Niel/Saadé/Schmidt),Kyutai (Niel/Saadé/Schmidt),,2023,
+90,public,LJK,Laboratoire Jean Kuntzmann,UMR 5224,Unité mixte,Grenoble,,"CNRS,GRENOBLE ALPES,GRENOBLE INP,INRIA","Mathématiques,STIC",2007,https://ljk.imag.fr/
 90,private,CSL Sony,Laboratoire scientifique Sony Computer,,Private R&D Lab,Paris,Sony,Sony,,2006,
 90,private,Huawei MASL,Mathematical and Algorithmic Sciences Lab,,Private R&D Lab,Boulogne-Billancourt,Huawei Technologies,Huawei Technologies,,2016,
 90,private,Mistral AI Lab,Mistral AI Research,,Private R&D Lab,Paris,Mistral AI,Mistral AI,,2023,
@@ -152,6 +153,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 30,public,SPIRALS,Self-adaptation for distributed services and large software systems,,Unité propre,Villeneuve d'Ascq,,"CNRS,INRIA,LILLE",Sciences et technologies de l'information et de la communication,2014,http://www.inria.fr/equipes/spirals
 30,public,SUSHI,Sécurité à l’interface logiciel/matériel,,Unité propre,Rennes,,"INRIA,ENS RENNES,CENTRALESUPELEC",Sciences et technologies de l'information et de la communication,2024,https://www.inria.fr/fr/sushi
 30,public,STAMP,Sûreté du logiciel et Preuves Mathématiques Formalisées,,Unité propre,,,INRIA,Sciences et technologies de l'information et de la communication,2019,
+30,public,TIMC,Techniques de l'ingénierie médicale et de la complexité,UMR 5525,Unité mixte,La Tronche,,"CNRS,GRENOBLE ALPES","Biologie,Sciences pour l'ingénieur",1994,https://www.timc.fr/
 30,public,QURIOSITY,Traitement d’information et Communications Quantiques à Saclay,,Unité propre,Palaiseau,,"INRIA,IP PARIS",Sciences et technologies de l'information et de la communication,2023,https://www.inria.fr/fr/quriosity
 30,public,QINFO,Traitement optimal de l'information avec des dispositifs quantiques,,Unité propre,Lyon,,"LYON 1,INRIA,ENS LYON,GRENOBLE ALPES",Sciences et technologies de l'information et de la communication,2022,https://www.inria.fr/fr/qinfo
 30,public,UMMISCO,Unité de modélisation mathématique et informatique des systèmes complexes,UMI 209,Unité propre,Paris Cedex 05,,"IRD,SORBONNE UNIV.","Mathématiques et leurs interactions,Sciences et technologies de l'information et",2009,https://www.ummisco.fr
@@ -221,6 +223,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 20,public,,Centre Inria de l'université de Bordeaux,,Structures Fédératives de Recherche,Talence,,INRIA,Sciences et technologies de l'information et de la communication,2008,http://www.inria.fr/centre/bordeaux
 20,public,,Centre Inria de l’Université Grenoble Alpes,,Structures Fédératives de Recherche,Saint Ismier,,INRIA,Sciences et technologies de l'information et de la communication,1992,http://www.inria.fr/centre/grenoble
 20,public,,Centre Inria de l’Université de Rennes,,Structures Fédératives de Recherche,Rennes,,INRIA,Sciences et technologies de l'information et de la communication,1980,http://www.inria.fr/centre/rennes
+20,public,CEREMADE,Centre de recherche en mathématiques de la décision,UMR 7534,Unité mixte,Paris,,"CNRS,PARIS-DAUPHINE,PSL",Mathématiques et leurs interactions,1983,https://www.ceremade.dauphine.fr/
 20,public,CARDAMOM,Certified Adaptive discRete moDels for robust simulAtions of CoMplex flOws with Moving fronts,,Unité propre,Talence Cedex,,"INRIA,Bordeaux INP",Sciences et technologies de l'information et de la communication,2015,http://www.inria.fr/equipes/cardamom
 20,public,TOCCATA,"Certified Programs, Certified Tools, Certified Floating-Point Computations",,Unité propre,,,"CNRS,INRIA,U PARIS-SACLAY",Sciences et technologies de l'information et de la communication,2012,
 20,public,PETRUS,Cloud personnel sécurisé,,Unité propre,Palaiseau,,"VERSAILLES,INRIA",Sciences et technologies de l'information et de la communication,2016,http://www.inria.fr/equipes/petrus
@@ -245,6 +248,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 20,public,Digitéo,Digitéo,,Structures Fédératives de Recherche,Saclay,,"EC. POLYTECHNIQUE,CNRS,INRIA,CEA,IP PARIS,U PARIS-SACLAY",Sciences et technologies de l'information et de la communication,2006,http://www.digiteo.fr/
 20,public,DYLISS,"Dynamics, Logics and Inference for biological Systems and Sequences",,Unité propre,,,"CNRS,INRIA,RENNES",Sciences et technologies de l'information et de la communication,2012,
 20,public,MUSCA,Dynamiques de populations multi-échelles pour des systèmes physiologiques,,Unité propre,Palaiseau,,"CNRS,INRIA,INRAE",Sciences et technologies de l'information et de la communication,2020,http://www.inria.fr/equipes/musca
+20,public,DMA,Département de mathématiques et applications,UMR 8553,Unité mixte,Paris,,"CNRS,ENS PARIS,PSL",Mathématiques et leurs interactions,1980,https://www.math.ens.psl.eu/
 20,public,EMPENN,EMPENN,,Unité propre,Rennes,,INRIA,Sciences et technologies de l'information et de la communication,2019,http://www.inria.fr/equipes/empenn
 20,public,,ERRATA,GDR 3369,Groupements de Recherche,MONTPELLIER CEDEX 5,,CNRS,Sciences et technologies de l'information et de la communication,2010,
 20,public,ERABLE,Equipe de recherche européenne en algorithmique et biologie formelle et expérimentale,,Unité propre,Villeurbanne,,"INSA LYON,LYON 1,INRIA",Sciences et technologies de l'information et de la communication,2015,http://www.inria.fr/equipes/erable
@@ -261,14 +265,20 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 20,public,SPHINX,"Heterogeneous Systems: Inverse Problems, Control and Stabilization, Simulation",,Unité propre,Villers lès Nancy,,"CNRS,INRIA,LORRAINE",Sciences et technologies de l'information et de la communication,2015,http://www.inria.fr/equipes/sphinx
 20,public,I4S,Inférence Statistique pour la Surveillance et la Sécurité des Structures,,Unité propre,Rennes,,"INRIA,UNIV.G.EIFFEL",Sciences et technologies de l'information et de la communication,2009,http://www.inria.fr/equipes/i4s
 20,public,NEO,Ingénierie et Opérations des Réseaux,,Unité propre,Sophia Antipolis,,INRIA,Sciences et technologies de l'information et de la communication,2017,http://www.inria.fr/equipes/neo
+20,public,ICM,Institut Camille Jordan,UMR 5208,Unité mixte,Villeurbanne,,"CNRS,LYON 1,EC. CENTRALE LYON,INSA LYON,ENS LYON",Mathématiques et leurs interactions,2003,https://math.univ-lyon1.fr/icj/
+20,public,IMAG,Institut Montpelliérain Alexander Grothendieck,UMR 5149,Unité mixte,Montpellier,,"CNRS,MONTPELLIER",Mathématiques et leurs interactions,2015,https://imag.umontpellier.fr/
 20,public,INIST,Institut de l'information scientifique et technique,UAR 76,Unité propre,VANDOEUVRE LES NANCY CEDEX,,CNRS,Sciences et technologies de l'information et de la communication,1988,http://www.inist.fr
+20,public,IMT,Institut de mathématiques de Toulouse,UMR 5219,Unité mixte,Toulouse,,"CNRS,UT,INSA TOULOUSE,INP TOULOUSE",Mathématiques et leurs interactions,2007,https://www.math.univ-toulouse.fr/
 20,public,EX-SITU,Interaction Située Extrême,,Unité propre,Palaiseau,,"INRIA,U PARIS-SACLAY",Sciences et technologies de l'information et de la communication,2015,http://www.inria.fr/equipes/ex-situ
 20,public,SEAMLESS,Interaction et collaboration fluides à travers le continuum réalité-virtualité,,Unité propre,Rennes,,"INSA RENNES,CNRS,INRIA,RENNES",Sciences et technologies de l'information et de la communication,2024,https://www.inria.fr/fr/seamless
 20,public,ILLS,International Laboratory on Learning Systems,IRL 2020,Unité mixte internationale,H3C1K3 MONTREAL,,"CNRS,CENTRALESUPELEC,U PARIS-SACLAY,UNIVERSITE MC GILL",Sciences et technologies de l'information et de la communication,2022,
 20,public,JFLI,Japanese-French Laboratory for Informatics,IRL 3527,Unité mixte internationale,113033 Tokyo,,"CNRS,INRIA,SORBONNE UNIV.",Sciences et technologies de l'information et de la communication,2016,http://jfli.cnrs.fr/
 20,public,KOPERNIC,Keeping wOrst case reasoning aPpropriatE foR differeNt critICALITIES,,Unité propre,Paris,,INRIA,Sciences et technologies de l'information et de la communication,2018,http://www.inria.fr/equipes/kopernic
+20,public,LJAD,Laboratoire Jean-Alexandre Dieudonné,UMR 7351,Unité mixte,Nice,,"CNRS,UniCA",Mathématiques et leurs interactions,2012,https://math.unice.fr/
 20,public,LN2,Laboratoire Nanotechnologies et Nanosystèmes,UMI 3463,Unité mixte internationale,SHERBROOKE,,"EC. CENTRALE LYON,INSA LYON,CPE LYON,CNRS,COMUE LYON,GRENOBLE ALPES",Sciences et technologies de l'information et de la communication,2012,http://www.labn2.ca/
 20,public,LIMICS,Laboratoire d'Informatique Médicale et d'Ingénieurie des Connaissances en e-Santé,UMR_S 1142,Unité mixte,Paris,,"PARIS 13,INSERM,SORBONNE UNIV.",,2014,
+20,public,LMO,Laboratoire de mathématiques d'Orsay,UMR 8628,Unité mixte,Orsay,,"CNRS,U PARIS-SACLAY",Mathématiques et leurs interactions,2006,https://www.math.u-psud.fr/
+20,public,LPSM,"Laboratoire de probabilités, statistique et modélisation",UMR 8001,Unité mixte,Paris,,"CNRS,SORBONNE UNIV.,U PARIS CITE",Mathématiques et leurs interactions,2018,https://www.lpsm.paris/
 20,public,CAMBIUM,"Langages de programmation : systèmes de types, concurrence, preuve de programme",,Unité propre,Paris,,"COLL.DE FRANCE,INRIA",Sciences et technologies de l'information et de la communication,2019,http://www.inria.fr/equipes/cambium
 20,public,SPLITS,Languages de Programmation Sécures et Outils pour la Sécurité,,Unité propre,Sophia Antipolis,,INRIA,Sciences et technologies de l'information et de la communication,2023,https://www.inria.fr/fr/splits
 20,public,PICUBE,Les assistants à la démonstration au cœur du raisonnement mathématique,,Unité propre,Paris,,"CNRS,INRIA,U PARIS Cité",Sciences et technologies de l'information et de la communication,2022,https://www.inria.fr/fr/picube
@@ -334,6 +344,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 20,public,PESTO,Techniques de Preuves pour les Protocoles de Sécurité,,Unité propre,,,"CNRS,INRIA,LORRAINE",Sciences et technologies de l'information et de la communication,2016,
 20,public,LOKI,Technology and knowledge for interaction,,Unité propre,Villeneuve d'Ascq,,"INRIA,LILLE",Sciences et technologies de l'information et de la communication,2018,http://www.inria.fr/equipes/loki
 20,public,TYREX,Types and Reasoning for the Web,,Unité propre,,,"CNRS,INRIA,GRENOBLE ALPES",Sciences et technologies de l'information et de la communication,2012,
+20,public,UMPA,Unité de mathématiques pures et appliquées,UMR 5669,Unité mixte,Lyon,,"CNRS,ENS LYON",Mathématiques et leurs interactions,1976,http://www.umpa.ens-lyon.fr/
 20,public,KINETIX,Vision 4D et modélisation pour la capture volumétrique et humaine,,Unité propre,Saint Ismier,,"INRIA,GRENOBLE ALPES",Sciences et technologies de l'information et de la communication,2026,https://www.inria.fr/fr/kinetix
 20,public,BIOVISION,Vision biologique : modèles intégratifs et systèmes d’aide à la vision pour les déficients visuels,,Unité propre,Sophia Antipolis,,INRIA,Sciences et technologies de l'information et de la communication,2016,http://www.inria.fr/equipes/biovision
 20,public,DEVINE,Vérification efficace pour des systèmes distribués fiables,,Unité propre,Rennes,,"INRIA,CNRS,ENS RENNES,RENNES",Sciences et technologies de l'information et de la communication,2024,https://www.inria.fr/fr/devine
