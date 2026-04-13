@@ -1,4 +1,5 @@
 ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,year_created,website
+100,public,GIPSA-lab,Grenoble Images Parole Signal Automatique,UMR 5216,Unité mixte,ST MARTIN D HERES CEDEX,,"GRENOBLE INP,CNRS,GRENOBLE ALPES,INRIA","Sciences humaines,STIC",2006,http://www.gipsa-lab.fr/
 100,public,LISN,Laboratoire Interdisciplinaire des Sciences du Numérique,UMR 9015,Unité mixte,Gif sur Yvette,,"CNRS,U PARIS-SACLAY,INRIA,CENTRALESUPELEC","Sciences pour l'ingénieur,STIC",2021,http://www.lisn.upsaclay.fr
 100,public,LIRMM,"Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier",UMR 5506,Unité mixte,MONTPELLIER CEDEX 5,,"PERPIGNAN,CNRS,INRIA,MONTPELLIER,UMPV","Sciences de la société,Sciences pour l'ingénieur,Sciences et technologies de l'i",1995,http://www.lirmm.fr/
 100,public,LS2N,Laboratoire des Sciences du Numérique de Nantes,UMR 6004,Unité mixte,Nantes Cedex 3,,"EC. CENTRALE NANTES,CNRS,IMT Atlantique,Nantes Université,INRIA",Sciences et technologies de l'information et de la communication,2017,http://ls2n.fr/
@@ -6,6 +7,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 100,public,ACENTAURI,•	Intelligence artificielle et algorithmes efficaces pour la robotique autonome,,Unité propre,Sophia Antipolis,,INRIA,Sciences et technologies de l'information et de la communication,2021,https://www.inria.fr/fr/acentauri
 95,public,IRISA,Institut de Recherche en Informatique et Systèmes Aléatoires,UMR 6074,Unité mixte,RENNES CEDEX,,"INSA RENNES,BRETAGNE-SUD,CNRS,INRIA,ENS RENNES,CENTRALESUPELEC,MinesTélécom,IMT Atlantique,RENNES","Biologie, médecine et santé,Sciences et technologies de l'information et de la c",2000,http://www.irisa.fr
 95,public,LIASD,LABORATOIRE D'INTELLIGENCE ARTIFICIELLE ET SÉMANTIQUE DES DONNÉES,EA 4383,Unité propre,SAINT-DENIS,,PARIS 8,Sciences et technologies de l'information et de la communication,2009,https://www.univ-paris8.fr/UR-Laboratoire-d-Intelligence-Artificielle-et-Semantique-des-Donnees-LIAS...
+95,public,XLIM,XLIM,UMR 7252,Unité mixte,LIMOGES CEDEX,,"LIMOGES,CNRS,UP","Mathématiques,STIC",2012,http://www.xlim.fr
 90,private,MSFT-Inria,Centre Microsoft Recherche-Inria,,Private R&D Lab,Saclay,Microsoft,Microsoft,,2006,
 90,private,XRCE,Centre de Recherche Europe de Xerox (now Naver),,Private R&D Lab,Meylan,Naver Labs Europe,Naver Labs Europe,,2017,
 90,private,Criteo AI Lab,Criteo AI Lab,,Private R&D Lab,Paris,Criteo,Criteo,,2015,
@@ -22,10 +24,12 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 90,private,Samsung AI Paris,Samsung AI Center Paris,,Private R&D Lab,Paris,Samsung,Samsung,,2018,
 90,private,Uber AI Paris,Uber AI Labs Paris,,Private R&D Lab,Paris,Uber,Uber,,2019,
 85,public,IRIF,Institut de Recherche en Informatique Fondamentale,UMR 8243,Unité mixte,Paris,,"CNRS,U PARIS Cité,INRIA","Mathématiques et leurs interactions,Sciences et technologies de l'information et",2016,https://www.irif.fr/
+85,public,ISIR,Institut des Systèmes Intelligents et de Robotique,UMR 7222,Unité mixte,PARIS CEDEX 05,,"CNRS,SORBONNE UNIV.,INSERM",Sciences pour l'ingénieur,2009,http://www.isir.upmc.fr/
 85,public,LaBRI,Laboratoire Bordelais de Recherche en Informatique,UMR 5800,Unité mixte,TALENCE CEDEX,,"CNRS,Bordeaux INP,BORDEAUX,INRIA","Mathématiques et leurs interactions,Biologie, médecine et santé,Sciences et tech",1997,http://www.labri.fr/
 85,public,LIX,Laboratoire d'Informatique de l'Ecole Polytechnique,UMR 7161,Unité mixte,Palaiseau Cedex,,"EC. POLYTECHNIQUE,CNRS,IP PARIS,INRIA","Mathématiques et leurs interactions,Sciences pour l'ingénieur,Sciences et techno",2005,http://www.lix.polytechnique.fr/
 85,public,LIP,Laboratoire d'Informatique du Parallélisme,UMR 5668,Unité mixte,LYON CEDEX 07,,"LYON 1,CNRS,INRIA,ENS LYON","Mathématiques et leurs interactions,Sciences et technologies de l'information et",1999,http://www.ens-lyon.fr/LIP/
 85,public,I3S,"Laboratoire d'Informatique, Signaux et Systèmes de Sophia Antipolis",UMR 7271,Unité mixte,SOPHIA ANTIPOLIS CEDEX - VALBONNE,,"CNRS,UniCA,INRIA","Mathématiques et leurs interactions,Sciences et technologies de l'information et",2012,https://univ-cotedazur.fr/laboratoires/laboratoire-dinformatique-signaux-et-syste%CC%80mes-de-sophia...
+85,public,LAMSADE,Laboratoire d'analyse et modélisation de systèmes pour l'aide à la décision,UMR 7243,Unité mixte,PARIS CEDEX 16,,"PARIS-DAUPHINE,CNRS,PSL","Sciences de la société,STIC",2011,http://www.lamsade.dauphine.fr/
 80,public,DI ENS,Département d'Informatique de l'Ecole Normale Supérieure,UMR 8548,Unité mixte,PARIS CEDEX 05,,"ENS PARIS,CNRS,INRIA,PSL",Sciences et technologies de l'information et de la communication,1998,http://www.di.ens.fr
 80,public,ETIS,Equipes Traitement de l'Information et Systèmes,UMR 8051,Unité mixte,CERGY PONTOISE CEDEX - CERGY,,"ENSEA CERGY,CNRS,CY CERGY",Sciences et technologies de l'information et de la communication,2002,http://www-etis.ensea.fr
 80,public,IRIT,Institut de Recherche en Informatique de Toulouse,UMR 5505,Unité mixte,TOULOUSE CEDEX 9,,"INP TOULOUSE,TOULOUSE 2,CNRS,UT Capitole,UT,INRIA",Sciences et technologies de l'information et de la communication,1995,http://www.irit.fr/
@@ -41,6 +45,7 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 70,public,CEDRIC,CENTRE D'ETUDES ET DE RECHERCHE EN INFORMATIQUE ET COMMUNICATIONS,EA 4629,Unité propre,PARIS CEDEX 03,,CNAM PARIS,"Mathématiques et leurs interactions,Sciences et technologies de l'information et",1988,http://cedric.cnam.fr/
 70,public,LIP6,LIP6,UMR 7606,Unité mixte,PARIS CEDEX 05,,"CNRS,SORBONNE UNIV.",Sciences et technologies de l'information et de la communication,1997,http://www.lip6.fr/
 70,public,LMF,Laboratoire Méthodes Formelles,UMR 9021,Unité mixte,GIF-SUR-YVETTE,,"ENS Paris-Saclay,CNRS,U PARIS-SACLAY,INRIA,CENTRALESUPELEC",Sciences et technologies de l'information et de la communication,2021,https://lmf.cnrs.fr/
+70,public,L2S,Laboratoire des Signaux et Systèmes,UMR 8506,Unité mixte,GIF SUR YVETTE CEDEX,,"CNRS,CENTRALESUPELEC,U PARIS-SACLAY","Sciences pour l'ingénieur,STIC",1998,http://www.l2s.centralesupelec.fr/
 70,public,VERIMAG,VERIMAG,UMR 5104,Unité mixte,Saint-Martin-d'Hères,,"CNRS,GRENOBLE ALPES,GRENOBLE INP",Sciences et technologies de l'information et de la communication,1999,http://www-verimag.imag.fr/
 70,public,VALDA,Value from Data,,Unité propre,,,"ENS PARIS,CNRS,INRIA",Sciences et technologies de l'information et de la communication,2016,
 65,public,ELLIADD,"EDITION, LANGAGES, LITTÉRATURES, INFORMATIQUE, ARTS, DIDACTIQUES, DISCOURS",EA 4661,Unité propre,BESANÇON CEDEX,,"UT BELFORT,UMLP","Sciences humaines et humanités,Sciences de la société,Sciences et technologies d",2012,http://elliadd.univ-fcomte.fr/
@@ -52,11 +57,13 @@ ai_score,sector,acronym,name,umr_label,type,city,parent_company,tutelles,domain,
 65,public,LATTICE,"Langues, textes, traitements informatiques, cognition",UMR 8094,Unité mixte,MONTROUGE,,"PARIS 3,ENS PARIS,CNRS,PSL",,2000,http://www.lattice.cnrs.fr
 65,public,SAMOVAR,"SAMOVAR (Services répartis, Architectures, MOdélisation, Validation, Administration des Réseaux)",UMR CNRS 5157,Unité propre,EVRY CEDEX,,"TELECOM SUDPARIS,MinesTélécom,IP PARIS",Sciences et technologies de l'information et de la communication,2003,http://samovar.telecom-sudparis.eu/
 65,public,LIFO,UR 4022 LABORATOIRE D'INFORMATIQUE FONDAMENTALE D'ORLÉANS,EA 4022,Unité propre,ORLEANS CEDEX  2,,"ORLEANS,INSA CENTRE VA",Sciences et technologies de l'information et de la communication,1987,http://www.univ-orleans.fr/lifo
+60,public,CMAP,Centre de Mathématiques Appliquées de l'Ecole polytechnique,UMR 7641,Unité mixte,Palaiseau Cedex,,"EC. POLYTECHNIQUE,CNRS,IP PARIS,INRIA",Mathématiques et leurs interactions,1997,https://cmap.ip-paris.fr/
 60,public,FLOWERS,"Interactions, exploration et apprentissage en robotique développementale et sociale",,Unité propre,,,"INRIA,BORDEAUX",Sciences et technologies de l'information et de la communication,2008,
 60,public,UR 4491,"LISIC LABORATOIRE D'INFORMATIQUE, SIGNAL ET IMAGE DE LA CÔTE D'OPALE",EA 4491,Unité propre,CALAIS,,LITTORAL,Sciences et technologies de l'information et de la communication,2010,http://www-lisic.univ-littoral.fr
 50,public,JRL,Joint Robotics Laboratory,IRL 3218,Unité mixte internationale,TSUKUBA,,"CNRS,AIST",Sciences et technologies de l'information et de la communication,2008,
 50,public,LITIS,"LABORATOIRE D'INFORMATIQUE, DE TRAITEMENT DE L'INFORMATION ET DES SYSTÈMES - UR 4108",EA 4108,Unité mixte,SAINT ETIENNE DU ROUVRAY CEDEX,,"INSA ROUEN,ROUEN,LE HAVRE",,2006,http://www.litislab.fr/
 50,public,LIPADE,LABORATOIRE INFORMATIQUE PARIS DESCARTES,URP 2517,Unité propre,PARIS CEDEX 06,,U PARIS Cité,Sciences pour l'ingénieur,1998,http://lipade.mi.parisdescartes.fr/?lang=fr
+50,public,LAB-STICC,"Laboratoire des Sciences et Techniques de l'Information, de la Communication et de la Connaissance",UMR 6285,Unité mixte,BREST CEDEX 3,,"BRETAGNE-SUD,CNRS,MinesTélécom,IMT Atlantique,UB,ENSTA,BRETAGNE INP","Sciences pour l'ingénieur,STIC",2012,http://www.lab-sticc.fr/
 50,public,MAGNET,Machine Learning in Information Networks,,Unité propre,Villeneuve d'Ascq,,"CNRS,INRIA,LILLE",Sciences et technologies de l'information et de la communication,2013,http://www.inria.fr/equipes/magnet
 50,public,AIO,"Mise en réseau fiable, sans fil à faible consommation et micro-robotique",,Unité propre,,,INRIA,Sciences et technologies de l'information et de la communication,2022,
 50,public,HUCEBOT,Robotique centrée sur l’humain,,Unité propre,Villers lès Nancy,,"CNRS,INRIA,LORRAINE",Sciences et technologies de l'information et de la communication,2025,https://www.inria.fr/fr/hucebot
