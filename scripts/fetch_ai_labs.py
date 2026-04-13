@@ -72,6 +72,29 @@ KNOWN_AI_LABS = {
     "ARTISHAU",
 }
 
+# ── Private AI R&D labs in France (not in RNSR) ────────────────────────
+# These are corporate research labs operating in France with AI focus.
+# Source: JDN 2017 cartography + subsequent openings.
+PRIVATE_AI_LABS = [
+    # ── Original JDN 9 (2017) ───────────────────────────────────────────
+    {"acronym": "Criteo AI Lab",    "name": "Criteo AI Lab",                                "parent_company": "Criteo",               "hq_country": "France",      "city": "Paris",           "year_opened": 2015},
+    {"acronym": "CSL Sony",         "name": "Laboratoire scientifique Sony Computer",        "parent_company": "Sony",                 "hq_country": "Japon",       "city": "Paris",           "year_opened": 2006},
+    {"acronym": "Factolab",         "name": "Factolab",                                     "parent_company": "Michelin",             "hq_country": "France",      "city": "Clermont-Ferrand", "year_opened": 2017},
+    {"acronym": "FAIR Paris",       "name": "Facebook AI Research Paris",                    "parent_company": "Meta",                 "hq_country": "Etats-Unis",  "city": "Paris",           "year_opened": 2015},
+    {"acronym": "Huawei MASL",      "name": "Mathematical and Algorithmic Sciences Lab",     "parent_company": "Huawei Technologies",  "hq_country": "Chine",       "city": "Boulogne-Billancourt", "year_opened": 2016},
+    {"acronym": "MSFT-Inria",       "name": "Centre Microsoft Recherche-Inria",              "parent_company": "Microsoft",            "hq_country": "Etats-Unis",  "city": "Saclay",          "year_opened": 2006},
+    {"acronym": "Orange Labs",      "name": "Orange Labs",                                   "parent_company": "Orange",               "hq_country": "France",      "city": "Chatillon",       "year_opened": 2007},
+    {"acronym": "RIT Paris",        "name": "Rakuten Institute of Technology Paris",          "parent_company": "Rakuten",              "hq_country": "Japon",       "city": "Paris",           "year_opened": 2014},
+    {"acronym": "XRCE",             "name": "Centre de Recherche Europe de Xerox (now Naver)","parent_company": "Naver Labs Europe",    "hq_country": "Corée du Sud","city": "Meylan",          "year_opened": 2017},
+    # ── Post-2017 openings ──────────────────────────────────────────────
+    {"acronym": "Google Brain Paris","name": "Google Brain / DeepMind Paris",                 "parent_company": "Alphabet (Google)",    "hq_country": "Etats-Unis",  "city": "Paris",           "year_opened": 2018},
+    {"acronym": "Samsung AI Paris", "name": "Samsung AI Center Paris",                       "parent_company": "Samsung",              "hq_country": "Corée du Sud","city": "Paris",           "year_opened": 2018},
+    {"acronym": "Fujitsu AI Lab",   "name": "Fujitsu AI Research Center",                    "parent_company": "Fujitsu",              "hq_country": "Japon",       "city": "Paris",           "year_opened": 2019},
+    {"acronym": "Uber AI Paris",    "name": "Uber AI Labs Paris",                            "parent_company": "Uber",                 "hq_country": "Etats-Unis",  "city": "Paris",           "year_opened": 2019},
+    {"acronym": "Kyutai",           "name": "Kyutai",                                        "parent_company": "Kyutai (Niel/Saadé/Schmidt)", "hq_country": "France", "city": "Paris",          "year_opened": 2023},
+    {"acronym": "Mistral AI Lab",   "name": "Mistral AI Research",                           "parent_company": "Mistral AI",           "hq_country": "France",      "city": "Paris",           "year_opened": 2023},
+]
+
 
 def normalize(s):
     """Lowercase + strip accents for comparison."""
@@ -250,6 +273,7 @@ def format_lab(r):
         "acronym": (r.get("sigle") or "").strip() or None,
         "umr_label": (r.get("label_numero") or "").split(",")[0].strip() or None,
         "type": r.get("type_de_structure"),
+        "sector": r.get("_sector", "public"),
         "year_created": r.get("annee_de_creation"),
         "city": r.get("commune"),
         "postal_code": r.get("code_postal"),
@@ -257,6 +281,7 @@ def format_lab(r):
         "director_last": r.get("nom_du_responsable"),
         "director_first": r.get("prenom_du_responsable"),
         "tutelles": r.get("sigles_des_tutelles"),
+        "parent_company": r.get("_parent_company"),
         "domain": r.get("domaine_scientifique"),
         "erc_panel": r.get("panel_erc"),
         "ai_score": r.get("_ai_score", 0),
@@ -278,13 +303,16 @@ def write_outputs(labs):
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
-            "ai_score", "acronym", "name", "umr_label", "type",
-            "city", "tutelles", "domain", "year_created", "website",
+            "ai_score", "sector", "acronym", "name", "umr_label", "type",
+            "city", "parent_company", "tutelles", "domain",
+            "year_created", "website",
         ])
         for r in output:
             writer.writerow([
-                r["ai_score"], r["acronym"] or "", r["name"],
-                r["umr_label"] or "", r["type"], r["city"] or "",
+                r["ai_score"], r.get("sector", "public"),
+                r["acronym"] or "", r["name"],
+                r["umr_label"] or "", r["type"] or "",
+                r["city"] or "", r.get("parent_company") or "",
                 r["tutelles"] or "", (r["domain"] or "")[:80],
                 r["year_created"] or "", r["website"] or "",
             ])
@@ -344,13 +372,24 @@ def print_summary(labs):
         for m in sorted(missing):
             print(f"  - {m}")
 
+    # Sector breakdown
+    public = [l for l in labs if l.get("_sector") != "private"]
+    private = [l for l in labs if l.get("_sector") == "private"]
+
     print(f"\n  Total labs identified: {len(labs)}")
-    print(f"  Tier 1 (core AI): {len(tier1)}")
-    print(f"  Tier 2 (strong AI): {len(tier2)}")
-    print(f"  Tier 3 (AI-adjacent): {len(tier3)}")
-    print(f"\n  Note: The French government claims 81 AI labs. Discrepancies")
-    print(f"  may arise from private labs (not in RNSR), counting methodology,")
-    print(f"  or different dataset vintages.")
+    print(f"    Public (RNSR): {len(public)}  (Tier 1: {len([l for l in public if l['_ai_score'] >= 50])}, Tier 2: {len([l for l in public if 35 <= l['_ai_score'] < 50])})")
+    print(f"    Private (corporate R&D): {len(private)}")
+    print(f"\n  Reconciliation with government's '81 laboratoires de l'IA':")
+    core_public = len([l for l in public if l["_ai_score"] >= 35])
+    print(f"    Core public labs (Tiers 1+2):  {core_public}")
+    print(f"    Private labs:                  {len(private)}")
+    print(f"    Subtotal:                      {core_public + len(private)}")
+    gap = 81 - (core_public + len(private))
+    if gap > 0:
+        print(f"    Gap to 81:                     {gap} (likely labs in other RNSR domains,")
+        print(f"                                    3IA institutes, or different vintage)")
+    else:
+        print(f"    Surplus over 81:               {abs(gap)} (post-2017 labs added)")
 
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -402,6 +441,25 @@ def main():
     labs.sort(key=lambda r: (-r["_ai_score"], r.get("libelle", "")))
 
     print(f"  Lab-level structures with AI score >= 20: {len(labs)}")
+
+    # Inject private AI labs (not in RNSR)
+    print(f"\n  Adding {len(PRIVATE_AI_LABS)} private AI R&D labs...")
+    for plab in PRIVATE_AI_LABS:
+        labs.append({
+            "libelle": plab["name"],
+            "sigle": plab["acronym"],
+            "commune": plab["city"],
+            "annee_de_creation": str(plab.get("year_opened", "")),
+            "type_de_structure": "Private R&D Lab",
+            "code_de_niveau_de_structure": "2",
+            "sigles_des_tutelles": plab["parent_company"],
+            "_ai_score": 90,
+            "_sector": "private",
+            "_parent_company": plab["parent_company"],
+        })
+
+    # Re-sort
+    labs.sort(key=lambda r: (-r["_ai_score"], r.get("libelle", "")))
 
     # Write outputs
     write_outputs(labs)
