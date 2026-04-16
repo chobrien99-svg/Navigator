@@ -84,6 +84,49 @@ CITY_COORDS = {
 }
 
 
+def infer_city_from_lab(lab):
+    """For Inria project-teams with no city, infer from tutelles or known
+    project-team => Inria centre mappings."""
+    # Hand-curated lookups for Inria project-teams without a city in RNSR
+    INRIA_TEAM_CITIES = {
+        "VALDA":   "paris",      # ENS Paris / Inria Paris
+        "FLOWERS": "talence",    # Inria Bordeaux Sud-Ouest
+        "AIO":     "paris",      # Inria Paris (48 rue Barrault, 75647)
+        "RAINBOW": "rennes",     # Inria Rennes / IRISA
+        "SIERRA":  "paris",      # Inria Paris
+        "MAASAI":  "sophia-antipolis",
+        "ACENTAURI": "sophia-antipolis",
+        "REGALIA": "talence",    # Inria Bordeaux
+        "ARTISHAU": "rennes",
+        "MAGNET":  "villeneuve-d-ascq",   # Inria Lille
+        "HUCEBOT": "nancy",
+    }
+    acr = (lab.get("acronym") or "").strip()
+    if acr in INRIA_TEAM_CITIES:
+        return INRIA_TEAM_CITIES[acr]
+
+    # Fall back to tutelle keywords
+    tutelles = (lab.get("tutelles") or "").upper()
+    tutelle_map = [
+        ("BORDEAUX", "talence"),
+        ("RENNES", "rennes"),
+        ("LILLE", "lille"),
+        ("LORRAINE", "nancy"),
+        ("GRENOBLE", "grenoble"),
+        ("LYON", "lyon"),
+        ("MONTPELLIER", "montpellier"),
+        ("TOULOUSE", "toulouse"),
+        ("UNICA", "sophia-antipolis"),
+        ("SACLAY", "saclay"),
+        ("ENS PARIS", "paris"),
+        ("PARIS", "paris"),
+    ]
+    for keyword, city in tutelle_map:
+        if keyword in tutelles:
+            return city
+    return None
+
+
 def normalize_city(raw):
     """Normalize a raw RNSR city string to a lookup key."""
     if not raw:
@@ -148,6 +191,13 @@ def build_geojson():
     for lab in top_labs:
         city_raw = lab.get("city") or ""
         city_key = normalize_city(city_raw)
+
+        # Fallback: infer city from tutelles/known Inria team mapping
+        if not (city_key and city_key in CITY_COORDS):
+            inferred = infer_city_from_lab(lab)
+            if inferred and inferred in CITY_COORDS:
+                city_key = inferred
+                city_raw = inferred.replace("-", " ").title()
 
         if city_key and city_key in CITY_COORDS:
             coords = CITY_COORDS[city_key]
