@@ -1280,6 +1280,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.34553,
+          48.86041
+        ]
+      },
+      "properties": {
+        "name": "Value from Data",
+        "acronym": "VALDA",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Paris",
+        "tutelles": "ENS PARIS,CNRS,INRIA",
+        "parent_company": null,
+        "year_created": "2016",
+        "website": "",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201622223R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           6.03319,
           47.2447
         ]
@@ -1540,6 +1566,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.58708,
+          44.80089
+        ]
+      },
+      "properties": {
+        "name": "Interactions, exploration et apprentissage en robotique développementale et sociale",
+        "acronym": "FLOWERS",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Talence",
+        "tutelles": "INRIA,BORDEAUX",
+        "parent_company": null,
+        "year_created": "2008",
+        "website": "",
+        "ai_score": 60,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200820949R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           1.86591,
           50.94988
         ]
@@ -1696,6 +1748,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.35126,
+          48.86098
+        ]
+      },
+      "properties": {
+        "name": "Mise en réseau fiable, sans fil à faible consommation et micro-robotique",
+        "acronym": "AIO",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Paris",
+        "tutelles": "INRIA",
+        "parent_company": null,
+        "year_created": "2022",
+        "website": "",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202224247P&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           6.18978,
           48.69439
         ]
@@ -1715,6 +1793,32 @@
         "website": "https://www.inria.fr/fr/hucebot",
         "ai_score": 50,
         "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202524727Y&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.67881,
+          48.12571
+        ]
+      },
+      "properties": {
+        "name": "Sensor-based and interactive robotics",
+        "acronym": "RAINBOW",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Rennes",
+        "tutelles": "INSA RENNES,CNRS,INRIA,RENNES",
+        "parent_company": null,
+        "year_created": "2018",
+        "website": "",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201822637G&PUBLIC=OK"
       }
     },
     {
