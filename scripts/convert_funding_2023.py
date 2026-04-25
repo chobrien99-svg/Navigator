@@ -238,6 +238,7 @@ def main() -> None:
 
     # Round investors (first listed = lead)
     round_investors_json = []
+    seen_round_invs = set()
     for row in rows:
         name = (row.get('Startup') or '').strip()
         investors_str = (row.get('Investor Names') or '').strip()
@@ -248,6 +249,14 @@ def main() -> None:
         amount_raw = parse_amount(row.get('Money Raised Euros') or '')
         amount_millions = to_millions(amount_raw)
         for i, inv in enumerate(parse_csv_list(investors_str)):
+            # Dedup on the same key the SQL JOIN uses to find a funding_round
+            # plus the investor name. Two source rows that map to the same
+            # funding_round with the same investor would otherwise produce
+            # duplicate (funding_round_id, investor_id) inserts.
+            key = (slug, date, amount_millions, inv)
+            if key in seen_round_invs:
+                continue
+            seen_round_invs.add(key)
             round_investors_json.append({
                 'org_slug': slug, 'announced_date': date,
                 'amount_eur': amount_millions, 'investor_name': inv,
@@ -490,10 +499,7 @@ JOIN funding_rounds fr ON fr.organization_id = o.id
   AND fr.source_name = '{SOURCE_NAME}'
   AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
   AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
-WHERE NOT EXISTS (
-  SELECT 1 FROM funding_round_investors fri
-  WHERE fri.funding_round_id = fr.id AND fri.investor_id = inv_org.id
-);
+ON CONFLICT (funding_round_id, investor_id) DO NOTHING;
 """)
 
     print()
