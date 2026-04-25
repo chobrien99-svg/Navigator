@@ -497,29 +497,42 @@ ON CONFLICT (slug) DO NOTHING;
     # 01i_round_investors.sql
     write_sql(OUT_DIR / '01i_round_investors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 9: Link investors to funding rounds ({len(round_investors_json)})
+-- DISTINCT ON dedupes within-batch collisions (e.g. duplicate CSV rows that
+-- map to the same funding_round, or two raw investor names that slugify to
+-- the same investor org). Prefer is_lead=TRUE on collisions so we keep the
+-- lead-investor flag where present.
 WITH source AS (
   SELECT * FROM json_populate_recordset(
     NULL::record,
     $json${jdump(round_investors_json)}$json$
   ) AS (org_slug TEXT, announced_date TEXT, amount_eur NUMERIC, investor_name TEXT, is_lead BOOLEAN)
+),
+joined AS (
+  SELECT DISTINCT ON (fr.id, inv_org.id)
+    fr.id          AS funding_round_id,
+    inv_org.id     AS investor_id,
+    s.is_lead,
+    s.investor_name
+  FROM source s
+  JOIN organizations o ON o.slug = s.org_slug
+  JOIN organizations inv_org ON inv_org.slug = lower(regexp_replace(regexp_replace(unaccent(s.investor_name), '[^a-zA-Z0-9\\s-]', '', 'g'), '\\s+', '-', 'g'))
+  JOIN funding_rounds fr ON fr.organization_id = o.id
+    AND fr.source_name = '{SOURCE_NAME}'
+    AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
+    AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
+  ORDER BY fr.id, inv_org.id, s.is_lead DESC
 )
 INSERT INTO funding_round_investors (
   id, funding_round_id, investor_id, is_lead, investor_name, created_at
 )
 SELECT
   uuid_generate_v4(),
-  fr.id,
-  inv_org.id,
-  s.is_lead,
-  s.investor_name,
+  funding_round_id,
+  investor_id,
+  is_lead,
+  investor_name,
   NOW()
-FROM source s
-JOIN organizations o ON o.slug = s.org_slug
-JOIN organizations inv_org ON inv_org.slug = lower(regexp_replace(regexp_replace(unaccent(s.investor_name), '[^a-zA-Z0-9\\s-]', '', 'g'), '\\s+', '-', 'g'))
-JOIN funding_rounds fr ON fr.organization_id = o.id
-  AND fr.source_name = '{SOURCE_NAME}'
-  AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
-  AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
+FROM joined
 ON CONFLICT (funding_round_id, investor_id) DO NOTHING;
 """)
 
