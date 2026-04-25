@@ -23,6 +23,7 @@ Mirrors the phase10 split-file pattern. source_name = 'funding_deals_2023'.
 import csv
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 INPUT = Path('data/funding_2023.csv')
@@ -32,20 +33,12 @@ AMOUNT_DIVISOR = 1_000_000  # DB stores amount_eur in millions
 
 
 def slugify(name: str) -> str:
-    """Match the SQL slug generation logic (unaccent + lower + dashes)."""
-    accent_map = {
-        'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
-        'à': 'a', 'â': 'a', 'ä': 'a', 'á': 'a',
-        'ù': 'u', 'û': 'u', 'ü': 'u',
-        'î': 'i', 'ï': 'i', 'ô': 'o', 'ö': 'o',
-        'ç': 'c', 'ñ': 'n',
-        'É': 'E', 'È': 'E', 'Ê': 'E',
-        'À': 'A', 'Â': 'A', 'Ç': 'C',
-        '’': '',
-    }
-    s = name
-    for k, v in accent_map.items():
-        s = s.replace(k, v)
+    """Match the SQL slug generation logic: unaccent + drop non-[a-z0-9\\s-] +
+    collapse whitespace + lowercase. NFKD decomposition mirrors PostgreSQL's
+    `unaccent` extension closely enough for this dataset (decomposes Latin
+    diacritics like ū → u and compatibility codepoints like ² → 2)."""
+    s = unicodedata.normalize('NFKD', name)
+    s = ''.join(c for c in s if not unicodedata.combining(c))
     s = re.sub(r'[^a-zA-Z0-9\s-]', '', s)
     s = re.sub(r'\s+', '-', s)
     return s.lower().strip('-')
@@ -96,6 +89,34 @@ def parse_csv_list(val: str) -> list[str]:
     if not val:
         return []
     return [i.strip() for i in val.split(',') if i.strip()]
+
+
+# Legal entity suffixes that legitimately follow a comma inside an
+# investor name (e.g. "Littoral Capital Partners, LLC"). When a tokenized
+# fragment matches one of these, merge it back into the previous investor.
+_LEGAL_SUFFIXES = {
+    'llc', 'l.l.c.', 'inc', 'inc.', 'incorporated',
+    'ltd', 'ltd.', 'limited',
+    'lp', 'l.p.', 'llp', 'l.l.p.',
+    'corp', 'corp.', 'corporation', 'co', 'co.', 'company',
+    'gmbh', 'ag', 'bv', 'b.v.', 'nv', 'n.v.',
+    'sa', 's.a.', 'sas', 's.a.s.', 'sarl', 's.a.r.l.', 'plc',
+}
+
+
+def parse_investor_list(val: str) -> list[str]:
+    """Like parse_csv_list, but rejoin legal suffixes that follow a comma."""
+    if not val:
+        return []
+    out: list[str] = []
+    for tok in (t.strip() for t in val.split(',')):
+        if not tok:
+            continue
+        if out and tok.lower() in _LEGAL_SUFFIXES:
+            out[-1] = f"{out[-1]}, {tok}"
+        else:
+            out.append(tok)
+    return out
 
 
 def normalize_city(raw: str) -> str | None:
@@ -159,7 +180,7 @@ def main() -> None:
             cities_set.add(city)
         for sec in parse_csv_list(row.get('Assigned Sectors') or ''):
             sectors_set.add(sec)
-        for inv in parse_csv_list(row.get('Investor Names') or ''):
+        for inv in parse_investor_list(row.get('Investor Names') or ''):
             investor_names_set.add(inv)
 
     cities_list = sorted(cities_set)
@@ -248,7 +269,7 @@ def main() -> None:
         date = (row.get('Date') or '').strip() or None
         amount_raw = parse_amount(row.get('Money Raised Euros') or '')
         amount_millions = to_millions(amount_raw)
-        for i, inv in enumerate(parse_csv_list(investors_str)):
+        for i, inv in enumerate(parse_investor_list(investors_str)):
             # Dedup on the same key the SQL JOIN uses to find a funding_round
             # plus the investor name. Two source rows that map to the same
             # funding_round with the same investor would otherwise produce
