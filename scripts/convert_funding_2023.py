@@ -23,6 +23,7 @@ Mirrors the phase10 split-file pattern. source_name = 'funding_deals_2023'.
 import csv
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 INPUT = Path('data/funding_2023.csv')
@@ -32,20 +33,12 @@ AMOUNT_DIVISOR = 1_000_000  # DB stores amount_eur in millions
 
 
 def slugify(name: str) -> str:
-    """Match the SQL slug generation logic (unaccent + lower + dashes)."""
-    accent_map = {
-        'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
-        'à': 'a', 'â': 'a', 'ä': 'a', 'á': 'a',
-        'ù': 'u', 'û': 'u', 'ü': 'u',
-        'î': 'i', 'ï': 'i', 'ô': 'o', 'ö': 'o',
-        'ç': 'c', 'ñ': 'n',
-        'É': 'E', 'È': 'E', 'Ê': 'E',
-        'À': 'A', 'Â': 'A', 'Ç': 'C',
-        '’': '',
-    }
-    s = name
-    for k, v in accent_map.items():
-        s = s.replace(k, v)
+    """Match the SQL slug generation logic: unaccent + drop non-[a-z0-9\\s-] +
+    collapse whitespace + lowercase. NFKD decomposition mirrors PostgreSQL's
+    `unaccent` extension closely enough for this dataset (decomposes Latin
+    diacritics like ū → u and compatibility codepoints like ² → 2)."""
+    s = unicodedata.normalize('NFKD', name)
+    s = ''.join(c for c in s if not unicodedata.combining(c))
     s = re.sub(r'[^a-zA-Z0-9\s-]', '', s)
     s = re.sub(r'\s+', '-', s)
     return s.lower().strip('-')
@@ -96,6 +89,34 @@ def parse_csv_list(val: str) -> list[str]:
     if not val:
         return []
     return [i.strip() for i in val.split(',') if i.strip()]
+
+
+# Legal entity suffixes that legitimately follow a comma inside an
+# investor name (e.g. "Littoral Capital Partners, LLC"). When a tokenized
+# fragment matches one of these, merge it back into the previous investor.
+_LEGAL_SUFFIXES = {
+    'llc', 'l.l.c.', 'inc', 'inc.', 'incorporated',
+    'ltd', 'ltd.', 'limited',
+    'lp', 'l.p.', 'llp', 'l.l.p.',
+    'corp', 'corp.', 'corporation', 'co', 'co.', 'company',
+    'gmbh', 'ag', 'bv', 'b.v.', 'nv', 'n.v.',
+    'sa', 's.a.', 'sas', 's.a.s.', 'sarl', 's.a.r.l.', 'plc',
+}
+
+
+def parse_investor_list(val: str) -> list[str]:
+    """Like parse_csv_list, but rejoin legal suffixes that follow a comma."""
+    if not val:
+        return []
+    out: list[str] = []
+    for tok in (t.strip() for t in val.split(',')):
+        if not tok:
+            continue
+        if out and tok.lower() in _LEGAL_SUFFIXES:
+            out[-1] = f"{out[-1]}, {tok}"
+        else:
+            out.append(tok)
+    return out
 
 
 def normalize_city(raw: str) -> str | None:
@@ -159,7 +180,7 @@ def main() -> None:
             cities_set.add(city)
         for sec in parse_csv_list(row.get('Assigned Sectors') or ''):
             sectors_set.add(sec)
-        for inv in parse_csv_list(row.get('Investor Names') or ''):
+        for inv in parse_investor_list(row.get('Investor Names') or ''):
             investor_names_set.add(inv)
 
     cities_list = sorted(cities_set)
@@ -238,6 +259,7 @@ def main() -> None:
 
     # Round investors (first listed = lead)
     round_investors_json = []
+    seen_round_invs = set()
     for row in rows:
         name = (row.get('Startup') or '').strip()
         investors_str = (row.get('Investor Names') or '').strip()
@@ -247,7 +269,15 @@ def main() -> None:
         date = (row.get('Date') or '').strip() or None
         amount_raw = parse_amount(row.get('Money Raised Euros') or '')
         amount_millions = to_millions(amount_raw)
-        for i, inv in enumerate(parse_csv_list(investors_str)):
+        for i, inv in enumerate(parse_investor_list(investors_str)):
+            # Dedup on the same key the SQL JOIN uses to find a funding_round
+            # plus the investor name. Two source rows that map to the same
+            # funding_round with the same investor would otherwise produce
+            # duplicate (funding_round_id, investor_id) inserts.
+            key = (slug, date, amount_millions, inv)
+            if key in seen_round_invs:
+                continue
+            seen_round_invs.add(key)
             round_investors_json.append({
                 'org_slug': slug, 'announced_date': date,
                 'amount_eur': amount_millions, 'investor_name': inv,
@@ -467,33 +497,43 @@ ON CONFLICT (slug) DO NOTHING;
     # 01i_round_investors.sql
     write_sql(OUT_DIR / '01i_round_investors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 9: Link investors to funding rounds ({len(round_investors_json)})
+-- DISTINCT ON dedupes within-batch collisions (e.g. duplicate CSV rows that
+-- map to the same funding_round, or two raw investor names that slugify to
+-- the same investor org). Prefer is_lead=TRUE on collisions so we keep the
+-- lead-investor flag where present.
 WITH source AS (
   SELECT * FROM json_populate_recordset(
     NULL::record,
     $json${jdump(round_investors_json)}$json$
   ) AS (org_slug TEXT, announced_date TEXT, amount_eur NUMERIC, investor_name TEXT, is_lead BOOLEAN)
+),
+joined AS (
+  SELECT DISTINCT ON (fr.id, inv_org.id)
+    fr.id          AS funding_round_id,
+    inv_org.id     AS investor_id,
+    s.is_lead,
+    s.investor_name
+  FROM source s
+  JOIN organizations o ON o.slug = s.org_slug
+  JOIN organizations inv_org ON inv_org.slug = lower(regexp_replace(regexp_replace(unaccent(s.investor_name), '[^a-zA-Z0-9\\s-]', '', 'g'), '\\s+', '-', 'g'))
+  JOIN funding_rounds fr ON fr.organization_id = o.id
+    AND fr.source_name = '{SOURCE_NAME}'
+    AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
+    AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
+  ORDER BY fr.id, inv_org.id, s.is_lead DESC
 )
 INSERT INTO funding_round_investors (
   id, funding_round_id, investor_id, is_lead, investor_name, created_at
 )
 SELECT
   uuid_generate_v4(),
-  fr.id,
-  inv_org.id,
-  s.is_lead,
-  s.investor_name,
+  funding_round_id,
+  investor_id,
+  is_lead,
+  investor_name,
   NOW()
-FROM source s
-JOIN organizations o ON o.slug = s.org_slug
-JOIN organizations inv_org ON inv_org.slug = lower(regexp_replace(regexp_replace(unaccent(s.investor_name), '[^a-zA-Z0-9\\s-]', '', 'g'), '\\s+', '-', 'g'))
-JOIN funding_rounds fr ON fr.organization_id = o.id
-  AND fr.source_name = '{SOURCE_NAME}'
-  AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
-  AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
-WHERE NOT EXISTS (
-  SELECT 1 FROM funding_round_investors fri
-  WHERE fri.funding_round_id = fr.id AND fri.investor_id = inv_org.id
-);
+FROM joined
+ON CONFLICT (funding_round_id, investor_id) DO NOTHING;
 """)
 
     print()

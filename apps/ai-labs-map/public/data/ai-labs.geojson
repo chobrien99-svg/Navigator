@@ -1,0 +1,2111 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.76934,
+          45.17164
+        ]
+      },
+      "properties": {
+        "name": "Grenoble Images Parole Signal Automatique",
+        "acronym": "GIPSA-lab",
+        "umr": "UMR 5216",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "ST MARTIN D HERES",
+        "tutelles": "GRENOBLE INP,CNRS,GRENOBLE ALPES,INRIA",
+        "parent_company": null,
+        "year_created": "2006",
+        "website": "http://www.gipsa-lab.fr/",
+        "ai_score": 100,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200711885T&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13361,
+          48.69531
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire Interdisciplinaire des Sciences du Numérique",
+        "acronym": "LISN",
+        "umr": "UMR 9015",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Gif sur Yvette",
+        "tutelles": "CNRS,U PARIS-SACLAY,INRIA,CENTRALESUPELEC",
+        "parent_company": null,
+        "year_created": "2021",
+        "website": "http://www.lisn.upsaclay.fr",
+        "ai_score": 100,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202123711L&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.86984,
+          43.60136
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier",
+        "acronym": "LIRMM",
+        "umr": "UMR 5506",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "MONTPELLIER",
+        "tutelles": "PERPIGNAN,CNRS,INRIA,MONTPELLIER,UMPV",
+        "parent_company": null,
+        "year_created": "1995",
+        "website": "http://www.lirmm.fr/",
+        "ai_score": 100,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199111950H&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5498,
+          47.21874
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire des Sciences du Numérique de Nantes",
+        "acronym": "LS2N",
+        "umr": "UMR 6004",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Nantes",
+        "tutelles": "EC. CENTRALE NANTES,CNRS,IMT Atlantique,Nantes Université,INRIA",
+        "parent_company": null,
+        "year_created": "2017",
+        "website": "http://ls2n.fr/",
+        "ai_score": 100,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201722241F&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.05671,
+          43.61144
+        ]
+      },
+      "properties": {
+        "name": "Modèles et algorithmes pour l’intelligence artificielle",
+        "acronym": "MAASAI",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "AI-Dedicated",
+        "city": "Sophia Antipolis",
+        "tutelles": "INRIA,UniCA",
+        "parent_company": null,
+        "year_created": "2020",
+        "website": "http://www.inria.fr/equipes/maasai",
+        "ai_score": 100,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202023544J&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.05851,
+          43.61606
+        ]
+      },
+      "properties": {
+        "name": "•\tIntelligence artificielle et algorithmes efficaces pour la robotique autonome",
+        "acronym": "ACENTAURI",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Sophia Antipolis",
+        "tutelles": "INRIA",
+        "parent_company": null,
+        "year_created": "2021",
+        "website": "https://www.inria.fr/fr/acentauri",
+        "ai_score": 100,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202124072D&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.67653,
+          48.10753
+        ]
+      },
+      "properties": {
+        "name": "Institut de Recherche en Informatique et Systèmes Aléatoires",
+        "acronym": "IRISA",
+        "umr": "UMR 6074",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "RENNES",
+        "tutelles": "INSA RENNES,BRETAGNE-SUD,CNRS,INRIA,ENS RENNES,CENTRALESUPELEC,MinesTélécom,IMT Atlantique,RENNES",
+        "parent_company": null,
+        "year_created": "2000",
+        "website": "http://www.irisa.fr",
+        "ai_score": 95,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200012163A&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34867,
+          48.94014
+        ]
+      },
+      "properties": {
+        "name": "LABORATOIRE D'INTELLIGENCE ARTIFICIELLE ET SÉMANTIQUE DES DONNÉES",
+        "acronym": "LIASD",
+        "umr": "EA 4383",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "AI-Dedicated",
+        "city": "SAINT-DENIS",
+        "tutelles": "PARIS 8",
+        "parent_company": null,
+        "year_created": "2009",
+        "website": "https://www.univ-paris8.fr/UR-Laboratoire-d-Intelligence-Artificielle-et-Semantique-des-Donnees-LIAS...",
+        "ai_score": 95,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200918461G&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.26313,
+          45.83649
+        ]
+      },
+      "properties": {
+        "name": "XLIM",
+        "acronym": "XLIM",
+        "umr": "UMR 7252",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "LIMOGES",
+        "tutelles": "LIMOGES,CNRS,UP",
+        "parent_company": null,
+        "year_created": "2012",
+        "website": "http://www.xlim.fr",
+        "ai_score": 95,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201220195D&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.16409,
+          48.70965
+        ]
+      },
+      "properties": {
+        "name": "Centre Microsoft Recherche-Inria",
+        "acronym": "MSFT-Inria",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Saclay",
+        "tutelles": "Microsoft",
+        "parent_company": "Microsoft",
+        "year_created": "2006",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.78161,
+          45.2148
+        ]
+      },
+      "properties": {
+        "name": "Centre de Recherche Europe de Xerox (now Naver)",
+        "acronym": "XRCE",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Meylan",
+        "tutelles": "Naver Labs Europe",
+        "parent_company": "Naver Labs Europe",
+        "year_created": "2017",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34251,
+          48.86271
+        ]
+      },
+      "properties": {
+        "name": "Criteo AI Lab",
+        "acronym": "Criteo AI Lab",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Criteo",
+        "parent_company": "Criteo",
+        "year_created": "2015",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3578,
+          48.86572
+        ]
+      },
+      "properties": {
+        "name": "Facebook AI Research Paris",
+        "acronym": "FAIR Paris",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Meta",
+        "parent_company": "Meta",
+        "year_created": "2015",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.07735,
+          45.77501
+        ]
+      },
+      "properties": {
+        "name": "Factolab",
+        "acronym": "Factolab",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Clermont-Ferrand",
+        "tutelles": "Michelin",
+        "parent_company": "Michelin",
+        "year_created": "2017",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35668,
+          48.84759
+        ]
+      },
+      "properties": {
+        "name": "Fujitsu AI Research Center",
+        "acronym": "Fujitsu AI Lab",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Fujitsu",
+        "parent_company": "Fujitsu",
+        "year_created": "2019",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35583,
+          48.85965
+        ]
+      },
+      "properties": {
+        "name": "Google Brain / DeepMind Paris",
+        "acronym": "Google Brain Paris",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Alphabet (Google)",
+        "parent_company": "Alphabet (Google)",
+        "year_created": "2018",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3558,
+          48.85187
+        ]
+      },
+      "properties": {
+        "name": "Kyutai",
+        "acronym": "Kyutai",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Kyutai (Niel/Saadé/Schmidt)",
+        "parent_company": "Kyutai (Niel/Saadé/Schmidt)",
+        "year_created": "2023",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72023,
+          45.19296
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire Jean Kuntzmann",
+        "acronym": "LJK",
+        "umr": "UMR 5224",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Grenoble",
+        "tutelles": "CNRS,GRENOBLE ALPES,GRENOBLE INP,INRIA",
+        "parent_company": null,
+        "year_created": "2007",
+        "website": "https://ljk.imag.fr/",
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35055,
+          48.84785
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire scientifique Sony Computer",
+        "acronym": "CSL Sony",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Sony",
+        "parent_company": "Sony",
+        "year_created": "2006",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.23771,
+          48.84461
+        ]
+      },
+      "properties": {
+        "name": "Mathematical and Algorithmic Sciences Lab",
+        "acronym": "Huawei MASL",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Boulogne-Billancourt",
+        "tutelles": "Huawei Technologies",
+        "parent_company": "Huawei Technologies",
+        "year_created": "2016",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3552,
+          48.86266
+        ]
+      },
+      "properties": {
+        "name": "Mistral AI Research",
+        "acronym": "Mistral AI Lab",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Mistral AI",
+        "parent_company": "Mistral AI",
+        "year_created": "2023",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.30254,
+          48.80016
+        ]
+      },
+      "properties": {
+        "name": "Orange Labs",
+        "acronym": "Orange Labs",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Chatillon",
+        "tutelles": "Orange",
+        "parent_company": "Orange",
+        "year_created": "2007",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.36085,
+          48.84804
+        ]
+      },
+      "properties": {
+        "name": "Rakuten Institute of Technology Paris",
+        "acronym": "RIT Paris",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Rakuten",
+        "parent_company": "Rakuten",
+        "year_created": "2014",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.36022,
+          48.85929
+        ]
+      },
+      "properties": {
+        "name": "Samsung AI Center Paris",
+        "acronym": "Samsung AI Paris",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Samsung",
+        "parent_company": "Samsung",
+        "year_created": "2018",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34428,
+          48.84793
+        ]
+      },
+      "properties": {
+        "name": "Uber AI Labs Paris",
+        "acronym": "Uber AI Paris",
+        "umr": null,
+        "type": "Private R&D Lab",
+        "sector": "private",
+        "tier": "private",
+        "category": "Private R&D",
+        "city": "Paris",
+        "tutelles": "Uber",
+        "parent_company": "Uber",
+        "year_created": "2019",
+        "website": null,
+        "ai_score": 90,
+        "rnsr_url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35792,
+          48.85195
+        ]
+      },
+      "properties": {
+        "name": "Institut de Recherche en Informatique Fondamentale",
+        "acronym": "IRIF",
+        "umr": "UMR 8243",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Paris",
+        "tutelles": "CNRS,U PARIS Cité,INRIA",
+        "parent_company": null,
+        "year_created": "2016",
+        "website": "https://www.irif.fr/",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201621976X&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3495,
+          48.84826
+        ]
+      },
+      "properties": {
+        "name": "Institut des Systèmes Intelligents et de Robotique",
+        "acronym": "ISIR",
+        "umr": "UMR 7222",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "PARIS",
+        "tutelles": "CNRS,SORBONNE UNIV.,INSERM",
+        "parent_company": null,
+        "year_created": "2009",
+        "website": "http://www.isir.upmc.fr/",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200918463J&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.58708,
+          44.80474
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire Bordelais de Recherche en Informatique",
+        "acronym": "LaBRI",
+        "umr": "UMR 5800",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "TALENCE",
+        "tutelles": "CNRS,Bordeaux INP,BORDEAUX,INRIA",
+        "parent_company": null,
+        "year_created": "1997",
+        "website": "http://www.labri.fr/",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199511665F&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24418,
+          48.70745
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique de l'Ecole Polytechnique",
+        "acronym": "LIX",
+        "umr": "UMR 7161",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Palaiseau",
+        "tutelles": "EC. POLYTECHNIQUE,CNRS,IP PARIS,INRIA",
+        "parent_company": null,
+        "year_created": "2005",
+        "website": "http://www.lix.polytechnique.fr/",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200519331V&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.84359,
+          45.76205
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique du Parallélisme",
+        "acronym": "LIP",
+        "umr": "UMR 5668",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "LYON",
+        "tutelles": "LYON 1,CNRS,INRIA,ENS LYON",
+        "parent_company": null,
+        "year_created": "1999",
+        "website": "http://www.ens-lyon.fr/LIP/",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200317503S&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.05742,
+          43.62294
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique, Signaux et Systèmes de Sophia Antipolis",
+        "acronym": "I3S",
+        "umr": "UMR 7271",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "SOPHIA ANTIPOLIS - VALBONNE",
+        "tutelles": "CNRS,UniCA,INRIA",
+        "parent_company": null,
+        "year_created": "2012",
+        "website": "https://univ-cotedazur.fr/laboratoires/laboratoire-dinformatique-signaux-et-syste%CC%80mes-de-sophia...",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201220432L&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3568,
+          48.85104
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'analyse et modélisation de systèmes pour l'aide à la décision",
+        "acronym": "LAMSADE",
+        "umr": "UMR 7243",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "PARIS",
+        "tutelles": "PARIS-DAUPHINE,CNRS,PSL",
+        "parent_company": null,
+        "year_created": "2011",
+        "website": "http://www.lamsade.dauphine.fr/",
+        "ai_score": 85,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201120462Y&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34494,
+          48.85807
+        ]
+      },
+      "properties": {
+        "name": "Département d'Informatique de l'Ecole Normale Supérieure",
+        "acronym": "DI ENS",
+        "umr": "UMR 8548",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "PARIS",
+        "tutelles": "ENS PARIS,CNRS,INRIA,PSL",
+        "parent_company": null,
+        "year_created": "1998",
+        "website": "http://www.di.ens.fr",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199812876J&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.07511,
+          49.0332
+        ]
+      },
+      "properties": {
+        "name": "Equipes Traitement de l'Information et Systèmes",
+        "acronym": "ETIS",
+        "umr": "UMR 8051",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "CERGY PONTOISE - CERGY",
+        "tutelles": "ENSEA CERGY,CNRS,CY CERGY",
+        "parent_company": null,
+        "year_created": "2002",
+        "website": "http://www-etis.ensea.fr",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200212719W&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.44391,
+          43.605
+        ]
+      },
+      "properties": {
+        "name": "Institut de Recherche en Informatique de Toulouse",
+        "acronym": "IRIT",
+        "umr": "UMR 5505",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "TOULOUSE",
+        "tutelles": "INP TOULOUSE,TOULOUSE 2,CNRS,UT Capitole,UT,INRIA",
+        "parent_company": null,
+        "year_created": "1995",
+        "website": "http://www.irit.fr/",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199511949P&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.53308,
+          50.36345
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Automatique, de Mécanique et d'Informatique Industrielles et Humaines",
+        "acronym": "LAMIH",
+        "umr": "UMR 8201",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "VALENCIENNES",
+        "tutelles": "CNRS,UPHF",
+        "parent_company": null,
+        "year_created": "2012",
+        "website": "http://www.univ-valenciennes.fr/LAMIH/",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201220427F&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.58278,
+          48.84569
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique Gaspard-Monge",
+        "acronym": "LIGM",
+        "umr": "UMR 8049",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "MARNE LA VALLEE 2 - CHAMPS SUR MARNE",
+        "tutelles": "ENPC PARIS,ESIEE MARNE,CNRS,UNIV.G.EIFFEL",
+        "parent_company": null,
+        "year_created": "2002",
+        "website": "https://ligm.univ-eiffel.fr/",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200212717U&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.75717,
+          45.1765
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique de Grenoble",
+        "acronym": "LIG",
+        "umr": "UMR 5217",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Saint Martin d'Hères",
+        "tutelles": "GRENOBLE INP,CNRS,INRIA,GRENOBLE ALPES",
+        "parent_company": null,
+        "year_created": "2006",
+        "website": "http://www.liglab.fr/",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200711886U&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34625,
+          48.95557
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique de Paris-Nord",
+        "acronym": "LIPN",
+        "umr": "UMR 7030",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "VILLETANEUSE",
+        "tutelles": "PARIS 13,CNRS",
+        "parent_company": null,
+        "year_created": "2001",
+        "website": "https://lipn.univ-paris13.fr/",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200112433P&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.10826,
+          45.75588
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique, de Modélisation et d'Optimisation des Systèmes",
+        "acronym": "LIMOS",
+        "umr": "UMR 6158",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "AUBIERE",
+        "tutelles": "ENSM ST-ETIENNE,CNRS,U Clermont Auvergne,Clermont Auvergne INP",
+        "parent_company": null,
+        "year_created": "2002",
+        "website": "http://www.isima.fr/limos/index.htm",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200212221E&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.45233,
+          43.60005
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'analyse et d'architecture des systèmes",
+        "acronym": "LAAS-CNRS",
+        "umr": "UPR 8001",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "TOULOUSE",
+        "tutelles": "CNRS,INSA TOULOUSE,INP TOULOUSE,TOULOUSE 2,UT Capitole,UT",
+        "parent_company": null,
+        "year_created": "1967",
+        "website": "http://www.laas.fr",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199517454Y&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.87053,
+          45.77583
+        ]
+      },
+      "properties": {
+        "name": "UMR 5205 - LABORATOIRE D'INFORMATIQUE EN IMAGE ET SYSTEMES D'INFORMATION",
+        "acronym": "LIRIS",
+        "umr": "UMR 5205",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "VILLEURBANNE",
+        "tutelles": "EC. CENTRALE LYON,INSA LYON,LYON 1,LYON 2,CNRS",
+        "parent_company": null,
+        "year_created": "2005",
+        "website": "http://liris.cnrs.fr",
+        "ai_score": 80,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200511875R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.14585,
+          50.6259
+        ]
+      },
+      "properties": {
+        "name": "UMR 9189 - CRISTAL - Centre de Recherche en Informatique, Signal et Automatique de Lille",
+        "acronym": null,
+        "umr": "UMR 9189",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "VILLENEUVE D ASCQ",
+        "tutelles": "CLI,CNRS,LILLE,INRIA,MinesTélécom",
+        "parent_company": null,
+        "year_created": "2015",
+        "website": "https://www.cristal.univ-lille.fr/",
+        "ai_score": 75,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201521249L&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34242,
+          48.85595
+        ]
+      },
+      "properties": {
+        "name": "Apprentissage Statistique et Parcimonie",
+        "acronym": "SIERRA",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Mathematics",
+        "city": "Paris",
+        "tutelles": "INRIA",
+        "parent_company": null,
+        "year_created": "2011",
+        "website": "http://www.inria.fr/equipes/sierra",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201120973D&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34715,
+          48.84775
+        ]
+      },
+      "properties": {
+        "name": "CENTRE D'ETUDES ET DE RECHERCHE EN INFORMATIQUE ET COMMUNICATIONS",
+        "acronym": "CEDRIC",
+        "umr": "EA 4629",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "PARIS",
+        "tutelles": "CNAM PARIS",
+        "parent_company": null,
+        "year_created": "1988",
+        "website": "http://cedric.cnam.fr/",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201119480F&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34337,
+          48.86477
+        ]
+      },
+      "properties": {
+        "name": "LIP6",
+        "acronym": "LIP6",
+        "umr": "UMR 7606",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "PARIS",
+        "tutelles": "CNRS,SORBONNE UNIV.",
+        "parent_company": null,
+        "year_created": "1997",
+        "website": "http://www.lip6.fr/",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199712651U&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13152,
+          48.70691
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire Méthodes Formelles",
+        "acronym": "LMF",
+        "umr": "UMR 9021",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "GIF-SUR-YVETTE",
+        "tutelles": "ENS Paris-Saclay,CNRS,U PARIS-SACLAY,INRIA,CENTRALESUPELEC",
+        "parent_company": null,
+        "year_created": "2021",
+        "website": "https://lmf.cnrs.fr/",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202123712M&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13174,
+          48.69874
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire des Signaux et Systèmes",
+        "acronym": "L2S",
+        "umr": "UMR 8506",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "GIF SUR YVETTE",
+        "tutelles": "CNRS,CENTRALESUPELEC,U PARIS-SACLAY",
+        "parent_company": null,
+        "year_created": "1998",
+        "website": "http://www.l2s.centralesupelec.fr/",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199812842X&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.76708,
+          45.1628
+        ]
+      },
+      "properties": {
+        "name": "VERIMAG",
+        "acronym": "VERIMAG",
+        "umr": "UMR 5104",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Saint-Martin-d'Hères",
+        "tutelles": "CNRS,GRENOBLE ALPES,GRENOBLE INP",
+        "parent_company": null,
+        "year_created": "1999",
+        "website": "http://www-verimag.imag.fr/",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199511789R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34553,
+          48.86041
+        ]
+      },
+      "properties": {
+        "name": "Value from Data",
+        "acronym": "VALDA",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Paris",
+        "tutelles": "ENS PARIS,CNRS,INRIA",
+        "parent_company": null,
+        "year_created": "2016",
+        "website": "",
+        "ai_score": 70,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201622223R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.03319,
+          47.2447
+        ]
+      },
+      "properties": {
+        "name": "EDITION, LANGAGES, LITTÉRATURES, INFORMATIQUE, ARTS, DIDACTIQUES, DISCOURS",
+        "acronym": "ELLIADD",
+        "umr": "EA 4661",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "BESANÇON",
+        "tutelles": "UT BELFORT,UMLP",
+        "parent_company": null,
+        "year_created": "2012",
+        "website": "http://elliadd.univ-fcomte.fr/",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201220083G&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.37754,
+          49.18723
+        ]
+      },
+      "properties": {
+        "name": "Groupe de recherche en Informatique, Image, Automatique et Instrumentation de Caen",
+        "acronym": "GREYC",
+        "umr": "UMR 6072",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "CAEN",
+        "tutelles": "CAEN,ENSI CAEN,CNRS",
+        "parent_company": null,
+        "year_created": "2017",
+        "website": "https://www.greyc.fr",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201722568L&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.43528,
+          48.63255
+        ]
+      },
+      "properties": {
+        "name": "Informatique, BioInformatique, Systèmes Complexes",
+        "acronym": "IBISC",
+        "umr": "EA 4526",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "EVRY",
+        "tutelles": "EVRY,U PARIS-SACLAY",
+        "parent_company": null,
+        "year_created": "2010",
+        "website": "https://www.ibisc.fr/",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201019077X&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.34913,
+          46.58029
+        ]
+      },
+      "properties": {
+        "name": "LABORATOIRE D'INFORMATIQUE ET D'AUTOMATIQUE POUR LES SYSTÈMES",
+        "acronym": "LIAS",
+        "umr": "EA 6315",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "POITIERS",
+        "tutelles": "ENSMA POITIERS,UP",
+        "parent_company": null,
+        "year_created": "2012",
+        "website": "https://www.lias-lab.fr/",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201220299S&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.25079,
+          48.72433
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire Traitement et Communication de l'Information",
+        "acronym": "LTCI",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "Palaiseau",
+        "tutelles": "TELECOM PARIS,MinesTélécom,IP PARIS",
+        "parent_company": null,
+        "year_created": "2003",
+        "website": "https://www.telecom-paris.fr/fr/recherche/labos/traitement-information-ltci",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200319327Z&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.17492,
+          48.69293
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire lorrain de recherche en informatique et ses applications",
+        "acronym": "LORIA",
+        "umr": "UMR 7503",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "VANDOEUVRE LES NANCY",
+        "tutelles": "CNRS,INRIA,LORRAINE,CENTRALESUPELEC",
+        "parent_company": null,
+        "year_created": "1997",
+        "website": "http://www.loria.fr",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=198912571S&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.32076,
+          48.81514
+        ]
+      },
+      "properties": {
+        "name": "Langues, textes, traitements informatiques, cognition",
+        "acronym": "LATTICE",
+        "umr": "UMR 8094",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "MONTROUGE",
+        "tutelles": "PARIS 3,ENS PARIS,CNRS,PSL",
+        "parent_company": null,
+        "year_created": "2000",
+        "website": "http://www.lattice.cnrs.fr",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200012753S&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.44437,
+          48.63238
+        ]
+      },
+      "properties": {
+        "name": "SAMOVAR (Services répartis, Architectures, MOdélisation, Validation, Administration des Réseaux)",
+        "acronym": "SAMOVAR",
+        "umr": "UMR CNRS 5157",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "EVRY",
+        "tutelles": "TELECOM SUDPARIS,MinesTélécom,IP PARIS",
+        "parent_company": null,
+        "year_created": "2003",
+        "website": "http://samovar.telecom-sudparis.eu/",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200319330C&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.89946,
+          47.90612
+        ]
+      },
+      "properties": {
+        "name": "UR 4022 LABORATOIRE D'INFORMATIQUE FONDAMENTALE D'ORLÉANS",
+        "acronym": "LIFO",
+        "umr": "EA 4022",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "ORLEANS",
+        "tutelles": "ORLEANS,INSA CENTRE VA",
+        "parent_company": null,
+        "year_created": "1987",
+        "website": "http://www.univ-orleans.fr/lifo",
+        "ai_score": 65,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200615274F&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24482,
+          48.71641
+        ]
+      },
+      "properties": {
+        "name": "Centre de Mathématiques Appliquées de l'Ecole polytechnique",
+        "acronym": "CMAP",
+        "umr": "UMR 7641",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Mathematics",
+        "city": "Palaiseau",
+        "tutelles": "EC. POLYTECHNIQUE,CNRS,IP PARIS,INRIA",
+        "parent_company": null,
+        "year_created": "1997",
+        "website": "https://cmap.ip-paris.fr/",
+        "ai_score": 60,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199719340P&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.58708,
+          44.80089
+        ]
+      },
+      "properties": {
+        "name": "Interactions, exploration et apprentissage en robotique développementale et sociale",
+        "acronym": "FLOWERS",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Talence",
+        "tutelles": "INRIA,BORDEAUX",
+        "parent_company": null,
+        "year_created": "2008",
+        "website": "",
+        "ai_score": 60,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200820949R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.86591,
+          50.94988
+        ]
+      },
+      "properties": {
+        "name": "LISIC LABORATOIRE D'INFORMATIQUE, SIGNAL ET IMAGE DE LA CÔTE D'OPALE",
+        "acronym": "UR 4491",
+        "umr": "EA 4491",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "CALAIS",
+        "tutelles": "LITTORAL",
+        "parent_company": null,
+        "year_created": "2010",
+        "website": "http://www-lisic.univ-littoral.fr",
+        "ai_score": 60,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201019115N&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.07511,
+          36.08585
+        ]
+      },
+      "properties": {
+        "name": "Joint Robotics Laboratory",
+        "acronym": "JRL",
+        "umr": "IRL 3218",
+        "type": "Unité mixte internationale",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "TSUKUBA",
+        "tutelles": "CNRS,AIST",
+        "parent_company": null,
+        "year_created": "2008",
+        "website": "",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200819748K&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.09484,
+          49.44753
+        ]
+      },
+      "properties": {
+        "name": "LABORATOIRE D'INFORMATIQUE, DE TRAITEMENT DE L'INFORMATION ET DES SYSTÈMES - UR 4108",
+        "acronym": "LITIS",
+        "umr": "EA 4108",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "SAINT ETIENNE DU ROUVRAY",
+        "tutelles": "INSA ROUEN,ROUEN,LE HAVRE",
+        "parent_company": null,
+        "year_created": "2006",
+        "website": "http://www.litislab.fr/",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200615352R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34648,
+          48.85895
+        ]
+      },
+      "properties": {
+        "name": "LABORATOIRE INFORMATIQUE PARIS DESCARTES",
+        "acronym": "LIPADE",
+        "umr": "URP 2517",
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "PARIS",
+        "tutelles": "U PARIS Cité",
+        "parent_company": null,
+        "year_created": "1998",
+        "website": "http://lipade.mi.parisdescartes.fr/?lang=fr",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=199814046F&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.49311,
+          48.38526
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire des Sciences et Techniques de l'Information, de la Communication et de la Connaissance",
+        "acronym": "LAB-STICC",
+        "umr": "UMR 6285",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Computer Science",
+        "city": "BREST",
+        "tutelles": "BRETAGNE-SUD,CNRS,MinesTélécom,IMT Atlantique,UB,ENSTA,BRETAGNE INP",
+        "parent_company": null,
+        "year_created": "2012",
+        "website": "http://www.lab-sticc.fr/",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201220091R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.14207,
+          50.62006
+        ]
+      },
+      "properties": {
+        "name": "Machine Learning in Information Networks",
+        "acronym": "MAGNET",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "AI-Dedicated",
+        "city": "Villeneuve d'Ascq",
+        "tutelles": "CNRS,INRIA,LILLE",
+        "parent_company": null,
+        "year_created": "2013",
+        "website": "http://www.inria.fr/equipes/magnet",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201321079K&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35126,
+          48.86098
+        ]
+      },
+      "properties": {
+        "name": "Mise en réseau fiable, sans fil à faible consommation et micro-robotique",
+        "acronym": "AIO",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Paris",
+        "tutelles": "INRIA",
+        "parent_company": null,
+        "year_created": "2022",
+        "website": "",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202224247P&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.18978,
+          48.69439
+        ]
+      },
+      "properties": {
+        "name": "Robotique centrée sur l’humain",
+        "acronym": "HUCEBOT",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Villers lès Nancy",
+        "tutelles": "CNRS,INRIA,LORRAINE",
+        "parent_company": null,
+        "year_created": "2025",
+        "website": "https://www.inria.fr/fr/hucebot",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202524727Y&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.67881,
+          48.12571
+        ]
+      },
+      "properties": {
+        "name": "Sensor-based and interactive robotics",
+        "acronym": "RAINBOW",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "Rennes",
+        "tutelles": "INSA RENNES,CNRS,INRIA,RENNES",
+        "parent_company": null,
+        "year_created": "2018",
+        "website": "",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201822637G&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.03541,
+          47.31884
+        ]
+      },
+      "properties": {
+        "name": "Vision pour la Robotique",
+        "acronym": "VIBOT",
+        "umr": "EMR 6000",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier1",
+        "category": "Engineering & Robotics",
+        "city": "DIJON",
+        "tutelles": "CNRS,UBE",
+        "parent_company": null,
+        "year_created": "2018",
+        "website": "http://le2i.cnrs.fr/",
+        "ai_score": 50,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201822755K&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.93532,
+          43.13139
+        ]
+      },
+      "properties": {
+        "name": "Centre International d'Intelligence Artificielle en Acoustique Naturelle",
+        "acronym": "CIAN",
+        "umr": null,
+        "type": "Collaborations internationales de recherche",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "AI-Dedicated",
+        "city": "TOULON",
+        "tutelles": "TOULON",
+        "parent_company": null,
+        "year_created": "2024",
+        "website": "https://cian.lis-lab.fr/",
+        "ai_score": 45,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202424556S&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24928,
+          48.71564
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire Robotique et IA pour la Défense",
+        "acronym": "LARIAD",
+        "umr": null,
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Engineering & Robotics",
+        "city": "Palaiseau",
+        "tutelles": "ENSTA",
+        "parent_company": null,
+        "year_created": "2026",
+        "website": "",
+        "ai_score": 45,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202624843V&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.36698,
+          43.2898
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire d'Informatique et des Systèmes",
+        "acronym": "LIS",
+        "umr": "UMR 7020",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Engineering & Robotics",
+        "city": "Marseille",
+        "tutelles": "TOULON,CNRS,AIX-MARSEILLE,EC. CENTRALE MARSEILLE",
+        "parent_company": null,
+        "year_created": "2018",
+        "website": "http://www.lis-lab.fr",
+        "ai_score": 45,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201822714R&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.08129,
+          44.132
+        ]
+      },
+      "properties": {
+        "name": "Systèmes Complexes et Intelligence Artificielle",
+        "acronym": "SyCoIA",
+        "umr": null,
+        "type": "Unité propre",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Engineering & Robotics",
+        "city": "Alès",
+        "tutelles": "IMT MINES ALES",
+        "parent_company": null,
+        "year_created": "2025",
+        "website": "https://www.imt-mines-ales.fr",
+        "ai_score": 45,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=202524713H&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.83336,
+          50.4242
+        ]
+      },
+      "properties": {
+        "name": "CRIL - Centre de Recherche en Informatique de Lens",
+        "acronym": "UMR 8188",
+        "umr": "UMR 8188",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Computer Science",
+        "city": "LENS",
+        "tutelles": "ARTOIS,CNRS",
+        "parent_company": null,
+        "year_created": "2008",
+        "website": "http://www.cril.univ-artois.fr",
+        "ai_score": 40,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200812835W&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72793,
+          45.18501
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire des Sciences pour la Conception, l'Optimisation et la Production de Grenoble",
+        "acronym": "G-SCOP",
+        "umr": "UMR 5272",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Computer Science",
+        "city": "GRENOBLE",
+        "tutelles": "GRENOBLE INP,CNRS,GRENOBLE ALPES",
+        "parent_company": null,
+        "year_created": "2009",
+        "website": "http://www.g-scop.grenoble-inp.fr",
+        "ai_score": 40,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200919221H&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.71363,
+          48.51909
+        ]
+      },
+      "properties": {
+        "name": "Laboratoire des sciences de l'Ingénieur, de l'Informatique et de l'Imagerie (UMR 7357)",
+        "acronym": "iCube",
+        "umr": "UMR 7357",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Computer Science",
+        "city": "Illkirch-Graffenstaden",
+        "tutelles": "ENGEES-STRBG,INSA STRASBOURG,CNRS,U. STRASBOURG,TELECOM PARIS,INRIA,CHUS,IP PARIS",
+        "parent_company": null,
+        "year_created": "2013",
+        "website": "http://icube.unistra.fr",
+        "ai_score": 40,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201320497C&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.25688,
+          48.70723
+        ]
+      },
+      "properties": {
+        "name": "Mathématiques et Informatique Appliquées - Paris-Saclay",
+        "acronym": "MIA Paris",
+        "umr": "UMR 518",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Mathematics",
+        "city": "Palaiseau",
+        "tutelles": "AGROPARISTECH,INRAE,U PARIS-SACLAY",
+        "parent_company": null,
+        "year_created": "1962",
+        "website": "http://www6.inra.fr/mia-paris",
+        "ai_score": 40,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=201119642G&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.73273,
+          45.18313
+        ]
+      },
+      "properties": {
+        "name": "Techniques de l'Informatique et de la Microélectronique pour l'Architecture des systèmes intégrés",
+        "acronym": "TIMA",
+        "umr": "UMR 5159",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Engineering & Robotics",
+        "city": "GRENOBLE",
+        "tutelles": "GRENOBLE INP,CNRS,GRENOBLE ALPES",
+        "parent_company": null,
+        "year_created": "2003",
+        "website": "http://tima.imag.fr/",
+        "ai_score": 40,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200311834E&PUBLIC=OK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13123,
+          48.70035
+        ]
+      },
+      "properties": {
+        "name": "Mathématiques et Informatique pour la Complexité et les Systèmes",
+        "acronym": "MICS",
+        "umr": "EA 4037",
+        "type": "Unité mixte",
+        "sector": "public",
+        "tier": "tier2",
+        "category": "Mathematics",
+        "city": "GIF-SUR-YVETTE",
+        "tutelles": "CENTRALESUPELEC,U PARIS-SACLAY,INRIA",
+        "parent_company": null,
+        "year_created": "2006",
+        "website": "http://mics.centralesupelec.fr/fr/",
+        "ai_score": 35,
+        "rnsr_url": "https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=200615286U&PUBLIC=OK"
+      }
+    }
+  ]
+}
