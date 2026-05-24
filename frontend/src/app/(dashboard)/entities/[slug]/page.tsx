@@ -7,6 +7,7 @@ import {
   getOrganizationLegalEntities,
   getOrganizationRelationships,
   getOrganizationTags,
+  getOrganizationPrograms,
   getInvestorPortfolio,
   formatEur,
   formatEurFromDb,
@@ -27,14 +28,57 @@ export default async function EntityDossierPage({
     notFound();
   }
 
-  const [funding, people, legalEntities, relationships, tags] =
+  const [funding, people, legalEntities, relationships, tags, programs] =
     await Promise.all([
       getOrganizationFunding(org.id),
       getOrganizationPeople(org.id),
       getOrganizationLegalEntities(org.id),
       getOrganizationRelationships(org.id),
       getOrganizationTags(org.id),
+      getOrganizationPrograms(org.id),
     ]);
+
+  // Group program participations by program, sorted by most recent edition.
+  const programsByName = new Map<
+    string,
+    {
+      programName: string;
+      programSlug: string | null;
+      sourceUrl: string | null;
+      editions: Array<{
+        id: string;
+        year: number | null;
+        cohortLabel: string | null;
+        groupLabel: string | null;
+        editionSourceUrl: string | null;
+      }>;
+    }
+  >();
+  for (const po of programs) {
+    const pe = po.program_editions;
+    const prog = pe?.programs;
+    if (!prog) continue;
+    const key = prog.slug ?? prog.name;
+    if (!programsByName.has(key)) {
+      programsByName.set(key, {
+        programName: prog.name,
+        programSlug: prog.slug ?? null,
+        sourceUrl: (pe?.source_url as string | null) ?? null,
+        editions: [],
+      });
+    }
+    programsByName.get(key)!.editions.push({
+      id: po.id,
+      year: pe?.year ?? null,
+      cohortLabel: pe?.cohort_label ?? null,
+      groupLabel: po.group_label ?? null,
+      editionSourceUrl: (pe?.source_url as string | null) ?? null,
+    });
+  }
+  const groupedPrograms = Array.from(programsByName.values()).map((p) => ({
+    ...p,
+    editions: p.editions.sort((a, b) => (b.year ?? 0) - (a.year ?? 0)),
+  }));
 
   // If investor, also fetch portfolio
   const portfolio =
@@ -494,6 +538,41 @@ export default async function EntityDossierPage({
                     </div>
                   );
                 })}
+              </div>
+            </section>
+          )}
+
+          {/* Programs */}
+          {groupedPrograms.length > 0 && (
+            <section>
+              <h2 className="diplomatic-label mb-4">Programs</h2>
+              <div className="space-y-4">
+                {groupedPrograms.map((p) => (
+                  <div key={p.programSlug ?? p.programName}>
+                    <p className="text-sm font-medium text-on-surface">
+                      {p.programName}
+                    </p>
+                    <div className="mt-1 flex flex-wrap gap-1.5">
+                      {p.editions.map((e) => (
+                        <span
+                          key={e.id}
+                          className="inline-flex items-center gap-1.5 bg-surface-container-low px-2 py-0.5 text-[0.7rem] text-on-surface-variant"
+                          title={
+                            e.editionSourceUrl ??
+                            (e.cohortLabel ?? "")
+                          }
+                        >
+                          {e.cohortLabel ?? e.year ?? "—"}
+                          {e.groupLabel && (
+                            <span className="text-[0.6rem] font-semibold text-primary">
+                              {e.groupLabel}
+                            </span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
           )}

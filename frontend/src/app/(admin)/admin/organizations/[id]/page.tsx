@@ -207,6 +207,33 @@ export default function EditOrganizationPage() {
   const [newSectorId, setNewSectorId] = useState("");
   const [newSectorIsPrimary, setNewSectorIsPrimary] = useState(false);
 
+  // Programs state
+  interface OrgProgramRow {
+    id: string;
+    program_edition_id: string;
+    group_label: string | null;
+    notes: string | null;
+    program_editions: {
+      id: string;
+      year: number | null;
+      cohort_label: string | null;
+      programs: { id: string; name: string; slug: string } | null;
+    } | null;
+  }
+  interface ProgramEditionOption {
+    id: string;
+    year: number | null;
+    cohort_label: string | null;
+    program_name: string;
+    program_slug: string;
+  }
+  const [orgPrograms, setOrgPrograms] = useState<OrgProgramRow[]>([]);
+  const [allProgramEditions, setAllProgramEditions] = useState<
+    ProgramEditionOption[]
+  >([]);
+  const [newProgramEditionId, setNewProgramEditionId] = useState("");
+  const [newProgramGroupLabel, setNewProgramGroupLabel] = useState("");
+
   // Delete state
   const [deleting, setDeleting] = useState(false);
 
@@ -370,6 +397,41 @@ export default function EditOrganizationPage() {
         .order("name");
       if (allSectorsData) {
         setAllSectors(allSectorsData as SectorOption[]);
+      }
+
+      // Load organization programs (memberships)
+      const { data: orgProgramsData } = await supabase
+        .from("program_organizations")
+        .select(
+          "id, program_edition_id, group_label, notes, program_editions(id, year, cohort_label, programs(id, name, slug))"
+        )
+        .eq("organization_id", id);
+      if (orgProgramsData) {
+        setOrgPrograms(orgProgramsData as unknown as OrgProgramRow[]);
+      }
+
+      // Load all program editions for the dropdown (join program name)
+      const { data: allProgramEditionsData } = await supabase
+        .from("program_editions")
+        .select("id, year, cohort_label, programs(id, name, slug)")
+        .order("year", { ascending: false });
+      if (allProgramEditionsData) {
+        type PERow = {
+          id: string;
+          year: number | null;
+          cohort_label: string | null;
+          programs: { id: string; name: string; slug: string } | null;
+        };
+        const opts: ProgramEditionOption[] = (allProgramEditionsData as unknown as PERow[])
+          .filter((pe) => pe.programs != null)
+          .map((pe) => ({
+            id: pe.id,
+            year: pe.year,
+            cohort_label: pe.cohort_label,
+            program_name: pe.programs!.name,
+            program_slug: pe.programs!.slug,
+          }));
+        setAllProgramEditions(opts);
       }
 
       // Load portfolio (only meaningful for investors, but we fetch either way
@@ -747,6 +809,46 @@ export default function EditOrganizationPage() {
       setError(delErr.message);
     } else {
       setOrgSectors((prev) => prev.filter((s) => s.id !== rowId));
+    }
+  }
+
+  // ─── Program handlers ──────────────────────────────────
+  async function handleAddProgram() {
+    if (!newProgramEditionId) return;
+    setError(null);
+    const trimmedLabel = newProgramGroupLabel.trim();
+    const { data: inserted, error: insErr } = await supabase
+      .from("program_organizations")
+      .insert({
+        organization_id: id,
+        program_edition_id: newProgramEditionId,
+        group_label: trimmedLabel === "" ? null : trimmedLabel,
+      })
+      .select(
+        "id, program_edition_id, group_label, notes, program_editions(id, year, cohort_label, programs(id, name, slug))"
+      )
+      .single();
+
+    if (insErr) {
+      setError(insErr.message);
+      return;
+    }
+    if (inserted) {
+      setOrgPrograms((prev) => [...prev, inserted as unknown as OrgProgramRow]);
+      setNewProgramEditionId("");
+      setNewProgramGroupLabel("");
+    }
+  }
+
+  async function handleRemoveProgram(rowId: string) {
+    const { error: delErr } = await supabase
+      .from("program_organizations")
+      .delete()
+      .eq("id", rowId);
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setOrgPrograms((prev) => prev.filter((p) => p.id !== rowId));
     }
   }
 
@@ -1209,6 +1311,94 @@ export default function EditOrganizationPage() {
           <button
             onClick={handleAddSector}
             disabled={!newSectorId}
+            className="px-3 py-2 text-xs font-medium text-primary hover:bg-primary/5 transition-colors disabled:opacity-30"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+
+      {/* Programs Section */}
+      <div className="mt-12">
+        <h2 className="diplomatic-label">Programs ({orgPrograms.length})</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {orgPrograms.map((p) => {
+            const pe = p.program_editions;
+            const prog = pe?.programs;
+            const label =
+              (prog?.name ?? "Unknown program") +
+              " · " +
+              (pe?.cohort_label ?? pe?.year?.toString() ?? "—");
+            return (
+              <span
+                key={p.id}
+                className="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
+              >
+                {label}
+                {p.group_label && (
+                  <span className="text-[0.6rem] font-semibold text-primary">
+                    {p.group_label}
+                  </span>
+                )}
+                <button
+                  onClick={() => handleRemoveProgram(p.id)}
+                  className="ml-0.5 text-outline-variant hover:text-error"
+                  title="Remove program membership"
+                >
+                  <span className="material-symbols-outlined text-[12px]">close</span>
+                </button>
+              </span>
+            );
+          })}
+          {orgPrograms.length === 0 && (
+            <span className="text-xs italic text-outline-variant">
+              No program memberships
+            </span>
+          )}
+        </div>
+
+        {/* Add program form */}
+        <div className="mt-4 flex items-end gap-3">
+          <div className="flex-1 max-w-md">
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              Add program edition
+            </label>
+            <select
+              value={newProgramEditionId}
+              onChange={(e) => setNewProgramEditionId(e.target.value)}
+              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+            >
+              <option value="">— select —</option>
+              {allProgramEditions
+                .filter(
+                  (pe) =>
+                    !orgPrograms.find(
+                      (op) => op.program_edition_id === pe.id
+                    )
+                )
+                .map((pe) => (
+                  <option key={pe.id} value={pe.id}>
+                    {pe.program_name} ·{" "}
+                    {pe.cohort_label ?? pe.year?.toString() ?? "—"}
+                  </option>
+                ))}
+            </select>
+          </div>
+          <div className="max-w-[8rem]">
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              Group label
+            </label>
+            <input
+              type="text"
+              value={newProgramGroupLabel}
+              onChange={(e) => setNewProgramGroupLabel(e.target.value)}
+              placeholder="e.g. FT 120"
+              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+            />
+          </div>
+          <button
+            onClick={handleAddProgram}
+            disabled={!newProgramEditionId}
             className="px-3 py-2 text-xs font-medium text-primary hover:bg-primary/5 transition-colors disabled:opacity-30"
           >
             Add
