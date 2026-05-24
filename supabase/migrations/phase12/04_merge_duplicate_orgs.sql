@@ -143,16 +143,28 @@ BEGIN
      );
   DELETE FROM funding_round_investors WHERE investor_id = src;
 
-  -- organization_relationships: org may appear as source_org_id or target_org_id
+  -- organization_relationships: org may appear as source_org_id or target_org_id.
+  -- CHECK (source_org_id <> target_org_id) means we must first delete any row
+  -- that would become source=target after the redirect.
+  DELETE FROM organization_relationships
+   WHERE (source_org_id = src AND target_org_id = tgt)
+      OR (source_org_id = tgt AND target_org_id = src);
   UPDATE organization_relationships SET source_org_id = tgt WHERE source_org_id = src;
   UPDATE organization_relationships SET target_org_id = tgt WHERE target_org_id = src;
-  -- Drop any self-relationships that resulted (source = target)
-  DELETE FROM organization_relationships WHERE source_org_id = target_org_id;
 
-  -- organization_merge_map: same (also bookkeeping for prior merges)
-  UPDATE organization_merge_map SET source_org_id = tgt WHERE source_org_id = src;
-  UPDATE organization_merge_map SET target_org_id = tgt WHERE target_org_id = src;
-  DELETE FROM organization_merge_map WHERE source_org_id = target_org_id;
+  -- organization_merge_map: provenance log; UNIQUE(source_db, source_table, source_id).
+  -- Redirect rows from src to tgt where they wouldn't collide with an existing
+  -- (source_db, source_table, source_id) under tgt.
+  UPDATE organization_merge_map omm SET organization_id = tgt
+   WHERE omm.organization_id = src
+     AND NOT EXISTS (
+       SELECT 1 FROM organization_merge_map omm2
+       WHERE omm2.organization_id = tgt
+         AND omm2.source_db = omm.source_db
+         AND omm2.source_table = omm.source_table
+         AND omm2.source_id = omm.source_id
+     );
+  DELETE FROM organization_merge_map WHERE organization_id = src;
 
   -- Enrich the target with any non-null source fields it's currently missing
   UPDATE organizations o SET
@@ -164,15 +176,6 @@ BEGIN
     updated_at   = NOW()
   FROM organizations src_o
   WHERE o.id = tgt AND src_o.id = src;
-
-  -- Record the merge in organization_merge_map for audit (no-op if column shape differs)
-  BEGIN
-    INSERT INTO organization_merge_map (id, source_org_id, target_org_id, created_at)
-    VALUES (uuid_generate_v4(), src, tgt, NOW());
-  EXCEPTION WHEN OTHERS THEN
-    -- table shape might differ; skip silently
-    NULL;
-  END;
 
   -- Finally delete the source org
   DELETE FROM organizations WHERE id = src;
