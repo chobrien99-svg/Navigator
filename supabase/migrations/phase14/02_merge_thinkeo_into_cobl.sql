@@ -13,4 +13,5 @@
 -- Idempotent: no-op if 'thinkeo' has already been merged/removed.
 -- =============================================================================
 
-SELECT merge_organizations('thinkeo', 'cobl-ai') AS result;
+-- Note: "Cobl.ai" slugifies to 'coblai' (the period is stripped, not dashed).
+SELECT merge_organizations('thinkeo', 'coblai') AS result;
