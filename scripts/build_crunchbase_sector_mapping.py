@@ -364,6 +364,21 @@ MAP = {
     'waste management': 'Recycling',
     'circular economy': 'Circular Economy',
 
+    # EdTech (new canonical sector — added at user request)
+    'edtech': 'EdTech',
+    'education': 'EdTech',
+    'e-learning': 'EdTech',
+    'training': 'EdTech',
+    'corporate training': 'EdTech',
+    'tutoring': 'EdTech',
+    'higher education': 'EdTech',
+    'primary education': 'EdTech',
+    'secondary education': 'EdTech',
+    'language learning': 'EdTech',
+    'continuing education': 'EdTech',
+    'mooc': 'EdTech',
+    'stem education': 'EdTech',
+
     # Digital Health
     'digital health': 'Digital Health',  # also mapped to HealthTech above — first wins
 }

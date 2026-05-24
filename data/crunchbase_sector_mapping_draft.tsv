@@ -38,7 +38,7 @@ count	crunchbase_term	canonical_sector
 24	B2B	SaaS
 23	Gaming	Gaming
 23	GreenTech	ClimateTech
-23	Education	
+23	Education	EdTech
 23	Service Industry	
 22	Energy	Energy
 22	Automotive	Mobility
@@ -52,7 +52,7 @@ count	crunchbase_term	canonical_sector
 19	Food Processing	FoodTech
 18	Banking	FinTech
 18	Life Science	BioTech
-18	Training	
+18	Training	EdTech
 18	Web Development	SaaS
 17	Electric Vehicle	Mobility
 17	Robotics	Robotics
@@ -78,7 +78,7 @@ count	crunchbase_term	canonical_sector
 13	Farming	AgriTech
 13	Recycling	Recycling
 13	Hospitality	TravelTech
-13	E-Learning	
+13	E-Learning	EdTech
 13	Security	
 13	Beauty	E-commerce & Retail
 13	Computer Vision	Artificial Intelligence
@@ -135,7 +135,7 @@ count	crunchbase_term	canonical_sector
 8	Web Apps	
 8	Events	
 8	Personal Health	
-8	EdTech	
+8	EdTech	EdTech
 8	Venture Capital	
 8	Product Design	
 8	Computer	
@@ -236,7 +236,7 @@ count	crunchbase_term	canonical_sector
 4	Infrastructure	
 4	Quality Assurance	
 4	Smart Cities	CleanTech
-4	Higher Education	
+4	Higher Education	EdTech
 4	Creative Agency	
 4	Digital Signage	
 4	Public Safety	
@@ -282,7 +282,7 @@ count	crunchbase_term	canonical_sector
 3	Adventure Travel	
 3	Air Transportation	
 3	Test and Measurement	
-3	Corporate Training	
+3	Corporate Training	EdTech
 3	Mapping Services	
 3	Autonomous Vehicles	Mobility
 3	Privacy	Cybersecurity
@@ -409,7 +409,7 @@ count	crunchbase_term	canonical_sector
 1	Ventilation	
 1	and Air Conditioning (HVAC)	
 1	Employment	
-1	Tutoring	
+1	Tutoring	EdTech
 1	Seafood	
 1	Teenagers	
 1	Stock Exchanges	
