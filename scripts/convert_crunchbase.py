@@ -319,12 +319,17 @@ def main() -> None:
                 seen_primary_for_org.add(link['org_slug'])
         sector_links_dedup.append(link)
 
-    # Funding rounds (one per row)
+    # Funding rounds (one per row, deduped on the same key the SQL join uses:
+    # (org_slug, announced_date, amount_eur). The Crunchbase export contains
+    # rows duplicated on that key — collapsing them here keeps 01g from
+    # inserting within-batch duplicates the NOT EXISTS guard can't catch.)
     rounds_json = []
+    seen_rounds = set()
     # Bookkeeping for stage source
     stage_explicit = 0
     stage_derived = 0
     stage_undisclosed = 0
+    dropped_dupe_rounds = 0
     for row in rows:
         name = (row.get('Organization Name') or '').strip()
         if not name:
@@ -333,6 +338,12 @@ def main() -> None:
         amount_raw = parse_amount(row.get('Money Raised') or '')
         amount_eur = to_eur(amount_raw, row.get('Money Raised Currency') or '')
         amount_millions = to_millions(amount_eur)
+        date = (row.get('Announced Date') or '').strip() or None
+        round_key = (slug, date, amount_millions)
+        if round_key in seen_rounds:
+            dropped_dupe_rounds += 1
+            continue
+        seen_rounds.add(round_key)
         funding_type = (row.get('Funding Type') or '').strip()
         stage = derive_stage(funding_type, amount_millions)
         if funding_type:
@@ -341,11 +352,13 @@ def main() -> None:
             stage_undisclosed += 1
         else:
             stage_derived += 1
-        date = (row.get('Announced Date') or '').strip() or None
         rounds_json.append({
             'org_slug': slug, 'stage': stage,
             'amount_eur': amount_millions, 'announced_date': date,
         })
+    if dropped_dupe_rounds:
+        print(f"Dropped {dropped_dupe_rounds} within-batch duplicate rounds "
+              f"(same org+date+amount)")
 
     print(f"Stages: explicit={stage_explicit}  derived-from-amount={stage_derived}  undisclosed={stage_undisclosed}")
 
