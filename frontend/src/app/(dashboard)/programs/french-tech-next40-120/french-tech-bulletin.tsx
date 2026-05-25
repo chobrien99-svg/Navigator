@@ -1,24 +1,8 @@
-import {
-  ALL_TIME,
-  ARRIVALS,
-  COHORTS,
-  HEADLINE,
-  LEDGER,
-  REGIONS,
-  SECTORS,
-  TAPE_NAMES,
-  TRANSITIONS,
-} from "./cohort-data";
+import type { BulletinData } from "./cohort-data";
+import { capitalize, numberToWords } from "./cohort-transform";
 import { CohortFlow } from "./charts/cohort-flow";
 import { SectorTreemap } from "./charts/sector-treemap";
 import { FranceMap } from "./charts/france-map";
-
-const MINI_STATS = [
-  { label: "New", v: "40", c: "#3c6840" },
-  { label: "Promoted", v: "7", c: "#114563" },
-  { label: "Demoted", v: "2", c: "#b8862c" },
-  { label: "Exited", v: "40", c: "#963d3d" },
-];
 
 const LEGEND = [
   { label: "Next 40", c: "#114563" },
@@ -29,14 +13,7 @@ const LEGEND = [
   { label: "Exited", c: "#963d3d" },
 ];
 
-const NUMBERS_BAND = [
-  { label: "Total cohort", v: String(HEADLINE.total) },
-  { label: "Cumulative since 2020", v: String(ALL_TIME.totalTracked) },
-  { label: "Capital raised", v: HEADLINE.totalRaised },
-  { label: "Unicorns", v: String(HEADLINE.unicorns) },
-];
-
-export function FrenchTechBulletin() {
+function BulletinShell({ children }: { children: React.ReactNode }) {
   return (
     <div
       className="dir-b"
@@ -48,6 +25,89 @@ export function FrenchTechBulletin() {
         fontFamily: "var(--font-body)",
       }}
     >
+      {children}
+    </div>
+  );
+}
+
+export function FrenchTechBulletin({
+  data,
+  error,
+}: {
+  data: BulletinData | null;
+  error?: string | null;
+}) {
+  if (!data || data.cohorts.length === 0) {
+    return (
+      <BulletinShell>
+        <div
+          style={{
+            border: "1px solid rgba(29,28,21,0.35)",
+            padding: "48px 32px",
+            textAlign: "center",
+            fontFamily: "var(--font-headline)",
+          }}
+        >
+          <div className="editorial-overline" style={{ color: "var(--color-primary)" }}>
+            French Tech Next 40 / 120
+          </div>
+          <h2 style={{ fontSize: 28, fontWeight: 500, margin: "12px 0 8px 0" }}>
+            Cohort data unavailable
+          </h2>
+          <p style={{ fontSize: 13, color: "var(--color-on-surface-variant)", margin: 0 }}>
+            {error ?? "No cohort editions were returned from the Navigator database."}
+          </p>
+        </div>
+      </BulletinShell>
+    );
+  }
+
+  const {
+    meta,
+    cohorts,
+    transitions,
+    arrivals,
+    arrivalsMeta,
+    sectors,
+    sectorsMeta,
+    regions,
+    geo,
+    ledger,
+    ledgerMeta,
+    miniStats,
+    numbers,
+    tape,
+  } = data;
+
+  const firstYear = cohorts[0].year;
+  const latestYear = meta.latestYear;
+  const prevYear = cohorts.length > 1 ? cohorts[cohorts.length - 2].year : firstYear;
+
+  const miniStatCards = [
+    { label: "New", v: String(miniStats.newCount), c: "#3c6840" },
+    { label: "Promoted", v: String(miniStats.promoted), c: "#114563" },
+    { label: "Demoted", v: String(miniStats.demoted), c: "#b8862c" },
+    { label: "Exited", v: String(miniStats.exited), c: "#963d3d" },
+  ];
+
+  const numbersBand = [
+    { label: "Total cohort", v: String(numbers.total) },
+    { label: `Cumulative since ${firstYear}`, v: String(numbers.cumulative) },
+    { label: "Next 40", v: String(numbers.next40) },
+    { label: "FT 120", v: String(numbers.ft120) },
+  ];
+
+  const shownArrivals = arrivals.slice(0, 20);
+  const moreArrivals = arrivals.length - shownArrivals.length;
+
+  const sectorLeaderCount = sectors[0]?.count ?? 0;
+  const classifiedTotal = sectors.reduce((s, d) => s + d.count, 0);
+  const sectorsTitle = sectorsMeta.gainer
+    ? `${sectorsMeta.leader} leads, ${sectorsMeta.gainer} climbs`
+    : `${sectorsMeta.leader} leads the cohort`;
+
+  return (
+    <BulletinShell>
       {/* ─── Masthead ─────────────────────── */}
       <div className="masthead-thick">
         <div
@@ -64,9 +124,11 @@ export function FrenchTechBulletin() {
           }}
         >
           <span>The Navigator · Institutional Intelligence</span>
-          <span>Vol. VI · Bulletin Nº 6</span>
+          <span>
+            Vol. {meta.roman} · Bulletin Nº {meta.bulletinNo}
+          </span>
           <span className="num" style={{ letterSpacing: "0.06em" }}>
-            25 May 2025 · Paris
+            Promotion {latestYear} · Paris
           </span>
         </div>
         <div
@@ -100,7 +162,7 @@ export function FrenchTechBulletin() {
               fontWeight: 600,
             }}
           >
-            The Sixth Promotion · Special Edition
+            The {meta.ordinalWord} Promotion · Special Edition
           </div>
         </div>
       </div>
@@ -120,7 +182,7 @@ export function FrenchTechBulletin() {
               lineHeight: 1.1,
             }}
           >
-            Six cohorts at a glance
+            {capitalize(numberToWords(cohorts.length))} cohorts at a glance
           </h3>
           <p
             style={{
@@ -132,9 +194,9 @@ export function FrenchTechBulletin() {
               margin: "0 0 14px 0",
             }}
           >
-            Movement between tiers, 2020 — 2025. Each annual cohort holds forty in the Next 40
-            and eighty in FT 120; ribbons trace retentions, promotions, and demotions between
-            adjacent years, with strips above and below quantifying new arrivals and exits.
+            Movement between tiers, {firstYear} — {latestYear}. Each annual cohort holds forty in
+            the Next 40 and eighty in FT 120; ribbons trace retentions, promotions, and demotions
+            between adjacent years, with strips above and below quantifying new arrivals and exits.
           </p>
 
           <div
@@ -145,12 +207,12 @@ export function FrenchTechBulletin() {
             }}
           >
             <CohortFlow
-              cohorts={COHORTS}
-              transitions={TRANSITIONS}
+              cohorts={cohorts}
+              transitions={transitions}
               width={900}
               height={520}
               barWidth={18}
-              highlightYear={2025}
+              highlightYear={latestYear}
               tonal="spot"
             />
           </div>
@@ -193,7 +255,7 @@ export function FrenchTechBulletin() {
               borderTop: "1px solid var(--color-on-surface)",
             }}
           >
-            {NUMBERS_BAND.map((s, i) => (
+            {numbersBand.map((s, i) => (
               <div
                 key={s.label}
                 style={{
@@ -233,9 +295,10 @@ export function FrenchTechBulletin() {
               lineHeight: 1.5,
             }}
           >
-            SOURCE: LA FRENCH TECH, MESR
+            SOURCE: LA FRENCH TECH, MESR · NAVIGATOR ENTITY GRAPH
             <br />
-            READING: 2024 → 2025 TRANSITION HIGHLIGHTED; EARLIER YEARS DESATURATED FOR EMPHASIS.
+            READING: {prevYear} → {latestYear} TRANSITION HIGHLIGHTED; EARLIER YEARS DESATURATED FOR
+            EMPHASIS.
           </div>
         </div>
 
@@ -254,7 +317,7 @@ export function FrenchTechBulletin() {
               lineHeight: 1.1,
             }}
           >
-            The 2025 changes
+            The {latestYear} changes
           </h3>
           <p
             style={{
@@ -266,7 +329,7 @@ export function FrenchTechBulletin() {
               margin: "0 0 16px 0",
             }}
           >
-            All inter-cohort transitions, 2024 → 2025.
+            All inter-cohort transitions, {prevYear} → {latestYear}.
           </p>
 
           {/* Mini stat strip */}
@@ -278,7 +341,7 @@ export function FrenchTechBulletin() {
               marginBottom: 18,
             }}
           >
-            {MINI_STATS.map((d) => (
+            {miniStatCards.map((d) => (
               <div
                 key={d.label}
                 style={{ padding: "8px 6px", background: "white", border: "1px solid rgba(193,199,206,0.55)" }}
@@ -311,8 +374,8 @@ export function FrenchTechBulletin() {
               <span style={{ textAlign: "right" }}>From</span>
               <span style={{ textAlign: "right" }}>To</span>
             </div>
-            {LEDGER.map((r, i) => (
-              <div className="ledger-row" key={i}>
+            {ledger.map((r, i) => (
+              <div className="ledger-row" key={`${r.name}-${i}`}>
                 <span style={{ color: r.color, fontWeight: 700, fontSize: 13 }}>{r.sym}</span>
                 <span style={{ fontFamily: "var(--font-headline)", fontWeight: 600 }}>{r.name}</span>
                 <span className="num" style={{ fontSize: 10.5, color: "var(--color-on-surface-variant)", textAlign: "right" }}>
@@ -323,20 +386,19 @@ export function FrenchTechBulletin() {
                 </span>
               </div>
             ))}
-            <div
-              style={{
-                marginTop: 8,
-                fontSize: 10.5,
-                fontFamily: "var(--font-headline)",
-                fontStyle: "italic",
-                color: "var(--color-on-surface-variant)",
-              }}
-            >
-              Showing 24 of 89 movements.{" "}
-              <a href="#" style={{ color: "var(--color-primary)" }}>
-                View full ledger ↗
-              </a>
-            </div>
+            {ledgerMeta.total > ledgerMeta.shown && (
+              <div
+                style={{
+                  marginTop: 8,
+                  fontSize: 10.5,
+                  fontFamily: "var(--font-headline)",
+                  fontStyle: "italic",
+                  color: "var(--color-on-surface-variant)",
+                }}
+              >
+                Showing {ledgerMeta.shown} of {ledgerMeta.total} movements.
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -360,11 +422,12 @@ export function FrenchTechBulletin() {
               lineHeight: 1.02,
             }}
           >
-            The forty newcomers, in brief
+            The {numberToWords(arrivalsMeta.total)} newcomers, in brief
           </h2>
         </div>
         <div className="editorial-overline" style={{ color: "var(--color-on-surface-variant)" }}>
-          Figure B · Eight to the top, thirty-two below
+          Figure B · {capitalize(numberToWords(arrivalsMeta.toNext40))} to the top,{" "}
+          {numberToWords(arrivalsMeta.toFt120)} below
         </div>
       </div>
 
@@ -376,7 +439,7 @@ export function FrenchTechBulletin() {
           columnRule: "1px solid rgba(29,28,21,0.2)",
         }}
       >
-        {ARRIVALS.slice(0, 20).map((a) => (
+        {shownArrivals.map((a) => (
           <div
             key={a.name}
             style={{ breakInside: "avoid", marginBottom: 22, display: "flex", flexDirection: "column", gap: 6 }}
@@ -406,27 +469,26 @@ export function FrenchTechBulletin() {
             <p style={{ fontFamily: "var(--font-headline)", fontSize: 12.5, lineHeight: 1.45, margin: 0, color: "var(--color-on-surface)" }}>
               {a.note}
             </p>
-            <div style={{ fontSize: 10.5, fontFamily: "var(--font-mono)", color: "var(--color-primary)", fontWeight: 600 }}>
-              {a.raised} raised
-            </div>
           </div>
         ))}
       </div>
 
-      <div
-        style={{
-          marginTop: 24,
-          padding: "12px 16px",
-          background: "var(--color-on-surface)",
-          color: "var(--color-background)",
-          fontSize: 11,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          fontWeight: 600,
-        }}
-      >
-        + 20 more arrivals continue overleaf →
-      </div>
+      {moreArrivals > 0 && (
+        <div
+          style={{
+            marginTop: 24,
+            padding: "12px 16px",
+            background: "var(--color-on-surface)",
+            color: "var(--color-background)",
+            fontSize: 11,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            fontWeight: 600,
+          }}
+        >
+          + {moreArrivals} more arrivals continue overleaf →
+        </div>
+      )}
 
       {/* ─── Sectors + Geography ───────────────── */}
       <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "5fr 7fr", gap: 36 }}>
@@ -445,9 +507,9 @@ export function FrenchTechBulletin() {
               lineHeight: 1.05,
             }}
           >
-            AI consolidates, climate surges
+            {sectorsTitle}
           </h2>
-          <SectorTreemap data={SECTORS} width={520} height={420} />
+          <SectorTreemap data={sectors} width={520} height={420} />
           <div
             style={{
               marginTop: 10,
@@ -459,8 +521,11 @@ export function FrenchTechBulletin() {
             }}
           >
             Area proportional to count.{" "}
-            <strong style={{ fontStyle: "normal", color: "var(--color-on-surface)" }}>Twenty-two</strong> AI-classified
-            members; FinTech and SaaS remain anchor sectors.
+            <strong style={{ fontStyle: "normal", color: "var(--color-on-surface)" }}>
+              {capitalize(numberToWords(sectorLeaderCount))}
+            </strong>{" "}
+            {sectorsMeta.leader}-classified members lead; composition shown for {classifiedTotal} of{" "}
+            {numbers.total} members with a recorded sector.
           </div>
         </div>
 
@@ -496,22 +561,22 @@ export function FrenchTechBulletin() {
               }}
             >
               <span>
-                <strong style={{ color: "var(--color-on-surface)" }}>78</strong> Paris
+                <strong style={{ color: "var(--color-on-surface)" }}>{geo.paris}</strong> Paris
               </span>
               <span>
-                <strong style={{ color: "var(--color-on-surface)" }}>42</strong> Province
+                <strong style={{ color: "var(--color-on-surface)" }}>{geo.province}</strong> Province
               </span>
             </div>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 220px", gap: 18 }}>
-            <FranceMap regions={REGIONS} width={560} height={500} />
+            <FranceMap regions={regions} width={560} height={500} />
 
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <div className="diplomatic-label" style={{ marginBottom: 6 }}>
                 City Ranking
               </div>
-              {REGIONS.slice(0, 10).map((r, i) => (
+              {regions.slice(0, 10).map((r, i) => (
                 <div
                   key={r.city}
                   className="hairline-bot"
@@ -543,6 +608,18 @@ export function FrenchTechBulletin() {
                   </span>
                 </div>
               ))}
+              <div
+                style={{
+                  marginTop: 4,
+                  fontSize: 10,
+                  fontFamily: "var(--font-headline)",
+                  fontStyle: "italic",
+                  color: "var(--color-on-surface-variant)",
+                  lineHeight: 1.4,
+                }}
+              >
+                Located: {geo.located} of {geo.total} members with a recorded city.
+              </div>
             </div>
           </div>
         </div>
@@ -555,7 +632,8 @@ export function FrenchTechBulletin() {
         </div>
         <div className="tape">
           <div style={{ padding: "0 24px", fontFamily: "var(--font-mono)", fontSize: 12.5, letterSpacing: "0.04em", fontWeight: 500 }}>
-            {TAPE_NAMES.join("  ·  ")}  ·  + 73 more
+            {tape.names.join("  ·  ")}
+            {tape.remaining > 0 ? `  ·  + ${tape.remaining} more` : ""}
           </div>
         </div>
       </div>
@@ -578,9 +656,9 @@ export function FrenchTechBulletin() {
             Edition
           </div>
           <p style={{ margin: 0, fontFamily: "var(--font-headline)", fontSize: 12, lineHeight: 1.55 }}>
-            The Navigator · Bulletin Nº 6
+            The Navigator · Bulletin Nº {meta.bulletinNo}
             <br />
-            Published 25 May 2025 · Paris
+            Promotion {latestYear} · Paris
           </p>
         </div>
         <div>
@@ -600,6 +678,6 @@ export function FrenchTechBulletin() {
           </p>
         </div>
       </div>
-    </div>
+    </BulletinShell>
   );
 }
