@@ -298,6 +298,69 @@ export function FrenchTechBulletin({
             READING: {prevYear} → {latestYear} TRANSITION HIGHLIGHTED; EARLIER YEARS DESATURATED FOR
             EMPHASIS.
           </div>
+
+          {/* Newcomers — compact list */}
+          <div style={{ marginTop: 28, paddingTop: 18, borderTop: "2px solid var(--color-on-surface)" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, marginBottom: 14 }}>
+              <div>
+                <div className="editorial-overline" style={{ color: "var(--color-primary)" }}>
+                  Figure B · Arrivals
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-headline)",
+                    fontSize: 20,
+                    fontWeight: 500,
+                    letterSpacing: "-0.01em",
+                    margin: "10px 0 0 0",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  The {numberToWords(arrivalsMeta.total)} newcomers
+                </h3>
+              </div>
+              <div className="editorial-overline" style={{ color: "var(--color-on-surface-variant)", textAlign: "right" }}>
+                {capitalize(numberToWords(arrivalsMeta.toNext40))} to the top,{" "}
+                {numberToWords(arrivalsMeta.toFt120)} below
+              </div>
+            </div>
+
+            <div style={{ columnCount: 2, columnGap: 24, columnRule: "1px solid rgba(29,28,21,0.2)" }}>
+              {arrivals.map((a) => (
+                <div
+                  key={a.name}
+                  style={{ breakInside: "avoid", marginBottom: 12, display: "flex", flexDirection: "column", gap: 3 }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                    <span
+                      className={`tier-tag ${a.tier === "Next 40" ? "next40" : "ft120"}`}
+                      style={{ fontSize: 8, padding: "1px 4px" }}
+                    >
+                      {a.tier === "Next 40" ? "N40" : "120"}
+                    </span>
+                    <Link
+                      href={`/entities/${a.slug}`}
+                      className="entity-link"
+                      style={{ fontFamily: "var(--font-headline)", fontSize: 16, fontWeight: 600, color: "var(--color-on-surface)" }}
+                    >
+                      {a.name}
+                    </Link>
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 9,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      color: "var(--color-on-surface-variant)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {a.sector} · {a.city}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Movements ledger */}
@@ -403,80 +466,6 @@ export function FrenchTechBulletin({
             </div>
           </div>
         </div>
-      </div>
-
-      {/* ─── Double-rule divider ─────────────────── */}
-      <div style={{ marginTop: 56, height: 0, borderTop: "4px double var(--color-on-surface)" }} />
-
-      {/* ─── Arrivals ────────────────── */}
-      <div style={{ marginTop: 36, display: "grid", gridTemplateColumns: "1fr auto", alignItems: "baseline", gap: 24 }}>
-        <div>
-          <div className="editorial-overline" style={{ color: "var(--color-primary)" }}>
-            Inside · Arrivals
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-headline)",
-              fontSize: 40,
-              fontWeight: 500,
-              letterSpacing: "-0.02em",
-              margin: "12px 0 0 0",
-              lineHeight: 1.02,
-            }}
-          >
-            The {numberToWords(arrivalsMeta.total)} newcomers, in brief
-          </h2>
-        </div>
-        <div className="editorial-overline" style={{ color: "var(--color-on-surface-variant)" }}>
-          Figure B · {capitalize(numberToWords(arrivalsMeta.toNext40))} to the top,{" "}
-          {numberToWords(arrivalsMeta.toFt120)} below
-        </div>
-      </div>
-
-      <div
-        style={{
-          marginTop: 32,
-          columnCount: 4,
-          columnGap: 28,
-          columnRule: "1px solid rgba(29,28,21,0.2)",
-        }}
-      >
-        {arrivals.map((a) => (
-          <div
-            key={a.name}
-            style={{ breakInside: "avoid", marginBottom: 22, display: "flex", flexDirection: "column", gap: 6 }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span
-                className={`tier-tag ${a.tier === "Next 40" ? "next40" : "ft120"}`}
-                style={{ fontSize: 8.5, padding: "2px 5px" }}
-              >
-                {a.tier === "Next 40" ? "N40" : "120"}
-              </span>
-              <Link
-                href={`/entities/${a.slug}`}
-                className="entity-link"
-                style={{ fontFamily: "var(--font-headline)", fontSize: 17, fontWeight: 600, color: "var(--color-on-surface)" }}
-              >
-                {a.name}
-              </Link>
-            </div>
-            <div
-              style={{
-                fontSize: 9.5,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "var(--color-on-surface-variant)",
-                fontWeight: 600,
-              }}
-            >
-              {a.sector} · {a.city}
-            </div>
-            <p style={{ fontFamily: "var(--font-headline)", fontSize: 12.5, lineHeight: 1.45, margin: 0, color: "var(--color-on-surface)" }}>
-              {a.note}
-            </p>
-          </div>
-        ))}
       </div>
 
       {/* ─── Sectors + Geography ───────────────── */}
