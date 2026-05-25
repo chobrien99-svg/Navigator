@@ -14,7 +14,13 @@ const LEGEND = [
   { label: "Exited", c: "#963d3d" },
 ];
 
-function BulletinShell({ children }: { children: React.ReactNode }) {
+function BulletinShell({
+  children,
+  embed = false,
+}: {
+  children: React.ReactNode;
+  embed?: boolean;
+}) {
   return (
     <div
       className="dir-b"
@@ -22,7 +28,8 @@ function BulletinShell({ children }: { children: React.ReactNode }) {
         background: "var(--color-background)",
         minHeight: "100%",
         minWidth: 1040,
-        padding: "32px 48px 56px 48px",
+        width: embed ? "100%" : undefined,
+        padding: embed ? "24px 32px 40px 32px" : "32px 48px 56px 48px",
         fontFamily: "var(--font-body)",
       }}
     >
@@ -31,20 +38,51 @@ function BulletinShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Renders an entity reference as a navigable link on the live site, or as
+// plain text in embed mode (so external embeds never pull readers off-site).
+function MaybeLink({
+  embed,
+  href,
+  className,
+  style,
+  children,
+}: {
+  embed: boolean;
+  href: string;
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}) {
+  if (embed) {
+    return (
+      <span className={className} style={style}>
+        {children}
+      </span>
+    );
+  }
+  return (
+    <Link href={href} className={className} style={style}>
+      {children}
+    </Link>
+  );
+}
+
 export function FrenchTechBulletin({
   data,
   error,
   archiveHref,
   isHistoric = false,
+  embed = false,
 }: {
   data: BulletinData | null;
   error?: string | null;
   archiveHref?: string;
   isHistoric?: boolean;
+  embed?: boolean;
 }) {
   if (!data || data.cohorts.length === 0) {
     return (
-      <BulletinShell>
+      <BulletinShell embed={embed}>
         <div
           style={{
             border: "1px solid rgba(29,28,21,0.35)",
@@ -109,7 +147,7 @@ export function FrenchTechBulletin({
     : `${sectorsMeta.leader} leads the cohort`;
 
   return (
-    <BulletinShell>
+    <BulletinShell embed={embed}>
       {/* ─── Masthead ─────────────────────── */}
       <div className="masthead-thick">
         <div
@@ -132,7 +170,7 @@ export function FrenchTechBulletin({
           <span className="num" style={{ letterSpacing: "0.06em" }}>
             Promotion {latestYear} · Paris
           </span>
-          {archiveHref && (
+          {archiveHref && !embed && (
             <Link href={archiveHref} className="entity-link" style={{ fontWeight: 600 }}>
               All editions →
             </Link>
@@ -348,13 +386,14 @@ export function FrenchTechBulletin({
                     >
                       {a.tier === "Next 40" ? "N40" : "120"}
                     </span>
-                    <Link
+                    <MaybeLink
+                      embed={embed}
                       href={`/entities/${a.slug}`}
                       className="entity-link"
                       style={{ fontFamily: "var(--font-headline)", fontSize: 16, fontWeight: 600, color: "var(--color-on-surface)" }}
                     >
                       {a.name}
-                    </Link>
+                    </MaybeLink>
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
                     {a.sector !== "—" && <span className="sector-tag">{a.sector}</span>}
@@ -468,13 +507,14 @@ export function FrenchTechBulletin({
             {ledger.map((r, i) => (
               <div className="ledger-row" key={`${r.name}-${i}`}>
                 <span style={{ color: r.color, fontWeight: 700, fontSize: 13 }}>{r.sym}</span>
-                <Link
+                <MaybeLink
+                  embed={embed}
                   href={`/entities/${r.slug}`}
                   className="entity-link"
                   style={{ fontFamily: "var(--font-headline)", fontWeight: 600 }}
                 >
                   {r.name}
-                </Link>
+                </MaybeLink>
                 <span className="num" style={{ fontSize: 10.5, color: "var(--color-on-surface-variant)", textAlign: "right" }}>
                   {r.from}
                 </span>
@@ -643,9 +683,9 @@ export function FrenchTechBulletin({
             {tape.names.map((t, i) => (
               <span key={t.slug || t.name}>
                 {i > 0 ? "  ·  " : ""}
-                <Link href={`/entities/${t.slug}`} className="entity-link">
+                <MaybeLink embed={embed} href={`/entities/${t.slug}`} className="entity-link">
                   {t.name}
-                </Link>
+                </MaybeLink>
               </span>
             ))}
             {tape.remaining > 0 ? `  ·  + ${tape.remaining} more` : ""}
