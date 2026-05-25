@@ -207,6 +207,38 @@ export default function EditOrganizationPage() {
   const [newSectorId, setNewSectorId] = useState("");
   const [newSectorIsPrimary, setNewSectorIsPrimary] = useState(false);
 
+  // City state (organizations.city_id → cities table)
+  interface CityOption {
+    id: string;
+    name: string;
+    department: string | null;
+  }
+  const [allCities, setAllCities] = useState<CityOption[]>([]);
+  const [cityId, setCityId] = useState<string | null>(null);
+  const [cityQuery, setCityQuery] = useState("");
+  const [showCitySuggestions, setShowCitySuggestions] = useState(false);
+
+  // Legal entities state
+  interface LegalEntityRow {
+    id: string;
+    legal_name: string | null;
+    legal_form: string | null;
+    siren: string | null;
+    siret: string | null;
+    registered_city: string | null;
+    country: string | null;
+    is_primary: boolean;
+  }
+  const [legalEntities, setLegalEntities] = useState<LegalEntityRow[]>([]);
+  const [newLegalEntity, setNewLegalEntity] = useState({
+    legal_name: "",
+    siren: "",
+    siret: "",
+    legal_form: "",
+    is_primary: false,
+  });
+  const [addingLegalEntity, setAddingLegalEntity] = useState(false);
+
   // Programs state
   interface OrgProgramRow {
     id: string;
@@ -302,7 +334,7 @@ export default function EditOrganizationPage() {
     async function load() {
       const { data: org, error: orgErr } = await supabase
         .from("organizations")
-        .select("*")
+        .select("*, cities:city_id(id, name)")
         .eq("id", id)
         .single();
 
@@ -331,6 +363,11 @@ export default function EditOrganizationPage() {
         fundraising_status: org.fundraising_status ?? "unknown",
         technology_layer: org.technology_layer ?? "",
       });
+
+      // City (linked via city_id)
+      setCityId(org.city_id ?? null);
+      const cityRel = (org as { cities?: { id: string; name: string } | null }).cities;
+      setCityQuery(cityRel?.name ?? "");
 
       // Load profile
       const { data: profileData } = await supabase
@@ -397,6 +434,27 @@ export default function EditOrganizationPage() {
         .order("name");
       if (allSectorsData) {
         setAllSectors(allSectorsData as SectorOption[]);
+      }
+
+      // Load all cities for the city picker
+      const { data: allCitiesData } = await supabase
+        .from("cities")
+        .select("id, name, department")
+        .order("name");
+      if (allCitiesData) {
+        setAllCities(allCitiesData as CityOption[]);
+      }
+
+      // Load legal entities (SIREN/SIRET registrations)
+      const { data: legalEntitiesData } = await supabase
+        .from("legal_entities")
+        .select(
+          "id, legal_name, legal_form, siren, siret, registered_city, country, is_primary"
+        )
+        .eq("organization_id", id)
+        .order("is_primary", { ascending: false });
+      if (legalEntitiesData) {
+        setLegalEntities(legalEntitiesData as LegalEntityRow[]);
       }
 
       // Load organization programs (memberships)
@@ -521,6 +579,7 @@ export default function EditOrganizationPage() {
           last_round: form.last_round || null,
           fundraising_status: form.fundraising_status || "unknown",
           technology_layer: form.technology_layer || null,
+          city_id: cityId,
         })
         .eq("id", id);
 
@@ -812,6 +871,136 @@ export default function EditOrganizationPage() {
     }
   }
 
+  // ─── Legal entity handlers ─────────────────────────────
+  async function handleAddLegalEntity() {
+    setAddingLegalEntity(true);
+    setError(null);
+    try {
+      const legalName = newLegalEntity.legal_name.trim() || form.name.trim();
+      if (!legalName) {
+        setError("Legal name is required.");
+        return;
+      }
+      // Only one entity can be primary — demote the existing one if needed
+      if (newLegalEntity.is_primary) {
+        const existingPrimary = legalEntities.find((l) => l.is_primary);
+        if (existingPrimary) {
+          await supabase
+            .from("legal_entities")
+            .update({ is_primary: false })
+            .eq("id", existingPrimary.id);
+        }
+      }
+
+      const { data: inserted, error: insErr } = await supabase
+        .from("legal_entities")
+        .insert({
+          organization_id: id,
+          legal_name: legalName,
+          siren: newLegalEntity.siren.trim() || null,
+          siret: newLegalEntity.siret.trim() || null,
+          legal_form: newLegalEntity.legal_form.trim() || null,
+          country: "France",
+          is_primary: newLegalEntity.is_primary,
+        })
+        .select(
+          "id, legal_name, legal_form, siren, siret, registered_city, country, is_primary"
+        )
+        .single();
+
+      if (insErr) {
+        setError(insErr.message);
+        return;
+      }
+      if (inserted) {
+        setLegalEntities((prev) => {
+          const demoted = newLegalEntity.is_primary
+            ? prev.map((l) => ({ ...l, is_primary: false }))
+            : prev;
+          return [...demoted, inserted as LegalEntityRow];
+        });
+        setNewLegalEntity({
+          legal_name: "",
+          siren: "",
+          siret: "",
+          legal_form: "",
+          is_primary: false,
+        });
+      }
+    } finally {
+      setAddingLegalEntity(false);
+    }
+  }
+
+  async function handleUpdateLegalEntity(
+    rowId: string,
+    updates: Partial<Omit<LegalEntityRow, "id">>
+  ) {
+    setError(null);
+    const { error: updErr } = await supabase
+      .from("legal_entities")
+      .update(updates)
+      .eq("id", rowId);
+    if (updErr) {
+      setError(updErr.message);
+    } else {
+      setLegalEntities((prev) =>
+        prev.map((l) => (l.id === rowId ? { ...l, ...updates } : l))
+      );
+    }
+  }
+
+  async function handleRemoveLegalEntity(rowId: string) {
+    if (!confirm("Remove this legal entity? This cannot be undone.")) return;
+    const { error: delErr } = await supabase
+      .from("legal_entities")
+      .delete()
+      .eq("id", rowId);
+    if (delErr) {
+      setError(delErr.message);
+    } else {
+      setLegalEntities((prev) => prev.filter((l) => l.id !== rowId));
+    }
+  }
+
+  async function handleToggleLegalPrimary(rowId: string) {
+    setError(null);
+    const target = legalEntities.find((l) => l.id === rowId);
+    if (!target) return;
+    if (target.is_primary) {
+      const { error: updErr } = await supabase
+        .from("legal_entities")
+        .update({ is_primary: false })
+        .eq("id", rowId);
+      if (updErr) {
+        setError(updErr.message);
+        return;
+      }
+      setLegalEntities((prev) =>
+        prev.map((l) => (l.id === rowId ? { ...l, is_primary: false } : l))
+      );
+      return;
+    }
+    const existing = legalEntities.find((l) => l.is_primary);
+    if (existing) {
+      await supabase
+        .from("legal_entities")
+        .update({ is_primary: false })
+        .eq("id", existing.id);
+    }
+    const { error: updErr } = await supabase
+      .from("legal_entities")
+      .update({ is_primary: true })
+      .eq("id", rowId);
+    if (updErr) {
+      setError(updErr.message);
+      return;
+    }
+    setLegalEntities((prev) =>
+      prev.map((l) => ({ ...l, is_primary: l.id === rowId }))
+    );
+  }
+
   // ─── Program handlers ──────────────────────────────────
   async function handleAddProgram() {
     if (!newProgramEditionId) return;
@@ -1091,6 +1280,15 @@ export default function EditOrganizationPage() {
     );
   }
 
+  const cityMatches =
+    cityQuery.trim().length >= 1
+      ? allCities
+          .filter((c) =>
+            c.name.toLowerCase().includes(cityQuery.trim().toLowerCase())
+          )
+          .slice(0, 8)
+      : [];
+
   return (
     <div className="px-10 py-8">
       {/* Breadcrumb */}
@@ -1170,6 +1368,76 @@ export default function EditOrganizationPage() {
 
           <Field label="Short Description" value={form.short_description} onChange={(v) => updateField("short_description", v)} />
           <TextArea label="Full Description" value={form.description} onChange={(v) => updateField("description", v)} />
+
+          <div className="relative">
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              City
+            </label>
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                value={cityQuery}
+                onChange={(e) => {
+                  setCityQuery(e.target.value);
+                  setCityId(null);
+                  setShowCitySuggestions(true);
+                }}
+                onFocus={() => {
+                  if (cityQuery.trim().length >= 1) setShowCitySuggestions(true);
+                }}
+                onBlur={() => setTimeout(() => setShowCitySuggestions(false), 200)}
+                placeholder="Type a city…"
+                className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+              {cityId && (
+                <span
+                  className="material-symbols-outlined text-[16px] text-primary"
+                  title="Linked to a city record"
+                >
+                  check_circle
+                </span>
+              )}
+              {cityQuery && (
+                <button
+                  onClick={() => {
+                    setCityQuery("");
+                    setCityId(null);
+                  }}
+                  className="text-outline-variant hover:text-error"
+                  title="Clear city"
+                >
+                  <span className="material-symbols-outlined text-[16px]">
+                    close
+                  </span>
+                </button>
+              )}
+            </div>
+            {showCitySuggestions && cityMatches.length > 0 && (
+              <div className="absolute z-10 mt-1 w-full bg-surface-container-lowest border border-outline-variant/20 shadow-lg max-h-40 overflow-y-auto">
+                {cityMatches.map((c) => (
+                  <button
+                    key={c.id}
+                    className="block w-full px-3 py-2 text-left text-sm text-on-surface hover:bg-surface-container-low"
+                    onMouseDown={() => {
+                      setCityId(c.id);
+                      setCityQuery(c.name);
+                      setShowCitySuggestions(false);
+                    }}
+                  >
+                    {c.name}
+                    {c.department && (
+                      <span className="text-outline-variant"> · {c.department}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+            {cityQuery.trim() && !cityId && (
+              <p className="mt-1 text-[0.6rem] text-outline-variant">
+                Select a city from the list to link it. Unmatched text won’t be saved.
+              </p>
+            )}
+          </div>
 
           <div className="grid grid-cols-2 gap-4">
             <Field label="Country" value={form.country} onChange={(v) => updateField("country", v)} />
@@ -1315,6 +1583,192 @@ export default function EditOrganizationPage() {
           >
             Add
           </button>
+        </div>
+      </div>
+
+      {/* Legal Entities Section */}
+      <div className="mt-12">
+        <h2 className="diplomatic-label">Legal Entities ({legalEntities.length})</h2>
+        <div className="mt-4 space-y-3">
+          {legalEntities.map((le) => (
+            <div key={le.id} className="bg-surface-container-lowest p-4">
+              <div className="flex items-start gap-4">
+                <div className="grid flex-1 grid-cols-2 gap-x-4 gap-y-3 md:grid-cols-4">
+                  <div className="md:col-span-2">
+                    <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                      Legal Name
+                    </label>
+                    <input
+                      type="text"
+                      defaultValue={le.legal_name ?? ""}
+                      onBlur={(e) =>
+                        handleUpdateLegalEntity(le.id, {
+                          legal_name: e.target.value.trim() || null,
+                        })
+                      }
+                      className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                      SIREN
+                    </label>
+                    <input
+                      type="text"
+                      defaultValue={le.siren ?? ""}
+                      onBlur={(e) =>
+                        handleUpdateLegalEntity(le.id, {
+                          siren: e.target.value.trim() || null,
+                        })
+                      }
+                      placeholder="9 digits"
+                      className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                      SIRET
+                    </label>
+                    <input
+                      type="text"
+                      defaultValue={le.siret ?? ""}
+                      onBlur={(e) =>
+                        handleUpdateLegalEntity(le.id, {
+                          siret: e.target.value.trim() || null,
+                        })
+                      }
+                      placeholder="14 digits"
+                      className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                      Legal Form
+                    </label>
+                    <input
+                      type="text"
+                      defaultValue={le.legal_form ?? ""}
+                      onBlur={(e) =>
+                        handleUpdateLegalEntity(le.id, {
+                          legal_form: e.target.value.trim() || null,
+                        })
+                      }
+                      placeholder="e.g. SAS"
+                      className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+                      Registered City
+                    </label>
+                    <input
+                      type="text"
+                      defaultValue={le.registered_city ?? ""}
+                      onBlur={(e) =>
+                        handleUpdateLegalEntity(le.id, {
+                          registered_city: e.target.value.trim() || null,
+                        })
+                      }
+                      className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <div className="flex shrink-0 items-center gap-1">
+                  <button
+                    onClick={() => handleToggleLegalPrimary(le.id)}
+                    className="p-1 transition-colors hover:text-primary"
+                    title={le.is_primary ? "Primary entity" : "Set as primary"}
+                  >
+                    <span
+                      className={`material-symbols-outlined text-[16px] ${
+                        le.is_primary ? "text-primary" : "text-outline-variant"
+                      }`}
+                    >
+                      {le.is_primary ? "star" : "star_outline"}
+                    </span>
+                  </button>
+                  <button
+                    onClick={() => handleRemoveLegalEntity(le.id)}
+                    className="p-1 text-outline-variant transition-colors hover:text-error"
+                    title="Remove legal entity"
+                  >
+                    <span className="material-symbols-outlined text-[16px]">
+                      delete
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+          {legalEntities.length === 0 && (
+            <p className="text-xs italic text-outline-variant">
+              No legal entities recorded.
+            </p>
+          )}
+        </div>
+
+        {/* Add legal entity form */}
+        <div className="mt-4 bg-surface-container-lowest p-4">
+          <p className="diplomatic-label mb-3 text-[0.6rem]">Add legal entity</p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="md:col-span-2">
+              <Field
+                label="Legal Name"
+                value={newLegalEntity.legal_name}
+                onChange={(v) =>
+                  setNewLegalEntity((l) => ({ ...l, legal_name: v }))
+                }
+                placeholder={form.name}
+              />
+            </div>
+            <Field
+              label="SIREN"
+              value={newLegalEntity.siren}
+              onChange={(v) => setNewLegalEntity((l) => ({ ...l, siren: v }))}
+              placeholder="9 digits"
+            />
+            <Field
+              label="SIRET"
+              value={newLegalEntity.siret}
+              onChange={(v) => setNewLegalEntity((l) => ({ ...l, siret: v }))}
+              placeholder="14 digits"
+            />
+            <Field
+              label="Legal Form"
+              value={newLegalEntity.legal_form}
+              onChange={(v) =>
+                setNewLegalEntity((l) => ({ ...l, legal_form: v }))
+              }
+              placeholder="e.g. SAS"
+            />
+          </div>
+          <div className="mt-3 flex items-center gap-4">
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={newLegalEntity.is_primary}
+                onChange={(e) =>
+                  setNewLegalEntity((l) => ({
+                    ...l,
+                    is_primary: e.target.checked,
+                  }))
+                }
+                className="accent-primary"
+              />
+              <span className="text-xs text-on-surface-variant">Primary</span>
+            </label>
+            <button
+              onClick={handleAddLegalEntity}
+              disabled={addingLegalEntity}
+              className="px-3 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary/5 disabled:opacity-30"
+            >
+              {addingLegalEntity ? "Adding…" : "Add Legal Entity"}
+            </button>
+          </div>
+          <p className="mt-2 text-[0.6rem] text-outline-variant">
+            Leave Legal Name blank to use the organization name. Only one entity
+            can be primary.
+          </p>
         </div>
       </div>
 
