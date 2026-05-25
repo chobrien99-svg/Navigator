@@ -380,3 +380,17 @@ body {
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
 }
+
+.dir-b .sector-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  background: rgba(29, 28, 21, 0.06);
+  color: var(--color-on-surface-variant);
+  white-space: nowrap;
+}

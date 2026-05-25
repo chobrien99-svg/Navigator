@@ -67,7 +67,7 @@ function canonicalCity(city: string): string {
   return METRO_ROLLUP[city.trim().toLowerCase()] ?? city.trim();
 }
 
-function arrivalNote(org: Organization, sector: string | null, city: string | null): string {
+function arrivalNote(org: Organization): string {
   const short = org.short_description?.trim();
   if (short) return short;
   const long = org.description?.trim();
@@ -77,7 +77,7 @@ function arrivalNote(org: Organization, sector: string | null, city: string | nu
     const lastSpace = cut.lastIndexOf(" ");
     return `${cut.slice(0, lastSpace > 80 ? lastSpace : 150).trimEnd()}…`;
   }
-  return `${sector ?? "French Tech"} · ${city ?? "France"}`;
+  return "";
 }
 
 type Member = { oid: string; tier: Tier; org: Organization };
@@ -166,7 +166,7 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
         slug: m.org.slug,
         sector: sector ?? "—",
         city: city ?? "—",
-        note: arrivalNote(m.org, sector, city),
+        note: arrivalNote(m.org),
         tier: m.tier,
       };
     })
