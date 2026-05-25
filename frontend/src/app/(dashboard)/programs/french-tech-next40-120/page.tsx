@@ -20,5 +20,11 @@ export default async function FrenchTechNextPage() {
     error = e instanceof Error ? e.message : "Failed to load French Tech cohort data";
   }
 
-  return <FrenchTechBulletin data={data} error={error} />;
+  return (
+    <FrenchTechBulletin
+      data={data}
+      error={error}
+      archiveHref="/programs/french-tech-next40-120/archive"
+    />
+  );
 }

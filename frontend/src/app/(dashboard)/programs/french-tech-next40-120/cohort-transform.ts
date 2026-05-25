@@ -5,6 +5,7 @@ import {
   type Arrival,
   type BulletinData,
   type Cohort,
+  type EditionSummary,
   type LedgerRow,
   type Region,
   type Sector,
@@ -67,7 +68,7 @@ function canonicalCity(city: string): string {
   return METRO_ROLLUP[city.trim().toLowerCase()] ?? city.trim();
 }
 
-function arrivalNote(org: Organization, sector: string | null, city: string | null): string {
+function arrivalNote(org: Organization): string {
   const short = org.short_description?.trim();
   if (short) return short;
   const long = org.description?.trim();
@@ -77,16 +78,31 @@ function arrivalNote(org: Organization, sector: string | null, city: string | nu
     const lastSpace = cut.lastIndexOf(" ");
     return `${cut.slice(0, lastSpace > 80 ? lastSpace : 150).trimEnd()}…`;
   }
-  return `${sector ?? "French Tech"} · ${city ?? "France"}`;
+  return "";
 }
 
 type Member = { oid: string; tier: Tier; org: Organization };
 
-/** Build every figure shown in the bulletin from the raw program rows. */
-export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
+/**
+ * Build every figure shown in the bulletin from the raw program rows.
+ *
+ * When `targetYear` is given, the data is scoped to editions up to and
+ * including that year, so a past promotion renders as it stood then
+ * (the chart, numbers, and ledger all end at the chosen year). Omitting
+ * `targetYear` reports on the latest edition.
+ */
+export function buildBulletinData(rows: ProgramOrganization[], targetYear?: number): BulletinData {
+  const scopedRows =
+    targetYear == null
+      ? rows
+      : rows.filter((r) => {
+          const y = r.program_editions?.year;
+          return y != null && y <= targetYear;
+        });
+
   // Group members by edition year.
   const byYear = new Map<number, Member[]>();
-  for (const row of rows) {
+  for (const row of scopedRows) {
     const year = row.program_editions?.year ?? null;
     const tier = tierOf(row.group_label);
     const org = row.organizations ?? null;
@@ -166,7 +182,7 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
         slug: m.org.slug,
         sector: sector ?? "—",
         city: city ?? "—",
-        note: arrivalNote(m.org, sector, city),
+        note: arrivalNote(m.org),
         tier: m.tier,
       };
     })
@@ -294,6 +310,8 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
   const ledgerMeta = { total: ledger.length };
 
   // ── Mini stats / headline numbers ──
+  // The inaugural edition has no prior cohort, so the whole founding group
+  // counts as new arrivals and there are no promotions/demotions/exits.
   const miniStats = lastTransition
     ? {
         newCount: lastTransition.newToN40 + lastTransition.newToFT120,
@@ -301,9 +319,9 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
         demoted: lastTransition.demoted,
         exited: lastTransition.exitedN40 + lastTransition.exitedFT120,
       }
-    : { newCount: 0, promoted: 0, demoted: 0, exited: 0 };
+    : { newCount: latestMembers.length, promoted: 0, demoted: 0, exited: 0 };
 
-  const cumulative = new Set(rows.map((r) => r.organization_id)).size;
+  const cumulative = new Set(scopedRows.map((r) => r.organization_id)).size;
   const numbers = {
     total: latestMembers.length,
     cumulative,
@@ -345,4 +363,44 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
     numbers,
     tape,
   };
+}
+
+/** One summary row per promotion year, for the editions archive index. */
+export function buildEditionIndex(rows: ProgramOrganization[]): EditionSummary[] {
+  const byYear = new Map<number, Member[]>();
+  for (const row of rows) {
+    const year = row.program_editions?.year ?? null;
+    const tier = tierOf(row.group_label);
+    const org = row.organizations ?? null;
+    if (year == null || tier == null || !org) continue;
+    if (!byYear.has(year)) byYear.set(year, []);
+    byYear.get(year)!.push({ oid: row.organization_id, tier, org });
+  }
+
+  const years = [...byYear.keys()].sort((a, b) => a - b);
+  const latestYear = years[years.length - 1];
+  const idsOf = (y: number) => new Set((byYear.get(y) ?? []).map((m) => m.oid));
+
+  return years.map((year, i) => {
+    const members = byYear.get(year) ?? [];
+    const next40 = members.filter((m) => m.tier === "Next 40").length;
+    const ft120 = members.filter((m) => m.tier === "FT 120").length;
+    const newCount =
+      i === 0
+        ? members.length
+        : members.filter((m) => !idsOf(years[i - 1]).has(m.oid)).length;
+    const n = i + 1;
+    return {
+      year,
+      label: i === 0 ? "1er" : `${i + 1}e`,
+      bulletinNo: n,
+      ordinalWord: ORDINAL_WORD[n] ?? `${n}th`,
+      roman: ROMAN[n] ?? String(n),
+      total: members.length,
+      next40,
+      ft120,
+      newCount,
+      current: year === latestYear,
+    };
+  });
 }

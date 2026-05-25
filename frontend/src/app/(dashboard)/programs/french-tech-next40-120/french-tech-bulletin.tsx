@@ -34,9 +34,13 @@ function BulletinShell({ children }: { children: React.ReactNode }) {
 export function FrenchTechBulletin({
   data,
   error,
+  archiveHref,
+  isHistoric = false,
 }: {
   data: BulletinData | null;
   error?: string | null;
+  archiveHref?: string;
+  isHistoric?: boolean;
 }) {
   if (!data || data.cohorts.length === 0) {
     return (
@@ -128,6 +132,11 @@ export function FrenchTechBulletin({
           <span className="num" style={{ letterSpacing: "0.06em" }}>
             Promotion {latestYear} · Paris
           </span>
+          {archiveHref && (
+            <Link href={archiveHref} className="entity-link" style={{ fontWeight: 600 }}>
+              All editions →
+            </Link>
+          )}
         </div>
         <div
           style={{
@@ -160,7 +169,7 @@ export function FrenchTechBulletin({
               fontWeight: 600,
             }}
           >
-            The {meta.ordinalWord} Promotion · Special Edition
+            The {meta.ordinalWord} Promotion · {isHistoric ? "Archived Edition" : "Special Edition"}
           </div>
         </div>
       </div>
@@ -212,6 +221,7 @@ export function FrenchTechBulletin({
               barWidth={18}
               highlightYear={latestYear}
               tonal="spot"
+              announce={!isHistoric}
             />
           </div>
 
@@ -329,7 +339,7 @@ export function FrenchTechBulletin({
               {arrivals.map((a) => (
                 <div
                   key={a.name}
-                  style={{ breakInside: "avoid", marginBottom: 12, display: "flex", flexDirection: "column", gap: 3 }}
+                  style={{ breakInside: "avoid", marginBottom: 14, display: "flex", flexDirection: "column", gap: 4 }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
                     <span
@@ -346,17 +356,37 @@ export function FrenchTechBulletin({
                       {a.name}
                     </Link>
                   </div>
-                  <div
-                    style={{
-                      fontSize: 9,
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      color: "var(--color-on-surface-variant)",
-                      fontWeight: 600,
-                    }}
-                  >
-                    {a.sector} · {a.city}
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+                    {a.sector !== "—" && <span className="sector-tag">{a.sector}</span>}
+                    <span
+                      style={{
+                        fontSize: 9,
+                        letterSpacing: "0.08em",
+                        textTransform: "uppercase",
+                        color: "var(--color-on-surface-variant)",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {a.city}
+                    </span>
                   </div>
+                  {a.note && (
+                    <p
+                      style={{
+                        margin: 0,
+                        fontFamily: "var(--font-headline)",
+                        fontSize: 11.5,
+                        lineHeight: 1.4,
+                        color: "var(--color-on-surface)",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                      }}
+                    >
+                      {a.note}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

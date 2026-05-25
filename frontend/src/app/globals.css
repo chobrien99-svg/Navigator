@@ -380,3 +380,32 @@ body {
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
 }
+
+.dir-b .sector-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  background: rgba(29, 28, 21, 0.06);
+  color: var(--color-on-surface-variant);
+  white-space: nowrap;
+}
+
+.dir-b a.edition-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-on-surface);
+  background: white;
+  border: 1px solid rgba(29, 28, 21, 0.35);
+  padding: 18px 20px;
+  transition: border-color 140ms, box-shadow 140ms, transform 140ms;
+}
+.dir-b a.edition-card:hover {
+  border-color: var(--color-on-surface);
+  box-shadow: 0 4px 14px rgba(29, 28, 21, 0.12);
+  transform: translateY(-2px);
+}
