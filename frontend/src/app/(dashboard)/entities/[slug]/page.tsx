@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { EntityEditButton } from "./edit-button";
 import {
   getOrganizationBySlug,
   getOrganizationFunding,
@@ -151,26 +152,29 @@ export default async function EntityDossierPage({
           )}
         </div>
 
-        {/* Key number — Total Raised or Signal Count */}
-        <div className="text-right">
-          {org.total_raised_eur != null && org.total_raised_eur > 0 ? (
-            <>
-              <p className="diplomatic-label">Total Raised</p>
-              <p className="mt-1 font-headline text-4xl font-bold text-primary">
-                {formatEurFromDb(org.total_raised_eur)}
-              </p>
-            </>
-          ) : (
-            org.signal_count != null &&
-            org.signal_count > 0 && (
+        {/* Edit shortcut (signed-in only) + key number — Total Raised or Signal Count */}
+        <div className="flex flex-col items-end gap-4">
+          <EntityEditButton orgId={org.id} />
+          <div className="text-right">
+            {org.total_raised_eur != null && org.total_raised_eur > 0 ? (
               <>
-                <p className="diplomatic-label">Signals</p>
+                <p className="diplomatic-label">Total Raised</p>
                 <p className="mt-1 font-headline text-4xl font-bold text-primary">
-                  {org.signal_count}
+                  {formatEurFromDb(org.total_raised_eur)}
                 </p>
               </>
-            )
-          )}
+            ) : (
+              org.signal_count != null &&
+              org.signal_count > 0 && (
+                <>
+                  <p className="diplomatic-label">Signals</p>
+                  <p className="mt-1 font-headline text-4xl font-bold text-primary">
+                    {org.signal_count}
+                  </p>
+                </>
+              )
+            )}
+          </div>
         </div>
       </div>
 
