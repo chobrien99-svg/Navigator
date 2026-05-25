@@ -31,6 +31,7 @@ export type Transition = {
 
 export type Arrival = {
   name: string;
+  slug: string;
   sector: string;
   city: string;
   note: string;
@@ -51,6 +52,7 @@ export type Region = {
 export type LedgerRow = {
   sym: "↑" | "↓" | "+" | "−";
   name: string;
+  slug: string;
   from: string;
   to: string;
   color: string;
@@ -73,10 +75,10 @@ export type BulletinData = {
   regions: Region[];
   geo: { paris: number; province: number; located: number; total: number };
   ledger: LedgerRow[];
-  ledgerMeta: { shown: number; total: number };
+  ledgerMeta: { total: number };
   miniStats: { newCount: number; promoted: number; demoted: number; exited: number };
   numbers: { total: number; cumulative: number; next40: number; ft120: number };
-  tape: { names: string[]; remaining: number };
+  tape: { names: { name: string; slug: string }[]; remaining: number };
 };
 
 // ─── Static layout lookups (no DB source) ─────────────────────

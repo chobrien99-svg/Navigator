@@ -370,3 +370,13 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+
+.dir-b a.entity-link {
+  color: inherit;
+  text-decoration: none;
+}
+.dir-b a.entity-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}

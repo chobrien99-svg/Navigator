@@ -163,6 +163,7 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
       const city = cityName(m.org);
       return {
         name: m.org.name,
+        slug: m.org.slug,
         sector: sector ?? "—",
         city: city ?? "—",
         note: arrivalNote(m.org, sector, city),
@@ -268,29 +269,29 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
   const exits: LedgerRow[] = [];
   for (const [oid, at] of prevTiers) {
     const bt = latestTier.get(oid);
-    const name = (latestOrgs.get(oid) ?? prevOrgs.get(oid))?.name ?? "—";
+    const org = latestOrgs.get(oid) ?? prevOrgs.get(oid);
+    const name = org?.name ?? "—";
+    const slug = org?.slug ?? "";
     if (bt === undefined) {
-      exits.push({ sym: "−", name, from: at, to: "Exit", color: COLOR.exit });
+      exits.push({ sym: "−", name, slug, from: at, to: "Exit", color: COLOR.exit });
     } else if (at === "FT 120" && bt === "Next 40") {
-      promotions.push({ sym: "↑", name, from: "FT 120", to: "Next 40", color: COLOR.promoted });
+      promotions.push({ sym: "↑", name, slug, from: "FT 120", to: "Next 40", color: COLOR.promoted });
     } else if (at === "Next 40" && bt === "FT 120") {
-      demotions.push({ sym: "↓", name, from: "Next 40", to: "FT 120", color: COLOR.demoted });
+      demotions.push({ sym: "↓", name, slug, from: "Next 40", to: "FT 120", color: COLOR.demoted });
     }
   }
   const newcomers: LedgerRow[] = arrivals.map((a) => ({
-    sym: "+", name: a.name, from: "—", to: a.tier, color: COLOR.ft120,
+    sym: "+", name: a.name, slug: a.slug, from: "—", to: a.tier, color: COLOR.ft120,
   }));
 
   const byName = (a: LedgerRow, b: LedgerRow) => a.name.localeCompare(b.name);
-  const ledgerAll = [
+  const ledger = [
     ...promotions.sort(byName),
     ...demotions.sort(byName),
     ...newcomers,
     ...exits.sort(byName),
   ];
-  const SHOWN = 24;
-  const ledger = ledgerAll.slice(0, SHOWN);
-  const ledgerMeta = { shown: ledger.length, total: ledgerAll.length };
+  const ledgerMeta = { total: ledger.length };
 
   // ── Mini stats / headline numbers ──
   const miniStats = lastTransition
@@ -312,8 +313,8 @@ export function buildBulletinData(rows: ProgramOrganization[]): BulletinData {
 
   // ── Tape (active cohort, alphabetical) ──
   const tapeNames = latestMembers
-    .map((m) => m.org.name)
-    .sort((a, b) => a.localeCompare(b));
+    .map((m) => ({ name: m.org.name, slug: m.org.slug }))
+    .sort((a, b) => a.name.localeCompare(b.name));
   const TAPE_SHOWN = 47;
   const tape = {
     names: tapeNames.slice(0, TAPE_SHOWN),
