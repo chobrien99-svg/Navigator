@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { BulletinData } from "./cohort-data";
 import { capitalize, numberToWords } from "./cohort-transform";
 import { CohortFlow } from "./charts/cohort-flow";
@@ -96,9 +97,6 @@ export function FrenchTechBulletin({
     { label: "Next 40", v: String(numbers.next40) },
     { label: "FT 120", v: String(numbers.ft120) },
   ];
-
-  const shownArrivals = arrivals.slice(0, 20);
-  const moreArrivals = arrivals.length - shownArrivals.length;
 
   const sectorLeaderCount = sectors[0]?.count ?? 0;
   const classifiedTotal = sectors.reduce((s, d) => s + d.count, 0);
@@ -377,7 +375,13 @@ export function FrenchTechBulletin({
             {ledger.map((r, i) => (
               <div className="ledger-row" key={`${r.name}-${i}`}>
                 <span style={{ color: r.color, fontWeight: 700, fontSize: 13 }}>{r.sym}</span>
-                <span style={{ fontFamily: "var(--font-headline)", fontWeight: 600 }}>{r.name}</span>
+                <Link
+                  href={`/entities/${r.slug}`}
+                  className="entity-link"
+                  style={{ fontFamily: "var(--font-headline)", fontWeight: 600 }}
+                >
+                  {r.name}
+                </Link>
                 <span className="num" style={{ fontSize: 10.5, color: "var(--color-on-surface-variant)", textAlign: "right" }}>
                   {r.from}
                 </span>
@@ -386,19 +390,17 @@ export function FrenchTechBulletin({
                 </span>
               </div>
             ))}
-            {ledgerMeta.total > ledgerMeta.shown && (
-              <div
-                style={{
-                  marginTop: 8,
-                  fontSize: 10.5,
-                  fontFamily: "var(--font-headline)",
-                  fontStyle: "italic",
-                  color: "var(--color-on-surface-variant)",
-                }}
-              >
-                Showing {ledgerMeta.shown} of {ledgerMeta.total} movements.
-              </div>
-            )}
+            <div
+              style={{
+                marginTop: 8,
+                fontSize: 10.5,
+                fontFamily: "var(--font-headline)",
+                fontStyle: "italic",
+                color: "var(--color-on-surface-variant)",
+              }}
+            >
+              {capitalize(numberToWords(ledgerMeta.total))} movements in all.
+            </div>
           </div>
         </div>
       </div>
@@ -439,7 +441,7 @@ export function FrenchTechBulletin({
           columnRule: "1px solid rgba(29,28,21,0.2)",
         }}
       >
-        {shownArrivals.map((a) => (
+        {arrivals.map((a) => (
           <div
             key={a.name}
             style={{ breakInside: "avoid", marginBottom: 22, display: "flex", flexDirection: "column", gap: 6 }}
@@ -451,9 +453,13 @@ export function FrenchTechBulletin({
               >
                 {a.tier === "Next 40" ? "N40" : "120"}
               </span>
-              <span style={{ fontFamily: "var(--font-headline)", fontSize: 17, fontWeight: 600, color: "var(--color-on-surface)" }}>
+              <Link
+                href={`/entities/${a.slug}`}
+                className="entity-link"
+                style={{ fontFamily: "var(--font-headline)", fontSize: 17, fontWeight: 600, color: "var(--color-on-surface)" }}
+              >
                 {a.name}
-              </span>
+              </Link>
             </div>
             <div
               style={{
@@ -472,23 +478,6 @@ export function FrenchTechBulletin({
           </div>
         ))}
       </div>
-
-      {moreArrivals > 0 && (
-        <div
-          style={{
-            marginTop: 24,
-            padding: "12px 16px",
-            background: "var(--color-on-surface)",
-            color: "var(--color-background)",
-            fontSize: 11,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            fontWeight: 600,
-          }}
-        >
-          + {moreArrivals} more arrivals continue overleaf →
-        </div>
-      )}
 
       {/* ─── Sectors + Geography ───────────────── */}
       <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "5fr 7fr", gap: 36 }}>
@@ -632,7 +621,14 @@ export function FrenchTechBulletin({
         </div>
         <div className="tape">
           <div style={{ padding: "0 24px", fontFamily: "var(--font-mono)", fontSize: 12.5, letterSpacing: "0.04em", fontWeight: 500 }}>
-            {tape.names.join("  ·  ")}
+            {tape.names.map((t, i) => (
+              <span key={t.slug || t.name}>
+                {i > 0 ? "  ·  " : ""}
+                <Link href={`/entities/${t.slug}`} className="entity-link">
+                  {t.name}
+                </Link>
+              </span>
+            ))}
             {tape.remaining > 0 ? `  ·  + ${tape.remaining} more` : ""}
           </div>
         </div>
