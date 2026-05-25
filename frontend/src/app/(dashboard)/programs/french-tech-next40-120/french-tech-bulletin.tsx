@@ -34,9 +34,13 @@ function BulletinShell({ children }: { children: React.ReactNode }) {
 export function FrenchTechBulletin({
   data,
   error,
+  archiveHref,
+  isHistoric = false,
 }: {
   data: BulletinData | null;
   error?: string | null;
+  archiveHref?: string;
+  isHistoric?: boolean;
 }) {
   if (!data || data.cohorts.length === 0) {
     return (
@@ -128,6 +132,11 @@ export function FrenchTechBulletin({
           <span className="num" style={{ letterSpacing: "0.06em" }}>
             Promotion {latestYear} · Paris
           </span>
+          {archiveHref && (
+            <Link href={archiveHref} className="entity-link" style={{ fontWeight: 600 }}>
+              All editions →
+            </Link>
+          )}
         </div>
         <div
           style={{
@@ -160,7 +169,7 @@ export function FrenchTechBulletin({
               fontWeight: 600,
             }}
           >
-            The {meta.ordinalWord} Promotion · Special Edition
+            The {meta.ordinalWord} Promotion · {isHistoric ? "Archived Edition" : "Special Edition"}
           </div>
         </div>
       </div>
@@ -212,6 +221,7 @@ export function FrenchTechBulletin({
               barWidth={18}
               highlightYear={latestYear}
               tonal="spot"
+              announce={!isHistoric}
             />
           </div>
 

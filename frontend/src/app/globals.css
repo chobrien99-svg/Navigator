@@ -394,3 +394,18 @@ body {
   color: var(--color-on-surface-variant);
   white-space: nowrap;
 }
+
+.dir-b a.edition-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-on-surface);
+  background: white;
+  border: 1px solid rgba(29, 28, 21, 0.35);
+  padding: 18px 20px;
+  transition: border-color 140ms, box-shadow 140ms, transform 140ms;
+}
+.dir-b a.edition-card:hover {
+  border-color: var(--color-on-surface);
+  box-shadow: 0 4px 14px rgba(29, 28, 21, 0.12);
+  transform: translateY(-2px);
+}

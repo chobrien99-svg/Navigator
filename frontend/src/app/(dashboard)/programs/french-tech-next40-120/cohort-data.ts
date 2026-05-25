@@ -58,6 +58,20 @@ export type LedgerRow = {
   color: string;
 };
 
+// One row per promotion year, for the editions archive index.
+export type EditionSummary = {
+  year: number;
+  label: string;
+  bulletinNo: number;
+  ordinalWord: string;
+  roman: string;
+  total: number;
+  next40: number;
+  ft120: number;
+  newCount: number;
+  current: boolean;
+};
+
 // The fully-derived shape consumed by <FrenchTechBulletin>.
 export type BulletinData = {
   meta: {

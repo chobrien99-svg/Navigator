@@ -17,6 +17,7 @@ type CohortFlowProps = {
   tonal?: Tonal;
   topPad?: number;
   bottomPad?: number;
+  announce?: boolean;
 };
 
 type Ribbon = {
@@ -47,6 +48,7 @@ export function CohortFlow({
   tonal = "full",
   topPad = 60,
   bottomPad = 60,
+  announce = true,
 }: CohortFlowProps) {
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [tip, setTip] = useState<{ label: string; sub: string } | null>(null);
@@ -78,10 +80,11 @@ export function CohortFlow({
   const leftPad = 22;
   const rightPad = 22;
   const innerWidth = width - leftPad - rightPad;
-  const colSpacing = innerWidth / (cohorts.length - 1);
+  const colSpacing = cohorts.length > 1 ? innerWidth / (cohorts.length - 1) : 0;
 
   const columns = cohorts.map((c, i) => {
-    const x = leftPad + i * colSpacing - barWidth / 2;
+    const x =
+      cohorts.length > 1 ? leftPad + i * colSpacing - barWidth / 2 : width / 2 - barWidth / 2;
     const n40Top = topPad;
     const n40Bot = n40Top + n40Height;
     const ft120Top = n40Bot + segmentGap;
@@ -357,7 +360,7 @@ export function CohortFlow({
                   >
                     {c.label.toUpperCase()} PROMO
                   </text>
-                  {isCurrent && (
+                  {isCurrent && announce && (
                     <text
                       x={c.x + barWidth / 2}
                       y={c.ft120Bot + 70}
