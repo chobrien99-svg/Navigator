@@ -147,16 +147,9 @@ export function CohortFlow({
     return `M ${r.sx} ${r.sy0} C ${r.sx + dx} ${r.sy0}, ${r.tx - dx} ${r.ty0}, ${r.tx} ${r.ty0} L ${r.tx} ${r.ty1} C ${r.tx - dx} ${r.ty1}, ${r.sx + dx} ${r.sy1}, ${r.sx} ${r.sy1} Z`;
   }
 
-  const yearMeta = cohorts.map((c, i) => {
-    const newCount =
-      i > 0 ? transitions[i - 1].newToN40 + transitions[i - 1].newToFT120 : 0;
-    const exitCount =
-      i < cohorts.length - 1 ? transitions[i].exitedN40 + transitions[i].exitedFT120 : 0;
-    const isInaugural = i === 0;
-    return { ...c, newCount, exitCount, isInaugural };
-  });
-
   const stripHeight = (count: number) => count * scale;
+  const n40TopY = topPad;
+  const ft120BotY = columns[0].ft120Bot;
 
   return (
     <svg className="flow-svg" width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
@@ -177,23 +170,28 @@ export function CohortFlow({
         <path key={i} d={ribbonPath(r)} fill={r.color} opacity={r.opacity} />
       ))}
 
-      {columns.map((c, i) => {
-        const isCurrent = c.year === highlightYear;
+      {/* New-entrant / exit strips, placed in the gap between the two years they bridge. */}
+      {transitions.map((t, idx) => {
+        const src = columns[idx];
+        const tgt = columns[idx + 1];
+        const gapX = (src.x + barWidth + tgt.x) / 2 - barWidth / 2;
+        const newCount = t.newToN40 + t.newToFT120;
+        const exitCount = t.exitedN40 + t.exitedFT120;
         return (
-          <g key={c.year}>
-            {yearMeta[i].newCount > 0 && !yearMeta[i].isInaugural && (
+          <g key={`gap-${idx}`}>
+            {newCount > 0 && (
               <g>
                 <rect
-                  x={c.x}
-                  y={c.n40Top - stripHeight(yearMeta[i].newCount) - 4}
+                  x={gapX}
+                  y={n40TopY - stripHeight(newCount) - 4}
                   width={barWidth}
-                  height={stripHeight(yearMeta[i].newCount)}
+                  height={stripHeight(newCount)}
                   fill="url(#newGrad)"
                 />
                 {showLabels && (
                   <text
-                    x={c.x + barWidth / 2}
-                    y={c.n40Top - stripHeight(yearMeta[i].newCount) - 12}
+                    x={gapX + barWidth / 2}
+                    y={n40TopY - stripHeight(newCount) - 12}
                     fontSize="9.5"
                     fontFamily="JetBrains Mono"
                     fontWeight="600"
@@ -201,13 +199,45 @@ export function CohortFlow({
                     fill="#3c6840"
                     letterSpacing="0.04em"
                   >
-                    +{yearMeta[i].newCount}
+                    +{newCount}
                   </text>
                 )}
               </g>
             )}
+            {exitCount > 0 && (
+              <g>
+                <rect
+                  x={gapX}
+                  y={ft120BotY + 4}
+                  width={barWidth}
+                  height={stripHeight(exitCount)}
+                  fill="url(#exitGrad)"
+                />
+                {showLabels && (
+                  <text
+                    x={gapX + barWidth / 2}
+                    y={ft120BotY + stripHeight(exitCount) + 16}
+                    fontSize="9.5"
+                    fontFamily="JetBrains Mono"
+                    fontWeight="600"
+                    textAnchor="middle"
+                    fill="#963d3d"
+                    letterSpacing="0.04em"
+                  >
+                    −{exitCount}
+                  </text>
+                )}
+              </g>
+            )}
+          </g>
+        );
+      })}
 
-            {yearMeta[i].isInaugural && showLabels && (
+      {columns.map((c, i) => {
+        const isCurrent = c.year === highlightYear;
+        return (
+          <g key={c.year}>
+            {i === 0 && showLabels && (
               <g>
                 <rect x={c.x - 30} y={c.n40Top - 32} width={74} height={20} fill="#3c6840" opacity={0.92} />
                 <text
@@ -225,32 +255,6 @@ export function CohortFlow({
               </g>
             )}
 
-            {yearMeta[i].exitCount > 0 && (
-              <g>
-                <rect
-                  x={c.x}
-                  y={c.ft120Bot + 4}
-                  width={barWidth}
-                  height={stripHeight(yearMeta[i].exitCount)}
-                  fill="url(#exitGrad)"
-                />
-                {showLabels && (
-                  <text
-                    x={c.x + barWidth / 2}
-                    y={c.ft120Bot + stripHeight(yearMeta[i].exitCount) + 16}
-                    fontSize="9.5"
-                    fontFamily="JetBrains Mono"
-                    fontWeight="600"
-                    textAnchor="middle"
-                    fill="#963d3d"
-                    letterSpacing="0.04em"
-                  >
-                    −{yearMeta[i].exitCount}
-                  </text>
-                )}
-              </g>
-            )}
-
             <rect x={c.x} y={c.n40Top} width={barWidth} height={n40Height} fill="#114563" opacity={isCurrent ? 1 : 0.92} />
             <rect x={c.x} y={c.ft120Top} width={barWidth} height={ft120Height} fill="#3c6840" opacity={isCurrent ? 1 : 0.85} />
 
@@ -258,7 +262,7 @@ export function CohortFlow({
               <g>
                 <text
                   x={c.x + barWidth / 2}
-                  y={c.ft120Bot + stripHeight(yearMeta[i].exitCount) + 38}
+                  y={c.ft120Bot + 38}
                   fontSize="13"
                   fontFamily="Newsreader"
                   fontWeight={isCurrent ? "600" : "500"}
@@ -270,7 +274,7 @@ export function CohortFlow({
                 </text>
                 <text
                   x={c.x + barWidth / 2}
-                  y={c.ft120Bot + stripHeight(yearMeta[i].exitCount) + 52}
+                  y={c.ft120Bot + 52}
                   fontSize="9"
                   fontFamily="Public Sans"
                   fontWeight="500"
@@ -283,7 +287,7 @@ export function CohortFlow({
                 {isCurrent && (
                   <text
                     x={c.x + barWidth / 2}
-                    y={c.ft120Bot + stripHeight(yearMeta[i].exitCount) + 70}
+                    y={c.ft120Bot + 70}
                     fontSize="8.5"
                     fontFamily="Public Sans"
                     fontWeight="700"
