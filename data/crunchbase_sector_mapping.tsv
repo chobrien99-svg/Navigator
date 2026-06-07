@@ -1,520 +1,589 @@
 count	crunchbase_term	canonical_sector
-297	Software	SaaS
-166	Information Technology	SaaS
-124	SaaS	SaaS
-123	Artificial Intelligence (AI)	Artificial Intelligence
-116	Health Care	HealthTech
-100	Financial Services	FinTech
-76	Manufacturing	Hardware
-75	Biotechnology	BioTech
-73	Internet	
-72	FinTech	FinTech
-70	E-Commerce	E-commerce & Retail
-51	Blockchain	Web3
-47	Medical	HealthTech
-47	Retail	E-commerce & Retail
-47	Food and Beverage	FoodTech
-44	Machine Learning	Artificial Intelligence
-42	Consulting	
-42	Finance	FinTech
-41	Analytics	SaaS
-41	Cyber Security	Cybersecurity
-39	Real Estate	PropTech
-36	Cryptocurrency	Web3
-36	Fashion	E-commerce & Retail
-35	Mobile Apps	SaaS
-34	Information Services	SaaS
-34	Medical Device	MedTech
-34	Apps	SaaS
-33	Wellness	HealthTech
-31	Human Resources	SaaS
-30	Logistics	Mobility
-28	Marketplace	
-27	Payments	FinTech
-27	Transportation	Mobility
-25	Renewable Energy	CleanTech
-25	Insurance	InsurTech
-24	Sustainability	ClimateTech
-24	B2B	SaaS
-23	Gaming	Gaming
-23	GreenTech	ClimateTech
-23	Education	EdTech
-23	Service Industry	
-22	Energy	Energy
-22	Automotive	Mobility
-21	Agriculture	AgriTech
-21	InsurTech	InsurTech
-20	Supply Chain Management	
-20	Sports	SportsTech
-20	Web3	Web3
-20	Online Portals	E-commerce & Retail
-19	Travel	TravelTech
-19	Food Processing	FoodTech
-18	Banking	FinTech
-18	Life Science	BioTech
-18	Training	EdTech
-18	Web Development	SaaS
-17	Electric Vehicle	Mobility
-17	Robotics	Robotics
-17	Electronics	Hardware
-17	Enterprise Software	SaaS
-17	Advertising	MarTech
-17	Rental	
-17	Environmental Consulting	ClimateTech
-17	Cosmetics	E-commerce & Retail
-16	Aerospace	SpaceTech & Aerospace
-16	Big Data	SaaS
-16	CleanTech	CleanTech
-15	Recruiting	SaaS
-15	Internet of Things	Hardware
-15	Pharmaceutical	BioTech
-15	Sales	SaaS
-15	Fitness	HealthTech
-14	Professional Services	
-14	Construction	PropTech
-14	Marketing	MarTech
-14	Wine And Spirits	FoodTech
-13	Digital Marketing	MarTech
-13	Farming	AgriTech
-13	Recycling	Recycling
-13	Hospitality	TravelTech
-13	E-Learning	EdTech
-13	Security	
-13	Beauty	E-commerce & Retail
-13	Computer Vision	Artificial Intelligence
-12	CRM	MarTech
-12	Cloud Computing	SaaS
-12	Environmental Engineering	ClimateTech
-12	Business Development	
-12	Business Intelligence	SaaS
-12	Consumer Goods	E-commerce & Retail
-12	Retail Technology	
-11	Energy Storage	Energy
-11	Industrial	
-11	Health Insurance	HealthTech
-11	Productivity Tools	SaaS
-11	AgTech	AgriTech
-11	Real Estate Investment	
-11	Communities	
-11	3D Technology	
-10	Risk Management	
-10	Pet	
-10	Cloud Infrastructure	SaaS
-10	Therapeutics	BioTech
-10	Social Media	
-10	Video Games	Gaming
-10	Mobile	SaaS
-10	Developer APIs	SaaS
-10	Developer Tools	SaaS
-10	Property Management	PropTech
-10	Virtual Reality	
-10	Metaverse	Web3
-9	Battery	CleanTech
-9	Waste Management	Recycling
-9	Open Source	SaaS
-9	Online Games	Gaming
-9	Biopharma	BioTech
-9	Restaurants	FoodTech
-9	Media and Entertainment	Entertainment
-9	Customer Service	SaaS
-9	Predictive Analytics	Artificial Intelligence
-9	Nutrition	FoodTech
-9	Organic Food	FoodTech
-9	Wealth Management	FinTech
-9	Software Engineering	SaaS
-9	Tourism	TravelTech
-9	Impact Investing	
-9	Textiles	
-8	Consumer Electronics	Hardware
-8	Energy Management	Energy
-8	Delivery	Mobility
-8	Accounting	SaaS
-8	Semiconductor	DeepTech
-8	Network Security	Cybersecurity
-8	Hardware	Hardware
-8	Web Apps	
-8	Events	
-8	Personal Health	
-8	EdTech	EdTech
-8	Venture Capital	
-8	Product Design	
-8	Computer	
-7	Alternative Protein	FoodTech
-7	Cloud Management	SaaS
-7	Video	Entertainment
-7	Industrial Automation	Hardware
-7	Solar	CleanTech
-7	Cloud Security	SaaS
-7	Machinery Manufacturing	
-7	Sporting Goods	
+541	Software	SaaS
+288	Information Technology	SaaS
+233	SaaS	SaaS
+224	Health Care	HealthTech
+222	Artificial Intelligence (AI)	Artificial Intelligence
+178	Financial Services	FinTech
+161	E-Commerce	E-commerce & Retail
+147	Biotechnology	BioTech
+138	Internet	
+131	FinTech	FinTech
+124	Manufacturing	Hardware
+95	Medical	HealthTech
+89	Food and Beverage	FoodTech
+80	Machine Learning	Artificial Intelligence
+79	Retail	E-commerce & Retail
+79	Blockchain	Web3
+75	Medical Device	MedTech
+73	Analytics	SaaS
+72	Mobile Apps	SaaS
+70	Real Estate	PropTech
+69	Finance	FinTech
+66	Consulting	
+62	Marketplace	
+62	Cyber Security	Cybersecurity
+62	Apps	SaaS
+60	Cryptocurrency	Web3
+60	Fashion	E-commerce & Retail
+56	Logistics	Mobility
+51	Payments	FinTech
+51	Wellness	HealthTech
+50	Information Services	SaaS
+50	Transportation	Mobility
+50	Education	EdTech
+49	B2B	SaaS
+49	Insurance	InsurTech
+48	Energy	Energy
+46	Human Resources	SaaS
+44	Renewable Energy	CleanTech
+40	Automotive	Mobility
+39	Gaming	Gaming
+37	Sustainability	ClimateTech
+37	Robotics	Robotics
+36	Agriculture	AgriTech
+35	Training	EdTech
+35	GreenTech	ClimateTech
+34	Pharmaceutical	BioTech
+33	InsurTech	InsurTech
+33	Big Data	SaaS
+32	Supply Chain Management	
+32	Life Science	BioTech
+32	Service Industry	
+31	Sports	SportsTech
+31	Rental	
+30	CRM	MarTech
+30	Enterprise Software	SaaS
+30	Marketing	MarTech
+29	Web Development	SaaS
+28	Advertising	MarTech
+28	Recruiting	SaaS
+28	Web3	Web3
+28	Food Processing	FoodTech
+28	Environmental Consulting	ClimateTech
+27	Electric Vehicle	Mobility
+27	Environmental Engineering	ClimateTech
+26	Digital Marketing	MarTech
+26	Internet of Things	Hardware
+26	Computer	
+25	Banking	FinTech
+25	Industrial	
+25	Farming	AgriTech
+25	Aerospace	SpaceTech & Aerospace
+25	Therapeutics	BioTech
+25	E-Learning	EdTech
+25	Online Portals	E-commerce & Retail
+24	Electronics	Hardware
+24	Travel	TravelTech
+24	Mobile	SaaS
+24	Construction	PropTech
+23	Professional Services	
+23	Consumer Goods	E-commerce & Retail
+22	Cosmetics	E-commerce & Retail
+21	Restaurants	FoodTech
+21	Business Intelligence	SaaS
+21	CleanTech	CleanTech
+21	Fitness	HealthTech
+21	EdTech	EdTech
+20	Recycling	Recycling
+20	Productivity Tools	SaaS
+20	AgTech	AgriTech
+20	Media and Entertainment	Entertainment
+20	Security	
+20	Personal Health	
+19	Business Development	
+19	Social Media	
+19	Video Games	Gaming
+19	Retail Technology	
+18	Open Source	SaaS
+18	Accounting	SaaS
+18	Solar	CleanTech
+18	Sales	SaaS
+18	Property Management	PropTech
+18	Wine And Spirits	FoodTech
+17	Health Insurance	HealthTech
+17	Cloud Computing	SaaS
+17	Real Estate Investment	
+17	Beauty	E-commerce & Retail
+16	Consumer Electronics	Hardware
+16	Biopharma	BioTech
+16	Delivery	Mobility
+16	Hospitality	TravelTech
+16	Customer Service	SaaS
+16	Network Security	Cybersecurity
+16	Predictive Analytics	Artificial Intelligence
+16	Health Diagnostics	HealthTech
+15	Online Games	Gaming
+15	Developer APIs	SaaS
+15	Wealth Management	FinTech
+15	Computer Vision	Artificial Intelligence
+14	Semiconductor	DeepTech
+14	Cloud Security	SaaS
+14	Developer Tools	SaaS
+14	Tourism	TravelTech
+14	Communities	
+14	Shopping	E-commerce & Retail
+14	3D Technology	
+14	Music	Entertainment
+13	Energy Storage	Energy
+13	Battery	CleanTech
+13	Pet	
+13	Waste Management	Recycling
+13	Hardware	Hardware
+13	Virtual Reality	
+13	Space Travel	SpaceTech & Aerospace
+13	Textiles	
+12	Risk Management	
+12	Energy Management	Energy
+12	Cloud Infrastructure	SaaS
+12	Genetics	BioTech
+12	Nutrition	FoodTech
+12	Organic Food	FoodTech
+12	Sporting Goods	
+12	Web Apps	
+12	Collaboration	SaaS
+12	Venture Capital	
+12	Art	
+12	Employee Benefits	
+12	Mobile Payments	FinTech
+12	Product Design	
+12	B2C	
+12	Interior Design	PropTech
+11	Legal Tech	
+11	Publishing	
+11	Video	Entertainment
+11	Industrial Automation	Hardware
+11	Neuroscience	
+11	Impact Investing	
+11	Metaverse	Web3
+11	Data Management	
+11	Asset Management	FinTech
+11	Database	SaaS
+10	Leisure	TravelTech
+10	Consumer	
+10	Search Engine	MarTech
+10	Shipping	Mobility
+10	Software Engineering	SaaS
+10	Industrial Manufacturing	Hardware
+10	Chemical	
+10	Events	
+10	Cloud Data Services	SaaS
+10	Advice	
+10	Marketing Automation	MarTech
+10	Digital Media	
+10	Travel Agency	TravelTech
+9	Clean Energy	CleanTech
+9	Cloud Management	SaaS
+9	Telecommunications	
+9	Food Delivery	FoodTech
+9	Credit	FinTech
+9	Drones	Drones
+9	Sensor	Hardware
+9	Oncology	
+9	Bitcoin	
+9	Machinery Manufacturing	
+9	Optical Communication	
+9	Staffing Agency	
+9	Social Network	
+9	Personal Finance	FinTech
+9	Product Research	
+9	Sales Automation	
+9	Catering	FoodTech
+9	Augmented Reality	
+8	Data Visualization	SaaS
+8	Alternative Protein	FoodTech
+8	Brand Marketing	MarTech
+8	Hotel	TravelTech
+8	Developer Platform	SaaS
+8	Satellite Communication	SpaceTech & Aerospace
+8	Delivery Service	
+8	Furniture	
+8	PropTech	PropTech
+8	Knowledge Management	
+8	Generative AI	Artificial Intelligence
+8	Grocery	
+8	E-Commerce Platforms	
+8	Infrastructure	
+8	Organic	
+8	Natural Language Processing	Artificial Intelligence
+8	Fleet Management	Mobility
+8	Industrial Engineering	
+7	Charging Infrastructure	
+7	Wholesale	
+7	Outsourcing	
+7	Veterinary	HealthTech
+7	Commercial	
+7	PaaS	
+7	Real Time	
+7	Rental Property	PropTech
+7	Legal	LegalTech
 7	Data Integration	SaaS
-7	Social Network	
-7	Advice	
-7	Art	
-7	Music	Entertainment
-7	B2C	
-7	Asset Management	FinTech
-7	Database	SaaS
-7	Travel Agency	TravelTech
-6	Commercial	
-6	Legal Tech	
-6	Publishing	
-6	Hotel	TravelTech
-6	Search Engine	MarTech
-6	Developer Platform	SaaS
-6	Bitcoin	
-6	Industrial Manufacturing	Hardware
-6	Residential	PropTech
-6	Cloud Data Services	SaaS
-6	Space Travel	SpaceTech & Aerospace
-6	Personal Finance	FinTech
-6	Mobile Payments	FinTech
+7	Residential	PropTech
+7	Sharing Economy	
+7	Home Services	
+7	Freelance	
+7	Data Center	
+7	Small and Medium Businesses	
+7	Children	
+7	Commercial Real Estate	PropTech
+7	Air Transportation	
+7	Mechanical Engineering	
+7	Privacy	Cybersecurity
+7	Winery	
+6	Animal Feed	AgriTech
+6	Energy Efficiency	CleanTech
+6	Clinical Trials	
+6	Vacation Rental	TravelTech
+6	Marine Transportation	
+6	Video Streaming	Entertainment
+6	Tutoring	EdTech
+6	Wireless	
 6	IT Infrastructure	
-6	Sales Automation	
-6	Interior Design	PropTech
-6	Digital Media	
-6	Augmented Reality	
-6	Winery	
-5	Wholesale	
-5	Energy Efficiency	CleanTech
-5	Brand Marketing	MarTech
-5	Food Delivery	FoodTech
-5	Genetics	BioTech
-5	Real Time	
-5	Leisure	TravelTech
-5	Credit	FinTech
-5	Rental Property	PropTech
-5	Optical Communication	
-5	Staffing Agency	
-5	PropTech	PropTech
-5	Legal	LegalTech
+6	Data Storage	
+6	Innovation Management	
+6	Architecture	PropTech
+6	Auto Insurance	
+6	Child Care	
+6	Business Information Systems	
+6	Water	
+6	Subscription Service	
+6	Home Decor	PropTech
+6	Women's	
+6	Corporate Training	EdTech
+6	Property Development	
+6	Higher Education	EdTech
+6	Compliance	LegalTech
+6	Non Profit	
+6	Digital Signage	
+6	Smart Contracts	
+6	Web Design	
+6	Public Safety	
+6	Boating	
+6	SEO	MarTech
+6	Decentralized Finance (DeFi)	
+6	Project Management	SaaS
+5	Trading Platform	FinTech
+5	Audio	
+5	Freight Service	
+5	Image Recognition	
+5	Oil and Gas	Energy
+5	Emergency Medicine	
+5	Home Health Care	HealthTech
+5	Skill Assessment	
+5	Drone Management	
 5	Cycling	
-5	Vacation Rental	TravelTech
-5	Health Diagnostics	HealthTech
-5	Sharing Economy	
-5	Data Management	
-5	Collaboration	SaaS
-5	Employee Benefits	
-5	Product Research	
-5	Architecture	PropTech
+5	PC Games	Gaming
+5	Dietary Supplements	
+5	Smart Building	
+5	Lifestyle	
+5	Advertising Platforms	
+5	Commercial Insurance	
+5	Building Material	PropTech
+5	Broadcasting	
+5	Embedded Software	
 5	Social Impact	
-5	Organic	
-5	Web Design	
-4	Data Visualization	SaaS
-4	Clean Energy	CleanTech
-4	Charging Infrastructure	
-4	Animal Feed	AgriTech
-4	Veterinary	HealthTech
-4	Telecommunications	
-4	Consumer	
-4	Drones	Drones
-4	Sensor	Hardware
-4	Shipping	Mobility
-4	Emergency Medicine	
-4	Delivery Service	
+5	Video Conferencing	
+5	Autonomous Vehicles	Mobility
+5	Smart Cities	CleanTech
+5	Personal Development	
+5	News	
+5	Life Insurance	
+5	iOS	
+5	Edutainment	
+4	Transaction Processing	
+4	Contact Management	
+4	Photo Sharing	
+4	Geospatial	
+4	Ride Sharing	Mobility
 4	Email	
+4	Quantum Computing	DeepTech
+4	Plant-Based Foods	
+4	Identity Management	Cybersecurity
 4	Enterprise Resource Planning (ERP)	SaaS
-4	Neuroscience	
-4	Knowledge Management	
-4	Generative AI	Artificial Intelligence
-4	Chemical	
+4	Management Consulting	
+4	Fraud Detection	Cybersecurity
+4	Warehousing	
+4	Nanotechnology	DeepTech
+4	Lending	FinTech
 4	Fertility	
-4	Marine Transportation	
-4	Shopping	E-commerce & Retail
-4	Dietary Supplements	
-4	Home Services	
-4	Smart Building	
-4	Marketing Automation	MarTech
-4	Wireless	
-4	Data Center	
-4	Water	
-4	Catering	FoodTech
-4	Children	
-4	Commercial Real Estate	PropTech
+4	Embedded Systems	
+4	Mental Health	HealthTech
+4	Funding Platform	
+4	Animation	
+4	Virtual World	
+4	Dental	HealthTech
+4	Home Renovation	PropTech
+4	Content	
+4	3D Printing	Hardware
+4	Non-Fungible Token (NFT)	
+4	Home Improvement	
+4	Dating	
+4	Content Creators	Entertainment
 4	IT Management	
-4	Women's	
-4	Infrastructure	
+4	Adventure Travel	
+4	Electronic Health Record (EHR)	HealthTech
+4	Gift	
 4	Quality Assurance	
-4	Smart Cities	CleanTech
-4	Higher Education	EdTech
+4	Data Collection and Labeling	
+4	Cannabis	
+4	Angel Investment	
+4	Biometrics	
 4	Creative Agency	
-4	Digital Signage	
-4	Public Safety	
-3	Outsourcing	
-3	PaaS	
-3	Trading Platform	FinTech
-3	Clinical Trials	
-3	Audio	
-3	Satellite Communication	SpaceTech & Aerospace
+4	Reservations	
+4	Document Management	SaaS
+4	Private Social Networking	
+4	Navigation	
+4	Film Production	
+4	Ethereum	
+4	Plastics and Rubber Manufacturing	
+4	Jewelry	E-commerce & Retail
+4	DevOps	
+3	Nuclear	
+3	Email Marketing	MarTech
+3	Billing	SaaS
 3	Penetration Testing	
-3	Freight Service	
-3	Oncology	
-3	Oil and Gas	Energy
 3	Semantic Search	
-3	Furniture	
+3	Advanced Materials	DeepTech
+3	Biomass Energy	BioTech
+3	Civil Engineering	
 3	Elder Care	HealthTech
-3	Management Consulting	
 3	Physical Security	
 3	Technical Support	
-3	Skill Assessment	
-3	Warehousing	
+3	Management Information Systems	
 3	Crowdfunding	
-3	Funding Platform	
-3	PC Games	Gaming
-3	Animation	
-3	Virtual World	
-3	Content	
-3	3D Printing	Hardware
-3	Non-Fungible Token (NFT)	
-3	Lifestyle	
-3	Freelance	
-3	Data Storage	
-3	Commercial Insurance	
-3	Innovation Management	
-3	Child Care	
+3	Last Mile Transportation	Mobility
+3	Self-Storage	
+3	Lead Generation	MarTech
+3	Employment	
+3	Direct Sales	
+3	Podcast	Entertainment
+3	Facilities Support Services	
+3	Mobile Devices	
+3	Ticketing	
+3	Telehealth	HealthTech
+3	Aquaculture	AgriTech
 3	eSports	Gaming
-3	Business Information Systems	
-3	Building Material	PropTech
-3	Subscription Service	
-3	Home Decor	PropTech
-3	Dating	
-3	E-Commerce Platforms	
-3	Adventure Travel	
-3	Air Transportation	
+3	Soccer	
+3	Content Marketing	MarTech
+3	Video Editing	
+3	Console Games	Gaming
+3	Virtual Goods	
 3	Test and Measurement	
-3	Corporate Training	EdTech
 3	Mapping Services	
-3	Autonomous Vehicles	Mobility
-3	Privacy	Cybersecurity
-3	Cannabis	
-3	Angel Investment	
-3	Natural Language Processing	Artificial Intelligence
-3	News	
-3	Document Management	SaaS
+3	Product Management	
+3	Casual Games	Gaming
+3	Cooking	FoodTech
+3	Financial Exchanges	FinTech
+3	Home and Garden	
+3	Electrical Distribution	Hardware
+3	Power Grid	Energy
+3	Travel Accommodations	
 3	Location Based Services	
-3	Smart Contracts	
-3	Fleet Management	Mobility
-3	Boating	
-3	Decentralized Finance (DeFi)	
-3	Project Management	SaaS
-3	Jewelry	E-commerce & Retail
-2	Nuclear	
-2	Transaction Processing	
-2	Contact Management	
-2	Email Marketing	MarTech
+3	Event Management	
+3	Secondhand Goods	E-commerce & Retail
+3	Digital Entertainment	
+3	Toys	
+3	Hospital	HealthTech
+3	Business Travel	
+3	Meeting Software	
+3	Information and Communications Technology (ICT)	
+3	Religion	
+3	E-Signature	
+3	Water Purification	ClimateTech
+3	Chatbot	Artificial Intelligence
+3	Recreation	Entertainment
+2	Credit Cards	FinTech
 2	Translation Service	
-2	Image Recognition	
-2	Ride Sharing	Mobility
+2	GPS	
 2	Meat and Poultry	FoodTech
-2	Biomass Energy	BioTech
-2	Civil Engineering	
-2	Home Health Care	HealthTech
-2	Plant-Based Foods	
 2	Military	DefenseTech
-2	Identity Management	Cybersecurity
 2	Human Computer Interaction	
-2	Management Information Systems	
-2	Fraud Detection	Cybersecurity
 2	Procurement	
-2	Drone Management	
 2	Photo Editing	
-2	Nanotechnology	DeepTech
-2	Lending	FinTech
+2	Chemical Engineering	
+2	Car Sharing	
 2	Collaborative Consumption	
 2	Peer to Peer	
 2	Vertical Search	
 2	Coworking	
-2	Mental Health	HealthTech
+2	Natural Resources	
 2	Building Maintenance	
-2	Video Streaming	Entertainment
+2	Shoes	
+2	Dairy	
 2	Forestry	
 2	Social	
 2	Text Analytics	
-2	Lead Generation	MarTech
-2	Home Renovation	PropTech
-2	Grocery	
+2	DIY	
 2	Web Hosting	
-2	Advertising Platforms	
-2	Ticketing	
-2	Telehealth	HealthTech
+2	Eyewear	
+2	Point of Sale	
 2	Professional Networking	
-2	Auto Insurance	
-2	Home Improvement	
-2	Content Creators	Entertainment
-2	Console Games	Gaming
 2	Cloud Storage	SaaS
+2	Laser	
 2	Data Center Automation	
-2	Mechanical Engineering	
-2	Broadcasting	
-2	Embedded Software	
-2	Property Development	
-2	Gift	
+2	Android	
+2	Outdoors	
 2	Facility Management	
-2	Product Management	
-2	Casual Games	Gaming
-2	Personal Development	
 2	Serious Games	
-2	Financial Exchanges	FinTech
-2	Compliance	LegalTech
-2	Non Profit	
-2	Electrical Distribution	Hardware
-2	Power Grid	Energy
-2	Travel Accommodations	
-2	Reservations	
-2	Secondhand Goods	E-commerce & Retail
+2	Recipes	
+2	Loyalty Programs	
+2	Social Media Advertising	
+2	Assistive Technology	
+2	Family	
+2	Recreational Vehicles	
+2	Performing Arts	Entertainment
 2	Packaging Services	
-2	Toys	
-2	Business Travel	
-2	Private Social Networking	
-2	Navigation	
-2	Life Insurance	
+2	Flowers	
+2	Incubators	
+2	Market Research	
 2	Personalization	
-2	Film Production	
+2	Simulation	
 2	Green Building	ClimateTech
+2	Pollution Control	
 2	Messaging	
+2	mHealth	HealthTech
 2	Task Management	
+2	Debit Cards	
 2	Fast-Moving Consumer Goods	
-2	Industrial Engineering	
+2	Application Performance Management	
+2	Bakery	
+2	Enterprise Applications	SaaS
 2	AI Infrastructure	Artificial Intelligence
-1	Credit Cards	FinTech
-1	Photo Sharing	
-1	Billing	SaaS
+2	IaaS	
+2	Social CRM	
+2	Fantasy Sports	SportsTech
+2	TV	Entertainment
+2	Same Day Delivery	Mobility
+2	SEM	MarTech
+2	Web Browsers	SaaS
+2	Mining	Hardware
+2	Precious Metals	Hardware
+2	Operating Systems	SaaS
+2	Smart Home	PropTech
+2	Wearables	Hardware
+2	CivicTech	Other
+2	Consumer Applications	E-commerce & Retail
+2	Coffee	FoodTech
+2	Graphic Design	SaaS
+2	Remote Sensing	Hardware
+2	Career Planning	SaaS
+2	Data Governance	SaaS
 1	Intrusion Detection	
-1	Geospatial	
-1	GPS	
 1	Intelligent Systems	
-1	Advanced Materials	DeepTech
 1	Hydroelectric	CleanTech
 1	Parking	Mobility
-1	Quantum Computing	DeepTech
 1	National Security	
 1	Taxi Service	
 1	Photography	Entertainment
-1	Chemical Engineering	
-1	Car Sharing	
-1	Embedded Systems	
-1	Natural Resources	
 1	Geothermal Energy	
 1	Real Estate Brokerage	
-1	Shoes	
-1	Dairy	
 1	CAD	
-1	Dental	HealthTech
-1	Last Mile Transportation	Mobility
 1	Guides	
-1	Self-Storage	
-1	DIY	
 1	Home Appliances	
 1	Heating	
 1	Ventilation	
 1	and Air Conditioning (HVAC)	
-1	Employment	
-1	Tutoring	EdTech
 1	Seafood	
 1	Teenagers	
 1	Stock Exchanges	
-1	Direct Sales	
 1	Electronic Design Automation (EDA)	
 1	Agentic AI	Artificial Intelligence
 1	Internet Radio	
-1	Podcast	Entertainment
-1	Facilities Support Services	
-1	Eyewear	
-1	Point of Sale	
-1	Mobile Devices	
 1	Nightlife	
-1	Small and Medium Businesses	
-1	Aquaculture	AgriTech
 1	Data Mining	
 1	Sales Enablement	
-1	Soccer	
-1	Content Marketing	MarTech
 1	Music Label	
-1	Video Editing	
 1	Green Consumer Goods	
-1	Laser	
-1	Virtual Goods	
 1	Scheduling	
 1	GovTech	
-1	Electronic Health Record (EHR)	HealthTech
 1	Outdoor Advertising	
-1	Video Conferencing	
-1	Android	
-1	Outdoors	
-1	Data Collection and Labeling	
 1	Homeland Security	DefenseTech
-1	Cooking	FoodTech
-1	Recipes	
 1	Journalism	
-1	Loyalty Programs	
-1	Home and Garden	
-1	Social Media Advertising	
 1	Social Entrepreneurship	
 1	Facial Recognition	
 1	Speech Recognition	
 1	Robotic Process Automation (RPA)	
-1	Assistive Technology	
 1	UX Design	
-1	Biometrics	
 1	Gamification	
 1	Social News	
 1	Collectibles	
 1	Baby	HealthTech
-1	Family	
-1	Recreational Vehicles	
-1	Performing Arts	Entertainment
 1	Lead Management	
-1	Event Management	
 1	Event Promotion	
 1	Parenting	
 1	Online Forums	
 1	Concerts	
 1	Surfing	
-1	Digital Entertainment	
 1	EBooks	
-1	Flowers	
-1	Hospital	HealthTech
 1	Collection Agency	
 1	Debt Collections	
-1	Incubators	
-1	Meeting Software	
 1	QR Codes	
 1	Personal Branding	
 1	Private Cloud	
-1	SEO	MarTech
-1	Market Research	
 1	Alternative Medicine	
-1	Simulation	
 1	Carbon Capture	ClimateTech
 1	Public Transportation	Mobility
 1	Film	Entertainment
 1	Handmade	
-1	Pollution Control	
-1	Information and Communications Technology (ICT)	
-1	iOS	
-1	Religion	
 1	Music Education	
-1	Ethereum	
 1	Consumer Software	
-1	mHealth	HealthTech
 1	Fuel	
 1	Psychology	
-1	Debit Cards	
-1	Plastics and Rubber Manufacturing	
 1	Field Support	
-1	Application Performance Management	
-1	Bakery	
 1	Confectionery	
 1	Consumer Reviews	
 1	Gift Exchange	
-1	DevOps	
-1	E-Signature	
 1	Men's	
-1	Enterprise Applications	SaaS
-1	IaaS	
 1	SMS	
-1	Social CRM	
 1	Network Hardware	
-1	Edutainment	
 1	Paper Manufacturing	
 1	Government	
+1	Coupons	E-commerce & Retail
+1	HealthTech	HealthTech
+1	AI	Artificial Intelligence
+1	BioTech	BioTech
+1	Wind Energy	CleanTech
+1	Marine Technology	Mobility
+1	Enterprise	SaaS
+1	Call Center	SaaS
+1	Gambling	Entertainment
+1	Property Insurance	InsurTech
+1	Assisted Living	HealthTech
+1	Hydroponics	AgriTech
+1	Independent Music	Entertainment
+1	Bioinformatics	BioTech
+1	Rehabilitation	HealthTech
+1	Horticulture	AgriTech
+1	Ad Network	MarTech
+1	MOOC	EdTech
+1	Law Enforcement	LegalTech
+1	Vocational Education	EdTech
+1	Leasing	FinTech
+1	Diving	Other
+1	Fuel Cell	CleanTech
+1	Cosmetic Surgery	HealthTech
+1	Tea	FoodTech
+1	Online Auctions	E-commerce & Retail
+1	Personal Care and Hygiene	E-commerce & Retail
+1	Gift Card	E-commerce & Retail
+1	Retirement	FinTech
+1	Ad Server	MarTech
+1	Affiliate Marketing	MarTech
+1	CMS	SaaS
+1	Semantic Web	Artificial Intelligence
+1	Musical Instruments	Entertainment
+1	Amusement Park and Arcade	Entertainment
+1	Playstation	Gaming
+1	Audio Recording and Production	Entertainment
+1	Music Streaming	Entertainment
+1	Virtualization	SaaS
+1	Social Shopping	E-commerce & Retail
+1	Lighting	PropTech
+1	Politics	Other
+1	Cleaning Products	E-commerce & Retail
+1	MMO Games	Gaming
+1	TV Production	Entertainment
+1	Apparel	E-commerce & Retail
+1	Primary Education	EdTech
+1	Nursing and Residential Care	HealthTech
+1	Funerals	Other
