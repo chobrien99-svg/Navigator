@@ -234,6 +234,16 @@ export default function EditOrganizationPage() {
   const [newProgramEditionId, setNewProgramEditionId] = useState("");
   const [newProgramGroupLabel, setNewProgramGroupLabel] = useState("");
 
+  // Locations (primary + secondary HQ) state
+  interface CityOption {
+    id: string;
+    name: string;
+    region: string | null;
+  }
+  const [allCities, setAllCities] = useState<CityOption[]>([]);
+  const [primaryCityId, setPrimaryCityId] = useState<string | null>(null);
+  const [secondaryCityId, setSecondaryCityId] = useState<string | null>(null);
+
   // Delete state
   const [deleting, setDeleting] = useState(false);
 
@@ -331,6 +341,18 @@ export default function EditOrganizationPage() {
         fundraising_status: org.fundraising_status ?? "unknown",
         technology_layer: org.technology_layer ?? "",
       });
+      setPrimaryCityId(org.city_id ?? null);
+      setSecondaryCityId(org.secondary_city_id ?? null);
+
+      // Load cities list for the location selects
+      const { data: citiesData } = await supabase
+        .from("cities")
+        .select("id, name, region")
+        .order("name")
+        .limit(2000);
+      if (citiesData) {
+        setAllCities(citiesData as CityOption[]);
+      }
 
       // Load profile
       const { data: profileData } = await supabase
@@ -812,6 +834,33 @@ export default function EditOrganizationPage() {
     }
   }
 
+  // ─── Location handlers ──────────────────────────────────
+  async function persistCity(
+    field: "city_id" | "secondary_city_id",
+    value: string | null,
+  ) {
+    setError(null);
+    const { error: upErr } = await supabase
+      .from("organizations")
+      .update({ [field]: value, updated_at: new Date().toISOString() })
+      .eq("id", id);
+    if (upErr) {
+      setError(upErr.message);
+      return false;
+    }
+    return true;
+  }
+
+  async function handleSetPrimaryCity(value: string) {
+    const newId = value || null;
+    if (await persistCity("city_id", newId)) setPrimaryCityId(newId);
+  }
+
+  async function handleSetSecondaryCity(value: string) {
+    const newId = value || null;
+    if (await persistCity("secondary_city_id", newId)) setSecondaryCityId(newId);
+  }
+
   // ─── Program handlers ──────────────────────────────────
   async function handleAddProgram() {
     if (!newProgramEditionId) return;
@@ -1234,6 +1283,54 @@ export default function EditOrganizationPage() {
             </>
           )}
         </div>
+      </div>
+
+      {/* Locations Section */}
+      <div className="mt-12">
+        <h2 className="diplomatic-label">HQ Locations</h2>
+        <div className="mt-4 grid grid-cols-2 gap-6 max-w-2xl">
+          <div>
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              Primary HQ
+            </label>
+            <select
+              value={primaryCityId ?? ""}
+              onChange={(e) => handleSetPrimaryCity(e.target.value)}
+              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+            >
+              <option value="">— none —</option>
+              {allCities.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                  {c.region ? ` · ${c.region}` : ""}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              Secondary HQ (optional)
+            </label>
+            <select
+              value={secondaryCityId ?? ""}
+              onChange={(e) => handleSetSecondaryCity(e.target.value)}
+              className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface focus:border-primary focus:outline-none"
+            >
+              <option value="">— none —</option>
+              {allCities
+                .filter((c) => c.id !== primaryCityId)
+                .map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                    {c.region ? ` · ${c.region}` : ""}
+                  </option>
+                ))}
+            </select>
+          </div>
+        </div>
+        <p className="mt-2 text-xs italic text-outline-variant">
+          Changes save automatically.
+        </p>
       </div>
 
       {/* Sectors Section */}

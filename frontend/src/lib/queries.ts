@@ -73,6 +73,7 @@ export async function getOrganizationBySlug(slug: string) {
     .select(
       `*,
       cities(name, slug, region),
+      secondary_city:secondary_city_id(name, slug, region),
       organization_sectors(is_primary, sectors(name, slug)),
       organization_profiles(*)`
     )
