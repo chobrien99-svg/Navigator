@@ -51,7 +51,7 @@ export async function getOrganizations(opts?: {
   let query = supabase
     .from("organizations")
     .select(
-      `*, cities(name, slug, region), organization_sectors(is_primary, sectors(name, slug))`
+      `*, cities!city_id(name, slug, region), organization_sectors(is_primary, sectors(name, slug))`
     )
     .order("name");
 
@@ -72,7 +72,7 @@ export async function getOrganizationBySlug(slug: string) {
     .from("organizations")
     .select(
       `*,
-      cities(name, slug, region),
+      cities!city_id(name, slug, region),
       secondary_city:secondary_city_id(name, slug, region),
       organization_sectors(is_primary, sectors(name, slug)),
       organization_profiles(*)`
@@ -189,7 +189,7 @@ export async function getPersonOrganizations(personId: string) {
   const { data, error } = await supabase
     .from("organization_people")
     .select(
-      `*, organizations(name, slug, organization_type, status, logo_url, cities(name))`
+      `*, organizations(name, slug, organization_type, status, logo_url, cities!city_id(name))`
     )
     .eq("person_id", personId)
     .order("is_current", { ascending: false });
@@ -264,7 +264,7 @@ export async function getFrenchTechNextMembers() {
       organizations(
         id, name, slug, organization_type, status, description, short_description,
         website, logo_url, country, total_raised_eur, employee_range, founded_year,
-        cities(name, slug, region),
+        cities!city_id(name, slug, region),
         organization_sectors(is_primary, sectors(name, slug))
       )`
     )
@@ -316,7 +316,7 @@ async function getProgramMembers(programSlug: string) {
       organizations(
         id, name, slug, organization_type, status, description, short_description,
         website, logo_url, country, total_raised_eur, employee_range, founded_year,
-        cities(name, slug, region),
+        cities!city_id(name, slug, region),
         organization_sectors(is_primary, sectors(name, slug))
       )`
     )
