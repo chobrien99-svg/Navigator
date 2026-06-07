@@ -218,6 +218,13 @@ export default function EditOrganizationPage() {
   const [cityQuery, setCityQuery] = useState("");
   const [showCitySuggestions, setShowCitySuggestions] = useState(false);
 
+  // Secondary HQ (organizations.secondary_city_id → cities table).
+  // Same picker pattern as the primary city above; nullable.
+  const [secondaryCityId, setSecondaryCityId] = useState<string | null>(null);
+  const [secondaryCityQuery, setSecondaryCityQuery] = useState("");
+  const [showSecondaryCitySuggestions, setShowSecondaryCitySuggestions] =
+    useState(false);
+
   // Legal entities state
   interface LegalEntityRow {
     id: string;
@@ -334,7 +341,9 @@ export default function EditOrganizationPage() {
     async function load() {
       const { data: org, error: orgErr } = await supabase
         .from("organizations")
-        .select("*, cities:city_id(id, name)")
+        .select(
+          "*, cities:city_id(id, name), secondary_city:secondary_city_id(id, name)",
+        )
         .eq("id", id)
         .single();
 
@@ -368,6 +377,13 @@ export default function EditOrganizationPage() {
       setCityId(org.city_id ?? null);
       const cityRel = (org as { cities?: { id: string; name: string } | null }).cities;
       setCityQuery(cityRel?.name ?? "");
+
+      // Secondary HQ (linked via secondary_city_id)
+      setSecondaryCityId(org.secondary_city_id ?? null);
+      const secondaryRel = (
+        org as { secondary_city?: { id: string; name: string } | null }
+      ).secondary_city;
+      setSecondaryCityQuery(secondaryRel?.name ?? "");
 
       // Load profile
       const { data: profileData } = await supabase
@@ -580,6 +596,7 @@ export default function EditOrganizationPage() {
           fundraising_status: form.fundraising_status || "unknown",
           technology_layer: form.technology_layer || null,
           city_id: cityId,
+          secondary_city_id: secondaryCityId,
         })
         .eq("id", id);
 
@@ -1289,6 +1306,21 @@ export default function EditOrganizationPage() {
           .slice(0, 8)
       : [];
 
+  // Secondary HQ suggestions — exclude the currently selected primary city
+  // so the same city can't be picked twice.
+  const secondaryCityMatches =
+    secondaryCityQuery.trim().length >= 1
+      ? allCities
+          .filter(
+            (c) =>
+              c.id !== cityId &&
+              c.name
+                .toLowerCase()
+                .includes(secondaryCityQuery.trim().toLowerCase()),
+          )
+          .slice(0, 8)
+      : [];
+
   return (
     <div className="px-10 py-8">
       {/* Breadcrumb */}
@@ -1433,6 +1465,79 @@ export default function EditOrganizationPage() {
               </div>
             )}
             {cityQuery.trim() && !cityId && (
+              <p className="mt-1 text-[0.6rem] text-outline-variant">
+                Select a city from the list to link it. Unmatched text won’t be saved.
+              </p>
+            )}
+          </div>
+
+          <div className="relative">
+            <label className="diplomatic-label mb-1.5 block text-[0.6rem]">
+              Secondary HQ (optional)
+            </label>
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                value={secondaryCityQuery}
+                onChange={(e) => {
+                  setSecondaryCityQuery(e.target.value);
+                  setSecondaryCityId(null);
+                  setShowSecondaryCitySuggestions(true);
+                }}
+                onFocus={() => {
+                  if (secondaryCityQuery.trim().length >= 1)
+                    setShowSecondaryCitySuggestions(true);
+                }}
+                onBlur={() =>
+                  setTimeout(() => setShowSecondaryCitySuggestions(false), 200)
+                }
+                placeholder="Type a second HQ city (e.g. New York)…"
+                className="w-full border-b border-outline-variant/25 bg-transparent py-2 text-sm text-on-surface placeholder:text-outline-variant focus:border-primary focus:outline-none"
+              />
+              {secondaryCityId && (
+                <span
+                  className="material-symbols-outlined text-[16px] text-primary"
+                  title="Linked to a city record"
+                >
+                  check_circle
+                </span>
+              )}
+              {secondaryCityQuery && (
+                <button
+                  onClick={() => {
+                    setSecondaryCityQuery("");
+                    setSecondaryCityId(null);
+                  }}
+                  className="text-outline-variant hover:text-error"
+                  title="Clear secondary HQ"
+                >
+                  <span className="material-symbols-outlined text-[16px]">
+                    close
+                  </span>
+                </button>
+              )}
+            </div>
+            {showSecondaryCitySuggestions && secondaryCityMatches.length > 0 && (
+              <div className="absolute z-10 mt-1 w-full bg-surface-container-lowest border border-outline-variant/20 shadow-lg max-h-40 overflow-y-auto">
+                {secondaryCityMatches.map((c) => (
+                  <button
+                    key={c.id}
+                    className="block w-full px-3 py-2 text-left text-sm text-on-surface hover:bg-surface-container-low"
+                    onMouseDown={() => {
+                      setSecondaryCityId(c.id);
+                      setSecondaryCityQuery(c.name);
+                      setShowSecondaryCitySuggestions(false);
+                    }}
+                  >
+                    {c.name}
+                    {c.department && (
+                      <span className="text-outline-variant"> · {c.department}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+            {secondaryCityQuery.trim() && !secondaryCityId && (
               <p className="mt-1 text-[0.6rem] text-outline-variant">
                 Select a city from the list to link it. Unmatched text won’t be saved.
               </p>
