@@ -13,8 +13,14 @@ import csv
 from collections import Counter
 from pathlib import Path
 
-CSV_PATH = Path('/root/.claude/uploads/65193a0e-5069-4ea5-82ec-ac9053d3de99/0d9a8940-ftfunding2022Crunchbase__ftfunding2022DecemberCrunchbase.csv')
-OUT_TSV = Path('data/crunchbase_sector_mapping_draft.tsv')
+CSV_PATHS = [
+    Path('data/funding_2022_crunchbase.csv'),
+    Path('data/funding_2021_crunchbase.csv'),
+]
+# Crunchbase uses both 'Sectors' (2022) and 'Organization Industries' (2021)
+# for the same column.
+SECTOR_COLUMN_CANDIDATES = ('Sectors', 'Organization Industries')
+OUT_TSV = Path('data/crunchbase_sector_mapping.tsv')
 
 
 # Crunchbase term (lowercased) → Navigator canonical sector name
@@ -378,26 +384,129 @@ MAP = {
     'continuing education': 'EdTech',
     'mooc': 'EdTech',
     'stem education': 'EdTech',
+    'vocational education': 'EdTech',
 
     # Digital Health
     'digital health': 'Digital Health',  # also mapped to HealthTech above — first wins
+
+    # ── 2021-specific additions (terms that didn't appear in 2022 export) ──
+    # Aliases / shorthand variants
+    'ai': 'Artificial Intelligence',
+    'biotech': 'BioTech',
+    'healthtech': 'HealthTech',
+    'chatbot': 'Artificial Intelligence',
+    'semantic web': 'Artificial Intelligence',
+    'bioinformatics': 'BioTech',
+    'rehabilitation': 'HealthTech',
+    'assisted living': 'HealthTech',
+    'cosmetic surgery': 'HealthTech',
+    'nursing and residential care': 'HealthTech',
+
+    # Entertainment / media
+    'recreation': 'Entertainment',
+    'amusement park and arcade': 'Entertainment',
+    'tv': 'Entertainment',
+    'tv production': 'Entertainment',
+    'gambling': 'Entertainment',
+    'independent music': 'Entertainment',
+    'music streaming': 'Entertainment',
+    'audio recording and production': 'Entertainment',
+    'musical instruments': 'Entertainment',
+
+    # Gaming
+    'fantasy sports': 'SportsTech',
+    'mmo games': 'Gaming',
+    'playstation': 'Gaming',
+
+    # E-commerce & Retail
+    'online auctions': 'E-commerce & Retail',
+    'coupons': 'E-commerce & Retail',
+    'gift card': 'E-commerce & Retail',
+    'social shopping': 'E-commerce & Retail',
+    'personal care and hygiene': 'E-commerce & Retail',
+    'cleaning products': 'E-commerce & Retail',
+    'consumer applications': 'E-commerce & Retail',
+    'same day delivery': 'Mobility',  # delivery → mobility/logistics
+
+    # MarTech
+    'ad network': 'MarTech',
+    'ad server': 'MarTech',
+    'affiliate marketing': 'MarTech',
+    'sem': 'MarTech',
+
+    # SaaS
+    'cms': 'SaaS',
+    'enterprise': 'SaaS',
+    'operating systems': 'SaaS',
+    'web browsers': 'SaaS',
+    'virtualization': 'SaaS',
+    'call center': 'SaaS',
+    'career planning': 'SaaS',
+    'data governance': 'SaaS',
+    'graphic design': 'SaaS',
+
+    # FinTech
+    'leasing': 'FinTech',
+    'retirement': 'FinTech',
+    'property insurance': 'InsurTech',
+
+    # FoodTech
+    'tea': 'FoodTech',
+
+    # AgriTech
+    'hydroponics': 'AgriTech',
+
+    # ClimateTech / CleanTech
+    'water purification': 'ClimateTech',
+    'fuel cell': 'CleanTech',
+
+    # PropTech
+    'lighting': 'PropTech',
+
+    # Other / civic
+    'civictech': 'Other',  # could be SaaS — using Other to flag distinct nature
+    'politics': 'Other',
+
+    # Hardware / industrial
+    'mining': 'Hardware',
+    'precious metals': 'Hardware',
+    'remote sensing': 'Hardware',
+
+    # Mobility / marine
+    'marine technology': 'Mobility',
+    'diving': 'Other',  # niche
+    'funerals': 'Other',
 }
 
 
-def main() -> None:
-    with open(CSV_PATH) as f:
-        rows = list(csv.DictReader(f))
-    # Drop Institut Mérieux first row
-    rows = [r for r in rows
-            if not (r['Organization Name'].strip() == 'Institut Merieux'
-                    and r['Funding Type'].strip() == 'Private Equity')]
+def _sector_column(row: dict) -> str:
+    for col in SECTOR_COLUMN_CANDIDATES:
+        if col in row:
+            return col
+    raise KeyError(f"No sector column found in row; expected one of {SECTOR_COLUMN_CANDIDATES}")
 
+
+def main() -> None:
     counts = Counter()
-    for r in rows:
-        for s in (r['Sectors'] or '').split(','):
-            s = s.strip()
-            if s:
-                counts[s] += 1
+    for csv_path in CSV_PATHS:
+        if not csv_path.exists():
+            print(f"Skipping (not found): {csv_path}")
+            continue
+        with open(csv_path) as f:
+            rows = list(csv.DictReader(f))
+        # Drop Institut Mérieux first row in 2022 export
+        rows = [r for r in rows
+                if not (r['Organization Name'].strip() == 'Institut Merieux'
+                        and r['Funding Type'].strip() == 'Private Equity')]
+        col = _sector_column(rows[0])
+        added = 0
+        for r in rows:
+            for s in (r.get(col) or '').split(','):
+                s = s.strip()
+                if s:
+                    counts[s] += 1
+                    added += 1
+        print(f"Read {csv_path.name}: {len(rows)} rows, {added} sector occurrences (col={col!r})")
 
     rows_out = []
     for term, cnt in counts.most_common():

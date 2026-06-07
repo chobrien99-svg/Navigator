@@ -1,59 +1,62 @@
 #!/usr/bin/env python3
 """
-Convert the Crunchbase 2022 funding CSV to a Phase 13 split SQL migration.
+Convert a Crunchbase per-year funding CSV to a split SQL migration.
 
-Input:
-  data/funding_2022_crunchbase.csv
-    columns: Organization Name, Organization Location, Funding Type,
-             Money Raised, Money Raised Currency, Announced Date,
-             Organization Website, Description, Investor Names,
-             Sectors, SIREN
-  data/crunchbase_sector_mapping.tsv
-    columns: count, crunchbase_term, canonical_sector
+Usage (defaults to 2022 = the original target):
+  python3 scripts/convert_crunchbase.py                 # 2022
+  python3 scripts/convert_crunchbase.py --year 2021
+  python3 scripts/convert_crunchbase.py --year 2020 --usd-eur 0.88 --gbp-eur 1.13
 
-Output: supabase/migrations/phase13/
-  01a_cities.sql
-  01b_sectors.sql
-  01c_organizations.sql
-  01d_legal_entities.sql
-  01e_org_cities.sql
-  01f_org_sectors.sql
-  01g_funding_rounds.sql
-  01h_investor_orgs.sql
-  01i_round_investors.sql
+Per-year FX defaults below — pass --usd-eur / --gbp-eur / --mad-eur /
+--aud-eur to override. Input/output paths default to
+data/funding_<year>_crunchbase.csv → supabase/migrations/phase<N>/ where
+N is derived from year (2022→13, 2021→15, 2020→16, 2019→17 — adjust
+with --phase if needed).
+
+Sector mapping: data/crunchbase_sector_mapping.tsv (shared across years).
+Column name auto-detection: handles both "Description" / "Organization
+Description" and "Sectors" / "Organization Industries".
 
 Cleanup rules applied:
-  * Drop the Institut Mérieux row (uploaded by mistake)
   * Drop description text (Crunchbase copyrighted)
-  * Convert USD/GBP amounts to EUR using 2022 annual averages
+  * Drop rows passed via --drop-row "Name:Funding Type"
+  * Convert non-EUR amounts using per-year averages
   * Map Crunchbase sectors → Navigator canonical sectors via TSV
-    (unmapped sectors are silently dropped per user instruction)
+    (unmapped sectors silently dropped)
   * If Funding Type is blank, derive from amount:
-      > €100M       → growth
-      > €50M ≤ 100M → series_c
-      > €20M ≤ 50M  → series_b
-      > €8M  ≤ 20M  → series_a
-      > €2M  ≤ 8M   → seed
-      ≤ €2M         → pre_seed
-      amount blank  → undisclosed
-
-source_name = 'funding_deals_2022_crunchbase'
+      > €100M → growth, > €50M → series_c, > €20M → series_b,
+      > €8M → series_a, > €2M → seed, ≤ €2M → pre_seed,
+      blank amount → undisclosed
+  * Within-batch dedup on (org_slug, announced_date, amount_eur)
 """
 
+import argparse
 import csv
 import json
 import re
 import unicodedata
 from pathlib import Path
 
-INPUT = Path('data/funding_2022_crunchbase.csv')
 MAPPING = Path('data/crunchbase_sector_mapping.tsv')
-OUT_DIR = Path('supabase/migrations/phase13')
-SOURCE_NAME = 'funding_deals_2022_crunchbase'
 
-# 2022 annual average FX rates (ECB / oanda)
-USD_TO_EUR = 0.95
-GBP_TO_EUR = 1.17
+# Per-year FX defaults (1 unit foreign currency → EUR), annual averages.
+# Add new years here as imports happen.
+YEAR_DEFAULTS = {
+    2019: {'usd': 0.89, 'gbp': 1.14, 'mad': 0.093, 'aud': 0.62},
+    2020: {'usd': 0.88, 'gbp': 1.13, 'mad': 0.093, 'aud': 0.60},
+    2021: {'usd': 0.85, 'gbp': 1.16, 'mad': 0.094, 'aud': 0.64},
+    2022: {'usd': 0.95, 'gbp': 1.17, 'mad': 0.091, 'aud': 0.66},
+    2023: {'usd': 0.93, 'gbp': 1.15, 'mad': 0.092, 'aud': 0.62},
+}
+
+# Phase folder convention so we don't trample existing migrations
+YEAR_TO_PHASE = {
+    2022: 13,  # already used
+    2021: 15,
+    2020: 16,
+    2019: 17,
+    2023: 18,  # in case of re-import
+}
 
 # Stage thresholds (amount in millions of EUR)
 STAGE_THRESHOLDS = [
@@ -76,6 +79,9 @@ FT_MAP = {
     'series d': 'series_d',
     'series e': 'series_e',
     'series f': 'series_f',
+    'series g': 'growth',   # very late stage, no enum past F
+    'series h': 'growth',
+    'series i': 'growth',
     'growth equity': 'growth',
     'private equity': 'growth',
     'angel': 'pre_seed',
@@ -90,6 +96,17 @@ FT_MAP = {
     'equity crowdfunding': 'other',
     'non-equity assistance': 'grant',
 }
+
+# Crunchbase column name aliases (older exports vs. newer exports)
+DESCRIPTION_COLUMNS = ('Description', 'Organization Description')
+SECTOR_COLUMNS = ('Sectors', 'Organization Industries')
+
+
+def _first_col(row: dict, candidates: tuple[str, ...]) -> str | None:
+    for col in candidates:
+        if col in row:
+            return col
+    return None
 
 
 def slugify(name: str) -> str:
@@ -140,19 +157,19 @@ def parse_amount(val: str) -> float | None:
         return None
 
 
-def to_eur(amount_raw: float | None, currency: str) -> float | None:
-    """Convert raw currency amount to EUR. Returns None if amount is None
-    or currency is unknown/missing."""
+def to_eur(amount_raw: float | None, currency: str, fx: dict) -> float | None:
+    """Convert raw currency amount to EUR using `fx` rate dict
+    (keys: 'usd','gbp','mad','aud'). Returns None if amount is None or
+    currency is unknown/missing."""
     if amount_raw is None:
         return None
     c = (currency or '').strip().upper()
     if c == 'EUR':
         return amount_raw
-    if c == 'USD':
-        return amount_raw * USD_TO_EUR
-    if c == 'GBP':
-        return amount_raw * GBP_TO_EUR
-    return None  # unknown currency: skip the amount rather than guess
+    rate = fx.get(c.lower())
+    if rate is None:
+        return None  # unknown currency: skip the amount rather than guess
+    return amount_raw * rate
 
 
 def to_millions(eur: float | None) -> float | None:
@@ -206,18 +223,68 @@ def map_sectors(raw: str, mapping: dict[str, str]) -> list[str]:
     return out
 
 
+def _parse_args():
+    p = argparse.ArgumentParser(description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument('--year', type=int, default=2022)
+    p.add_argument('--input', type=Path, default=None)
+    p.add_argument('--output', type=Path, default=None,
+                   help='Output dir (default: supabase/migrations/phaseN/)')
+    p.add_argument('--phase', type=int, default=None,
+                   help='Phase folder number; default looked up by year')
+    p.add_argument('--source-name', default=None,
+                   help='funding_rounds.source_name (default: funding_deals_<year>_crunchbase)')
+    p.add_argument('--usd-eur', type=float, default=None)
+    p.add_argument('--gbp-eur', type=float, default=None)
+    p.add_argument('--mad-eur', type=float, default=None)
+    p.add_argument('--aud-eur', type=float, default=None)
+    p.add_argument('--drop-row', action='append', default=[],
+                   help='Skip a row by "Org Name:Funding Type" (repeatable)')
+    return p.parse_args()
+
+
 def main() -> None:
-    with open(INPUT) as f:
+    args = _parse_args()
+    year = args.year
+    defaults = YEAR_DEFAULTS.get(year, YEAR_DEFAULTS[2022])
+    fx = {
+        'usd': args.usd_eur if args.usd_eur is not None else defaults['usd'],
+        'gbp': args.gbp_eur if args.gbp_eur is not None else defaults['gbp'],
+        'mad': args.mad_eur if args.mad_eur is not None else defaults['mad'],
+        'aud': args.aud_eur if args.aud_eur is not None else defaults['aud'],
+    }
+    input_path = args.input or Path(f'data/funding_{year}_crunchbase.csv')
+    phase = args.phase or YEAR_TO_PHASE.get(year, 13)
+    out_dir = args.output or Path(f'supabase/migrations/phase{phase}')
+    source_name = args.source_name or f'funding_deals_{year}_crunchbase'
+
+    print(f"Year: {year}  FX: {fx}")
+    print(f"Input: {input_path}  Output: {out_dir}  source_name: {source_name!r}")
+
+    with open(input_path) as f:
         rows = list(csv.DictReader(f))
 
-    # Drop the Institut Mérieux PE row (uploaded by mistake)
-    rows = [r for r in rows
-            if not (r['Organization Name'].strip() == 'Institut Merieux'
-                    and r['Funding Type'].strip() == 'Private Equity')]
+    if rows:
+        sector_col = _first_col(rows[0], SECTOR_COLUMNS)
+        if not sector_col:
+            raise SystemExit(f"No sector column found; expected one of {SECTOR_COLUMNS}")
+        print(f"Sector column: {sector_col!r}")
+    else:
+        raise SystemExit(f"No rows in {input_path}")
+
+    # Apply --drop-row filters (e.g. "Institut Merieux:Private Equity")
+    drop_pairs = {
+        tuple(s.split(':', 1)) for s in args.drop_row if ':' in s
+    }
+    if drop_pairs:
+        before = len(rows)
+        rows = [r for r in rows
+                if (r['Organization Name'].strip(), r['Funding Type'].strip()) not in drop_pairs]
+        print(f"Dropped {before - len(rows)} rows via --drop-row")
 
     sector_mapping = load_sector_mapping()
 
-    print(f"Read {len(rows)} rows from {INPUT}")
+    print(f"Read {len(rows)} rows from {input_path}")
     print(f"Sector mapping: {len(sector_mapping)} terms")
 
     orgs: dict[str, dict] = {}
@@ -258,7 +325,7 @@ def main() -> None:
 
         if city:
             cities_set.add(city)
-        for sec in map_sectors(row.get('Sectors') or '', sector_mapping):
+        for sec in map_sectors(row.get(sector_col) or '', sector_mapping):
             sectors_set.add(sec)
         for inv in parse_investor_list(row.get('Investor Names') or ''):
             investor_names_set.add(inv)
@@ -297,7 +364,7 @@ def main() -> None:
         if not name:
             continue
         slug = slugify(name)
-        canon = map_sectors(row.get('Sectors') or '', sector_mapping)
+        canon = map_sectors(row.get(sector_col) or '', sector_mapping)
         for i, s in enumerate(canon):
             sector_links.append({
                 'org_slug': slug, 'sector': s, 'is_primary': i == 0,
@@ -336,7 +403,7 @@ def main() -> None:
             continue
         slug = slugify(name)
         amount_raw = parse_amount(row.get('Money Raised') or '')
-        amount_eur = to_eur(amount_raw, row.get('Money Raised Currency') or '')
+        amount_eur = to_eur(amount_raw, row.get('Money Raised Currency') or '', fx)
         amount_millions = to_millions(amount_eur)
         date = (row.get('Announced Date') or '').strip() or None
         round_key = (slug, date, amount_millions)
@@ -373,7 +440,7 @@ def main() -> None:
         slug = slugify(name)
         date = (row.get('Announced Date') or '').strip() or None
         amount_raw = parse_amount(row.get('Money Raised') or '')
-        amount_eur = to_eur(amount_raw, row.get('Money Raised Currency') or '')
+        amount_eur = to_eur(amount_raw, row.get('Money Raised Currency') or '', fx)
         amount_millions = to_millions(amount_eur)
         for i, inv in enumerate(parse_investor_list(investors_str)):
             key = (slug, date, amount_millions, inv)
@@ -397,11 +464,11 @@ def main() -> None:
     def j(p):
         return json.dumps(p, ensure_ascii=False)
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"\nWriting to {OUT_DIR}/")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"\nWriting to {out_dir}/")
 
     # 01a_cities.sql
-    write_sql(OUT_DIR / '01a_cities.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01a_cities.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 1: Create cities that don't exist yet ({len(cities_list)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -421,7 +488,7 @@ ON CONFLICT (slug) DO NOTHING;
 """)
 
     # 01b_sectors.sql (includes EdTech if any rows mapped to it)
-    write_sql(OUT_DIR / '01b_sectors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01b_sectors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 2: Create sectors that don't exist yet ({len(sectors_list)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -440,7 +507,7 @@ ON CONFLICT (slug) DO NOTHING;
 """)
 
     # 01c_organizations.sql (no description — Crunchbase copyrighted)
-    write_sql(OUT_DIR / '01c_organizations.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01c_organizations.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 3: Create organizations (upsert by slug; enrich missing fields)
 -- Note: description intentionally NOT inserted (Crunchbase copyrighted)
 WITH source AS (
@@ -461,7 +528,7 @@ SELECT
   s.website,
   'active'::organization_status,
   'France',
-  '{SOURCE_NAME}',
+  '{source_name}',
   s.siren,
   NOW(), NOW()
 FROM source s
@@ -472,7 +539,7 @@ ON CONFLICT (slug) DO UPDATE SET
 """)
 
     # 01d_legal_entities.sql
-    write_sql(OUT_DIR / '01d_legal_entities.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01d_legal_entities.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 4: Create legal_entities for orgs with SIREN ({len(legal_json)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -497,7 +564,7 @@ WHERE NOT EXISTS (
 """)
 
     # 01e_org_cities.sql
-    write_sql(OUT_DIR / '01e_org_cities.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01e_org_cities.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 5: Link organizations to cities ({len(org_city_json)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -513,7 +580,7 @@ WHERE o.slug = s.org_slug AND o.city_id IS NULL;
 """)
 
     # 01f_org_sectors.sql
-    write_sql(OUT_DIR / '01f_org_sectors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01f_org_sectors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 6: Link organizations to sectors ({len(sector_links_dedup)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -538,7 +605,7 @@ WHERE NOT EXISTS (
 """)
 
     # 01g_funding_rounds.sql
-    write_sql(OUT_DIR / '01g_funding_rounds.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01g_funding_rounds.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 7: Create funding_rounds ({len(rounds_json)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -560,21 +627,21 @@ SELECT
   NULLIF(s.announced_date, '')::DATE,
   FALSE,
   FALSE,
-  '{SOURCE_NAME}',
+  '{source_name}',
   NOW()
 FROM source s
 JOIN organizations o ON o.slug = s.org_slug
 WHERE NOT EXISTS (
   SELECT 1 FROM funding_rounds fr
   WHERE fr.organization_id = o.id
-  AND fr.source_name = '{SOURCE_NAME}'
+  AND fr.source_name = '{source_name}'
   AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
   AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
 );
 """)
 
     # 01h_investor_orgs.sql
-    write_sql(OUT_DIR / '01h_investor_orgs.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01h_investor_orgs.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 8: Create investor organizations ({len(investors_list)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -593,14 +660,14 @@ SELECT
   'investor'::organization_type,
   'active'::organization_status,
   'France',
-  '{SOURCE_NAME}',
+  '{source_name}',
   NOW(), NOW()
 FROM source s
 ON CONFLICT (slug) DO NOTHING;
 """)
 
     # 01i_round_investors.sql (DISTINCT ON guard)
-    write_sql(OUT_DIR / '01i_round_investors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
+    write_sql(out_dir / '01i_round_investors.sql', f"""CREATE EXTENSION IF NOT EXISTS "unaccent";
 -- Step 9: Link investors to funding rounds ({len(round_invs)})
 WITH source AS (
   SELECT * FROM json_populate_recordset(
@@ -618,7 +685,7 @@ joined AS (
   JOIN organizations o ON o.slug = s.org_slug
   JOIN organizations inv_org ON inv_org.slug = lower(regexp_replace(regexp_replace(unaccent(s.investor_name), '[^a-zA-Z0-9\\s-]', '', 'g'), '\\s+', '-', 'g'))
   JOIN funding_rounds fr ON fr.organization_id = o.id
-    AND fr.source_name = '{SOURCE_NAME}'
+    AND fr.source_name = '{source_name}'
     AND fr.announced_date IS NOT DISTINCT FROM NULLIF(s.announced_date, '')::DATE
     AND fr.amount_eur IS NOT DISTINCT FROM s.amount_eur
   ORDER BY fr.id, inv_org.id, s.is_lead DESC
@@ -638,7 +705,7 @@ ON CONFLICT (funding_round_id, investor_id) DO NOTHING;
 """)
 
     print()
-    print(f"Done. Wrote 9 SQL files to {OUT_DIR}/")
+    print(f"Done. Wrote 9 SQL files to {out_dir}/")
 
 
 if __name__ == '__main__':
