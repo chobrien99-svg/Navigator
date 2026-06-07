@@ -40,22 +40,40 @@ from pathlib import Path
 MAPPING = Path('data/crunchbase_sector_mapping.tsv')
 
 # Per-year FX defaults (1 unit foreign currency → EUR), annual averages.
-# Add new years here as imports happen.
+# Sources: ECB / oanda / IRS yearly averages for historical years.
 YEAR_DEFAULTS = {
-    2019: {'usd': 0.89, 'gbp': 1.14, 'mad': 0.093, 'aud': 0.62},
-    2020: {'usd': 0.88, 'gbp': 1.13, 'mad': 0.093, 'aud': 0.60},
-    2021: {'usd': 0.85, 'gbp': 1.16, 'mad': 0.094, 'aud': 0.64},
-    2022: {'usd': 0.95, 'gbp': 1.17, 'mad': 0.091, 'aud': 0.66},
-    2023: {'usd': 0.93, 'gbp': 1.15, 'mad': 0.092, 'aud': 0.62},
+    2000: {'usd': 1.085, 'gbp': 1.640, 'mad': 0.107, 'aud': 0.629},
+    2001: {'usd': 1.117, 'gbp': 1.608, 'mad': 0.109, 'aud': 0.578},
+    2002: {'usd': 1.061, 'gbp': 1.591, 'mad': 0.105, 'aud': 0.578},
+    2003: {'usd': 0.884, 'gbp': 1.445, 'mad': 0.091, 'aud': 0.577},
+    2004: {'usd': 0.805, 'gbp': 1.474, 'mad': 0.090, 'aud': 0.593},
+    2005: {'usd': 0.804, 'gbp': 1.463, 'mad': 0.090, 'aud': 0.613},
+    2006: {'usd': 0.797, 'gbp': 1.467, 'mad': 0.090, 'aud': 0.600},
+    2007: {'usd': 0.731, 'gbp': 1.462, 'mad': 0.089, 'aud': 0.613},
+    2008: {'usd': 0.683, 'gbp': 1.258, 'mad': 0.088, 'aud': 0.580},
+    2009: {'usd': 0.719, 'gbp': 1.123, 'mad': 0.089, 'aud': 0.567},
+    2010: {'usd': 0.755, 'gbp': 1.166, 'mad': 0.090, 'aud': 0.694},
+    2011: {'usd': 0.719, 'gbp': 1.152, 'mad': 0.089, 'aud': 0.742},
+    2012: {'usd': 0.778, 'gbp': 1.234, 'mad': 0.092, 'aud': 0.806},
+    2013: {'usd': 0.753, 'gbp': 1.178, 'mad': 0.090, 'aud': 0.728},
+    2014: {'usd': 0.754, 'gbp': 1.241, 'mad': 0.090, 'aud': 0.680},
+    2015: {'usd': 0.901, 'gbp': 1.378, 'mad': 0.092, 'aud': 0.678},
+    2016: {'usd': 0.904, 'gbp': 1.224, 'mad': 0.092, 'aud': 0.672},
+    2017: {'usd': 0.886, 'gbp': 1.142, 'mad': 0.090, 'aud': 0.679},
+    2018: {'usd': 0.847, 'gbp': 1.130, 'mad': 0.090, 'aud': 0.633},
+    2019: {'usd': 0.893, 'gbp': 1.140, 'mad': 0.093, 'aud': 0.621},
+    2020: {'usd': 0.876, 'gbp': 1.125, 'mad': 0.093, 'aud': 0.604},
+    2021: {'usd': 0.845, 'gbp': 1.163, 'mad': 0.094, 'aud': 0.636},
+    2022: {'usd': 0.951, 'gbp': 1.174, 'mad': 0.091, 'aud': 0.660},
+    2023: {'usd': 0.924, 'gbp': 1.150, 'mad': 0.092, 'aud': 0.614},
 }
 
 # Phase folder convention so we don't trample existing migrations
 YEAR_TO_PHASE = {
-    2022: 13,  # already used
-    2021: 15,
-    2020: 16,
-    2019: 17,
-    2023: 18,  # in case of re-import
+    2022: 13, 2021: 15, 2020: 16, 2019: 17, 2023: 18,
+    2018: 19, 2017: 20, 2016: 21, 2015: 22, 2014: 23,
+    2013: 24, 2012: 25, 2011: 26, 2010: 27,
+    # earlier years: --phase flag to override
 }
 
 # Stage thresholds (amount in millions of EUR)
@@ -95,6 +113,17 @@ FT_MAP = {
     'product crowdfunding': 'other',
     'equity crowdfunding': 'other',
     'non-equity assistance': 'grant',
+}
+
+# Crunchbase Funding Types that mean "unknown stage" — treat as blank and let
+# the amount-based thresholds derive a stage instead of falling through to
+# 'other'. Add new Crunchbase quirks here as we encounter them.
+UNSPECIFIED_FT = {
+    'venture round',
+    'venture',
+    'undisclosed',
+    'funding round',
+    'crowdfunding',  # often stage-agnostic
 }
 
 # Crunchbase column name aliases (older exports vs. newer exports)
@@ -183,9 +212,11 @@ def derive_stage(funding_type: str, amount_millions: float | None) -> str:
     ft = (funding_type or '').strip().lower()
     if ft in FT_MAP:
         return FT_MAP[ft]
-    if ft:
+    # "Venture Round", "Funding Round", etc. — Crunchbase placeholders.
+    # Treat the same as blank: derive from amount.
+    if ft and ft not in UNSPECIFIED_FT:
         return 'other'  # unknown non-empty value
-    # Blank Funding Type — apply amount thresholds
+    # Blank or unspecified Funding Type — apply amount thresholds
     if amount_millions is None:
         return DEFAULT_NO_AMOUNT_STAGE
     for threshold, stage in STAGE_THRESHOLDS:

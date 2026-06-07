@@ -84,6 +84,7 @@ export interface Organization {
   status: OrganizationStatus;
   country: string;
   city_id: string | null;
+  secondary_city_id: string | null;
   founded_date: string | null;
   employee_count: number | null;
   employee_range: string | null;
@@ -98,6 +99,7 @@ export interface Organization {
   updated_at: string;
   // Joined relations
   cities?: City | null;
+  secondary_city?: City | null;
   organization_sectors?: OrganizationSector[];
   organization_profiles?: OrganizationProfile[];
 }

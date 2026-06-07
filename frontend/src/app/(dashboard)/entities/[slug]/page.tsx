@@ -94,6 +94,8 @@ export default async function EntityDossierPage({
     (org.cities as { name: string; region?: string } | null)?.name ?? "—";
   const region =
     (org.cities as { name: string; region?: string } | null)?.region ?? null;
+  const secondaryCity =
+    org.secondary_city as { name: string; region?: string } | null;
   const founders = people.filter((p) => p.is_founder);
   const team = people.filter((p) => !p.is_founder && p.is_current);
   const primaryLegal = legalEntities.find((l) => l.is_primary) ?? legalEntities[0];
@@ -209,6 +211,15 @@ export default async function EntityDossierPage({
             {region ? `, ${region}` : ""}
           </span>
         </div>
+        {secondaryCity && (
+          <div>
+            <span className="diplomatic-label">Secondary HQ</span>
+            <span className="ml-2 text-sm text-on-surface">
+              {secondaryCity.name}
+              {secondaryCity.region ? `, ${secondaryCity.region}` : ""}
+            </span>
+          </div>
+        )}
         {org.employee_range && (
           <div>
             <span className="diplomatic-label">Employees</span>
