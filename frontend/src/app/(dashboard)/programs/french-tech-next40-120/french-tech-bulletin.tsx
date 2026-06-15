@@ -3,7 +3,6 @@ import type { BulletinData } from "./cohort-data";
 import { capitalize, numberToWords } from "./cohort-transform";
 import { CohortFlow } from "./charts/cohort-flow";
 import { SectorTreemap } from "./charts/sector-treemap";
-import { FranceMap } from "./charts/france-map";
 
 const LEGEND = [
   { label: "Next 40", c: "#114563" },
@@ -617,19 +616,19 @@ export function FrenchTechBulletin({
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 220px", gap: 18 }}>
-            <FranceMap regions={regions} width={560} height={500} />
-
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <div className="diplomatic-label" style={{ marginBottom: 6 }}>
-                City Ranking
-              </div>
+          <div>
+            <div className="diplomatic-label" style={{ marginBottom: 10 }}>
+              City Ranking
+            </div>
+            <div style={{ columnCount: 2, columnGap: 32 }}>
               {regions.slice(0, 10).map((r, i) => (
                 <div
                   key={r.city}
                   className="hairline-bot"
                   style={{
                     paddingBottom: 6,
+                    marginBottom: 6,
+                    breakInside: "avoid",
                     display: "grid",
                     gridTemplateColumns: "20px 1fr 32px 28px",
                     alignItems: "baseline",
@@ -656,18 +655,18 @@ export function FrenchTechBulletin({
                   </span>
                 </div>
               ))}
-              <div
-                style={{
-                  marginTop: 4,
-                  fontSize: 10,
-                  fontFamily: "var(--font-headline)",
-                  fontStyle: "italic",
-                  color: "var(--color-on-surface-variant)",
-                  lineHeight: 1.4,
-                }}
-              >
-                Located: {geo.located} of {geo.total} members with a recorded city.
-              </div>
+            </div>
+            <div
+              style={{
+                marginTop: 8,
+                fontSize: 10,
+                fontFamily: "var(--font-headline)",
+                fontStyle: "italic",
+                color: "var(--color-on-surface-variant)",
+                lineHeight: 1.4,
+              }}
+            >
+              Located: {geo.located} of {geo.total} members with a recorded city.
             </div>
           </div>
         </div>
