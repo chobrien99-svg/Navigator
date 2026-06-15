@@ -18,6 +18,7 @@ type CohortFlowProps = {
   topPad?: number;
   bottomPad?: number;
   announce?: boolean;
+  fluid?: boolean;
 };
 
 type Ribbon = {
@@ -49,6 +50,7 @@ export function CohortFlow({
   topPad = 60,
   bottomPad = 60,
   announce = true,
+  fluid = false,
 }: CohortFlowProps) {
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [tip, setTip] = useState<{ label: string; sub: string } | null>(null);
@@ -189,7 +191,13 @@ export function CohortFlow({
 
   return (
     <div ref={wrapRef} style={{ position: "relative" }} onMouseMove={onMove} onMouseLeave={leave}>
-      <svg className="flow-svg" width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+      <svg
+        className="flow-svg"
+        width={width}
+        height={height}
+        viewBox={`0 0 ${width} ${height}`}
+        style={fluid ? { display: "block", width: "100%", height: "auto" } : undefined}
+      >
         <defs>
           <linearGradient id="newGrad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#3c6840" stopOpacity="0" />
