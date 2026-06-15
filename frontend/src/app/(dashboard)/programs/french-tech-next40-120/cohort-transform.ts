@@ -339,6 +339,23 @@ export function buildBulletinData(rows: ProgramOrganization[], targetYear?: numb
     remaining: Math.max(0, tapeNames.length - TAPE_SHOWN),
   };
 
+  // ── Full roster (every member, by tier, alphabetical) ──
+  const rosterFor = (tier: Tier) =>
+    latestMembers
+      .filter((m) => m.tier === tier)
+      .map((m) => {
+        const c = cityName(m.org);
+        return {
+          name: m.org.name,
+          slug: m.org.slug,
+          tier: m.tier,
+          sector: primarySector(m.org) ?? "—",
+          city: c ? canonicalCity(c) : "—",
+        };
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
+  const roster = { next40: rosterFor("Next 40"), ft120: rosterFor("FT 120") };
+
   const n = cohorts.length;
   const meta = {
     bulletinNo: n,
@@ -362,6 +379,7 @@ export function buildBulletinData(rows: ProgramOrganization[], targetYear?: numb
     miniStats,
     numbers,
     tape,
+    roster,
   };
 }
 

@@ -58,6 +58,14 @@ export type LedgerRow = {
   color: string;
 };
 
+export type RosterEntry = {
+  name: string;
+  slug: string;
+  tier: Tier;
+  sector: string;
+  city: string;
+};
+
 // One row per promotion year, for the editions archive index.
 export type EditionSummary = {
   year: number;
@@ -93,6 +101,7 @@ export type BulletinData = {
   miniStats: { newCount: number; promoted: number; demoted: number; exited: number };
   numbers: { total: number; cumulative: number; next40: number; ft120: number };
   tape: { names: { name: string; slug: string }[]; remaining: number };
+  roster: { next40: RosterEntry[]; ft120: RosterEntry[] };
 };
 
 // ─── Static layout lookups (no DB source) ─────────────────────
