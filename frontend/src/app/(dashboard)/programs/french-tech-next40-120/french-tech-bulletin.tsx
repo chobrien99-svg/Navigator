@@ -3,7 +3,6 @@ import type { BulletinData } from "./cohort-data";
 import { capitalize, numberToWords } from "./cohort-transform";
 import { CohortFlow } from "./charts/cohort-flow";
 import { SectorTreemap } from "./charts/sector-treemap";
-import { FranceMap } from "./charts/france-map";
 
 const LEGEND = [
   { label: "Next 40", c: "#114563" },
@@ -120,6 +119,7 @@ export function FrenchTechBulletin({
     miniStats,
     numbers,
     tape,
+    roster,
   } = data;
 
   const firstYear = cohorts[0].year;
@@ -617,19 +617,19 @@ export function FrenchTechBulletin({
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 220px", gap: 18 }}>
-            <FranceMap regions={regions} width={560} height={500} />
-
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <div className="diplomatic-label" style={{ marginBottom: 6 }}>
-                City Ranking
-              </div>
+          <div>
+            <div className="diplomatic-label" style={{ marginBottom: 10 }}>
+              City Ranking
+            </div>
+            <div style={{ columnCount: 2, columnGap: 32 }}>
               {regions.slice(0, 10).map((r, i) => (
                 <div
                   key={r.city}
                   className="hairline-bot"
                   style={{
                     paddingBottom: 6,
+                    marginBottom: 6,
+                    breakInside: "avoid",
                     display: "grid",
                     gridTemplateColumns: "20px 1fr 32px 28px",
                     alignItems: "baseline",
@@ -656,18 +656,18 @@ export function FrenchTechBulletin({
                   </span>
                 </div>
               ))}
-              <div
-                style={{
-                  marginTop: 4,
-                  fontSize: 10,
-                  fontFamily: "var(--font-headline)",
-                  fontStyle: "italic",
-                  color: "var(--color-on-surface-variant)",
-                  lineHeight: 1.4,
-                }}
-              >
-                Located: {geo.located} of {geo.total} members with a recorded city.
-              </div>
+            </div>
+            <div
+              style={{
+                marginTop: 8,
+                fontSize: 10,
+                fontFamily: "var(--font-headline)",
+                fontStyle: "italic",
+                color: "var(--color-on-surface-variant)",
+                lineHeight: 1.4,
+              }}
+            >
+              Located: {geo.located} of {geo.total} members with a recorded city.
             </div>
           </div>
         </div>
@@ -691,6 +691,152 @@ export function FrenchTechBulletin({
             {tape.remaining > 0 ? `  ·  + ${tape.remaining} more` : ""}
           </div>
         </div>
+      </div>
+
+      {/* ─── The Promotion · Full Cohort ─────────── */}
+      <div style={{ marginTop: 56 }}>
+        <div className="editorial-overline" style={{ color: "var(--color-primary)" }}>
+          Figure E · The Promotion
+        </div>
+        <h2
+          style={{
+            fontFamily: "var(--font-headline)",
+            fontSize: 32,
+            fontWeight: 500,
+            letterSpacing: "-0.015em",
+            margin: "8px 0 4px 0",
+            lineHeight: 1.05,
+          }}
+        >
+          The {latestYear} cohort in full
+        </h2>
+        <p
+          style={{
+            fontFamily: "var(--font-headline)",
+            fontStyle: "italic",
+            fontSize: 13,
+            color: "var(--color-on-surface-variant)",
+            lineHeight: 1.45,
+            margin: "0 0 4px 0",
+          }}
+        >
+          All {numbers.total} members of Promotion {latestYear}, by tier and alphabetical.
+        </p>
+
+        {(["Next 40", "FT 120"] as const).map((tier) => {
+          const list = tier === "Next 40" ? roster.next40 : roster.ft120;
+          if (list.length === 0) return null;
+          return (
+            <div
+              key={tier}
+              style={{
+                marginTop: 28,
+                paddingTop: 16,
+                borderTop: "2px solid var(--color-on-surface)",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "baseline",
+                  marginBottom: 14,
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "var(--font-headline)",
+                    fontSize: 22,
+                    fontWeight: 500,
+                    letterSpacing: "-0.01em",
+                    margin: 0,
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {tier}{" "}
+                  <span
+                    className="num"
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 13,
+                      color: "var(--color-on-surface-variant)",
+                      fontWeight: 500,
+                      letterSpacing: "0.04em",
+                    }}
+                  >
+                    · {list.length}
+                  </span>
+                </h3>
+              </div>
+
+              <div
+                style={{
+                  columnCount: tier === "Next 40" ? 3 : 4,
+                  columnGap: 28,
+                }}
+              >
+                {list.map((m, i) => (
+                  <div
+                    key={m.slug || m.name}
+                    className="hairline-bot"
+                    style={{
+                      paddingBottom: 7,
+                      marginBottom: 7,
+                      breakInside: "avoid",
+                      display: "grid",
+                      gridTemplateColumns: "22px 1fr",
+                      columnGap: 8,
+                      alignItems: "baseline",
+                    }}
+                  >
+                    <span
+                      className="num"
+                      style={{
+                        fontSize: 9,
+                        color: "var(--color-on-surface-variant)",
+                        fontVariantNumeric: "tabular-nums",
+                      }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div style={{ minWidth: 0 }}>
+                      <MaybeLink
+                        embed={embed}
+                        href={`/entities/${m.slug}`}
+                        className="entity-link"
+                        style={{
+                          display: "block",
+                          fontFamily: "var(--font-headline)",
+                          fontSize: 13,
+                          fontWeight: 600,
+                          color: "var(--color-on-surface)",
+                          lineHeight: 1.2,
+                        }}
+                      >
+                        {m.name}
+                      </MaybeLink>
+                      <div
+                        style={{
+                          marginTop: 2,
+                          fontSize: 9,
+                          color: "var(--color-on-surface-variant)",
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          fontWeight: 600,
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {m.sector !== "—" ? m.sector : ""}
+                        {m.sector !== "—" && m.city !== "—" ? " · " : ""}
+                        {m.city !== "—" ? m.city : ""}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* ─── Footer ────────────────────────── */}
