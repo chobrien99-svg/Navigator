@@ -195,7 +195,11 @@ export function CohortFlow({
         className="flow-svg"
         width={width}
         height={height}
-        viewBox={`0 0 ${width} ${height}`}
+        viewBox={
+          fluid
+            ? `0 ${-40} ${width} ${height + 80}`
+            : `0 0 ${width} ${height}`
+        }
         style={fluid ? { display: "block", width: "100%", height: "auto" } : undefined}
       >
         <defs>
