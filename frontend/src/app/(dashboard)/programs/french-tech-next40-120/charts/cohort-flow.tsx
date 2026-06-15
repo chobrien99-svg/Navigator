@@ -197,7 +197,7 @@ export function CohortFlow({
         height={height}
         viewBox={
           fluid
-            ? `0 ${-40} ${width} ${height + 80}`
+            ? `${-40} ${-80} ${width + 80} ${height + 160}`
             : `0 0 ${width} ${height}`
         }
         style={fluid ? { display: "block", width: "100%", height: "auto" } : undefined}
