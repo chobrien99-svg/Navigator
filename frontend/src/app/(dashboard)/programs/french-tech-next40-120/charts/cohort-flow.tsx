@@ -305,24 +305,6 @@ export function CohortFlow({
           const isCurrent = c.year === highlightYear;
           return (
             <g key={c.year}>
-              {i === 0 && showLabels && (
-                <g style={{ pointerEvents: "none" }}>
-                  <rect x={c.x - 30} y={c.n40Top - 32} width={74} height={20} fill="#3c6840" opacity={0.92} />
-                  <text
-                    x={c.x + barWidth / 2}
-                    y={c.n40Top - 18}
-                    fontSize="9"
-                    fontFamily="Public Sans"
-                    fontWeight="700"
-                    textAnchor="middle"
-                    fill="#fef9ee"
-                    letterSpacing="0.12em"
-                  >
-                    INAUGURAL · 120
-                  </text>
-                </g>
-              )}
-
               <rect
                 x={c.x}
                 y={c.n40Top}
