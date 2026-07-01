@@ -5,12 +5,15 @@
 > and cross-checks the newsletter's editorial coverage against the funding data in
 > `Q2-2026-ANALYSIS.md`.
 >
-> **Source:** Ghost Content API — `https://www.frenchtechjournal.com/ghost/api/content/posts/`,
-> filtered to `published_at` 1 Apr – 30 Jun 2026 (Paris local). **85 posts.** Generated 2026-07-01.
+> **Source:** Ghost API — `https://www.frenchtechjournal.com`, posts `published_at` 1 Apr – 30 Jun
+> 2026 (site timezone). **86 posts, ~141,000 words of full body text** pulled via the Admin API
+> (`GET /ghost/api/admin/posts/`, JWT auth) so members-only bodies (72 of 86 are gated) are included.
+> Generated 2026-07-01.
 >
-> *Data note:* the Content API returns full body text only for the 13 public posts; the other 72 are
-> members-only, so company/theme extraction below is drawn from titles, tags, and custom excerpts
-> (available for 85/85 posts). A deeper full-text pass is possible via the Admin API if wanted.
+> *Reconciliation:* the public Content API returns 85 posts here; the Admin API adds one boundary
+> post — the Dust feature *"Your Next Coworker Won't Be Human"* — which the site dates **30 June**
+> (Content API's cache had it at 1 July +02:00). It's a Q2 post; included. 3 posts (interactive data
+> drops) have no body text.
 
 ---
 
@@ -18,22 +21,22 @@
 
 | Content type | Posts | Cadence | What it is |
 |---|---|---:|---|
-| **Feature / Deep Dive** | 37 | ~3/week | Standalone reported stories & company profiles |
+| **Feature / Deep Dive** | 38 | ~3/week | Standalone reported stories & company profiles |
 | **Funding Wire** 🇫🇷💸 | 13 | Weekly | Deal recaps — every round of the week, lead deal in the headline |
 | **La Machine** 🤖 | 13 | Weekly (#70–#82) | The AI column |
 | **French Tech Wire** 🇫🇷 | 13 | Weekly | The flagship feature-newsletter |
-| **Data Drop** | 5 | — | Interactive databases, cohort explorers, lab map |
+| **Data Drop** | 4 | — | Interactive databases, cohort explorers, the AI-lab map |
 | **Spotlight Interview** | 3 | — | Long-form Q&As with ecosystem leaders |
-| **Funding Report (Q1)** | 1 | — | The Q1 2026 report launch |
-| **Total** | **85** | | |
+| **Funding Report (Q1)** | 2 | — | The Q1 2026 report launch coverage |
+| **Total** | **86** | | |
 
-**Monthly split:** April 31 · May 26 · June 28.
+**Monthly split:** April 32 · May 25 · June 29.
 
 **The publishing spine.** Three columns ran like clockwork — one **Funding Wire**, one **La Machine**,
-and one **French Tech Wire** every week for all 13 weeks of the quarter (39 posts, 46% of output). The
-remaining 46 posts are reported features. That regular cadence is what makes the timeline below legible.
+and one **French Tech Wire** every week for all 13 weeks of the quarter (39 posts, 45% of output). The
+other 47 posts are reported features and data. That regular cadence is what makes the timeline legible.
 
-**Bylines:** Chris O'Brien (69, incl. all column co-bylines) and Helen O'Reilly-Durand (55) carry the
+**Bylines:** Chris O'Brien (all column co-bylines + most features) and Helen O'Reilly-Durand carry the
 publication, with two guest contributions — Samuel Hodman (the helium-crisis deep-dive) and VivaTech
 CEO François Bitouzet (a VivaTech reflection).
 
@@ -43,7 +46,7 @@ CEO François Bitouzet (a VivaTech reflection).
 
 The 13 weekly Funding Wires are the newsletter's spine and they track the `funding_rounds` data
 directly. Each headline names the week's lead deal; those lead deals map cleanly onto the analysis's
-**Top-15** (`Q2-2026-ANALYSIS.md` §4), confirming the coverage and the dataset agree.
+**Top-15** (`Q2-2026-ANALYSIS.md` §4), confirming coverage and dataset agree.
 
 | Date | Lead deal (headline) | Deals / week total | In analysis Top-15? |
 |---|---|---|---|
@@ -77,8 +80,8 @@ also flag the underlying softness the data shows: "Bankruptcy Booms" (Apr 20), "
 - **Mistral's "Big Spring"** (Apr 1): Nvidia partnership, $830M debt for datacenters, the Koyeb
   acquihire (Apr 21) — the start of a quarter-long Mistral throughline.
 - **Cybersecurity surge** (Apr 9): French cyber funding tops all of 2025 — the Q1 deep-dive sector,
-  still hot at the quarter's open (before its Q2 collapse to €19M).
-- **Sovereignty paradigm** (Apr 24): the "Silver Linings Sovereignty Playbook" — data centers,
+  still hot at the quarter's open (before its Q2 collapse to €19M in the data).
+- **Sovereignty paradigm** (Apr 24): the "Silver Linings Sovereignty Playbook" — datacenters,
   electrification, Notre Dame policy — establishes the quarter's meta-theme.
 - **Quantum:** C12's carbon-nanotube qubit roadmap (Apr 22), foreshadowing the deeptech/quantum
   rotation the funding data confirms.
@@ -98,6 +101,8 @@ also flag the underlying softness the data shows: "Bankruptcy Booms" (Apr 20), "
   confidence barometer, Cohere's Aidan Gomez warning democracies are losing the AI race (Jun 24).
 - **The €480M finale** (Jun 29 wire): Alan's round closes the quarter — the outlier the whole report
   turns on. Morpho (€151.1M, Jun 15) and Quobly (€115M, Grenoble, Jun 8) precede it.
+- **Agentic enterprise:** the Dust double — *"Your Next Coworker Won't Be Human"* (Jun 30) — capping
+  a quarter in which "AI agents" was one of the most-covered ideas.
 - **Open-source sovereignty** (Jun 12): the State swaps Windows for Linux ("La Suite Life").
 - **Next 40/120 2026 cohort** (Jun 15): *"Mistral, Quantum Startups and Deeptech Take Over"* —
   deeptech now a third of France's startup elite, mirroring the funding rotation.
@@ -105,41 +110,64 @@ also flag the underlying softness the data shows: "Bankruptcy Booms" (Apr 20), "
 
 ---
 
-## 4. Recurring themes (ranked by mentions across titles + excerpts)
+## 4. Recurring themes — ranked by full-body mentions
 
-| # | Theme | Weight | How it shows up |
+| # | Theme | Mentions | How it shows up |
 |---|---|---:|---|
-| 1 | **Mistral AI** | 24 | Decacorn playbook, M&A spree (Koyeb, Emmi AI), full-stack pivot, Mensch testimony — the quarter's dominant company |
-| 2 | **Sovereignty** | 24 | The meta-theme: AI sovereignty, open source, helium/critical materials, VivaTech, Macron |
-| 3 | **Agentic AI** | 14 | Agents reshaping enterprise (Dust), storage (Scality), trust (Prelude), cyber "age of agents" |
-| 4 | **Cybersecurity** | 12 | Atlantic tightrope, Roni Carta/Depi, America First — Q1 deep-dive continued |
-| 5 | **VivaTech** | 12 | June set-piece: Macron's farewell, the barometer, Aidan Gomez |
-| 6 | **Quantum / deeptech** | 11 | C12, Quobly, Next40/120 deeptech takeover |
-| 7 | **Climate / impact** | 11 | Impact 40/120, ChangeNOW, Le Fourgon, SKWHEEL electric skis |
-| 8 | Defense | 9 | €3B DefenseTech gap report, Comand AI |
-| 9 | Health / biotech | 7 | Aphasix, UroMems, HealthTech-needs-America |
-| 10 | Robotics | 5 | Wandercraft |
+| 1 | **Health / biotech** | 317 | Aphasix, UroMems, Bionyra, Lauxera, "HealthTech needs America" — corroborates the deep-dive pick |
+| 2 | **Agentic AI / agents** | 291 | Dust, Scality, Prelude, cyber "age of agents" — the pervasive product idea of the quarter |
+| 3 | **US expansion / the Atlantic** | 285 | "America First," selling to the US, sovereignty-vs-scale — runs well beyond the cyber pieces |
+| 4 | **Mistral AI** | 280 | Decacorn playbook, M&A (Koyeb, Emmi AI), full-stack pivot, Mensch testimony — the dominant company |
+| 5 | **Regulation / AI Act** | 223 | Compliance, sovereignty policy, RegTech (Cleo Labs) |
+| 6 | **Sovereignty** | 219 | The meta-frame: AI, open source, critical materials, VivaTech, Macron |
+| 7 | Datacenter / compute | 187 | Mistral datacenters, Nvidia, Kog (inference), SoftBank's €75B bet |
+| 8 | Defense | 172 | €3B DefenseTech gap, Comand AI, dual-use |
+| 9 | Robotics | 144 | Wandercraft, humanoids |
+| 10 | Cybersecurity | 138 | Atlantic tightrope, Depi — Q1 deep-dive continued |
+| 11 | Quantum / deeptech | 126 | C12, Quobly, Next40/120 |
+| 12 | VivaTech | 106 | The June set-piece |
 
-**The two dominant arcs both reinforce the report's thesis:**
-- **The Mistral throughline** ran through nearly every *La Machine* and multiple features — one company
-  absorbing a disproportionate share of AI attention, the editorial mirror of the funding data's
-  single-deal dependence.
-- **The sovereignty arc** — from April's "Great Sovereignty Paradigm" through the helium crisis and
-  La Suite open-source push to VivaTech's Macron farewell — is the quarter's connective tissue and the
-  natural editorial frame for the "Top-Heavy," self-reliance-anxious market the numbers describe.
+**Two things the full text surfaces that the headlines don't:**
+- **The Atlantic runs through everything.** "US expansion / America First" (285) is a top-3 theme —
+  the tension between European sovereignty ambition and continued dependence on US capital, markets,
+  and scale-up muscle is the quarter's real connective tissue, not just a cyber-sector story.
+- **Health/biotech leads editorial mentions**, independently validating the report's decision to make
+  the health cluster the Q2 deep-dive — the newsroom was already circling it before the data confirmed
+  it as the quarter's genuine (non-Alan) winner.
 
-**Cross-check with the funding data:** the newsletter's own rotation — cyber cooling after April,
-quantum/deeptech (C12, Quobly, Next40/120) and health (UroMems, Lauxera) rising — matches the sector
-rotation in `Q2-2026-ANALYSIS.md` §5 (AI −54%, health cluster +57%, deeptech +39%). **Editorial
-coverage and the dataset tell the same story.**
+**Cross-check with the funding data:** the coverage's rotation — cyber cooling after April,
+quantum/deeptech (C12, Quobly, Next40/120) and health (UroMems, Lauxera, Bionyra) rising — matches the
+sector rotation in `Q2-2026-ANALYSIS.md` §5 (AI −54%, health cluster +57%, deeptech +39%). Editorial
+coverage and the dataset tell the same story.
 
 ---
 
-## 5. Companies profiled (feature subjects, Q2)
+## 5. Investor coverage vs. the deal data
 
-**AI / infra:** Mistral AI (recurring), Kog (inference on standard GPUs), NP Co. / Augur (physics-AI),
-Leadbay (PLG for enterprise), DeepIP (patents), Mendo (AI adoption), Linc (AI payroll), Launchmetrics
-(fashion-tech AI moat), Scality (agentic storage), Prelude (post-CAPTCHA verification).
+Investor/fund name mentions across the 86 full bodies — and the editorial ranking mirrors the
+deal-level activity in `Q2-2026-ANALYSIS.md` §8:
+
+| Fund | Posts mentioning | Cross-check |
+|---|---:|---|
+| **Bpifrance** | **33** | #1 by deal count in the data too (22 of 139 deals). The public backbone, editorially and financially. |
+| Nvidia | 19 | Almost entirely the Mistral partnership / compute story |
+| Kima Ventures | 14 | The most-cited *private* seed fund — matches its #3 deal-count rank |
+| Y Combinator | 9 | US accelerator presence (Lucis, others) |
+| daphni · Serena | 8 each | Active early-stage French funds |
+| Partech · Eurazeo · Singular · Founders Future · Blast Club · Banque des Territoires | 6–7 each | The core French VC/public bench |
+
+**Read:** Bpifrance's dominance in the *coverage* (33 posts, ~4× any private fund) independently
+confirms the report's "Public Backbone" callout — the state is the most-covered and most-active capital
+source in French tech, disproportionately present in exactly the early stage private money is thinning.
+
+---
+
+## 6. Companies profiled (feature subjects, Q2)
+
+**AI / infra:** Mistral AI (recurring), Dust (agentic enterprise), Kog (inference on standard GPUs),
+NP Co. / Augur (physics-AI), Leadbay (PLG for enterprise), DeepIP (patents), Mendo (AI adoption), Linc
+(AI payroll), Launchmetrics (fashion-tech AI moat), Scality (agentic storage), Prelude (post-CAPTCHA
+verification).
 **Deeptech / quantum / hardware:** C12 (carbon-nanotube qubits), Prophesee (vision sensors, turnaround),
 Wandercraft (humanoid robotics).
 **Health:** Aphasix (post-stroke speech), UroMems (implantable, Grenoble).
@@ -147,7 +175,7 @@ Wandercraft (humanoid robotics).
 discovery), Plume (renewable-siting AI), Cleo Labs (RegTech).
 **Cybersecurity:** Depi / Roni Carta (supply-chain security).
 
-## 6. People profiled / quoted
+## 7. People profiled / quoted
 
 Arthur Mensch (Mistral CEO — National Assembly testimony), Santiago Lefebvre (ChangeNOW),
 Paul-François Fournier (Bpifrance Innovation chief), Jérôme Lecat (Scality), Michael Jaïs
@@ -157,25 +185,24 @@ co-creator), Jean Ferré (Prophesee CEO), François Bitouzet (VivaTech CEO), and
 
 ---
 
-## 7. What this feeds in the report
+## 8. What this feeds in the report
 
-- **§11 Timeline of Key Stories** — use §3 above (month-by-month), leading each month with the
-  funding milestone (Q1 report → Mistral full-stack → Alan/VivaTech) and pairing it with the thematic
-  thread.
-- **§14 Coverage Index** — use §1 counts (85 posts: 37 features · 13 Funding Wires · 13 La Machine ·
-  13 French Tech Wire · 5 data drops · 3 interviews · 1 report).
-- **Narrative reinforcement** — the "Top-Heavy" thesis is corroborated editorially: weekly wires
-  climbing to the €748.5M Alan-led finale, "Bankruptcy Booms / Busts Beat Exits" flagging the thin
-  base, and the sector rotation (AI → deeptech/health) visible in both the coverage and the data.
+- **§11 Timeline of Key Stories** — use §3 (month-by-month), leading each month with the funding
+  milestone (Q1 report → Mistral full-stack → Alan/VivaTech) paired with its thematic thread.
+- **§14 Coverage Index** — use §1 counts (86 posts: 38 features · 13 Funding Wires · 13 La Machine ·
+  13 French Tech Wire · 4 data drops · 3 interviews · 2 report posts).
+- **Narrative reinforcement** — "Top-Heavy" is corroborated editorially: weekly wires climbing to the
+  €748.5M Alan-led finale; "Bankruptcy Booms / Busts Beat Exits" flagging the thin base; Bpifrance
+  dominating both coverage and deal count; and the health/deeptech rotation visible in coverage and data.
 
 ---
 
-## 8. Status
+## 9. Status
 
-- [x] Pull Q2 (Apr–Jun) posts from Ghost Content API — 85 posts
+- [x] Pull Q2 (Apr–Jun) posts from Ghost API — 86 posts, ~141k words full text (Admin API)
 - [x] Categorize (Funding Wire / La Machine / French Tech Wire / features + data/interviews)
 - [x] Coverage index + monthly split
 - [x] Timeline of key stories (month-by-month)
-- [x] Recurring themes ranked + cross-checked against the funding data
+- [x] Recurring themes ranked (full-body) + cross-checked against the funding data
+- [x] Investor coverage cross-check (Bpifrance dominance corroborated)
 - [x] Companies profiled + people profiled/quoted
-- [ ] *(optional)* Full-body pass via Admin API for exhaustive company/investor extraction
