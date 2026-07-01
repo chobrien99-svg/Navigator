@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top-Heavy — French Tech Q2 2026 Funding Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+/* ── DESIGN SYSTEM: The Modern Archivist ─────────────────────────── */
+:root {
+  --surface: #fef9ee;
+  --surface-dim: #dedacf;
+  --surface-container-low: #f8f3e8;
+  --surface-container: #f2ede2;
+  --surface-container-high: #ede8dd;
+  --surface-container-highest: #e5e2db;
+  --surface-container-lowest: #ffffff;
+  --primary: #114563;
+  --primary-container: #2f5d7c;
+  --on-primary: #ffffff;
+  --on-surface: #1d1c15;
+  --on-surface-variant: #41474d;
+  --secondary: #775a0f;
+  --secondary-container: #fdd580;
+  --tertiary: #460602;
+  --outline: #72787e;
+  --outline-variant: #c1c7ce;
+  --error: #ba1a1a;
+  --graph-links: #C9C1B3;
+  --gold-accent: #edbf74;
+
+  /* Chart palette — muted, archival */
+  --chart-1: #114563;
+  --chart-2: #2f5d7c;
+  --chart-3: #775a0f;
+  --chart-4: #3c6840;
+  --chart-5: #503863;
+  --chart-6: #8b6914;
+  --chart-7: #460602;
+  --chart-8: #5a7a8b;
+  --chart-9: #7a5a3a;
+  --chart-10: #3a7a7a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TYPOGRAPHY ───────────────────────────────────────────────────── */
+.font-headline { font-family: 'Newsreader', serif; }
+.font-body { font-family: 'Public Sans', sans-serif; }
+
+h1, h2, h3 { font-family: 'Newsreader', serif; color: var(--primary); font-weight: 600; }
+
+.display-lg {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.headline-lg {
+  font-family: 'Newsreader', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+.headline-md {
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary);
+}
+
+.headline-sm {
+  font-family: 'Newsreader', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--primary);
+}
+
+.label-md {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--on-surface-variant);
+}
+
+.label-sm {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  color: var(--on-surface-variant);
+}
+
+.body-md { font-size: 0.935rem; line-height: 1.7; }
+.body-sm { font-size: 0.8rem; line-height: 1.6; color: var(--on-surface-variant); }
+
+/* ── LAYOUT ───────────────────────────────────────────────────────── */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 4rem);
+}
+
+.asymmetric-canvas {
+  padding-left: 4rem;
+  padding-right: 2rem;
+}
+
+.section-break {
+  padding: 5.5rem 0;
+}
+
+.section-break + .section-break {
+  padding-top: 0;
+}
+
+/* No-line rule: use background shifts */
+.surface-shift {
+  background: var(--surface-container-low);
+  padding: 4rem 0;
+}
+
+.surface-shift-high {
+  background: var(--surface-container);
+  padding: 4rem 0;
+}
+
+/* ── GHOST BORDERS ────────────────────────────────────────────────── */
+.ghost-border-bottom {
+  border-bottom: 1px solid rgba(193, 199, 206, 0.2);
+}
+
+/* ── MASTHEAD ─────────────────────────────────────────────────────── */
+.masthead {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  color: var(--on-primary);
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.masthead-brand {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.masthead-right {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+/* ── HERO SECTION ─────────────────────────────────────────────────── */
+.hero {
+  padding: 6rem 0 4rem;
+}
+
+.hero-subtitle {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--secondary);
+  margin-bottom: 1.2rem;
+}
+
+.hero-title {
+  margin-bottom: 2rem;
+}
+
+.hero-intro {
+  max-width: 680px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--on-surface);
+}
+
+.hero-intro em {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ── STAT DISPLAY (no boxes — per design system) ──────────────────── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  padding: 3.5rem 0;
+}
+
+.stat-item {
+  padding: 0 1.8rem;
+}
+
+.stat-item:first-child { padding-left: 0; }
+
+.stat-item + .stat-item {
+  border-left: 1px solid rgba(193, 199, 206, 0.15);
+}
+
+.stat-value {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--on-surface-variant);
+  margin-bottom: 0.6rem;
+}
+
+.stat-sub {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.4rem;
+}
+
+.stat-change-up { color: var(--secondary); font-weight: 600; }
+.stat-change-down { color: var(--tertiary); font-weight: 600; }
+
+/* ── CHART CONTAINERS ─────────────────────────────────────────────── */
+.chart-section {
+  margin-bottom: 4rem;
+}
+
+.chart-section-title {
+  margin-bottom: 0.4rem;
+}
+
+.chart-wrap {
+  position: relative;
+  background: var(--surface-container-lowest);
+  padding: 2rem 2rem 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.chart-wrap canvas {
+  width: 100% !important;
+  max-height: 100%;
+}
+
+/* ── DEAL TABLE ───────────────────────────────────────────────────── */
+.deal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.deal-table th {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  color: var(--on-surface-variant);
+  text-align: left;
+  padding: 0.8rem 1rem;
+  background: var(--surface-container-low);
+}
+
+.deal-table td {
+  padding: 0.9rem 1rem;
+  vertical-align: top;
+}
+
+.deal-table tr + tr td {
+  border-top: 1px solid rgba(193, 199, 206, 0.12);
+}
+
+.deal-table .deal-rank {
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1rem;
+  width: 2rem;
+}
+
+.deal-table .deal-company {
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.deal-table .deal-amount {
+  font-family: 'Newsreader', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.deal-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  background: rgba(17, 69, 99, 0.08);
+  color: var(--primary);
+  margin-right: 4px;
+  margin-top: 3px;
+}
+
+/* ── SECTOR GRID ──────────────────────────────────────────────────── */
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0;
+}
+
+.sector-card {
+  padding: 1.8rem 1.5rem;
+  background: var(--surface-container-lowest);
+  position: relative;
+}
+
+.sector-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  bottom: 1.2rem;
+  width: 3px;
+}
+
+.sector-card-name {
+  font-family: 'Newsreader', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.sector-card-value {
+  font-family: 'Newsreader', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.sector-card-change {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+.sector-card-deals {
+  font-size: 0.72rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.2rem;
+}
+
+/* ── CALLOUT BOX ──────────────────────────────────────────────────── */
+.callout {
+  background: var(--surface-container-lowest);
+  padding: 2.5rem 3rem;
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.callout::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--secondary);
+}
+
+.callout-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+/* ── TWO-COL LAYOUT ───────────────────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* ── TIMELINE ─────────────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--graph-links);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 2rem 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.35rem;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+}
+
+.timeline-date {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  color: var(--secondary);
+}
+
+.timeline-text {
+  font-family: 'Newsreader', serif;
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.timeline-sub {
+  font-size: 0.78rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.15rem;
+}
+
+/* ── FOOTER ───────────────────────────────────────────────────────── */
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.06em;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stat-row { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .stat-item + .stat-item { border-left: none; padding-left: 0; }
+  .stat-item:nth-child(4) { border-left: none; }
+  .two-col, .three-col { grid-template-columns: 1fr; }
+  .sector-grid { grid-template-columns: 1fr; }
+  .asymmetric-canvas { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+/* ── PRINT / PDF ──────────────────────────────────────────────────── */
+@media print {
+  @page { size: A4 portrait; margin: 1.2cm 1.5cm; }
+  body { font-size: 8.5pt; background: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .two-col { gap: 0.8rem !important; }
+  .three-col { gap: 0.6rem !important; }
+  .sector-grid { grid-template-columns: 1fr 1fr 1fr !important; gap: 0 !important; }
+  .stat-row { flex-wrap: wrap; gap: 0; }
+  .stat-item { min-width: 100px; flex: 1 1 18%; padding: 0.3rem 0.6rem; }
+  .stat-value { font-size: 1.5rem !important; }
+  .stat-label { font-size: 0.5rem !important; margin-bottom: 0.2rem; }
+  .stat-sub { font-size: 0.6rem !important; margin-top: 0.15rem; }
+
+  .page-container { max-width: 100% !important; padding: 0 0.3cm !important; }
+  .surface-shift, .surface-shift-high { padding: 0.8rem 0 !important; }
+
+  .chart-wrap {
+    height: auto !important;
+    max-height: 200px !important;
+    padding: 0.6rem 0.8rem !important;
+    margin-top: 0.5rem !important;
+    background: white !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  canvas { max-width: 100% !important; max-height: 170px !important; }
+
+  .masthead { -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 8px 20px !important; }
+  .surface-shift, .surface-shift-high { background: #f5f2eb !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sector-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; padding: 0.8rem 0.7rem !important; }
+  .sector-card-value { font-size: 1.2rem !important; }
+  .sector-card-name { font-size: 0.8rem !important; }
+  .callout { -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; padding: 0.8rem 1.2rem !important; margin: 1rem 0 !important; }
+  .callout-title { font-size: 0.95rem !important; margin-bottom: 0.3rem !important; }
+  .callout .body-md { font-size: 0.75rem !important; line-height: 1.5 !important; }
+  .callout::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .deal-table th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .deal-table tr { break-inside: avoid; }
+  .deal-tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 0.5rem !important; padding: 1px 4px !important; }
+
+  .page-break { page-break-before: always; }
+  .no-print { display: none !important; }
+  .section-break { padding: 0.8rem 0 !important; }
+  .hero { padding: 1rem 0 0.5rem !important; }
+  .hero-intro { font-size: 0.8rem !important; line-height: 1.5 !important; }
+  .hero-intro p + p { margin-top: 0.4rem !important; }
+  .display-lg { font-size: 2rem !important; margin-bottom: 0.8rem !important; }
+  .headline-lg { font-size: 1.2rem !important; margin-bottom: 0.4rem !important; }
+  .headline-md { font-size: 1rem !important; }
+  .headline-sm { font-size: 0.85rem !important; }
+  .label-md { font-size: 0.55rem !important; margin-bottom: 0.3rem !important; }
+  .label-sm { font-size: 0.5rem !important; }
+  .body-md { font-size: 0.75rem !important; line-height: 1.5 !important; }
+  .body-sm { font-size: 0.65rem !important; line-height: 1.4 !important; }
+  p.body-md { margin-bottom: 0.3rem !important; }
+
+  .timeline-item { padding-bottom: 0.4rem !important; }
+  .timeline-text { font-size: 0.75rem !important; }
+  .timeline-sub { font-size: 0.6rem !important; }
+  .timeline-date { font-size: 0.55rem !important; }
+  .timeline { padding-left: 1.2rem !important; }
+  .timeline-item { padding-left: 1rem !important; }
+
+  .deal-table td, .deal-table th { padding: 0.25rem 0.4rem !important; font-size: 0.65rem !important; }
+  .deal-table .deal-company { font-size: 0.75rem !important; }
+  .deal-table .deal-amount { font-size: 0.75rem !important; }
+  .deal-table .deal-rank { font-size: 0.75rem !important; }
+
+  .ghost-border-bottom { padding: 0.5rem 0 !important; }
+
+  .three-col .callout { padding: 0.6rem 0.8rem !important; }
+  .three-col .callout .body-sm { font-size: 0.6rem !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     MASTHEAD
+     ═══════════════════════════════════════════════════════════════════ -->
+<header class="masthead">
+  <span class="masthead-brand">The French Tech Journal</span>
+  <span class="masthead-right">Quarterly Funding Report &middot; Q2 2026</span>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     HERO / COVER
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container">
+  <section class="hero">
+    <div class="hero-subtitle">Quarterly Intelligence Briefing &middot; April&ndash;June 2026</div>
+    <h1 class="display-lg hero-title">Top-Heavy</h1>
+    <div class="hero-intro">
+      <p>French tech just had its best quarter in a year. In the second quarter of 2026, startups raised <strong>&euro;2.09 billion&mdash;up 16% on a year ago</strong>, with four rounds above &euro;100 million. On paper, the long-awaited rebound has arrived.</p>
+      <p style="margin-top: 1rem;">It took one company to make it happen. Alan, the Paris health-insurance unicorn, raised <strong>&euro;480 million in June</strong>&mdash;nearly a quarter of everything raised in the entire quarter. Take that single deal out, and French tech funding didn&rsquo;t rise at all. It <em>fell</em> about 11%.</p>
+      <p style="margin-top: 1rem;">That gap&mdash;between a record headline and a market that&rsquo;s actually thinning beneath it&mdash;is the story of Q2 2026. Fewer deals, bigger checks, and <em>a five-year narrowing that this quarter throws into sharp relief.</em></p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     HEADLINE STATS
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 2rem;">Q2 2026 at a Glance</div>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-label">Total Raised</div>
+        <div class="stat-value">&euro;2.09B</div>
+        <div class="stat-sub stat-change-up">+15.7% vs Q2 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Deals Closed</div>
+        <div class="stat-value">139</div>
+        <div class="stat-sub stat-change-down">&minus;16.8% vs Q2 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Average Round</div>
+        <div class="stat-value">&euro;16.5M</div>
+        <div class="stat-sub stat-change-up">+52.8% vs &euro;10.8M</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Median Round</div>
+        <div class="stat-value">&euro;5.0M</div>
+        <div class="stat-sub stat-change-up">+42.9% vs &euro;3.5M</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Mega-Rounds (&euro;100M+)</div>
+        <div class="stat-value">4</div>
+        <div class="stat-sub">Alan, Morpho, Bionyra, Quobly</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     MONTHLY COMPARISON CHART
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Monthly Rhythm</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">June Did the Heavy Lifting</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 0.5rem;">April opened weak&mdash;&euro;305M, roughly half of April 2025. Then June carried the quarter: &euro;1.30 billion, 62% of the total, as Alan, Morpho Labs and Bionyra Pharma all landed in the same four weeks.</p>
+
+    <div class="two-col" style="margin-top: 2rem;">
+      <div class="chart-wrap" style="height: 300px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Funding by Month (&euro;M)</div>
+        <canvas id="chart-monthly-funding"></canvas>
+      </div>
+      <div class="chart-wrap" style="height: 300px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Deals by Month</div>
+        <canvas id="chart-monthly-deals"></canvas>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2.5rem;">
+      <div class="callout-title">The Sequential Read</div>
+      <p class="body-md">Q1 and Q2 posted <em>identical</em> deal counts&mdash;139 each&mdash;yet Q2 raised 23% less. The difference is one quarter having AMI&rsquo;s &euro;890M round and the other having Alan&rsquo;s &euro;480M. Even setting both mega-deals aside, Q2 was still down ~12% on Q1. And yet the median round <em>rose</em>, from &euro;4.6M to &euro;5.0M&mdash;the middle of the market kept getting bigger even as the top thinned.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     TOP DEALS
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift page-break">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Landmark Deals</div>
+    <h2 class="headline-lg" style="margin-bottom: 2.5rem;">The 15 Largest Rounds of Q2 2026</h2>
+
+    <div class="chart-wrap" style="margin-bottom: 3rem; height: 380px;">
+      <div class="label-sm" style="margin-bottom: 0.8rem;">Top 10 Deals by Amount (&euro;M)</div>
+      <canvas id="chart-top-deals"></canvas>
+    </div>
+
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Round</th>
+          <th>Month</th>
+          <th>City</th>
+          <th>Sectors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="deal-rank">1</td><td class="deal-company">Alan</td><td class="deal-amount">&euro;480M</td><td>Growth</td><td>June</td><td>Paris</td><td><span class="deal-tag">FinTech</span><span class="deal-tag">HealthTech</span></td></tr>
+        <tr><td class="deal-rank">2</td><td class="deal-company">Morpho Labs</td><td class="deal-amount">&euro;151M</td><td>Growth</td><td>June</td><td>Paris</td><td><span class="deal-tag">FinTech</span><span class="deal-tag">Crypto</span></td></tr>
+        <tr><td class="deal-rank">3</td><td class="deal-company">Bionyra Pharma</td><td class="deal-amount">&euro;140M</td><td>Series A</td><td>June</td><td>Paris</td><td><span class="deal-tag">BioTech</span></td></tr>
+        <tr><td class="deal-rank">4</td><td class="deal-company">Quobly</td><td class="deal-amount">&euro;115M</td><td>Series A</td><td>June</td><td>Grenoble</td><td><span class="deal-tag">Quantum</span><span class="deal-tag">DeepTech</span></td></tr>
+        <tr><td class="deal-rank">5</td><td class="deal-company">LegalPlace</td><td class="deal-amount">&euro;70M</td><td>Growth</td><td>May</td><td>Paris</td><td><span class="deal-tag">SaaS</span><span class="deal-tag">LegalTech</span></td></tr>
+        <tr><td class="deal-rank">6</td><td class="deal-company">UROMEMS</td><td class="deal-amount">&euro;55M</td><td>Growth</td><td>May</td><td>Grenoble</td><td><span class="deal-tag">HealthTech</span><span class="deal-tag">MedTech</span></td></tr>
+        <tr><td class="deal-rank">7</td><td class="deal-company">Innovafeed</td><td class="deal-amount">&euro;51M</td><td>Growth</td><td>June</td><td>Paris</td><td><span class="deal-tag">AgriTech</span><span class="deal-tag">CleanTech</span></td></tr>
+        <tr><td class="deal-rank">8</td><td class="deal-company">AURA AERO</td><td class="deal-amount">&euro;50M</td><td>Series B</td><td>April</td><td>Cugnaux</td><td><span class="deal-tag">AeroTech</span><span class="deal-tag">CleanTech</span></td></tr>
+        <tr><td class="deal-rank">9</td><td class="deal-company">Alta Ares</td><td class="deal-amount">&euro;50M</td><td>Series A</td><td>June</td><td>Romainville</td><td><span class="deal-tag">BioTech</span></td></tr>
+        <tr><td class="deal-rank">10</td><td class="deal-company">EVA</td><td class="deal-amount">&euro;35M</td><td>Growth</td><td>April</td><td>Montreuil</td><td><span class="deal-tag">Mobility</span></td></tr>
+        <tr><td class="deal-rank">11</td><td class="deal-company">Dust</td><td class="deal-amount">&euro;35M</td><td>Series B</td><td>May</td><td>Paris</td><td><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">12</td><td class="deal-company">Pivot</td><td class="deal-amount">&euro;35M</td><td>Series B</td><td>May</td><td>Paris</td><td><span class="deal-tag">SaaS</span><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">13</td><td class="deal-company">Comand AI</td><td class="deal-amount">&euro;32M</td><td>Series A</td><td>June</td><td>Paris</td><td><span class="deal-tag">DefenseTech</span><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">14</td><td class="deal-company">Mantle8</td><td class="deal-amount">&euro;31M</td><td>Series A</td><td>May</td><td>Grenoble</td><td><span class="deal-tag">DeepTech</span></td></tr>
+        <tr><td class="deal-rank">15</td><td class="deal-company">Tsuga</td><td class="deal-amount">&euro;30M</td><td>Series A</td><td>June</td><td>Paris</td><td><span class="deal-tag">DeepTech</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 2.5rem;">
+      <div class="callout-title">The Alan Asterisk</div>
+      <p class="body-md">Alan&rsquo;s &euro;480M round&mdash;from Index Ventures, Prosus, Dara Holdings and Teachers&rsquo; Venture Growth&mdash;is <strong>22.9% of the entire quarter&rsquo;s disclosed total</strong>, the highest single-deal share in six years. Strip it out and Q2 funding <em>fell</em> ~11% year-on-year. Every number that follows should be read twice: with the outlier, and without it. Note too that two of the top four rounds (Bionyra, Quobly) are Series A&mdash;unusually large for the stage, another sign of top-heavy capital.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FIVE YEARS OF Q2s (historical)
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container page-break">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Long View</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">The Boom Hasn&rsquo;t Come Back</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 2rem;">At &euro;2.09B, Q2 2026 is 54% below the Q2 2022 peak (&euro;4.58B). Deal count has fallen every year since&mdash;315 down to 139&mdash;even as the median check has more than doubled to a six-year high of &euro;5.0M. This isn&rsquo;t a return to the boom; it&rsquo;s a market that has been quietly restructuring for four years.</p>
+
+    <div class="two-col">
+      <div class="chart-wrap" style="height: 340px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Q2 Total Raised by Year, 2021&ndash;26 (&euro;M)</div>
+        <canvas id="chart-q2-total-by-year"></canvas>
+      </div>
+      <div class="chart-wrap" style="height: 340px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Q2 Deal Count by Year, 2021&ndash;26</div>
+        <canvas id="chart-q2-deals-by-year"></canvas>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2.5rem;">
+      <div class="callout-title">The Recurring Giant</div>
+      <p class="body-md">Every Q2 has one defining round&mdash;Contentsquare (2021), EcoVadis (2022), Ynsect (2023), Mistral AI (2024), Knave (2025), now Alan. What changed in 2026 isn&rsquo;t that there&rsquo;s a giant; it&rsquo;s how much the quarter <em>leans</em> on it. Alan is 22.9% of the quarter&mdash;against Mistral&rsquo;s 20.3% in 2024 and just 5.5% for Knave in 2025.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ON TRACK TO BEAT 2025 (H1 run-rate)
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift page-break">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Mid-Year Run-Rate</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">Halfway to a Comeback &mdash; With an Asterisk</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 2rem;">By June, 2026 had raised &euro;4.83 billion&mdash;already 61% of <em>all</em> of 2025, and up 46% on the first half of 2025. On any reasonable run-rate (~&euro;9.3&ndash;9.7B), 2026 clears both 2025 and 2024 to become the strongest year since the 2022 peak.</p>
+
+    <div class="two-col">
+      <div class="chart-wrap" style="height: 340px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">H1 Total Raised by Year, 2021&ndash;26 (&euro;M)</div>
+        <canvas id="chart-h1-by-year"></canvas>
+      </div>
+      <div style="padding: 1.5rem 0;">
+        <div class="label-md" style="margin-bottom: 1.5rem;">H1 2026 vs H1 2025</div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;">
+          <div class="stat-label">Raised by June 2026</div>
+          <div class="stat-value" style="font-size: 2rem;">&euro;4.83B</div>
+          <div class="stat-sub stat-change-up">+45.5% vs H1 2025 (&euro;3.32B)</div>
+        </div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;">
+          <div class="stat-label">Share of 2025&rsquo;s Full-Year Total</div>
+          <div class="stat-value" style="font-size: 2rem;">61%</div>
+          <div class="stat-sub">&euro;4.83B of 2025&rsquo;s &euro;7.88B, in half the time</div>
+        </div>
+        <div style="padding: 1rem 0;">
+          <div class="stat-label">H1 Deal Count</div>
+          <div class="stat-value" style="font-size: 2rem;">278</div>
+          <div class="stat-sub stat-change-down">&minus;19% vs H1 2025 (343) &middot; fewest in six years</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2rem;">
+      <div class="callout-title">Flat Underneath</div>
+      <p class="body-md">The rebound is two deals. AMI (&euro;890M, Q1) and Alan (&euro;480M, Q2) are &euro;1,370M&mdash;28% of H1 2026 and about <strong>91% of the entire year-on-year gain</strong> over H1 2025. Strip both out and H1 2026 (&euro;3.46B) is only ~4% ahead of H1 2025&mdash;essentially flat, on the fewest H1 deals in the six-year series. Bigger headline, same thin base.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SECTOR ANALYSIS — THE ROTATION
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container page-break">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Sector Intelligence</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">The Money Left AI for Medicine</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 2rem;">After two years as French tech&rsquo;s growth engine, AI funding more than halved year-on-year (&euro;513M &rarr; &euro;234M) and deal count fell 42%. The capital surfaced instead in health &amp; biotech and in deeptech. (FinTech&rsquo;s &euro;653M is almost entirely Alan and Morpho&mdash;strip them and &ldquo;real&rdquo; fintech is ~&euro;22M.)</p>
+
+    <div class="two-col">
+      <div class="chart-wrap" style="height: 420px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Top Sectors by Funding (&euro;M)</div>
+        <canvas id="chart-sectors"></canvas>
+      </div>
+      <div class="chart-wrap" style="height: 420px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Sector YoY Change (%)</div>
+        <canvas id="chart-sector-change"></canvas>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <div class="label-md" style="margin-bottom: 1.5rem;">Sector Highlights</div>
+      <div class="sector-grid">
+        <div class="sector-card" style="border-left: 3px solid var(--chart-7);">
+          <div class="label-sm">Cooled</div>
+          <div class="sector-card-name">Artificial Intelligence</div>
+          <div class="sector-card-value">&euro;234M</div>
+          <div class="sector-card-change stat-change-down">&minus;54% YoY</div>
+          <div class="sector-card-deals">28 deals &middot; down from 48</div>
+        </div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-4);">
+          <div class="label-sm">The Real Winner</div>
+          <div class="sector-card-name">Health Cluster</div>
+          <div class="sector-card-value">&euro;363M</div>
+          <div class="sector-card-change stat-change-up">+57% YoY</div>
+          <div class="sector-card-deals">Bio + Health + Med &middot; Bionyra, UROMEMS</div>
+        </div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-2);">
+          <div class="label-sm">Outlier-Inflated</div>
+          <div class="sector-card-name">FinTech</div>
+          <div class="sector-card-value">&euro;653M</div>
+          <div class="sector-card-change stat-change-up">+164% YoY</div>
+          <div class="sector-card-deals">7 deals &middot; ~97% is Alan + Morpho</div>
+        </div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-5);">
+          <div class="label-sm">Rising</div>
+          <div class="sector-card-name">DeepTech</div>
+          <div class="sector-card-value">&euro;168M</div>
+          <div class="sector-card-change stat-change-up">+39% YoY</div>
+          <div class="sector-card-deals">5 deals &middot; Quobly, Mantle8 (quantum)</div>
+        </div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-3);">
+          <div class="label-sm">Cooling</div>
+          <div class="sector-card-name">CleanTech</div>
+          <div class="sector-card-value">&euro;104M</div>
+          <div class="sector-card-change stat-change-down">&minus;59% YoY</div>
+          <div class="sector-card-deals">11 deals &middot; volatile</div>
+        </div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-9);">
+          <div class="label-sm">Near-Vanished</div>
+          <div class="sector-card-name">Cybersecurity</div>
+          <div class="sector-card-value">&euro;19M</div>
+          <div class="sector-card-change stat-change-down">&minus;88% YoY</div>
+          <div class="sector-card-deals">2 deals &middot; Q1&rsquo;s hot sector cooled</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2.5rem;">
+      <div class="callout-title">The AI Cross-Check</div>
+      <p class="body-md">Over the full half-year, AI <em>looks</em> up 80%&mdash;but that&rsquo;s entirely AMI&rsquo;s &euro;890M Q1 round. Ex-AMI, AI is down at both the quarter and half-year level; the wave crested in Q2 2024 (&euro;804M) and has receded two years running. What&rsquo;s genuinely rising, with no single deal doing the work, is <strong>HealthTech&mdash;up 109% over H1</strong>. The euros rotated from models to medicine.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     STAGE ANALYSIS — THE THINNING BASE
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift page-break">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Stage Structure</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">Fewer Doors In</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 2rem;">Seed and pre-seed rounds fell from 91 to 57 deals year-on-year&mdash;and from a Q2 2022 peak of 196 to just 71, a 64% collapse in early-stage deal-making. Meanwhile Series A checks grew 80% and Growth is near a six-year high. The top is swelling as the base thins.</p>
+
+    <div class="two-col">
+      <div class="chart-wrap" style="height: 360px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Stage Distribution by Amount (&euro;M)</div>
+        <canvas id="chart-stage-donut"></canvas>
+      </div>
+      <div>
+        <div style="padding: 1rem 0;">
+          <div class="label-md" style="margin-bottom: 1.5rem;">Stage Comparison (vs Q2 2025)</div>
+
+          <div class="ghost-border-bottom" style="padding: 1rem 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="headline-sm">Growth</span>
+              <span class="deal-amount">&euro;992M</span>
+            </div>
+            <div class="body-sm">27 deals &middot; <span class="stat-change-up">+53% YoY</span> &middot; Alan, Morpho, LegalPlace lead</div>
+          </div>
+
+          <div class="ghost-border-bottom" style="padding: 1rem 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="headline-sm">Series A</span>
+              <span class="deal-amount">&euro;673M</span>
+            </div>
+            <div class="body-sm">29 deals &middot; <span class="stat-change-up">+80% YoY</span> &middot; Bionyra &euro;140M, Quobly &euro;115M</div>
+          </div>
+
+          <div class="ghost-border-bottom" style="padding: 1rem 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="headline-sm">Seed</span>
+              <span class="deal-amount">&euro;202M</span>
+            </div>
+            <div class="body-sm">57 deals &middot; <span class="stat-change-down">&minus;31% YoY</span> &middot; down from 91 deals</div>
+          </div>
+
+          <div class="ghost-border-bottom" style="padding: 1rem 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="headline-sm">Series B</span>
+              <span class="deal-amount">&euro;151M</span>
+            </div>
+            <div class="body-sm">6 deals &middot; <span class="stat-change-down">&minus;47% YoY</span> &middot; Dust, Pivot</div>
+          </div>
+
+          <div style="padding: 1rem 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="headline-sm">Pre-Seed</span>
+              <span class="deal-amount">&euro;30M</span>
+            </div>
+            <div class="body-sm">14 deals &middot; <span class="stat-change-up">+36% YoY</span> &middot; formation still active</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-wrap" style="height: 300px; margin-top: 1.5rem;">
+      <div class="label-sm" style="margin-bottom: 0.8rem;">Seed &amp; Pre-Seed Deal Count by Year, 2021&ndash;26 &mdash; the thinning base</div>
+      <canvas id="chart-seed-by-year"></canvas>
+    </div>
+
+    <div class="callout" style="margin-top: 2.5rem;">
+      <div class="callout-title">The Pipeline Problem</div>
+      <p class="body-md">The funnel that feeds tomorrow&rsquo;s Series A and B is contracting fast. Late-stage is near a six-year high (Growth &euro;992M); the base that should refill it is at a six-year low (71 seed/pre-seed rounds, down from 196 in 2022). That&rsquo;s what &ldquo;top-heavy&rdquo; means structurally, not just rhetorically&mdash;and it is the single most important trend in the dataset.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     GEOGRAPHY
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container page-break">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Geographic Intelligence</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">Paris Reclaims the Center &mdash; and Grenoble Arrives</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 2rem;">Paris took 72% of value (up from 59%), lifted by Alan; regional funding fell 20% in absolute terms. But Grenoble stands out&mdash;&euro;238M across five deeptech, quantum and medtech deals, second only to Paris this quarter.</p>
+
+    <div class="two-col">
+      <div class="chart-wrap" style="height: 300px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Paris vs. Regions (share of value)</div>
+        <canvas id="chart-geo-split"></canvas>
+      </div>
+      <div class="chart-wrap" style="height: 300px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Top Cities by Funding (&euro;M)</div>
+        <canvas id="chart-cities"></canvas>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <div class="label-md" style="margin-bottom: 1.5rem;">Regional Spotlights</div>
+      <div class="three-col">
+        <div class="callout" style="margin: 0;">
+          <div class="callout-title">Grenoble</div>
+          <div class="stat-value" style="font-size: 1.8rem; margin-bottom: 0.3rem;">&euro;238M</div>
+          <p class="body-sm">5 deals. Quobly (&euro;115M), UROMEMS (&euro;55M) and Mantle8 (&euro;31M) anchor a genuine deeptech, quantum and medtech cluster&mdash;the region&rsquo;s standout.</p>
+        </div>
+        <div class="callout" style="margin: 0;">
+          <div class="callout-title">Cugnaux</div>
+          <div class="stat-value" style="font-size: 1.8rem; margin-bottom: 0.3rem;">&euro;50M</div>
+          <p class="body-sm">AURA AERO&rsquo;s &euro;50M Series B for regional electric aircraft keeps the Toulouse-area aerospace corridor on the map.</p>
+        </div>
+        <div class="callout" style="margin: 0;">
+          <div class="callout-title">Romainville</div>
+          <div class="stat-value" style="font-size: 1.8rem; margin-bottom: 0.3rem;">&euro;50M</div>
+          <p class="body-sm">Alta Ares&rsquo;s &euro;50M Series A adds to the Greater-Paris biotech belt just outside the capital&rsquo;s city limits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     WITH / WITHOUT ALAN ANALYSIS
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift page-break">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Underlying Trend</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">With &amp; Without Alan: What&rsquo;s the Real Picture?</h2>
+    <p class="body-md" style="max-width: 680px; margin-bottom: 2rem;">Alan&rsquo;s &euro;480M growth round dominates Q2&rsquo;s headline numbers. Strip it out and the entire year-on-year <em>gain</em> disappears&mdash;the underlying market didn&rsquo;t grow at all. This is the single most important comparison in the report.</p>
+
+    <div class="two-col">
+      <div class="chart-wrap" style="height: 340px;">
+        <div class="label-sm" style="margin-bottom: 0.8rem;">Q2 Funding: With &amp; Without Alan</div>
+        <canvas id="chart-alan-comparison"></canvas>
+      </div>
+      <div style="padding: 1.5rem 0;">
+        <div class="label-md" style="margin-bottom: 1.5rem;">The Numbers Without Alan</div>
+
+        <div class="ghost-border-bottom" style="padding: 1rem 0;">
+          <div class="stat-label">Total Funding (ex-Alan)</div>
+          <div class="stat-value" style="font-size: 2rem;">&euro;1.61B</div>
+          <div class="stat-sub stat-change-down">&minus;10.8% vs Q2 2025</div>
+        </div>
+
+        <div class="ghost-border-bottom" style="padding: 1rem 0;">
+          <div class="stat-label">Average Round (ex-Alan)</div>
+          <div class="stat-value" style="font-size: 2rem;">&euro;12.5M</div>
+          <div class="stat-sub">vs &euro;16.5M with Alan</div>
+        </div>
+
+        <div style="padding: 1rem 0;">
+          <div class="stat-label">Alan as Share of Quarter</div>
+          <div class="stat-value" style="font-size: 2rem;">22.9%</div>
+          <div class="stat-sub">highest single-deal share in six years</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2rem;">
+      <div class="callout-title">The Entire Gain Was One Deal</div>
+      <p class="body-md">French tech&rsquo;s &ldquo;+16% year-on-year&rdquo; headline rests entirely on Alan. Without it, funding <em>fell</em> ~11% against Q2 2025. That is the report&rsquo;s central sentence: the record quarter and the shrinking market are the same quarter, viewed with and without a single round.</p>
+      <p class="body-md" style="margin-top: 0.8rem;">This isn&rsquo;t a market in free-fall&mdash;the median round rose and late-stage capital is plentiful. But it is a market that has stopped widening. Fewer companies are raising, and the ones that do increasingly sit at the top of the stack. The concern is the base: a 64% fall in early-stage deals since 2022 is what makes &ldquo;top-heavy&rdquo; a structural description, not a one-quarter mood.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     TIMELINE: THE QUARTER IN STORIES
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container page-break">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Quarter in Stories</div>
+    <h2 class="headline-lg" style="margin-bottom: 2.5rem;">A Q2 Timeline</h2>
+
+    <div class="two-col">
+      <div>
+        <div class="label-md" style="margin-bottom: 1.2rem;">April</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 1</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/mistral-ais-big-spring-how-europes-decacorn-started-acting-like-one/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Mistral&rsquo;s &ldquo;Big Spring&rdquo;</a></div>
+            <div class="timeline-sub">Nvidia partnership, $830M debt for data centers</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 7</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/the-great-concentration-french-tech-raised-eu2-73b-in-q1-2026/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Q1 2026 Report: &ldquo;The Great Concentration&rdquo;</a></div>
+            <div class="timeline-sub">&euro;2.73B / +79%&mdash;the thesis Q2 deepens</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 9</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/french-cybersecurity-startups-surge-eu133m-q1-2026-funding-tops-all-of-2025/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">French cyber funding tops all of 2025</a></div>
+            <div class="timeline-sub">Still hot&mdash;before its Q2 collapse to &euro;19M</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 22</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/forget-qubit-count-paris-startup-c12-bets-carbon-nanotubes-will-rewrite-quantum-computing-race-by-2033/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">C12&rsquo;s carbon-nanotube qubit roadmap</a></div>
+            <div class="timeline-sub">The deeptech/quantum rotation begins</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 24</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/frances-silver-linings-sovereignty-playbook-notre-dame-policy-electrification-data-centers-more-more-more/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">The Great Sovereignty Paradigm</a></div>
+            <div class="timeline-sub">Data centers, electrification, self-reliance</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="label-md" style="margin-bottom: 1.2rem;">May</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">May 8</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/the-atlantic-tightrope-how-french-cyber-founders-are-selling-to-america-in-the-age-of-agents/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">The Atlantic Tightrope</a></div>
+            <div class="timeline-sub">French cyber founders selling to America First, Inc.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 18</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/french-tech-funding-wire-may-18-mistral-ai-biz-deets-uromems-eur55m-led-8-deals-for-eur147-6m/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">UROMEMS &euro;55M leads a &euro;147.6M week</a></div>
+            <div class="timeline-sub">The health-cluster surge takes shape</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 19</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/mistral-ai-ceo-mensch-to-french-lawmakers-europe-has-two-years-to-stop-losing-the-ai-race-before-the-race-is-over/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Mensch: &ldquo;Europe has two years&rdquo;</a></div>
+            <div class="timeline-sub">Mistral CEO warns the National Assembly</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 29</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/mistralmania-europes-model-hopeful-gets-stacked/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">MistralMania: a full-stack ambition</a></div>
+            <div class="timeline-sub">Chips, data centers, agents, defense</div>
+          </div>
+        </div>
+
+        <div class="label-md" style="margin-bottom: 1.2rem; margin-top: 2rem;">June</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 8</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/french-tech-funding-wire-june-8-paris-no-8-quobly-eur115m-led-8-deals-for-eur200-7m/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Quobly &euro;115M &mdash; Grenoble&rsquo;s quantum bet</a></div>
+            <div class="timeline-sub">Paris No. 8; &euro;200.7M funding week</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 15</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/french-tech-next-40-120-2026-mistral-quantum-startups-and-deeptech-take-over-frances-startup-elite/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Next 40/120: deeptech takes over</a></div>
+            <div class="timeline-sub">Mistral, quantum and robotics remake the elite</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 21</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/macrons-vivatech-victory-lap-and-the-bill-that-comes-after/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Macron&rsquo;s VivaTech victory lap</a></div>
+            <div class="timeline-sub">The president&rsquo;s start-up-decade farewell</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 29</div>
+            <div class="timeline-text"><a href="https://www.frenchtechjournal.com/french-tech-funding-wire-june-29-french-ai-mafia-alan-eur480m-led-16-deals-for-eur748-5m/" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-accent);">Alan &euro;480M closes the quarter</a></div>
+            <div class="timeline-sub">16 deals, &euro;748.5M&mdash;the outlier lands</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     VC ECOSYSTEM
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift page-break">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The VC Landscape</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">The State Is the Floor</h2>
+    <p class="body-md" style="max-width: 640px; margin-bottom: 2.5rem;">As private money pulled back from the early stage, public capital held the line. Bpifrance touched 22 of the quarter&rsquo;s 139 deals&mdash;more than four times any private fund&mdash;and is disproportionately present in exactly the seed rounds that thinned.</p>
+
+    <div class="three-col">
+      <div class="callout" style="margin: 0;">
+        <div class="callout-title">Bpifrance</div>
+        <div class="body-sm" style="margin-bottom: 0.3rem;">22 deals &middot; 16% of the quarter</div>
+        <p class="body-sm">The public backbone. Present across seed and growth alike, and the most-cited investor in our own coverage&mdash;33 of 86 Q2 articles.</p>
+      </div>
+      <div class="callout" style="margin: 0;">
+        <div class="callout-title">Kima &middot; daphni</div>
+        <div class="body-sm" style="margin-bottom: 0.3rem;">5 deals each</div>
+        <p class="body-sm">The most active <em>private</em> seed funds, alongside Y Combinator (4) and Blast Club (4)&mdash;still writing early cheques where the base thinned.</p>
+      </div>
+      <div class="callout" style="margin: 0;">
+        <div class="callout-title">Lauxera</div>
+        <div class="body-sm" style="margin-bottom: 0.3rem;">&euro;520M healthtech fund</div>
+        <p class="body-sm">An oversubscribed second close on a pointed thesis: Europe invents world-class healthtech, but America still controls the scale-up game.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2.5rem;">
+      <div class="callout-title">Key Ecosystem Data Points from Q2</div>
+      <div class="two-col" style="margin-top: 1rem; gap: 1.5rem;">
+        <div>
+          <p class="body-sm" style="margin-bottom: 0.6rem;"><strong>&euro;480M</strong> &mdash; Alan&rsquo;s round, 22.9% of the quarter, the highest single-deal share in six years</p>
+          <p class="body-sm" style="margin-bottom: 0.6rem;"><strong>4 rounds &ge; &euro;100M</strong> vs just one (Knave) a year ago</p>
+          <p class="body-sm" style="margin-bottom: 0.6rem;"><strong>&minus;64%</strong> &mdash; fall in seed/pre-seed deal count since the Q2 2022 peak</p>
+        </div>
+        <div>
+          <p class="body-sm" style="margin-bottom: 0.6rem;"><strong>&euro;238M</strong> across five deals makes Grenoble the region&rsquo;s No. 2 hub</p>
+          <p class="body-sm" style="margin-bottom: 0.6rem;"><strong>Health cluster +57%</strong> YoY&mdash;the quarter&rsquo;s genuine, broad-based winner</p>
+          <p class="body-sm" style="margin-bottom: 0.6rem;"><strong>AI &minus;54%</strong> YoY in value, &minus;42% in deals&mdash;the engine cooled</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     OUTLOOK
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container page-break">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Forward Look</div>
+    <h2 class="headline-lg" style="margin-bottom: 2rem;">Can the Base Refill? What We&rsquo;re Watching in H2</h2>
+
+    <div class="two-col" style="gap: 3rem;">
+      <div>
+        <div class="ghost-border-bottom" style="padding: 1.2rem 0;">
+          <div class="headline-sm">Does the Deal Count Stop Falling?</div>
+          <p class="body-sm" style="margin-top: 0.3rem;">The single metric that decides whether the thinning is cyclical or structural. It has dropped every Q2 since 2022.</p>
+        </div>
+        <div class="ghost-border-bottom" style="padding: 1.2rem 0;">
+          <div class="headline-sm">Is Alan a One-Off or a Signal?</div>
+          <p class="body-sm" style="margin-top: 0.3rem;">Watch whether more &euro;300M+ growth rounds follow&mdash;late-stage may be genuinely reopening at home.</p>
+        </div>
+        <div class="ghost-border-bottom" style="padding: 1.2rem 0;">
+          <div class="headline-sm">Where Does AI Settle?</div>
+          <p class="body-sm" style="margin-top: 0.3rem;">After the AMI and Mistral spikes, find AI&rsquo;s real, ex-mega-deal baseline. It has fallen two years running.</p>
+        </div>
+      </div>
+      <div>
+        <div class="ghost-border-bottom" style="padding: 1.2rem 0;">
+          <div class="headline-sm">Health &amp; Biotech Follow-Through</div>
+          <p class="body-sm" style="margin-top: 0.3rem;">Does Bionyra&rsquo;s &euro;140M A-round mark a durable pipeline, or a spike? The cluster is the quarter&rsquo;s real winner.</p>
+        </div>
+        <div class="ghost-border-bottom" style="padding: 1.2rem 0;">
+          <div class="headline-sm">Grenoble&rsquo;s Second Act</div>
+          <p class="body-sm" style="margin-top: 0.3rem;">Can the quantum/deeptech cluster produce a second breakout quarter, or was Q2 a Quobly-driven one-off?</p>
+        </div>
+        <div style="padding: 1.2rem 0;">
+          <div class="headline-sm">The Full-Year Number</div>
+          <p class="body-sm" style="margin-top: 0.3rem;">Will 2026 clear &euro;9B&mdash;its best since 2022&mdash;and how much of that will be a handful of giants?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     COVERAGE INDEX
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Q2 2026 Coverage</div>
+    <h2 class="headline-lg" style="margin-bottom: 1rem;">86 Articles Published This Quarter</h2>
+    <p class="body-md" style="max-width: 600px; margin-bottom: 2rem;">Three columns ran weekly for all 13 weeks of the quarter&mdash;the Funding Wire, La Machine, and the French Tech Wire&mdash;alongside dozens of reported features. Subscribe to The French Tech Journal for weekly funding wires, La Machine AI analysis, and deep-dive company profiles.</p>
+
+    <div class="three-col" style="gap: 3rem;">
+      <div>
+        <div class="stat-value" style="font-size: 2rem;">13</div>
+        <div class="label-sm" style="margin-top: 0.3rem;">Weekly Funding Wires</div>
+        <p class="body-sm" style="margin-top: 0.5rem;">Every deal, every week. Data-driven recaps that build to the &euro;748.5M Alan-led finale.</p>
+      </div>
+      <div>
+        <div class="stat-value" style="font-size: 2rem;">13</div>
+        <div class="label-sm" style="margin-top: 0.3rem;">La Machine AI Columns</div>
+        <p class="body-sm" style="margin-top: 0.5rem;">Issues #70&ndash;#82. Policy, startups, sovereignty&mdash;the AI revolution through a French lens.</p>
+      </div>
+      <div>
+        <div class="stat-value" style="font-size: 2rem;">60</div>
+        <div class="label-sm" style="margin-top: 0.3rem;">Features &amp; Deep Dives</div>
+        <p class="body-sm" style="margin-top: 0.5rem;">French Tech Wires, company profiles, founder interviews, data drops and sector investigations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SAVE AS PDF
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="page-container no-print" style="padding: 3rem 0; text-align: center;">
+  <button onclick="window.print()" style="
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, #114563 0%, #2f5d7c 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+  ">Save as PDF</button>
+  <p class="body-sm" style="margin-top: 0.8rem;">Opens your browser&rsquo;s print dialog. Select &ldquo;Save as PDF&rdquo; as the destination.</p>
+</div>
+
+<footer class="page-container">
+  <p>Data: French Tech Funding Tracker &middot; <strong>funding.frenchtechjournal.com</strong></p>
+  <p style="margin-top: 0.3rem;">Q2 2026 (April&ndash;June): 139 rounds, &euro;2.09B raised across the French tech ecosystem.</p>
+  <p style="margin-top: 0.3rem;">&copy; 2026 The French Tech Journal. All rights reserved.</p>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     CHART.JS SCRIPTS
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+// ── Design system chart defaults ──────────────────────────────────
+Chart.defaults.font.family = "'Public Sans', sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#41474d';
+Chart.defaults.plugins.legend.display = false;
+Chart.defaults.plugins.tooltip.backgroundColor = '#114563';
+Chart.defaults.plugins.tooltip.titleFont = { family: "'Public Sans', sans-serif", size: 11, weight: 600 };
+Chart.defaults.plugins.tooltip.bodyFont = { family: "'Public Sans', sans-serif", size: 11 };
+Chart.defaults.plugins.tooltip.cornerRadius = 0;
+Chart.defaults.plugins.tooltip.padding = 10;
+
+const P = ['#114563','#2f5d7c','#775a0f','#3c6840','#503863','#8b6914','#460602','#5a7a8b','#7a5a3a','#3a7a7a'];
+const gridColor = 'rgba(193,199,206,0.15)';
+
+function fmt(m) {
+  if (m >= 1000) return '€' + (m/1000).toFixed(1) + 'B';
+  if (m >= 1) return '€' + Math.round(m) + 'M';
+  return '€' + (m*1000).toFixed(0) + 'K';
+}
+
+// ── 1. MONTHLY FUNDING ────────────────────────────────────────────
+new Chart(document.getElementById('chart-monthly-funding'), {
+  type: 'bar',
+  data: {
+    labels: ['April', 'May', 'June'],
+    datasets: [
+      { label: 'Q2 2025', data: [591, 275, 944], backgroundColor: 'rgba(17,69,99,0.25)', borderWidth: 0 },
+      { label: 'Q2 2026', data: [305, 494, 1295], backgroundColor: '#114563', borderWidth: 0 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true, position: 'top', align: 'end', labels: { boxWidth: 12, padding: 16, font: { size: 10, weight: 500 } } },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + fmt(ctx.raw) } }
+    },
+    scales: {
+      x: { grid: { display: false }, border: { display: false } },
+      y: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) } }
+    }
+  }
+});
+
+// ── 2. MONTHLY DEALS ──────────────────────────────────────────────
+new Chart(document.getElementById('chart-monthly-deals'), {
+  type: 'bar',
+  data: {
+    labels: ['April', 'May', 'June'],
+    datasets: [
+      { label: 'Q2 2025', data: [60, 34, 73], backgroundColor: 'rgba(17,69,99,0.25)', borderWidth: 0 },
+      { label: 'Q2 2026', data: [43, 43, 53], backgroundColor: '#114563', borderWidth: 0 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true, position: 'top', align: 'end', labels: { boxWidth: 12, padding: 16, font: { size: 10, weight: 500 } } },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.raw + ' deals' } }
+    },
+    scales: {
+      x: { grid: { display: false }, border: { display: false } },
+      y: { grid: { color: gridColor }, border: { display: false } }
+    }
+  }
+});
+
+// ── 3. TOP 10 DEALS ──────────────────────────────────────────────
+new Chart(document.getElementById('chart-top-deals'), {
+  type: 'bar',
+  data: {
+    labels: ['Alan', 'Morpho Labs', 'Bionyra Pharma', 'Quobly', 'LegalPlace', 'UROMEMS', 'Innovafeed', 'AURA AERO', 'Alta Ares', 'EVA'],
+    datasets: [{
+      data: [480, 151.1, 140, 115, 70, 55, 51, 50, 50, 35],
+      backgroundColor: P,
+      borderWidth: 0
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      tooltip: { callbacks: { label: ctx => fmt(ctx.raw) } }
+    },
+    scales: {
+      x: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) } },
+      y: { grid: { display: false }, border: { display: false }, ticks: { font: { family: "'Newsreader', serif", size: 12, weight: 600 } } }
+    }
+  }
+});
+
+// ── 4. Q2 TOTAL BY YEAR (historical) ──────────────────────────────
+new Chart(document.getElementById('chart-q2-total-by-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+    datasets: [{
+      data: [3171, 4583, 1845, 2303, 1810, 2094],
+      backgroundColor: ['#2f5d7c','#2f5d7c','#2f5d7c','#2f5d7c','#2f5d7c','#775a0f'],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => fmt(ctx.raw) + (ctx.dataIndex === 1 ? '  (peak)' : ctx.dataIndex === 5 ? '  (this quarter)' : '') } } },
+    scales: {
+      x: { grid: { display: false }, border: { display: false } },
+      y: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) } }
+    }
+  }
+});
+
+// ── 5. Q2 DEAL COUNT BY YEAR (historical, the decline) ────────────
+new Chart(document.getElementById('chart-q2-deals-by-year'), {
+  type: 'line',
+  data: {
+    labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+    datasets: [{
+      data: [254, 315, 271, 244, 167, 139],
+      borderColor: '#460602',
+      backgroundColor: 'rgba(70,6,2,0.06)',
+      borderWidth: 2,
+      fill: true,
+      tension: 0.25,
+      pointBackgroundColor: '#460602',
+      pointRadius: 4
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ctx.raw + ' deals' } } },
+    scales: {
+      x: { grid: { display: false }, border: { display: false } },
+      y: { grid: { color: gridColor }, border: { display: false }, beginAtZero: true }
+    }
+  }
+});
+
+// ── 6. H1 TOTAL BY YEAR (run-rate) ────────────────────────────────
+new Chart(document.getElementById('chart-h1-by-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+    datasets: [{
+      data: [5242, 10120, 3769, 4175, 3316, 4826],
+      backgroundColor: ['#2f5d7c','#2f5d7c','#2f5d7c','#2f5d7c','#2f5d7c','#775a0f'],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => fmt(ctx.raw) + (ctx.dataIndex === 5 ? '  (H1, year in progress)' : '  (H1)') } } },
+    scales: {
+      x: { grid: { display: false }, border: { display: false } },
+      y: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) } }
+    }
+  }
+});
+
+// ── 7. SECTORS BY FUNDING ─────────────────────────────────────────
+new Chart(document.getElementById('chart-sectors'), {
+  type: 'bar',
+  data: {
+    labels: ['FinTech', 'AI & ML', 'BioTech', 'HealthTech', 'DeepTech', 'CleanTech', 'SaaS', 'AgriTech', 'Gaming', 'ClimateTech', 'DefenseTech', 'Cybersecurity'],
+    datasets: [{
+      data: [653, 234, 187, 171, 168, 104, 91, 52, 41, 38, 32, 19],
+      backgroundColor: P.concat(P),
+      borderWidth: 0
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      tooltip: { callbacks: { label: ctx => fmt(ctx.raw) } }
+    },
+    scales: {
+      x: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) } },
+      y: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 10 } } }
+    }
+  }
+});
+
+// ── 8. SECTOR YOY CHANGE (diverging) ─────────────────────────────
+(function() {
+  const labels = ['FinTech', 'Health Cluster', 'DeepTech', 'AI & ML', 'CleanTech', 'Cybersecurity'];
+  const data = [164, 57, 39, -54, -59, -88];
+  const colors = data.map(v => v >= 0 ? '#775a0f' : '#460602');
+
+  new Chart(document.getElementById('chart-sector-change'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: colors,
+        borderWidth: 0
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        tooltip: { callbacks: { label: ctx => (ctx.raw >= 0 ? '+' : '') + ctx.raw + '% YoY' } }
+      },
+      scales: {
+        x: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => (v > 0 ? '+' : '') + v + '%' } },
+        y: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+})();
+
+// ── 9. STAGE DOUGHNUT ─────────────────────────────────────────────
+new Chart(document.getElementById('chart-stage-donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Growth', 'Series A', 'Seed', 'Series B', 'Series D', 'Pre-Seed'],
+    datasets: [{
+      data: [992, 673, 202, 151, 30, 30],
+      backgroundColor: P.slice(0,6),
+      borderWidth: 0,
+      hoverOffset: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '58%',
+    plugins: {
+      legend: {
+        display: true, position: 'bottom',
+        labels: { boxWidth: 10, padding: 12, font: { size: 10 } }
+      },
+      tooltip: {
+        callbacks: { label: ctx => ctx.label + ': ' + fmt(ctx.raw) }
+      }
+    }
+  }
+});
+
+// ── 10. SEED & PRE-SEED DEAL COUNT BY YEAR (thinning base) ────────
+new Chart(document.getElementById('chart-seed-by-year'), {
+  type: 'line',
+  data: {
+    labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+    datasets: [{
+      data: [165, 196, 195, 152, 101, 71],
+      borderColor: '#775a0f',
+      backgroundColor: 'rgba(119,90,15,0.07)',
+      borderWidth: 2,
+      fill: true,
+      tension: 0.25,
+      pointBackgroundColor: '#775a0f',
+      pointRadius: 4
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ctx.raw + ' seed / pre-seed deals' } } },
+    scales: {
+      x: { grid: { display: false }, border: { display: false } },
+      y: { grid: { color: gridColor }, border: { display: false }, beginAtZero: true }
+    }
+  }
+});
+
+// ── 11. GEOGRAPHY: PARIS VS REGIONS ───────────────────────────────
+new Chart(document.getElementById('chart-geo-split'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Paris (72%)', 'Regions (28%)'],
+    datasets: [{
+      data: [1508, 586],
+      backgroundColor: ['#114563', '#c1c7ce'],
+      borderWidth: 0,
+      hoverOffset: 4
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '62%',
+    plugins: {
+      legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 12, font: { size: 11 } } },
+      tooltip: { callbacks: { label: ctx => ctx.label + ': ' + fmt(ctx.raw) } }
+    }
+  }
+});
+
+// ── 12. TOP CITIES ────────────────────────────────────────────────
+new Chart(document.getElementById('chart-cities'), {
+  type: 'bar',
+  data: {
+    labels: ['Paris', 'Grenoble', 'Cugnaux', 'Romainville', 'Montreuil', 'Lyon', 'Bordeaux'],
+    datasets: [{
+      data: [1508, 238, 50, 50, 35, 25, 23],
+      backgroundColor: '#114563',
+      borderWidth: 0
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      tooltip: { callbacks: { label: ctx => fmt(ctx.raw) } }
+    },
+    scales: {
+      x: { grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) } },
+      y: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 10 } } }
+    }
+  }
+});
+
+// ── 13. WITH / WITHOUT ALAN ───────────────────────────────────────
+new Chart(document.getElementById('chart-alan-comparison'), {
+  type: 'bar',
+  data: {
+    labels: ['Q2 2025', 'Q2 2026\n(ex-Alan)', 'Q2 2026\n(total)'],
+    datasets: [
+      { label: 'Core funding', data: [1810, 1614, 1614], backgroundColor: '#114563', borderWidth: 0 },
+      { label: 'Alan (€480M)', data: [0, 0, 480], backgroundColor: '#775a0f', borderWidth: 0 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true, position: 'top', align: 'end', labels: { boxWidth: 12, padding: 16, font: { size: 10, weight: 500 } } },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.dataset.label + ': ' + fmt(ctx.raw),
+          afterBody: function(tooltipItems) {
+            const idx = tooltipItems[0].dataIndex;
+            if (idx === 0) return 'Q2 2025 baseline';
+            if (idx === 1) return '−10.8% vs Q2 2025';
+            return '+15.7% vs Q2 2025 (total)';
+          }
+        }
+      }
+    },
+    scales: {
+      x: { stacked: true, grid: { display: false }, border: { display: false } },
+      y: { stacked: true, grid: { color: gridColor }, border: { display: false }, ticks: { callback: v => fmt(v) }, max: 2500 }
+    }
+  }
+});
+</script>
+
+<!-- iframe-resizer support -->
+<script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4/js/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>
