@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top-Heavy — French Tech Q2 2026 Funding Report (Cover)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Modern Archivist — cover card, 960×600 ─────────────────────────
+   Open in Chrome and screenshot the .cover element at 960×600 (or use
+   the "Save as PNG" note at the bottom). Design per guide §8.          */
+:root {
+  --primary: #114563;
+  --primary-container: #2f5d7c;
+  --secondary: #775a0f;
+  --gold-accent: #edbf74;
+  --on-primary: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #d8d3c7;
+  font-family: 'Public Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.cover {
+  position: relative;
+  width: 960px;
+  height: 600px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, #0d3a54 0%, #114563 45%, #2f5d7c 100%);
+  color: var(--on-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle grid texture overlay */
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Gold radial light wash from top-right */
+.cover::after {
+  content: '';
+  position: absolute;
+  top: -240px;
+  right: -200px;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(237,191,116,0.28) 0%, rgba(237,191,116,0.08) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Masthead bar ─────────────────────────────────────────────────── */
+.cover-masthead {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.cover-brand {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.cover-kicker {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  opacity: 0.72;
+}
+
+/* ── Body: left title, right stats ────────────────────────────────── */
+.cover-body {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 40px;
+  padding: 0 48px;
+  align-items: center;
+}
+
+.cover-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold-accent);
+  margin-bottom: 18px;
+}
+
+.cover-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+}
+
+.cover-subtitle {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  max-width: 440px;
+  opacity: 0.92;
+}
+
+.cover-accent-line {
+  width: 64px;
+  height: 3px;
+  background: var(--gold-accent);
+  margin-top: 26px;
+}
+
+/* Right-hand stat blocks */
+.cover-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cover-stat {
+  padding-left: 20px;
+  border-left: 2px solid rgba(237,191,116,0.55);
+}
+
+.cover-stat-value {
+  font-family: 'Newsreader', serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.cover-stat-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+.cover-stat-change {
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.up { color: var(--gold-accent); }
+.down { color: #f0b8a8; }
+.flat { color: #cfe0ea; }
+
+/* ── Bottom bar ───────────────────────────────────────────────────── */
+.cover-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 48px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  opacity: 0.82;
+}
+
+.cover-footer .gold { color: var(--gold-accent); font-weight: 600; }
+
+.note {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #41474d;
+  max-width: 960px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="cover" id="cover">
+  <!-- Masthead -->
+  <div class="cover-masthead">
+    <span class="cover-brand">The French Tech Journal</span>
+    <span class="cover-kicker">Quarterly Funding Report &middot; Q2 2026</span>
+  </div>
+
+  <!-- Body -->
+  <div class="cover-body">
+    <div>
+      <div class="cover-label">April&ndash;June 2026</div>
+      <h1 class="cover-title">Top-Heavy</h1>
+      <p class="cover-subtitle">French tech&rsquo;s biggest quarter in a year rested on a single deal.</p>
+      <div class="cover-accent-line"></div>
+    </div>
+
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <div class="cover-stat-value">&euro;2.09B</div>
+        <div class="cover-stat-label">Raised in Q2 2026</div>
+        <div class="cover-stat-change up">&#9650; 16% YoY</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-value">139</div>
+        <div class="cover-stat-label">Funding rounds</div>
+        <div class="cover-stat-change down">&#9660; 17% YoY</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-value">&euro;480M</div>
+        <div class="cover-stat-label">Alan&rsquo;s round</div>
+        <div class="cover-stat-change flat">23% of the quarter</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="cover-footer">
+    <span>Data: <span class="gold">funding.frenchtechjournal.com</span></span>
+    <span>Fewer deals &middot; bigger cheques &middot; a thinning base</span>
+  </div>
+</div>
+
+<p class="note">
+  Cover image &mdash; 960&times;600. Open in Chrome, then screenshot the card above (or right-click &rarr;
+  &ldquo;Capture node screenshot&rdquo; on <code>#cover</code> in DevTools) to export as PNG.
+</p>
+
+</body>
+</html>
