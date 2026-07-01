@@ -3950,6 +3950,201 @@ JOIN people p ON p.slug = lower(regexp_replace(
 ON CONFLICT (organization_id, person_id, role) DO NOTHING;
 
 -- =============================================================================
+-- Step 7: Attach SIREN legal entities to companies
+-- =============================================================================
+-- Inserts one legal_entities row per company that has a SIREN, but only when
+-- that company does not already carry that exact SIREN (idempotent). is_primary
+-- is set only when the organization has no other legal entity yet.
+WITH source AS (
+  SELECT * FROM json_populate_recordset(
+    NULL::record,
+    $json$[
+      {
+            "org": "mokn",
+            "siren": "980821474"
+      },
+      {
+            "org": "opal",
+            "siren": "893034447"
+      },
+      {
+            "org": "olyzon",
+            "siren": "953836913"
+      },
+      {
+            "org": "vortex-io",
+            "siren": "850904202"
+      },
+      {
+            "org": "thia-sante-mentale",
+            "siren": "914329677"
+      },
+      {
+            "org": "certo",
+            "siren": "992900886"
+      },
+      {
+            "org": "mysunbed",
+            "siren": "898434592"
+      },
+      {
+            "org": "leedflow",
+            "siren": "985354646"
+      },
+      {
+            "org": "k-ren",
+            "siren": "887627776"
+      },
+      {
+            "org": "orakle-weather",
+            "siren": "979438967"
+      },
+      {
+            "org": "jinka",
+            "siren": "840936744"
+      },
+      {
+            "org": "legalplace",
+            "siren": "814428785"
+      },
+      {
+            "org": "lithosquare",
+            "siren": "927888511"
+      },
+      {
+            "org": "opsmill",
+            "siren": "948875067"
+      },
+      {
+            "org": "signadori-bio",
+            "siren": "928169697"
+      },
+      {
+            "org": "davis",
+            "siren": "994931996"
+      },
+      {
+            "org": "oneflash",
+            "siren": "853831246"
+      },
+      {
+            "org": "nelson",
+            "siren": "918697657"
+      },
+      {
+            "org": "huelco",
+            "siren": "835393554"
+      },
+      {
+            "org": "objow",
+            "siren": "852715887"
+      },
+      {
+            "org": "kacentric-optics",
+            "siren": "879329555"
+      },
+      {
+            "org": "uromems",
+            "siren": "533670931"
+      },
+      {
+            "org": "mantle8",
+            "siren": "844719500"
+      },
+      {
+            "org": "semeia",
+            "siren": "829055854"
+      },
+      {
+            "org": "sonomind",
+            "siren": "929049187"
+      },
+      {
+            "org": "virtual-browser",
+            "siren": "929565539"
+      },
+      {
+            "org": "fakto",
+            "siren": "999136732"
+      },
+      {
+            "org": "twoway",
+            "siren": "931171557"
+      },
+      {
+            "org": "pivot",
+            "siren": "953146446"
+      },
+      {
+            "org": "dust",
+            "siren": "949205314"
+      },
+      {
+            "org": "prelude",
+            "siren": "921318432"
+      },
+      {
+            "org": "otrera-new-energy",
+            "siren": "924880933"
+      },
+      {
+            "org": "lucis",
+            "siren": "927853952"
+      },
+      {
+            "org": "crossject",
+            "siren": "438822215"
+      },
+      {
+            "org": "mister-ia",
+            "siren": "977834928"
+      },
+      {
+            "org": "dealinka",
+            "siren": "948306519"
+      },
+      {
+            "org": "leadbay",
+            "siren": "977615459"
+      },
+      {
+            "org": "mediads",
+            "siren": "920035607"
+      },
+      {
+            "org": "ellipse",
+            "siren": "885269514"
+      },
+      {
+            "org": "alice-bob",
+            "siren": "881729156"
+      },
+      {
+            "org": "eyst-technology",
+            "siren": "914735592"
+      }
+]$json$
+  ) AS (org TEXT, siren TEXT)
+)
+INSERT INTO legal_entities (
+  id, organization_id, legal_name, siren, country, is_primary, created_at, updated_at
+)
+SELECT
+  uuid_generate_v4(),
+  o.id,
+  o.name,
+  s.siren,
+  'France',
+  NOT EXISTS (SELECT 1 FROM legal_entities le2 WHERE le2.organization_id = o.id),
+  NOW(), NOW()
+FROM source s
+JOIN organizations o ON o.slug = s.org
+WHERE NOT EXISTS (
+  SELECT 1 FROM legal_entities le
+  WHERE le.organization_id = o.id AND le.siren = s.siren
+);
+
+-- =============================================================================
 -- Verification queries
 -- =============================================================================
 SELECT 'Funding Rounds' AS entity, COUNT(*) AS count
