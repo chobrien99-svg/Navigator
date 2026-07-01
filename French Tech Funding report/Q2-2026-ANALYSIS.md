@@ -2,7 +2,8 @@
 
 > Raw analysis for the Q2 2026 (April–June 2026) French Tech Funding Report.
 > Source: Navigator unified database (`funding_rounds`), project `oxqpmtttgicvxmesrjzy`.
-> Primary comparison: Q2 2025. **Extended historical comparison: every Q2 from 2021–2026.**
+> Primary comparison: Q2 2025. **Extended comparisons:** sequential Q1→Q2 2026 (§1A), every Q2
+> from 2021–2026 (§1B), and mid-year H1 run-rate 2021–2026 (§1C).
 > All euro amounts are in **€ millions** unless stated. Generated 2026-07-01.
 
 ---
@@ -46,6 +47,34 @@ thinnest base on record.
 deepens. The rise in *both* average and median (not just the mean) means the concentration
 isn't only at the very top; the middle of the market is writing larger checks too, even as the
 count of deals falls.
+
+---
+
+## 1A. Q1 → Q2 2026 (sequential, quarter-over-quarter)
+
+The two quarters of 2026 so far, side by side:
+
+| Metric | Q1 2026 | Q2 2026 | QoQ |
+|---|---|---|---|
+| Total raised | €2,733M | €2,094M | **−23.4%** |
+| Rounds | 139 | 139 | **flat** |
+| Disclosed rounds | 134 | 127 | — |
+| Average (disclosed) | €20.4M | €16.5M | −19% |
+| Median (disclosed) | €4.6M | **€5.0M** | **+9%** |
+| Rounds ≥ €100M | 5 | 4 | −1 |
+| Top deal | **AMI €890M** | **Alan €480M** | — |
+| Paris share of value | €908M (33%) | €1,508M (72%) | — |
+| Total **ex top-deal** | €1,843M | €1,614M | **−12.4%** |
+
+**Read:**
+- **Identical deal count (139), but Q2 raised 23% less.** Q1 was front-loaded by AMI's €890M round —
+  the single largest French deal of the year — so the sequential "drop" is mostly the absence of a
+  Q1-sized mega-round. Even stripping each quarter's top deal, Q2 was still down ~12% QoQ.
+- **The median rose (€4.6M → €5.0M) even as the total fell** — the middle of the market kept getting
+  bigger while the top thinned. Consistent with "Top-Heavy."
+- **Paris's share swung from 33% to 72%** purely because of where the mega-deal sat: Q1's €890M
+  leader (AMI) is outside Paris; Q2's €480M leader (Alan) is Parisian. A caution against reading too
+  much into single-quarter geographic shares — one deal moves them 40 points.
 
 ---
 
@@ -122,6 +151,66 @@ SaaS's fall from €1.55B to €91M is the most dramatic structural change in th
 to just 71 — a **−64% collapse in the number of early-stage rounds**. This is the structural core
 of the "Top-Heavy" thesis: the funnel that feeds future Series A/B is contracting fast, even as
 late-stage (Growth €992M) hits its second-highest level in six years.
+
+---
+
+## 1C. Mid-year run-rate: H1 2026 vs 2021–2025
+
+With six months of 2026 in hand, the cleaner year-level question is how the **first half** (Jan–Jun)
+compares across years — and whether 2026 is on pace to beat 2025.
+
+### H1 (Jan–Jun) series, 2021–2026
+
+| H1 | Rounds | Total €M | Avg €M | Median €M | ≥€100M | H1 as % of full year |
+|---|---|---|---|---|---|---|
+| 2021 | 506 | 5,242 | 14.1 | 2.5 | 10 | 45% |
+| **2022** | **693** | **10,120** | 17.8 | 3.3 | **25** | 69% |
+| 2023 | 549 | 3,769 | 8.0 | 2.6 | 5 | 46% |
+| 2024 | 456 | 4,175 | 10.7 | 2.5 | 6 | 58% |
+| 2025 | 343 | 3,316 | 9.7 | 3.0 | 3 | 42% |
+| **2026** | **278** | **4,826** | **18.5** | **4.7** | 9 | — (year in progress) |
+
+**H1 2026 vs H1 2025: +45.5% in euros (€3,316M → €4,826M) on 19% fewer deals (343 → 278).**
+
+### Is 2026 on track to pass 2025? Yes — comfortably.
+
+- 2025's **full year** was €7,882M. 2026 has already raised **€4,826M by June — 61% of the entire
+  2025 total in half the time.**
+- **Run-rate projections for full-year 2026:**
+  - Even split (H1 = 50% of year): **~€9.7B**
+  - Historical average H1 share (~52%, 2021–2025): **~€9.3B**
+  - 2025's own H1 share (42%): **~€11.5B**
+- Any of these clears 2025 (€7.9B) and 2024 (€7.2B), and would make 2026 the **strongest year since
+  the 2022 peak (€14.7B)**. The €100M+ round count (9 in H1) already triples all of H1 2025 (3).
+
+### The caveat (and it's the theme again)
+
+The rebound is **outlier-driven**. Two deals — **AMI €890M (Q1) and Alan €480M (Q2) — are €1,370M,
+or 28% of H1 2026's total.** They account for **~91% of the entire €1.5B year-on-year increase** over
+H1 2025. Strip both out and H1 2026 (€3,456M) is only **~4% ahead** of H1 2025 (€3,316M) — essentially
+flat. So: 2026 will very likely post a much bigger *headline* than 2025, but the underlying,
+ex-mega-deal market is roughly flat, on **the fewest H1 deals in the six-year series**. Bigger
+numbers, thinner base — the same story at every altitude.
+
+### What's driving H1 2026 (sector value, H1 2025 → H1 2026, €M)
+
+| Sector | H1 2025 | H1 2026 | Note |
+|---|---|---|---|
+| Artificial Intelligence | 725 | **1,302** | +80%, **but ~€890M is AMI alone** (Q1) |
+| FinTech | 443 | 988 | Alan €480M + Morpho €151M |
+| HealthTech | 185 | 387 | +109% — genuine broad-based growth |
+| BioTech | 245 | 258 | Flat |
+| Energy | 51 | 228 | New strength |
+| Robotics | — | 196 | New entrant |
+| ClimateTech | — | 178 | New entrant |
+| DeepTech | 390 | 202 | −48% |
+| CleanTech | 404 | 175 | −57% |
+
+**Important cross-check with the Q2 view:** the Q2-only analysis (section 5) shows AI *falling*.
+The H1 view shows AI *rising* — because AMI's €890M Q1 round dominates the half-year. Both are true:
+**ex-AMI, AI over H1 2026 (~€412M) is actually *down* on H1 2025 (€725M).** The AI-cooling thesis
+holds at both altitudes once the single mega-round is set aside. **HealthTech is the standout genuine
+gainer** (+109% with no single dominant deal), reinforcing the health/biotech deep-dive choice.
 
 ---
 
@@ -397,7 +486,9 @@ to medicine.
 - [x] Stage analysis with YoY
 - [x] Geographic analysis (cities, Paris vs regions)
 - [x] Outlier "with/without" analysis (Alan €480M)
-- [x] Six-year Q2 historical series (2021–2026): headline, sector, stage, geography
+- [x] Sequential Q1 → Q2 2026 comparison (§1A)
+- [x] Six-year Q2 historical series (2021–2026): headline, sector, stage, geography (§1B)
+- [x] Mid-year H1 run-rate 2021–2026 + full-year 2026 projection (§1C)
 - [x] Theme identified ("Top-Heavy")
 - [x] Write Q2-2026-ANALYSIS.md
 - [ ] Q2-2026-CONTENT-PLAN.md
