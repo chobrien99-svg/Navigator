@@ -11,6 +11,12 @@
 
 CREATE EXTENSION IF NOT EXISTS "unaccent";
 
+-- Ensure the secondary_city_id column exists. It is present on the live
+-- database (added out-of-band) but is not created by any committed migration,
+-- so this guard lets the import also succeed on a fresh database build.
+ALTER TABLE organizations
+  ADD COLUMN IF NOT EXISTS secondary_city_id UUID REFERENCES cities(id) ON DELETE SET NULL;
+
 -- =============================================================================
 -- Step 0: Ensure cities exist (idempotent)
 -- =============================================================================
@@ -267,7 +273,7 @@ WITH source AS (
             "description": "Prelude develops onboarding and trust infrastructure for the AI age, combining telecom data, device intelligence, behavioral signals, and machine learning to help companies verify users, reduce fraud, and improve onboarding conversion."
       },
       {
-            "name": "Otrera New Energy",
+            "name": "Otrera",
             "website": "https://otrera.fr",
             "description": "Otrera develops fourth-generation sodium-cooled fast neutron reactors (RNR-Na) designed to support sovereign, low-carbon energy production through advanced nuclear technologies and closed fuel cycle capabilities."
       },
@@ -516,7 +522,7 @@ WITH source AS (
             "secondary_city": null
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "city": "Aix-en-Provence",
             "secondary_city": null
       },
@@ -885,7 +891,7 @@ WITH source AS (
             "notes": "Reported as $20M Series A led by 20VC. Launched Prelude Auth and Intel API. Founded 2023 by ex-Zenly."
       },
       {
-            "name": "Otrera New Energy",
+            "name": "Otrera",
             "stage": "growth",
             "amount_eur": 17.0,
             "currency_original": "EUR",
@@ -2419,70 +2425,70 @@ WITH source AS (
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "France 2030",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "EDF",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Groupe ADF",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Exergon",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Ingerop",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Fortil Group",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Normandie Participations",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Onet Technologies",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Groupe REEL",
             "is_lead": false
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "announced_date": "2026-05-01",
             "amount_eur": 17.0,
             "investor_name": "Groupe SNEF",
@@ -2950,15 +2956,15 @@ WITH source AS (
             "sec": "artificial-intelligence"
       },
       {
-            "org": "otrera-new-energy",
+            "org": "otrera",
             "sec": "nuclear"
       },
       {
-            "org": "otrera-new-energy",
+            "org": "otrera",
             "sec": "energy"
       },
       {
-            "org": "otrera-new-energy",
+            "org": "otrera",
             "sec": "deeptech"
       },
       {
@@ -3173,7 +3179,7 @@ WITH source AS (
             "sec": "cybersecurity"
       },
       {
-            "org": "otrera-new-energy",
+            "org": "otrera",
             "sec": "nuclear"
       },
       {
@@ -3858,11 +3864,11 @@ WITH source AS (
             "founder_name": "Quentin Le Bras"
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "founder_name": "Fr\u00e9d\u00e9ric Varaine"
       },
       {
-            "org_name": "Otrera New Energy",
+            "org_name": "Otrera",
             "founder_name": "Jean-\u00c9ric Lucas"
       },
       {
@@ -4084,7 +4090,7 @@ WITH source AS (
             "siren": "921318432"
       },
       {
-            "org": "otrera-new-energy",
+            "org": "otrera",
             "siren": "924880933"
       },
       {
