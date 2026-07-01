@@ -2,7 +2,7 @@
 
 > Raw analysis for the Q2 2026 (April–June 2026) French Tech Funding Report.
 > Source: Navigator unified database (`funding_rounds`), project `oxqpmtttgicvxmesrjzy`.
-> Comparison quarter: Q2 2025 (April–June 2025), same database.
+> Primary comparison: Q2 2025. **Extended historical comparison: every Q2 from 2021–2026.**
 > All euro amounts are in **€ millions** unless stated. Generated 2026-07-01.
 
 ---
@@ -18,6 +18,15 @@ concentrating into fewer, larger rounds while the base erodes.
 
 **One-line framing for the report intro:** *"French tech just posted its biggest quarter in a
 year. It took exactly one deal to get there."*
+
+**The five-year view sharpens it.** Q2 2026's €2.09B is a rebound off the 2025 low, but it sits
+34% below the Q2 2022 peak (€4.58B) — and the market has been quietly restructuring the whole
+time. Deal count has fallen in *every* Q2 since 2022 (315 → 271 → 244 → 167 → 139). Early-stage
+(seed/pre-seed) rounds have more than halved (196 → 71). SaaS, the 2022 engine (€1.55B), has all
+but disappeared (€91M). AI crested in Q2 2024 (€804M) and has fallen two years running. "Top-Heavy"
+isn't a one-quarter blip — it's the shape of a five-year consolidation, and Q2 2026 is its clearest
+expression yet: the single most concentrated top (one deal = 23% of the quarter) sitting on the
+thinnest base on record.
 
 ---
 
@@ -37,6 +46,82 @@ year. It took exactly one deal to get there."*
 deepens. The rise in *both* average and median (not just the mean) means the concentration
 isn't only at the very top; the middle of the market is writing larger checks too, even as the
 count of deals falls.
+
+---
+
+## 1B. Six-year Q2 context (2021–2026)
+
+The single most important addition to this report: every metric now has a five-year runway behind it.
+
+### Q2 headline series, 2021–2026
+
+| Q2 | Rounds | Total €M | Avg €M | Median €M | Rounds ≥€100M | Top deal | Top deal % of Q | Paris % of value |
+|---|---|---|---|---|---|---|---|---|
+| 2021 | 254 | 3,171 | 15.9 | 2.2 | 6 | Contentsquare €425M | 13.4% | 83% |
+| **2022** | **315** | **4,583** | 17.3 | 4.0 | **10** | EcoVadis €475M | 10.4% | 73% |
+| 2023 | 271 | 1,845 | 7.7 | 2.0 | 2 | Ynsect €161M | 8.7% | 54% |
+| 2024 | 244 | 2,303 | 10.6 | 2.0 | 5 | Mistral AI €468M | 20.3% | 59% |
+| 2025 | 167 | 1,810 | 10.8 | 3.5 | 1 | Knave €100M | 5.5% | 59% |
+| **2026** | **139** | **2,094** | **16.5** | **5.0** | 4 | **Alan €480M** | **22.9%** | **72%** |
+
+**What the long series shows:**
+1. **The 2022 peak has not returned.** Q2 2026 (€2.09B) is 54% below Q2 2022 (€4.58B). The 2021–22
+   boom was an outlier era, not a baseline.
+2. **Deal count is in a secular decline** — down every year since 2022 (315 → 139, −56% over four
+   years). This is the clearest single trend in the dataset.
+3. **The median has climbed to a six-year high (€5.0M)** while deal count fell — the market is doing
+   fewer, larger deals. In 2023–24 the median sat at €2.0M; it has now more than doubled.
+4. **The recurring mega-deal.** Every Q2 has a flagship round — Contentsquare, EcoVadis, Ynsect,
+   Mistral AI, Knave, Alan. What's new in 2026 is *dependence*: Alan is **22.9% of the quarter**,
+   the highest single-deal share in six years (vs Mistral's 20.3% in 2024, and just 5.5% in 2025).
+5. **Paris re-concentrated.** Paris's share of value fell to 54% in the 2023 trough but is back to
+   72% — its highest since the 2021 boom.
+
+### Full-year context (all quarters)
+
+| Year | Rounds | Total €M | Notes |
+|---|---|---|---|
+| 2021 | 988 | 11,761 | Boom begins |
+| **2022** | **1,248** | **14,708** | All-time peak |
+| 2023 | 1,024 | 8,132 | Correction (−45%) |
+| 2024 | 849 | 7,175 | Trough |
+| 2025 | 642 | 7,882 | Flat |
+| 2026 (H1) | 278 | 4,826 | Partial year (Jan–Jun) |
+
+*Disclosure caveat: 2021–2024 have material undisclosed-amount rounds (e.g. 200/254 disclosed in
+Q2 2021); 2025–2026 are fully disclosed. Totals for older years are therefore **conservative** —
+the real gap to peak may be understated. Deal-count and share-of-total trends are unaffected.*
+
+### Sector value by Q2, 2021–2026 (primary sector, €M)
+
+| Sector | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 | Arc |
+|---|---|---|---|---|---|---|---|
+| **Artificial Intelligence** | 265 | 131 | 404 | **804** | 513 | 234 | Crested 2024, down 2 yrs |
+| **SaaS** | 710 | **1,550** | 172 | 170 | 96 | 91 | Collapsed post-2022 |
+| **FinTech** | 714 | 396 | 101 | 61 | 247 | 653* | *Alan+Morpho distort '26 |
+| **Health cluster** (Bio+Health+Med) | 339 | 399 | **471** | 190 | 231 | 363 | Recovered in 2026 |
+| **CleanTech** | 46 | 360 | 82 | 337 | 256 | 104 | Volatile, cooling |
+| **DeepTech** | 34 | 14 | 36 | — | 121 | 168 | Rising (quantum) |
+| **Cybersecurity** | — | 56 | 64 | 26 | 153 | 19 | Spiky; near-zero in '26 |
+
+**Read:** The sector leadership has rotated completely across six years — SaaS (2022) → AI
+(2023–25) → a fragmented 2026 where **health/biotech and deeptech** absorb the capital AI shed.
+SaaS's fall from €1.55B to €91M is the most dramatic structural change in the dataset.
+
+### Stage structure by Q2, 2021–2026
+
+| Stage | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|
+| Seed/pre-seed — **deals** | 165 | **196** | 195 | 152 | 101 | **71** |
+| Seed/pre-seed — €M | 282 | 447 | 480 | 549 | 316 | 232 |
+| Series A — €M | 462 | 1,229 | 494 | 674 | 374 | 673 |
+| Series B — €M | 493 | 820 | 296 | 526 | 284 | 151 |
+| Growth — €M | 189 | 1,059 | 70 | — | 648 | 992 |
+
+**The thinning base, quantified.** Seed/pre-seed deal count has fallen from a Q2 2022 peak of 196
+to just 71 — a **−64% collapse in the number of early-stage rounds**. This is the structural core
+of the "Top-Heavy" thesis: the funnel that feeds future Series A/B is contracting fast, even as
+late-stage (Growth €992M) hits its second-highest level in six years.
 
 ---
 
@@ -287,6 +372,10 @@ to medicine.
   pseudo-code. Queries in this analysis reflect the real schema.
 - **Amount units:** `funding_rounds.amount_eur` is stored in **€ millions**.
 - **Quarter windows:** Q2 = `announced_date BETWEEN 'YYYY-04-01' AND 'YYYY-06-30'`.
+- **Historical scope:** the six-year series (section 1B) covers every Q2 from 2021–2026 from the
+  same `funding_rounds` table. **Disclosure improves over time** — 2021–2024 have material
+  undisclosed-amount rounds (≈20% in 2021), while 2025–2026 are fully disclosed. Euro totals for
+  older years are therefore conservative; count-based and share-based trends are robust.
 - **Sector aggregation:** one primary sector per org via `DISTINCT ON (organization_id) … ORDER BY
   is_primary DESC`; orgs can carry multiple sector tags, which is why Alan surfaces in both FinTech
   (primary) and the health cluster.
@@ -308,6 +397,7 @@ to medicine.
 - [x] Stage analysis with YoY
 - [x] Geographic analysis (cities, Paris vs regions)
 - [x] Outlier "with/without" analysis (Alan €480M)
+- [x] Six-year Q2 historical series (2021–2026): headline, sector, stage, geography
 - [x] Theme identified ("Top-Heavy")
 - [x] Write Q2-2026-ANALYSIS.md
 - [ ] Q2-2026-CONTENT-PLAN.md
