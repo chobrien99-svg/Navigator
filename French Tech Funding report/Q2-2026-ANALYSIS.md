@@ -12,10 +12,12 @@
 
 **The tension:** Q2 2026 looks like a comeback — €2.09B raised, up 16% year-on-year (though still
 23% below Q1's €2.73B). But almost all of that year-on-year growth is a single deal. Strip out Alan's €480M round and the quarter *contracted*
-~11% YoY. Underneath the headline, the market is thinning: 17% fewer deals, seed rounds down a
-third, and AI — the engine of the last two years — cooled hard (funding value −54% YoY). What
+~11% YoY. Underneath the headline, the market is thinning: 17% fewer deals and seed rounds down a
+third. AI remains the dominant sector by far (€1.21B across all its tags, ~58% of the quarter, a
+six-year high) — but that too is one deal wide: Alan is tagged AI, HealthTech, FinTech *and*
+InsurTech, so its €480M inflates four sector headlines at once (strip it and AI is down ~21%). What
 grew was the top of the market: the average check rose 53% and the median 43%. Capital is
-concentrating into fewer, larger rounds while the base erodes.
+concentrating into fewer, larger, more multi-tagged rounds while the base erodes.
 
 **One-line framing for the report intro:** *"French tech funding rose 16% year-on-year in Q2 2026.
 It took exactly one deal to get there."*
@@ -23,8 +25,9 @@ It took exactly one deal to get there."*
 **The five-year view sharpens it.** Q2 2026's €2.09B is a rebound off the 2025 low, but it sits
 34% below the Q2 2022 peak (€4.58B) — and the market has been quietly restructuring the whole
 time. Deal count has fallen in *every* Q2 since 2022 (315 → 271 → 244 → 167 → 139). Early-stage
-(seed/pre-seed) rounds have more than halved (196 → 71). SaaS, the 2022 engine (€1.55B), has all
-but disappeared (€91M). AI crested in Q2 2024 (€804M) and has fallen two years running. "Top-Heavy"
+(seed/pre-seed) rounds have more than halved (196 → 71). SaaS, the 2021–22 engine (€2.1B peak), has
+collapsed to €356M. AI, by contrast, is at a six-year high (€1.21B all-tags) — still the sector that
+eats everything, just increasingly through a handful of giant multi-tagged rounds. "Top-Heavy"
 isn't a one-quarter blip — it's the shape of a five-year consolidation, and Q2 2026 is its clearest
 expression yet: the single most concentrated top (one deal = 23% of the quarter) sitting on the
 thinnest base on record.
@@ -121,21 +124,27 @@ The single most important addition to this report: every metric now has a five-y
 Q2 2021); 2025–2026 are fully disclosed. Totals for older years are therefore **conservative** —
 the real gap to peak may be understated. Deal-count and share-of-total trends are unaffected.*
 
-### Sector value by Q2, 2021–2026 (primary sector, €M)
+### Sector value by Q2, 2021–2026 (all sector tags, €M)
+
+*Every deal counts under **all** its sector tags (see §5). Totals overlap; a deal tagged
+AI + HealthTech + FinTech + InsurTech adds its full amount to each.*
 
 | Sector | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 | Arc |
 |---|---|---|---|---|---|---|---|
-| **Artificial Intelligence** | 265 | 131 | 404 | **804** | 513 | 234 | Crested 2024, down 2 yrs |
-| **SaaS** | 710 | **1,550** | 172 | 170 | 96 | 91 | Collapsed post-2022 |
-| **FinTech** | 714 | 396 | 101 | 61 | 247 | 653* | *Alan+Morpho distort '26 |
-| **Health cluster** (Bio+Health+Med) | 339 | 399 | **471** | 190 | 231 | 363 | Recovered in 2026 |
-| **CleanTech** | 46 | 360 | 82 | 337 | 256 | 104 | Volatile, cooling |
-| **DeepTech** | 34 | 14 | 36 | — | 121 | 168 | Rising (quantum) |
-| **Cybersecurity** | — | 56 | 64 | 26 | 153 | 19 | Spiky; near-zero in '26 |
+| **Artificial Intelligence** | 973 | 391 | 760 | 1,052 | 928 | **1,210** | Dominant throughout; six-year high in '26 |
+| **SaaS** | 1,576 | **2,109** | 362 | 350 | 639 | 356 | 2021–22 giant, then collapsed |
+| **FinTech** | 858 | 528 | 156 | 84 | 442 | 780* | *Alan + Morpho lift '26 |
+| **Health cluster** (Bio+Health+Med) | 548 | 717 | 598 | 218 | 505 | **960**† | †€480M is Alan; ex-Alan €480M |
+| **CleanTech** | 92 | **877** | 119 | 529 | 383 | 170 | Volatile, cooling |
+| **DeepTech** | 48 | 62 | 126 | 25 | 148 | **379** | Rising (quantum/Quobly) |
+| **Cybersecurity** | 350 | 99 | 77 | 29 | 164 | 54 | Spiky; low again in '26 |
 
-**Read:** The sector leadership has rotated completely across six years — SaaS (2022) → AI
-(2023–25) → a fragmented 2026 where **health/biotech and deeptech** absorb the capital AI shed.
-SaaS's fall from €1.55B to €91M is the most dramatic structural change in the dataset.
+**Read:** On an all-tags basis the picture is the opposite of a "rotation away from AI." **AI has
+been the largest or near-largest sector in every Q2, and 2026 (€1.21B) is its six-year high** — but
+that headline is one deal wide: Alan (tagged AI, HealthTech, FinTech *and* InsurTech) adds €480M to
+four sector lines at once, and strip it out and Q2 AI is €730M (below both 2024 and 2025). The one
+unambiguous structural change is **SaaS**, the 2021–22 engine (€2.1B peak) now down to €356M. What
+*genuinely* rose in 2026, outside the mega-deals, is **deeptech/quantum** (€379M, a six-year high).
 
 ### Stage structure by Q2, 2021–2026
 
@@ -192,25 +201,31 @@ flat. So: 2026 will very likely post a much bigger *headline* than 2025, but the
 ex-mega-deal market is roughly flat, on **the fewest H1 deals in the six-year series**. Bigger
 numbers, thinner base — the same story at every altitude.
 
-### What's driving H1 2026 (sector value, H1 2025 → H1 2026, €M)
+### What's driving H1 2026 (sector value, all-tags, H1 2025 → H1 2026, €M)
 
 | Sector | H1 2025 | H1 2026 | Note |
 |---|---|---|---|
-| Artificial Intelligence | 725 | **1,302** | +80%, **but ~€890M is AMI alone** (Q1) |
-| FinTech | 443 | 988 | Alan €480M + Morpho €151M |
-| HealthTech | 185 | 387 | +109% — genuine broad-based growth |
-| BioTech | 245 | 258 | Flat |
-| Energy | 51 | 228 | New strength |
-| Robotics | — | 196 | New entrant |
-| ClimateTech | — | 178 | New entrant |
-| DeepTech | 390 | 202 | −48% |
-| CleanTech | 404 | 175 | −57% |
+| Artificial Intelligence | 1,248 | **3,101** | +148% — but €1.37B is AMI + Alan; dominant sector |
+| HealthTech | 298 | 1,190 | +299% — €480M is Alan; ex-Alan still +138% |
+| FinTech | 704 | 1,179 | +68% — Alan + Morpho |
+| SaaS | 997 | 839 | −16% |
+| DeepTech | 420 | 704 | +68% — quantum/deeptech genuine |
+| InsurTech | 60 | 619 | ~all Alan |
+| BioTech | 435 | 558 | +28% |
+| ClimateTech | 219 | 486 | +122% |
+| CleanTech | 622 | 376 | −40% |
+| Energy | 375 | 349 | −7% |
+| Robotics | 84 | 305 | +265% |
+| MedTech | 112 | 227 | +103% |
 
-**Important cross-check with the Q2 view:** the Q2-only analysis (section 5) shows AI *falling*.
-The H1 view shows AI *rising* — because AMI's €890M Q1 round dominates the half-year. Both are true:
-**ex-AMI, AI over H1 2026 (~€412M) is actually *down* on H1 2025 (€725M).** The AI-cooling thesis
-holds at both altitudes once the single mega-round is set aside. **HealthTech is the standout genuine
-gainer** (+109% with no single dominant deal), reinforcing the health/biotech deep-dive choice.
+**Important cross-check with the Q2 view:** on all-tags, AI is not "cooling" at either altitude —
+it is France's dominant sector and near record highs (Q2 2026 €1.21B is a six-year high; H1 2026
+€3.10B). The Q2-only softness only appears **ex-Alan** (Q2 AI €730M, −21% YoY). Over the half-year,
+even stripping *both* mega-rounds (AMI €890M + Alan €480M), AI (~€1.73B) is still **+39% on H1 2025**.
+So the accurate statement is: **AI's headline is bigger than ever and increasingly concentrated in a
+few giant, multi-tagged rounds** — not that capital rotated out of it. HealthTech's apparent surge
+(+299% H1) is likewise heavily Alan; the genuine, non-mega risers are **deeptech/quantum** and
+**health ex-Alan** (still up), which is what makes the health/biotech deep-dive worthwhile.
 
 ---
 
@@ -297,55 +312,74 @@ between €36M and €100M. Q2 2026's top is spikier: one €480M deal, then a s
 
 ---
 
-## 5. Sector analysis (primary sector)
+## 5. Sector analysis (all sector tags)
 
-### Q2 2026
+> **Methodology (changed from the earlier draft):** every deal is counted under **all** of its
+> sector tags, not one "primary" sector. A round tagged AI + HealthTech + FinTech + InsurTech
+> (e.g. Alan) adds its full €480M to each of those four lines. Sector totals therefore **overlap and
+> sum to more than the quarter's €2.09B** — they measure how much capital *touched* each sector, not
+> a partition of the total. The earlier primary-sector-only version understated cross-cutting sectors
+> (above all AI) and produced a misleading "AI −54%."
 
-| Sector | Deals | €M | Share of value |
-|---|---|---|---|
-| FinTech | 7 | **653** | 31% |
-| Artificial Intelligence | 28 | 234 | 11% |
-| BioTech | 8 | 187 | 9% |
-| HealthTech | 13 | 171 | 8% |
-| DeepTech | 5 | 168 | 8% |
-| Other/Unclassified | 11 | 158 | 8% |
-| CleanTech | 11 | 104 | 5% |
-| SaaS | 6 | 91 | 4% |
-| AgriTech | 2 | 52 | 2% |
-| Gaming | 3 | 41 | 2% |
-| ClimateTech | 6 | 38 | 2% |
-| DefenseTech | 1 | 32 | 2% |
-
-*(FinTech is inflated by Alan €480M + Morpho Labs €151M; the two account for ~97% of the FinTech
-line. Strip them and "real" fintech is ~€22M.)*
-
-### Q2 2025
+### Q2 2026 (all-tags)
 
 | Sector | Deals | €M |
 |---|---|---|
-| Artificial Intelligence | 48 | 513 |
-| CleanTech | 15 | 256 |
-| FinTech | 18 | 247 |
-| Cybersecurity | 5 | 153 |
-| BioTech | 14 | 122 |
-| DeepTech | 9 | 121 |
-| HealthTech | 17 | 109 |
-| SaaS | 17 | 96 |
+| **Artificial Intelligence** | 70 | **1,210** |
+| HealthTech | 22 | 843 |
+| FinTech | 14 | 780 |
+| InsurTech | 5 | 495 |
+| DeepTech | 26 | 379 |
+| SaaS | 43 | 356 |
+| ClimateTech | 27 | 305 |
+| BioTech | 14 | 289 |
+| Hardware | 9 | 267 |
+| CleanTech | 15 | 170 |
+| MedTech | 11 | 166 |
+| DefenseTech | 8 | 164 |
+| Quantum Computing | 2 | 115 |
 
-### Key sector YoY moves
+*AI touches €1.21B — ~58% of the quarter's €2.09B. Of that, €480M is Alan alone (also counted in
+HealthTech, FinTech and InsurTech).*
 
-| Sector | Q2'25 €M | Q2'26 €M | Δ value | Q2'25 deals | Q2'26 deals | Δ deals |
-|---|---|---|---|---|---|---|
-| **Artificial Intelligence** | 513 | 234 | **−54%** | 48 | 28 | **−42%** |
-| **Health cluster** (Bio+Health+Med) | 231 | 363 | **+57%** | 31 | 23 | −26% |
-| DeepTech | 121 | 168 | +39% | 9 | 5 | −44% |
-| CleanTech | 256 | 104 | −59% | 15 | 11 | −27% |
-| Cybersecurity | 153 | 19 | −88% | 5 | 2 | −60% |
+### Q2 2025 (all-tags)
 
-**The big sector story: AI cooled.** After two years as French tech's growth engine, AI funding
-value more than halved (−54%) and deal count fell 42%. The euros that used to flow to AI showed
-up in **health/biotech** (Bionyra, UROMEMS, Tissium, Sonomind) and **deeptech/quantum** (Quobly,
-Mantle8). Cybersecurity — the Q1 deep-dive sector — nearly vanished this quarter (€153M → €19M).
+| Sector | Deals | €M |
+|---|---|---|
+| Artificial Intelligence | 67 | 928 |
+| SaaS | 36 | 639 |
+| FinTech | 25 | 442 |
+| CleanTech | 20 | 383 |
+| Hardware | 16 | 315 |
+| BioTech | 19 | 304 |
+| Energy | 13 | 245 |
+| HealthTech | 21 | 201 |
+| Cybersecurity | 7 | 164 |
+| DeepTech | 10 | 148 |
+
+### Key sector YoY moves (all-tags)
+
+| Sector | Q2'25 €M | Q2'26 €M | Δ value | Note |
+|---|---|---|---|---|
+| **Artificial Intelligence** | 928 | **1,210** | **+30%** | ex-Alan €730M (−21%); six-year-high headline |
+| **HealthTech** | 201 | 843 | +319% | €480M is Alan; ex-Alan €363M (+80%) |
+| **FinTech** | 442 | 780 | +76% | Alan €480M + Morpho €151M |
+| **InsurTech** | 37 | 495 | +1,238% | ~all Alan |
+| **DeepTech** | 148 | 379 | +156% | quantum/Quobly — genuine |
+| **SaaS** | 639 | 356 | −44% | genuine decline |
+| **CleanTech** | 383 | 170 | −56% | |
+| **Cybersecurity** | 164 | 54 | −67% | Q1 deep-dive sector, faded |
+
+**The big sector story (restated): AI still eats everything.** On an all-tags basis AI is the
+quarter's dominant sector by a wide margin — **€1.21B, ~58% of all value, a six-year high, up 30%
+YoY** — with deal count (70) flat-to-up. The "AI −54%" in the earlier draft was purely an artifact of
+counting each deal under one primary sector, which pushed Alan (and other AI-plus companies) out of
+the AI line. **The real story is concentration, not rotation:** Alan's €480M is tagged AI, HealthTech,
+FinTech *and* InsurTech, so a single deal lifts four sector headlines at once. Strip Alan and AI is
+€730M — **down ~21% YoY** — so the *underlying* AI market did soften, but the sector is so large and
+cross-cutting that "AI declined" is the wrong headline. The **genuine, non-mega risers** are
+deeptech/quantum (Quobly €115M, €379M sector total, a six-year high) and health ex-Alan (+80%);
+**SaaS (−44%), CleanTech (−56%) and cybersecurity (−67%) genuinely fell.**
 
 ---
 
@@ -448,8 +482,10 @@ roughly flat vs €505M / 39 deals a year ago — again, **fewer deals, bigger c
   Catalyst), **SQUAREMIND** (€15.3M, skin imaging), **Crossject** (€15M needle-free injection).
 
 **Deep-dive angle:** France's health/biotech is maturing into large, later, strategically-backed
-rounds (Sanofi Ventures, Ajax Health), while the AI wave recedes — the euros rotated from models
-to medicine.
+rounds (Sanofi Ventures, Ajax Health). Ex-Alan, the health cluster (€480M) is the quarter's most
+credible non-mega growth story — genuine breadth (Bionyra, UROMEMS, Tissium) rather than one giant
+cross-tagged round. It doesn't come at AI's expense — AI is at a six-year high — but it is the
+clearest sign of a second engine forming alongside it.
 
 ---
 
@@ -465,9 +501,13 @@ to medicine.
   same `funding_rounds` table. **Disclosure improves over time** — 2021–2024 have material
   undisclosed-amount rounds (≈20% in 2021), while 2025–2026 are fully disclosed. Euro totals for
   older years are therefore conservative; count-based and share-based trends are robust.
-- **Sector aggregation:** one primary sector per org via `DISTINCT ON (organization_id) … ORDER BY
-  is_primary DESC`; orgs can carry multiple sector tags, which is why Alan surfaces in both FinTech
-  (primary) and the health cluster.
+- **Sector aggregation (all-tags):** each funding round is attributed to **every** sector its org is
+  tagged with, via `funding_rounds ⋈ organization_sectors ⋈ sectors`, summing `amount_eur` per
+  sector. A round's full amount lands in each of its tags, so **sector totals overlap and exceed the
+  quarter total** — e.g. Alan (AI, HealthTech, FinTech, InsurTech) contributes €480M to all four.
+  This replaces the earlier "one primary sector per org" method, which understated cross-cutting
+  sectors (AI most of all). "Deals" per sector = `COUNT(DISTINCT funding_round_id)` carrying that tag.
+  The health-cluster deep-dive (§9) de-duplicates rounds across Health/Bio/Med tags (distinct union).
 - **Undisclosed rounds:** Q2 2026 had 12 rounds with no disclosed amount (139 total, 127 disclosed);
   averages/medians use disclosed rounds only.
 - **Investor names:** taken from `funding_round_investors` (joined to `organizations`, falling back

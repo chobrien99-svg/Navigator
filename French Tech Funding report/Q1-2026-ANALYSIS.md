@@ -84,42 +84,59 @@ The headline: fewer but much larger deals, led by a massive AI wave and the emer
 
 ---
 
-## Sector Analysis
+## Sector Analysis (all sector tags)
 
-### Sectors ranked by Q1 2026 funding
+> **Method:** each deal is counted under **all** its sector tags (a round tagged AI + FinTech adds
+> its full amount to both). Totals overlap and exceed the €2.73B quarter. An earlier draft used one
+> "primary" sector per deal, which understated cross-cutting sectors and distorted several YoY
+> figures — e.g. it showed Energy "+2,301%," SaaS at just €179M, and CleanTech/Hardware *rising* when
+> both actually fell. AI dominance and the cybersecurity surge hold under both methods.
 
-| Sector | Q1 2025 | Q1 2026 | YoY Change | Deals '25 | Deals '26 |
-|---|---|---|---|---|---|
-| **AI & Machine Learning** | €314M | **€1,833M** | **+483%** | 41 | 44 |
-| **FinTech** | €210M | €384M | +83% | 13 | 14 |
-| **DeepTech** | €269M | €319M | +19% | 11 | 21 |
-| **SpaceTech & Aerospace** | €172M | €314M | +82% | 3 | 6 |
-| **HealthTech** | €81M | €219M | +169% | 14 | 12 |
-| **BioTech** | €78M | €205M | +164% | 13 | 19 |
-| **Energy** | €8M | **€202M** | **+2,301%** | 3 | 10 |
-| **SaaS & Enterprise** | €105M | €179M | +70% | 20 | 17 |
-| **CleanTech** | €148M | €168M | +13% | 26 | 18 |
-| **ClimateTech** | €0 | **€164M** | NEW | 0 | 7 |
-| **Hardware** | €52M | €147M | +184% | 5 | 6 |
-| **DefenseTech** | €0 | **€145M** | NEW | 0 | 5 |
-| **Cybersecurity** | €11M | **€133M** | **+1,124%** | 6 | 8 |
-| **AgriTech** | €3M | €101M | +3,694% | 5 | 10 |
-| **E-commerce & Retail** | €95M | €31M | **-67%** | 22 | 11 |
-| **Mobility & Transportation** | €37M | €1M | **-96%** | 8 | 1 |
+### Sectors ranked by Q1 2026 funding (all-tags)
 
-### Key Sector Trends
+| Sector | Q1 2025 | Q1 2026 | YoY Change | Deals '26 |
+|---|---|---|---|---|
+| **AI & Machine Learning** | €320M | **€1,891M** | **+491%** | 54 |
+| **SaaS & Enterprise** | €358M | €483M | +35% | 25 |
+| **FinTech** | €262M | €399M | +52% | 16 |
+| **HealthTech** | €96M | €347M | +261% | 15 |
+| **DefenseTech** | ~€0 | **€333M** | NEW | 8 |
+| **DeepTech** | €272M | €325M | +19% | 23 |
+| **SpaceTech & Aerospace** | €172M | €319M | +85% | 7 |
+| **BioTech** | €131M | €268M | +105% | 24 |
+| **Energy** | €130M | €249M | +92% | 17 |
+| **CleanTech** | €238M | €206M | **−13%** | 21 |
+| **Robotics** | €19M | €205M | +979% | 5 |
+| **Hardware** | €266M | €202M | **−24%** | 12 |
+| **Mobility** | €100M | €201M | +101% | 7 |
+| **ClimateTech** | €31M | €181M | +484% | 10 |
+| **Cybersecurity** | €11M | **€133M** | **+1,109%** | 8 |
+| **E-commerce & Retail** | €97M | €33M | **−66%** | 13 |
 
-1. **AI dominance is unprecedented.** AI & Machine Learning attracted €1.83B in Q1 2026 — 67% of all Q1 funding — up from €314M (21%) in Q1 2025. Nearly every top deal has an AI component. The Advanced Machine Intelligence €890M seed round alone exceeds all of Q1 2025's AI funding.
+### Key Sector Trends (all-tags)
 
-2. **Energy is the breakout sector.** From just €8M in Q1 2025 to €202M in Q1 2026, driven by newcleo (€75M nuclear), Calogena (€52M), and Jimmy Energy (€40M). France's energy transition ambitions are attracting serious capital.
+1. **AI dominance is unprecedented — and larger than it first looked.** On all tags, AI touched
+   **€1.89B in Q1 2026 — ~69% of all Q1 funding** — up from €320M a year earlier. The Advanced Machine
+   Intelligence €890M seed round alone exceeds all of Q1 2025's AI funding; ex-AMI, AI (€1.0B) is
+   still triple last year.
 
-3. **ClimateTech and DefenseTech emerge as new categories.** Neither registered deals in Q1 2025; in Q1 2026 they account for €164M and €145M respectively. Hynaero (€117M) is tagged both SpaceTech and DefenseTech, signaling dual-use aerospace investment.
+2. **Energy grew — but not 23×.** €130M → €249M (**+92%**), driven by newcleo (€75M nuclear),
+   Calogena (€52M) and Jimmy Energy (€40M). The earlier "+2,301%" was a primary-tag artifact
+   (it compared an €8M primary-only 2025 base against €202M).
 
-4. **Cybersecurity is surging.** €11M → €133M (+1,124%), led by GitGuardian (€42M) and Qevlar AI (€26M). Post-geopolitical tensions and EU regulatory pressure are driving security spending.
+3. **DefenseTech emerges; ClimateTech scales.** DefenseTech is genuinely new (~€0 → €333M, incl.
+   Hynaero €117M, tagged SpaceTech + DefenseTech). ClimateTech is *not* new — it grew €31M → €181M
+   (+484%).
 
-5. **E-commerce & Retail is fading.** Down 67% from €95M to €31M, and deal count halved (22 → 11). Investors are rotating away from consumer commerce toward deep-tech and enterprise.
+4. **Cybersecurity is surging.** €11M → €133M (+1,109%), led by GitGuardian (€42M) and Qevlar AI
+   (€26M) — the same figure under both methods, and the basis for the Q1 cyber deep-dive.
 
-6. **Mobility collapsed.** From €37M across 8 deals down to just €1M and 1 deal — a stark reversal.
+5. **The primary-only view flipped some signs.** SaaS is bigger than it showed (€358M → €483M) but
+   its *share* is falling as AI absorbs the headline; **CleanTech (−13%) and Hardware (−24%) actually
+   declined** year-on-year once all tags are counted — the earlier draft had them rising.
+
+6. **E-commerce & Retail is fading** (−66%, €97M → €33M) as capital concentrates in AI, deeptech and
+   defense.
 
 ---
 
@@ -175,14 +192,18 @@ Investors are concentrating capital into higher-conviction positions. Deal count
 ### 3. "New Sectors Emerge"
 DefenseTech (€145M from zero) and ClimateTech (€164M from zero) didn't register in Q1 2025 data at all. France's strategic priorities — defense sovereignty, climate transition — are now generating venture-scale investment.
 
-### 4. "Energy Renaissance"
-The 23x growth in energy deals reflects France's nuclear and clean energy ambitions. newcleo (nuclear, €75M), Calogena (geothermal, €52M), and Jimmy Energy (€40M) represent diverse bets across the energy stack.
+### 4. "Energy & Defense Bets"
+Energy funding rose to €249M (+92% YoY, all-tags), reflecting France's nuclear and clean-energy
+ambitions — newcleo (nuclear, €75M), Calogena (geothermal, €52M) and Jimmy Energy (€40M). The
+sharper new-money story is DefenseTech, from ~€0 to €333M (Hynaero €117M, dual-use aerospace).
 
 ### 5. "Paris Gravity, Regional Vitality"
 While Paris dominates by total euros, the 44 cities with funded startups show ecosystem breadth. Bordeaux (Hynaero, FineHeart), Lyon (Verley), and Aix-en-Provence (Calogena, SunLib) are emerging as secondary hubs for deep-tech and energy.
 
-### 6. "Consumer Out, Enterprise In"
-E-commerce/retail (-67%) and mobility (-96%) collapsed. The market has rotated decisively toward enterprise software, security, health, and deep-tech — sectors with clearer paths to durable revenue.
+### 6. "Consumer Out, Frontier In"
+E-commerce/retail fell −66% (€97M → €33M) as capital concentrated in AI, deeptech and defense.
+(Note: on an all-tags basis mobility did *not* collapse — it rose to €201M; the earlier "−96%" was a
+primary-only artifact.)
 
 ---
 

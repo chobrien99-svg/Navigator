@@ -35,11 +35,11 @@ The asterisk, again, is concentration. Two deals — AMI's €890M in Q1 and Ala
 
 Inside the quarter, the shape was lopsided. April was weak — €305M, roughly half of April 2025. Then June carried everything: **€1.30 billion, 62% of the quarter**, as Alan, Morpho Labs (€151M) and Bionyra Pharma (€140M) all landed in the same four weeks. Even stripping Alan, June was still the strongest month.
 
-## The money left AI for medicine
+## AI still eats everything
 
-The sector story is a rotation. After two years as French tech's growth engine, **AI funding more than halved** — €513M to €234M, with deal count down 42%. (You'll see headlines that AI *surged* over the half-year; that's entirely AMI's €890M Q1 round. Strip it out and AI is down at both the quarter and half-year level. The wave crested in Q2 2024 and has receded two years running.)
+Count every deal under all of its sector tags — as you should, since a company like Alan is genuinely an AI, health, fintech *and* insurance business — and the sector story isn't a rotation away from AI at all. **AI is France's dominant sector by a wide margin: €1.21 billion, about 58% of everything raised this quarter, and a six-year high, up 30% year-on-year.**
 
-Where did the capital go? Into **health and biotech**, the quarter's genuine, broad-based winner — up 57% year-on-year, led by Bionyra's €140M Series A, one of the largest French biotech A-rounds on record, with Sanofi Ventures, Jeito and Sofinnova writing big cheques. And into **deeptech and quantum**: Grenoble startup Quobly raised €115M, part of a €238M quarter that made Grenoble the country's No. 2 hub after Paris.
+The catch is the same one that runs through the whole report: concentration. Alan's single €480M round is tagged AI, health, fintech and insurance, so it lifts four different sector headlines at once. Strip it out and AI is €730M — actually *down* about 21% on last year. So the underlying AI market softened even as the sector's headline hit a record. What genuinely grew, with no giant doing the work, is **deeptech and quantum**: Grenoble's Quobly raised €115M, part of a €238M quarter that made Grenoble the country's No. 2 hub after Paris. And **health and biotech**, ex-Alan, is up 80% — led by Bionyra's €140M Series A, one of the largest French biotech A-rounds on record. Meanwhile SaaS (−44%), cleantech (−56%) and cybersecurity (−67%) genuinely fell.
 
 ## The thinning base
 
