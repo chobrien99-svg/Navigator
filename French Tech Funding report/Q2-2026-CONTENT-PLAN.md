@@ -24,9 +24,9 @@ through-line.
 
 ## The intro (draft prose, ~120 words)
 
-> On paper, French tech is rebounding. In the second quarter of 2026, startups raised
+> In the second quarter of 2026, French tech startups raised
 > **€2.09 billion — up 16% on a year ago**, with four rounds above €100 million against just one in
-> Q2 2025. After a lean 2025, the headline finally points up.
+> Q2 2025. On paper, the long-awaited rebound has finally arrived.
 >
 > It took one company to make it happen. Alan, the Paris health-insurance unicorn, raised **€480
 > million in June** — nearly a quarter of everything raised in the entire quarter. Take that single
