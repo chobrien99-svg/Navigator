@@ -10,15 +10,15 @@
 
 ## 0. The theme: **"Top-Heavy"**
 
-**The tension:** Q2 2026 looks like a record — €2.09B raised, up 16% year-on-year. But almost
-all of that growth is a single deal. Strip out Alan's €480M round and the quarter *contracted*
+**The tension:** Q2 2026 looks like a comeback — €2.09B raised, up 16% year-on-year (though still
+23% below Q1's €2.73B). But almost all of that year-on-year growth is a single deal. Strip out Alan's €480M round and the quarter *contracted*
 ~11% YoY. Underneath the headline, the market is thinning: 17% fewer deals, seed rounds down a
 third, and AI — the engine of the last two years — cooled hard (funding value −54% YoY). What
 grew was the top of the market: the average check rose 53% and the median 43%. Capital is
 concentrating into fewer, larger rounds while the base erodes.
 
-**One-line framing for the report intro:** *"French tech just posted its biggest quarter in a
-year. It took exactly one deal to get there."*
+**One-line framing for the report intro:** *"French tech funding rose 16% year-on-year in Q2 2026.
+It took exactly one deal to get there."*
 
 **The five-year view sharpens it.** Q2 2026's €2.09B is a rebound off the 2025 low, but it sits
 34% below the Q2 2022 peak (€4.58B) — and the market has been quietly restructuring the whole

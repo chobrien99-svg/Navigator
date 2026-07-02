@@ -8,16 +8,16 @@ tags:
 authors:
   - Chris O'Brien
   - Helen O'Reilly-Durand
-excerpt: "French startups raised €2.09 billion in Q2 2026, up 16% year-on-year and their best quarter in a year. Strip out Alan's €480M round and funding actually fell. Here's the story beneath the headline."
+excerpt: "French startups raised €2.09 billion in Q2 2026, up 16% year-on-year. Strip out Alan's €480M round and funding actually fell. Here's the story beneath the headline."
 ---
 
-# Top-Heavy: French Tech's Best Quarter in a Year Rested on a Single Deal
+# Top-Heavy: French Tech's Q2 Rebound Rested on a Single Deal
 
 Here's a number to start with: **€2.09 billion**. That's what French tech startups raised in Q2 2026 — April through June — according to our [French Tech Funding Tracker](https://funding.frenchtechjournal.com). It's up 16% on the same quarter last year, with four rounds above €100 million. On paper, the long-awaited rebound has arrived.
 
 Now here's the number that complicates it: **€480 million**. That's Alan, the Paris health-insurance unicorn, in a single June round — nearly a quarter of everything raised in the entire quarter. Take that one deal out, and French tech funding didn't rise at all. It *fell* about 11%.
 
-That gap — between a record headline and a market that's actually thinning beneath it — is the story of Q2 2026. We're calling it **Top-Heavy**.
+That gap — between an encouraging headline and a market that's actually thinning beneath it — is the story of Q2 2026. (It wasn't even 2026's biggest quarter: Q1 raised 23% more.) We're calling it **Top-Heavy**.
 
 ## The whole gain was one company
 
