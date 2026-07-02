@@ -100,10 +100,39 @@ mega_rounds = [r for r in rounds if r.get('amount_eur', 0) >= 100]
 For each analysis dimension, compute both quarters and calculate YoY change:
 - **Monthly breakdown** (3 months)
 - **Top deals** (sorted by amount, top 15-20)
-- **Sector analysis** (aggregate by sector, count deals + sum amounts)
+- **Sector analysis** (aggregate by sector, count deals + sum amounts) — **use ALL sector tags, not
+  a single "primary" sector** (see the box below)
 - **Stage analysis** (aggregate by round_type)
 - **Geographic analysis** (aggregate by hq_city_name)
 - **Investor analysis** (aggregate by investor name via junction table)
+
+> ### ⚠️ Sector analysis MUST use all tags (not primary-only)
+>
+> A company can carry several sector tags (e.g. Alan = AI + HealthTech + FinTech + InsurTech).
+> Attribute each round's **full amount to every tag it carries** — never collapse to one "primary"
+> sector. Primary-only badly understates cross-cutting sectors (above all AI) and can **invert the
+> story**: in the first Q2 2026 draft it produced "AI −54%" when the true all-tags figure was
+> **+30%** (AI at a six-year high). Consequences of the all-tags method, to state explicitly in the
+> report:
+> - **Sector totals overlap and sum to more than the quarter total** — they measure how much capital
+>   *touched* each sector, not a partition of the total. Say so in the chart label.
+> - For any sector inflated by one multi-tagged mega-deal (e.g. Alan lifting four sectors), show the
+>   figure **with and without** that deal, exactly like the quarter-level outlier analysis (Step 5).
+>
+> ```sql
+> -- All-tags sector totals for a window (project oxqpmtttgicvxmesrjzy schema)
+> SELECT s.name AS sector,
+>        COUNT(DISTINCT fr.id)      AS deals,
+>        ROUND(SUM(fr.amount_eur))  AS total_eur_m
+> FROM funding_rounds fr
+> JOIN organization_sectors os ON os.organization_id = fr.organization_id
+> JOIN sectors s               ON s.id = os.sector_id
+> WHERE fr.announced_date BETWEEN 'YYYY-04-01' AND 'YYYY-06-30'
+> GROUP BY s.name
+> ORDER BY total_eur_m DESC;   -- deals per sector = COUNT(DISTINCT funding_round_id) carrying the tag
+> ```
+> For a health-cluster / multi-tag *aggregate* (e.g. Bio+Health+Med), de-duplicate rounds with a
+> `SELECT DISTINCT fr.id …` subquery so a round tagged in two of them is counted once.
 
 ### Step 5: "With and without" outlier analysis
 
