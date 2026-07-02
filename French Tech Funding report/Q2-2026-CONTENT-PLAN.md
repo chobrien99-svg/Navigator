@@ -8,10 +8,10 @@
 
 ## Theme: **Top-Heavy**
 
-*A record-looking quarter built on a single deal — and a five-year thinning underneath it.*
+*A headline rebound built on a single deal — and a five-year thinning underneath it.*
 
-**The tension in one breath:** French tech just posted its biggest quarter in a year — €2.09B, up
-16% — and it took exactly one deal to get there. Strip out Alan's €480M round and funding actually
+**The tension in one breath:** French tech funding rose 16% year-on-year to €2.09B — though still
+23% below Q1 — and it took exactly one deal to get there. Strip out Alan's €480M round and funding actually
 *fell*. Underneath the headline, the market has been quietly narrowing for years: fewer deals,
 bigger checks, a shrinking base of early-stage rounds. Q2 2026 is that story at its sharpest.
 
@@ -24,17 +24,17 @@ through-line.
 
 ## The intro (draft prose, ~120 words)
 
-> French tech just had its best quarter in a year. In the second quarter of 2026, startups raised
-> **€2.09 billion — up 16% on a year ago**, with four rounds above €100 million. On paper, the
-> long-awaited rebound has arrived.
+> In the second quarter of 2026, French tech startups raised
+> **€2.09 billion — up 16% on a year ago**, with four rounds above €100 million against just one in
+> Q2 2025. On paper, the long-awaited rebound has finally arrived.
 >
 > It took one company to make it happen. Alan, the Paris health-insurance unicorn, raised **€480
 > million in June** — nearly a quarter of everything raised in the entire quarter. Take that single
 > deal out, and French tech funding didn't rise at all. It *fell* about 11%.
 >
-> That gap — between a record headline and a market that's actually thinning beneath it — is the
-> story of Q2 2026. Fewer deals, bigger checks, and a five-year narrowing that this quarter throws
-> into sharp relief.
+> That gap — between an encouraging headline and a market that's actually thinning beneath it — is
+> the story of Q2 2026. It wasn't even 2026's strongest quarter — Q1 raised 23% more. Fewer deals,
+> bigger checks, and a five-year narrowing that this quarter throws into sharp relief.
 
 ---
 
@@ -147,7 +147,7 @@ Each section uses the guide's editorial formula: `LABEL → HEADLINE → 1–2 s
 
 Voice: conversational, data-forward, occasional aside, ends on tension not a bow (guide §7).
 
-1. **Hook (2 sentences):** Best quarter in a year — €2.09B, up 16%. Then the twist: one deal (Alan,
+1. **Hook (2 sentences):** Up 16% year-on-year — €2.09B. Then the twist: one deal (Alan,
    €480M) is nearly a quarter of it.
 2. **The big number, explained:** Four €100M+ rounds; on paper the rebound arrived.
 3. **The outlier caveat:** Ex-Alan, funding *fell* ~11%. This is the whole story in one line.
@@ -172,7 +172,7 @@ Voice: conversational, data-forward, occasional aside, ends on tension not a bow
 ## Cover image (960×600) — copy
 
 - **Title:** *Top-Heavy*
-- **Subtitle:** *French tech's biggest quarter in a year rested on a single deal.*
+- **Subtitle:** *French tech's Q2 rebound rested on a single deal.*
 - **Three stat blocks:**
   - **€2.09B** — raised in Q2 2026 · ▲ 16% YoY
   - **139** — funding rounds · ▼ 17% YoY
