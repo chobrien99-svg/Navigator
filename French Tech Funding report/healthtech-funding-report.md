@@ -1,8 +1,9 @@
 # French Health & Biotech Funding — Q2 2026 Deep-Dive
 
-> Companion sector report to the Q2 2026 French Tech Funding Report. The health cluster
-> (BioTech + HealthTech + MedTech) was Q2's genuine, broad-based winner — the sector that absorbed
-> the capital AI shed. Data source: Navigator `funding_rounds`; comparison quarter Q2 2025.
+> Companion sector report to the Q2 2026 French Tech Funding Report. Ex-Alan, the health cluster
+> (BioTech + HealthTech + MedTech) was Q2's most credible non-mega growth story — a second engine
+> forming alongside a still-dominant AI sector, not a replacement for it. Data source: Navigator
+> `funding_rounds` (all sector tags); comparison quarter Q2 2025.
 
 ---
 
@@ -13,9 +14,9 @@ roughly flat on the €505M / 39 deals of a year ago in euros, but on **20% fewe
 same "fewer deals, bigger cheques" pattern that defines the whole quarter. Counting Alan (which
 carries a HealthTech tag alongside FinTech), the cluster tops **€960M**. The headline is a single
 landmark round — **Bionyra Pharma's €140M Series A**, one of the largest French biotech A-rounds on
-record — and a rotation of strategic capital (Sanofi Ventures, Ajax Health, Sofinnova) into later,
-larger, more clinically-mature companies. As the AI wave receded, the euros rotated from models to
-medicine.
+record — and an influx of strategic capital (Sanofi Ventures, Ajax Health, Sofinnova) into later,
+larger, more clinically-mature companies. AI remained France's dominant sector (a six-year high);
+what's new is that health/biotech is emerging as a credible second engine beside it.
 
 ---
 
@@ -83,9 +84,10 @@ later, strategically-backed rounds, topped by a single €140M Series A that has
    software play — capital is flowing to harder, more capital-intensive science.
 4. **Grenoble as a medtech pole.** UROMEMS (€55M) helped make Grenoble the region's standout cluster,
    pairing medtech with the quarter's quantum/deeptech story (Quobly, Mantle8).
-5. **The rotation from AI.** As AI funding more than halved year-on-year (−54%), the health cluster
-   rose 57%. Over the full half-year, HealthTech is up 109% with no single dominant deal — the
-   clearest example of genuine, broad-based sector growth in the dataset.
+5. **A second engine, not a rotation.** On an all-tags basis AI is *not* declining — it is France's
+   dominant sector at a six-year high (€1.21B, ~58% of the quarter). What's notable is that the
+   health cluster grew alongside it: ex-Alan, core health/biotech is up ~80% year-on-year, and it
+   does so with genuine breadth (Bionyra, UROMEMS, Tissium) rather than one giant cross-tagged round.
 
 ---
 
