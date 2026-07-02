@@ -37,7 +37,7 @@ Then March happened. **€1.59 billion in a single month** — more than the *en
 
 Beyond AI's gravitational pull, the sector story is fascinating.
 
-**Energy** went from €8M in Q1 2025 to **€202M** — a 23x increase. newcleo is building next-gen nuclear reactors (€75M), Calogena is doing nuclear-powered district heating (€52M), and Jimmy Energy raised €40M for industrial nuclear micro-reactors. France's energy sovereignty ambitions are no longer just policy papers — they're venture-scale investments.
+**Energy** climbed to **€249M** — up 92% year-on-year (counting all sector tags). newcleo is building next-gen nuclear reactors (€75M), Calogena is doing nuclear-powered district heating (€52M), and Jimmy Energy raised €40M for industrial nuclear micro-reactors. France's energy sovereignty ambitions are no longer just policy papers — they're venture-scale investments. The sharper new-money story is **DefenseTech**, which went from near-zero to €333M.
 
 **DefenseTech and ClimateTech** didn't exist as categories in our Q1 2025 data. In Q1 2026 they accounted for €145M and €164M respectively. Hynaero bridges both: its Fregate-F100 water bombers address wildfire suppression (climate) but the aerospace engineering is inherently dual-use (defense). EGIDE raised €8M for anti-drone systems. Aerix Systems pulled in €5M for omnidirectional defense robots. Geopolitics is generating dealflow.
 
