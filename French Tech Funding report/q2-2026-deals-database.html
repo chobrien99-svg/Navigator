@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>French Tech Funding Database · Q2 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root{
+  --surface:#fef9ee; --surface-low:#f8f3e8; --surface-container:#f2ede2; --white:#ffffff;
+  --primary:#114563; --primary-2:#2f5d7c; --on-primary:#fff;
+  --ink:#1d1c15; --muted:#41474d; --faint:#72787e;
+  --border:rgba(193,199,206,0.35); --border-soft:rgba(193,199,206,0.18);
+  --secondary:#775a0f; --gold:#edbf74; --oxblood:#460602;
+  --c1:#114563;--c2:#2f5d7c;--c3:#775a0f;--c4:#3c6840;--c5:#503863;--c6:#8b6914;--c7:#460602;--c8:#5a7a8b;--c9:#7a5a3a;--c10:#3a7a7a;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--ink);font-family:'Public Sans',sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.masthead{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:var(--on-primary);padding:13px 32px;display:flex;justify-content:space-between;align-items:center;}
+.masthead-brand{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;}
+.masthead-right{font-size:0.68rem;font-weight:400;letter-spacing:0.08em;opacity:0.72;}
+.container{max-width:1180px;margin:0 auto;padding:2rem clamp(1rem,3vw,2.5rem) 1rem;}
+h2.section-title{font-family:'Newsreader',serif;font-weight:600;color:var(--primary);font-size:1.5rem;letter-spacing:-0.01em;}
+.label{font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);}
+
+/* loading / error */
+.loading-state{text-align:center;padding:80px 24px;color:var(--muted);}
+.spinner{width:34px;height:34px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;margin:0 auto 14px;animation:spin 0.8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.loading-text{font-size:0.85rem;letter-spacing:0.04em;}
+.error-state{text-align:center;padding:64px 24px;color:var(--muted);}
+.error-state h3{font-family:'Newsreader',serif;color:var(--oxblood);margin-bottom:8px;font-size:1.3rem;}
+
+/* stats banner */
+.stats-banner{display:grid;grid-template-columns:repeat(5,1fr);background:var(--white);margin-bottom:2rem;}
+.stat-tile{padding:1.4rem 1.5rem;border-right:1px solid var(--border-soft);}
+.stat-tile:last-child{border-right:none;}
+.stat-label{font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);margin-bottom:0.5rem;}
+.stat-value{font-family:'Newsreader',serif;font-size:1.9rem;font-weight:700;color:var(--primary);line-height:1;letter-spacing:-0.02em;}
+.stat-sub{font-size:0.72rem;color:var(--faint);margin-top:0.3rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* charts */
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:2.5rem;}
+.chart-card{background:var(--white);padding:1.3rem 1.4rem;}
+.chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.9rem;gap:0.5rem;flex-wrap:wrap;}
+.chart-title{font-family:'Newsreader',serif;font-size:1.05rem;font-weight:600;color:var(--primary);}
+.toggle-group{display:flex;gap:2px;}
+.toggle-btn{font-family:'Public Sans',sans-serif;font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;padding:5px 9px;background:var(--surface-container);color:var(--muted);border:none;cursor:pointer;}
+.toggle-btn.active{background:var(--primary);color:#fff;}
+.chart-wrap{position:relative;}
+.chart-wrap canvas{width:100%!important;}
+.donut-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:0.8rem;font-size:0.68rem;color:var(--muted);}
+.donut-legend span{display:inline-flex;align-items:center;gap:5px;}
+.donut-legend i{width:9px;height:9px;display:inline-block;}
+
+/* deals */
+.section-header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:0.4rem;}
+.controls{display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap;}
+#search{font-family:'Public Sans',sans-serif;font-size:0.8rem;padding:7px 11px;border:1px solid var(--border);background:var(--white);color:var(--ink);min-width:190px;}
+#search:focus{outline:none;border-color:var(--primary-2);}
+.sort-controls{display:flex;gap:2px;}
+.sort-btn{font-family:'Public Sans',sans-serif;font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;padding:6px 10px;background:var(--surface-container);color:var(--muted);border:none;cursor:pointer;}
+.sort-btn.active{background:var(--primary);color:#fff;}
+.result-count{font-size:0.68rem;color:var(--faint);letter-spacing:0.04em;margin:0.3rem 0 1rem;}
+.deals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-soft);}
+.deal-card{background:var(--white);padding:1.2rem 1.3rem;display:flex;flex-direction:column;gap:0.5rem;}
+.deal-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem;}
+.deal-company{font-family:'Newsreader',serif;font-size:1.05rem;font-weight:600;color:var(--primary);line-height:1.2;}
+.deal-link{color:var(--secondary);text-decoration:none;font-size:0.9rem;flex-shrink:0;}
+.sector-badges{display:flex;flex-wrap:wrap;gap:4px;}
+.badge{font-size:0.58rem;font-weight:500;text-transform:uppercase;letter-spacing:0.04em;padding:2px 7px;background:rgba(17,69,99,0.08);color:var(--primary);}
+.deal-round-row{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border-soft);padding-top:0.5rem;}
+.deal-round-type{font-size:0.72rem;font-weight:600;color:var(--muted);}
+.deal-amount{font-family:'Newsreader',serif;font-size:1.05rem;font-weight:700;color:var(--primary);}
+.deal-month{font-size:0.65rem;color:var(--faint);text-transform:uppercase;letter-spacing:0.06em;}
+.deal-meta{font-size:0.68rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--border-soft);padding-top:0.5rem;}
+.deal-meta-label{font-weight:600;color:var(--faint);text-transform:uppercase;font-size:0.56rem;letter-spacing:0.07em;}
+.deal-meta div+div{margin-top:0.35rem;}
+.no-deals{grid-column:1/-1;text-align:center;padding:48px;color:var(--muted);font-size:0.85rem;background:var(--white);}
+footer{text-align:center;padding:2.2rem 24px 1.4rem;font-size:0.66rem;color:var(--faint);letter-spacing:0.06em;text-transform:uppercase;border-top:1px solid var(--border-soft);margin-top:1.5rem;}
+
+@media(max-width:900px){
+  .stats-banner{grid-template-columns:repeat(3,1fr);}
+  .charts-grid{grid-template-columns:1fr;}
+  .deals-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .stats-banner{grid-template-columns:1fr 1fr;}
+  .deals-grid{grid-template-columns:1fr;}
+  .masthead{flex-direction:column;gap:4px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <span class="masthead-brand">The French Tech Journal</span>
+  <span class="masthead-right">Funding Database &middot; Q2 2026</span>
+</header>
+
+<main class="container">
+  <div class="loading-state" id="loading-state">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading Q2 2026 funding data&hellip;</div>
+  </div>
+
+  <div id="content" style="display:none;">
+    <!-- STATS -->
+    <div class="stats-banner">
+      <div class="stat-tile"><div class="stat-label">Total Raised</div><div class="stat-value" id="stat-total">&mdash;</div></div>
+      <div class="stat-tile"><div class="stat-label">Deals</div><div class="stat-value" id="stat-deals">&mdash;</div></div>
+      <div class="stat-tile"><div class="stat-label">Average Round</div><div class="stat-value" id="stat-avg">&mdash;</div></div>
+      <div class="stat-tile"><div class="stat-label">Largest Deal</div><div class="stat-value" id="stat-largest">&mdash;</div><div class="stat-sub" id="stat-largest-co"></div></div>
+      <div class="stat-tile"><div class="stat-label">Top Sector</div><div class="stat-value" id="stat-sector" style="font-size:1.4rem;">&mdash;</div><div class="stat-sub" id="stat-sector-sub"></div></div>
+    </div>
+
+    <!-- CHARTS -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-header"><div class="chart-title">Funding by Month</div>
+          <div class="toggle-group" id="monthly-toggle">
+            <button class="toggle-btn active" onclick="setMode('monthly','amount')">&euro; Amount</button>
+            <button class="toggle-btn" onclick="setMode('monthly','deals')"># Deals</button></div></div>
+        <div class="chart-wrap" style="height:220px;"><canvas id="chart-monthly"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header"><div class="chart-title">Stage Distribution</div>
+          <div class="toggle-group" id="stage-toggle">
+            <button class="toggle-btn active" onclick="setMode('stage','amount')">&euro; Amount</button>
+            <button class="toggle-btn" onclick="setMode('stage','deals')"># Deals</button></div></div>
+        <div class="chart-wrap" style="height:200px;"><canvas id="chart-stage"></canvas></div>
+        <div class="donut-legend" id="stage-legend"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header"><div class="chart-title">Top Sectors <span class="label" style="font-weight:500;">&middot; all tags</span></div>
+          <div class="toggle-group" id="sectors-toggle">
+            <button class="toggle-btn active" onclick="setMode('sectors','amount')">&euro; Amount</button>
+            <button class="toggle-btn" onclick="setMode('sectors','deals')"># Deals</button></div></div>
+        <div class="chart-wrap" style="height:280px;"><canvas id="chart-sectors"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-header"><div class="chart-title">Top Investors</div>
+          <div class="toggle-group" id="investors-toggle">
+            <button class="toggle-btn active" onclick="setMode('investors','deals')"># Deals</button>
+            <button class="toggle-btn" onclick="setMode('investors','amount')">&euro; Amount</button></div></div>
+        <div class="chart-wrap" style="height:280px;"><canvas id="chart-investors"></canvas></div>
+      </div>
+    </div>
+
+    <!-- DEALS -->
+    <div class="section-header">
+      <h2 class="section-title">All Q2 2026 Deals</h2>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search company, sector, investor&hellip;" oninput="applyFilters()">
+        <div class="sort-controls">
+          <button class="sort-btn active" onclick="sortDeals('largest')">Largest</button>
+          <button class="sort-btn" onclick="sortDeals('smallest')">Smallest</button>
+          <button class="sort-btn" onclick="sortDeals('newest')">Newest</button>
+          <button class="sort-btn" onclick="sortDeals('az')">A&ndash;Z</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-count" id="result-count"></div>
+    <div class="deals-grid" id="deals-grid"></div>
+  </div>
+
+  <div id="error-state" style="display:none;" class="error-state">
+    <h3>Unable to load data</h3>
+    <p id="error-message">Please check your connection and try again.</p>
+  </div>
+</main>
+
+<footer>Data: French Tech Funding Tracker &middot; frenchtechjournal.com &middot; Q2 2026 (April&ndash;June)</footer>
+
+<script>
+// ── Config (public, read-only anon key — RLS-protected) ─────────────────────
+const SUPABASE_URL = 'https://oxqpmtttgicvxmesrjzy.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94cXBtdHR0Z2ljdnhtZXNyanp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwNjI5MzUsImV4cCI6MjA5MDYzODkzNX0.zaI1Wkn3xc-D-F8oEtQjaDIFd1iSFZsjz6iinAsEVGw';
+const Q_START = '2026-04-01', Q_END = '2026-06-30';
+const MONTHS = { '04':'April', '05':'May', '06':'June' };
+const P = ['#114563','#2f5d7c','#775a0f','#3c6840','#503863','#8b6914','#460602','#5a7a8b','#7a5a3a','#3a7a7a'];
+
+Chart.defaults.font.family = "'Public Sans', sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#41474d';
+Chart.defaults.plugins.legend.display = false;
+Chart.defaults.plugins.tooltip.backgroundColor = '#114563';
+Chart.defaults.plugins.tooltip.cornerRadius = 0;
+Chart.defaults.plugins.tooltip.padding = 9;
+const gridColor = 'rgba(193,199,206,0.15)';
+
+function fmtEur(m){ if(m==null) return '—'; if(m>=1000) return '€'+(m/1000).toFixed(1)+'B'; if(m>=1) return '€'+Math.round(m)+'M'; return '€'+(m*1000).toFixed(0)+'K'; }
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+const STAGE_LABELS = {pre_seed:'Pre-Seed',seed:'Seed',series_a:'Series A',series_b:'Series B',series_c:'Series C',series_d:'Series D',series_e:'Series E',growth:'Growth',debt:'Venture Debt',grant:'Grant',bridge:'Bridge',convertible:'Convertible',ipo:'IPO',acquisition:'Acquisition',other:'Other'};
+function stageLabel(s){ if(!s) return 'Undisclosed'; return STAGE_LABELS[s] || s.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase()); }
+
+// ── PostgREST fetch helpers ─────────────────────────────────────────────────
+async function fetchAll(table, query=''){
+  const PAGE=1000; let out=[], offset=0;
+  while(true){
+    const url = `${SUPABASE_URL}/rest/v1/${table}${query}${query.includes('?')?'&':'?'}offset=${offset}&limit=${PAGE}`;
+    const res = await fetch(url, { headers:{ apikey:SUPABASE_ANON_KEY, Authorization:'Bearer '+SUPABASE_ANON_KEY } });
+    if(!res.ok) throw new Error(`${table}: ${res.status} ${res.statusText}`);
+    const data = await res.json();
+    out = out.concat(data);
+    if(data.length < PAGE) break;
+    offset += PAGE;
+  }
+  return out;
+}
+function chunk(arr,n){ const c=[]; for(let i=0;i<arr.length;i+=n) c.push(arr.slice(i,i+n)); return c; }
+async function fetchByIds(table, ids, idField, select){
+  const uniq=[...new Set(ids)].filter(Boolean); if(!uniq.length) return [];
+  const parts = await Promise.all(chunk(uniq,150).map(c => fetchAll(table, `?select=${select}&${idField}=in.(${c.join(',')})`)));
+  return parts.flat();
+}
+
+// ── State ───────────────────────────────────────────────────────────────────
+let allDeals=[], viewDeals=[], currentSort='largest';
+const modes = { monthly:'amount', stage:'amount', sectors:'amount', investors:'deals' };
+let charts = {};
+
+// ── Load ────────────────────────────────────────────────────────────────────
+async function loadData(){
+  try{
+    const rounds = await fetchAll('funding_rounds',
+      `?select=id,organization_id,stage,amount_eur,announced_date,source_url,press_release_url`+
+      `&announced_date=gte.${Q_START}&announced_date=lte.${Q_END}&order=amount_eur.desc.nullslast`);
+    const orgIds = rounds.map(r=>r.organization_id).filter(Boolean);
+    const roundIds = rounds.map(r=>r.id);
+
+    const [orgs, orgSectors, sectors, fri, orgPeople] = await Promise.all([
+      fetchByIds('organizations', orgIds, 'id', 'id,name,short_description,website,city_id'),
+      fetchByIds('organization_sectors', orgIds, 'organization_id', 'organization_id,sector_id,is_primary'),
+      fetchAll('sectors', '?select=id,name'),
+      fetchByIds('funding_round_investors', roundIds, 'funding_round_id', 'funding_round_id,investor_name,is_lead'),
+      fetchByIds('organization_people', orgIds, 'organization_id', 'organization_id,person_id,is_founder')
+    ]);
+    const founderRows = orgPeople.filter(p=>p.is_founder);
+    const people = await fetchByIds('people', founderRows.map(p=>p.person_id), 'id', 'id,full_name');
+    const cities = await fetchByIds('cities', orgs.map(o=>o.city_id), 'id', 'id,name');
+
+    // maps
+    const sectorName = Object.fromEntries(sectors.map(s=>[s.id,s.name]));
+    const cityName = Object.fromEntries(cities.map(c=>[c.id,c.name]));
+    const personName = Object.fromEntries(people.map(p=>[p.id,p.full_name]));
+    const orgById = Object.fromEntries(orgs.map(o=>[o.id,o]));
+
+    const orgSectorsMap = {}; // org -> [{name,is_primary}]
+    orgSectors.forEach(os=>{ const nm=sectorName[os.sector_id]; if(!nm) return; (orgSectorsMap[os.organization_id]=orgSectorsMap[os.organization_id]||[]).push({name:nm,primary:os.is_primary}); });
+    const foundersMap = {}; // org -> [names]
+    founderRows.forEach(fp=>{ const nm=personName[fp.person_id]; if(nm) (foundersMap[fp.organization_id]=foundersMap[fp.organization_id]||[]).push(nm); });
+    const investorsMap = {}; // round -> [names] (leads first)
+    fri.forEach(i=>{ if(!i.investor_name) return; (investorsMap[i.funding_round_id]=investorsMap[i.funding_round_id]||[]).push({name:i.investor_name,lead:i.is_lead}); });
+
+    allDeals = rounds.map(r=>{
+      const org = orgById[r.organization_id] || {};
+      const secs = (orgSectorsMap[r.organization_id]||[]).sort((a,b)=>(b.primary?1:0)-(a.primary?1:0)).map(s=>s.name);
+      const invs = (investorsMap[r.id]||[]).sort((a,b)=>(b.lead?1:0)-(a.lead?1:0)).map(i=>i.name);
+      return {
+        id:r.id,
+        company:{ name:org.name||'Unknown', city:cityName[org.city_id]||'', website:org.website||'' },
+        amount:r.amount_eur!=null?Number(r.amount_eur):null,
+        stage:stageLabel(r.stage),
+        date:r.announced_date||'',
+        month: MONTHS[(r.announced_date||'').slice(5,7)] || '',
+        url:r.source_url||r.press_release_url||'',
+        sectors:[...new Set(secs)],
+        investors:[...new Set(invs)],
+        founders:[...new Set(foundersMap[r.organization_id]||[])]
+      };
+    });
+
+    document.getElementById('loading-state').style.display='none';
+    document.getElementById('content').style.display='block';
+    renderStats(allDeals);
+    buildAllCharts();
+    applyFilters();
+  }catch(e){
+    document.getElementById('loading-state').style.display='none';
+    const es=document.getElementById('error-state'); es.style.display='block';
+    document.getElementById('error-message').textContent = 'Error: '+e.message;
+    console.error(e);
+  }
+}
+
+// ── Stats ───────────────────────────────────────────────────────────────────
+function renderStats(deals){
+  const disc = deals.filter(d=>d.amount!=null);
+  const total = disc.reduce((s,d)=>s+d.amount,0);
+  const largest = disc[0];
+  const secCount={}; deals.forEach(d=>(d.sectors.length?d.sectors:['Unclassified']).forEach(s=>secCount[s]=(secCount[s]||0)+1));
+  const top = Object.entries(secCount).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('stat-total').textContent = fmtEur(total);
+  document.getElementById('stat-deals').textContent = deals.length;
+  document.getElementById('stat-avg').textContent = disc.length ? fmtEur(total/disc.length) : '—';
+  document.getElementById('stat-largest').textContent = largest ? fmtEur(largest.amount) : '—';
+  document.getElementById('stat-largest-co').textContent = largest ? largest.company.name : '';
+  document.getElementById('stat-sector').textContent = top ? top[0] : '—';
+  document.getElementById('stat-sector-sub').textContent = top ? `${top[1]} deals (all tags)` : '';
+}
+
+// ── Charts ──────────────────────────────────────────────────────────────────
+function agg(deals, keyFn, mode){
+  const m={}; deals.forEach(d=>{ const keys=keyFn(d); keys.forEach(k=>{ if(!(k in m)) m[k]={amount:0,deals:0}; m[k].amount+=(d.amount||0); m[k].deals+=1; }); });
+  return m;
+}
+function topN(map, mode, n){ return Object.entries(map).sort((a,b)=>b[1][mode]-a[1][mode]).slice(0,n); }
+
+function buildAllCharts(){ buildMonthly(); buildStage(); buildSectors(); buildInvestors(); }
+
+function buildMonthly(){
+  const mode=modes.monthly, order=['April','May','June'];
+  const m=agg(allDeals, d=>[d.month].filter(Boolean), mode);
+  const data=order.map(k=> m[k]?m[k][mode]:0 );
+  charts.monthly && charts.monthly.destroy();
+  charts.monthly = new Chart(document.getElementById('chart-monthly'),{
+    type:'bar',
+    data:{ labels:order, datasets:[{ data, backgroundColor:'#114563', borderWidth:0 }] },
+    options:{ responsive:true, maintainAspectRatio:false,
+      plugins:{ tooltip:{ callbacks:{ label:c=> mode==='amount'?fmtEur(c.raw):c.raw+' deals' } } },
+      scales:{ x:{ grid:{display:false}, border:{display:false} },
+               y:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=> mode==='amount'?fmtEur(v):v } } } }
+  });
+}
+function buildStage(){
+  const mode=modes.stage;
+  const m=agg(allDeals, d=>[d.stage], mode);
+  const entries=Object.entries(m).sort((a,b)=>b[1][mode]-a[1][mode]);
+  const labels=entries.map(e=>e[0]), data=entries.map(e=>e[1][mode]), colors=labels.map((_,i)=>P[i%P.length]);
+  charts.stage && charts.stage.destroy();
+  charts.stage = new Chart(document.getElementById('chart-stage'),{
+    type:'doughnut',
+    data:{ labels, datasets:[{ data, backgroundColor:colors, borderWidth:0, hoverOffset:5 }] },
+    options:{ responsive:true, maintainAspectRatio:false, cutout:'58%',
+      plugins:{ tooltip:{ callbacks:{ label:c=> c.label+': '+(mode==='amount'?fmtEur(c.raw):c.raw+' deals') } } } }
+  });
+  document.getElementById('stage-legend').innerHTML = labels.map((l,i)=>`<span><i style="background:${colors[i]}"></i>${esc(l)}</span>`).join('');
+}
+function buildHBar(id, chartKey, keyFn, mode, n){
+  const m=agg(allDeals, keyFn, mode);
+  const entries=topN(m, mode, n);
+  const labels=entries.map(e=>e[0]), data=entries.map(e=>e[1][mode]);
+  charts[chartKey] && charts[chartKey].destroy();
+  charts[chartKey] = new Chart(document.getElementById(id),{
+    type:'bar',
+    data:{ labels, datasets:[{ data, backgroundColor:labels.map((_,i)=>P[i%P.length]), borderWidth:0 }] },
+    options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      plugins:{ tooltip:{ callbacks:{ label:c=> mode==='amount'?fmtEur(c.raw):c.raw+' deals' } } },
+      scales:{ x:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=> mode==='amount'?fmtEur(v):v } },
+               y:{ grid:{display:false}, border:{display:false}, ticks:{ font:{size:10} } } } }
+  });
+}
+function buildSectors(){ buildHBar('chart-sectors','sectors', d=> d.sectors.length?d.sectors:['Unclassified'], modes.sectors, 10); }
+function buildInvestors(){ buildHBar('chart-investors','investors', d=> d.investors, modes.investors, 10); }
+
+function setMode(chart, mode){
+  modes[chart]=mode;
+  const grp=document.getElementById(chart+'-toggle');
+  [...grp.children].forEach(b=> b.classList.toggle('active', b.textContent.toLowerCase().includes(mode==='amount'?'amount':'deals')));
+  ({monthly:buildMonthly, stage:buildStage, sectors:buildSectors, investors:buildInvestors})[chart]();
+}
+
+// ── Deals list ──────────────────────────────────────────────────────────────
+function applyFilters(){
+  const q=(document.getElementById('search').value||'').trim().toLowerCase();
+  viewDeals = !q ? [...allDeals] : allDeals.filter(d=>{
+    return d.company.name.toLowerCase().includes(q)
+      || d.sectors.some(s=>s.toLowerCase().includes(q))
+      || d.investors.some(i=>i.toLowerCase().includes(q))
+      || d.founders.some(f=>f.toLowerCase().includes(q))
+      || (d.company.city||'').toLowerCase().includes(q)
+      || d.stage.toLowerCase().includes(q);
+  });
+  sortDeals(currentSort, true);
+}
+function sortDeals(mode, keepView){
+  currentSort=mode;
+  document.querySelectorAll('.sort-btn').forEach(b=> b.classList.toggle('active', b.getAttribute('onclick').includes(`'${mode}'`)));
+  if(!keepView) viewDeals=[...viewDeals];
+  const s=viewDeals;
+  if(mode==='largest') s.sort((a,b)=>(b.amount??-Infinity)-(a.amount??-Infinity));
+  else if(mode==='smallest') s.sort((a,b)=>(a.amount??Infinity)-(b.amount??Infinity));
+  else if(mode==='newest') s.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  else if(mode==='az') s.sort((a,b)=>a.company.name.localeCompare(b.company.name));
+  renderDeals(s);
+}
+function renderDeals(deals){
+  document.getElementById('result-count').textContent = `${deals.length} deal${deals.length!==1?'s':''}`;
+  const grid=document.getElementById('deals-grid');
+  if(!deals.length){ grid.innerHTML='<div class="no-deals">No deals match your search.</div>'; return; }
+  grid.innerHTML = deals.map(d=>{
+    const badges = d.sectors.slice(0,3).map(s=>`<span class="badge">${esc(s)}</span>`).join('');
+    const inv = d.investors.length ? `<div><span class="deal-meta-label">Investors</span><br>${esc(d.investors.slice(0,6).join(', '))}${d.investors.length>6?', …':''}</div>`:'';
+    const fnd = d.founders.length ? `<div><span class="deal-meta-label">Founders</span><br>${esc(d.founders.join(', '))}</div>`:'';
+    const meta=[inv,fnd].filter(Boolean).join('');
+    const link = d.url ? `<a class="deal-link" href="${esc(d.url)}" target="_blank" rel="noopener noreferrer" title="Source">↗</a>`:'';
+    const city = d.company.city ? ` · ${esc(d.company.city)}` : '';
+    return `<div class="deal-card">
+      <div class="deal-card-top"><div class="deal-company">${esc(d.company.name)}</div>${link}</div>
+      ${d.sectors.length?`<div class="sector-badges">${badges}</div>`:''}
+      <div class="deal-round-row"><span class="deal-round-type">${esc(d.stage)}</span><span class="deal-amount">${d.amount!=null?fmtEur(d.amount):'Undisclosed'}</span></div>
+      <div class="deal-month">${esc(d.month)}${city}</div>
+      ${meta?`<div class="deal-meta">${meta}</div>`:''}
+    </div>`;
+  }).join('');
+}
+
+loadData();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4/js/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>
