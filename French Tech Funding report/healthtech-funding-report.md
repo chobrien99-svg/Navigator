@@ -101,17 +101,31 @@ Atlantic for their growth capital.
 
 ---
 
-## Quarterly trajectory (health cluster, core ex-outlier, €M)
+## Quarterly trajectory (health cluster, all-tags, €M)
 
-| Quarter | Core health/biotech €M | Note |
-|---|---|---|
-| Q2 2023 | 471 | Cluster peak in the six-year Q2 series |
-| Q2 2024 | 190 | Trough |
-| Q2 2025 | 231 | Recovery begins |
-| **Q2 2026** | **363** | +57% YoY; €480M incl. Alan's HealthTech tag |
+![Health &amp; Biotech funding by quarter, 2021–Q2 2026](healthtech-quarterly-investment.png)
 
-*(Figures use the primary-sector health cluster from the six-year series in `Q2-2026-ANALYSIS.md`
-§1B; the €480M "core" figure above uses the broader multi-tag cluster query ex-Alan.)*
+*BioTech + HealthTech + MedTech, all sector tags (deduplicated), €M per quarter. Alan's recurring
+rounds are broken out in gold. (Interactive source: `healthtech-quarterly-chart.html`.)*
+
+The cluster has cycled between roughly €150M and €800M a quarter since 2021, with no durable trend —
+peaking at **€1,296M in Q1 2022** (the boom) and troughing near **€146M in Q3 2025**. **Q2 2026's
+€960M is the second-highest quarter on record**, but €480M of it is Alan; the core (€480M ex-Alan)
+sits squarely in the cluster's normal band. And Alan *recurs* — it also lifted Q2 2021, Q2 2022,
+Q3 2024 and Q1 2026 — a reminder that even the quarter's "genuine" sector story leans on the same
+handful of names.
+
+| Year | Q1 | Q2 | Q3 | Q4 |
+|---|---|---|---|---|
+| 2021 | 231 | 548 | 697 | 839 |
+| 2022 | **1,296** | 717 | 592 | 279 |
+| 2023 | 534 | 598 | 292 | 391 |
+| 2024 | 317 | 218 | 378 | 266 |
+| 2025 | 221 | 505 | 146 | 460 |
+| 2026 | 561 | **960** | — | — |
+
+*(All-tags, deduplicated across the three cluster tags. Q2 2026 = €960M incl. Alan €480M; €480M core.
+Source: Navigator `funding_rounds`.)*
 
 ---
 
