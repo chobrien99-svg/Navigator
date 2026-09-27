@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "currency": "EUR",
+  "total_disclosed_eur": 2281057800,
+  "round_count": 130,
+  "disclosed_round_count": 117,
+  "largest_round": {
+    "company_name": "Alan",
+    "company_slug": "alan",
+    "amount_eur": 480000000,
+    "round_label": "Growth",
+    "announcement_date": "2026-06-01"
+  },
+  "quarters": [
+    {
+      "quarter": "Q1",
+      "total_disclosed_eur": 67500000,
+      "round_count": 7
+    },
+    {
+      "quarter": "Q2",
+      "total_disclosed_eur": 1801657800,
+      "round_count": 98
+    },
+    {
+      "quarter": "Q3",
+      "total_disclosed_eur": 411900000,
+      "round_count": 25
+    },
+    {
+      "quarter": "Q4",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    }
+  ],
+  "updated_at": "2026-07-13T07:00:00+02:00"
+}

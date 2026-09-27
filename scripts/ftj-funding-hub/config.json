@@ -1,0 +1,18 @@
+{
+  "navigatorApiBase": "https://www.francenavigator.com/api/public/v1",
+  "navigatorFundingUrl": "https://www.francenavigator.com/funding",
+  "ghostPageSlug": "funding",
+  "latestLimit": 50,
+  "largestLimit": 20,
+  "fundingWireTag": "funding-wire",
+  "fundingWireLimit": 6,
+  "fundingWireArchiveUrl": "https://www.frenchtechjournal.com/tag/funding-wire/",
+  "quarterlyReports": {
+    "2026": {
+      "Q1": { "title": "Q1 2026 French Tech funding report", "url": "" },
+      "Q2": { "title": "Q2 2026 French Tech funding report", "url": "" },
+      "Q3": { "title": "", "url": "" },
+      "Q4": { "title": "", "url": "" }
+    }
+  }
+}
