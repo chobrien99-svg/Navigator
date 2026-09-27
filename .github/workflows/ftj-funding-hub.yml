@@ -1,0 +1,30 @@
+# Refreshes https://www.frenchtechjournal.com/funding/ from France Navigator.
+# See scripts/ftj-funding-hub/README.md for setup (two repository secrets).
+name: FTJ Funding Hub sync
+
+on:
+  schedule:
+    - cron: "17 * * * *" # hourly, at :17 past
+  workflow_dispatch: {}
+
+concurrency:
+  group: ftj-funding-hub
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sync Navigator funding data into Ghost
+        env:
+          GHOST_ADMIN_URL: ${{ secrets.GHOST_ADMIN_URL }}
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: node scripts/ftj-funding-hub/sync.mjs --publish

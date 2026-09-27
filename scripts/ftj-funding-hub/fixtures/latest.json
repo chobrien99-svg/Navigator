@@ -1,0 +1,1493 @@
+{
+  "data": [
+    {
+      "id": "sample_funding_july_2026_week3_0",
+      "announcement_date": "2026-07-13",
+      "company_name": "Syntetica",
+      "company_slug": "syntetica",
+      "sectors": [
+        "DeepTech",
+        "Circular Economy"
+      ],
+      "round_label": "Series A",
+      "amount_original": 30000000.0,
+      "currency_original": "USD",
+      "amount_eur": 25800000,
+      "lead_investors": [
+        "Bpifrance"
+      ],
+      "investors": [
+        "Bpifrance",
+        "SWEN Capital Partners",
+        "EQT Ventures",
+        "Lululemon",
+        "MAS Holdings"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://syntetica.co/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-13T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week3_1",
+      "announcement_date": "2026-07-13",
+      "company_name": "NeoCem",
+      "company_slug": "neocem",
+      "sectors": [
+        "ClimateTech",
+        "DeepTech"
+      ],
+      "round_label": "Series B",
+      "amount_original": 17000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 17000000,
+      "lead_investors": [
+        "Crédit Mutuel Impact"
+      ],
+      "investors": [
+        "Crédit Mutuel Impact"
+      ],
+      "hq_city": "Hallennes-lez-Haubourdin",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.neocem.com/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-13T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week3_2",
+      "announcement_date": "2026-07-13",
+      "company_name": "Engo",
+      "company_slug": "engo",
+      "sectors": [
+        "SportsTech",
+        "Augmented Reality"
+      ],
+      "round_label": "Series A",
+      "amount_original": 5100000.0,
+      "currency_original": "EUR",
+      "amount_eur": 5100000,
+      "lead_investors": [
+        "Ventech"
+      ],
+      "investors": [
+        "Ventech",
+        "Odyssée Venture",
+        "Bpifrance"
+      ],
+      "hq_city": "Grenoble",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://fr.engoeyewear.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-13T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week3_3",
+      "announcement_date": "2026-07-13",
+      "company_name": "Stracker",
+      "company_slug": "stracker",
+      "sectors": [
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 2500000.0,
+      "currency_original": "EUR",
+      "amount_eur": 2500000,
+      "lead_investors": [
+        "Blast"
+      ],
+      "investors": [
+        "Blast",
+        "Bpifrance",
+        "Side Capital",
+        "Holnest"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.stracker.tech/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-13T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week3_4",
+      "announcement_date": "2026-07-13",
+      "company_name": "Mio",
+      "company_slug": "mio",
+      "sectors": [
+        "Artificial Intelligence",
+        "SaaS"
+      ],
+      "round_label": "Pre-seed",
+      "amount_original": 1900000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1900000,
+      "lead_investors": [
+        "Fabric.vc"
+      ],
+      "investors": [
+        "Fabric.vc",
+        "Topology.vc"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.mio.xyz/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-13T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_0",
+      "announcement_date": "2026-07-06",
+      "company_name": "Skello",
+      "company_slug": "skello",
+      "sectors": [
+        "HRTech",
+        "SaaS",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Growth",
+      "amount_original": 150000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 150000000,
+      "lead_investors": [
+        "Bridgepoint"
+      ],
+      "investors": [
+        "Bridgepoint",
+        "Partech",
+        "XAnge"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.skello.io",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_1",
+      "announcement_date": "2026-07-06",
+      "company_name": "Cyllene Therapeutics",
+      "company_slug": "cyllene-therapeutics",
+      "sectors": [
+        "BioTech"
+      ],
+      "round_label": "Series C",
+      "amount_original": 33000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 33000000,
+      "lead_investors": [
+        "GordonMD Global Investments"
+      ],
+      "investors": [
+        "GordonMD Global Investments",
+        "M Ventures",
+        "Andera Partners",
+        "Bpifrance",
+        "Lamond Ventures"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.cyllene-tx.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_2",
+      "announcement_date": "2026-07-06",
+      "company_name": "Gradium",
+      "company_slug": "gradium",
+      "sectors": [
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 26300000.0,
+      "currency_original": "EUR",
+      "amount_eur": 26300000,
+      "lead_investors": [
+        "NVIDIA"
+      ],
+      "investors": [
+        "NVIDIA"
+      ],
+      "hq_city": "Paris, San Francisco",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://gradium.ai",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_3",
+      "announcement_date": "2026-07-06",
+      "company_name": "ZML",
+      "company_slug": "zml",
+      "sectors": [
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 20000000.0,
+      "currency_original": "USD",
+      "amount_eur": 17200000,
+      "lead_investors": [
+        "20VC"
+      ],
+      "investors": [
+        "20VC",
+        "commit",
+        "AALVC",
+        "Drysdale Ventures",
+        "Kima Ventures",
+        "Kindred Capital",
+        "LocalGlobe",
+        "Puzzle Ventures",
+        "Solomon Hykes",
+        "Clément Delangue",
+        "Julien Chaumond",
+        "Yann LeCun"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "http://zml.ai/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_4",
+      "announcement_date": "2026-07-06",
+      "company_name": "Bohr Energy",
+      "company_slug": "bohr-energy",
+      "sectors": [
+        "Energy",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Series A",
+      "amount_original": 10000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 10000000,
+      "lead_investors": [
+        "Suma Capital"
+      ],
+      "investors": [
+        "Suma Capital",
+        "Irdi Capital Investissement",
+        "GSO Capital",
+        "Crédit Agricole",
+        "Varsity",
+        "Founders Future",
+        "AFI Ventures"
+      ],
+      "hq_city": "Toulouse",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "http://bohr-energie.fr/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_5",
+      "announcement_date": "2026-07-06",
+      "company_name": "Aria",
+      "company_slug": "aria",
+      "sectors": [
+        "FinTech"
+      ],
+      "round_label": "Series A",
+      "amount_original": 7000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 7000000,
+      "lead_investors": [
+        "115K"
+      ],
+      "investors": [
+        "115K",
+        "13books Capital",
+        "Nomura",
+        "Fost",
+        "Sienna",
+        "Montpensier Arbevel"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.aria.finance",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_6",
+      "announcement_date": "2026-07-06",
+      "company_name": "Naaia",
+      "company_slug": "naaia",
+      "sectors": [
+        "Artificial Intelligence",
+        "SaaS"
+      ],
+      "round_label": "Series A",
+      "amount_original": 6000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 6000000,
+      "lead_investors": [
+        "Ventech"
+      ],
+      "investors": [
+        "Ventech"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://naaia.ai/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_7",
+      "announcement_date": "2026-07-06",
+      "company_name": "Click&Care",
+      "company_slug": "click-care",
+      "sectors": [
+        "HealthTech"
+      ],
+      "round_label": "Seed",
+      "amount_original": 5000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 5000000,
+      "lead_investors": [
+        "SWEN Capital Partners"
+      ],
+      "investors": [
+        "SWEN Capital Partners",
+        "InvESS Île-de-France Développement",
+        "Banque des Territoires"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://clickandcare.fr/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_8",
+      "announcement_date": "2026-07-06",
+      "company_name": "En Carta Diagnostics",
+      "company_slug": "en-carta-diagnostics",
+      "sectors": [
+        "MedTech",
+        "DeepTech"
+      ],
+      "round_label": "Seed",
+      "amount_original": 3000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 3000000,
+      "lead_investors": [
+        "Blue Forest Ventures"
+      ],
+      "investors": [
+        "Blue Forest Ventures",
+        "Ring Capital",
+        "CentraleSupélec Venture",
+        "50 Partners Health",
+        "Bpifrance"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://encartadiagnostics.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_9",
+      "announcement_date": "2026-07-06",
+      "company_name": "Panora",
+      "company_slug": "panora",
+      "sectors": [
+        "InsurTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 4400000.0,
+      "currency_original": "EUR",
+      "amount_eur": 4400000,
+      "lead_investors": [
+        "ISAI"
+      ],
+      "investors": [
+        "ISAI",
+        "Kima Ventures",
+        "100in",
+        "199 Ventures"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.panora.co",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_10",
+      "announcement_date": "2026-07-06",
+      "company_name": "Rivage",
+      "company_slug": "rivage",
+      "sectors": [
+        "PropTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 1500000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1500000,
+      "lead_investors": [
+        "Kima Ventures"
+      ],
+      "investors": [
+        "Kima Ventures"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.rivage.immo/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_week2_11",
+      "announcement_date": "2026-07-06",
+      "company_name": "W Platform",
+      "company_slug": "w-platform",
+      "sectors": [
+        "ClimateTech"
+      ],
+      "round_label": "Seed",
+      "amount_original": 1000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1000000,
+      "lead_investors": [
+        "Vitirev Innovation"
+      ],
+      "investors": [
+        "Vitirev Innovation",
+        "Demea Invest",
+        "Tudigo"
+      ],
+      "hq_city": "Bordeaux",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://w-platform.fr/en/",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-06T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_0",
+      "announcement_date": "2026-07-01",
+      "company_name": "Elixir Aircraft",
+      "company_slug": "elixir-aircraft",
+      "sectors": [
+        "Aerospace"
+      ],
+      "round_label": "Growth",
+      "amount_original": 45000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 45000000,
+      "lead_investors": [
+        "Bpifrance"
+      ],
+      "investors": [
+        "Bpifrance",
+        "Odyssée Venture",
+        "Innovacom"
+      ],
+      "hq_city": "La Rochelle",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.elixir-aircraft.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_1",
+      "announcement_date": "2026-07-01",
+      "company_name": "Amarris",
+      "company_slug": "amarris",
+      "sectors": [
+        "FinTech"
+      ],
+      "round_label": "Growth",
+      "amount_original": 39000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 39000000,
+      "lead_investors": [
+        "Naxicap Partners"
+      ],
+      "investors": [
+        "Naxicap Partners",
+        "BNP Paribas Développement",
+        "Arkéa Capital",
+        "Ouest Croissance",
+        "CIC Private Debt",
+        "Zencap"
+      ],
+      "hq_city": "Saint-Herblain",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.amarris.fr",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_2",
+      "announcement_date": "2026-07-01",
+      "company_name": "Tallano",
+      "company_slug": "tallano",
+      "sectors": [
+        "CleanTech",
+        "Mobility"
+      ],
+      "round_label": "Growth",
+      "amount_original": 10000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 10000000,
+      "lead_investors": [
+        "MEAC"
+      ],
+      "investors": [
+        "MEAC",
+        "Bpifrance",
+        "France 2030",
+        "PRVF"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.tallano.eu",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_3",
+      "announcement_date": "2026-07-01",
+      "company_name": "Loumo",
+      "company_slug": "loumo",
+      "sectors": [
+        "EdTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 1000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1000000,
+      "lead_investors": [],
+      "investors": [],
+      "hq_city": "Lille",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.loumo.fr",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_4",
+      "announcement_date": "2026-07-01",
+      "company_name": "My Hospitel",
+      "company_slug": "my-hospitel",
+      "sectors": [
+        "HealthTech",
+        "Hospital Software",
+        "Digital Health"
+      ],
+      "round_label": "Seed",
+      "amount_original": 200000.0,
+      "currency_original": "EUR",
+      "amount_eur": 200000,
+      "lead_investors": [
+        "Angels Santé"
+      ],
+      "investors": [
+        "Angels Santé",
+        "INSA Angels",
+        "Tudigo"
+      ],
+      "hq_city": null,
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.myhospitel.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_5",
+      "announcement_date": "2026-07-01",
+      "company_name": "VSORA",
+      "company_slug": "vsora",
+      "sectors": [
+        "Artificial Intelligence",
+        "Semiconductors"
+      ],
+      "round_label": "Growth",
+      "amount_original": null,
+      "currency_original": null,
+      "amount_eur": null,
+      "lead_investors": [
+        "Ardian"
+      ],
+      "investors": [
+        "Ardian",
+        "XAnge",
+        "Omnes Capital",
+        "European Innovation Council",
+        "Otium Capital",
+        "NJJ Capital",
+        "CloudHQ"
+      ],
+      "hq_city": "Meudon",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.vsora.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_6",
+      "announcement_date": "2026-07-01",
+      "company_name": "DESTIA Group",
+      "company_slug": "destia-group",
+      "sectors": [
+        "HealthTech",
+        "Home Care",
+        "Elder Care",
+        "Healthcare Services"
+      ],
+      "round_label": "Growth",
+      "amount_original": null,
+      "currency_original": null,
+      "amount_eur": null,
+      "lead_investors": [
+        "Bpifrance"
+      ],
+      "investors": [
+        "Bpifrance",
+        "Three Hills",
+        "Turenne Santé",
+        "VYV",
+        "Siparex ETI",
+        "BNP Paribas Développement",
+        "MACSF",
+        "Azulis",
+        "Après demain",
+        "Crédit Agricole"
+      ],
+      "hq_city": null,
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.destia.fr",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_july_2026_7",
+      "announcement_date": "2026-07-01",
+      "company_name": "HTDS",
+      "company_slug": "htds",
+      "sectors": [
+        "Security",
+        "DeepTech",
+        "Detection Systems",
+        "Industrial Technology"
+      ],
+      "round_label": "Growth",
+      "amount_original": null,
+      "currency_original": null,
+      "amount_eur": null,
+      "lead_investors": [
+        "AfricInvest Europe"
+      ],
+      "investors": [
+        "AfricInvest Europe",
+        "Trocadero Capital Partners",
+        "Bpifrance",
+        "Société Générale Capital Partenaires",
+        "Abenex"
+      ],
+      "hq_city": "Massy",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.htds.fr",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-07-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_0",
+      "announcement_date": "2026-06-01",
+      "company_name": "Alan",
+      "company_slug": "alan",
+      "sectors": [
+        "InsurTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Growth",
+      "amount_original": 480000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 480000000,
+      "lead_investors": [
+        "Prosus"
+      ],
+      "investors": [
+        "Prosus",
+        "Teachers' Venture Growth",
+        "Index Ventures",
+        "Dara Holdings"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://alan.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_1",
+      "announcement_date": "2026-06-01",
+      "company_name": "Bionyra Pharma",
+      "company_slug": "bionyra-pharma",
+      "sectors": [
+        "BioTech",
+        "HealthTech"
+      ],
+      "round_label": "Series A",
+      "amount_original": 140000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 140000000,
+      "lead_investors": [
+        "Jeito Capital"
+      ],
+      "investors": [
+        "Jeito Capital",
+        "Sofinnova Partners",
+        "Arkin Bio",
+        "Sanofi Ventures",
+        "Sixty Degree Capital",
+        "Vives Partners",
+        "Apollo Health Ventures"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.bionyrapharma.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_2",
+      "announcement_date": "2026-06-01",
+      "company_name": "TISSIUM",
+      "company_slug": "tissium",
+      "sectors": [
+        "MedTech",
+        "BioTech"
+      ],
+      "round_label": "Series D",
+      "amount_original": 30000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 30000000,
+      "lead_investors": [],
+      "investors": [],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.tissium.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_3",
+      "announcement_date": "2026-06-01",
+      "company_name": "Tsuga",
+      "company_slug": "tsuga",
+      "sectors": [
+        "Artificial Intelligence",
+        "SaaS"
+      ],
+      "round_label": "Series A",
+      "amount_original": 30000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 30000000,
+      "lead_investors": [
+        "Singular"
+      ],
+      "investors": [
+        "Singular",
+        "General Catalyst",
+        "DST Global Partners",
+        "QuantumLight",
+        "Picus",
+        "Databricks Ventures"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.tsuga.ai",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_4",
+      "announcement_date": "2026-06-01",
+      "company_name": "AlpSemi",
+      "company_slug": "alpsemi",
+      "sectors": [
+        "Semiconductors",
+        "Artificial Intelligence",
+        "ClimateTech",
+        "DeepTech"
+      ],
+      "round_label": "Seed",
+      "amount_original": 17000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 17000000,
+      "lead_investors": [
+        "Yotta Capital"
+      ],
+      "investors": [
+        "Yotta Capital",
+        "SE Ventures",
+        "Navitas Semiconductor",
+        "Cycle Group"
+      ],
+      "hq_city": "Grenoble",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://alpsemi.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_5",
+      "announcement_date": "2026-06-01",
+      "company_name": "Flease",
+      "company_slug": "flease",
+      "sectors": [
+        "Mobility",
+        "Climate Tech",
+        "SaaS"
+      ],
+      "round_label": "Series A",
+      "amount_original": 13000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 13000000,
+      "lead_investors": [
+        "Partech"
+      ],
+      "investors": [
+        "Partech"
+      ],
+      "hq_city": "Lyon",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.flease.fr",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_6",
+      "announcement_date": "2026-06-01",
+      "company_name": "Wheere",
+      "company_slug": "wheere",
+      "sectors": [
+        "SpaceTech",
+        "DeepTech",
+        "Semiconductors"
+      ],
+      "round_label": "Bridge",
+      "amount_original": 4200000.0,
+      "currency_original": "EUR",
+      "amount_eur": 4200000,
+      "lead_investors": [
+        "Blast Club"
+      ],
+      "investors": [
+        "Blast Club",
+        "Éric Larchevêque",
+        "Sofilaro"
+      ],
+      "hq_city": "Montpellier",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.wheere.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_7",
+      "announcement_date": "2026-06-01",
+      "company_name": "Linc",
+      "company_slug": "linc",
+      "sectors": [
+        "SaaS",
+        "FinTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Seed",
+      "amount_original": 8500000.0,
+      "currency_original": "EUR",
+      "amount_eur": 8500000,
+      "lead_investors": [
+        "Headline"
+      ],
+      "investors": [
+        "Headline",
+        "Resonance",
+        "Founders Future",
+        "Acadian Ventures",
+        "Adnexus",
+        "50 Partners",
+        "Motier",
+        "199 Ventures",
+        "Aonia",
+        "Better Angle",
+        "Clover"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.lincpay.io",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_8",
+      "announcement_date": "2026-06-01",
+      "company_name": "Sopht",
+      "company_slug": "sopht",
+      "sectors": [
+        "ClimateTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Series A",
+      "amount_original": 5000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 5000000,
+      "lead_investors": [
+        "Ternel"
+      ],
+      "investors": [
+        "Ternel",
+        "Axeleo Capital",
+        "Wind Capital",
+        "FDJ United Ventures"
+      ],
+      "hq_city": "Lyon",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.sopht.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_9",
+      "announcement_date": "2026-06-01",
+      "company_name": "Blyyd",
+      "company_slug": "blyyd",
+      "sectors": [
+        "CleanTech",
+        "Mobility"
+      ],
+      "round_label": "Growth",
+      "amount_original": 5000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 5000000,
+      "lead_investors": [
+        "Meridiam"
+      ],
+      "investors": [
+        "Meridiam"
+      ],
+      "hq_city": "Lyon",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://blyyd.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_10",
+      "announcement_date": "2026-06-01",
+      "company_name": "Cardiawave",
+      "company_slug": "cardiawave",
+      "sectors": [
+        "MedTech",
+        "HealthTech",
+        "DeepTech"
+      ],
+      "round_label": "Growth",
+      "amount_original": 3800000.0,
+      "currency_original": "EUR",
+      "amount_eur": 3800000,
+      "lead_investors": [
+        "Capital Cell"
+      ],
+      "investors": [
+        "Capital Cell"
+      ],
+      "hq_city": "Levallois-Perret",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://cardiawave.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_11",
+      "announcement_date": "2026-06-01",
+      "company_name": "Macrodata Labs",
+      "company_slug": "macrodata-labs",
+      "sectors": [
+        "AI",
+        "Robotics"
+      ],
+      "round_label": "Pre-seed",
+      "amount_original": 4000000.0,
+      "currency_original": "USD",
+      "amount_eur": 3440000,
+      "lead_investors": [
+        "Air Street Capital"
+      ],
+      "investors": [
+        "Air Street Capital",
+        "Kima Ventures",
+        "Thomas Wolf",
+        "Drysdale Ventures",
+        "OPRTRS CLUB",
+        "commit",
+        "YG Ventures"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://macrodata.co",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_12",
+      "announcement_date": "2026-06-01",
+      "company_name": "Haiku",
+      "company_slug": "haiku",
+      "sectors": [
+        "LegalTech",
+        "Artificial Intelligence",
+        "SaaS"
+      ],
+      "round_label": "Seed",
+      "amount_original": 3000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 3000000,
+      "lead_investors": [
+        "Newfund Capital"
+      ],
+      "investors": [
+        "Newfund Capital",
+        "M Capital"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.haiku.fr",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_13",
+      "announcement_date": "2026-06-01",
+      "company_name": "Concord",
+      "company_slug": "concord",
+      "sectors": [
+        "AdTech",
+        "Artificial Intelligence",
+        "SaaS"
+      ],
+      "round_label": "Seed",
+      "amount_original": 3000000.0,
+      "currency_original": "USD",
+      "amount_eur": 2580000,
+      "lead_investors": [
+        "A16Z Scout"
+      ],
+      "investors": [
+        "A16Z Scout",
+        "Drysdale",
+        "Motier Ventures",
+        "Better Angle",
+        "Rémi Lemonnier",
+        "Philippe Corrot",
+        "Arthur Querou",
+        "Thomas Zaepffel"
+      ],
+      "hq_city": "Paris, New York City",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://concord.ad",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_14",
+      "announcement_date": "2026-06-01",
+      "company_name": "Beams",
+      "company_slug": "beams",
+      "sectors": [
+        "MedTech"
+      ],
+      "round_label": "Seed",
+      "amount_original": 1500000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1500000,
+      "lead_investors": [
+        "Bpifrance"
+      ],
+      "investors": [
+        "Bpifrance"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.beams.bio",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_15",
+      "announcement_date": "2026-06-01",
+      "company_name": "Cilcare",
+      "company_slug": "cilcare",
+      "sectors": [
+        "BioTech",
+        "HealthTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Growth",
+      "amount_original": null,
+      "currency_original": null,
+      "amount_eur": null,
+      "lead_investors": [
+        "Sanofi"
+      ],
+      "investors": [
+        "Sanofi"
+      ],
+      "hq_city": "Montpellier",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://cilcare.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_16",
+      "announcement_date": "2026-06-01",
+      "company_name": "Fascent",
+      "company_slug": "fascent",
+      "sectors": [
+        "E-commerce & Retail"
+      ],
+      "round_label": "Seed",
+      "amount_original": 1300000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1300000,
+      "lead_investors": [],
+      "investors": [],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://fascent.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_17",
+      "announcement_date": "2026-06-01",
+      "company_name": "MNGRS.AI",
+      "company_slug": "mngrs-ai",
+      "sectors": [
+        "Artificial Intelligence",
+        "Entertainment"
+      ],
+      "round_label": "Seed",
+      "amount_original": null,
+      "currency_original": null,
+      "amount_eur": null,
+      "lead_investors": [
+        "Cortez Bryant"
+      ],
+      "investors": [
+        "Cortez Bryant"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://mngrs.ai",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_18",
+      "announcement_date": "2026-06-01",
+      "company_name": "Comand AI",
+      "company_slug": "comand-ai",
+      "sectors": [
+        "DefenseTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Series A",
+      "amount_original": 32000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 32000000,
+      "lead_investors": [
+        "Blossom Capital"
+      ],
+      "investors": [
+        "Blossom Capital",
+        "Saab",
+        "Expeditions"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://comand.ai",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_19",
+      "announcement_date": "2026-06-01",
+      "company_name": "Prophesee",
+      "company_slug": "prophesee",
+      "sectors": [
+        "DefenseTech",
+        "Drones",
+        "Artificial Intelligence",
+        "DeepTech"
+      ],
+      "round_label": "Growth",
+      "amount_original": 20000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 20000000,
+      "lead_investors": [],
+      "investors": [],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.prophesee.ai",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_20",
+      "announcement_date": "2026-06-01",
+      "company_name": "Rocapine",
+      "company_slug": "rocapine",
+      "sectors": [
+        "HealthTech",
+        "Artificial Intelligence"
+      ],
+      "round_label": "Series A",
+      "amount_original": 11000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 11000000,
+      "lead_investors": [
+        "Educapital"
+      ],
+      "investors": [
+        "Educapital",
+        "Daphni",
+        "Ring Capital",
+        "Center Court Capital",
+        "Athletico Ventures",
+        "Better Angle",
+        "Jean-Charles Samuelian-Werve"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://rocapine.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_21",
+      "announcement_date": "2026-06-01",
+      "company_name": "Green-Got",
+      "company_slug": "green-got",
+      "sectors": [
+        "FinTech",
+        "GreenTech",
+        "ClimateTech"
+      ],
+      "round_label": "Undisclosed",
+      "amount_original": 8000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 8000000,
+      "lead_investors": [],
+      "investors": [],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://green-got.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_22",
+      "announcement_date": "2026-06-01",
+      "company_name": "CardNexus",
+      "company_slug": "cardnexus",
+      "sectors": [
+        "Gaming",
+        "Artificial Intelligence",
+        "FinTech"
+      ],
+      "round_label": "Pre-seed",
+      "amount_original": 3500000.0,
+      "currency_original": "EUR",
+      "amount_eur": 3500000,
+      "lead_investors": [
+        "Piton Capital"
+      ],
+      "investors": [
+        "Piton Capital",
+        "Motier",
+        "FSJ",
+        "OPRTRS",
+        "Kima Ventures",
+        "Aquiti"
+      ],
+      "hq_city": "Bordeaux",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://cardnexus.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_23",
+      "announcement_date": "2026-06-01",
+      "company_name": "Osmos X",
+      "company_slug": "osmos-x",
+      "sectors": [
+        "SpaceTech",
+        "Aerospace",
+        "DefenseTech"
+      ],
+      "round_label": "Seed",
+      "amount_original": 2000000.0,
+      "currency_original": "EUR",
+      "amount_eur": 2000000,
+      "lead_investors": [
+        "Expansion"
+      ],
+      "investors": [
+        "Expansion",
+        "Rymdkapital",
+        "Jean-Jacques Dordain"
+      ],
+      "hq_city": "Rennes",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://osmosx.space",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    },
+    {
+      "id": "sample_funding_june_2026_24",
+      "announcement_date": "2026-06-01",
+      "company_name": "NotiPark",
+      "company_slug": "notipark",
+      "sectors": [
+        "Mobility",
+        "SaaS"
+      ],
+      "round_label": "Seed",
+      "amount_original": 1700000.0,
+      "currency_original": "EUR",
+      "amount_eur": 1700000,
+      "lead_investors": [
+        "Sowefund"
+      ],
+      "investors": [
+        "Sowefund",
+        "N1 Investment Company",
+        "Bpifrance Digital Venture"
+      ],
+      "hq_city": "Paris",
+      "hq_country": "France",
+      "french_founded_abroad": false,
+      "company_url": "https://www.notipark.com",
+      "primary_source_url": null,
+      "ftj_url": null,
+      "updated_at": "2026-06-01T07:00:00+02:00"
+    }
+  ],
+  "meta": {
+    "count": 50,
+    "limit": 50,
+    "sort": "announcement_date:desc",
+    "year": 2026,
+    "updated_at": "2026-07-13T07:00:00+02:00"
+  }
+}
