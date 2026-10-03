@@ -96,8 +96,9 @@ async function main() {
   let wire = [];
   if (ghost && config.fundingWireTag) {
     try {
-      // Optional title filter (fundingWireTitleMatch) for when the tag is
-      // shared with other stories; empty means every post with the tag.
+      // Funding Wire editions share the "Funding News" tag with quarterly
+      // reports and databases, so keep only posts whose title matches
+      // fundingWireTitleMatch (empty = every post with the tag).
       const posts = await ghost.getRecentPostsByTag(config.fundingWireTag, 50);
       const match = (config.fundingWireTitleMatch || "").toLowerCase();
       wire = posts
