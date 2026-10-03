@@ -101,7 +101,7 @@ const STYLE = `<style>
 .ftjf h2:first-of-type{margin-top:.6em}
 .c-content .ftjf a,.ftjf a{color:inherit!important;text-decoration:underline;text-decoration-color:var(--ftjf-line);text-underline-offset:3px;text-decoration-thickness:1px}
 .c-content .ftjf a:hover,.ftjf a:hover{color:var(--ftjf-red)!important;text-decoration-color:currentColor}
-.ftjf p,.ftjf li,.ftjf dl{font-family:inherit}
+.ftjf p,.ftjf ul,.ftjf li,.ftjf dl{font-family:var(--font-family-sansSerif,Inter,system-ui,sans-serif)!important}
 .ftjf .ftjf-updated{font-size:14px;line-height:1.4;color:var(--ftjf-ink-2);margin:0;padding:10px 0;border-top:3px solid var(--ftjf-line-strong);border-bottom:1px solid var(--ftjf-line)}
 .ftjf .ftjf-kpis{display:grid;grid-template-columns:repeat(3,1fr);margin:0;padding:0}
 .ftjf .ftjf-kpi{margin:0;padding:16px 16px 18px 0}
