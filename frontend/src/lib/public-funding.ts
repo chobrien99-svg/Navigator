@@ -38,8 +38,26 @@ export interface PublicFundingSummary {
     "company_name" | "company_slug" | "amount_eur" | "round_label" | "announcement_date"
   > | null;
   quarters: { quarter: string; total_disclosed_eur: number; round_count: number }[];
+  /** One entry per funding stage present this year, in stage order. */
+  by_stage: { stage: string; round_label: string; total_disclosed_eur: number; round_count: number }[];
+  /**
+   * Every sector with at least one round, largest capital first. A round is
+   * counted in each of its company's sectors, so totals overlap.
+   */
+  by_sector: { sector: string; total_disclosed_eur: number; round_count: number }[];
+  /** Twelve entries, "2026-01" … "2026-12". */
+  by_month: { month: string; total_disclosed_eur: number; round_count: number }[];
   updated_at: string | null;
 }
+
+type Bucket = { total_disclosed_eur: number; round_count: number };
+
+function addTo(bucket: Bucket, amount: number | null) {
+  bucket.round_count += 1;
+  if (amount != null) bucket.total_disclosed_eur += amount;
+}
+
+const roundTotals = <T extends Bucket>(b: T): T => ({ ...b, total_disclosed_eur: Math.round(b.total_disclosed_eur) });
 
 export type RoundSort = "announcement_date:desc" | "amount_eur:desc";
 
@@ -93,12 +111,21 @@ async function fetchPublishedRoundsForYear(year: number): Promise<Row[]> {
   }
 }
 
+// Sector names that mean the same thing are merged so the sector chart and
+// tables don't split one sector across two labels.
+const SECTOR_ALIASES: Record<string, string> = {
+  ai: "Artificial Intelligence",
+  "artificial intelligence": "Artificial Intelligence",
+};
+const normalizeSector = (name: string) => SECTOR_ALIASES[name.trim().toLowerCase()] ?? name.trim();
+
 function toPublicRound(r: Row): PublicFundingRound {
   const org = r.organizations ?? {};
   const sectors = [...(org.organization_sectors ?? [])]
     .sort((a: Row, b: Row) => Number(b.is_primary) - Number(a.is_primary))
     .map((s: Row) => s.sectors?.name)
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(normalizeSector);
   const investorRows = [...(r.funding_round_investors ?? [])].sort(
     (a: Row, b: Row) => Number(b.is_lead) - Number(a.is_lead)
   );
@@ -140,7 +167,29 @@ export async function getPublicRounds(opts: {
 }
 
 export async function getPublicSummary(year: number): Promise<PublicFundingSummary> {
-  const rounds = (await fetchPublishedRoundsForYear(year)).map(toPublicRound);
+  const rows = await fetchPublishedRoundsForYear(year);
+  const rounds = rows.map(toPublicRound);
+
+  const stageOrder = Object.keys(ROUND_LABELS);
+  const byStage = new Map<string, Bucket>();
+  const bySector = new Map<string, Bucket>();
+  const byMonth = Array.from({ length: 12 }, (_, i) => ({
+    month: `${year}-${String(i + 1).padStart(2, "0")}`,
+    total_disclosed_eur: 0,
+    round_count: 0,
+  }));
+  rows.forEach((row, i) => {
+    const r = rounds[i];
+    const stage = ROUND_LABELS[row.stage] ? row.stage : "undisclosed";
+    if (!byStage.has(stage)) byStage.set(stage, { total_disclosed_eur: 0, round_count: 0 });
+    addTo(byStage.get(stage)!, r.amount_eur);
+    for (const sector of r.sectors) {
+      if (!bySector.has(sector)) bySector.set(sector, { total_disclosed_eur: 0, round_count: 0 });
+      addTo(bySector.get(sector)!, r.amount_eur);
+    }
+    const m = byMonth[Number(r.announcement_date?.slice(5, 7)) - 1];
+    if (m) addTo(m, r.amount_eur);
+  });
 
   const quarters = ["Q1", "Q2", "Q3", "Q4"].map((quarter) => ({
     quarter,
@@ -178,7 +227,14 @@ export async function getPublicSummary(year: number): Promise<PublicFundingSumma
       round_label: largest.round_label,
       announcement_date: largest.announcement_date,
     },
-    quarters: quarters.map((q) => ({ ...q, total_disclosed_eur: Math.round(q.total_disclosed_eur) })),
+    quarters: quarters.map(roundTotals),
+    by_stage: [...byStage]
+      .sort(([a], [b]) => stageOrder.indexOf(a) - stageOrder.indexOf(b))
+      .map(([stage, b]) => roundTotals({ stage, round_label: ROUND_LABELS[stage], ...b })),
+    by_sector: [...bySector]
+      .map(([sector, b]) => roundTotals({ sector, ...b }))
+      .sort((a, b) => b.total_disclosed_eur - a.total_disclosed_eur || b.round_count - a.round_count),
+    by_month: byMonth.map(roundTotals),
     updated_at: updatedAt,
   };
 }
