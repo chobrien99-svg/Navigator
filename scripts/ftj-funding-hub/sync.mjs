@@ -109,12 +109,14 @@ async function main() {
     }
   }
 
+  const intro = await readFile(join(HERE, "intro.html"), "utf8").catch(() => "");
   const html = renderFundingHub({
     summary: data.summary,
     latest: data.latest.data,
     largest: data.largest.data,
     wire,
     config,
+    intro,
   });
   console.log(
     `Rendered ${year}: ${data.summary.round_count} rounds, ${data.latest.data.length} latest, ` +
@@ -125,8 +127,8 @@ async function main() {
     await mkdir(args.out, { recursive: true });
     await writeFile(join(args.out, "funding-hub-card.html"), html);
     const draft = await readFile(join(HERE, "editorial-draft.html"), "utf8");
-    const [intro, methodology] = draft.split("<!-- FUNDING HUB CARD GOES HERE -->");
-    await writeFile(join(args.out, "preview.html"), previewPage(intro + html + methodology, args.fixtures));
+    const [heading, methodology] = draft.split("<!-- FUNDING HUB CARD GOES HERE -->");
+    await writeFile(join(args.out, "preview.html"), previewPage(heading + html + methodology, args.fixtures));
     console.log(`Wrote ${join(args.out, "funding-hub-card.html")} and preview.html`);
   }
 
@@ -158,7 +160,7 @@ h1{font-size:2.4em;line-height:1.1}a{color:#e3001b}
 .preview-note{font:14px system-ui,sans-serif;background:#fff4d6;border:1px solid #e8c766;padding:10px 14px;border-radius:6px}
 @media (prefers-color-scheme:dark){body{background:#15171a;color:#e8e8e8}.preview-note{background:#3a3218;border-color:#6b5a22}}</style>
 </head><body>
-<p class="preview-note">Local preview only. ${isSample ? "Figures are <strong>sample data</strong> built from repo CSVs, not live Navigator data. " : ""}The intro and methodology are draft copy for you to paste into the Ghost editor; the data block in the middle is what the sync script writes.</p>
+<p class="preview-note">Local preview only. ${isSample ? "Figures are <strong>sample data</strong> built from repo CSVs, not live Navigator data. " : ""}The methodology is draft copy for the Ghost editor; everything from the intro to the Funding Wire list is what the sync script writes.</p>
 ${body}
 </body></html>`;
 }

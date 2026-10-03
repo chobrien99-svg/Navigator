@@ -29,8 +29,9 @@ The funding data is written into the page itself, so Google sees the full
 tables and figures without having to run JavaScript.
 
 **Your own writing is safe.** The script only replaces the HTML card that
-starts with `<!-- ftj-funding-hub:start -->`. You can write and edit the intro,
-methodology and anything else in the Ghost editor as usual.
+starts with `<!-- ftj-funding-hub:start -->`. That card also carries the intro,
+which you edit in `intro.html`. The methodology and anything else you write in
+the Ghost editor stay as they are.
 
 **If Navigator is down**, the script stops without touching Ghost, so the page
 keeps showing the last good data and its "Last updated" date.
@@ -62,8 +63,8 @@ different address, change `navigatorApiBase` in `config.json`.)
 1. In Ghost Admin, **Pages → New page**.
 2. Title: `French Startup Funding` (the theme shows this as the page's H1, so
    don't add another H1 in the body).
-3. Paste the intro from `editorial-draft.html` and edit it. Leave space for
-   the data, then paste the methodology.
+3. Paste the methodology from `editorial-draft.html` and edit it. The intro
+   is published by the sync, from `intro.html`.
 4. Page settings (gear icon):
    - **Page URL**: `funding`
    - **Meta data → Meta title**: `French Startup Funding: Latest Rounds, Deals & Data | FTJ`
@@ -91,8 +92,8 @@ repository secret**, twice:
 | `GHOST_ADMIN_API_KEY` | the Admin API key from step 4 |
 
 Then **Actions → FTJ Funding Hub sync → Run workflow**. The first run adds the
-data card at the **bottom** of the page. In the Ghost editor, drag it between
-the intro and the methodology. Later runs update the card where it is.
+data card at the **bottom** of the page. In the Ghost editor, drag it above
+the methodology. Later runs update the card where it is.
 
 After that the workflow runs every hour and only saves to Ghost when the data
 has actually changed.
@@ -142,6 +143,7 @@ Open `out/preview.html` in a browser. To refresh the sample data, run
 | `render.mjs` | Builds the HTML card (tables, KPIs, styles) |
 | `ghost.mjs` | Talks to the Ghost Admin API |
 | `config.json` | Settings: API address, list sizes, report links, Funding Wire tag |
-| `editorial-draft.html` | Draft intro and methodology to paste into Ghost |
+| `intro.html` | The intro at the top of the page (published by the sync) |
+| `editorial-draft.html` | Draft methodology to paste into Ghost |
 | `fixtures/` | Sample API responses for previews |
 | `.github/workflows/ftj-funding-hub.yml` | Hourly schedule |

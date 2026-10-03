@@ -101,7 +101,11 @@ const STYLE = `<style>
 .ftjf h2:first-of-type{margin-top:.6em}
 .c-content .ftjf a,.ftjf a{color:inherit!important;text-decoration:underline;text-decoration-color:var(--ftjf-line);text-underline-offset:3px;text-decoration-thickness:1px}
 .c-content .ftjf a:hover,.ftjf a:hover{color:var(--ftjf-red)!important;text-decoration-color:currentColor}
-.ftjf p,.ftjf li,.ftjf dl{font-family:inherit}
+.ftjf p,.ftjf ul,.ftjf li,.ftjf dl{font-family:var(--font-family-sansSerif,Inter,system-ui,sans-serif)!important}
+.ftjf .ftjf-intro{margin:0 0 2em}
+.ftjf .ftjf-intro p{font-family:var(--font-family-serif,Georgia,serif)!important;font-size:var(--font-size-scale-body-copy,20px);line-height:var(--line-height-scale-body-copy,1.6);margin:0}
+.ftjf .ftjf-intro p+p{margin-top:var(--content-flow,32px)}
+.c-content .ftjf .ftjf-intro a,.ftjf .ftjf-intro a{color:var(--color-accent,#2373bb)!important;text-decoration-color:currentColor}
 .ftjf .ftjf-updated{font-size:14px;line-height:1.4;color:var(--ftjf-ink-2);margin:0;padding:10px 0;border-top:3px solid var(--ftjf-line-strong);border-bottom:1px solid var(--ftjf-line)}
 .ftjf .ftjf-kpis{display:grid;grid-template-columns:repeat(3,1fr);margin:0;padding:0}
 .ftjf .ftjf-kpi{margin:0;padding:16px 16px 18px 0}
@@ -153,7 +157,7 @@ const STYLE = `<style>
  * @param {object[]} input.wire    [{title, url, published_at}] Funding Wire posts
  * @param {object} input.config    config.json contents
  */
-export function renderFundingHub({ summary, latest, largest, wire = [], config }) {
+export function renderFundingHub({ summary, latest, largest, wire = [], config, intro = "" }) {
   const year = summary.year;
   const updated = summary.updated_at;
   const navigatorUrl = safeUrl(config.navigatorFundingUrl);
@@ -174,9 +178,14 @@ export function renderFundingHub({ summary, latest, largest, wire = [], config }
     parts.push(`<style>body.page-${slug}{--content-width:${Math.round(width)}px}</style>`);
   }
 
+  // Editorial intro (intro.html, trusted repo content), set in the theme's
+  // article typography so it matches text written in the Ghost editor.
+  const introHtml = String(intro).replace(/<!--[\s\S]*?-->/g, "").trim();
+  if (introHtml) parts.push(`<div class="ftjf-intro">${introHtml}</div>`);
+
   parts.push(
     `<p class="ftjf-updated">Last updated ${dateCell(updated)}` +
-      (navigatorUrl ? ` · Data: <a href="${esc(navigatorUrl)}">France Navigator</a>` : "") +
+      ` · Data: ` + (navigatorUrl ? `<a href="${esc(navigatorUrl)}">France Navigator</a>` : `France Navigator`) +
       `</p>`
   );
 
