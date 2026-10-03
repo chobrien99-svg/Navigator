@@ -2,6 +2,7 @@
   "navigatorApiBase": "https://www.francenavigator.com/api/public/v1",
   "navigatorFundingUrl": "https://www.francenavigator.com/funding",
   "ghostPageSlug": "funding",
+  "pageWidthPx": 1180,
   "latestLimit": 50,
   "largestLimit": 20,
   "fundingWireTag": "funding-news",

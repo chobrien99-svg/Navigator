@@ -110,6 +110,11 @@ has actually changed.
   title, so quarterly reports and databases with the same tag are left out.
   Change `fundingWireTag` / `fundingWireTitleMatch` in `config.json` if that
   changes.
+- **Page width**: `pageWidthPx` in `config.json` (default 1180) widens the
+  whole /funding/ page, title, text and data together, by overriding the
+  theme's `--content-width` on this page only. Other pages are unaffected. The
+  theme default is 708; lower it towards ~900 if long text lines feel hard to
+  read.
 - **Only one data card**: the page must contain exactly one HTML card with the
   funding data. If you paste the preview into Ghost by mistake, the sync stops
   with an error until the extra card is deleted.
