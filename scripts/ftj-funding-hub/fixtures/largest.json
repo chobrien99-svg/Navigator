@@ -174,7 +174,7 @@
       "sectors": [
         "LegalTech",
         "FinTech",
-        "AI",
+        "Artificial Intelligence",
         "SaaS"
       ],
       "round_label": "Growth",
@@ -264,7 +264,7 @@
       "company_slug": "alta-ares",
       "sectors": [
         "DefenseTech",
-        "AI",
+        "Artificial Intelligence",
         "Drones"
       ],
       "round_label": "Series A",
@@ -355,7 +355,7 @@
       "sectors": [
         "FinTech",
         "SaaS",
-        "AI"
+        "Artificial Intelligence"
       ],
       "round_label": "Series B",
       "amount_original": 40000000.0,
@@ -387,7 +387,7 @@
       "company_slug": "dust",
       "sectors": [
         "SaaS",
-        "AI"
+        "Artificial Intelligence"
       ],
       "round_label": "Series B",
       "amount_original": 40000000.0,

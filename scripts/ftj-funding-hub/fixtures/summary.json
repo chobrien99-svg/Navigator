@@ -33,5 +33,421 @@
       "round_count": 0
     }
   ],
+  "by_stage": [
+    {
+      "stage": "pre_seed",
+      "round_label": "Pre-seed",
+      "total_disclosed_eur": 27326000,
+      "round_count": 11
+    },
+    {
+      "stage": "seed",
+      "round_label": "Seed",
+      "total_disclosed_eur": 221931800,
+      "round_count": 49
+    },
+    {
+      "stage": "series_a",
+      "round_label": "Series A",
+      "total_disclosed_eur": 657400000,
+      "round_count": 27
+    },
+    {
+      "stage": "series_b",
+      "round_label": "Series B",
+      "total_disclosed_eur": 110800000,
+      "round_count": 5
+    },
+    {
+      "stage": "series_c",
+      "round_label": "Series C",
+      "total_disclosed_eur": 33000000,
+      "round_count": 1
+    },
+    {
+      "stage": "series_d",
+      "round_label": "Series D",
+      "total_disclosed_eur": 30000000,
+      "round_count": 1
+    },
+    {
+      "stage": "growth",
+      "round_label": "Growth",
+      "total_disclosed_eur": 1185400000,
+      "round_count": 32
+    },
+    {
+      "stage": "bridge",
+      "round_label": "Bridge",
+      "total_disclosed_eur": 4200000,
+      "round_count": 1
+    },
+    {
+      "stage": "debt",
+      "round_label": "Debt",
+      "total_disclosed_eur": 1000000,
+      "round_count": 1
+    },
+    {
+      "stage": "undisclosed",
+      "round_label": "Undisclosed",
+      "total_disclosed_eur": 10000000,
+      "round_count": 2
+    }
+  ],
+  "by_sector": [
+    {
+      "sector": "Artificial Intelligence",
+      "total_disclosed_eur": 1257842800,
+      "round_count": 60
+    },
+    {
+      "sector": "InsurTech",
+      "total_disclosed_eur": 497073000,
+      "round_count": 6
+    },
+    {
+      "sector": "SaaS",
+      "total_disclosed_eur": 423197800,
+      "round_count": 28
+    },
+    {
+      "sector": "DeepTech",
+      "total_disclosed_eur": 338200000,
+      "round_count": 23
+    },
+    {
+      "sector": "FinTech",
+      "total_disclosed_eur": 337325000,
+      "round_count": 13
+    },
+    {
+      "sector": "BioTech",
+      "total_disclosed_eur": 254100000,
+      "round_count": 9
+    },
+    {
+      "sector": "ClimateTech",
+      "total_disclosed_eur": 227500000,
+      "round_count": 18
+    },
+    {
+      "sector": "HealthTech",
+      "total_disclosed_eur": 226316000,
+      "round_count": 15
+    },
+    {
+      "sector": "Web3",
+      "total_disclosed_eur": 152220000,
+      "round_count": 2
+    },
+    {
+      "sector": "HRTech",
+      "total_disclosed_eur": 150000000,
+      "round_count": 1
+    },
+    {
+      "sector": "MedTech",
+      "total_disclosed_eur": 133900000,
+      "round_count": 9
+    },
+    {
+      "sector": "Quantum Computing",
+      "total_disclosed_eur": 115000000,
+      "round_count": 2
+    },
+    {
+      "sector": "DefenseTech",
+      "total_disclosed_eur": 108300000,
+      "round_count": 5
+    },
+    {
+      "sector": "FoodTech",
+      "total_disclosed_eur": 96000000,
+      "round_count": 4
+    },
+    {
+      "sector": "Energy",
+      "total_disclosed_eur": 81500000,
+      "round_count": 5
+    },
+    {
+      "sector": "Drones",
+      "total_disclosed_eur": 74300000,
+      "round_count": 4
+    },
+    {
+      "sector": "Hardware",
+      "total_disclosed_eur": 74100000,
+      "round_count": 3
+    },
+    {
+      "sector": "LegalTech",
+      "total_disclosed_eur": 73000000,
+      "round_count": 2
+    },
+    {
+      "sector": "Cybersecurity",
+      "total_disclosed_eur": 53760000,
+      "round_count": 5
+    },
+    {
+      "sector": "AgriTech",
+      "total_disclosed_eur": 51000000,
+      "round_count": 2
+    },
+    {
+      "sector": "AI & Machine Learning",
+      "total_disclosed_eur": 49026000,
+      "round_count": 5
+    },
+    {
+      "sector": "Aerospace",
+      "total_disclosed_eur": 47000000,
+      "round_count": 2
+    },
+    {
+      "sector": "SaaS & Enterprise",
+      "total_disclosed_eur": 40026000,
+      "round_count": 6
+    },
+    {
+      "sector": "Mobility",
+      "total_disclosed_eur": 37700000,
+      "round_count": 7
+    },
+    {
+      "sector": "CleanTech",
+      "total_disclosed_eur": 25900000,
+      "round_count": 6
+    },
+    {
+      "sector": "Circular Economy",
+      "total_disclosed_eur": 25800000,
+      "round_count": 1
+    },
+    {
+      "sector": "Semiconductors",
+      "total_disclosed_eur": 21200000,
+      "round_count": 3
+    },
+    {
+      "sector": "PropTech",
+      "total_disclosed_eur": 18700000,
+      "round_count": 8
+    },
+    {
+      "sector": "Identity & Authentication",
+      "total_disclosed_eur": 17200000,
+      "round_count": 1
+    },
+    {
+      "sector": "AI Infrastructure",
+      "total_disclosed_eur": 17200000,
+      "round_count": 1
+    },
+    {
+      "sector": "Fraud Prevention",
+      "total_disclosed_eur": 17200000,
+      "round_count": 1
+    },
+    {
+      "sector": "Nuclear",
+      "total_disclosed_eur": 17000000,
+      "round_count": 1
+    },
+    {
+      "sector": "Robotics",
+      "total_disclosed_eur": 15740000,
+      "round_count": 6
+    },
+    {
+      "sector": "Biotech",
+      "total_disclosed_eur": 15000000,
+      "round_count": 1
+    },
+    {
+      "sector": "Climate Tech",
+      "total_disclosed_eur": 13000000,
+      "round_count": 1
+    },
+    {
+      "sector": "MarTech",
+      "total_disclosed_eur": 11600000,
+      "round_count": 2
+    },
+    {
+      "sector": "EdTech",
+      "total_disclosed_eur": 11000000,
+      "round_count": 2
+    },
+    {
+      "sector": "SportsTech",
+      "total_disclosed_eur": 8616000,
+      "round_count": 3
+    },
+    {
+      "sector": "GreenTech",
+      "total_disclosed_eur": 8000000,
+      "round_count": 1
+    },
+    {
+      "sector": "SpaceTech",
+      "total_disclosed_eur": 6200000,
+      "round_count": 2
+    },
+    {
+      "sector": "Augmented Reality",
+      "total_disclosed_eur": 5100000,
+      "round_count": 1
+    },
+    {
+      "sector": "FitnessTech",
+      "total_disclosed_eur": 5000000,
+      "round_count": 1
+    },
+    {
+      "sector": "Gaming",
+      "total_disclosed_eur": 3500000,
+      "round_count": 1
+    },
+    {
+      "sector": "Mobility Tech",
+      "total_disclosed_eur": 3125000,
+      "round_count": 1
+    },
+    {
+      "sector": "Entertainment",
+      "total_disclosed_eur": 3000000,
+      "round_count": 2
+    },
+    {
+      "sector": "Compliance",
+      "total_disclosed_eur": 2949800,
+      "round_count": 1
+    },
+    {
+      "sector": "AdTech",
+      "total_disclosed_eur": 2580000,
+      "round_count": 1
+    },
+    {
+      "sector": "TravelTech",
+      "total_disclosed_eur": 2073000,
+      "round_count": 2
+    },
+    {
+      "sector": "E-commerce & Retail",
+      "total_disclosed_eur": 1300000,
+      "round_count": 1
+    },
+    {
+      "sector": "Hospital Software",
+      "total_disclosed_eur": 200000,
+      "round_count": 1
+    },
+    {
+      "sector": "Digital Health",
+      "total_disclosed_eur": 200000,
+      "round_count": 1
+    },
+    {
+      "sector": "Home Care",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    },
+    {
+      "sector": "Elder Care",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    },
+    {
+      "sector": "Healthcare Services",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    },
+    {
+      "sector": "Security",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    },
+    {
+      "sector": "Detection Systems",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    },
+    {
+      "sector": "Industrial Technology",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    },
+    {
+      "sector": "AgriFood",
+      "total_disclosed_eur": 0,
+      "round_count": 1
+    }
+  ],
+  "by_month": [
+    {
+      "month": "2026-01",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    },
+    {
+      "month": "2026-02",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    },
+    {
+      "month": "2026-03",
+      "total_disclosed_eur": 67500000,
+      "round_count": 7
+    },
+    {
+      "month": "2026-04",
+      "total_disclosed_eur": 18526000,
+      "round_count": 2
+    },
+    {
+      "month": "2026-05",
+      "total_disclosed_eur": 489400800,
+      "round_count": 43
+    },
+    {
+      "month": "2026-06",
+      "total_disclosed_eur": 1293731000,
+      "round_count": 53
+    },
+    {
+      "month": "2026-07",
+      "total_disclosed_eur": 411900000,
+      "round_count": 25
+    },
+    {
+      "month": "2026-08",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    },
+    {
+      "month": "2026-09",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    },
+    {
+      "month": "2026-10",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    },
+    {
+      "month": "2026-11",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    },
+    {
+      "month": "2026-12",
+      "total_disclosed_eur": 0,
+      "round_count": 0
+    }
+  ],
   "updated_at": "2026-07-13T07:00:00+02:00"
 }

@@ -138,6 +138,27 @@ const STYLE = `<style>
 .ftjf .ftjf-wire li{margin:0;padding:12px 0;border-bottom:1px solid var(--ftjf-line);font-size:16px;line-height:1.4;font-weight:600}
 .ftjf .ftjf-wire time{display:block;font-size:13px;font-weight:400;color:var(--ftjf-ink-2);margin-bottom:2px}
 .ftjf .ftjf-more{margin:14px 0 0;font-size:15px;font-weight:600}
+.ftjf{--ftjf-s1:#f08a90;--ftjf-s2:#e0454f;--ftjf-s3:#b8121d;--ftjf-s4:#7d0c13;--ftjf-s5:#a8a8a8;--ftjf-on1:#111;--ftjf-on2:#111;--ftjf-on3:#fff;--ftjf-on4:#fff;--ftjf-on5:#111}
+:root[data-user-color-scheme=dark] .ftjf{--ftjf-s1:#9a1f28;--ftjf-s2:#d0343e;--ftjf-s3:#f07a82;--ftjf-s4:#fbbdc1;--ftjf-s5:#6e6e6e;--ftjf-on1:#fff;--ftjf-on2:#fff;--ftjf-on3:#111;--ftjf-on4:#111;--ftjf-on5:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-user-color-scheme]).is-darkModeAdminSetting-enabled .ftjf{--ftjf-s1:#9a1f28;--ftjf-s2:#d0343e;--ftjf-s3:#f07a82;--ftjf-s4:#fbbdc1;--ftjf-s5:#6e6e6e;--ftjf-on1:#fff;--ftjf-on2:#fff;--ftjf-on3:#111;--ftjf-on4:#111;--ftjf-on5:#fff}}
+.ftjf .ftjf-cap{font-size:14px;line-height:1.45;color:var(--ftjf-ink-2);margin:0 0 14px}
+.ftjf .ftjf-stackchart{margin:0 0 16px}
+.ftjf .ftjf-stack-row{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.ftjf .ftjf-stack-name{flex:0 0 64px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ftjf-ink-2)}
+.ftjf .ftjf-stack{flex:1;display:flex;gap:2px;height:30px;min-width:0}
+.ftjf .ftjf-seg{display:flex;align-items:center;justify-content:center;flex-basis:0;min-width:3px;overflow:hidden;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.ftjf .ftjf-seg:first-child{border-radius:4px 0 0 4px}
+.ftjf .ftjf-seg:last-child{border-radius:0 4px 4px 0}
+.ftjf .ftjf-seg:only-child{border-radius:4px}
+.ftjf .ftjf-s1{background:var(--ftjf-s1);color:var(--ftjf-on1)}
+.ftjf .ftjf-s2{background:var(--ftjf-s2);color:var(--ftjf-on2)}
+.ftjf .ftjf-s3{background:var(--ftjf-s3);color:var(--ftjf-on3)}
+.ftjf .ftjf-s4{background:var(--ftjf-s4);color:var(--ftjf-on4)}
+.ftjf .ftjf-s5{background:var(--ftjf-s5);color:var(--ftjf-on5)}
+.ftjf .ftjf-swatch{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+.ftjf table.ftjf-legend th,.ftjf table.ftjf-legend td{padding-top:8px;padding-bottom:8px}
+.ftjf table.ftjf-legend{max-width:760px}
+.ftjf table.ftjf-legend tbody th{font-weight:600;white-space:nowrap!important}
 .ftjf .ftjf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:600px){
   .ftjf .ftjf-kpis{grid-template-columns:1fr 1fr}
@@ -146,8 +167,100 @@ const STYLE = `<style>
   .ftjf table{font-size:14px}
   .ftjf .ftjf-hide-sm{display:none}
   .ftjf .ftjf-qbar{width:35%}
+  .ftjf .ftjf-stack-name{flex-basis:56px}
 }
 </style>`;
+
+
+// ── Charts ───────────────────────────────────────────────────
+// Stages are grouped into four ordered buckets plus "Other", coloured with a
+// one-hue red ramp (validated as an ordinal ramp in light and dark).
+const STAGE_GROUPS = [
+  { label: "Pre-seed & seed", stages: ["pre_seed", "seed"] },
+  { label: "Series A", stages: ["series_a"] },
+  { label: "Series B–F", stages: ["series_b", "series_c", "series_d", "series_e", "series_f"] },
+  { label: "Growth & later", stages: ["growth", "ipo", "secondary"] },
+];
+
+function pct(part, whole) {
+  return whole > 0 ? (part / whole) * 100 : 0;
+}
+
+function fmtPct(p) {
+  return p > 0 && p < 1 ? "<1%" : `${Math.round(p)}%`;
+}
+
+function stageGroups(byStage) {
+  const groups = STAGE_GROUPS.map((g) => ({ ...g, total: 0, count: 0 }));
+  const other = { label: "Other", stages: [], total: 0, count: 0 };
+  for (const b of byStage) {
+    const g = groups.find((x) => x.stages.includes(b.stage)) ?? other;
+    g.total += b.total_disclosed_eur ?? 0;
+    g.count += b.round_count ?? 0;
+  }
+  return [...groups, other].map((g, i) => ({ ...g, slot: i + 1 }));
+}
+
+function stackBar(groups, value, whole, label) {
+  const segs = groups
+    .filter((g) => value(g) > 0)
+    .map((g) => {
+      const p = pct(value(g), whole);
+      const text = p >= 9 ? `<span class="ftjf-seg-label">${esc(fmtPct(p))}</span>` : "";
+      return `<span class="ftjf-seg ftjf-s${g.slot}" style="flex-grow:${p.toFixed(3)}" title="${esc(`${g.label}: ${fmtPct(p)} of ${label.toLowerCase()}`)}">${text}</span>`;
+    })
+    .join("");
+  return `<div class="ftjf-stack-row"><span class="ftjf-stack-name">${esc(label)}</span><span class="ftjf-stack" aria-hidden="true">${segs}</span></div>`;
+}
+
+function renderStageChart(summary) {
+  if (!Array.isArray(summary.by_stage) || !summary.by_stage.length) return "";
+  const groups = stageGroups(summary.by_stage);
+  const totalEur = groups.reduce((a, g) => a + g.total, 0);
+  const totalCount = groups.reduce((a, g) => a + g.count, 0);
+  if (!totalEur || !totalCount) return "";
+  const rows = groups
+    .filter((g) => g.count > 0)
+    .map(
+      (g) =>
+        `<tr><th scope="row"><span class="ftjf-swatch ftjf-s${g.slot}" aria-hidden="true"></span>${esc(g.label)}</th>` +
+        `<td class="ftjf-num ftjf-amt">${esc(formatEur(g.total))}</td><td class="ftjf-num ftjf-hide-sm">${esc(fmtPct(pct(g.total, totalEur)))}</td>` +
+        `<td class="ftjf-num">${esc(g.count)}</td><td class="ftjf-num ftjf-hide-sm">${esc(fmtPct(pct(g.count, totalCount)))}</td></tr>`
+    )
+    .join("");
+  return (
+    `<h2 id="funding-by-stage">Funding by stage</h2>` +
+    `<p class="ftjf-cap">How ${esc(summary.year)}'s disclosed capital and its funding rounds split across stages.</p>` +
+    `<div class="ftjf-stackchart">${stackBar(groups, (g) => g.total, totalEur, "Capital")}${stackBar(groups, (g) => g.count, totalCount, "Rounds")}</div>` +
+    `<div class="ftjf-scroll"><table class="ftjf-legend"><thead><tr><th scope="col">Stage</th><th scope="col" class="ftjf-num">Capital</th><th scope="col" class="ftjf-num ftjf-hide-sm">Share</th><th scope="col" class="ftjf-num">Rounds</th><th scope="col" class="ftjf-num ftjf-hide-sm">Share</th></tr></thead><tbody>${rows}</tbody></table></div>`
+  );
+}
+
+function renderSectorChart(summary, limit = 8) {
+  if (!Array.isArray(summary.by_sector)) return "";
+  const top = summary.by_sector
+    .filter((b) => b.sector && b.sector.toLowerCase() !== "other" && b.total_disclosed_eur > 0)
+    .slice(0, limit);
+  if (top.length < 3) return "";
+  const max = top[0].total_disclosed_eur;
+  const rows = top
+    .map((b) => {
+      const w = Math.max(1, Math.round((b.total_disclosed_eur / max) * 100));
+      return (
+        `<tr><th scope="row"><span class="ftjf-co">${esc(b.sector)}</span></th>` +
+        `<td class="ftjf-qbar"><span class="ftjf-track"><span class="ftjf-bar" style="width:${w}%" title="${esc(`${b.sector}: ${formatEur(b.total_disclosed_eur)} across ${b.round_count} rounds`)}"></span></span></td>` +
+        `<td class="ftjf-num ftjf-amt">${esc(formatEur(b.total_disclosed_eur))}</td><td class="ftjf-num">${esc(b.round_count)}</td></tr>`
+      );
+    })
+    .join("");
+  return (
+    `<h2 id="top-sectors">Top sectors</h2>` +
+    `<div class="ftjf-scroll"><table class="ftjf-q">` +
+    `<caption>The ${esc(top.length)} sectors with the most disclosed capital in ${esc(summary.year)}. Companies can belong to more than one sector, so these totals overlap.</caption>` +
+    `<thead><tr><th scope="col">Sector</th><th scope="col" class="ftjf-qbar"><span class="ftjf-sr">Share of top sector</span></th><th scope="col" class="ftjf-num">Raised</th><th scope="col" class="ftjf-num">Rounds</th></tr></thead>` +
+    `<tbody>${rows}</tbody></table></div>`
+  );
+}
 
 /**
  * @param {object} input
@@ -205,6 +318,9 @@ export function renderFundingHub({ summary, latest, largest, wire = [], config, 
   }
   parts.push(`</dl>`);
 
+  // ── Stage chart ────────────────────────────────────────────
+  parts.push(renderStageChart(summary));
+
   // ── Latest rounds ──────────────────────────────────────────
   parts.push(`<h2 id="latest-funding-rounds">Latest funding rounds</h2>`);
   parts.push(`<div class="ftjf-scroll"><table>`);
@@ -233,6 +349,9 @@ export function renderFundingHub({ summary, latest, largest, wire = [], config, 
     );
   });
   parts.push(`</tbody></table></div>`);
+
+  // ── Sector chart ───────────────────────────────────────────
+  parts.push(renderSectorChart(summary));
 
   // ── Quarters ───────────────────────────────────────────────
   // A labelled bar chart built as a table: values are printed next to each

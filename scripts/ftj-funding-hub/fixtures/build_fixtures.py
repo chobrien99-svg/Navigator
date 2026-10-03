@@ -15,6 +15,8 @@ STAGES = {"pre-seed": "Pre-seed", "seed": "Seed", "series a": "Series A", "serie
           "series c": "Series C", "series d": "Series D", "series e": "Series E",
           "growth": "Growth", "growth equity": "Growth", "bridge": "Bridge", "debt": "Debt", "grant": "Grant", "ipo": "IPO"}
 
+ALIASES = {"ai": "Artificial Intelligence"}
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -35,7 +37,7 @@ for path in sorted(glob.glob(os.path.join(DATA, "funding_*2026*.csv"))):
             "announcement_date": date,
             "company_name": name,
             "company_slug": slug(name),
-            "sectors": [x.strip() for x in (row.get("Sectors") or "").split(",") if x.strip()],
+            "sectors": list(dict.fromkeys(ALIASES.get(x.strip().lower(), x.strip()) for x in (row.get("Sectors") or "").split(",") if x.strip())),
             "round_label": STAGES.get(stage.lower(), "Undisclosed"),
             "amount_original": amount,
             "currency_original": cur if amount is not None else None,
@@ -58,6 +60,21 @@ for r in rounds:
     q = quarters[(int(r["announcement_date"][5:7]) - 1) // 3]
     q["round_count"] += 1
     q["total_disclosed_eur"] += r["amount_eur"] or 0
+STAGE_KEYS = {"Pre-seed": "pre_seed", "Seed": "seed", "Series A": "series_a", "Series B": "series_b",
+              "Series C": "series_c", "Series D": "series_d", "Series E": "series_e", "Growth": "growth",
+              "Bridge": "bridge", "Debt": "debt", "Grant": "grant", "IPO": "ipo", "Undisclosed": "undisclosed"}
+ORDER = list(STAGE_KEYS.values())
+by_stage, by_sector = {}, {}
+by_month = [{"month": f"2026-{m:02d}", "total_disclosed_eur": 0, "round_count": 0} for m in range(1, 13)]
+def add(b, amount):
+    b["round_count"] += 1
+    b["total_disclosed_eur"] += amount or 0
+for r in rounds:
+    key = STAGE_KEYS.get(r["round_label"], "undisclosed")
+    add(by_stage.setdefault(key, {"stage": key, "round_label": r["round_label"], "total_disclosed_eur": 0, "round_count": 0}), r["amount_eur"])
+    for sec in r["sectors"]:
+        add(by_sector.setdefault(sec, {"sector": sec, "total_disclosed_eur": 0, "round_count": 0}), r["amount_eur"])
+    add(by_month[int(r["announcement_date"][5:7]) - 1], r["amount_eur"])
 top = largest[0]
 updated = max(r["updated_at"] for r in rounds)
 summary = {
@@ -67,6 +84,9 @@ summary = {
     "disclosed_round_count": sum(1 for r in rounds if r["amount_eur"] is not None),
     "largest_round": {k: top[k] for k in ("company_name", "company_slug", "amount_eur", "round_label", "announcement_date")},
     "quarters": quarters,
+    "by_stage": sorted(by_stage.values(), key=lambda b: ORDER.index(b["stage"])),
+    "by_sector": sorted(by_sector.values(), key=lambda b: (-b["total_disclosed_eur"], -b["round_count"])),
+    "by_month": by_month,
     "updated_at": updated,
 }
 
