@@ -4,15 +4,28 @@
   "ghostPageSlug": "funding",
   "latestLimit": 50,
   "largestLimit": 20,
-  "fundingWireTag": "funding-wire",
+  "fundingWireTag": "funding-news",
+  "fundingWireTitleMatch": "Funding Wire",
   "fundingWireLimit": 6,
-  "fundingWireArchiveUrl": "https://www.frenchtechjournal.com/tag/funding-wire/",
+  "fundingWireArchiveUrl": "https://www.frenchtechjournal.com/tag/funding-news/",
   "quarterlyReports": {
     "2026": {
-      "Q1": { "title": "Q1 2026 French Tech funding report", "url": "" },
-      "Q2": { "title": "Q2 2026 French Tech funding report", "url": "" },
-      "Q3": { "title": "", "url": "" },
-      "Q4": { "title": "", "url": "" }
+      "Q1": {
+        "title": "Q1 2026 French Tech funding report",
+        "url": ""
+      },
+      "Q2": {
+        "title": "Q2 2026 French Tech funding report",
+        "url": ""
+      },
+      "Q3": {
+        "title": "",
+        "url": ""
+      },
+      "Q4": {
+        "title": "",
+        "url": ""
+      }
     }
   }
 }
