@@ -73,7 +73,15 @@ export function upsertHubCard(lexical, html) {
   const children = doc?.root?.children;
   if (!Array.isArray(children)) throw new Error("Page has no Lexical content (is it an old Mobiledoc page?)");
 
-  const index = children.findIndex((n) => n.type === "html" && String(n.html ?? "").includes(START_MARKER));
+  const isHubCard = (n) => n.type === "html" && String(n.html ?? "").includes(START_MARKER);
+  const matches = children.filter(isHubCard).length;
+  if (matches > 1) {
+    throw new Error(
+      `The page has ${matches} HTML cards containing the funding data marker. ` +
+        "Delete the extra one(s) in the Ghost editor so only one remains, then re-run."
+    );
+  }
+  const index = children.findIndex(isHubCard);
   if (index >= 0 && children[index].html === html) return { doc, changed: false, created: false };
 
   const card = { type: "html", version: 1, html };

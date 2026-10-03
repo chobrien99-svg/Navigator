@@ -96,7 +96,14 @@ async function main() {
   let wire = [];
   if (ghost && config.fundingWireTag) {
     try {
-      wire = await ghost.getRecentPostsByTag(config.fundingWireTag, config.fundingWireLimit);
+      // Funding Wire editions share the "Funding News" tag with quarterly
+      // reports and databases, so keep only posts whose title matches
+      // fundingWireTitleMatch (empty = every post with the tag).
+      const posts = await ghost.getRecentPostsByTag(config.fundingWireTag, 50);
+      const match = (config.fundingWireTitleMatch || "").toLowerCase();
+      wire = posts
+        .filter((p) => !match || String(p.title).toLowerCase().includes(match))
+        .slice(0, config.fundingWireLimit);
     } catch (e) {
       console.warn(`Could not load Funding Wire posts (${e.message}); skipping that section.`);
     }

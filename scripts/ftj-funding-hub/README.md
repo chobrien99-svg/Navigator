@@ -105,9 +105,14 @@ has actually changed.
 - **Link a round to our story**: fill in its `ftj_url`.
 - **Quarterly report links**: add each report's URL under `quarterlyReports`
   in `config.json`.
-- **Funding Wire list**: the script lists the latest posts with the Ghost tag
-  `funding-wire`. If your tag slug is different, change `fundingWireTag` in
-  `config.json`.
+- **Funding Wire list**: the script looks at recent posts tagged
+  `funding-news` (Funding News) and keeps those with "Funding Wire" in the
+  title, so quarterly reports and databases with the same tag are left out.
+  Change `fundingWireTag` / `fundingWireTitleMatch` in `config.json` if that
+  changes.
+- **Only one data card**: the page must contain exactly one HTML card with the
+  funding data. If you paste the preview into Ghost by mistake, the sync stops
+  with an error until the extra card is deleted.
 - **Editing the page while a sync runs**: if Ghost warns that the page was
   changed elsewhere, reload it. The hourly sync only saves when data changes,
   so this is rare.
