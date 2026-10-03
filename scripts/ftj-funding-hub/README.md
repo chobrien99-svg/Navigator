@@ -105,10 +105,10 @@ has actually changed.
 - **Link a round to our story**: fill in its `ftj_url`.
 - **Quarterly report links**: add each report's URL under `quarterlyReports`
   in `config.json`.
-- **Funding Wire list**: the script looks at recent posts tagged
-  `funding-news` (Funding News) and keeps those with "Funding Wire" in the
-  title. Change `fundingWireTag` / `fundingWireTitleMatch` in `config.json` if
-  that changes.
+- **Funding Wire list**: the script lists the latest posts tagged
+  `funding-wire` (set by `fundingWireTag` in `config.json`). If that tag is
+  ever shared with other stories, set `fundingWireTitleMatch` to e.g.
+  `"Funding Wire"` to keep only posts with that text in the title.
 - **Only one data card**: the page must contain exactly one HTML card with the
   funding data. If you paste the preview into Ghost by mistake, the sync stops
   with an error until the extra card is deleted.

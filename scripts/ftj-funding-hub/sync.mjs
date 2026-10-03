@@ -96,8 +96,8 @@ async function main() {
   let wire = [];
   if (ghost && config.fundingWireTag) {
     try {
-      // Funding Wire editions share the "Funding News" tag with other funding
-      // stories, so fetch a wider batch and keep only Wire editions by title.
+      // Optional title filter (fundingWireTitleMatch) for when the tag is
+      // shared with other stories; empty means every post with the tag.
       const posts = await ghost.getRecentPostsByTag(config.fundingWireTag, 50);
       const match = (config.fundingWireTitleMatch || "").toLowerCase();
       wire = posts
