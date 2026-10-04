@@ -218,7 +218,7 @@ top deals" view so the €23–387M range is legible.
 - [x] Newsletter article structure with folded narrative
 - [x] Cover copy
 - [x] Chart list (core + 4 historical/macro)
-- [ ] Build `q3-2026-full-report.html`
-- [ ] Write `q3-2026-newsletter-article.md`
-- [ ] Build `newsletter-cover.html`
-- [ ] Write `frontier-ai-funding-report.md` (deep-dive)
+- [x] Build `q3-2026-full-report.html` (+ paginated PDF via `pdf-tools/`)
+- [x] Write `q3-2026-newsletter-article.md`
+- [x] Build `q3-2026-newsletter-cover.html` (+ `q3-2026-newsletter-cover.png`)
+- [x] Write `frontier-ai-funding-report.md` deep-dive (+ `ai-quarterly-chart.html` / `ai-quarterly-investment.png`)
