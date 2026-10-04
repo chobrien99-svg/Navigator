@@ -365,6 +365,6 @@ A SpaceTech angle (Exploration Co, Elixir Aircraft) is the alternative.
 - [x] Geographic analysis
 - [x] Investor activity
 - [x] Theme identified ("The Mistral Singularity")
-- [ ] Q3-2026-CONTENT-PLAN.md
-- [ ] q3-2026-full-report.html
-- [ ] Newsletter article · cover · sector deep-dive
+- [x] Q3-2026-CONTENT-PLAN.md
+- [x] q3-2026-full-report.html (+ paginated PDF)
+- [x] Newsletter article · cover · sector deep-dive (frontier AI)
