@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mistral Singularity — French Tech Q3 2026 Funding Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+/* ── DESIGN SYSTEM: The Modern Archivist ─────────────────────────── */
+:root {
+  --surface: #fef9ee; --surface-dim: #dedacf; --surface-container-low: #f8f3e8;
+  --surface-container: #f2ede2; --surface-container-high: #ede8dd;
+  --surface-container-highest: #e5e2db; --surface-container-lowest: #ffffff;
+  --primary: #114563; --primary-container: #2f5d7c; --on-primary: #ffffff;
+  --on-surface: #1d1c15; --on-surface-variant: #41474d;
+  --secondary: #775a0f; --secondary-container: #fdd580; --tertiary: #460602;
+  --outline: #72787e; --outline-variant: #c1c7ce; --error: #ba1a1a;
+  --graph-links: #C9C1B3; --gold-accent: #edbf74;
+  --chart-1: #114563; --chart-2: #2f5d7c; --chart-3: #775a0f; --chart-4: #3c6840;
+  --chart-5: #503863; --chart-6: #8b6914; --chart-7: #460602; --chart-8: #5a7a8b;
+  --chart-9: #7a5a3a; --chart-10: #3a7a7a;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--surface); color: var(--on-surface); font-family: 'Public Sans', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: 'Newsreader', serif; color: var(--primary); font-weight: 600; }
+.display-lg { font-family: 'Newsreader', serif; font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--primary); }
+.headline-lg { font-family: 'Newsreader', serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; color: var(--primary); }
+.headline-md { font-family: 'Newsreader', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.3; color: var(--primary); }
+.headline-sm { font-family: 'Newsreader', serif; font-size: 1.15rem; font-weight: 600; line-height: 1.35; color: var(--primary); }
+.label-md { font-family: 'Public Sans', sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1rem; color: var(--on-surface-variant); }
+.label-sm { font-family: 'Public Sans', sans-serif; font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08rem; color: var(--on-surface-variant); }
+.body-md { font-size: 0.935rem; line-height: 1.7; }
+.body-sm { font-size: 0.8rem; line-height: 1.6; color: var(--on-surface-variant); }
+.page-container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 4rem); }
+.section-break { padding: 5rem 0; }
+.surface-shift { background: var(--surface-container-low); padding: 4rem 0; }
+.ghost-border-bottom { border-bottom: 1px solid rgba(193, 199, 206, 0.2); }
+.masthead { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%); color: var(--on-primary); padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; }
+.masthead-brand { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; }
+.masthead-right { font-size: 0.68rem; font-weight: 400; letter-spacing: 0.08em; opacity: 0.7; }
+.hero { padding: 5rem 0 3.5rem; }
+.hero-subtitle { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--secondary); margin-bottom: 1.2rem; }
+.hero-title { margin-bottom: 2rem; }
+.hero-intro { max-width: 680px; font-size: 1.05rem; line-height: 1.8; }
+.hero-intro em { font-family: 'Newsreader', serif; font-style: italic; font-size: 1.1rem; }
+.stat-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; padding: 3.5rem 0; }
+.stat-item { padding: 0 1.8rem; }
+.stat-item:first-child { padding-left: 0; }
+.stat-item + .stat-item { border-left: 1px solid rgba(193, 199, 206, 0.15); }
+.stat-value { font-family: 'Newsreader', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; color: var(--primary); line-height: 1; letter-spacing: -0.02em; }
+.stat-label { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1rem; color: var(--on-surface-variant); margin-bottom: 0.6rem; }
+.stat-sub { font-size: 0.75rem; color: var(--on-surface-variant); margin-top: 0.4rem; }
+.stat-change-up { color: var(--secondary); font-weight: 600; }
+.stat-change-down { color: var(--tertiary); font-weight: 600; }
+.chart-wrap { position: relative; background: var(--surface-container-lowest); padding: 2rem 2rem 1.5rem; margin-top: 1.2rem; }
+.chart-wrap canvas { width: 100% !important; max-height: 100%; }
+.deal-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.deal-table th { font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08rem; color: var(--on-surface-variant); text-align: left; padding: 0.8rem 1rem; background: var(--surface-container-low); }
+.deal-table td { padding: 0.9rem 1rem; vertical-align: top; }
+.deal-table tr + tr td { border-top: 1px solid rgba(193, 199, 206, 0.12); }
+.deal-table .deal-rank { font-family: 'Newsreader', serif; font-weight: 600; color: var(--primary); font-size: 1rem; width: 2rem; }
+.deal-table .deal-company { font-family: 'Newsreader', serif; font-weight: 600; font-size: 1rem; color: var(--primary); }
+.deal-table .deal-amount { font-family: 'Newsreader', serif; font-weight: 700; font-size: 1.05rem; color: var(--primary); white-space: nowrap; }
+.deal-tag { display: inline-block; font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 8px; background: rgba(17, 69, 99, 0.08); color: var(--primary); margin-right: 4px; margin-top: 3px; }
+.sector-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0; }
+.sector-card { padding: 1.8rem 1.5rem; background: var(--surface-container-lowest); position: relative; }
+.sector-card::before { content: ''; position: absolute; left: 0; top: 1.2rem; bottom: 1.2rem; width: 3px; }
+.sector-card-name { font-family: 'Newsreader', serif; font-size: 1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; }
+.sector-card-value { font-family: 'Newsreader', serif; font-size: 1.8rem; font-weight: 700; color: var(--primary); line-height: 1; }
+.sector-card-change { font-size: 0.75rem; font-weight: 600; margin-top: 0.3rem; }
+.sector-card-deals { font-size: 0.72rem; color: var(--on-surface-variant); margin-top: 0.2rem; }
+.callout { background: var(--surface-container-lowest); padding: 2.5rem 3rem; margin: 2.5rem 0; position: relative; }
+.callout::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--secondary); }
+.callout-title { font-family: 'Newsreader', serif; font-size: 1.2rem; font-weight: 600; color: var(--primary); margin-bottom: 0.8rem; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+footer { padding: 3rem 0; text-align: center; font-size: 0.7rem; color: var(--on-surface-variant); letter-spacing: 0.06em; }
+
+@media (max-width: 768px) {
+  .stat-row { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .stat-item + .stat-item { border-left: none; padding-left: 0; }
+  .two-col, .three-col { grid-template-columns: 1fr; }
+  .sector-grid { grid-template-columns: 1fr; }
+}
+
+/* ── PRINT / PDF — section-per-page, clean breaks ─────────────────── */
+@media print {
+  @page { size: A4 portrait; }
+  body { font-size: 9pt; background: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Each major section starts on its own page; nothing splits across a page */
+  .pbreak { page-break-before: always; }
+  .report-section { break-inside: avoid; }
+  .chart-wrap, .callout, .sector-card, .deal-table tr, .stat-row { break-inside: avoid; }
+  .no-print { display: none !important; }
+
+  .page-container { max-width: 100% !important; padding: 0 !important; }
+  .surface-shift { padding: 1rem 0 !important; background: #f5f2eb !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .section-break { padding: 0.8rem 0 !important; }
+  .masthead { display: none !important; } /* running header replaces it in the PDF */
+
+  .hero { padding: 0.5rem 0 1rem !important; }
+  .hero-intro { font-size: 0.82rem !important; line-height: 1.5 !important; max-width: 100% !important; }
+  .hero-intro p + p { margin-top: 0.45rem !important; }
+  .display-lg { font-size: 2.4rem !important; margin-bottom: 1rem !important; }
+  .headline-lg { font-size: 1.35rem !important; margin-bottom: 0.4rem !important; }
+  .headline-sm { font-size: 0.9rem !important; }
+  .label-md { font-size: 0.58rem !important; margin-bottom: 0.3rem !important; }
+  .label-sm { font-size: 0.52rem !important; }
+  .body-md { font-size: 0.78rem !important; line-height: 1.5 !important; }
+  .body-sm { font-size: 0.68rem !important; line-height: 1.4 !important; }
+  p.body-md { margin-bottom: 0.3rem !important; }
+
+  .stat-row { grid-template-columns: repeat(5, 1fr) !important; padding: 1rem 0 !important; }
+  .stat-item { padding: 0 0.6rem !important; }
+  .stat-value { font-size: 1.5rem !important; }
+  .stat-label { font-size: 0.5rem !important; margin-bottom: 0.2rem; }
+  .stat-sub { font-size: 0.58rem !important; }
+
+  .two-col { gap: 1rem !important; }
+  .three-col { gap: 0.7rem !important; }
+  .sector-grid { grid-template-columns: 1fr 1fr 1fr !important; }
+  .chart-wrap { height: auto !important; max-height: 260px !important; padding: 0.7rem 0.9rem !important; margin-top: 0.5rem !important; background: white !important; }
+  canvas { max-height: 220px !important; }
+
+  .sector-card { padding: 0.8rem 0.8rem !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sector-card-value { font-size: 1.3rem !important; }
+  .sector-card-name { font-size: 0.82rem !important; }
+  .callout { padding: 0.9rem 1.3rem !important; margin: 1rem 0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .callout-title { font-size: 1rem !important; margin-bottom: 0.3rem !important; }
+  .callout .body-md { font-size: 0.74rem !important; line-height: 1.45 !important; }
+  .deal-table td, .deal-table th { padding: 0.3rem 0.5rem !important; font-size: 0.68rem !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .deal-table .deal-company, .deal-table .deal-amount, .deal-table .deal-rank { font-size: 0.78rem !important; }
+  .deal-tag { font-size: 0.52rem !important; padding: 1px 5px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <span class="masthead-brand">The French Tech Journal</span>
+  <span class="masthead-right">Quarterly Funding Report &middot; Q3 2026</span>
+</header>
+
+<!-- HERO + HEADLINE STATS (page 1) -->
+<div class="report-section">
+<div class="page-container">
+  <section class="hero">
+    <div class="hero-subtitle">Quarterly Intelligence Briefing &middot; July&ndash;September 2026</div>
+    <h1 class="display-lg hero-title">The Mistral<br>Singularity</h1>
+    <div class="hero-intro">
+      <p>French tech just raised its biggest third quarter in years. In Q3 2026, startups pulled in <strong>&euro;4.41 billion&mdash;up 46% on a year ago</strong> and more than double the spring. By the headline, the scale-up the French ecosystem has promised for a decade has finally arrived.</p>
+      <p style="margin-top: 1rem;">It took one company. <strong>Mistral AI, the Paris frontier-model lab, raised &euro;3.0 billion in September</strong>&mdash;the largest venture round in French history, and nearly two-thirds of everything raised all quarter. Strip it out, and French tech raised &euro;1.4 billion&mdash;actually <em>down</em> on the spring.</p>
+      <p style="margin-top: 1rem;">That gap&mdash;between a record headline and a market thinning beneath it&mdash;is the story of Q3 2026. And it is no longer one quarter&rsquo;s quirk: <em>across all of 2026, a handful of giant AI rounds now do what hundreds of smaller deals used to.</em></p>
+    </div>
+  </section>
+</div>
+
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 2rem;">Q3 2026 at a Glance</div>
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-label">Total Raised</div><div class="stat-value">&euro;4.41B</div><div class="stat-sub stat-change-up">+46% vs Q3 2025</div></div>
+      <div class="stat-item"><div class="stat-label">Deals Closed</div><div class="stat-value">108</div><div class="stat-sub stat-change-down">&minus;14% &middot; six-year low</div></div>
+      <div class="stat-item"><div class="stat-label">Average Round</div><div class="stat-value">&euro;44.0M</div><div class="stat-sub stat-change-up">+83% vs &euro;24.1M</div></div>
+      <div class="stat-item"><div class="stat-label">Median Round</div><div class="stat-value">&euro;4.4M</div><div class="stat-sub stat-change-up">+47% vs &euro;3.0M</div></div>
+      <div class="stat-item"><div class="stat-label">Rounds &ge; &euro;100M</div><div class="stat-value">3</div><div class="stat-sub">Mistral, Exploration Co, Skello</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- § THE SHAPE OF THE QUARTER -->
+<div class="report-section pbreak">
+<div class="page-container">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Monthly Rhythm</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">September Was the Quarter</h2>
+    <p class="body-md" style="max-width: 640px;">September alone was &euro;3.83 billion&mdash;87% of the total&mdash;as Mistral, The Exploration Company and HighLife landed together. August was nearly dormant (&euro;89M); July was a normal month (&euro;485M, led by Skello&rsquo;s &euro;150M).</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 300px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Funding by Month, Q3 2026 (&euro;M)</div><canvas id="chart-monthly-funding"></canvas></div>
+      <div class="chart-wrap" style="height: 300px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Deals by Month, Q3 2026</div><canvas id="chart-monthly-deals"></canvas></div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">The August Lull, the September Surge</div>
+      <p class="body-md">&euro;89M in August against &euro;3.83B in September&mdash;a 43&times; swing, the starkest monthly split in the six-year series. When a single September round is &euro;3 billion, the quarter is whatever lands that month.</p>
+    </div>
+  </section>
+</div>
+</div>
+
+<!-- § TOP DEALS -->
+<div class="report-section pbreak">
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Landmark Deals</div>
+    <h2 class="headline-lg" style="margin-bottom: 1.5rem;">The 15 Largest Rounds of Q3 2026</h2>
+    <div class="chart-wrap" style="height: 360px; margin-bottom: 2rem;"><div class="label-sm" style="margin-bottom: 0.8rem;">Top Deals by Amount (&euro;M) &middot; Mistral AI (&euro;3,000M) omitted for scale</div><canvas id="chart-top-deals"></canvas></div>
+    <table class="deal-table">
+      <thead><tr><th>#</th><th>Company</th><th>Amount</th><th>Round</th><th>Month</th><th>City</th><th>Sectors</th></tr></thead>
+      <tbody>
+        <tr><td class="deal-rank">1</td><td class="deal-company">Mistral AI</td><td class="deal-amount">&euro;3,000M</td><td>Series D</td><td>Sep</td><td>Paris</td><td><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">2</td><td class="deal-company">The Exploration Company</td><td class="deal-amount">&euro;387M</td><td>Series C</td><td>Sep</td><td>Munich</td><td><span class="deal-tag">SpaceTech</span></td></tr>
+        <tr><td class="deal-rank">3</td><td class="deal-company">Skello</td><td class="deal-amount">&euro;150M</td><td>Growth</td><td>Jul</td><td>Paris</td><td><span class="deal-tag">HRTech</span><span class="deal-tag">SaaS</span></td></tr>
+        <tr><td class="deal-rank">4</td><td class="deal-company">HighLife</td><td class="deal-amount">&euro;80M</td><td>Growth</td><td>Sep</td><td>Paris</td><td><span class="deal-tag">MedTech</span></td></tr>
+        <tr><td class="deal-rank">5</td><td class="deal-company">KAIKO</td><td class="deal-amount">&euro;49M</td><td>Series B</td><td>Sep</td><td>Paris</td><td><span class="deal-tag">FinTech</span><span class="deal-tag">Data</span></td></tr>
+        <tr><td class="deal-rank">6</td><td class="deal-company">Elixir Aircraft</td><td class="deal-amount">&euro;45M</td><td>Growth</td><td>Jul</td><td>La Rochelle</td><td><span class="deal-tag">Aerospace</span></td></tr>
+        <tr><td class="deal-rank">7</td><td class="deal-company">Amarris</td><td class="deal-amount">&euro;39M</td><td>Growth</td><td>Jul</td><td>Saint-Herblain</td><td><span class="deal-tag">FinTech</span></td></tr>
+        <tr><td class="deal-rank">8</td><td class="deal-company">IMPLICITY</td><td class="deal-amount">&euro;35M</td><td>Growth</td><td>Sep</td><td>Paris</td><td><span class="deal-tag">HealthTech</span><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">9</td><td class="deal-company">Cyllene Therapeutics</td><td class="deal-amount">&euro;33M</td><td>Series C</td><td>Jul</td><td>Paris</td><td><span class="deal-tag">BioTech</span></td></tr>
+        <tr><td class="deal-rank">10</td><td class="deal-company">Biolevate</td><td class="deal-amount">&euro;30M</td><td>Series A</td><td>Sep</td><td>Paris</td><td><span class="deal-tag">HealthTech</span><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">11</td><td class="deal-company">Arlequin AI</td><td class="deal-amount">&euro;28M</td><td>Series A</td><td>Sep</td><td>Paris</td><td><span class="deal-tag">AI</span></td></tr>
+        <tr><td class="deal-rank">12</td><td class="deal-company">Gradium</td><td class="deal-amount">&euro;26.3M</td><td>Seed</td><td>Jul</td><td>Paris</td><td><span class="deal-tag">DeepTech</span></td></tr>
+        <tr><td class="deal-rank">13</td><td class="deal-company">Arrakis Technologies</td><td class="deal-amount">&euro;25.8M</td><td>Series A</td><td>Jul</td><td>London</td><td><span class="deal-tag">Web3</span></td></tr>
+        <tr><td class="deal-rank">14</td><td class="deal-company">SYNTETICA</td><td class="deal-amount">&euro;25.8M</td><td>Series A</td><td>Jul</td><td>Reims</td><td><span class="deal-tag">DeepTech</span></td></tr>
+        <tr><td class="deal-rank">15</td><td class="deal-company">Chargepoly</td><td class="deal-amount">&euro;23M</td><td>Growth</td><td>Aug</td><td>Aix-en-Provence</td><td><span class="deal-tag">CleanTech</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <div class="callout-title">The Mistral Asterisk</div>
+      <p class="body-md">Mistral&rsquo;s &euro;3.0B is <strong>68% of the entire quarter</strong>&mdash;the most dominant single deal in six years (vs Alan&rsquo;s 23% in Q2). After it, the table falls off a cliff: #2 is &euro;387M, #4 is &euro;80M, #15 is &euro;23M. Read every number in this report twice&mdash;with Mistral, and without it.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- § ONE DEAL, TWO-THIRDS -->
+<div class="report-section pbreak">
+<div class="page-container">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Outlier</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">One Deal, Two-Thirds</h2>
+    <p class="body-md" style="max-width: 680px;">Mistral&rsquo;s &euro;3.0B is 68% of all Q3 funding. Strip it out and the quarter is &euro;1.41B&mdash;up ~18% year-on-year, but <em>down ~14% on Q2</em>. Q3 2025 was <em>also</em> Mistral-topped (&euro;1.82B), so even the annual comparison is a tale of two Mistral rounds.</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 340px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Q3 Funding: Rest of Market vs Mistral (&euro;M)</div><canvas id="chart-mistral-comparison"></canvas></div>
+      <div style="padding: 1.2rem 0;">
+        <div class="label-md" style="margin-bottom: 1.2rem;">The Numbers Without Mistral</div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="stat-label">Q3 2026 total (ex-Mistral)</div><div class="stat-value" style="font-size: 2rem;">&euro;1.41B</div><div class="stat-sub stat-change-up">+18% YoY &middot; <span class="stat-change-down">&minus;14% on Q2</span></div></div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="stat-label">Mistral as share of quarter</div><div class="stat-value" style="font-size: 2rem;">68.1%</div><div class="stat-sub">highest single-deal share in six years</div></div>
+        <div style="padding: 1rem 0;"><div class="stat-label">Average round (ex-Mistral)</div><div class="stat-value" style="font-size: 2rem;">&euro;14.2M</div><div class="stat-sub">vs &euro;44.0M with Mistral</div></div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">Two Mistral Quarters Running</div>
+      <p class="body-md">Mistral topped Q3 in both 2025 (&euro;1.82B) and 2026 (&euro;3.0B), its single-deal share climbing from 60% to 68%. The French funding headline now rises and falls with one company&rsquo;s fundraising calendar. Ex-Mistral, the market grew a modest ~18% in a year&mdash;and shrank from the spring.</p>
+    </div>
+  </section>
+</div>
+</div>
+
+<!-- § THE YEAR SO FAR (signature macro section) -->
+<div class="report-section pbreak">
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Macro View</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">2026 Already Beat 2025 &mdash; With a Quarter to Spare</h2>
+    <p class="body-md" style="max-width: 660px;">Through nine months, French tech has raised <strong>&euro;9.24 billion&mdash;already 17% above all of full-year 2025 (&euro;7.88B)</strong>, and above 2024. On any Q4 at all, 2026 becomes the strongest year since the 2022 boom.</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 360px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Annual Funding (&euro;M) &middot; mega-rounds (&ge;&euro;100M) in gold &middot; 2026 = Jan&ndash;Sep</div><canvas id="chart-fullyear"></canvas></div>
+      <div style="padding: 1.2rem 0;">
+        <div class="label-md" style="margin-bottom: 1.2rem;">2026 Year-to-Date</div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="stat-label">Raised (Jan&ndash;Sep)</div><div class="stat-value" style="font-size: 2rem;">&euro;9.24B</div><div class="stat-sub stat-change-up">already +17% over all of 2025</div></div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="stat-label">From 12 rounds &ge; &euro;100M</div><div class="stat-value" style="font-size: 2rem;">64%</div><div class="stat-sub">&euro;5.89B of &euro;9.24B, from 3% of deals</div></div>
+        <div style="padding: 1rem 0;"><div class="stat-label">Deal count (Jan&ndash;Sep)</div><div class="stat-value" style="font-size: 2rem;">388</div><div class="stat-sub stat-change-down">fewest on record (~515 annualized)</div></div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">Bigger Year, Thinner Market</div>
+      <p class="body-md">The record is three companies. <strong>The top three&mdash;Mistral (&euro;3.0B), AMI (&euro;890M) and Alan (&euro;480M)&mdash;are &euro;4.37B, 47% of the year; Mistral alone is ~32%.</strong> And the <em>rest</em> of the market&mdash;everything under &euro;100M&mdash;is just &euro;3.36B, the lowest in the six-year series. 2026 is a bigger year than 2025 built on barely half the deals: a handful of global-scale AI rounds doing what hundreds of smaller ones used to.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- § FIVE YEARS OF Q3s -->
+<div class="report-section pbreak">
+<div class="page-container">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Long View</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">The Biggest Q3, on the Fewest Deals</h2>
+    <p class="body-md" style="max-width: 640px;">At &euro;4.41B, Q3 2026 tops even the 2021 boom-era Q3 (&euro;3.96B)&mdash;yet deal count (108) is the lowest in six years, down from 237 in 2022. Record money, record-low breadth.</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 320px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Q3 Total Raised by Year, 2021&ndash;26 (&euro;M)</div><canvas id="chart-q3-total-by-year"></canvas></div>
+      <div class="chart-wrap" style="height: 320px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Q3 Deal Count by Year, 2021&ndash;26</div><canvas id="chart-q3-deals-by-year"></canvas></div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">The Recurring Giant, Supersized</div>
+      <p class="body-md">Every Q3 has a flagship round&mdash;Sorare, Contentsquare, Verkor, then Mistral and Mistral again. What changed is scale: Mistral&rsquo;s 68% share has no precedent in the series (the prior high was Verkor&rsquo;s 38% in 2023). The quarter no longer <em>has</em> a giant; it <em>is</em> one.</p>
+    </div>
+  </section>
+</div>
+</div>
+
+<!-- § AI IS THE QUARTER -->
+<div class="report-section pbreak">
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Sector Intelligence</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">&euro;3.55 Billion Flowed to AI. &euro;3B of It to One Lab.</h2>
+    <p class="body-md" style="max-width: 660px;">Counting every sector tag, AI touched <strong>&euro;3.55B&mdash;81% of the quarter</strong>. But &euro;3.0B is Mistral; ex-Mistral, AI (~&euro;554M) is still France&rsquo;s largest sector and up ~22% YoY. (Totals overlap: deals carry multiple tags.)</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 420px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Sectors by Funding (&euro;M) &middot; all tags</div><canvas id="chart-sectors"></canvas></div>
+      <div class="chart-wrap" style="height: 420px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Sector YoY Change (%)</div><canvas id="chart-sector-change"></canvas></div>
+    </div>
+    <div style="margin-top: 2.5rem;">
+      <div class="label-md" style="margin-bottom: 1.5rem;">Sector Highlights</div>
+      <div class="sector-grid">
+        <div class="sector-card" style="border-left: 3px solid var(--chart-1);"><div class="label-sm">The Quarter</div><div class="sector-card-name">Artificial Intelligence</div><div class="sector-card-value">&euro;3,554M</div><div class="sector-card-change stat-change-up">81% of all value</div><div class="sector-card-deals">57 deals &middot; &euro;3.0B is Mistral; ex-Mistral ~&euro;554M</div></div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-5);"><div class="label-sm">Spike</div><div class="sector-card-name">SpaceTech</div><div class="sector-card-value">&euro;453M</div><div class="sector-card-change stat-change-up">+521% YoY</div><div class="sector-card-deals">6 deals &middot; The Exploration Company &euro;387M</div></div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-2);"><div class="label-sm">Rebound</div><div class="sector-card-name">SaaS</div><div class="sector-card-value">&euro;425M</div><div class="sector-card-change stat-change-up">+183% YoY</div><div class="sector-card-deals">37 deals &middot; Skello + breadth</div></div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-4);"><div class="label-sm">Recovering</div><div class="sector-card-name">Health cluster</div><div class="sector-card-value">~&euro;420M</div><div class="sector-card-change stat-change-up">Health + Med + Bio</div><div class="sector-card-deals">HighLife, IMPLICITY, Cyllene</div></div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-3);"><div class="label-sm">Cooling</div><div class="sector-card-name">CleanTech</div><div class="sector-card-value">&euro;96M</div><div class="sector-card-change stat-change-down">&minus;61% YoY</div><div class="sector-card-deals">8 deals</div></div>
+        <div class="sector-card" style="border-left: 3px solid var(--chart-9);"><div class="label-sm">Near-Zero</div><div class="sector-card-name">Energy</div><div class="sector-card-value">&euro;33M</div><div class="sector-card-change stat-change-down">&minus;86% YoY</div><div class="sector-card-deals">3 deals</div></div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">Beneath the Giant</div>
+      <p class="body-md">Away from Mistral, the genuine movers are <strong>SpaceTech</strong> (The Exploration Company) and <strong>health/medtech</strong> (both up triple digits YoY); energy, cleantech and hardware all fell. AI still eats everything&mdash;it just ate more of it through one company.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- § THE THINNING BASE -->
+<div class="report-section pbreak">
+<div class="page-container">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Stage Structure</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">One Series D, Larger Than Everything Else</h2>
+    <p class="body-md" style="max-width: 640px;">Mistral&rsquo;s &euro;3.0B Series D&mdash;a stage absent from every prior Q3&mdash;is bigger than all other stages combined. Beneath it, seed fell to 50 deals, a six-year low (from 61), and Series B more than halved in value.</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 340px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Stage Distribution by Amount (&euro;M)</div><canvas id="chart-stage-donut"></canvas></div>
+      <div class="chart-wrap" style="height: 340px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Seed &amp; Pre-Seed Deal Count by Year, Q3 2021&ndash;26</div><canvas id="chart-seed-by-year"></canvas></div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">The Pipeline Problem, Still</div>
+      <p class="body-md">Early-stage deal-making has halved since 2021 (121 &rarr; 60 seed + pre-seed in Q3). The funnel that should feed tomorrow&rsquo;s Mistrals is narrowing even as today&rsquo;s takes a record cheque. Top swelling, base eroding&mdash;the structural core of the whole 2026 story.</p>
+    </div>
+  </section>
+</div>
+</div>
+
+<!-- § GEOGRAPHY & ECOSYSTEM -->
+<div class="report-section pbreak">
+<div class="surface-shift">
+  <div class="page-container">
+    <div class="label-md" style="margin-bottom: 0.4rem;">The Map &amp; the Ecosystem</div>
+    <h2 class="headline-lg" style="margin-bottom: 0.8rem;">Paris Is Now 82% of the Money</h2>
+    <p class="body-md" style="max-width: 640px;">Paris took 82% of value&mdash;almost all of it Mistral; ex-Mistral it still held ~45%. Regional activity was thin and small-cheque, with Grenoble (Q2&rsquo;s star) nearly silent. The notable non-Paris round came from Munich (The Exploration Company).</p>
+    <div class="two-col" style="margin-top: 1.5rem;">
+      <div class="chart-wrap" style="height: 300px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Paris vs Regions / Abroad (share of value)</div><canvas id="chart-geo-split"></canvas></div>
+      <div class="chart-wrap" style="height: 300px;"><div class="label-sm" style="margin-bottom: 0.8rem;">Top Cities by Funding (&euro;M)</div><canvas id="chart-cities"></canvas></div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">The Public Backbone</div>
+      <p class="body-md">Bpifrance touched <strong>27 of 108 deals (25%)</strong>&mdash;its highest share of the year&mdash;with Business Angels (23) and Kima Ventures (6) behind. As private institutional money concentrates into a few mega-rounds, the state increasingly funds the long tail of everything smaller.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- § OUTLOOK -->
+<div class="report-section pbreak">
+<div class="page-container">
+  <section class="section-break">
+    <div class="label-md" style="margin-bottom: 0.4rem;">Forward Look</div>
+    <h2 class="headline-lg" style="margin-bottom: 1.5rem;">The Full-Year Number &mdash; and Who Earns It</h2>
+    <div class="two-col" style="gap: 3rem;">
+      <div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="headline-sm">Does the Full Year Clear &euro;10B?</div><p class="body-sm" style="margin-top: 0.3rem;">With &euro;9.24B banked by September, almost any Q4 sets a post-2022 record.</p></div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="headline-sm">Is Mistral a One-Off or the New Normal?</div><p class="body-sm" style="margin-top: 0.3rem;">Watch for a second &euro;1B+ French round&mdash;a challenger, or Mistral&rsquo;s next raise.</p></div>
+        <div style="padding: 1rem 0;"><div class="headline-sm">Does the Deal Count Stop Falling?</div><p class="body-sm" style="margin-top: 0.3rem;">The single metric separating a cyclical dip from a structural one.</p></div>
+      </div>
+      <div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="headline-sm">Where Does AI Settle Ex-Mistral?</div><p class="body-sm" style="margin-top: 0.3rem;">Find the real, giant-free AI baseline (~&euro;554M this quarter).</p></div>
+        <div class="ghost-border-bottom" style="padding: 1rem 0;"><div class="headline-sm">Can a Second Hub Reappear?</div><p class="body-sm" style="margin-top: 0.3rem;">Grenoble went quiet; watch for regional deeptech to return.</p></div>
+        <div style="padding: 1rem 0;"><div class="headline-sm">SpaceTech Follow-Through</div><p class="body-sm" style="margin-top: 0.3rem;">Is The Exploration Company a cluster forming, or a one-quarter spike?</p></div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">The Question the Fourth Quarter Answers</div>
+      <p class="body-md">2026 will be French tech&rsquo;s biggest year since the boom. Whether that&rsquo;s a triumph or a warning depends on whether anyone else can raise like Mistral&mdash;or whether the French ecosystem is now one company and a very long tail.</p>
+    </div>
+  </section>
+</div>
+</div>
+
+<div class="page-container no-print" style="padding: 3rem 0; text-align: center;">
+  <button onclick="window.print()" style="font-family: 'Public Sans', sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 14px 36px; background: linear-gradient(135deg, #114563 0%, #2f5d7c 100%); color: white; border: none; cursor: pointer;">Save as PDF</button>
+  <p class="body-sm" style="margin-top: 0.8rem;">Opens your browser&rsquo;s print dialog. Select &ldquo;Save as PDF&rdquo; as the destination.</p>
+</div>
+
+<footer class="page-container">
+  <p>Data: French Tech Funding Tracker &middot; <strong>frenchtechjournal.com</strong></p>
+  <p style="margin-top: 0.3rem;">Q3 2026 (July&ndash;September): 108 rounds, &euro;4.41B raised across the French tech ecosystem.</p>
+  <p style="margin-top: 0.3rem;">&copy; 2026 The French Tech Journal. All rights reserved.</p>
+</footer>
+
+<script>
+Chart.defaults.font.family = "'Public Sans', sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#41474d';
+Chart.defaults.plugins.legend.display = false;
+Chart.defaults.plugins.tooltip.backgroundColor = '#114563';
+Chart.defaults.plugins.tooltip.cornerRadius = 0;
+Chart.defaults.plugins.tooltip.padding = 10;
+const P = ['#114563','#2f5d7c','#775a0f','#3c6840','#503863','#8b6914','#460602','#5a7a8b','#7a5a3a','#3a7a7a'];
+const gridColor = 'rgba(193,199,206,0.15)';
+function fmt(m){ if(m>=1000) return '€'+(m/1000).toFixed(1)+'B'; if(m>=1) return '€'+Math.round(m)+'M'; return '€'+(m*1000).toFixed(0)+'K'; }
+
+// 1. Monthly funding
+new Chart(document.getElementById('chart-monthly-funding'), {
+  type:'bar', data:{ labels:['July','August','September'], datasets:[{ data:[485,89,3832], backgroundColor:'#114563', borderWidth:0 }] },
+  options:{ responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>fmt(c.raw) } } },
+    scales:{ x:{ grid:{display:false}, border:{display:false} }, y:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } } } }
+});
+// 2. Monthly deals
+new Chart(document.getElementById('chart-monthly-deals'), {
+  type:'bar', data:{ labels:['July','August','September'], datasets:[{ data:[32,14,62], backgroundColor:'#2f5d7c', borderWidth:0 }] },
+  options:{ responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>c.raw+' deals' } } },
+    scales:{ x:{ grid:{display:false}, border:{display:false} }, y:{ grid:{color:gridColor}, border:{display:false} } } }
+});
+// 3. Top deals (ex-Mistral)
+new Chart(document.getElementById('chart-top-deals'), {
+  type:'bar', data:{ labels:['The Exploration Co','Skello','HighLife','KAIKO','Elixir Aircraft','Amarris','IMPLICITY','Cyllene Therap.','Biolevate','Arlequin AI'],
+    datasets:[{ data:[387,150,80,49,45,39,35,33,30,28], backgroundColor:P, borderWidth:0 }] },
+  options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>fmt(c.raw) } } },
+    scales:{ x:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } }, y:{ grid:{display:false}, border:{display:false}, ticks:{ font:{family:"'Newsreader', serif", size:11, weight:600} } } } }
+});
+// 4. Full-year (stacked: rest + mega)
+new Chart(document.getElementById('chart-fullyear'), {
+  type:'bar', data:{ labels:['2021','2022','2023','2024','2025','2026 YTD'],
+    datasets:[
+      { label:'Rest of market', data:[6072,7499,5994,4905,5384,3357], backgroundColor:'#114563', borderWidth:0 },
+      { label:'Mega-rounds (≥€100M)', data:[5689,7209,2138,2270,2498,5887], backgroundColor:'#775a0f', borderWidth:0 }
+    ] },
+  options:{ responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ display:true, position:'top', align:'end', labels:{ boxWidth:12, padding:14, font:{size:10} } },
+      tooltip:{ callbacks:{ label:c=>c.dataset.label+': '+fmt(c.raw), footer:items=>'Total: '+fmt(items.reduce((s,i)=>s+i.raw,0)) } } },
+    scales:{ x:{ stacked:true, grid:{display:false}, border:{display:false} }, y:{ stacked:true, grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } } } }
+});
+// 5. Q3 total by year
+new Chart(document.getElementById('chart-q3-total-by-year'), {
+  type:'bar', data:{ labels:['2021','2022','2023','2024','2025','2026'], datasets:[{ data:[3957,2280,2168,1539,3013,4405], backgroundColor:['#2f5d7c','#2f5d7c','#2f5d7c','#2f5d7c','#2f5d7c','#775a0f'], borderWidth:0 }] },
+  options:{ responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>fmt(c.raw)+(c.dataIndex===5?'  (highest Q3)':'') } } },
+    scales:{ x:{ grid:{display:false}, border:{display:false} }, y:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } } } }
+});
+// 6. Q3 deals by year (line)
+new Chart(document.getElementById('chart-q3-deals-by-year'), {
+  type:'line', data:{ labels:['2021','2022','2023','2024','2025','2026'], datasets:[{ data:[208,237,191,187,125,108], borderColor:'#460602', backgroundColor:'rgba(70,6,2,0.06)', borderWidth:2, fill:true, tension:0.25, pointBackgroundColor:'#460602', pointRadius:4 }] },
+  options:{ responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>c.raw+' deals' } } },
+    scales:{ x:{ grid:{display:false}, border:{display:false} }, y:{ grid:{color:gridColor}, border:{display:false}, beginAtZero:true } } }
+});
+// 7. Sectors by funding (all-tags)
+new Chart(document.getElementById('chart-sectors'), {
+  type:'bar', data:{ labels:['AI & ML','SpaceTech','SaaS','MedTech','HealthTech','HRTech','FinTech','BioTech','CleanTech','DeepTech','Hardware','Cybersecurity'],
+    datasets:[{ data:[3554,453,425,165,155,151,135,100,96,84,77,37], backgroundColor:P.concat(P), borderWidth:0 }] },
+  options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>fmt(c.raw)+(c.dataIndex===0?'  (€3.0B is Mistral)':'') } } },
+    scales:{ x:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } }, y:{ grid:{display:false}, border:{display:false}, ticks:{ font:{size:10} } } } }
+});
+// 8. Sector YoY change (diverging)
+(function(){
+  const labels=['SaaS','HealthTech','AI & ML','FinTech','DeepTech','CleanTech','Hardware','Energy'];
+  const data=[183,131,56,39,-17,-61,-75,-86];
+  const colors=data.map(v=> v>=0 ? '#775a0f' : '#460602');
+  new Chart(document.getElementById('chart-sector-change'), {
+    type:'bar', data:{ labels, datasets:[{ data, backgroundColor:colors, borderWidth:0 }] },
+    options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>(c.raw>=0?'+':'')+c.raw+'% YoY' } } },
+      scales:{ x:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>(v>0?'+':'')+v+'%' } }, y:{ grid:{display:false}, border:{display:false}, ticks:{ font:{size:10} } } } }
+  });
+})();
+// 9. Stage doughnut
+new Chart(document.getElementById('chart-stage-donut'), {
+  type:'doughnut', data:{ labels:['Series D','Growth','Series C','Series A','Seed','Series B','Pre-Seed'], datasets:[{ data:[3000,420,420,221,182,148,14], backgroundColor:P.slice(0,7), borderWidth:0, hoverOffset:6 }] },
+  options:{ responsive:true, maintainAspectRatio:false, cutout:'58%', plugins:{ legend:{ display:true, position:'bottom', labels:{ boxWidth:10, padding:10, font:{size:10} } }, tooltip:{ callbacks:{ label:c=>c.label+': '+fmt(c.raw) } } } }
+});
+// 10. Seed & pre-seed by year (line)
+new Chart(document.getElementById('chart-seed-by-year'), {
+  type:'line', data:{ labels:['2021','2022','2023','2024','2025','2026'], datasets:[{ data:[121,164,140,109,70,60], borderColor:'#775a0f', backgroundColor:'rgba(119,90,15,0.07)', borderWidth:2, fill:true, tension:0.25, pointBackgroundColor:'#775a0f', pointRadius:4 }] },
+  options:{ responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>c.raw+' seed + pre-seed deals' } } },
+    scales:{ x:{ grid:{display:false}, border:{display:false} }, y:{ grid:{color:gridColor}, border:{display:false}, beginAtZero:true } } }
+});
+// 11. Geo split
+new Chart(document.getElementById('chart-geo-split'), {
+  type:'doughnut', data:{ labels:['Paris (82%)','Regions / Abroad (18%)'], datasets:[{ data:[3632,773], backgroundColor:['#114563','#c1c7ce'], borderWidth:0, hoverOffset:4 }] },
+  options:{ responsive:true, maintainAspectRatio:false, cutout:'62%', plugins:{ legend:{ display:true, position:'bottom', labels:{ boxWidth:10, padding:12, font:{size:11} } }, tooltip:{ callbacks:{ label:c=>c.label+': '+fmt(c.raw) } } } }
+});
+// 12. Top cities
+new Chart(document.getElementById('chart-cities'), {
+  type:'bar', data:{ labels:['Paris','Munich','La Rochelle','Saint-Herblain','Toulouse','Bordeaux','Reims','Lyon'], datasets:[{ data:[3632,387,45,39,31,28,26,25], backgroundColor:'#114563', borderWidth:0 }] },
+  options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{ tooltip:{ callbacks:{ label:c=>fmt(c.raw)+(c.dataIndex===0?'  (incl. Mistral €3.0B)':'') } } },
+    scales:{ x:{ grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } }, y:{ grid:{display:false}, border:{display:false}, ticks:{ font:{size:10} } } } }
+});
+// 13. Mistral with/without (stacked)
+new Chart(document.getElementById('chart-mistral-comparison'), {
+  type:'bar', data:{ labels:['Q3 2025','Q3 2026'], datasets:[
+    { label:'Rest of market', data:[1195,1405], backgroundColor:'#114563', borderWidth:0 },
+    { label:'Mistral AI', data:[1818,3000], backgroundColor:'#775a0f', borderWidth:0 }
+  ] },
+  options:{ responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ display:true, position:'top', align:'end', labels:{ boxWidth:12, padding:14, font:{size:10} } },
+      tooltip:{ callbacks:{ label:c=>c.dataset.label+': '+fmt(c.raw), footer:items=>'Total: '+fmt(items.reduce((s,i)=>s+i.raw,0)) } } },
+    scales:{ x:{ stacked:true, grid:{display:false}, border:{display:false} }, y:{ stacked:true, grid:{color:gridColor}, border:{display:false}, ticks:{ callback:v=>fmt(v) } } } }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4/js/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>
