@@ -58,7 +58,9 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Run on everything except Next.js internals and static files.
-    "/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|txt|xml)$).*)",
+    // Run on everything except Next.js internals and top-level static files
+    // (favicon, public/*.svg). Only single-segment paths are skipped, so a
+    // page like /entities/foo.svg still goes through the login check.
+    "/((?!_next/static|_next/image|[^/]+\\.(?:ico|png|jpg|jpeg|gif|svg|webp|txt|xml)$).*)",
   ],
 };
