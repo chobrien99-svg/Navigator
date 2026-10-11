@@ -19,7 +19,13 @@ export default function LoginPage() {
 
     try {
       await signInWithEmail(email, password);
-      router.push("/admin");
+      // Return to the page the visitor was trying to open (set by src/proxy.ts).
+      // Only accept same-site paths, never "//other-site.com".
+      const next = new URLSearchParams(window.location.search).get("next");
+      const destination =
+        next && next.startsWith("/") && !next.startsWith("//") ? next : "/";
+      router.replace(destination);
+      router.refresh();
     } catch (err) {
       setError(
         err instanceof Error ? err.message : "Invalid email or password"
