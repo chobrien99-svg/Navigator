@@ -20,10 +20,20 @@ export default function LoginPage() {
     try {
       await signInWithEmail(email, password);
       // Return to the page the visitor was trying to open (set by src/proxy.ts).
-      // Only accept same-site paths, never "//other-site.com".
+      // Only accept pages on this site: resolve the value the way the browser
+      // would and reject anything on another origin (e.g. "//x" or "/\x").
       const next = new URLSearchParams(window.location.search).get("next");
-      const destination =
-        next && next.startsWith("/") && !next.startsWith("//") ? next : "/";
+      let destination = "/";
+      if (next) {
+        try {
+          const target = new URL(next, window.location.origin);
+          if (target.origin === window.location.origin) {
+            destination = target.pathname + target.search + target.hash;
+          }
+        } catch {
+          // Malformed value: fall back to the home page.
+        }
+      }
       router.replace(destination);
       router.refresh();
     } catch (err) {
