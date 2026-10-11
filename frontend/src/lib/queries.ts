@@ -1,4 +1,5 @@
-import { supabase } from "./supabase";
+import { createServerSupabase } from "./supabase-server";
+import { fetchDashboardStats } from "./dashboard-stats";
 import type {
   Organization,
   Person,
@@ -11,36 +12,11 @@ import type {
   ProgramOrganization,
 } from "./types";
 
-// ─── Helpers ──────────────────────────────────────────────────
+// Server-only: reads as the signed-in visitor, so team-only database rules
+// apply. Browser code should use the client in ./supabase instead.
+const db = createServerSupabase;
 
-// Amounts in the funding_rounds table are stored in millions (€M).
-// e.g. 1818.18 means €1,818.18M = €1,818,180,000
-const AMOUNT_MULTIPLIER = 1_000_000;
-
-export function toRawEur(amountInMillions: number | null): number | null {
-  if (amountInMillions == null) return null;
-  return amountInMillions * AMOUNT_MULTIPLIER;
-}
-
-export function formatEur(amount: number | null): string {
-  if (amount == null) return "—";
-  if (amount >= 1_000_000_000)
-    return `€${(amount / 1_000_000_000).toFixed(1)}B`;
-  if (amount >= 1_000_000) return `€${(amount / 1_000_000).toFixed(1)}M`;
-  if (amount >= 1_000) return `€${(amount / 1_000).toFixed(0)}K`;
-  return `€${amount.toLocaleString()}`;
-}
-
-/** Format an amount stored in millions (as in the DB) directly to display */
-export function formatEurFromDb(amountInMillions: number | null): string {
-  return formatEur(toRawEur(amountInMillions));
-}
-
-export function formatStage(stage: string): string {
-  return stage
-    .replace(/_/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
-}
+export { toRawEur, formatEur, formatEurFromDb, formatStage } from "./format";
 
 // ─── Organizations ────────────────────────────────────────────
 
@@ -48,6 +24,7 @@ export async function getOrganizations(opts?: {
   type?: string;
   limit?: number;
 }) {
+  const supabase = await db();
   let query = supabase
     .from("organizations")
     .select(
@@ -68,6 +45,7 @@ export async function getOrganizations(opts?: {
 }
 
 export async function getOrganizationBySlug(slug: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("organizations")
     .select(
@@ -85,6 +63,7 @@ export async function getOrganizationBySlug(slug: string) {
 }
 
 export async function getOrganizationFunding(orgId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("funding_rounds")
     .select(
@@ -98,6 +77,7 @@ export async function getOrganizationFunding(orgId: string) {
 }
 
 export async function getOrganizationPeople(orgId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("organization_people")
     .select(`*, people(*)`)
@@ -109,6 +89,7 @@ export async function getOrganizationPeople(orgId: string) {
 }
 
 export async function getOrganizationLegalEntities(orgId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("legal_entities")
     .select("*")
@@ -119,6 +100,7 @@ export async function getOrganizationLegalEntities(orgId: string) {
 }
 
 export async function getOrganizationRelationships(orgId: string) {
+  const supabase = await db();
   const { data: outbound, error: e1 } = await supabase
     .from("organization_relationships")
     .select(`*, target_org:target_org_id(name, slug, organization_type)`)
@@ -138,6 +120,7 @@ export async function getOrganizationRelationships(orgId: string) {
 }
 
 export async function getOrganizationTags(orgId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("organization_tags")
     .select("*")
@@ -151,6 +134,7 @@ export async function getOrganizationTags(orgId: string) {
 // ─── Investors (organizations with type=investor) ─────────────
 
 export async function getInvestorPortfolio(investorId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("funding_round_investors")
     .select(
@@ -166,6 +150,7 @@ export async function getInvestorPortfolio(investorId: string) {
 // ─── People ───────────────────────────────────────────────────
 
 export async function getPeople(opts?: { limit?: number }) {
+  const supabase = await db();
   let query = supabase.from("people").select("*").order("full_name");
   if (opts?.limit) query = query.limit(opts.limit);
 
@@ -175,6 +160,7 @@ export async function getPeople(opts?: { limit?: number }) {
 }
 
 export async function getPersonBySlug(slug: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("people")
     .select("*")
@@ -186,6 +172,7 @@ export async function getPersonBySlug(slug: string) {
 }
 
 export async function getPersonOrganizations(personId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("organization_people")
     .select(
@@ -199,6 +186,7 @@ export async function getPersonOrganizations(personId: string) {
 }
 
 export async function getPersonExperience(personId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("person_experience")
     .select(`*, organizations(name, slug)`)
@@ -212,6 +200,7 @@ export async function getPersonExperience(personId: string) {
 // ─── Funding ──────────────────────────────────────────────────
 
 export async function getAllFundingRounds(opts?: { limit?: number }) {
+  const supabase = await db();
   let query = supabase
     .from("funding_rounds")
     .select(
@@ -231,6 +220,7 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
 // ─── Programs ────────────────────────────────────────────────
 
 export async function getFrenchTechNextMembers() {
+  const supabase = await db();
   // Step 1: Get the program ID
   const { data: programs, error: progErr } = await supabase
     .from("programs")
@@ -283,6 +273,7 @@ export async function getINovMembers() {
 }
 
 async function getProgramMembers(programSlug: string) {
+  const supabase = await db();
   // Step 1: Get the program ID
   const { data: programs, error: progErr } = await supabase
     .from("programs")
@@ -327,6 +318,7 @@ async function getProgramMembers(programSlug: string) {
 }
 
 export async function getOrganizationPrograms(orgId: string) {
+  const supabase = await db();
   const { data, error } = await supabase
     .from("program_organizations")
     .select(
@@ -341,24 +333,5 @@ export async function getOrganizationPrograms(orgId: string) {
 // ─── Stats ────────────────────────────────────────────────────
 
 export async function getDashboardStats() {
-  const [orgCount, peopleCount, roundsCount] = await Promise.all([
-    supabase.from("organizations").select("id", { count: "exact", head: true }),
-    supabase.from("people").select("id", { count: "exact", head: true }),
-    supabase.from("funding_rounds").select("id", { count: "exact", head: true }),
-  ]);
-
-  // Sum total raised
-  const { data: fundingSum } = await supabase
-    .from("funding_rounds")
-    .select("amount_eur");
-
-  const totalRaised =
-    fundingSum?.reduce((sum, r) => sum + (r.amount_eur ?? 0), 0) ?? 0;
-
-  return {
-    organizations: orgCount.count ?? 0,
-    people: peopleCount.count ?? 0,
-    fundingRounds: roundsCount.count ?? 0,
-    totalRaised,
-  };
+  return fetchDashboardStats(await db());
 }

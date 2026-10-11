@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { signInWithEmail } from "@/lib/auth";
+import { signInWithEmail, signOut } from "@/lib/auth";
+import { isTeamMember } from "@/lib/team-access";
+
+const NOT_TEAM_MESSAGE =
+  "The Navigator is currently open to the team only. This account doesn't have access.";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -12,13 +16,26 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // src/proxy.ts sends signed-in non-team accounts here with ?error=not_team.
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("error") === "not_team") {
+      setError(NOT_TEAM_MESSAGE);
+    }
+  }, []);
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
     setLoading(true);
 
     try {
-      await signInWithEmail(email, password);
+      const { user } = await signInWithEmail(email, password);
+      if (!isTeamMember(user)) {
+        // Local only: don't log them out of France AI Radar or other devices.
+        await signOut("local");
+        setError(NOT_TEAM_MESSAGE);
+        return;
+      }
       // Return to the page the visitor was trying to open (set by src/proxy.ts).
       // Only accept pages on this site: resolve the value the way the browser
       // would and reject anything on another origin (e.g. "//x" or "/\x").

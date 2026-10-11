@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import { isTeamMember } from "@/lib/team-access";
 
 // Paths anyone can reach without logging in. Everything else requires a
 // signed-in Supabase user.
@@ -47,9 +48,10 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) {
+  if (!user || !isTeamMember(user)) {
     const loginUrl = new URL("/login", request.url);
     loginUrl.searchParams.set("next", pathname + search);
+    if (user) loginUrl.searchParams.set("error", "not_team");
     return NextResponse.redirect(loginUrl);
   }
 

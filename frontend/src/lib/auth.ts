@@ -9,8 +9,11 @@ export async function signInWithEmail(email: string, password: string) {
   return data;
 }
 
-export async function signOut() {
-  const { error } = await supabase.auth.signOut();
+// "global" (Supabase's default) ends the account's sessions everywhere,
+// including on other sites sharing this Supabase project; "local" only
+// ends this browser's session.
+export async function signOut(scope: "global" | "local" = "global") {
+  const { error } = await supabase.auth.signOut({ scope });
   if (error) throw error;
 }
 

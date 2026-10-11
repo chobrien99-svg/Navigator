@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getDashboardStats, formatEurFromDb } from "@/lib/queries";
+import { fetchDashboardStats } from "@/lib/dashboard-stats";
+import { formatEurFromDb } from "@/lib/format";
+import { supabase } from "@/lib/supabase";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -13,7 +15,7 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
-    getDashboardStats().then(setStats).catch(() => {});
+    fetchDashboardStats(supabase).then(setStats).catch(() => {});
   }, []);
 
   return (
