@@ -19,7 +19,9 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
-import { renderFundingHub } from "./render.mjs";
+// Rendering code and config are shared with the Navigator app's
+// /embed/funding-hub route, which serves the paid module.
+import { renderEmbedDocument, renderFreeModule, renderPaidModule } from "../../frontend/src/lib/funding-hub/render.mjs";
 import { createGhostClient, upsertHubCard } from "./ghost.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -34,7 +36,7 @@ const { values: args } = parseArgs({
 });
 
 const readJson = async (path) => JSON.parse(await readFile(path, "utf8"));
-const config = await readJson(join(HERE, "config.json"));
+const config = await readJson(join(HERE, "../../frontend/src/lib/funding-hub/config.json"));
 
 function parisYear() {
   return Number(new Intl.DateTimeFormat("en", { year: "numeric", timeZone: "Europe/Paris" }).format(new Date()));
@@ -49,10 +51,10 @@ async function fetchJson(url) {
 async function loadNavigatorData(year) {
   if (args.fixtures) {
     const dir = join(HERE, "fixtures");
-    const [summary, latest, largest] = await Promise.all(
-      ["summary.json", "latest.json", "largest.json"].map((f) => readJson(join(dir, f)))
+    const [summary, latest, largest, annual] = await Promise.all(
+      ["summary.json", "latest.json", "largest.json", "annual.json"].map((f) => readJson(join(dir, f)))
     );
-    return { summary, latest, largest };
+    return { summary, latest, largest, annual: annual.data };
   }
   const base = (process.env.NAVIGATOR_API_BASE || config.navigatorApiBase).replace(/\/+$/, "");
   const [summary, latest, largest] = await Promise.all([
@@ -60,7 +62,16 @@ async function loadNavigatorData(year) {
     fetchJson(`${base}/funding/rounds?year=${year}&limit=${config.latestLimit}&sort=announcement_date:desc`),
     fetchJson(`${base}/funding/rounds?year=${year}&limit=${config.largestLimit}&sort=amount_eur:desc`),
   ]);
-  return { summary, latest, largest };
+  // The annual chart is optional: if the endpoint is missing or fails, the
+  // free module is published without it rather than not at all.
+  const from = Number(config.annualFromYear) || year - 5;
+  const annual = await fetchJson(`${base}/funding/annual?from=${from}&to=${year}`)
+    .then((r) => (Array.isArray(r?.data) ? r.data : []))
+    .catch((e) => {
+      console.warn(`Could not load annual totals (${e.message}); skipping the annual chart.`);
+      return [];
+    });
+  return { summary, latest, largest, annual };
 }
 
 function validate({ summary, latest, largest }, year) {
@@ -110,17 +121,16 @@ async function main() {
   }
 
   const intro = await readFile(join(HERE, "intro.html"), "utf8").catch(() => "");
-  const html = renderFundingHub({
+  const html = renderFreeModule({
     summary: data.summary,
-    latest: data.latest.data,
-    largest: data.largest.data,
+    annual: data.annual,
     wire,
     config,
     intro,
   });
   console.log(
-    `Rendered ${year}: ${data.summary.round_count} rounds, ${data.latest.data.length} latest, ` +
-      `${data.largest.data.length} largest, ${wire.length} Funding Wire posts (${html.length.toLocaleString()} chars).`
+    `Rendered free module for ${year}: ${data.summary.round_count} rounds, ${data.annual.length} years in the annual chart, ` +
+      `${wire.length} Funding Wire posts (${html.length.toLocaleString()} chars).`
   );
 
   if (args.out) {
@@ -129,7 +139,10 @@ async function main() {
     const draft = await readFile(join(HERE, "editorial-draft.html"), "utf8");
     const [heading, methodology] = draft.split("<!-- FUNDING HUB CARD GOES HERE -->");
     await writeFile(join(args.out, "preview.html"), previewPage(heading + html + methodology, args.fixtures));
-    console.log(`Wrote ${join(args.out, "funding-hub-card.html")} and preview.html`);
+    // Local copy of what the Navigator /embed/funding-hub route serves.
+    const paid = renderPaidModule({ summary: data.summary, latest: data.latest.data, largest: data.largest.data, config });
+    await writeFile(join(args.out, "paid-embed.html"), renderEmbedDocument({ body: paid }));
+    console.log(`Wrote funding-hub-card.html, preview.html and paid-embed.html to ${args.out}`);
   }
 
   if (ghost) {

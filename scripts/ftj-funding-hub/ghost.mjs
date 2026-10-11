@@ -2,7 +2,7 @@
 // Docs: https://ghost.org/docs/admin-api/
 
 import { createHmac } from "node:crypto";
-import { START_MARKER } from "./render.mjs";
+import { START_MARKER } from "../../frontend/src/lib/funding-hub/render.mjs";
 
 function base64url(input) {
   return Buffer.from(input).toString("base64url");

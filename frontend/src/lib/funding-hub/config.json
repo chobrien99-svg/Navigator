@@ -5,6 +5,8 @@
   "pageWidthPx": 1180,
   "latestLimit": 50,
   "largestLimit": 20,
+  "annualFromYear": 2021,
+  "annualOverrides": {},
   "fundingWireTag": "funding-news",
   "fundingWireTitleMatch": "Funding Wire",
   "fundingWireLimit": 6,

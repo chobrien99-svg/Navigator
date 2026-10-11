@@ -239,6 +239,45 @@ export async function getPublicSummary(year: number): Promise<PublicFundingSumma
   };
 }
 
+export interface PublicFundingYear {
+  year: number;
+  total_disclosed_eur: number;
+  round_count: number;
+  disclosed_round_count: number;
+}
+
+// Per-year totals for the annual chart. Only two columns are read, so this
+// stays cheap even across several years of rounds.
+export async function getPublicAnnual(from: number, to: number): Promise<PublicFundingYear[]> {
+  const years = new Map<number, PublicFundingYear>();
+  for (let y = from; y <= to; y++) {
+    years.set(y, { year: y, total_disclosed_eur: 0, round_count: 0, disclosed_round_count: 0 });
+  }
+  for (let start = 0; ; start += PAGE_SIZE) {
+    const { data, error } = await supabase
+      .from("funding_rounds")
+      .select("id, announced_date, amount_eur")
+      .eq("publish_status", "published")
+      .gte("announced_date", `${from}-01-01`)
+      .lte("announced_date", `${to}-12-31`)
+      .order("id")
+      .range(start, start + PAGE_SIZE - 1);
+    if (error) throw error;
+    for (const r of data ?? []) {
+      const y = years.get(Number(String(r.announced_date).slice(0, 4)));
+      if (!y) continue;
+      y.round_count += 1;
+      const eur = toRawEur(r.amount_eur);
+      if (eur != null) {
+        y.total_disclosed_eur += eur;
+        y.disclosed_round_count += 1;
+      }
+    }
+    if (!data || data.length < PAGE_SIZE) break;
+  }
+  return [...years.values()].map((y) => ({ ...y, total_disclosed_eur: Math.round(y.total_disclosed_eur) }));
+}
+
 // ─── Route helpers ────────────────────────────────────────────
 
 export const PUBLIC_API_HEADERS = {

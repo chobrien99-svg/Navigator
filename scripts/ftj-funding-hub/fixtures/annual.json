@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "year": 2021,
+      "total_disclosed_eur": 11760900000,
+      "round_count": 988,
+      "disclosed_round_count": 765
+    },
+    {
+      "year": 2022,
+      "total_disclosed_eur": 14708400000,
+      "round_count": 1248,
+      "disclosed_round_count": 1040
+    },
+    {
+      "year": 2023,
+      "total_disclosed_eur": 8131700000,
+      "round_count": 1024,
+      "disclosed_round_count": 902
+    },
+    {
+      "year": 2024,
+      "total_disclosed_eur": 7175300000,
+      "round_count": 849,
+      "disclosed_round_count": 717
+    },
+    {
+      "year": 2025,
+      "total_disclosed_eur": 7881500000,
+      "round_count": 642,
+      "disclosed_round_count": 642
+    },
+    {
+      "year": 2026,
+      "total_disclosed_eur": 9249200000,
+      "round_count": 389,
+      "disclosed_round_count": 363
+    }
+  ],
+  "meta": {
+    "from": 2021,
+    "to": 2026,
+    "note": "Snapshot of Navigator per-year totals taken 2026-10-11, for previews only."
+  }
+}

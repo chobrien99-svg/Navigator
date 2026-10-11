@@ -1,0 +1,39 @@
+<!--
+  Paid funding data module for https://www.frenchtechjournal.com/funding/
+
+  Paste everything below this comment into ONE HTML card in the Ghost editor,
+  below the free funding card, and set that card's visibility to paid members
+  (see README: "Paid module"). The iframe is served by the Navigator app
+  (route /embed/funding-hub) and resizes itself to fit its content.
+-->
+<iframe
+  id="ftj-funding-embed"
+  src="https://www.francenavigator.com/embed/funding-hub"
+  title="French startup funding data: stages, latest and largest rounds, sectors, quarters"
+  loading="lazy"
+  scrolling="no"
+  style="display:block;width:100%;height:2400px;border:0;margin:0;background:transparent"
+></iframe>
+<script>
+(function () {
+  var frame = document.getElementById("ftj-funding-embed");
+  var origin = "https://www.francenavigator.com";
+  if (!frame) return;
+  // The Tripoli theme exposes the active colour mode as --color-mode.
+  function scheme() {
+    var mode = getComputedStyle(document.documentElement).getPropertyValue("--color-mode");
+    return /dark/.test(mode) ? "dark" : "light";
+  }
+  function sendScheme() {
+    if (frame.contentWindow) frame.contentWindow.postMessage({ type: "ftj-funding-embed:scheme", scheme: scheme() }, origin);
+  }
+  window.addEventListener("message", function (e) {
+    if (e.origin !== origin) return;
+    var d = e.data || {};
+    if (d.type === "ftj-funding-embed:height" && d.height > 0 && d.height < 20000) frame.style.height = d.height + "px";
+  });
+  frame.addEventListener("load", sendScheme);
+  new MutationObserver(sendScheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-user-color-scheme", "class"] });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", sendScheme);
+})();
+</script>

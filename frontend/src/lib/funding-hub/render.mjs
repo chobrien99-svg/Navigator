@@ -1,5 +1,9 @@
-// Renders the France Navigator funding data into the HTML block that lives
-// inside the /funding/ page on The French Tech Journal (Ghost).
+// Renders the France Navigator funding data for the French Tech Journal
+// /funding/ page. Shared by two consumers:
+//   - scripts/ftj-funding-hub/sync.mjs writes renderFreeModule() into the
+//     Ghost page (intro, KPIs, annual chart, Funding Wire links);
+//   - the Navigator route /embed/funding-hub serves renderPaidModule() inside
+//     renderEmbedDocument(), which FTJ embeds for paid members.
 //
 // Everything a reader or crawler needs is plain HTML: no JavaScript is
 // required to see the numbers or the tables.
@@ -159,6 +163,16 @@ const STYLE = `<style>
 .ftjf table.ftjf-legend th,.ftjf table.ftjf-legend td{padding-top:8px;padding-bottom:8px}
 .ftjf table.ftjf-legend{max-width:760px}
 .ftjf table.ftjf-legend tbody th{font-weight:600;white-space:nowrap!important}
+.ftjf .ftjf-years{list-style:none;margin:8px 0 0!important;padding:0!important;display:grid;grid-template-columns:repeat(var(--ftjf-n),minmax(0,1fr));gap:0}
+.ftjf .ftjf-year{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0!important;padding:0;font-weight:400}
+.ftjf .ftjf-year-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;width:100%;height:200px;border-bottom:2px solid var(--ftjf-line-strong)}
+.ftjf .ftjf-year-val{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:6px;white-space:nowrap}
+.ftjf .ftjf-year-bar{display:block;width:min(64px,72%);min-height:2px;background:var(--ftjf-red);border-radius:4px 4px 0 0}
+.ftjf .ftjf-year-partial .ftjf-year-bar{background:var(--ftjf-s1)}
+.ftjf .ftjf-year-label{font-size:15px;font-weight:600;margin-top:8px;line-height:1.25}
+.ftjf .ftjf-year-label small{display:block;line-height:1.3;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ftjf-ink-2)}
+.ftjf .ftjf-year-n{font-size:12px;line-height:1.3;color:var(--ftjf-ink-2);margin-top:2px;padding:0 2px}
+.ftjf .ftjf-note{margin-top:10px}
 .ftjf .ftjf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:600px){
   .ftjf .ftjf-kpis{grid-template-columns:1fr 1fr}
@@ -168,6 +182,10 @@ const STYLE = `<style>
   .ftjf .ftjf-hide-sm{display:none}
   .ftjf .ftjf-qbar{width:35%}
   .ftjf .ftjf-stack-name{flex-basis:56px}
+  .ftjf .ftjf-year-col{height:150px}
+  .ftjf .ftjf-year-val{font-size:11px}
+  .ftjf .ftjf-year-label{font-size:13px}
+  .ftjf .ftjf-year-n{font-size:10px}
 }
 </style>`;
 
@@ -262,34 +280,80 @@ function renderSectorChart(summary, limit = 8) {
   );
 }
 
+// ── Annual chart ─────────────────────────────────────────────
+// Columns of disclosed capital per year. The current year is partial, so it
+// gets a lighter tint plus a "to date" label. Years filled from
+// config.annualOverrides (e.g. a year Navigator does not cover) are marked
+// with an asterisk and their source is printed under the chart.
+function renderAnnualChart(annual, { currentYear, overrides = {} }) {
+  if (!Array.isArray(annual) || annual.length < 2) return "";
+  const years = annual.map((y) => {
+    const o = overrides[String(y.year)];
+    return o && Number.isFinite(o.total_disclosed_eur)
+      ? { ...y, total_disclosed_eur: o.total_disclosed_eur, round_count: o.round_count ?? null, source: o.source || "FTJ" }
+      : y;
+  });
+  const max = Math.max(1, ...years.map((y) => y.total_disclosed_eur));
+  const first = years[0].year;
+  const cols = years
+    .map((y) => {
+      const h = Math.max(1, Math.round((y.total_disclosed_eur / max) * 100));
+      const partial = y.year === currentYear;
+      const mark = y.source ? "*" : "";
+      const rounds = y.round_count != null ? `${Number(y.round_count).toLocaleString("en-US")} rounds` : "";
+      const tip = `${y.year}${partial ? " (to date)" : ""}: ${formatEur(y.total_disclosed_eur)}${rounds ? ` across ${rounds}` : ""}`;
+      return (
+        `<li class="ftjf-year${partial ? " ftjf-year-partial" : ""}" title="${esc(tip)}">` +
+        `<span class="ftjf-year-col"><span class="ftjf-year-val">${esc(formatEur(y.total_disclosed_eur))}</span>` +
+        `<span class="ftjf-year-bar" style="height:${h}%" aria-hidden="true"></span></span>` +
+        `<span class="ftjf-year-label">${esc(y.year)}${mark}${partial ? `<small>to date</small>` : ""}</span>` +
+        (rounds ? `<span class="ftjf-year-n">${esc(rounds)}</span>` : "") +
+        `</li>`
+      );
+    })
+    .join("");
+  const notes = years.filter((y) => y.source).map((y) => `*${esc(y.year)}: ${esc(y.source)}.`);
+  return (
+    `<h2 id="funding-by-year">French startup funding since ${esc(first)}</h2>` +
+    `<p class="ftjf-cap">Disclosed capital raised by French startups each year.` +
+    (years.some((y) => y.year === currentYear) ? ` ${esc(currentYear)} is year to date.` : "") +
+    `</p>` +
+    `<ol class="ftjf-years" style="--ftjf-n:${years.length}">${cols}</ol>` +
+    (notes.length ? `<p class="ftjf-cap ftjf-note">${notes.join(" ")}</p>` : "")
+  );
+}
+
+function pageWidthStyle(config) {
+  // Widen the whole /funding/ page (title, editorial text and modules) by
+  // overriding the theme's --content-width for this page only. Ghost adds a
+  // page-<slug> class to <body>, so other pages are unaffected.
+  const width = Number(config.pageWidthPx);
+  const slug = String(config.ghostPageSlug || "funding").replace(/[^a-z0-9-]/gi, "");
+  return Number.isFinite(width) && width >= 600 && width <= 1600
+    ? `<style>body.page-${slug}{--content-width:${Math.round(width)}px}</style>`
+    : "";
+}
+
 /**
+ * Free module, written into the Ghost page by the sync script.
  * @param {object} input
  * @param {object} input.summary   /funding/summary response
- * @param {object[]} input.latest  rounds sorted by date (newest first)
- * @param {object[]} input.largest rounds sorted by amount (largest first)
+ * @param {object[]} input.annual  /funding/annual data
  * @param {object[]} input.wire    [{title, url, published_at}] Funding Wire posts
  * @param {object} input.config    config.json contents
+ * @param {string} input.intro     intro.html contents
  */
-export function renderFundingHub({ summary, latest, largest, wire = [], config, intro = "" }) {
+export function renderFreeModule({ summary, annual = [], wire = [], config, intro = "" }) {
   const year = summary.year;
   const updated = summary.updated_at;
   const navigatorUrl = safeUrl(config.navigatorFundingUrl);
-  const reports = config.quarterlyReports?.[String(year)] ?? {};
-  const maxQuarter = Math.max(1, ...summary.quarters.map((q) => q.total_disclosed_eur));
   const largestRound = summary.largest_round;
 
   const parts = [];
   parts.push(START_MARKER);
   parts.push(`<section class="ftjf" data-year="${esc(year)}">`);
   parts.push(STYLE);
-  // Widen the whole /funding/ page (title, editorial text and this block) by
-  // overriding the theme's --content-width for this page only. Ghost adds a
-  // page-<slug> class to <body>, so other pages are unaffected.
-  const width = Number(config.pageWidthPx);
-  const slug = String(config.ghostPageSlug || "funding").replace(/[^a-z0-9-]/gi, "");
-  if (Number.isFinite(width) && width >= 600 && width <= 1600) {
-    parts.push(`<style>body.page-${slug}{--content-width:${Math.round(width)}px}</style>`);
-  }
+  parts.push(pageWidthStyle(config));
 
   // Editorial intro (intro.html, trusted repo content), set in the theme's
   // article typography so it matches text written in the Ghost editor.
@@ -317,6 +381,44 @@ export function renderFundingHub({ summary, latest, largest, wire = [], config, 
     );
   }
   parts.push(`</dl>`);
+
+  // ── Annual chart ───────────────────────────────────────────
+  parts.push(renderAnnualChart(annual, { currentYear: year, overrides: config.annualOverrides }));
+
+  // ── Funding Wire ───────────────────────────────────────────
+  const wirePosts = wire.filter((p) => p.title && safeUrl(p.url));
+  if (wirePosts.length) {
+    parts.push(`<h2 id="latest-funding-wire">Latest Funding Wire</h2>`);
+    parts.push(`<ul class="ftjf-wire">`);
+    for (const p of wirePosts) {
+      parts.push(`<li><time datetime="${esc(String(p.published_at ?? "").slice(0, 10))}">${esc(formatDate(p.published_at))}</time><a href="${esc(p.url)}">${esc(p.title)}</a></li>`);
+    }
+    parts.push(`</ul>`);
+    const archive = safeUrl(config.fundingWireArchiveUrl);
+    if (archive) parts.push(`<p class="ftjf-more"><a href="${esc(archive)}">All French Tech Funding Wire editions →</a></p>`);
+  }
+
+  parts.push(`</section>`);
+  parts.push(END_MARKER);
+  return parts.join("\n");
+}
+
+/**
+ * Paid module, served by the Navigator /embed/funding-hub route.
+ * @param {object} input
+ * @param {object} input.summary   /funding/summary response
+ * @param {object[]} input.latest  rounds sorted by date (newest first)
+ * @param {object[]} input.largest rounds sorted by amount (largest first)
+ * @param {object} input.config    config.json contents
+ */
+export function renderPaidModule({ summary, latest, largest, config }) {
+  const year = summary.year;
+  const reports = config.quarterlyReports?.[String(year)] ?? {};
+  const maxQuarter = Math.max(1, ...summary.quarters.map((q) => q.total_disclosed_eur));
+
+  const parts = [];
+  parts.push(`<section class="ftjf ftjf-paid" data-year="${esc(year)}">`);
+  parts.push(STYLE);
 
   // ── Stage chart ────────────────────────────────────────────
   parts.push(renderStageChart(summary));
@@ -377,20 +479,57 @@ export function renderFundingHub({ summary, latest, largest, wire = [], config, 
   }
   parts.push(`</tbody></table></div>`);
 
-  // ── Funding Wire ───────────────────────────────────────────
-  const wirePosts = wire.filter((p) => p.title && safeUrl(p.url));
-  if (wirePosts.length) {
-    parts.push(`<h2 id="latest-funding-wire">Latest Funding Wire</h2>`);
-    parts.push(`<ul class="ftjf-wire">`);
-    for (const p of wirePosts) {
-      parts.push(`<li><time datetime="${esc(String(p.published_at ?? "").slice(0, 10))}">${esc(formatDate(p.published_at))}</time><a href="${esc(p.url)}">${esc(p.title)}</a></li>`);
-    }
-    parts.push(`</ul>`);
-    const archive = safeUrl(config.fundingWireArchiveUrl);
-    if (archive) parts.push(`<p class="ftjf-more"><a href="${esc(archive)}">All French Tech Funding Wire editions →</a></p>`);
-  }
-
   parts.push(`</section>`);
-  parts.push(END_MARKER);
   return parts.join("\n");
+}
+
+// ── Embed document ───────────────────────────────────────────
+// A standalone page for the paid module. Inside an iframe the Ghost theme's
+// CSS is not available, so its colour tokens and Inter are defined here. The
+// page reports its height to the parent (see embed-snippet.html in
+// scripts/ftj-funding-hub) and follows the parent's light/dark choice.
+const EMBED_HEAD_STYLE = `<style>
+:root{--color-text-primary:#000;--color-text-secondary:#4E5965;--color-border-secondary:#D9D9D9;--color-background-primary:#fff;--color-background-secondary:#EFF8FA;--font-family-sansSerif:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+:root[data-user-color-scheme=dark]{--color-text-primary:#fff;--color-text-secondary:#B3B3B3;--color-border-secondary:#303030;--color-background-primary:#000;--color-background-secondary:#1C1C1E}
+@media (prefers-color-scheme:dark){:root:not([data-user-color-scheme]){--color-text-primary:#fff;--color-text-secondary:#B3B3B3;--color-border-secondary:#303030;--color-background-primary:#000;--color-background-secondary:#1C1C1E}
+:root:not([data-user-color-scheme]) .ftjf{--ftjf-s1:#9a1f28;--ftjf-s2:#d0343e;--ftjf-s3:#f07a82;--ftjf-s4:#fbbdc1;--ftjf-s5:#6e6e6e;--ftjf-on1:#fff;--ftjf-on2:#fff;--ftjf-on3:#111;--ftjf-on4:#111;--ftjf-on5:#fff}}
+html,body{margin:0;padding:0;background:var(--color-background-primary);color:var(--color-text-primary);font-family:var(--font-family-sansSerif);-webkit-font-smoothing:antialiased}
+body{padding:2px 0 8px}
+.ftjf h2{font-size:28px;font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.ftjf h2:first-of-type{margin-top:0}
+</style>`;
+
+const EMBED_SCRIPT = `<script>
+(function () {
+  var root = document.documentElement;
+  function send() {
+    var h = Math.ceil(document.body.getBoundingClientRect().height) + 16;
+    parent.postMessage({ type: "ftj-funding-embed:height", height: h }, "*");
+  }
+  window.addEventListener("message", function (e) {
+    var d = e.data || {};
+    if (d.type === "ftj-funding-embed:scheme") {
+      if (d.scheme === "dark" || d.scheme === "light") root.setAttribute("data-user-color-scheme", d.scheme);
+      else root.removeAttribute("data-user-color-scheme");
+      send();
+    }
+  });
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+  window.addEventListener("load", send);
+  send();
+})();
+</script>`;
+
+export function renderEmbedDocument({ body, title = "French startup funding data" }) {
+  return (
+    `<!doctype html><html lang="en"><head><meta charset="utf-8">` +
+    `<meta name="viewport" content="width=device-width,initial-scale=1">` +
+    `<meta name="robots" content="noindex,nofollow">` +
+    `<title>${esc(title)}</title>` +
+    `<base target="_top">` +
+    `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
+    `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">` +
+    EMBED_HEAD_STYLE +
+    `</head><body>${body}${EMBED_SCRIPT}</body></html>`
+  );
 }
