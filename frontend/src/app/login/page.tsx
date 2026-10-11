@@ -31,7 +31,8 @@ export default function LoginPage() {
     try {
       const { user } = await signInWithEmail(email, password);
       if (!isTeamMember(user)) {
-        await signOut();
+        // Local only: don't log them out of France AI Radar or other devices.
+        await signOut("local");
         setError(NOT_TEAM_MESSAGE);
         return;
       }
