@@ -5,28 +5,38 @@ up to date with funding rounds from France Navigator.
 
 ## How it works
 
+The page has two modules:
+
+| Module | Contents | Where it lives | Who sees it |
+|---|---|---|---|
+| **Free** | Intro, "Last updated", year at a glance, annual funding chart, latest Funding Wire links | HTML card written into the Ghost page by `sync.mjs` | Whoever the card's visibility allows (public is best for search) |
+| **Paid** | Funding by stage, latest rounds, largest rounds, top sectors, funding by quarter | Navigator app route `/embed/funding-hub` (Vercel), embedded with an iframe | Paid members, via the Ghost card's visibility |
+
 ```
 France Navigator database (Supabase)
         │
         ▼
-Navigator public API            frontend/src/app/api/public/v1/funding/…
+Navigator app (Vercel)                 frontend/src/app/…
   /api/public/v1/funding/summary?year=2026
-  /api/public/v1/funding/rounds?year=2026&limit=50&sort=announcement_date:desc
-  /api/public/v1/funding/rounds?year=2026&limit=20&sort=amount_eur:desc
-        │
-        ▼
-sync.mjs  (runs every hour on GitHub Actions)
-  • fetches the three endpoints and checks the data looks right
-  • renders plain HTML: KPIs, latest rounds, largest rounds, quarters,
-    latest Funding Wire posts
-  • writes it into ONE HTML card on the Ghost page /funding/
-        │
-        ▼
-www.frenchtechjournal.com/funding/   (normal Ghost page, fully crawlable)
+  /api/public/v1/funding/annual?from=2021&to=2026
+  /api/public/v1/funding/rounds?…      (used for previews)
+  /embed/funding-hub                   ← paid module, served as a page
+        │                                         │
+        ▼                                         │
+sync.mjs (hourly, GitHub Actions)                 │
+  writes the FREE module into one HTML card       │
+        │                                         │
+        ▼                                         ▼
+www.frenchtechjournal.com/funding/   ← iframe card (embed-snippet.html)
 ```
 
-The funding data is written into the page itself, so Google sees the full
-tables and figures without having to run JavaScript.
+Both modules use the same drawing code,
+`frontend/src/lib/funding-hub/render.mjs`, and the same settings,
+`frontend/src/lib/funding-hub/config.json`, so they always match.
+
+The free module is written into the page itself, so Google sees it without
+running JavaScript. The paid module is inside an iframe and marked
+`noindex`, so Google does not index it.
 
 **Your own writing is safe.** The script only replaces the HTML card that
 starts with `<!-- ftj-funding-hub:start -->`. That card also carries the intro,
@@ -98,6 +108,26 @@ the methodology. Later runs update the card where it is.
 After that the workflow runs every hour and only saves to Ghost when the data
 has actually changed.
 
+## Paid module (iframe)
+
+1. In the Ghost editor, add an **HTML card** below the free funding card.
+2. Paste in the contents of `embed-snippet.html` (everything after the
+   comment).
+3. Set that card's **visibility** to paid members. In current Ghost versions
+   this is in the card's settings (Visibility → web: paid members). If your
+   Ghost version has no card visibility, instead set the page's access to
+   paid members and insert a **public preview** divider between the two
+   cards: everything above the divider stays public.
+4. Update the page. The iframe sizes itself to its content and follows the
+   site's light/dark mode.
+
+**Access note:** card visibility only controls who sees the iframe on
+frenchtechjournal.com. The embed page itself
+(`https://www.francenavigator.com/embed/funding-hub`) and the public API can be
+opened by anyone who has the address. Locking them down needs a member check
+on the Navigator side; see the pull request discussion before relying on this
+for paid-only data.
+
 ## Everyday use
 
 - **Hold back a round** (embargo, rumour, error): set its `publish_status` to
@@ -105,13 +135,21 @@ has actually changed.
   on the next hourly run. It still shows inside Navigator itself.
 - **Link a round to our story**: fill in its `ftj_url`.
 - **Quarterly report links**: add each report's URL under `quarterlyReports`
-  in `config.json`.
+  in `frontend/src/lib/funding-hub/config.json`. They appear in the paid
+  module once Navigator redeploys.
+- **Annual chart**: starts at `annualFromYear` (2021; Navigator has almost no
+  2020 rounds). To show a year Navigator does not cover, add it to
+  `annualOverrides`, for example
+  `"2020": { "total_disclosed_eur": 1234500000, "round_count": 456, "source": "FTJ 2020 report" }`
+  (placeholder numbers),
+  and set `annualFromYear` to 2020. Overridden years get an asterisk and their
+  source is printed under the chart.
 - **Funding Wire list**: the script looks at recent posts tagged
   `funding-news` (Funding News) and keeps those with "Funding Wire" in the
   title, so quarterly reports and databases with the same tag are left out.
-  Change `fundingWireTag` / `fundingWireTitleMatch` in `config.json` if that
+  Change `fundingWireTag` / `fundingWireTitleMatch` in the config if that
   changes.
-- **Page width**: `pageWidthPx` in `config.json` (default 1180) widens the
+- **Page width**: `pageWidthPx` in the config (default 1180) widens the
   whole /funding/ page, title, text and data together, by overriding the
   theme's `--content-width` on this page only. Other pages are unaffected. The
   theme default is 708; lower it towards ~900 if long text lines feel hard to
@@ -132,18 +170,21 @@ node scripts/ftj-funding-hub/sync.mjs --fixtures --out ./out
 node scripts/ftj-funding-hub/sync.mjs --out ./out
 ```
 
-Open `out/preview.html` in a browser. To refresh the sample data, run
+Open `out/preview.html` (free module) and `out/paid-embed.html` (paid module)
+in a browser. To refresh the sample data, run
 `python3 scripts/ftj-funding-hub/fixtures/build_fixtures.py`.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `sync.mjs` | Fetch → validate → render → update Ghost |
-| `render.mjs` | Builds the HTML card (tables, KPIs, styles) |
+| `sync.mjs` | Fetch → validate → render the free module → update Ghost |
 | `ghost.mjs` | Talks to the Ghost Admin API |
-| `config.json` | Settings: API address, list sizes, report links, Funding Wire tag |
 | `intro.html` | The intro at the top of the page (published by the sync) |
+| `embed-snippet.html` | The iframe card to paste into Ghost for the paid module |
 | `editorial-draft.html` | Draft methodology to paste into Ghost |
 | `fixtures/` | Sample API responses for previews |
+| `frontend/src/lib/funding-hub/render.mjs` | Drawing code for both modules and the embed page |
+| `frontend/src/lib/funding-hub/config.json` | Settings: API address, list sizes, report links, annual chart, Funding Wire tag |
+| `frontend/src/app/embed/funding-hub/route.ts` | The paid module page on Vercel |
 | `.github/workflows/ftj-funding-hub.yml` | Hourly schedule |
