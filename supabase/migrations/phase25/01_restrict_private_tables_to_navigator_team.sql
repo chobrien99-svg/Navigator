@@ -23,6 +23,12 @@
 --
 -- Admin write policies are unchanged. The only admins are team members.
 -- Undo: 02_rollback_restrict_private_tables.sql
+--
+-- UPDATE 15 Oct 2026: the France AI Radar reasons above no longer hold. It now
+-- reads signals, person_experience, organization_people and
+-- program_organizations server-side (service role). signals and
+-- person_experience were made Navigator-team only, and profile/INSERT holes
+-- closed, in 03_lock_signals_and_writes.sql.
 -- =============================================================================
 
 -- True when the caller is signed in with a confirmed @frenchtechjournal.com
