@@ -43,12 +43,36 @@ CREATE POLICY "Navigator team read access" ON public.person_experience
   FOR SELECT TO authenticated USING ((SELECT public.is_navigator_team()));
 
 -- ─── profiles: users may edit only their own basic details ───
--- (Profiles are created by the on_auth_user_created trigger, so users never
--- need INSERT.)
+-- title, company and user_type were added for AI Radar's account page outside
+-- this repo's migrations; make sure they exist so the GRANT below works on a
+-- database rebuilt from these files (no-op on the live database).
+ALTER TABLE public.profiles
+  ADD COLUMN IF NOT EXISTS title TEXT,
+  ADD COLUMN IF NOT EXISTS company TEXT,
+  ADD COLUMN IF NOT EXISTS user_type TEXT;
+
 REVOKE UPDATE ON public.profiles FROM anon, authenticated;
 GRANT UPDATE (full_name, title, company, user_type, updated_at)
   ON public.profiles TO authenticated;
-REVOKE INSERT ON public.profiles FROM anon, authenticated;
+
+-- Profiles are created by AI Radar's on_auth_user_created trigger (defined in
+-- the France-AI-Radar repo, not here), so users never need INSERT. Only remove
+-- INSERT when that trigger exists, so new accounts can't end up without a
+-- profile row.
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1 FROM pg_trigger t
+    JOIN pg_class c ON c.oid = t.tgrelid
+    JOIN pg_namespace n ON n.oid = c.relnamespace
+    WHERE n.nspname = 'auth' AND c.relname = 'users'
+      AND t.tgname = 'on_auth_user_created' AND NOT t.tgisinternal
+  ) THEN
+    REVOKE INSERT ON public.profiles FROM anon, authenticated;
+  ELSE
+    RAISE NOTICE 'on_auth_user_created trigger missing: profiles INSERT left as is';
+  END IF;
+END $$;
 
 -- ─── INSERT: admins only ─────────────────────────────────────
 DROP POLICY IF EXISTS "Enable insert for authenticated users only" ON public.sectors;
