@@ -114,3 +114,49 @@ sequenced, and some correct SIRENs can't be found (defunct companies).
 
 Given the ~6% rate, I'd recommend 1 if the source file exists, otherwise 2. I did **not** make
 any SIREN changes.
+
+---
+
+# Addendum 2 — the official i-Nov source file does NOT fix it (2026-10-25)
+
+The user supplied the official i-Nov winners dataset (data.gouv.fr: `fr-esr-laureats-concours-i-nov`,
+753 valid-SIREN rows). I diffed it against the 545 inov records by exact company/project name.
+
+**Result: only 4 name-exact divergences** between the file and the DB — because **the DB faithfully
+matches the file**. The SIREN errors are IN THE OFFICIAL FILE itself:
+
+- File lists **SPIREC → 484872551** (the registry's Watchfrog number) and Watchfrog → 811684190.
+- File lists **SEVA Technologies → 794167593** (Metron's), **SQUADRONE SYSTEM → 803183771**
+  (Heyday's), **GEOLITH → 810876177** (Sweetch's), **Green Communications → 833737653**
+  (Altaroad's), **Solar Cloth System → 809273329** (D-ICE's).
+
+Every bad SIREN we found earlier is reproduced verbatim in the government file. The DB didn't
+corrupt them — it copied them. **So re-deriving from this file changes nothing.**
+
+**The 4 file-vs-DB divergences (and why none warrant a DB change):**
+
+| DB org | DB SIREN | i-Nov file SIREN | Verdict |
+|---|---|---|---|
+| VEL'CO | 819556168 | 818024234 | DB right (819556168 = VEL'CO in registry; 818024234 = Geolith). File wrong. |
+| INALVE | 819699893 | 830590659 | DB right (819699893 = INALVE in registry). File differs. |
+| D-ICE Engineering | 809273329 | 814888798 | DB right (809273329 = D-ICE in registry). File differs. |
+| DigiMobee | 834554982 | 793002908 | Uncertain — the file maps 793002908 to BOTH Digimobee and ENWIRES, so the file is internally inconsistent here. Needs registry check. |
+
+The file is also internally inconsistent (e.g. SIREN 793002908 appears for both "Digimobee" and
+"ENWIRES"), confirming it is not a clean ground truth.
+
+## Final recommendation (revised)
+
+- **Re-derivation (option 1) is off the table** — the source carries the same errors.
+- Authoritative correction requires the **business registry** (annuaire-entreprises /
+  recherche-entreprises.api.gouv.fr), which is **blocked by the container network policy**.
+- Practical paths:
+  1. **Allowlist `recherche-entreprises.api.gouv.fr`** → I batch-verify all ~545 inov SIRENs by
+     name against the registry in one pass and propose corrections (est. ~30-40).
+  2. **Accept and annotate** — leave the SIRENs, mark inov-sourced SIRENs as "unverified
+     (i-Nov source)" so downstream users don't over-trust them.
+  3. **Incremental web-search verification** (no infra change; slow).
+- Either way, do **not** change VEL'CO / INALVE / D-ICE to the file's values — the DB is correct
+  there.
+
+No DB changes were made in this step.
