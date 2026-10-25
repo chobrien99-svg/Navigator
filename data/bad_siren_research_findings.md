@@ -68,3 +68,49 @@ address the underlying misalignment.
    to merge now on a name/identity basis, independent of the SIREN issue.
 3. Earlier merges (phases 25–29) were validated by name + website, so they remain valid; but
    surviving `inov`/`ilab` records may still carry wrong SIRENs — part of the same audit.
+
+---
+
+# Addendum — scoping the inov SIREN audit (2026-10-25)
+
+After the headline above, I sampled the inov records directly against the registry to
+measure the real error rate (collisions only catch 13 of 548, so they understate it).
+
+**Method:** random sample of 16 inov orgs; looked up each stored SIREN in the registry and
+compared the registered company name to our org name.
+
+**Result: 14 correct, 1 wrong, 1 inconclusive.**
+- Correct (14): DOCENT, Stockage Plus, Group Elastoteck, ZIWIG, Clever Cloud, INALVE,
+  Privacy Chambers, Newheat, APHELIOR, Loop Logistics/Lizee, ANOD, CIRCOULEUR, QC Ware France,
+  SMARTCATCH.
+- **Wrong (1): "Pando2" carries SIREN 841677461, which is actually WINK** (online-catalogue
+  retail, Paris). Pando2's real number is unknown.
+- Inconclusive (1): OKEENEA 848981809 — registry lookup returned nothing (number is
+  Luhn-valid; likely fine, not confirmed).
+
+**Revised assessment**
+- The inov SIRENs are **mostly correct**; the error is **sporadic (~6%)**, not a wholesale
+  column shift. Extrapolated to 548 inov records, roughly **30–40 wrong SIRENs** (order of
+  magnitude), of which only 13 surface as collisions.
+- Therefore a **wholesale clear of inov SIRENs would destroy far more good data than bad.**
+  The right fix is a **targeted verification pass**: check each inov SIREN's registered name
+  against the org name and correct only the mismatches.
+
+**Correcting a mismatch is itself non-trivial** (as the 7 bad-SIREN pairs showed): the record's
+*correct* SIREN is often occupied by another mis-numbered record, so corrections may need to be
+sequenced, and some correct SIRENs can't be found (defunct companies).
+
+## Recommended approach (pick one)
+
+1. **Best — re-derive from source.** If the original inov import file (name ↔ SIREN) still
+   exists outside this repo, re-importing/comparing is the cleanest fix. It is **not** in the
+   repo (no committed migration sets `legacy_source='inov'`), so this needs the source file.
+2. **Bulk registry verification.** Allowlist `recherche-entreprises.api.gouv.fr` (currently
+   blocked by the container network policy) so all 548 inov SIRENs can be name-matched
+   programmatically in one pass; I then propose corrections for the mismatches.
+3. **Incremental verification via web search.** No infra change; I verify the 548 in batches
+   (~16 per step, as sampled here) and correct mismatches as they're found. Slow and
+   search-heavy but needs nothing enabled.
+
+Given the ~6% rate, I'd recommend 1 if the source file exists, otherwise 2. I did **not** make
+any SIREN changes.
