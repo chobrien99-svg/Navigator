@@ -1,0 +1,743 @@
+org_name,slug,city,stage,amount_eur,amount_original,currency,announced_date,website,investors,sectors,siren
+Mirakl,mirakl,Paris,series_d,262.7,262697023,EUR,2020-09-22,http://www.mirakl.com,83North||Bain Capital Ventures||Elaia||Felix Capital,SaaS||E-commerce & Retail,530897990
+Colonies,colonies,Paris,series_b,180.0,180000000,EUR,2020-03-04,https://www.livecolonies.com/,Financiere Saint James||Global Founders Capital||Idinvest Partners||LBO France,PropTech,
+EcoVadis,ecovadis,Paris,series_b,175.13,175131349,EUR,2020-01-09,http://www.ecovadis.com,CVC Capital Partners,SaaS,
+Contentsquare,contentsquare,Paris,series_d,166.37,166374781,EUR,2020-05-19,https://contentsquare.com,BlackRock Private Equity Partners||Bpifrance||Canaan Partners||Eurazeo||H14||Hermes GPE||Highland Europe||Kohlberg Kravis Roberts & Co.,SaaS||MarTech||Artificial Intelligence,503916033
+Brevo,brevo,Paris,series_b,140.11,140105079,EUR,2020-09-30,https://www.brevo.com,Adelie||BlackRock||Bpifrance||Bridgepoint||Partech,SaaS||MarTech||Artificial Intelligence,
+InnovaFeed,innovafeed,Paris,series_c,140.0,140000000,EUR,2020-11-19,http://innovafeed.com,Creadev||Temasek Holdings,BioTech||AgriTech||FoodTech,819671843
+ManoMano,manomano,Paris,series_e,121.72,121716287,EUR,2020-01-28,http://www.manomano.fr,Bpifrance||Eurazeo||General Atlantic||Kismet Capital Group||Piton Capital||Temasek Holdings,E-commerce & Retail,752979930
+Back Market,back-market,Paris,series_c,105.08,105078809,EUR,2020-05-04,https://www.backmarket.com,Aglaé Ventures||Daphni||Eurazeo||Goldman Sachs,E-commerce & Retail||Consumer Electronics||Circular Economy,804049476
+Qonto,qonto,Paris,series_c,104.0,104000000,EUR,2020-01-20,https://qonto.com,Alven||DST Global||Hedosophia||Ingo Uytdehaage||Taavet Hinrikus||Tencent||Valar Ventures,FinTech||SaaS,819489626
+CVE,cve,Marseille,growth,100.0,100000000,EUR,2020-09-14,https://www.cvegroup.com,ICG Infra,CleanTech||Energy,518792528
+Kineis,kineis,Ramonville-saint-agne,seed,100.0,100000000,EUR,2020-02-04,https://www.kineis.com/,Bpifrance||CELAD||Center National D'Etudes Spatiales||CLS Groupe||European Investment Bank||Hemeria||IFREMER||Thales Group,SpaceTech & Aerospace||Telecom,841489123
+MicroPort CRM,microport-crm,Clamart,series_b,91.94,91943958,EUR,2020-07-28,https://www.crm.microport.com/,Hillhouse Investment||MicroPort (Shanghai)||YF Capital,HealthTech||MedTech,
+Aledia,aledia,Grenoble,series_d,80.0,80000000,EUR,2020-10-07,http://www.aledia.com,Bpifrance||European Innovation Council||Intel Capital,Semiconductors||DeepTech||Hardware,537455982
+Exotec,exotec,Pont-du-château,series_c,78.81,78809107,EUR,2020-09-29,https://www.exotec.com/,83North||BREEGA||Dell Technologies Capital||IRIS,Robotics,812878742
+Chausson Materiaux,chausson-materiaux,Saint-alban,growth,75.0,75000000,EUR,2020-11-09,https://www.chausson.fr,BNP Paribas Développement||Crédit Mutuel Equity||Grand Sud Ouest Capital||IDIA Capital Investissement||IRDI SORIDEC Gestion,E-commerce & Retail,528648892
+Lydia,lydia,Paris,series_b,70.0,70000000,EUR,2020-12-17,https://lydia-app.com,AA Sons||Accel||Hedosophia||Romain Afflelou,FinTech,
+Swile,swile,Paris,series_c,70.0,70000000,EUR,2020-06-23,https://www.swile.co/,Bpifrance||Headline||Idinvest Partners||Index Ventures,FinTech||HRTech,824012173
+LumApps,lumapps,Paris,series_c,61.3,61295972,EUR,2020-01-21,http://www.lumapps.com,Bpifrance||Eurazeo||Famillie C (Clarins Family)||Goldman Sachs||Goldman Sachs Growth Equity||Idinvest Partners||IRIS,SaaS||HRTech,788743474
+Vestiaire Collective,vestiaire-collective,Paris,growth,59.0,59000000,EUR,2020-04-20,http://vestiairecollective.com,Bpifrance||Condé Nast||Cuir Invest||Eurazeo||Fidelity International||Korelya Capital||Luxury Tech Fund||Maximilian Bittner||Vaultier7||Vitruvian Partners,E-commerce & Retail,517465225
+Ynsect,ynsect,Fontaine,series_c,56.92,56917688,EUR,2020-10-06,https://www.ynsect.com/,Armat Group||Astanor Ventures||FootPrint Coalition||French Partners||Happiness Capital||Supernova Invest||Upfront Ventures,BioTech||AgTech,534948617
+Withings,withings,Issy-les-moulineaux,series_b,52.54,52539405,EUR,2020-07-28,http://www.withings.com,Adelie||BNP Paribas Développement||Bpifrance||Gilde Healthcare||Idinvest Partners||ODDO BHF Private Equity,HealthTech||MedTech||Consumer Electronics||Digital Health,
+Mecachrome France,mecachrome-france,Amboise,growth,50.0,50000000,EUR,2020-05-27,http://www.mecachrome.com/,Tikehau Capital,SpaceTech & Aerospace,429853351
+Luko,luko,Paris,series_b,50.0,50000000,EUR,2020-12-07,https://www.luko.eu,Accel||Assaf Wand||Brent Hoberman||EQT Ventures||Evolem Start||Founders Fund||Orange Ventures||Patrick Amiel||Rachel Delacour||Robert Gentz||Speedinvest||Thomas Plantenga,Artificial Intelligence||InsurTech,
+MWM,mwm,Paris,series_b,50.0,50000000,EUR,2020-03-03,https://mwm.ai,Aglaé Ventures||Blisce||Bpifrance||Idinvest Partners||Xavier Niel,MarTech||Media||Artificial Intelligence,
+Alan,alan,Paris,series_c,50.0,50000000,EUR,2020-04-20,https://alan.com,Index Ventures||Temasek Holdings,HealthTech||InsurTech||FinTech,
+Dynacure,dynacure,Illkirch,series_c,50.0,50000000,EUR,2020-04-02,https://www.dynacure.com/,Andera Partners||Bpifrance||Kurma Partners||Perceptive Advisors||Pontifax||Tekla Capital Management,HealthTech||BioTech,817666217
+Yubo,yubo,Paris,series_c,47.5,47500000,EUR,2020-11-17,http://www.yubo.live/,Alven||Idinvest Partners||IRIS||Revaia||Robin Haak||Sweet Capital,Media,810283507
+ENTEROME,enterome,Paris,series_e,46.3,46300000,EUR,2020-06-25,http://www.enterome.com,Health for Life Capital fund||Nestlé Health Science||Omnes Capital||Principia SGR||Seventure Partners||Takeda,HealthTech||BioTech,508580289
+SparingVision,sparingvision,Paris,series_a,44.5,44500000,EUR,2020-10-21,https://sparingvision.com,4BIO Capital||Bpifrance||Foundation Fighting Blindness||Jeito Capital||UPMC Enterprises||Ysios Capital,HealthTech||BioTech,
+DNA Script,dna-script,Le Kremlin-bicêtre,series_b,43.78,43782837,EUR,2020-07-29,https://www.dnascript.com,Agilent Technologies||Bpifrance||Casdin Capital||Danaher Life Science||EQT Life Sciences||Illumina Ventures||M Ventures,HealthTech||BioTech,
+MEDADOM,medadom,Paris,series_a,40.0,40000000,EUR,2020-11-26,https://www.medadom.com,AA Sons||G Square||Romain Afflelou,HealthTech||Telecom||Digital Health,
+Lydia,lydia,Paris,series_b,40.0,40000000,EUR,2020-01-15,https://lydia-app.com,CNP Assurances||Founders Future||NewAlpha Asset Management VC||Tencent||XAnge,FinTech,
+Robocath,robocath,Rouen,series_c,40.0,40000000,EUR,2020-04-29,https://www.robocath.com/,CapHorn Invest||CS Group||MicroPort Scientific||Tusholdings||Zhejiang Silk Road Fund,BioTech||HealthTech||MedTech||Robotics,515353316
+AB Tasty,ab-tasty,Paris,series_c,35.03,35026270,EUR,2020-07-22,http://www.abtasty.com,Crédit Mutuel Innovation||Korelya Capital||Omnes Capital||Partech||XAnge,SaaS||Artificial Intelligence,518685540
+NW Storm,nw-storm,Paris,series_a,34.0,34000000,EUR,2020-11-23,https://transition.nw-groupe.fr/en/,RGreen Invest,Mobility||CleanTech||Energy,
+CybelAngel,cybelangel,Paris,series_b,31.52,31523643,EUR,2020-02-12,https://www.cybelangel.com,Alexis Le-Quoc||Bpifrance||Lou Shipley||Olivier Pomel||Open CNP||Prime Ventures||Renaud Deraison||Stephan Dietrich||TempoCap,SaaS||Cybersecurity||Artificial Intelligence,
+Biose Industry,biose-industry,Arpajon-sur-cère,growth,30.0,30000000,EUR,2020-07-16,http://www.biose.com/en/,Cathay Capital,BioTech,529243271
+Comet Meetings,comet-meetings,Paris,series_b,30.0,30000000,EUR,2020-09-01,http://www.comet-meetings.com,Bpifrance||Idinvest Partners||Judith Milgrom||Pierre Kosciusko-Morizet,SaaS||Entertainment||TravelTech,
+Livestorm,livestorm,Paris,series_b,26.27,26269702,EUR,2020-11-12,https://livestorm.co,Aglaé Ventures||Bpifrance||Idinvest Partners||Raise Ventures,SaaS||Entertainment||MarTech||Media||Telecom,
+Eyevensys,eyevensys,Paris,series_b,26.27,26269702,EUR,2020-01-08,http://www.eyevensys.com,Boehringer Ingelheim Venture Fund||Bpifrance||Global health sciences venture fund||Inserm Transfert Initiative||Karista||Pontifax||Pureos Bioventures||Quark Venture,BioTech||MedTech,
+Ankorstore,ankorstore,Paris,series_a,25.0,25000000,EUR,2020-11-30,https://www.ankorstore.com,Aglaé Ventures||Alven||GFC Rocket Internet||Global Founders Capital||Index Ventures,E-commerce & Retail,
+Saagie,saagie,Le Petit-quevilly,series_b,25.0,25000000,EUR,2020-06-12,http://www.saagie.com/,AG2R La Mondiale||BNP Paribas Développement||CapHorn Invest||Cathay Innovation||Crédit Mutuel Innovation||NewAlpha Asset Management VC||Seventure Partners,SaaS||Artificial Intelligence,
+Ekimetrics,ekimetrics,Paris,growth,24.0,24000000,EUR,2020-11-30,http://www.ekimetrics.com/,Bpifrance||Tikehau Capital,SaaS||MarTech,493337844
+Sarbacane Software,sarbacane-software,Hem,growth,23.64,23642732,EUR,2020-09-08,https://www.sarbacane.com,IDI Group||Mathieu Tarnus,SaaS||MarTech,509568598
+Cityscoot,cityscoot,Paris,series_c,23.6,23600000,EUR,2020-02-24,http://www.cityscoot.eu/,AA Sons||Allianz Capital||Banque des Territoires||Demeter||RATP Group,Mobility||Circular Economy||Hardware,800862021
+Pigment,pigment,Paris,series_a,22.68,22679510,EUR,2020-12-03,https://www.pigment.com/,Blossom Capital||David Clarke||FirstMark||Frst||Paul Melchiorre,SaaS||Artificial Intelligence,
+InsideBoard,insideboard,Neuilly-sur-seine,series_b,21.89,21891419,EUR,2020-04-29,https://www.insideboard.com,AVP||Entrepreneur Venture||Isai||Orange Ventures,FinTech||SaaS||Artificial Intelligence,
+Alkemics,alkemics,Paris,series_c,21.0,21000000,EUR,2020-06-11,https://www.alkemics.com/,Cathay Innovation||Highland Europe||Index Ventures||Partech||SEB Alliance||Serena,E-commerce & Retail,535078190
+Kajou,kajou,Montreuil,growth,20.0,20000000,EUR,2020-10-05,https://www.kajou.io/,,EdTech,879730158
+CD Sud,cd-sud,Marseille,growth,20.0,20000000,EUR,2020-02-07,https://www.cd-sud.com/,Bpifrance||IXO Private Equity,E-commerce & Retail||CleanTech||Energy||Hardware,
+EODev,eodev,Issy-les-moulineaux,seed,20.0,20000000,EUR,2020-09-07,http://www.eo.dev,Accor||Groupe Monnoyeur||Thélem Assurances,CleanTech||Energy,848756227
+Innoskel,innoskel,Valbonne,series_a,20.0,20000000,EUR,2020-12-14,https://www.innoskel.com/,Jeito Capital||Région Sud Investissement||Turenne Capital||Vida Ventures,BioTech,
+Preligens,preligens,Paris,series_a,20.0,20000000,EUR,2020-11-19,http://www.preligens.com,360 Capital||Ace Capital Partners||Bpifrance,SpaceTech & Aerospace||Artificial Intelligence||Telecom,
+TEHTRIS,tehtris,Pessac,series_a,20.0,20000000,EUR,2020-11-12,https://tehtris.com/,Ace Capital Partners,Cybersecurity,
+Memo Bank,memo-bank,Paris,series_a,20.0,20000000,EUR,2020-06-23,https://memo.bank,Alexandre Lebrun||Alexis Bonillo||Antoine Martin||BlackFin Capital Partners||Bpifrance||Daphni||Didier Le Menestrel||Eduardo Ronzano||Edward Lando||Financiere Saint James||Founders Future||Franck Le Ouay||Guillaume Lestrade||Jacques-Antoine Granjon||Jacques Veyrat||Marc Simoncini||Michael Benabou||Nicolas Steegmann||Oleg Tscheltzoff||Pareto Holdings||Paulin Dementhon||Pierre Valade||Rachel Delacour||Thibaud Elziere||Thierry Petit||Xavier Niel||Yan Hascoët,FinTech,
+Homeloop,homeloop,Paris,series_a,20.0,20000000,EUR,2020-01-22,http://www.homeloop.fr,Crescendix,PropTech,
+#NAME?,name,Paris,series_b,20.0,20000000,EUR,2020-10-07,https://www.plussimple.fr/,Idinvest Partners||OneRagtime,HealthTech||InsurTech||FinTech,
+Shippeo,shippeo,Paris,series_b,20.0,20000000,EUR,2020-02-11,http://www.shippeo.com,Aerion Partners||Bpifrance Digital Venture||ETF Partners||NGP Capital||Partech,SaaS||Mobility,
+Stilla Technologies,stilla-technologies,Villejuif,series_b,20.0,20000000,EUR,2020-02-11,https://www.stillatechnologies.com/,BNP Paribas Développement||Idinvest Partners||Illumina Ventures||Kurma Partners||LBO France||Paris-Saclay Seed Fund||Tusholdings,BioTech||DeepTech,
+Hivebrite,hivebrite,Paris,series_a,18.5,18500000,EUR,2020-01-23,https://hivebrite.io,Edward Filippi||Insight Partners,EdTech||SaaS,
+Alderaan Biotechnology,alderaan-biotechnology,Paris,series_a,18.5,18500000,EUR,2020-01-09,https://alderaan-biotechnology.com/,AdBio partners||Medicxi,BioTech,
+MaaT Pharma,maat-pharma,Lyon,series_b,18.0,18000000,EUR,2020-02-05,http://maatpharma.com/,Biocodex||Crédit Mutuel Innovation||Seventure Partners,HealthTech||BioTech,808370100
+Eskimoz,eskimoz,Boulogne-billancourt,seed,17.0,17000000,EUR,2020-02-16,http://www.eskimoz.fr/,Momentum Invest,MarTech,
+In Sun We Trust,in-sun-we-trust,Saint-mandé,series_a,17.0,17000000,EUR,2020-02-28,https://www.insunwetrust.solar,Axel Johnson,CleanTech||Energy,812853919
+Le Wagon,le-wagon,Paris,series_a,16.64,16637478,EUR,2020-03-02,https://www.lewagon.com,AfricInvest||Cathay Capital,EdTech||SaaS,
+Descartes Underwriting,descartes-underwriting,Paris,series_a,16.2,16199650,EUR,2020-09-10,https://descartesunderwriting.com,BlackFin Capital Partners||Cathay Innovation||Serena,InsurTech||FinTech,
+UroMems,uromems,Grenoble,series_b,16.0,16000000,EUR,2020-05-20,http://uromems.com/,Arbevel||b2venture||Bpifrance||CITA Investissement||Hil-Invent||Supernova Invest||Wellington Partners,HealthTech||MedTech,533670931
+Tinubu Square,tinubu-square,Issy-les-moulineaux,growth,15.0,15000000,EUR,2020-02-13,http://www.tinubu.com,Bpifrance||Long Arc Capital,InsurTech||SaaS,432915460
+ZEWAY,zeway,Paris,series_a,15.0,15000000,EUR,2020-05-05,https://www.zeway.com/,Allianz France||Demeter||NCI,Mobility||CleanTech||Energy,
+Agicap,agicap,Lyon,series_a,15.0,15000000,EUR,2020-05-05,https://agicap.com,BlackFin Capital Partners||Kima Ventures||Partech,FinTech||SaaS,823248703
+Osivax,osivax,Lyon,series_b,15.0,15000000,EUR,2020-07-08,http://www.osivax.com/,CapHorn Invest||European Innovation Council,HealthTech||BioTech,829604750
+iObeya,iobeya,Massy,series_a,14.89,14886165,EUR,2020-07-23,http://www.iobeya.com,Atlantic Bridge||Fortino Capital||Red River West,Media,
+Andjaro,andjaro,Paris,series_b,14.5,14500000,EUR,2020-04-23,http://www.andjaro.com/en/home,Alliance Entreprendre||Arkea Capital Investissement||Balderton Capital||Edenred Capital Partners||Idinvest Partners||SAP.iO||Sofiouest||Swen Capital Partners||Verve Ventures,HRTech,
+Powell Software,powell-software,Viroflay,series_a,14.01,14010508,EUR,2020-01-01,http://www.powell-software.com/en/,CapHorn Invest||Level Equity Management,SaaS||MarTech,815141874
+Naïo Technologies,nao-technologies,Escalquens,series_a,14.0,14000000,EUR,2020-01-09,http://www.naio-technologies.com,Bpifrance||Capagro||Demeter Partners||Pymwymic,Robotics||AgriTech||Artificial Intelligence,538138033
+PDC*line Pharma,pdcline-pharma,La Tronche,series_b,13.9,13900000,EUR,2020-01-22,http://pdc-line-pharma.com/,Korea Investment Partners||Sambrinvest||Shinhan-Cognitive Start-up Fund||S.R.I.W.||UTC Investment Co.,HealthTech||BioTech,801408907
+CASTALIE,castalie,Issy-les-moulineaux,series_b,13.5,13500000,EUR,2020-06-04,http://castalie.com/,Amundi||Ring Capital||SEB Alliance,Blue Economy||WaterTech,
+Cardiologs,cardiologs,Paris,series_a,13.13,13134851,EUR,2020-01-10,http://www.cardiologs.com/,Alven||Bpifrance||Idinvest Partners||Isai||Kurma Partners||Paris-Saclay Seed Fund,HealthTech||MedTech||Artificial Intelligence,801641515
+NAWA Technologies,nawa-technologies,Rousset,series_b,13.0,13000000,EUR,2020-02-21,https://nawah.fr/,Bpifrance||CAAP Creation||Davaniere Capital Partners||Demeter||EIT InnoEnergy||Kouros||Région Sud Investissement||Supernova Invest,DeepTech||CleanTech||Energy,792701518
+Alma,alma,Neuilly-sur-seine,series_a,12.5,12500000,EUR,2020-03-11,https://www.getalma.eu/,Didier Valet||Financiere Saint James||Hedosophia||Idinvest Partners||Isai||Picus Capital,FinTech,
+Inato,inato,Paris,series_a,12.26,12259194,EUR,2020-02-04,https://inato.com,Cathay Innovation||Christopher Gibson||Fly Ventures||Obvious Ventures||Serena,HealthTech||BioTech||Artificial Intelligence||TechBio,
+GrAI Matter Labs,grai-matter-labs,Paris,series_b,12.26,12259194,EUR,2020-11-23,http://www.graimatterlabs.ai/,360 Capital||3T Finance||Bpifrance||iBionext,Semiconductors||DeepTech||Artificial Intelligence,820156271
+La Belle Vie,la-belle-vie,Paris,series_b,11.6,11600000,EUR,2020-05-28,https://www.labellevie.com/,A Plus Finance||Capagro||Celeste Management||FJ Labs||Virtual Network,E-commerce & Retail||FoodTech,809245889
+Exotrail,exotrail,Massy,series_a,11.38,11383538,EUR,2020-07-16,http://exotrail.com,360 Capital||Bpifrance||Innovacom||IRDI SORIDEC Gestion||IXO Private Equity||Karista||NCI Waterstart||Thibaud Elziere||Turenne Capital,SpaceTech & Aerospace||Telecom,831241179
+VitiBot,vitibot,Reims,series_a,11.0,11000000,EUR,2020-11-02,http://www.vitibot.fr/en,,Robotics||CleanTech||AgTech||Hardware,824267389
+Gojob,gojob,Aix-en-provence,series_a,11.0,11000000,EUR,2020-01-22,http://www.gojob.com,Alter Equity 3P||Banque des Territoires||Kois Invest||Région Sud Investissement,SaaS||Artificial Intelligence||HRTech,813454717
+Krono-Safe,krono-safe,Orsay,series_b,10.6,10600000,EUR,2020-01-21,http://www.krono-safe.com/,Aptiv||Safran Corporate Ventures,SaaS||Energy,531855930
+AlgoTherapeutix,algotherapeutix,Suresnes,series_a,10.51,10507881,EUR,2020-11-24,https://algotx.com,Bpifrance||Omnes Capital,BioTech,839726783
+Planity,planity,Paris,series_a,10.29,10290543,EUR,2020-07-24,http://www.planity.com,Alven||Bpifrance||Crédit Mutuel Innovation||Eiffel Investment Group,E-commerce & Retail,821511128
+nextProtein,nextprotein,Paris,series_a,10.2,10200000,EUR,2020-05-27,http://www.nextprotein.co,Althelia Funds||aucfan||Blue Oceans Partners||Kepple Africa Ventures||Mirova||RAISE Impact||Telos Impact,BioTech||AgriTech||FoodTech,814012456
+Kurmi Software,kurmi-software,Issy-les-moulineaux,growth,10.0,10000000,EUR,2020-10-05,http://www.kurmi-software.com/en/,Ring Capital,SaaS,529230773
+Qobuz,qobuz,Paris,growth,10.0,10000000,EUR,2020-09-21,http://www.qobuz.com,,Media,749983029
+L'Angélys,langlys,Fontcouverte,growth,10.0,10000000,EUR,2020-12-18,https://www.langelys.com,Bpifrance||Unigrains,FoodTech,404701989
+Sekoia.io,sekoiaio,Rennes,seed,10.0,10000000,EUR,2020-10-07,https://www.sekoia.io,Alliance Entreprendre||BNP Paribas Développement||Omnes Capital,SaaS||Cybersecurity||Artificial Intelligence,
+Ubble.ai,ubbleai,Paris,seed,10.0,10000000,EUR,2020-06-25,https://www.ubble.ai/,BREEGA||Partech,SaaS||Artificial Intelligence,838307775
+MusicDiffusion,musicdiffusion,Paris,seed,10.0,10000000,EUR,2020-03-01,https://www.musicdiffusion.com,,Media,
+In&Motion,inmotion,Annecy,series_a,10.0,10000000,EUR,2020-12-10,https://www.inemotion.com,360 Capital||Bpifrance||Upfront Ventures,Consumer Electronics||SportsTech,
+Joko,joko,Paris,series_a,10.0,10000000,EUR,2020-10-08,https://www.hellojoko.com,Axeleo Capital||Hedosophia||Partech,FinTech,
+PlayPlay,playplay,Paris,series_a,10.0,10000000,EUR,2020-05-12,https://playplay.com,Balderton Capital||Kerala Ventures||Point Nine,SaaS||Entertainment||Media,
+Matera,matera,Paris,series_a,10.0,10000000,EUR,2020-01-15,https://www.matera.eu/,Bertrand Jelensperger||Index Ventures||Marc-David Choukroun||Paulin Dementhon||Samaipata,FinTech||PropTech,
+Snowleader,snowleader,Annecy,series_b,10.0,10000000,EUR,2020-01-22,http://www.snowleader.com/?gclid=CMj4jdSSuMkCFUH4wgodhr4Hbg,123Venture||BNP Paribas Développement||Sofimac Investment Managers,E-commerce & Retail||SportsTech,507679025
+Singulart,singulart,Paris,series_b,10.0,10000000,EUR,2020-05-07,https://www.singulart.com/en/,FJ Labs||Fonds Ambition Amorçage Angels||PIA||Turenne Capital||Ventech,Entertainment,827756495
+Joone,joone,Paris,series_b,10.0,10000000,EUR,2020-09-14,https://www.joone.fr/,Vaultier7,E-commerce & Retail,
+D-Aim,d-aim,Malakoff,series_b,10.0,10000000,EUR,2020-04-15,https://d-aim.com/,Alliance Entreprendre||Swen Capital Partners,MarTech||Artificial Intelligence,
+Antaios,antaios,Grenoble,series_a,9.63,9632224,EUR,2020-12-16,https://www.antaios.fr/,Applied Ventures||Bpifrance||Innovacom||Sofimac Innovation,Semiconductors||DeepTech,824720387
+Slite,slite,Paris,series_a,9.63,9632224,EUR,2020-04-15,http://slite.com,Hexa||Romain Peugeot||Spark Capital,SaaS,834263774
+"SimpliField, a Field Agent company",simplifield-a-field-agent-company,Paris,series_a,9.63,9632224,EUR,2020-01-12,http://www.simplifield.com,CapHorn Invest||Five Elms Capital||Runa Capital,SaaS||E-commerce & Retail,797424082
+Advanced BioDesign,advanced-biodesign,Saint Priest,growth,9.0,9000000,EUR,2020-02-25,http://www.a-biodesign.com/,Xerys,HealthTech||BioTech||NeuroTech,523847820
+Convelio,convelio,Paris,series_a,9.0,9000000,EUR,2020-02-04,https://www.convelio.com,Acton Capital||Global Founders Capital||Innoport,SaaS||Mobility,
+Sorare,sorare,Paris,seed,8.76,8756567,EUR,2020-07-16,https://sorare.com,AA Sons||André Schürrle||Bossa Invest||CASSIUS||Cygni Capital||Declan Kelly||Fabric Ventures||Gerard Pique||Hard Yaka||Headline||MPGI||Partech||Possible Ventures||Presight Capital||Semantic Ventures,Blockchain||SportsTech||Gaming,844355727
+Strapi,strapi,Paris,series_a,8.76,8756567,EUR,2020-05-20,http://www.strapi.io/,Augusto Marietti||David Cramer||Florian Douetteau||Index Ventures||Marco Palladino,SaaS,
+Yomoni,yomoni,Paris,series_a,8.7,8700000,EUR,2020-09-10,http://www.yomoni.fr,Crédit Mutuel Arkéa||Weber Investissement,FinTech,
+TiHive Technologies,tihive-technologies,Grenoble,series_a,8.6,8600000,EUR,2020-09-03,https://www.tihive.com,,Artificial Intelligence||Telecom,
+Fab'entech,fabentech,Lyon,series_c,8.5,8500000,EUR,2020-02-03,http://www.fabentech.com/,Bpifrance||Elaia,HealthTech,512823972
+DeepReach,deepreach,Paris,series_a,8.2,8200000,EUR,2020-09-30,https://www.deepreach.com/,Julien Lopizzo,SaaS||E-commerce & Retail||MarTech,830216529
+Nous anti-gaspi,nous-anti-gaspi,Paris,seed,8.0,8000000,EUR,2020-10-01,http://www.nousantigaspi.com,Danone Manifesto Venture||Eutopia VC||Quadia,E-commerce & Retail||FoodTech,834426991
+Murfy,murfy,Paris,series_a,8.0,8000000,EUR,2020-10-18,https://murfy.fr,Alter Equity 3P||Impactivist,E-commerce & Retail||Consumer Electronics||PropTech,
+Microoled,microoled,Grenoble,series_a,8.0,8000000,EUR,2020-09-10,http://www.microoled.net/,CEA Investissement||Cipio Partners||Supernova Invest||Ventech,Semiconductors||DeepTech||Consumer Electronics||Hardware,
+Certideal,certideal,Paris,series_a,8.0,8000000,EUR,2020-04-22,http://www.certideal.com,BNP Paribas Développement||Citizen Capital||Elevation Capital Partners||MAIF Avenir,E-commerce & Retail,
+Akur8,akur8,Paris,series_a,8.0,8000000,EUR,2020-03-12,http://www.akur8.com,BlackFin Capital Partners||MTech Capital,InsurTech||FinTech||SaaS||Artificial Intelligence,
+Pixpay,pixpay,Paris,series_a,8.0,8000000,EUR,2020-03-12,https://www.pixpay.fr/,Bpifrance||Global Founders Capital,FinTech,
+Assurly,assurly,Paris,series_a,8.0,8000000,EUR,2020-03-01,https://www.assurly.com/,Cleverton Ventures||Guillaume Sarkozy||Jean Pierre Begon Lours||Patrick Lucas||Vincent Gentil,InsurTech||FinTech||Artificial Intelligence,
+mediarithmics,mediarithmics,Paris,series_b,8.0,8000000,EUR,2020-06-12,https://www.mediarithmics.io,Adelie||Alliance Entreprendre,AdTech||SaaS||MarTech,533760450
+Aviwest,aviwest,Saint-grégoire,series_b,8.0,8000000,EUR,2020-01-29,https://www.aviwest.com,Crédit Agricole||GO CAPITAL||Sodero Gestion||Turenne Capital||Unexo,Media||Telecom,
+Sensome,sensome,Massy,series_b,8.0,8000000,EUR,2020-01-12,https://www.sensome.com,Asahi Intecc USA||Inc.||BNP Paribas Développement||Idinvest Partners||Kurma Partners||Paris-Saclay Seed Fund,HealthTech||MedTech||Hardware,801623596
+Yooji,yooji,Bordeaux,series_a,7.5,7500000,EUR,2020-09-15,https://www.yooji.fr/,Capagro||Caravelle SA||Danone Manifesto Venture||DS Participation||Pymwymic,HealthTech||E-commerce & Retail||FoodTech,753718923
+Gleamer,gleamer,Paris,series_a,7.5,7500000,EUR,2020-09-24,http://www.gleamer.ai/,Crista Galli Ventures||Elaia||Fonds Ambition Amorçage Angels||MACSF||Majycc Innovation Santé||XAnge,SaaS||Artificial Intelligence,
+Synapse Medicine,synapse-medicine,Bordeaux,series_a,7.01,7005254,EUR,2020-07-06,https://synapse-medicine.com/,BNP Paribas||Bpifrance||MACSF||Nicolas Dessaigne||XAnge,HealthTech||BioTech||MedTech,
+Jumbo Privacy,jumbo-privacy,Paris,series_a,7.01,7005254,EUR,2020-06-24,https://www.jumboprivacy.com/,Adrien Miniatti||Alban Denoyel||Alex Negrea||Antoine Martin||Balderton Capital||Charles Gorintin||Chuck Dietrich||Edward Lando||Fareed Mosavat||Hugo Van Vuuren||Javier Soltero||Jean Charles Samuelian||Jean Patry||Kevin Carter||Kevin Mahaffey||Kima Ventures||Mathilde Collin||Matt Robinson||NextView Ventures||Nicolas Pinto||Pareto Holdings||Roger McNamee||Steeve Morin||Stefan Cohen||SV Angel||Thomas Owadenko||Thrive Capital||Yahya Mokhtarzada,SaaS||Cybersecurity,
+YOLO,yolo,Paris,series_a,7.01,7005254,EUR,2020-02-28,https://onyolo.com,A.Capital Ventures||Alexia Tsotsis||Biz Stone||Bobby Goodlatte||Brian Pokorny||Dream Machine||Goodwater Capital||Shrug Capital||Thrive Capital,SaaS,
+Kayentis,kayentis,Meylan,growth,7.0,7000000,EUR,2020-12-02,https://kayentis.com,Bpifrance||Extens||LBO France,BioTech,451664809
+Mutabilis,mutabilis,Paris,seed,7.0,7000000,EUR,2020-01-06,https://mutabilis.fr/,Repair Impact Fund,BioTech,
+Japhy,japhy,Paris,series_a,7.0,7000000,EUR,2020-10-25,https://www.japhy.fr,Aglaé Ventures||Capagro,E-commerce & Retail||FoodTech,
+AssoConnect,assoconnect,Paris,series_a,7.0,7000000,EUR,2020-01-31,http://www.assoconnect.com,Financiere Saint James||French Partners||Isai||Phil Tesler||Thibaud Elziere||XAnge,SaaS||HRTech,
+Aryballe Technologies,aryballe-technologies,Grenoble,series_b,7.0,7000000,EUR,2020-07-10,https://aryballe.com/,Asahi Kasei||Cemag Invest||HCVC||Innovacom||Samsung Venture Investment||SEB Alliance,DeepTech||Hardware,800742405
+VECT-HORUS,vect-horus,Marseille,series_d,6.7,6700000,EUR,2020-09-09,https://www.vect-horus.com/,,HealthTech||BioTech,485235311
+mylight150,mylight150,Jonage,series_a,6.5,6500000,EUR,2020-01-01,https://mylight150.com,,CleanTech||Energy,800551111
+MyLight Systems,mylight-systems,Saint Priest,series_a,6.5,6500000,EUR,2020-04-17,https://www.mylight-systems.com,Demeter||Elevation Capital Partners,CleanTech||Energy,
+SiPearl,sipearl,Maisons-laffitte,seed,6.2,6200000,EUR,2020-02-17,https://www.sipearl.com,,Semiconductors||DeepTech||Artificial Intelligence||Hardware,851434365
+Neocase Software,neocase-software,La Garenne-colombes,growth,6.0,6000000,EUR,2020-05-13,http://www.neocasesoftware.com,Entrepreneur Venture||IRIS||Sofiouest,SaaS||HRTech,433538782
+Araxxe,araxxe,Lyon,growth,6.0,6000000,EUR,2020-02-04,http://www.araxxe.com,Crédit Mutuel Equity||Societe Generale Capital Partners,Telecom,481163657
+Qarnot,qarnot,Montrouge,series_a,6.0,6000000,EUR,2020-03-31,https://www.qarnot.com,Banque des Territoires||ENGIE Rassembleurs d'Energies initiative||European Innovation Council||Groupe Casino||noa||The Caisse des Dépôts,DeepTech||SaaS||PropTech,528593817
+Prevision.io,previsionio,Puteaux,series_a,6.0,6000000,EUR,2020-10-23,https://www.prevision.io,Hi Inov - Dentressangle||Net Venture||Upfront Ventures,SaaS||Artificial Intelligence,
+Medaviz,medaviz,Paris,series_a,6.0,6000000,EUR,2020-09-03,https://www.medaviz.com/,Bpifrance||Groupama Banque||Matmut||MBA Mutuelle||Ramsay Generale De Sante,HealthTech||SportsTech,
+Ambler,ambler,Paris,series_a,6.0,6000000,EUR,2020-06-09,https://www.ambler.fr/,Bpifrance||Idinvest Partners||Kima Ventures||Nicolas Douay||Partech,HealthTech||Mobility,
+Shipup,shipup,Paris,series_a,6.0,6000000,EUR,2020-06-03,https://www.shipup.co/,Bpifrance||Elaia||Romain Peugeot,AdTech||E-commerce & Retail,
+PayLead,paylead,Paris,series_a,6.0,6000000,EUR,2020-03-05,https://www.paylead.fr/,Guillaume Lestrade||Hugues le Bret||Open CNP||SIDE Capital,FinTech||MarTech,821725579
+Scipio Bioscience,scipio-bioscience,Paris,series_a,6.0,6000000,EUR,2020-02-25,http://www.scipio.bio/,Arbevel||HTGF (High-Tech Gruenderfonds)||M Ventures||Seventure Partners||Verve Ventures,BioTech,
+CSN Energy,csn-energy,Paris,series_a,6.0,6000000,EUR,2020-01-14,https://www.csnenergy.com/fr/,Goldman Sachs,SaaS||CleanTech||Energy,
+ImCheck Therapeutics,imcheck-therapeutics,Marseille,series_b,6.0,6000000,EUR,2020-09-15,http://www.imchecktherapeutics.com,Pureos Bioventures,HealthTech||BioTech,812428142
+Lucine,lucine,Bordeaux,seed,5.5,5500000,EUR,2020-11-18,https://lucine.fr,AQUITI Gestion||BNP Paribas Développement||Bpifrance||IRDI SORIDEC Gestion||Kurma Partners,HealthTech||BioTech,
+CERBAIR,cerbair,Montrouge,series_a,5.5,5500000,EUR,2020-02-06,http://www.cerbair.com/en/,AUBE Management||Boundary Holding||Ilavska Vuillermoz Capital,SpaceTech & Aerospace||DefenseTech,812179760
+VECT-HORUS,vect-horus,Marseille,series_d,5.3,5300000,EUR,2020-12-01,https://www.vect-horus.com/,,HealthTech||BioTech,485235311
+EasyMovie,easymovie,Paris,series_a,5.25,5253940,EUR,2020-09-30,https://www.easy.movie/,CapHorn Invest,SaaS||MarTech||Media,
+Click&Boat,clickboat,Boulogne-billancourt,series_c,5.25,5253940,EUR,2020-04-15,https://www.clickandboat.com/,OLMA Luxury Holdings,Blue Economy||TravelTech,801157256
+PowerUp,powerup,Aulnay-sous-bois,seed,5.0,5000000,EUR,2020-11-26,https://powerup.xyz/,EDF Renewable Energy||Supernova Invest,Hardware,829235928
+Pandascore,pandascore,Paris,seed,5.0,5000000,EUR,2020-09-29,http://www.pandascore.co,Alven||AXiomatic||KB Partners||V13 Invest,Artificial Intelligence||SportsTech||Gaming,813145745
+Swan,swan,Paris,seed,5.0,5000000,EUR,2020-09-15,https://swan.io,Bpifrance||Creandum||Guillaume Lestrade,FinTech,853827103
+Bling,bling,Paris,seed,5.0,5000000,EUR,2020-06-01,https://www.bling.eu,Eduardo Ronzano||Rand Hindi||Secocha Ventures||Thomas Rebaud,FinTech,852265529
+Boxy,boxy,Paris,seed,5.0,5000000,EUR,2020-04-17,https://www.getboxy.co,CapHorn Invest||LocalGlobe,E-commerce & Retail||Artificial Intelligence,
+Velco,velco,Nantes,series_a,5.0,5000000,EUR,2020-12-05,https://velco.tech/en/,GO CAPITAL||Pays de la Loire Participations,Mobility||Artificial Intelligence||Hardware,819556168
+kShuttle,kshuttle,Levallois-perret,series_a,5.0,5000000,EUR,2020-10-30,https://www.kshuttle.io/fr/,ODYSSEE VENTURE,SaaS,
+Cyclofix,cyclofix,Paris,series_a,5.0,5000000,EUR,2020-09-21,https://www.cyclofix.com/,Via ID,FinTech,
+FinFrog,finfrog,Paris,series_a,5.0,5000000,EUR,2020-07-01,https://finfrog.fr,RAISE,FinTech,
+Rise Up,rise-up,Paris,series_a,5.0,5000000,EUR,2020-06-23,https://www.riseup.ai,Bpifrance||Impact Partenaires||MAIF Avenir,EdTech||SaaS,
+QUARKS LAB,quarks-lab,Paris,series_a,5.0,5000000,EUR,2020-06-04,http://www.quarkslab.com,Ace Capital Partners,SaaS||Cybersecurity,
+Didomi,didomi,Paris,series_a,5.0,5000000,EUR,2020-06-04,https://www.didomi.io,Bpifrance||BREEGA||Thibaud Elziere,RegTech||SaaS||Cybersecurity,
+My Job Glasses,my-job-glasses,Paris,series_a,5.0,5000000,EUR,2020-05-27,https://www.myjobglasses.com,Alliance Entreprendre||Alyan Group||Jean-Marc BUCHET||Xavier Niel,HRTech,
+Kickmaker,kickmaker,Paris,series_a,5.0,5000000,EUR,2020-01-24,https://www.kickmaker.fr,Generis Capital Partners,DeepTech||Hardware,
+E-novate,e-novate,Levallois-perret,series_a,5.0,5000000,EUR,2020-01-16,http://www.e-novate.fr,Elevation Capital Partners,MarTech,
+Novadiscovery,novadiscovery,Lyon,series_a,5.0,5000000,EUR,2020-01-09,http://www.novadiscovery.com,Debiopharm Group,HealthTech||BioTech||Artificial Intelligence,
+Beekast,beekast,Paris,series_a,5.0,5000000,EUR,2020-01-01,https://www.beekast.com,Brighteye Ventures||M Capital Partners||Sofimac Innovation||UI Investissement,EdTech||SaaS||MarTech||Media||HRTech||Telecom,
+Craft AI,craft-ai,Paris,series_a,5.0,5000000,EUR,2020-01-01,http://craft.ai,Talis,SaaS||Artificial Intelligence,
+Inotrem,inotrem,Paris,series_b,5.0,5000000,EUR,2020-02-11,http://inotrem.com,Fountain Healthcare Partners,HealthTech||BioTech,791682172
+protera,protera,Neuilly-sur-seine,series_a,4.9,4903678,EUR,2020-06-10,https://www.proterabio.com,Sofinnova Partners||SOSV||SOSV SF & NY (Fka IndieBio),BioTech||FoodTech,881925630
+api.video,apivideo,Bordeaux,seed,4.82,4816112,EUR,2020-06-25,https://api.video,Blossom Capital||Kima Ventures,SaaS||Media,491182739
+DiogenX,diogenx,Marseille,seed,4.5,4500000,EUR,2020-06-16,https://diogenx.com/,AdBio partners||Boehringer Ingelheim Venture Fund||JDRF T1D Fund,BioTech,881305544
+LTU,ltu,Puteaux,series_a,4.5,4500000,EUR,2020-05-01,http://www.ltutech.com/,,AdTech||SaaS||Artificial Intelligence,810994681
+Biodol Therapeutics,biodol-therapeutics,Clapiers,series_a,4.5,4500000,EUR,2020-08-31,http://www.biodol.eu/,V-Bio Ventures,BioTech||NeuroTech,
+JASTEC France,jastec-france,Paris,series_a,4.5,4500000,EUR,2020-05-13,http://www.jastec.fr,Alliance Entreprendre||Grand Sud Ouest Capital,SaaS||Artificial Intelligence,
+Energiency,energiency,Rennes,series_a,4.5,4500000,EUR,2020-03-10,http://www.energiency.com/,50 Partners||EIT InnoEnergy||Encevo||GO CAPITAL||Isai||West Web Valley,SaaS||CleanTech||Artificial Intelligence||Energy,
+Welink,welink,Paris,series_a,4.2,4200000,EUR,2020-12-02,https://www.we-link.com/,Jonathan Benhamou||OneRagtime||Takara Capital||Thomas Rebaud,SaaS,
+Connecting Food,connecting-food,Paris,seed,4.18,4178000,EUR,2020-02-26,https://connecting-food.com/,LeadBlock Partners,Blockchain||SaaS,823043039
+Activ'Inside,activinside,Bordeaux,seed,4.0,4000000,EUR,2020-12-15,https://activinside.com/,AQUITI Gestion||Bpifrance,HealthTech,509708483
+Moment,moment,Paris,seed,4.0,4000000,EUR,2020-10-15,https://getmoment.io,Elaia||Raba Partnership,FinTech||SaaS,
+TOTEM,totem,Paris,seed,4.0,4000000,EUR,2020-09-29,https://totem.co,Maki.vc||Samaipata||Sylvain Zimmer||Tekton Ventures,Mobility||FoodTech,
+Bellman,bellman,Paris,seed,4.0,4000000,EUR,2020-06-18,https://bellman.immo/,Connect Ventures||Financiere Saint James||Lakestar,MarTech||PropTech,848665592
+ZE Energy,ze-energy,Paris,seed,4.0,4000000,EUR,2020-06-17,https://www.ze-energy.com/,Demeter||EverWatt||HTGF (High-Tech Gruenderfonds)||Ze Way Invest,CleanTech||Energy,852197763
+Pennylane,pennylane,Paris,seed,4.0,4000000,EUR,2020-05-18,https://www.pennylane.com,Global Founders Capital||Kima Ventures||Partech,FinTech||SaaS,880265921
+Libeo,libeo,Paris,seed,4.0,4000000,EUR,2020-04-21,https://www.libeo.io,BREEGA||LocalGlobe,FinTech||SaaS,844679068
+Glopal,glopal,Paris,seed,4.0,4000000,EUR,2020-01-01,https://www.glopal.com,Axeleo Capital||Seventure Partners,SaaS||E-commerce & Retail||MarTech||Artificial Intelligence,879903243
+Bulldozair,bulldozair,Paris,series_a,4.0,4000000,EUR,2020-11-01,http://www.bulldozair.com/,CapHorn Invest||PRO BTP,SaaS||E-commerce & Retail||Mobility||PropTech,
+GarantMe,garantme,Paris,series_a,4.0,4000000,EUR,2020-09-03,https://garantme.fr/,Axeleo Capital||Bpifrance||NewAlpha Asset Management VC,InsurTech||PropTech,
+CetteFamille,cettefamille,Argentan,series_a,4.0,4000000,EUR,2020-02-04,https://www.cettefamille.com,Daniel Caille||Idinvest Partners||Malakoff Humanis||Newfund||Normandie Participations,HealthTech,
+Hivency,hivency,Paris,series_a,4.0,4000000,EUR,2020-01-08,https://www.hivency.com,Alliance Entreprendre||Investisseurs privés,SaaS||E-commerce & Retail||MarTech||Media||Artificial Intelligence,
+Unlatch,unlatch,Paris,series_a,3.94,3940455,EUR,2020-07-03,https://www.getunlatch.com/,AVP,PropTech,
+Share(d),shared,Grenoble,seed,3.7,3700000,EUR,2020-09-01,https://share-d.com/en,Bpifrance,SaaS,
+inHEART,inheart,Pessac,seed,3.7,3700000,EUR,2020-07-02,https://www.inheartmedical.com,Aquitaine Science Transfer||Elaia,BioTech||DeepTech||MedTech,
+CARLILI,carlili,Paris,series_a,3.68,3677758,EUR,2020-05-07,http://www.carlili.fr,Mathieu ROUGET||The Caisse des Dépôts,Mobility||TravelTech,
+Troops,troops,Lyon,series_a,3.6,3600000,EUR,2020-09-01,https://troops.fr,,SaaS||HRTech,
+Demand Side Instruments,demand-side-instruments,Caen,series_a,3.6,3600000,EUR,2020-03-10,https://dsinstruments.fr/#,Gedia Energies et Services,SaaS||CleanTech||AgTech||Energy||Telecom,
+RemyAI,remyai,Paris,seed,3.5,3502627,EUR,2020-07-08,https://www.getremy.ai/en,Abstract||Actions Capital (fka K50 Ventures)||Class 5 Global||Comcast Ventures||Partech||Precursor Ventures||WndrCo,FinTech||PropTech,
+Qilibri,qilibri,Paris,seed,3.5,3500000,EUR,2020-05-20,http://www.qilibri.fr,Day One Entrepreneurs & Partners||DN Capital||Financiere Saint James||GUIBOR,HealthTech||FoodTech,
+Vulkam,vulkam,Saint-martin-d'heres,series_a,3.5,3500000,EUR,2020-02-04,https://www.vulkam.com/,BNP Paribas Développement||Sofimac Innovation||Sud Rhone-Alpes Capital||Supernova Invest,DeepTech||Hardware,
+Comptoir de Campagne,comptoir-de-campagne,Jonage,series_a,3.4,3400000,EUR,2020-10-19,https://comptoirdecampagne.fr/,Banque des Territoires||Crédit Agricole Alpes Development||Evolem Start||Groupama||Lita.co||MAIF Impact,E-commerce & Retail||AgriTech||FoodTech,
+BeeBryte,beebryte,Lyon,series_b,3.4,3400000,EUR,2020-07-15,https://beebryte.com/,,SaaS||CleanTech||PropTech||Artificial Intelligence||Energy,815290333
+BuyCo,buyco,Marseille,series_a,3.35,3350000,EUR,2020-12-31,http://buyco.co,ODDO BHF,SaaS||Mobility||Blue Economy,
+Gamestream,gamestream,Paris,series_a,3.33,3327496,EUR,2020-05-26,https://gamestream.biz,2CRSI||Eponyme Partners||Phillip Bienz||Remo Bienz||Ronny Verlhest,Media||Gaming,
+Per Angusta,per-angusta,Lyon,series_a,3.2,3200000,EUR,2020-09-17,https://www.per-angusta.com/en,Hi Inov - Dentressangle||KREAXI||Pleiade Venture,SaaS,
+Reveal,reveal,Paris,seed,3.1,3100000,EUR,2020-06-09,https://www.reveal.co,Kernel Investissements||LocalGlobe||Ventech,SaaS,793618729
+Stonly,stonly,Levallois,seed,3.06,3064799,EUR,2020-02-26,https://stonly.com,Accel||Clément Buyse||Jonathan Benhamou||Renaud Visage,SaaS,841193667
+Bigblue,bigblue,Paris,seed,3.0,3000000,EUR,2020-11-26,https://www.bigblue.co,Bpifrance||Clement Benoit||Olivier Bonnet||Samaipata||Thibaud Elziere,SaaS||E-commerce & Retail||Mobility,824041461
+Beam,beam,Paris,seed,3.0,3000000,EUR,2020-10-20,https://beamapp.co/,Alven||Antoine Martin||C4 Ventures||Eduardo Ronzano||Nicolas Steegmann||Simon Dawlat||Spark Capital||Tapestry VC||Tiny Capital,SaaS,
+PowerZ,powerz,Paris,seed,3.0,3000000,EUR,2020-09-16,https://powerz.tech/,Educapital||Hachette Livre||Michael Benabou||Octave Klaba||Pierre Kosciusko-Morizet,Media||Gaming,885261602
+BeFC Bioenzymatic Fuel Cells,befc-bioenzymatic-fuel-cells,Grenoble,seed,3.0,3000000,EUR,2020-07-24,https://www.befc.fr/,BNP Paribas Développement||Demeter||Supernova Invest,DeepTech||CleanTech||Energy||Hardware,883544009
+Ponicode,ponicode,Paris,seed,3.0,3000000,EUR,2020-07-15,https://ponicode.com,BREEGA||Kima Ventures||Plug and Play,SaaS||Artificial Intelligence,
+Darewise Entertainment,darewise-entertainment,Paris,seed,3.0,3000000,EUR,2020-07-13,http://www.darewise.com,Hands of Midas||Lakestar||Serena,Media||Gaming,
+Moon Surgical,moon-surgical,Paris,seed,3.0,3000000,EUR,2020-07-02,https://www.moonsurgical.com,MD Start,MedTech||Robotics,851436188
+Energysquare,energysquare,Saint-mandé,seed,3.0,3000000,EUR,2020-06-06,http://www.energysquare.co/,EIT InnoEnergy||Partech,Consumer Electronics||Telecom,
+Kard,kard,Paris,seed,3.0,3000000,EUR,2020-06-05,https://kard.eu/,Didier Valet||Rand Hindi,FinTech,
+TEEPTRAK,teeptrak,Paris,seed,3.0,3000000,EUR,2020-06-01,http://www.teeptrak.com/en/,Électricité de France||XAnge,SaaS,
+NEOBRAIN,neobrain,Paris,seed,3.0,3000000,EUR,2020-05-29,https://www.neobrain.io,BREEGA,SaaS||Artificial Intelligence||HRTech,834104648
+Marketparts,marketparts,Lyon,seed,3.0,3000000,EUR,2020-01-14,https://www.marketparts.com/,Investisseurs privés,E-commerce & Retail||Mobility||SaaS,852278753
+DATATEGY,datategy,Neuilly-sur-seine,seed,3.0,3000000,EUR,2020-01-03,http://www.datategy.net,,SaaS||Artificial Intelligence,
+Supervan,supervan,Paris,series_a,3.0,3000000,EUR,2020-10-10,https://www.supervan.fr,Elevation Capital Partners,Mobility,
+ABC Transfer,abc-transfer,Tours,series_a,3.0,3000000,EUR,2020-06-29,https://abctransfer.fr/,Bpifrance||GO CAPITAL||Région Centre-Val de Loire,BioTech,
+Wingly,wingly,Paris,series_a,3.0,3000000,EUR,2020-06-16,https://www.wingly.io,Innovacom,Entertainment||SpaceTech & Aerospace||TravelTech,
+Invenis,invenis,Paris,series_a,3.0,3000000,EUR,2020-06-10,https://www.invenis.co,Crédit Mutuel Innovation,Artificial Intelligence,
+Emissive,emissive,Paris,seed,2.9,2900000,EUR,2020-11-03,https://www.emissive.fr,Teampact ventures,Augmented Reality||Virtual Reality,485080733
+Alice & Bob,alice-bob,Paris,seed,2.89,2889667,EUR,2020-05-25,https://alice-bob.com,Acequia Capital (AceCap)||BREEGA||Elaia||Flavien Kulawik,DeepTech||Quantum Computing||Hardware,881729156
+Clim8,clim8,Écully,series_a,2.75,2750000,EUR,2020-07-27,http://myclim8.com,Agileo Ventures||Deveaux Group||Seventure Partners,Consumer Electronics||Artificial Intelligence||Hardware,
+Avicenna.ai,avicennaai,La Ciotat,seed,2.7,2700000,EUR,2020-02-07,https://avicenna.ai/,Cemag Invest||Innovacom,HealthTech||Artificial Intelligence,
+klassroom,klassroom,Paris,seed,2.63,2626970,EUR,2020-07-28,http://klassroom.co,AA Sons||Alexandre Margoline||Andy Myers||Arnaud Menjucq||Aude Hayot||Bpifrance||Bris Rocher||Christophe Courtin||David Lecat||Isabelle Gex||Jean Stephane Arcis||Jerome Lecat||Jonathan Azoulay||Kima Ventures||Moïc Toulemonde||Romain Afflelou||Sebastien Breteau||Vincent Klingbeil,EdTech,
+Core Biogenesis,core-biogenesis,Paris,seed,2.6,2600000,EUR,2020-12-14,https://www.corebiogenesis.com,Andrew Nutter||Entrepreneurs First||Plug and Play||XAnge,BioTech,
+Vestack,vestack,Paris,seed,2.6,2600000,EUR,2020-10-08,https://www.vestack.com/,Karista,ClimateTech||PropTech||SaaS,
+MyDataModels,mydatamodels,Valbonne,seed,2.5,2500000,EUR,2020-12-09,https://www.mydatamodels.com/,Earlybird Venture Capital||Région Sud Investissement||Speedinvest,SaaS||Artificial Intelligence,
+AgDataHub,agdatahub,Paris,seed,2.5,2500000,EUR,2020-11-05,https://agdatahub.eu/en/,API-AGRO||Banque des Territoires,SaaS||AgriTech,887921484
+AbolerIS Pharma,aboleris-pharma,Nantes,seed,2.5,2500000,EUR,2020-11-04,https://aboleris-pharma.com,Newton Biocapital||Sham,BioTech,
+Fulllife,fulllife,Biarritz,seed,2.5,2500000,EUR,2020-10-08,https://full.life/,Acequia Capital (AceCap)||Julien Lopizzo,E-commerce & Retail||Gaming,
+Quortex,quortex,Cesson-sévigné,seed,2.5,2500000,EUR,2020-06-18,https://www.quortex.io/,Elaia||GO CAPITAL||Unexo,Media||Artificial Intelligence,
+Colizey,colizey,Paris,seed,2.5,2500000,EUR,2020-05-06,https://colizey.fr,Aglaé Ventures||CASSIUS||Kima Ventures,E-commerce & Retail||SportsTech,
+Futura gaia,futura-gaia,Rodilhan,seed,2.5,2500000,EUR,2020-04-01,https://futuragaia.com/,KIMPA,AgriTech||CleanTech,
+Appvizer,appvizer,Montpellier,series_a,2.5,2500000,EUR,2020-02-14,https://www.appvizer.fr/,Angelsquare||IRDI,SaaS,
+Sanilea,sanilea,Limoges,series_a,2.5,2500000,EUR,2020-01-22,http://www.sanilea.fr/,Région Nouvelle-Aquitaine,SaaS||Mobility,
+MCES,mces,Marseille,series_a,2.45,2451839,EUR,2020-07-05,https://www.mces.gg/,Turenne Capital,Media||SportsTech||Gaming,
+Manty,manty,Paris,seed,2.4,2400000,EUR,2020-03-02,https://manty.eu/,Acequia Capital (AceCap)||Axeleo Capital||Banque des Territoires||Kima Ventures,SaaS,
+Les Alchimistes,les-alchimistes,L'ile-saint-denis,series_a,2.4,2400000,EUR,2020-01-13,https://alchimistes.co/,France Active||Impactivist||PhiTrust Impact Investors||Thierry Petit,AgriTech||CleanTech||Energy,
+ParaSwap,paraswap,Paris,seed,2.36,2364273,EUR,2020-09-17,https://paraswap.io,Alameda Research||Arrington XRP Capital||Arthur Cheong||Blockchain Capital||CoinFund||CoinGecko||Genblock Capital||Itamar Lesuisse||Julien Niset||Lemniscap||Rand Hindi||Stani Kulechov||TokenSuite Ventures,Blockchain||FinTech,888103678
+Cabaia,cabaia,Paris,series_a,2.3,2300000,EUR,2020-07-31,https://www.cabaia.fr/,Spring Invest,E-commerce & Retail,
+Tollys,tollys,Lyon,series_a,2.3,2300000,EUR,2020-05-26,http://tollys.fr/,Investisseurs privés,BioTech,
+PKVitality,pkvitality,Paris,seed,2.26,2255363,EUR,2020-06-30,https://www.pkvitality.com,Beurer||Business Angels||Mtec Holding Gmbh,HealthTech||MedTech||Consumer Electronics,
+Koala,koala,Paris,seed,2.2,2200000,EUR,2020-07-01,https://www.hikoala.co,Avonmore Developments||Chris Adelsbach||Insurtech Gateway||Playfair Capital||Techstars||Techstars Ventures,InsurTech||Mobility||Aviation||TravelTech,
+Vaonis,vaonis,Clapiers,seed,2.19,2189142,EUR,2020-11-27,https://vaonis.com/,,Entertainment||Hardware,823710447
+Okarito,okarito,Paris,seed,2.1,2100000,EUR,2020-06-26,https://www.okarito.io,Axeleo Capital||Geoffroy Roux de Bezieux||Kima Ventures,FinTech||SaaS||HRTech||TravelTech,
+Monk.ai,monkai,Paris,seed,2.1,2100000,EUR,2020-06-11,https://www.monk.ai,Arthur Waller||IRIS||Patrick Sayer||Plug and Play||Yannis Yahiaoui,InsurTech||SaaS||Artificial Intelligence,
+SPRiNG Collective,spring-collective,Paris,seed,2.1,2100000,EUR,2020-06-03,https://wespring.com,Aglaé Ventures||Eutopia VC||Ventech,E-commerce & Retail,
+Spellz,spellz,Paris,seed,2.02,2024000,EUR,2020-01-01,https://spellz.ai,AGORANOV||Bpifrance,SaaS||Artificial Intelligence,
+Honing Biosciences,honing-biosciences,Paris,pre_seed,2.0,2000000,EUR,2020-07-07,http://www.honing-biosciences.com/,Bpifrance||Elaia,BioTech,840896310
+Sarus,sarus,Paris,pre_seed,2.0,2000000,EUR,2020-04-22,https://sarus.tech,Didier Valet||Serena||XAnge,SaaS||Cybersecurity||Artificial Intelligence,844188151
+YZR,yzr,Paris,seed,2.0,2000000,EUR,2020-12-04,https://www.yzr.ai/,Ahmed Mhiri||Anne-Laure Constanza||Bertrand Diard||Frédéric Mazzella||Jean-Baptiste Rudelle||Laurent Ritter||Purple,SaaS||E-commerce & Retail||Artificial Intelligence,
+Maria Schools,maria-schools,Paris,seed,2.0,2000000,EUR,2020-09-25,http://www.mariaschools.com/,Andreas Wiele||Crédit Mutuel Equity||Crédit Mutuel Innovation||Florian Douetteau,EdTech,
+PricingHUB,pricinghub,Saint-mandé,seed,2.0,2000000,EUR,2020-09-10,https://www.pricinghub.net,Elaia||Lafayette Plug and Play,SaaS||E-commerce & Retail,
+Santé Académie,sant-acadmie,Lyon,seed,2.0,2000000,EUR,2020-07-20,https://www.santeacademie.com/#?utm_source=crunchbase&utm_medium=referral&utm_campaign=base_donnees,Bpifrance Digital Venture||MAIF Avenir,HealthTech||EdTech,
+Livejourney,livejourney,Paris,seed,2.0,2000000,EUR,2020-06-30,https://www.livejourney.com/,Evolem Start||Holnest||Newfund,SaaS||Artificial Intelligence,
+HappyVore,happyvore,Paris,seed,2.0,2000000,EUR,2020-05-22,https://happyvore.com/,Adrien de Schompre||Confidential ‚Äè‚Äè‚Äé ‚Äé‚Äè‚Äè‚Äé ‚Äé‚Äè‚Äè‚Äé ‚Äé‚Äè‚Äè‚Äé ‚Äé||Damien Guermonprez||Kima Ventures||Numerous Confidential Sources||Philippe Cantet,AgTech||FoodTech,880710223
+jho.,jho,Nantes,seed,2.0,2000000,EUR,2020-05-15,https://www.jho.fr/,Bamboo Ventures||Founders Future||Imagination Machine||Siparex Groupe,HealthTech||FemTech||E-commerce & Retail,833542160
+Nalo,nalo,Paris,seed,2.0,2000000,EUR,2020-04-30,http://www.nalo.fr,Sharpstone Capital,FinTech,818577090
+Les Nouveaux Affineurs,les-nouveaux-affineurs,Paris,seed,2.0,2000000,EUR,2020-03-02,https://lesnouveauxaffineurs.com/,Beyond Impact||Demeter Partners||Newfund,FoodTech,829430370
+Bodyguard,bodyguard,Nice,seed,2.0,2000000,EUR,2020-03-01,https://www.bodyguard.ai/,Kima Ventures||Plug and Play||Starquest Capital,Media||Cybersecurity||Artificial Intelligence,840708382
+Qwarry,qwarry,Caen,seed,2.0,2000000,EUR,2020-02-13,https://qwarry.com/,Apicap||Crédit Agricole||Normandie Participations||West Web Valley,MarTech,
+Hprobe,hprobe,Eybens,seed,2.0,2000000,EUR,2020-02-04,https://www.hprobe.com,BNP Paribas Développement||HTGF (High-Tech Gruenderfonds)||ITIC: Industrial Technology Investment Corporation||TEL Venture Capital,Semiconductors||DeepTech||Hardware,828739169
+Colizey,colizey,Paris,seed,2.0,2000000,EUR,2020-02-02,https://colizey.fr,Thomas Rebaud,E-commerce & Retail||SportsTech,
+Nannybag,nannybag,Paris,seed,2.0,2000000,EUR,2020-01-28,https://www.nannybag.com/,Expon Capital||FaDièse,TravelTech,817899305
+Spectral Augmented Industries,spectral-augmented-industries,Paris,series_a,2.0,2000000,EUR,2020-10-13,https://spectraltms.com/,Elaia||IMT Starter,SaaS||Augmented Reality,
+Nextflow Software,nextflow-software,Nantes,series_a,2.0,2000000,EUR,2020-10-07,https://www.nextflow-software.com/,GO CAPITAL,SaaS,
+Atelier Brâam,atelier-bram,Paris,series_a,2.0,2000000,EUR,2020-02-01,https://atelierbraam.com/,High Flyers Capital||NCI||Newfund,FoodTech,
+Vybe,vybe,Paris,pre_seed,1.93,1926445,EUR,2020-07-29,https://vybecard.com,Ankur Nagpal||Hugo Amsellem||Laurent Le Moal||Plug and Play||Sylvain Zimmer||Thibaud Elziere,FinTech,853257905
+Perspective(S),perspectives,Aix-en-provence,series_a,1.93,1926445,EUR,2020-11-06,http://www.perspective-s.org/,Debu Fabien||JEM||Région Sud Investissement,SaaS,
+SURGAR,surgar,Clermont-ferrand,pre_seed,1.8,1800000,EUR,2020-01-08,https://surgar-surgery.com,Sofimac Régions||Crédit Agricole||Kreaxi,MedTech||Augmented Reality,878322155
+Vianova,vianova,Paris,seed,1.8,1800000,EUR,2020-12-01,https://www.vianova.io,Contrarian Ventures||EIT Urban Mobility||Public||RATP Capital Innovation,SaaS||Mobility,
+Cuure,cuure,Paris,seed,1.8,1800000,EUR,2020-09-01,https://cuure.com,Kima Ventures||Mehdi Bedadi||Newfund,HealthTech||E-commerce & Retail||FoodTech,
+Acwa Robotics,acwa-robotics,Bastia,seed,1.8,1800000,EUR,2020-01-15,https://www.acwa-robotics.com,UI Investissement,Robotics||Hardware,
+MainBot,mainbot,Paris,series_a,1.8,1800000,EUR,2020-12-16,http://www.mainbot.me,,EdTech||Robotics,
+NuxtJS,nuxtjs,Bordeaux,pre_seed,1.75,1751313,EUR,2020-05-01,https://nuxtlabs.com,Eduardo Ronzano||Firstminute Capital||Kima Ventures||Nicolas Steegmann||Renaud Visage||Thibaud Elziere,SaaS,828193722
+HappyPal,happypal,Paris,seed,1.75,1751313,EUR,2020-12-14,https://happypal.fr,,FinTech||SaaS||E-commerce & Retail||HRTech,
+BMI System,bmi-system,Montrouge,series_a,1.75,1750000,EUR,2020-03-01,https://www.bmi-system.com/,Afone Participations||Calao Finance||Siparex Groupe,BioTech||RegTech,
+Ecov -,ecov--,Nantes,seed,1.7,1700000,EUR,2020-12-16,http://www.ecov.fr/,France Active||The Caisse des Dépôts,SaaS||Mobility,808203467
+Urban Canopee,urban-canopee,Champs-sur-marne,seed,1.7,1700000,EUR,2020-12-01,https://www.urbancanopee.com/,Banque des Territoires||BTP Capital Investissement,CleanTech||PropTech,823373154
+Explora Project,explora-project,Annecy,seed,1.7,1700000,EUR,2020-07-06,https://www.explora-project.com/,Crédit Agricole Alpes Development||France Angels||Kima Ventures,TravelTech,840594022
+TwicPics,twicpics,Paris,seed,1.7,1700000,EUR,2020-02-01,https://www.twicpics.com,50 Partners||Bpifrance||Eric Ibled||Frederic Halley||Holnest||Mathieu Tarnus||Matthieu Vaxelaire||Thierry Petit||WILCO,SaaS||Artificial Intelligence,840701767
+Urania Therapeutics,urania-therapeutics,Strasbourg,seed,1.7,1700000,EUR,2020-01-15,https://uraniatx.com/,Bpifrance,BioTech,
+BuyBox,buybox,Toulouse,series_a,1.7,1700000,EUR,2020-12-17,http://www.buybox.net,Edenred Capital Partners||The Moon Venture,SaaS||E-commerce & Retail,
+UpStride,upstride,Paris,seed,1.66,1663748,EUR,2020-01-15,https://ww2.upstride.io/,360 Capital||Entrepreneurs First||Pierre Kosciusko-Morizet,Artificial Intelligence,848415261
+Be Sport,be-sport,Paris,seed,1.6,1600000,EUR,2020-10-02,http://www.besport.com,,Media||SportsTech,
+Check & Visit,check-visit,Rennes,seed,1.6,1600000,EUR,2020-07-01,https://checkandvisit.com/,Axeleo Capital,InsurTech||SaaS||PropTech,
+isahit,isahit,Paris,seed,1.6,1600000,EUR,2020-02-01,https://isahit.com/,Colam Impact||Mandalore Partners||Sodexo Ventures,SaaS||Artificial Intelligence,
+HOOTSIDE,hootside,Lille,seed,1.6,1600000,EUR,2020-01-27,https://hootside.store/en/,Banque Populaire du Sud||BNP Paribas Private Equity||Bpifrance||Crédit Agricole||Finovam Gestion||Nord Capital||Nord France Amorcage,Augmented Reality||Gaming,
+Vizcab,vizcab,Lyon,series_a,1.6,1600000,EUR,2020-06-12,https://vizcab.io,Banque des Territoires||noa||Unibail-Rodamco-Westfield,ClimateTech||PropTech||SaaS,
+Monstock,monstock,Bezannes,series_a,1.6,1600000,EUR,2020-05-11,https://monstock.net/,Bpifrance||SIDE Capital,SaaS||Artificial Intelligence,834950156
+Contrast,contrast,Paris,pre_seed,1.58,1576182,EUR,2020-09-01,https://www.getcontrast.io/,DN Capital,SaaS,
+Qynapse,qynapse,Paris,seed,1.58,1576182,EUR,2020-10-10,http://www.qynapse.com/,,HealthTech||BioTech||SaaS||Artificial Intelligence||TechBio||NeuroTech,815093356
+CrowdSec,crowdsec,Montrouge,pre_seed,1.5,1500000,EUR,2020-09-15,https://crowdsec.net,Julien Lopizzo||Reflexion Capital,Cybersecurity,880140496
+Helios.do,heliosdo,Paris,pre_seed,1.5,1500000,EUR,2020-09-11,https://www.helios.do/,Kima Ventures||Plug and Play||Raise Ventures,FinTech||CleanTech,883111585
+Meilisearch,meilisearch,Paris,pre_seed,1.5,1500000,EUR,2020-08-10,https://www.meilisearch.com/,Kima Ventures||LocalGlobe||Seedcamp,SaaS,
+Mon Petit Placement,mon-petit-placement,Écully,pre_seed,1.5,1500000,EUR,2020-03-23,https://www.monpetitplacement.fr,HUB612||Investisseurs privés,FinTech,831051453
+SeaBeLife,seabelife,Roscoff,seed,1.5,1500000,EUR,2020-06-15,https://www.seabelife.com/,Angels Santé||Bpifrance,HealthTech||BioTech,
+BiOceanOr,bioceanor,Valbonne,seed,1.5,1500000,EUR,2020-06-09,https://www.bioceanor.com/,Blue Oceans Partners||Inventures SA||Région Sud Investissement,AgriTech||Blue Economy||Artificial Intelligence||WaterTech,
+BHealthCare,bhealthcare,Saint-herblain,seed,1.5,1500000,EUR,2020-06-01,https://www.bhealthcare.com,Bpifrance||French Tech Acceleration Fund,MedTech||Robotics,
+Dianosic,dianosic,Strasbourg,seed,1.5,1500000,EUR,2020-04-14,https://dianosic.com/,Banque Populaire Rives de Paris||Bpifrance||Caisse d‚ÄôEpargne||PAF Kapital,BioTech||MedTech,
+Aurore Market,aurore-market,Espalion,seed,1.5,1500000,EUR,2020-02-28,https://auroremarket.fr/?utm_source=crunchbase,,HealthTech||E-commerce & Retail||FoodTech,
+Welink,welink,Paris,seed,1.5,1500000,EUR,2020-02-07,https://www.we-link.com/,Takara Capital,SaaS,
+Siteflow,siteflow,Paris,seed,1.5,1500000,EUR,2020-01-29,https://www.siteflow.com,360 Capital,SaaS||PropTech,833858590
+PrediSurge,predisurge,Saint-Étienne,seed,1.5,1500000,EUR,2020-01-01,https://www.predisurge.com,,HealthTech||MedTech,
+WAAM Cosmetics,waam-cosmetics,Savigny-sur-orge,series_a,1.5,1500000,EUR,2020-02-17,https://waamcosmetics.com/,Bpifrance||Karot Capital,E-commerce & Retail,
+Qantev,qantev,Paris,seed,1.49,1488616,EUR,2020-11-05,https://www.qantev.com,Elaia||Entrepreneurs First||Gwénaël Moy||Nadav Rosenberg,InsurTech||SaaS||Artificial Intelligence,847752789
+Koyeb,koyeb,Paris,pre_seed,1.4,1401051,EUR,2020-10-15,https://www.koyeb.com,Acequia Capital (AceCap)||Alexis Le-Quoc||Amirhossein Malekzadeh||Dominique Vidal||Fabrice Bernhard||Hank Vigil||Isai||Justin Ziegler||Kima Ventures||Marc Jalabert||Philippe Besnard||Plug and Play||Sébastien Lucas||Zachary Smith,SaaS||Artificial Intelligence,850183948
+Escape,escape,Paris,pre_seed,1.4,1401051,EUR,2020-09-08,https://escape.tech,Amit Agarwal||Frst||Olivier Pomel||Renaud Deraison,SaaS||Cybersecurity||Artificial Intelligence,
+Syroco,syroco,Marseille,seed,1.4,1400000,EUR,2020-09-29,https://syro.co,Anne-Laure Constanza||Bruno Derieux||Cédric Mangaud||Didier Kuhn||Eric Vieillevigne||Frédéric Plais||Jean René Alonso||Pierre-Antoine Dusoulier||Pierre Kosciusko-Morizet,Mobility||Blue Economy||CleanTech,850401506
+Solaire Box,solaire-box,Paris,seed,1.4,1400000,EUR,2020-04-14,https://www.homaj.fr,Aviva Impact Investing France,PropTech||Energy,
+Epigene Labs,epigene-labs,Paris,seed,1.4,1400000,EUR,2020-01-30,http://www.epigenelabs.com/,Daphni||Majycc Innovation Santé||XAnge,BioTech,845367713
+HARDLOOP,hardloop,Paris,seed,1.4,1400000,EUR,2020-01-15,http://www.hardloop.fr/,Seventure Partners||SPGA||Sport & Performance Capital,SportsTech||TravelTech,
+HeyTeam,heyteam,Paris,series_a,1.4,1400000,EUR,2020-01-30,http://www.heyteam.com,Angyal Capital||Investisseurs privés,SaaS,
+Les Petits Bidons,les-petits-bidons,Paris,seed,1.31,1313485,EUR,2020-12-03,https://www.lespetitsbidons.fr,Bertrand Jacquelot||Marc-Antoine de Longevialle,E-commerce & Retail,
+Anybuddy,anybuddy,Lille,seed,1.31,1313485,EUR,2020-03-11,https://anybuddyapp.com/,,Entertainment||SportsTech,
+Numa Health,numa-health,La Rochelle,pre_seed,1.3,1300000,EUR,2020-11-24,https://www.numahealth.com/,,HealthTech,851781963
+Odit-e,odit-e,Meylan,seed,1.3,1300000,EUR,2020-09-14,https://odit-e.com/,Crédit Agricole Alpes Development||SICAE de la Somme et du Cambraisis,Hardware,
+MagIA Diagnostics,magia-diagnostics,Échirolles,seed,1.3,1300000,EUR,2020-07-24,https://www.magia-diagnostics.com/,,BioTech,
+45-8 ENERGY,45-8-energy,Metz,seed,1.3,1300000,EUR,2020-06-18,http://www.458energy.com/,,CleanTech||Energy,
+Beeldi,beeldi,Paris,seed,1.3,1300000,EUR,2020-03-10,http://www.beeldi.com/,Kima Ventures||Starquest Capital,Artificial Intelligence||PropTech||SaaS,
+Hillo,hillo,Palaiseau,seed,1.3,1300000,EUR,2020-03-01,https://www.hillo.ai,Angels Santé||NCI Waterstart||Wille Finance,HealthTech||MedTech||Artificial Intelligence,
+Octo Gaming,octo-gaming,Mont-saint-aignan,seed,1.25,1250000,EUR,2020-08-25,http://octo-gaming.com,Guillaume Lestrade,Gaming,844094540
+MoonBikes,moonbikes,Saint-gervais-les-bains,pre_seed,1.2,1200000,EUR,2020-09-01,https://moonbikes.com,,SportsTech,843412800
+Biloba,biloba,Paris,pre_seed,1.2,1200000,EUR,2020-07-21,https://biloba.com,Acequia Capital (AceCap)||Calm/Storm VC||Didier Valet||Id4 ventures||Inventures||Possible Ventures||Tiny Supercomputer Investment Company,HealthTech||Digital Health,842138521
+Avatar Medical,avatar-medical,Paris,pre_seed,1.2,1200000,EUR,2020-04-03,https://avatarmedical.ai/,,EdTech||Virtual Reality,885007112
+Madeinvote,madeinvote,Bordeaux,seed,1.2,1200000,EUR,2020-12-01,https://madeinvote.com/,Bpifrance||Chantal Baudron||Damien Fretay||Franck Deshayes||Jean-Christophe Davy||Région Nouvelle-Aquitaine,SaaS||MarTech,821466877
+Mercateam,mercateam,Aulnay-sous-bois,seed,1.2,1200000,EUR,2020-10-05,https://merca.team,Isai||Kima Ventures||Notus Technologies,SaaS,883002487
+Fydem,fydem,Marseille,seed,1.2,1200000,EUR,2020-09-16,https://www.fydem.com,Jean-David Benichou||OneRagtime,FinTech,
+Supli,supli,Paris,seed,1.2,1200000,EUR,2020-09-01,https://supli.com,Axeleo Capital,E-commerce & Retail,
+Pandobac,pandobac,Rungis,seed,1.2,1200000,EUR,2020-06-08,https://pandobac.com/,BNP Paribas Développement,Circular Economy||Recycling||FoodTech,841764194
+Medicaim,medicaim,Paris,seed,1.2,1200000,EUR,2020-05-11,http://medicaim.com,Didier Valet||Flavien Kulawik||Laurent Ritter,HealthTech,
+Cureety,cureety,Dinan,seed,1.2,1200000,EUR,2020-04-01,https://www.cureety.com/,Bpifrance||Crédit Agricole (CA) Bretagne||Crédit Mutuel Bretagne,HealthTech||Digital Health,
+BOKS,boks,Paris,seed,1.2,1200000,EUR,2020-03-30,https://www.boks.app/,Bpifrance||Clément Alteresco||Clément Buyse||Geoffroy Roux de Bezieux||Jonathan Benhamou,Mobility,
+Naoden,naoden,Nantes,seed,1.2,1200000,EUR,2020-03-23,https://www.naoden.com/,EIT InnoEnergy||Impactivist,CleanTech||Energy,
+Tousfacteurs,tousfacteurs,Paris,seed,1.2,1200000,EUR,2020-02-28,https://www.tousfacteurs.com/,,Mobility,
+Ener-Pacte,ener-pacte,Lyon,seed,1.2,1200000,EUR,2020-02-01,http://www.ener-pacte.fr/,EIT InnoEnergy,CleanTech||Energy,
+Simango,simango,Rennes,seed,1.2,1200000,EUR,2020-01-01,https://simango.fr,Breizh Up||West Web Valley,Virtual Reality,839239266
+BIBAK,bibak,Versailles,seed,1.2,1200000,EUR,2020-01-01,http://www.bibak.fr,,Recycling||E-commerce & Retail||Circular Economy||CleanTech||FoodTech,
+Le Sallay International Academy,le-sallay-international-academy,Paris,seed,1.14,1138354,EUR,2020-10-14,https://lesallay.academy/,LVL1 Group,EdTech,
+Powder,powder,Paris,seed,1.14,1138354,EUR,2020-05-01,https://powder.gg,Alven||Bpifrance||Jean Vernin||Maxime DEMEURE||Seraam Invest,Entertainment||Media||Gaming,
+Neteven,neteven,Paris,series_a,1.12,1123596,EUR,2020-01-20,http://www.neteven.com,A Plus Finance||Belcube||Concentric||Tempo Ventures,SaaS||MarTech,
+Nyctale,nyctale,Lyon,pre_seed,1.1,1100000,EUR,2020-04-16,https://nyctale.io/,Bpifrance||Outlier Ventures,Blockchain||SaaS||Artificial Intelligence,841494867
+AgenT,agent,Paris,pre_seed,1.1,1100000,EUR,2020-01-31,http://www.agent-biotech.com/,Bernard Majoie,HealthTech||BioTech||MedTech||NeuroTech,
+Champerché,champerch,Paris,seed,1.1,1100000,EUR,2020-11-12,https://champerche.fr/,Karot Capital||Paris Business Angels,AgriTech,
+UrbanHub,urbanhub,Paris,seed,1.1,1100000,EUR,2020-07-17,https://www.urbanhub.fr,,Mobility,
+Pepette,pepette,Paris,seed,1.1,1100000,EUR,2020-06-22,https://pepette.co/,,E-commerce & Retail||FoodTech,
+mobee travel,mobee-travel,Lyon,seed,1.1,1100000,EUR,2020-05-01,https://www.mobeetravel.com,,Entertainment||TravelTech,
+uvoji by T.zic,uvoji-by-tzic,Clapiers,seed,1.1,1100000,EUR,2020-01-04,https://www.uvoji.com/,Cédric Delorme||Provence Business Angels||WeLikeStartup||WiSEED,Blue Economy||CleanTech||WaterTech,
+MyTVchain,mytvchain,Valbonne,pre_seed,1.05,1050788,EUR,2020-12-01,https://mytvchain.io/,The Blox,Blockchain||SportsTech,842064222
+SpaceSense.ai,spacesenseai,Palaiseau,pre_seed,1.05,1050788,EUR,2020-10-08,https://spacesense.ai/,Bpifrance||Jeriko||Space Ventures Investors||Techmind,SaaS||Artificial Intelligence,
+Terality,terality,Paris,pre_seed,1.05,1050788,EUR,2020-08-30,https://www.terality.com,,SaaS,883163214
+ICARE Technologies,icare-technologies,Ajaccio,series_a,1.02,1018720,EUR,2020-11-27,https://aeklys.com,,FinTech||Telecom,
+Colette,colette,Paris,pre_seed,1.0,1000000,EUR,2020-09-30,https://www.colette.club/,AFI Ventures||Andrew Robb||Eduardo Ronzano||Financiere Saint James||Michael Benabou||Rachel Delacour||Roxanne Varza||Thibaud Elziere,PropTech,
+Askeet,askeet,Paris,pre_seed,1.0,1000000,EUR,2020-06-16,https://askeet.io/,Matters,Artificial Intelligence||SaaS,
+Rainbow,rainbow,Paris,pre_seed,1.0,1000000,EUR,2020-06-08,https://be-rainbow.com/,Alexis de Galembert||Augustin Paluel-Marmont||Yan Hascoët,HealthTech,
+Drone Interactive,drone-interactive,Grenoble,seed,1.0,1000000,EUR,2020-12-11,http://www.drone-interactive.com/,Grenoble IAE Business School||Incit'financement,Media||Drones||Gaming,
+Prodigy Agency,prodigy-agency,Toulouse,seed,1.0,1000000,EUR,2020-12-11,http://www.prodigy-agency.gg,TRUST ESPORT,Media||Gaming,
+Dealt,dealt,Levallois,seed,1.0,1000000,EUR,2020-12-01,https://www.dealt.fr/,Le Groupe La Poste,E-commerce & Retail,820538007
+Braintale,braintale,Paris,seed,1.0,1000000,EUR,2020-11-09,https://www.braintale.eu/,Angels Santé||Arts et Métiers Business Angels||Femmes Business Angels||Paris Business Angels,HealthTech||MedTech,
+HYPNO VR,hypno-vr,Strasbourg,seed,1.0,1000000,EUR,2020-06-12,http://hypnovr.io,,HealthTech||MedTech||Virtual Reality,
+Comeen,comeen,Bordeaux,seed,1.0,1000000,EUR,2020-06-01,https://comeen.com/,Newfund,SaaS,834702821
+SheeldMarket,sheeldmarket,Paris,seed,1.0,1000000,EUR,2020-05-11,https://sheeldmarket.com/,Acequia Capital (AceCap)||Axeleo Capital||Charlie Songhurst||Draper Dragon||Kima Ventures,Blockchain||FinTech,
+Defymed,defymed,Strasbourg,seed,1.0,1000000,EUR,2020-05-05,http://defymed.com/,Cap Innov'Est,HealthTech||MedTech,
+LIZEE,lizee,Paris,seed,1.0,1000000,EUR,2020-04-23,https://www.lizee.co/,Alante Capital||Fashion For Good||Speedinvest||Volta Circle,Mobility,
+TOOPI Organics,toopi-organics,Loupiac-de-la-réole,seed,1.0,1000000,EUR,2020-04-17,https://toopi-organics.com/,Allsun||Creadev||Makesense Seed I,BioTech||AgriTech,
+Adrenalead,adrenalead,Lyon,seed,1.0,1000000,EUR,2020-04-14,https://adrenalead.com/,SIDE Capital,AdTech||Entertainment||Media,
+Jus Mundi,jus-mundi,Paris,seed,1.0,1000000,EUR,2020-04-01,https://jusmundi.com/,Cedric Page||Elie Rotenberg||Holnest||INSEAD Business Angels Alumni France||Kai Hansen||Olivier Njamfa||Seed4Soft||Stefan Tietze,SaaS||Artificial Intelligence||LegalTech,834491474
+Rubypayeur,rubypayeur,Paris,seed,1.0,1000000,EUR,2020-03-05,https://rubypayeur.com/,Andréa Bensaid||Cameleon Invest,FinTech||SaaS,
+Ambuliz,ambuliz,Rennes,seed,1.0,1000000,EUR,2020-02-14,https://ambuliz.com/,Vivalto Santé||West Web Valley,Mobility,
+LiveTonight,livetonight,Paris,seed,1.0,1000000,EUR,2020-02-10,https://www.livetonight.fr/,Ahmed Mhiri||SIDE Capital,Entertainment||Media,
+Flitdesk,flitdesk,Paris,seed,1.0,1000000,EUR,2020-02-10,https://www.flitdesk.com/,Kima Ventures,SaaS,
+GameWard,gameward,Boulogne-billancourt,seed,1.0,1000000,EUR,2020-02-07,https://gameward.team/,123 Investment Managers,Entertainment||Media||SportsTech||Gaming,
+Jungle VR,jungle-vr,Paris,seed,1.0,1000000,EUR,2020-02-06,https://www.junglevr.io,,BioTech||EdTech,
+RDS,rds,Strasbourg,seed,1.0,1000000,EUR,2020-02-01,https://rdsdiag.com,Michel Ronc||Sam Eletr Trust,HealthTech||MedTech||Consumer Electronics,
+Ownest,ownest,Paris,seed,1.0,1000000,EUR,2020-01-15,https://ownest.io/en,,Blockchain||SaaS,833796022
+Babylone Growers,babylone-growers,Paris,seed,1.0,1000000,EUR,2020-01-01,https://www.bg-agri.com/,,AgTech,
+weweb,weweb,Paris,seed,1.0,1000000,EUR,2020-01-01,https://www.weweb.tech/,42CAP||Aglaé Ventures,SaaS,839313848
+Datexim,datexim,Caen,series_b,1.0,1000000,EUR,2020-10-12,https://www.datexim.com/,ODYSSEE VENTURE,HealthTech,
+Atlan Space,atlan-space,Paris,seed,0.96,963222,EUR,2020-11-03,http://atlanspace.com,MNF Ventures,Robotics||Artificial Intelligence||Drones,
+NGTV Experience,ngtv-experience,Saint-priest,seed,0.95,950000,EUR,2020-12-05,https://www.ngtvexperience.com,,Media||SportsTech||SaaS,821548468
+Omind Neurotechnologies,omind-neurotechnologies,Paris,seed,0.95,950000,EUR,2020-03-03,http://www.omind.me,,EdTech||Virtual Reality||HRTech||Gaming||NeuroTech,
+Make ICI,make-ici,Montreuil,series_a,0.95,950000,EUR,2020-06-01,http://makeici.org,Alain Garnier,Circular Economy,830390506
+Dfns,dfns,Paris,pre_seed,0.91,905000,EUR,2020-12-01,https://www.dfns.co,Bpifrance||Chris Adelsbach||Figment||Julien Bouteloup||Rand Hindi||SGH CAPITAL||Techstars,Blockchain||FinTech||SaaS||Cybersecurity,888176575
+Memorizer,memorizer,Paris,pre_seed,0.9,900000,EUR,2020-11-01,https://memorizer.ai/,Kima Ventures,SaaS||Artificial Intelligence,
+Specify,specify,Paris,pre_seed,0.9,900000,EUR,2020-01-06,https://specifyapp.com,360 Capital||Bpifrance||Seedcamp,SaaS,838002996
+Stimunity,stimunity,Paris,seed,0.9,900000,EUR,2020-05-11,https://stimunity.com/,Alpha Compute Corp.,HealthTech||BioTech,819750738
+Once App,once-app,Paris,seed,0.88,875657,EUR,2020-11-20,https://once.app/,Hexa||Innovation Nest||Kima Ventures||Y Combinator,SaaS,
+DFi Labs,dfi-labs,Paris,seed,0.88,875657,EUR,2020-10-07,https://www.dfi-labs.com,,FinTech,
+Mondaycar,mondaycar,Paris,seed,0.88,875657,EUR,2020-08-01,https://www.mondaycar.com/fr,Techstars||Techstars Ventures,FinTech||Mobility,
+UpStride,upstride,Paris,seed,0.88,875657,EUR,2020-07-15,https://ww2.upstride.io/,,Artificial Intelligence,848415261
+Cabinet Vulcanis & Associés,cabinet-vulcanis-associs,Paris,seed,0.83,831874,EUR,2020-01-01,https://www.cabinet-vulcanis-et-associes.com/,,LegalTech,
+FinKey,finkey,Lyon,pre_seed,0.8,800000,EUR,2020-03-24,http://www.finkey.fr,HUB612,FinTech,830908745
+Mium Lab,mium-lab,Paris,pre_seed,0.8,800000,EUR,2020-01-20,https://www.miumlab.com/,Bertrand Jacquelot||Hubert Patricot||Jeremy Charoy||Marc Valerius de Beffort||Olivier Thomas||Samuel Guez,HealthTech||FoodTech||SportsTech,848431003
+bsport solution,bsport-solution,Paris,seed,0.8,800000,EUR,2020-11-12,http://pro.bsport.io,Seed4Soft,SaaS||MarTech||Media||SportsTech,838682011
+Roadstr,roadstr,Paris,seed,0.8,800000,EUR,2020-07-15,http://www.roadstr.fr/,,Entertainment||E-commerce & Retail||Mobility||TravelTech,807496914
+Lisy,lisy,Paris,seed,0.8,800000,EUR,2020-05-07,https://www.lisy.io/,AA Sons,FinTech||SaaS||MarTech||PropTech,
+Deft Trade,deft-trade,Paris,seed,0.8,800000,EUR,2020-01-01,https://www.defttrade.io,,SaaS,
+Mob-Energy,mob-energy,Villeurbanne,seed,0.8,799974,EUR,2020-04-17,https://www.mob-energy.com/,EIT InnoEnergy||Sofimac Investment Managers,Energy||Hardware,843868555
+ShopRunBack,shoprunback,Paris,pre_seed,0.79,788091,EUR,2020-02-19,http://www.shoprunback.com/,Negocia Capital||Obor Capital,E-commerce & Retail||Mobility,800171860
+Latitude,latitude,Reims,pre_seed,0.75,750000,EUR,2020-12-10,https://www.latitude.eu,UI Investissement,SpaceTech & Aerospace||TravelTech||Telecom,850181918
+inVirtus Technologies,invirtus-technologies,Nantes,seed,0.75,750000,EUR,2020-03-16,https://www.invirtus.io/,BACS-Innov||Bpifrance||CIC Nord Ouest||Crédit Agricole||David Moison,SaaS,835306259
+Ausha,ausha,Tourcoing,seed,0.75,750000,EUR,2020-03-10,https://www.ausha.co/,Alexandre Boucherot||Groupe IRD||Jean-Baptiste Defossez||Manuel Dorne||Nima Karimi||Nord France Amorcage||Wilfrid André,MarTech||Media,879276723
+OverSOC,oversoc,Lille,seed,0.75,750000,EUR,2020-01-01,https://www.oversoc.com/,Alacrity Capital||Finovam Gestion||Wesley Clover,SaaS||Cybersecurity,885265405
+HoppyTrade,hoppytrade,Lyon,series_a,0.75,750000,EUR,2020-07-31,https://hoppytrade.com/,Karot Capital,E-commerce & Retail,
+Leepse,leepse,Paris,pre_seed,0.74,744308,EUR,2020-02-04,https://leepse.com,,HealthTech||Digital Health,
+900.care,900care,Paris,seed,0.74,744308,EUR,2020-01-29,https://900.care/,360 Capital,HealthTech||E-commerce & Retail,
+DAB Motors,dab-motors,Bayonne,seed,0.74,740000,EUR,2020-11-19,https://dabmotors.com,Adour Business Angels||Banque Populaire||Bpifrance||Finaqui||Herrikoa||Région Nouvelle-Aquitaine,Mobility,829334283
+Humanlinker,humanlinker,Paris,pre_seed,0.7,700000,EUR,2020-11-10,https://www.humanlinker.com/,,SaaS||MarTech||Artificial Intelligence,889422283
+Hummink,hummink,Paris,seed,0.7,700000,EUR,2020-10-08,https://hummink.com/,Elaia,Hardware,885145557
+4.5.6 Skin,456-skin,Gellainville,seed,0.7,700000,EUR,2020-10-01,https://www.456skin.com/,Be Angels||Benoit Koerperich||Fotolia||Frederic Montagnon||Julien Romanetto||Thibaud Elziere,E-commerce & Retail,
+Ramdam,ramdam,Saint-mandé,seed,0.7,700000,EUR,2020-09-01,https://ramd.am,Karista,SaaS,
+Retail Shake,retail-shake,Lille,seed,0.7,700000,EUR,2020-07-01,https://www.retailshake.com/,Finovam Gestion||Groupe IRD,E-commerce & Retail||Artificial Intelligence,845267830
+Reveal,reveal,Paris,seed,0.7,700000,EUR,2020-04-15,https://www.reveal.co,Kernel Investissements,SaaS,793618729
+Carbon Waters,carbon-waters,Pessac,seed,0.7,700000,EUR,2020-01-01,https://www.carbon-waters.com/,,DeepTech,833714694
+Seekyo,seekyo,Poitiers,seed,0.65,650000,EUR,2020-01-20,https://www.seekyo-therapeutics.com/,French Tech Acceleration Fund,BioTech,
+Road-B-Score,road-b-score,Lyon,pre_seed,0.6,600000,EUR,2020-01-30,https://www.road-b-score.com/,HUB612,InsurTech||SaaS,823853536
+YupWeGo,yupwego,Caluire-et-cuire,pre_seed,0.6,600000,EUR,2020-01-15,https://www.yupwego.com/en,HUB612,InsurTech||TravelTech,
+Closd,closd,Paris,seed,0.6,600000,EUR,2020-03-30,https://www.closd.com/,Cuatrecasas||Eric Larchevêque||LPA-CGR||Orion,FinTech||SaaS||LegalTech,
+Harvestr,harvestr,Paris,pre_seed,0.57,569177,EUR,2020-01-16,http://harvestr.io/,Bpifrance||Guillaume Alary||Nick Hernandez||Roxanne Varza,SaaS||E-commerce & Retail,839239704
+GoSense,gosense,Lyon,seed,0.56,565000,EUR,2020-11-05,http://www.gosense.com,Angels Santé||Family offices||Femmes Business Angels||Les Business Angels des Grandes Écoles,Hardware,
+Aeraccess,aeraccess,Courcouronnes,seed,0.56,560000,EUR,2020-05-11,https://aeraccess-group.com,Boundary Holding,AgriTech||Drones,807453972
+PlanetWatch,planetwatch,Saint-genis-pouilly,seed,0.55,550000,EUR,2020-05-16,https://www.planetwatch.io,RA.MO,Blockchain||CleanTech,880415724
+uTip,utip,Paris,series_a,0.54,543303,EUR,2020-03-23,https://utip.io,Thomas Rebaud,Entertainment||Media,
+Bet4Fun,bet4fun,Paris,seed,0.5,501000,EUR,2020-09-29,https://www.bet4fun.net/,Cédric Delorme||Investessor,Media||SportsTech||Gaming,
+Outmind,outmind,Paris,pre_seed,0.5,500000,EUR,2020-12-10,https://outmind.ai,Bpifrance||MSM||Philippe Poux||Sharpstone Capital,SaaS,853306868
+Qlower,qlower,Paris,pre_seed,0.5,500000,EUR,2020-05-15,https://www.qlower.com/,Bpifrance,FinTech||PropTech,883386757
+Greenly,greenly,Paris,pre_seed,0.5,500000,EUR,2020-05-02,https://www.greenly.earth/home,Geoffroy Roux de Bezieux||Guillaume Amblard,SaaS||CleanTech,878730647
+Bluedigo,bluedigo,Ivry-sur-seine,pre_seed,0.5,500000,EUR,2020-01-20,https://www.bluedigo.fr,,E-commerce & Retail,852433143
+Kriptown,kriptown,Paris,pre_seed,0.5,500000,EUR,2020-01-10,https://www.kriptown.com,,Blockchain||FinTech,838268415
+Plum Kitchen,plum-kitchen,Paris,pre_seed,0.5,500000,EUR,2020-01-01,https://www.plum-kitchen.com/,Kima Ventures||Nicolas Rohr,E-commerce & Retail,
+Favikon,favikon,Paris,seed,0.5,500000,EUR,2020-12-09,https://www.favikon.com/,INSEAD Business Angels Alumni France||Polymatter Ventures||Provence Business Angels,SaaS||MarTech||Artificial Intelligence,
+Gilbert,gilbert,Paris,seed,0.5,500000,EUR,2020-10-20,https://www.gilbert.paris,,Mobility,
+Modjo,modjo,Paris,seed,0.5,500000,EUR,2020-07-31,https://www.modjo.ai/,Aglaé Ventures||Financiere Saint James,SaaS,
+Doinsport,doinsport,Marseille,seed,0.5,500000,EUR,2020-06-15,https://doinsport.com/,SIDE Capital,SaaS,822078796
+On the wild side,on-the-wild-side,Bordeaux,seed,0.5,500000,EUR,2020-06-01,https://onthewildsidecosmetics.com,,E-commerce & Retail,
+LE DRIVE TOUT NU,le-drive-tout-nu,Beauzelle,seed,0.5,500000,EUR,2020-05-29,https://ledrivetoutnu.com/,Investisseurs privés,E-commerce & Retail,
+SideROS,sideros,Paris,seed,0.5,500000,EUR,2020-04-23,https://sideros.bio,,BioTech,
+ZAR,zar,Paris,seed,0.5,500000,EUR,2020-01-24,https://zar.gg,Jean-Marie Messier||OneRagtime,Artificial Intelligence||SportsTech||Gaming,
+api.video,apivideo,Bordeaux,pre_seed,0.49,490368,EUR,2020-04-22,https://api.video,Cedric Sellin||Charlie Songhurst||Eduardo Ronzano||Financiere Saint James||Florian Douetteau||Frederic Montagnon||GUIBOR||Julien Romanetto||Michael Benabou||Nicolas Steegmann||Octave Klaba||Thibaud Elziere,SaaS||Media,491182739
+Sharelock,sharelock,Paris,seed,0.49,490000,EUR,2020-11-20,http://sharelock.co,Karim Kaddoura||Thibault Chassagne,SaaS||Mobility,
+Conscious Labs,conscious-labs,Paris,pre_seed,0.48,481611,EUR,2020-01-31,http://www.conscious-labs.com,Limousin Business Angels||Shenzhen Huaqiang Holdings,Consumer Electronics||NeuroTech,812702744
+Fabriq,fabriq,Paris,pre_seed,0.47,472855,EUR,2020-05-15,https://www.fabriq.tech,,SaaS,851998476
+G Lyte,g-lyte,Amiens,seed,0.46,460000,EUR,2020-03-13,http://www.g-lyte.fr,CNRS Innovation||Finovam Gestion,CleanTech,
+Fanprime,fanprime,Paris,pre_seed,0.45,450000,EUR,2020-01-07,https://fanprime.io,,SaaS,
+MentorShow,mentorshow,Paris,pre_seed,0.44,437828,EUR,2020-11-30,https://mentorshow.com,Eduardo Ronzano||Edward Lando||Jon Oringer||Pareto Holdings,EdTech,881732135
+Sinay,sinay,Caen,seed,0.44,437828,EUR,2020-09-17,https://sinay.ai,Betatron Venture Group,Blue Economy,
+SentinHealth,sentinhealth,La Tronche,seed,0.43,433985,EUR,2020-06-01,http://www.sentinhealth.com/,,HealthTech||BioTech||MedTech||Artificial Intelligence,
+TechnoCarbon,technocarbon,Vitrolles,pre_seed,0.41,410000,EUR,2020-02-07,https://technocarbon.tech,L'Atelier Azur,CleanTech||PropTech||Energy,835144163
+50inTech,50intech,Paris,pre_seed,0.4,400000,EUR,2020-10-23,https://www.50intech.com,Femmes Business Angels||STATION F,HRTech,843697137
+Axorus,axorus,Loos,seed,0.37,368000,EUR,2020-07-17,http://www.axorus.com,Finovam Gestion||Happy Capital||Nord France Amorcage,DeepTech||MedTech||NeuroTech,
+Keypup,keypup,La Rochelle,pre_seed,0.36,360000,EUR,2020-01-10,https://keypup.io,,SaaS||Artificial Intelligence,849139027
+Myr.ai,myrai,Paris,pre_seed,0.35,350000,EUR,2020-10-01,https://myr.ai,Sharpstone Capital,PropTech||SaaS,
+Ganister,ganister,Paris,pre_seed,0.35,350000,EUR,2020-08-01,https://ganister.eu,,SaaS,887839082
+SEEQLE,seeqle,Nancy,pre_seed,0.35,350000,EUR,2020-02-01,https://www.seeqle.com,,AdTech||Media||Artificial Intelligence||HRTech,809063142
+ICARE Technologies,icare-technologies,Ajaccio,seed,0.35,350000,EUR,2020-03-01,https://aeklys.com,Business Angels,FinTech||Telecom,
+Everimpact,everimpact,Paris,pre_seed,0.32,320000,EUR,2020-11-01,https://www.everimpact.com,Climate-KIC,CleanTech,
+ZE Combi,ze-combi,Labarthe-sur-lèze,pre_seed,0.31,310000,EUR,2020-02-10,http://www.zecombi.com/,Capitole Angels,Mobility,822095436
+RunMotion Coach,runmotion-coach,Annecy,seed,0.31,306480,EUR,2020-09-21,https://en.run-motion.com/,,SportsTech,
+Usense,usense,Boulogne-billancourt,seed,0.3,300000,EUR,2020-09-04,https://usense.healthcare,,HealthTech||MedTech,
+Sharelock,sharelock,Paris,seed,0.3,300000,EUR,2020-05-11,http://sharelock.co,,SaaS||Mobility,
+bFAN Sports,bfan-sports,Paris,pre_seed,0.28,280000,EUR,2020-04-07,http://www.bfansports.com/,,MarTech||SportsTech,828417303
+CTRL ENERGY,ctrl-energy,Paris,pre_seed,0.26,262697,EUR,2020-04-05,https://ctrl.energy,,Energy,
+Amalia.io,amaliaio,Lille,pre_seed,0.26,262697,EUR,2020-03-01,https://www.amalia.io/,,FinTech||SaaS,
+api.video,apivideo,Bordeaux,pre_seed,0.26,262697,EUR,2020-01-09,https://api.video,Kima Ventures,SaaS||Media,491182739
+Document Genome,document-genome,Neuilly-sur-seine,seed,0.26,255000,EUR,2020-10-30,http://www.documentgenome.com,,SaaS,
+Nimbl'bot,nimblbot,Bordeaux,pre_seed,0.25,250000,EUR,2020-12-01,https://nimbl-bot.com,,HealthTech||Robotics,
+Declique,declique,Labège,seed,0.25,250000,EUR,2020-11-17,https://www.declique.fr/,La French Tech,SaaS,881688915
+Bizon,bizon,Clichy,seed,0.25,250000,EUR,2020-03-03,https://www.bizon.solutions,,E-commerce & Retail||MarTech,
+Effigear,effigear,Maclas,pre_seed,0.2,200000,EUR,2020-09-01,https://www.effigear.com,,Mobility||SportsTech,533461349
+Milubo,milubo,Paris,pre_seed,0.2,200000,EUR,2020-07-01,http://www.milubo.com,,Circular Economy||FoodTech,879273639
+WIND my ROOF,wind-my-roof,Vincennes,seed,0.2,200000,EUR,2020-02-28,https://www.windmyroof.com/,EIT InnoEnergy||InterBiz,CleanTech||Energy,
+Lemon,lemon,Nanterre,pre_seed,0.18,175131,EUR,2020-11-21,https://lemon.fm,Adrien Dassault||Christophe Jouin||Virtual Network,FinTech||Media||Telecom,
+TravelSquare,travelsquare,Vannes,seed,0.18,175131,EUR,2020-04-12,https://travelsquare.co,,SaaS||TravelTech,904215829
+Peculium,peculium,Nanterre,pre_seed,0.17,165000,EUR,2020-12-18,https://peculium.io/,,Blockchain||FinTech,838841948
+ASTUCORP,astucorp,Paris,pre_seed,0.16,160000,EUR,2020-02-01,https://www.astuvet.com/en/,,HealthTech||Digital Health,
+Hoopcare,hoopcare,Paris,pre_seed,0.16,157000,EUR,2020-08-20,https://www.hoopcare.com,,HealthTech||SaaS||MedTech,849087457
+Smartplace,smartplace,Paris,seed,0.14,140105,EUR,2020-02-04,http://www.smartplace.pro/fr,Hesham Zreik,SaaS,
+Jitter,jitter,Paris,pre_seed,0.13,131349,EUR,2020-03-16,https://jitter.video,Eduardo Ronzano||MAGIC Fund||Norte Ventures||Translink Investment||Y Combinator,AdTech||SaaS||Media,
+CRYPTONOVAE,cryptonovae,La Baule-escoublac,pre_seed,0.13,131349,EUR,2020-03-01,https://cryptonovae.com,,Blockchain,890396187
+Effigear,effigear,Maclas,pre_seed,0.12,115000,EUR,2020-07-19,https://www.effigear.com,Holding Roule,Mobility||SportsTech,533461349
+Photoroom,photoroom,Paris,seed,0.11,109457,EUR,2020-08-25,https://photoroom.com,Holger Seim||Jacob Eiting||John Bonten||Liquid 2 Ventures||Nicolas Pinto||Yann LeCun||Y Combinator||Zehan Wang,Media||Artificial Intelligence,853059384
+Minimall,minimall,Paris,seed,0.11,109457,EUR,2020-08-25,https://office.minimall.co,AltaIR Capital||Y Combinator,E-commerce & Retail,
+Maytana,maytana,Lyon,seed,0.11,109457,EUR,2020-08-25,https://maytana.com/,Y Combinator,FinTech||SaaS||Artificial Intelligence,
+Manycore.io,manycoreio,Paris,seed,0.11,109457,EUR,2020-08-24,http://www.manycore.io/,Y Combinator,SaaS,
+Mailwarm,mailwarm,Paris,seed,0.11,109457,EUR,2020-08-24,https://www.mailwarm.com/,Y Combinator,SaaS,
+Once App,once-app,Paris,seed,0.11,109457,EUR,2020-08-24,https://once.app/,Y Combinator,SaaS,
+Tictactrip,tictactrip,Paris,pre_seed,0.11,105387,EUR,2020-03-02,https://www.tictactrip.eu,Techstars,Mobility,822961652
+CyberLead,cyberlead,Paris,pre_seed,0.11,105079,EUR,2020-07-05,https://www.cyberlead.fr,,Cybersecurity,882660897
+Sybel,sybel,Paris,pre_seed,0.11,105079,EUR,2020-06-17,https://sybel.co,Techstars,Blockchain||Entertainment||Media||Web3,
+Veesual,veesual,Paris,pre_seed,0.1,103792,EUR,2020-10-05,https://www.veesual.ai/,Techstars,AdTech||E-commerce & Retail||Media||Artificial Intelligence,884503806
+Wisear,wisear,Paris,pre_seed,0.1,103327,EUR,2020-10-06,https://www.wisear.io/,Techstars,Augmented Reality||Virtual Reality||NeuroTech,878469634
+Joinsteer,joinsteer,Paris,pre_seed,0.1,100000,EUR,2020-12-15,https://www.joinsteer.com/,Alexis Berthoud||Thibaud Carrai,E-commerce & Retail||Mobility,
+Heypster,heypster,Paris,pre_seed,0.1,100000,EUR,2020-09-01,https://heypster.com/en,,Media,
+Qobra,qobra,Paris,pre_seed,0.1,100000,EUR,2020-08-15,https://www.qobra.co,,SaaS,107596769
+PlanetWatch,planetwatch,Saint-genis-pouilly,pre_seed,0.1,100000,EUR,2020-01-15,https://www.planetwatch.io,,Blockchain||CleanTech,880415724
+Global Smart Rescue,global-smart-rescue,Toulouse,seed,0.1,100000,EUR,2020-03-11,https://globalsmartrescue.com/,,SaaS,
+Embodme,embodme,Paris,pre_seed,0.09,93000,EUR,2020-05-01,https://www.embodme.com/,,Semiconductors||DeepTech||Media||Artificial Intelligence||Hardware,843725714
+Chipiron,chipiron,Paris,pre_seed,0.09,87566,EUR,2020-07-07,https://www.chipiron.co,Entrepreneurs First,HealthTech||MedTech,888822129
+ThinkDeep AI,thinkdeep-ai,Talence,pre_seed,0.09,87566,EUR,2020-04-05,https://www.thinkdeep.ai/,Techstars,DeepTech||SaaS||Robotics||Artificial Intelligence||Hardware,879684157
+CrunchDAO,crunchdao,Paris,pre_seed,0.07,75000,EUR,2020-10-01,https://crunchdao.com,Hook,Blockchain,
+STYCKR,styckr,Paris,pre_seed,0.07,70053,EUR,2020-08-26,http://www.styckr.io,Artesian VC||Brinc,InsurTech||Cybersecurity,833963465
+AMIO,amio,Draguignan,seed,0.06,61296,EUR,2020-05-01,https://www.amio.pro/,Startup Wise Guys,Blockchain||FinTech||SaaS,
+LumyMe Prestige,lumyme-prestige,Paris,pre_seed,0.06,60000,EUR,2020-12-01,https://www.LumyMePrestige.com,,Media||PropTech,
+Carbon Saver,carbon-saver,Orléans,pre_seed,0.06,60000,EUR,2020-07-11,https://en.carbon-saver.com/,,SaaS||PropTech,890029820
+AiiNTENSE,aiintense,Évry,pre_seed,0.06,60000,EUR,2020-01-01,http://www.aiintense.eu,IMT Starter,HealthTech||MedTech||Artificial Intelligence||NeuroTech,843311937
+krippit,krippit,Paris,seed,0.04,43783,EUR,2020-05-18,https://krippit.com/,,E-commerce & Retail,
+iKAST.io,ikastio,Boulogne-billancourt,seed,0.04,35026,EUR,2020-01-22,https://ikast.io/,StartupYard,Entertainment||Media,
+edgar,edgar,Nantes,pre_seed,0.04,35000,EUR,2020-06-01,https://www.get-edgar.com,,SaaS||E-commerce & Retail,839083193
+Alternative Mobile,alternative-mobile,Franconville,pre_seed,0.03,33017,EUR,2020-02-27,http://www.alternativemobile.co,,E-commerce & Retail||CleanTech,882516743
+DailyLive,dailylive,Paris,pre_seed,0.03,30000,EUR,2020-01-20,https://dailylive.co,,SaaS||E-commerce & Retail||Media,882343494
+Deep Talk,deep-talk,Paris,pre_seed,0.03,26270,EUR,2020-12-10,https://deep-talk.ai,Start-Up Chile,SaaS||Artificial Intelligence,
+IlluQuest,illuquest,Puteaux,pre_seed,0.03,26270,EUR,2020-06-02,,Bashar Hamood||FasterCapital||Hesham Zreik,EdTech||SaaS,883884637
+Cometh,cometh,Paris,seed,0.03,26270,EUR,2020-09-01,https://www.cometh.io/,John Lilic,Blockchain||Gaming,
+Cryptio,cryptio,Paris,pre_seed,0.02,21891,EUR,2020-06-01,https://cryptio.co,Outlier Ventures,Blockchain||FinTech,839169257
+Anya,anya,Grenoble,seed,0.01,10000,EUR,2020-07-03,https://intro.meetanya.com,Mohamad El Boudi,SaaS||MarTech||HRTech,
+My Great Dating,my-great-dating,Francescas,pre_seed,0.0,876,EUR,2020-02-01,https://www.mygreatdating.com/,,Media,
+TISSIUM,tissium,Paris,series_b,38.75,38750000,EUR,2020-02-11,https://tissium.com/,IBD Ventures,HealthTech||BioTech||MedTech,793166299
+Separative,separative,Saint-fons,series_a,7.4,7400000,EUR,2020-10-07,http://separative.net/,European Innovation Council,BioTech,801697426
+Ermium Therapeutics,ermium-therapeutics,Paris,series_a,6.3,6300000,EUR,2020-09-01,https://www.ermium.com/,Eurazeo,HealthTech||BioTech,851998039
+PayLead,paylead,Paris,series_a,6.0,6000000,EUR,2020-06-01,https://www.paylead.fr/,Ahmed Mhiri,FinTech||MarTech,821725579
+les Recycleurs Bretons,les-recycleurs-bretons,Guipavas,growth,5.0,5000000,EUR,2020-01-22,https://www.recycleurs-bretons.fr/,Crédit Mutuel Equity||Sodero Gestion,Recycling||Circular Economy||CleanTech||Energy,444894737
+Alsatis,alsatis,Toulouse,growth,5.0,5000000,EUR,2020-02-04,https://www.alsatis.com/,Ardian,SaaS,479858235
+Spareka,spareka,Montreuil,series_a,5.0,5000000,EUR,2020-04-15,https://www.spareka.fr/,Demeter,E-commerce & Retail,834272387
+Happydemics,happydemics,Paris,series_a,5.0,5000000,EUR,2020-06-03,https://happydemics.com/,Alexandre Yazdi||Fair/e||Laurent Ritter,SaaS||MarTech,810129478
+Cascade,cascade,Clamart,series_a,5.0,5000000,EUR,2020-05-19,https://www.lightcascade.com/en/company,European Innovation Council,AgriTech,
+Altaroad,altaroad,Paris,series_a,5.0,5000000,EUR,2020-05-19,https://www.altaroad.com/,European Innovation Council,Mobility||Artificial Intelligence,833737653
+Axialease,axialease,Levallois-perret,growth,4.7,4700000,EUR,2020-01-24,https://www.axialease.fr/,Crédit Mutuel Equity,FinTech||Hardware,502240625
+Ron Dorff,ron-dorff,Paris,growth,4.0,4000000,EUR,2020-11-01,https://rondorff.com,Puma Private Equity,E-commerce & Retail,754073104
+B-Hive Engineering,b-hive-engineering,Mulhouse,growth,4.0,4000000,EUR,2020-05-06,https://www.b-hive.fr/,Bpifrance||Isatis Capital,Other,831826649
+MOVE ‚ÄòN SEE,move-aon-see,Plouzané,growth,4.0,4000000,EUR,2020-03-11,http://www.movensee.com/,Seventure Partners||West Web Valley,Robotics,531299246
+Affluences,affluences,Paris,series_a,4.0,4000000,EUR,2020-11-22,https://www.pro.affluences.com,Capital & Dirigeants Partenaires,SaaS,804166999
+Nutri&Co,nutrico,Aix-en-provence,series_a,4.0,4000000,EUR,2020-09-01,https://nutriandco.com,Creadev||Jacques Chevallet,E-commerce & Retail,825396492
+Shopopop,shopopop,Nantes,series_a,4.0,4000000,EUR,2020-01-12,https://www.shopopop.com/,Bamboo Capital Partners||Bpifrance||GO CAPITAL||Pays de la Loire Participations||West Web Valley,E-commerce & Retail||Mobility,813952082
+Badakan,badakan,Paris,series_a,3.75,3750000,EUR,2020-09-02,https://www.badakan.com/,Groupe One point,SaaS,817449374
+reciTAL,recital,Paris,series_a,3.5,3500000,EUR,2020-09-10,https://recital.ai/en/,BREEGA,FinTech||Mobility||PropTech||Artificial Intelligence,828465187
+JIN,jin,Puteaux,growth,3.0,3000000,EUR,2020-06-11,https://jin.uk/,CITA Investissement,MarTech,752390096
+Niryo,niryo,Wambrechies,seed,3.0,3000000,EUR,2020-11-01,https://niryo.com,Finorpa||GO CAPITAL||Nord Création||Nord France Amorcage,EdTech||Robotics,824143515
+LegalVision.fr,legalvisionfr,Bordeaux,series_a,3.0,3000000,EUR,2020-09-03,https://www.legalvision.fr/,Portugal Ventures,SaaS||LegalTech,809015407
+NEWZIK,newzik,Paris,series_a,3.0,3000000,EUR,2020-05-04,http://newzik.com,,Media,525205514
+Happydemics,happydemics,Paris,seed,3.0,3000000,EUR,2020-12-03,https://happydemics.com/,Adelie||Purple||Sia Partners UK,SaaS||MarTech,810129478
+Otodo,otodo,Paris,seed,3.0,3000000,EUR,2020-02-04,https://www.otodo.com/,BREEGA,Consumer Electronics||Telecom,820815835
+Altar,altar,,seed,2.6,2600000,EUR,2020-05-19,http://www.altar.bio,European Innovation Council,BioTech||DeepTech||Robotics||CleanTech||Energy,831166905
+Avoloi,avoloi,Nantes,seed,2.5,2500000,EUR,2020-02-25,https://www.avoloi.fr/,Swen Capital Partners||West Web Valley,LegalTech||SaaS,753111319
+Corwave,corwave,Paris,seed,2.5,2500000,EUR,2020-01-08,https://www.corwave.com/,European Innovation Council,HealthTech||MedTech,538993452
+Follow,follow,Rennes,seed,2.5,2500000,EUR,2020-12-01,http://www.follow.fr,,HealthTech||MedTech,
+C4Diagnostics,c4diagnostics,Marseille,series_a,2.3,2300000,EUR,2020-01-24,https://www.c4diagnostics.com/,Andreï Polukhtin||CAAP Creation||R2V||Région Sud Investissement,BioTech,829680503
+Little Cigogne,little-cigogne,Paris,seed,2.2,2200000,EUR,2020-03-10,https://www.littlecigogne.com/,ACG Management||Bpifrance||Calao Finance||Enthéos||Flavien Kulawik,E-commerce & Retail,789948155
+Fair&Smart,fairsmart,Metz,seed,2.2,2200000,EUR,2020-01-22,http://www.fairandsmart.com,Bpifrance||Business angels||ILP Innovation,RegTech||SaaS||MarTech||Cybersecurity||LegalTech,820924678
+Qotto,qotto,Neuilly-sur-seine,seed,2.19,2189142,EUR,2020-02-07,https://www.qotto.net/,Sowefund,CleanTech||Energy,824246813
+Mr Suricate,mr-suricate,Nantes,seed,2.0,2000000,EUR,2020-06-12,https://www.mrsuricate.com/?lang=en,Pays de la Loire Participations||Swen Capital Partners||West Web Valley,SaaS||E-commerce & Retail,814768321
+Ecovelo,ecovelo,Nantes,seed,2.0,2000000,EUR,2020-05-26,https://www.ecovelo.com/,Banque des Territoires||GO CAPITAL,MarTech||Mobility||SportsTech,792018772
+Seraphin.legal,seraphinlegal,Paris,seed,2.0,2000000,EUR,2020-04-29,https://seraphin.legal/,Turenne Capital,LegalTech,825087000
+ISYBOT,isybot,Palaiseau,seed,2.0,2000000,EUR,2020-04-22,https://www.isybot.com/,Calao Finance||Karot Capital,DeepTech||Robotics,823521505
+Wellium,wellium,Paris,seed,2.0,2000000,EUR,2020-03-27,https://www.wellium.io,AdBio partners||MACSF,HealthTech||MedTech||Digital Health,821751260
+Syndivia,syndivia,Illkirch,seed,2.0,2000000,EUR,2020-03-10,https://www.syndivia.com,Bpifrance,HealthTech||BioTech,801283714
+eLamp (acquired by 360Learning),elamp-acquired-by-360learning,Lille,seed,2.0,2000000,EUR,2020-03-02,https://www.elamp.fr/en,BNP Paribas||Bpifrance||CIC Capital Ventures||MySeedCap||Societe Generale,HRTech,814091260
+EvidenceB,evidenceb,Paris,seed,2.0,2000000,EUR,2020-02-04,https://www.evidenceb.com/,Finorpa||IRDI||Lita.co||Nord France Amorcage,EdTech||SaaS||Artificial Intelligence,831042148
+Yogosha,yogosha,Paris,seed,2.0,2000000,EUR,2020-01-27,https://www.yogosha.com/,Axeleo Capital||BNP Paribas Développement||OneRagtime||Starquest Capital||Zenium Technology Partners(ZTP),SaaS||Cybersecurity,815035563
+Shotgun,shotgun,Paris,seed,2.0,2000000,EUR,2020-02-19,https://www.shotgun.live/events,Newfund||Venrex,Entertainment,
+NovAliX,novalix,Illkirch,seed,2.0,2000000,EUR,2020-12-15,https://novalix.com,Bpifrance||Région Grand Est,BioTech,444361851
+TORSKAL,torskal,Saint-denis,seed,2.0,2000000,EUR,2020-05-01,https://www.torskal.com/,,BioTech||DeepTech,813673688
+Oledcomm,oledcomm,,seed,2.0,2000000,EUR,2020-02-28,https://www.oledcomm.net/,,SaaS||Telecom,749854139
+Trone,trone,Paris,seed,2.0,2000000,EUR,2020-01-01,https://www.trone.paris/,,E-commerce & Retail,833412661
+Cynbiose,cynbiose,Marcy-l'etoile,seed,1.9,1900000,EUR,2020-01-31,https://cynbiose.com/,,BioTech,508907086
+VoltAero,voltaero,,seed,1.87,1872001,EUR,2020-05-19,https://www.voltaero.aero/,European Innovation Council,SpaceTech & Aerospace||Mobility,832107692
+Baloon Assurance,baloon-assurance,Paris,seed,1.84,1838879,EUR,2020-07-15,https://baloon.africa,Wind,InsurTech||FinTech,
+Ma Bonne Étoile,ma-bonne-atoile,Verneuil-sur-seine,seed,1.8,1800000,EUR,2020-09-28,https://www.mabonneetoile.eco/,MAIF Impact||One Creation,Recycling||Circular Economy||CleanTech,799357389
+Squiz,squiz,Verneuil-sur-seine,seed,1.8,1800000,EUR,2020-08-31,https://www.squiz.co/squiz,MAIF Impact||One Creation,E-commerce & Retail,
+Jestocke.Com,jestockecom,Bordeaux,seed,1.7,1700000,EUR,2020-02-25,https://www.jestocke.com,AB Box||Banque des Territoires||LeanSquare||MAIF Avenir,PropTech,790969729
+Nimesis Technology,nimesis-technology,Grand,seed,1.7,1700000,EUR,2020-01-08,https://nimesis.com/,European Innovation Council,Hardware,508776010
+wattalps,wattalps,Moirans,seed,1.65,1650000,EUR,2020-08-06,http://www.wattalps.com,European Innovation Council,Hardware,837650795
+Club Employes,club-employes,Paris,seed,1.5,1500000,EUR,2020-03-09,https://club-employes.com/,Bpifrance,SaaS||E-commerce & Retail,823393764
+Volum,volum,Paris,seed,1.5,1500000,EUR,2020-05-18,https://volum.co/,Newfund,PropTech,822095329
+humanroads,humanroads,Avignon,seed,1.5,1500000,EUR,2020-02-25,https://www.humanroads.com/,Alumni Business Angels||CAAP Creation||Région Sud Investissement,SaaS,817446800
+Seaver,seaver,Paris,seed,1.5,1500000,EUR,2020-02-11,http://seaverhorse.com/,peikerCEE,SportsTech,820207637
+Huddle Corp,huddle-corp,Cébazat,seed,1.5,1500000,EUR,2020-02-05,http://www.huddlecorp.com/,Demeter Partners,AgriTech||Blue Economy,843663519
+Eventmaker,eventmaker,Paris,seed,1.3,1300000,EUR,2020-05-20,http://www.eventmaker.io/,Antoine Jeandet||Olivier Panafieu,SaaS,512747676
+Coverd,coverd,Boulogne-billancourt,seed,1.2,1200000,EUR,2020-03-17,https://www.coverd.co,Edward Lando||Investisseurs privés||Newfund,InsurTech,843119363
+Aster App,aster-app,Lyon,seed,1.2,1200000,EUR,2020-02-14,https://asterapp.co/,Crédit Agricole||GMZ & Son's||KREAXI,SaaS,
+Wintics,wintics,Paris,growth,1.0,1000000,EUR,2020-09-08,http://wintics.com/en/front-page/,Ardian,Artificial Intelligence,834113342
+Apimo,apimo,Cannes,growth,1.0,1000000,EUR,2020-07-17,https://apimo.net/en/,Akiles,PropTech,489890483
+Pickme,pickme,Paris,seed,1.0,1000000,EUR,2020-06-23,https://www.mypickme.com/,Founders Future,E-commerce & Retail||Mobility,879837326
+Fairbrics,fairbrics,Clichy,seed,1.0,1000000,EUR,2020-05-01,http://www.fairbrics.co,SGH CAPITAL,Circular Economy||CleanTech||ClimateTech||DeepTech,853194629
+VitaDX,vitadx,Paris,seed,1.0,1000000,EUR,2020-09-04,http://vitadx.com/en/,GO CAPITAL||ODYSSEE VENTURE,BioTech||Artificial Intelligence,811141977
+Gifts for Change,gifts-for-change,Paris,seed,1.0,1000000,EUR,2020-05-15,https://www.giftsforchange.fr/,Aviva Impact Investing France||INCO Investissement,E-commerce & Retail,804688133
+Little Worker,little-worker,Paris,seed,1.0,1000000,EUR,2020-01-29,https://www.littleworker.fr/,50 Partners||Benoit Charles-Lavauzelle||Bertrand Sablier||Cedric Sellin||Fabrice Grinda||Jacques Riviere||Pierre Vital||Sébastien Lucas,E-commerce & Retail||Media||PropTech,820334951
+C2Care,c2care,Toulon,seed,1.0,1000000,EUR,2020-01-16,https://www.c2.care/en/,Business Angels||Créazur||Olbia Invest,HealthTech||SaaS||Digital Health,815196332
+IMMERSIVE FACTORY,immersive-factory,Paris,seed,1.0,1000000,EUR,2020-01-16,https://immersivefactory.com,WaterStart Capital,EdTech||Virtual Reality,821839040
+Flipr,flipr,Toulouse,series_a,0.88,875657,EUR,2020-02-25,http://www.goflipr.com,,Artificial Intelligence||Consumer Electronics||Hardware||WaterTech,
+U-Need Consulting,u-need-consulting,Toulouse,growth,0.75,750000,EUR,2020-02-16,https://u-need-consulting.com/fr/,Multicroissance,SaaS,434776324
+ActivCorner,activcorner,Paris,seed,0.6,600000,EUR,2020-03-04,https://www.activcorner.com/,SIDE Capital,HealthTech,540027059
+Co-Recyclage,co-recyclage,Paris,seed,0.5,500000,EUR,2020-02-29,https://www.corecyclage.fr,NovEss,Circular Economy||Recycling,795009919
+easyQuorum,easyquorum,Paris,seed,0.5,500000,EUR,2020-02-06,https://www.easyquorum.com,Bpifrance||Crédit Agricole Ille and Vilaine Expansion,SaaS||LegalTech,
+Plume-App,plume-app,Saint-ouen,seed,0.35,350000,EUR,2020-06-09,https://www.plume-app.co/,Founders Future,EdTech,837704121
+Alphacap,alphacap,Paris,seed,0.12,125000,EUR,2020-04-30,https://www.alphacap.fr,,FinTech,
+Mash&Co France,mashco-france,Tourcoing,seed,0.04,40000,EUR,2020-10-20,https://mashandco.tv,Pictanovo,EdTech||Gaming,881516660
+Cafeyn,cafeyn,Paris,growth,,,,2020-11-26,https://www.cafeyn.co/uk/newsstand,Bregal Milestone,Media,888788726
+Labosud,labosud,Montpellier,growth,,,,2020-11-24,https://labosud.fr/,Ardian,BioTech,329208771
+H2 Pharma,h2-pharma,Bois-d'arcy,growth,,,,2020-10-20,https://www.h2pharma.com,Ardian,BioTech,478202419
+Ogeu Groupe,ogeu-groupe,Ogeu-les-bains,growth,,,,2020-09-01,https://ogeugroupe.com,Crédit Mutuel Equity||Pyrénées Gascogne,Blue Economy||FoodTech||WaterTech,483867008
+BRAINCITIES,braincities,Paris,growth,,,,2020-07-31,http://www.braincities.co,SOYA CAPITAL,Robotics||Artificial Intelligence,798632972
+Fixage,fixage,Paris,growth,,,,2020-07-29,https://www.fixage.com/,Siparex Groupe,InsurTech,342269388
+IELO Group,ielo-group,Paris,growth,,,,2020-07-21,https://www.ielo.net/#/,DIF,Telecom,824539241
+MediReport,medireport,Paris,growth,,,,2020-06-30,http://www.medireport.fr,Elige Capital||Extens,HealthTech,401807771
+Argon & Co,argon-co,Levallois-perret,growth,,,,2020-05-04,https://www.argonandco.com/,Ardian,Other,882300379
+Rubis Terminal,rubis-terminal,Paris,growth,,,,2020-05-01,https://www.rubis-terminal.com/,I Squared Capital,Energy,775686405
+Euro 4x4 Parts,euro-4x4-parts,Sainte-marie-de-gosse,growth,,,,2020-04-23,http://www.euro4x4parts.com/,Ardian,E-commerce & Retail||Mobility,
+Cyrus Conseil,cyrus-conseil,Paris,growth,,,,2020-04-02,http://www.cyrusconseil.fr,Bridgepoint,FinTech,350529111
+MAK-SYSTEM International,mak-system-international,Paris,growth,,,,2020-02-20,http://www.mak-system.com/,The Carlyle Group,HealthTech||SaaS||Digital Health,414100453
+Groupe EDH,groupe-edh,Paris,growth,,,,2020-01-23,https://www.groupe-edh.com/,IK Partners,EdTech,381224054
+Klaxoon,klaxoon,Rennes,growth,,,,2020-11-01,https://klaxoon.com/,Eurazeo,EdTech||SaaS,511962219
+Biosyl,biosyl,Cosne-sur-loire,growth,,,,2020-10-21,https://www.biosyl.fr/,Omnes Capital,Energy,532381225
+Touch Sensity,touch-sensity,Pessac,pre_seed,,,,2020-12-20,https://touchsensity.com/,,SaaS,878558519
+Bump.sh,bumpsh,Angers,pre_seed,,,,2020-08-15,https://bump.sh,Bpifrance,SaaS,831116330
+ExJewel,exjewel,Besançon,pre_seed,,,,2020-07-10,https://exjewel.com/,,E-commerce & Retail||Artificial Intelligence,853603249
+Bellevilles,bellevilles,Paris,pre_seed,,,,2020-07-01,https://bellevilles.fr,BLUE GREEN CAPITAL,PropTech,879107902
+Octo Gaming,octo-gaming,Mont-saint-aignan,pre_seed,,,,2020-06-15,http://octo-gaming.com,Founders Future,Gaming,844094540
+Doctrio,doctrio,Paris,pre_seed,,,,2020-06-10,https://doctrio.com/,FJ Labs,HealthTech||EdTech||Digital Health,882034770
+Satoshi Studio,satoshi-studio,Paris,pre_seed,,,,2020-05-28,https://www.satoshi-studio.com,,Blockchain||E-commerce & Retail,842070286
+Qovery,qovery,Paris,pre_seed,,,,2020-05-28,https://www.qovery.com/,Founders Future,SaaS,852571108
+Bealy health,bealy-health,Paris,pre_seed,,,,2020-05-05,https://www.bealy.io/,Purple,HealthTech||SportsTech,
+Osée,ose,Paris,pre_seed,,,,2020-05-04,https://www.osee.co,Bertrand Jacquelot,E-commerce & Retail,888450822
+ScrapingBee,scrapingbee,Paris,pre_seed,,,,2020-05-01,http://scrapingbee.com,TinySeed,SaaS,843352683
+Time for the Planet,time-for-the-planet,Lyon,pre_seed,,,,2020-04-01,https://www.time-planet.com/en,Sylvain Ramousse,FinTech||CleanTech||Energy,849876339
+CloudSkiff,cloudskiff,Paris,pre_seed,,,,2020-03-03,https://cloudskiff.com,Axeleo Capital||Plug and Play||Ventech,RegTech||SaaS||Cybersecurity,852358159
+LooksGoodAI,looksgoodai,Paris,pre_seed,,,,2020-03-03,http://looksgoodai.com,Loyal VC||One Way Ventures,Artificial Intelligence,882697998
+ImVitro,imvitro,Paris,pre_seed,,,,2020-03-01,https://im-vitro.com/,Fly Ventures,MedTech||Artificial Intelligence,853259802
+LeGrosDirect,legrosdirect,Montreuil,pre_seed,,,,2020-03-01,https://www.legrosdirect.com,Alain Garnier,Entertainment||Media,884027392
+Arcadium,arcadium,Ajaccio,pre_seed,,,,2020-02-04,https://arcadium.club,Giorgio Riccò,Gaming||SportsTech,878915271
+Dancefloor Paris,dancefloor-paris,Paris,pre_seed,,,,2020-01-24,https://www.dancefloor-paris.com/,Founders Future,Entertainment||SportsTech,879428753
+YEXO,yexo,Bordeaux,pre_seed,,,,2020-01-15,https://yexo.io/,resolution Reichert Network Solutions GmbH,Blockchain||FinTech,831063573
+Team for the Planet,team-for-the-planet,Lyon,pre_seed,,,,2020-01-01,https://team-planet.com/en,Maxime Paradis,Energy,849876339
+Reglo,reglo,Paris,pre_seed,,,,2020-01-01,https://www.reglopetfood.com,Maxime Paradis,AgriTech||FoodTech,879581593
+ParaSwap,paraswap,Paris,pre_seed,,,,2020-01-01,https://paraswap.io,David J. Namdar,Blockchain||FinTech,888103678
+Green-Got,green-got,Paris,pre_seed,,,,2020-12-15,https://green-got.com,David Moison||William Levy,FinTech,883981763
+Yumgo,yumgo,Paris,pre_seed,,,,2020-12-01,https://yumgo.fr,50 Partners,FoodTech,849027073
+Popwork,popwork,Paris,pre_seed,,,,2020-11-23,https://pop.work/,,SaaS||HRTech,535216576
+Fleeti,fleeti,Bidart,pre_seed,,,,2020-11-15,http://www.fleeti.co,,SaaS||Mobility,884820473
+Winshot,winshot,Marseille,pre_seed,,,,2020-10-03,http://www.winshot.net,F6 Ventures,SaaS||E-commerce & Retail,
+NomadHer,nomadher,Paris,pre_seed,,,,2020-10-01,https://www.nomadher.com,CNTTECH||MYSC,TravelTech,
+Celec France,celec-france,Neufchâtel-en-bray,seed,,,,2020-12-22,http://celec.fr,UI Investissement,Hardware,378888085
+Kosmik,kosmik,Paris,seed,,,,2020-12-21,https://www.kosmik.app,Purple,SaaS,890154032
+Search Mobility,search-mobility,Paris,seed,,,,2020-12-16,https://www.search.cab,IMT Starter,SaaS||Mobility,909445710
+Renée Corner,rene-corner,Paris,seed,,,,2020-12-16,https://reneecorner.com/,IMT Starter,SaaS||E-commerce & Retail,898272612
+LN Markets,ln-markets,Paris,seed,,,,2020-09-08,https://lnmarkets.com,Arcario||Bitfinex||Fulgur Ventures,Blockchain||FinTech,
+Cutii,cutii,Roubaix,seed,,,,2020-07-30,http://www.cutii.io,Upward,HealthTech||Robotics||Telecom,819634999
+Samp,samp,Paris,seed,,,,2020-12-15,https://samp.ai,Nicolas Douay,DeepTech||SaaS||Artificial Intelligence,881739650
+Legal Vision,legal-vision,Paris,seed,,,,2020-12-10,https://www.legalvision.fr,Portugal Ventures,SaaS||LegalTech,809015407
+Lynceus,lynceus,Paris,seed,,,,2020-12-07,https://lynceus.ai/,Acequia Capital (AceCap),Artificial Intelligence,881811327
+Bocoloco,bocoloco,Paris,seed,,,,2020-12-06,https://www.bocoloco.fr/,OBRATORI,E-commerce & Retail||FoodTech,880001458
+UpStride,upstride,Paris,seed,,,,2020-12-03,https://ww2.upstride.io/,Acequia Capital (AceCap),Artificial Intelligence,
+WeLoveDevs.com,welovedevscom,Lille,seed,,,,2020-12-01,http://welovedevs.com,Clément Sauvage,SaaS,818572877
+Essor,essor,Paris,seed,,,,2020-12-01,https://www.goessor.com,Alon Gamzu||French Partners||Vine Ventures,E-commerce & Retail||MarTech,
+TravelSquare,travelsquare,Vannes,seed,,,,2020-11-17,https://travelsquare.co,,SaaS||TravelTech,904215829
+Homo Ludens,homo-ludens,Paris,seed,,,,2020-11-09,https://homoludens.games/,Acequia Capital (AceCap),Media||Gaming,877524967
+Corlieve Therapeutics,corlieve-therapeutics,Paris,seed,,,,2020-11-02,https://www.corlieve.com/,Idinvest Partners||Kinled Holding||Kurma Partners||Pureos Bioventures,HealthTech||BioTech,878872589
+PROFI DRIVER,profi-driver,Paris,seed,,,,2020-11-01,https://www.profi-driver.com/,,Entertainment||Mobility||TravelTech,833654296
+Massa,massa,Paris,seed,,,,2020-10-05,https://massa.net/,Acequia Capital (AceCap)||Andurance Ventures||Ariane Capital||Aussie Capital||BlueYard Capital||Bpifrance||Charlie Songhurst||Dascof||Mediaapps Innovation||Numeus||ZBS CAPITAL,Blockchain,881320592
+Pasqal,pasqal,Palaiseau,seed,,,,2020-09-15,https://www.pasqal.com,ACET Capital||TPY Capital,DeepTech||SaaS||Artificial Intelligence||Quantum Computing,849441522
+NewDeal,newdeal,Biarritz,seed,,,,2020-09-01,https://www.newdeal.io,,SaaS||HRTech,
+Zone300,zone300,Perpignan,seed,,,,2020-09-01,https://www.zone300.com/,,Entertainment||Media,
+Inbolt,inbolt,Paris,seed,,,,2020-08-13,https://www.inbolt.com,SOSV,DeepTech||Robotics||Artificial Intelligence,853337665
+KeeperDAO,keeperdao,Oô,seed,,,,2020-07-31,https://keeperdao.com/,ICONIUM||Polychain||Three Arrows Capital,Blockchain||FinTech,
+LiMM Therapeutics,limm-therapeutics,Paris,seed,,,,2020-07-15,https://www.limmtx.com/,European Innovation Council||Portugal Ventures,HealthTech||BioTech||MedTech,842668907
+Diotheris,diotheris,Montigny-le-bretonneux,seed,,,,2020-07-07,http://www.diotheris.com,InnoBio Fund,BioTech,883773228
+Cartesi,cartesi,Persan,seed,,,,2020-07-01,http://cartesi.io,coinIX,Blockchain||SaaS,
+Les Pénates,les-pnates,Paris,seed,,,,2020-07-01,https://www.lespenates.fr,Angelsquare,E-commerce & Retail,819362179
+Beebs,beebs,Créteil,seed,,,,2020-07-01,https://www.beebs.app/,Polymatter Ventures,E-commerce & Retail,848509253
+Tekyn,tekyn,Paris,seed,,,,2020-07-01,https://tekyn.com/en/#menu,Bleu Capital,E-commerce & Retail||Robotics,832730774
+Work With Island,work-with-island,Paris,seed,,,,2020-06-06,https://workwithisland.com,Ahmed Mhiri,Other,845369495
+Flint Media,flint-media,Paris,seed,,,,2020-06-01,https://flint.media/,Alain Garnier,Robotics,791006166
+Julaya,julaya,Paris,seed,,,,2020-05-29,https://julaya.co,Ahmed Mhiri,FinTech,838578516
+Teemo,teemo,Paris,seed,,,,2020-05-19,http://www.teemo.co,Gregory Coleman||Index Ventures||Isai||Mosaic Ventures||Pascal Gauthier,AdTech||SaaS,
+protera,protera,Neuilly-sur-seine,seed,,,,2020-05-13,https://www.proterabio.com,SOSV SF & NY (Fka IndieBio),BioTech||FoodTech,881925630
+Residalya,residalya,Paris,seed,,,,2020-05-01,https://www.residalya.fr/,Eurazeo,HealthTech,892316696
+Photoroom,photoroom,Paris,seed,,,,2020-05-01,https://photoroom.com,Adjacent,Media||Artificial Intelligence,853059384
+CarJager,carjager,Paris,seed,,,,2020-05-01,https://www.carjager.com/,,Mobility,834496101
+Neuroprofiler,neuroprofiler,Puteaux,seed,,,,2020-04-28,https://www.neuroprofiler.com,,RegTech||FinTech,821916947
+Ma Blouse Blanche,ma-blouse-blanche,Marseille,seed,,,,2020-04-22,https://www.mablouseblanche.fr,OBRATORI,HealthTech,881114458
+Clustdoc,clustdoc,Paris,seed,,,,2020-04-18,https://www.clustdoc.com,InReach Ventures,SaaS||MarTech,
+SpotLight,spotlight,Massy,seed,,,,2020-04-14,https://spotlight-earth.com/,Phaze Ventures,CleanTech,
+Illumo Robotics,illumo-robotics,Toulouse,seed,,,,2020-04-02,https://www.illumo.ai/en/illumo-robotics-english/,Alchemist Accelerator,DeepTech||Robotics||Artificial Intelligence,892634692
+Eyeneed,eyeneed,Rouen,seed,,,,2020-03-23,https://www.eyeneed.fr,,HealthTech||SaaS||Digital Health,
+Monstock,monstock,Bezannes,seed,,,,2020-03-20,https://monstock.net/,Ahmed Mhiri,SaaS||Artificial Intelligence,834950156
+Declique,declique,Labège,seed,,,,2020-03-14,https://www.declique.fr/,Thomas HERLIN,SaaS,881688915
+Doinsport,doinsport,Marseille,seed,,,,2020-03-08,https://doinsport.com/,Ahmed Mhiri,SaaS,822078796
+WeLoop,weloop,Paris,seed,,,,2020-03-01,https://www.weloop.io,,SaaS,830184420
+Pharmedistore,pharmedistore,Boulogne-billancourt,seed,,,,2020-03-01,https://www.pharmedistore.com,,BioTech,832933030
+YMoney,ymoney,Paris,seed,,,,2020-03-01,https://ymoney.fr/,Maxime Hurtebize,FinTech,845019199
+CIFA,cifa,Aubervilliers,seed,,,,2020-02-01,https://cifa-fashion.com/en/wholesalers,Eurazeo,E-commerce & Retail,
+Gradient Denervation Technologies,gradient-denervation-technologies,Paris,seed,,,,2020-02-01,http://www.gradientdenervation.com/,MD Start,BioTech||MedTech,849452420
+Extrality,extrality,Paris,seed,,,,2020-01-31,http://www.extrality.ai,Bpifrance,SaaS||Artificial Intelligence,853306314
+Agriodor,agriodor,Rennes,seed,,,,2020-01-30,https://agriodor.com/,IncubAlliance Paris-Saclay,AgTech,845052844
+Medelse,medelse,Paris,seed,,,,2020-01-24,https://www.medelse.com,FJ Labs||Patrice Roulive,HealthTech||HRTech,818258279
+K6 Transmission,k6-transmission,Paris,seed,,,,2020-01-13,http://www.k6transmission.fr/,Partner Ventures,FinTech,879445294
+Franklin Pet Food,franklin-pet-food,Paris,seed,,,,2020-01-09,https://franklinpetfood.com,Thomas Rebaud,E-commerce & Retail||FoodTech,832465033
+IZNES,iznes,Paris,seed,,,,2020-01-02,http://www.iznes.io,Mandalore Partners,Blockchain||FinTech,832488415
+Tripartie,tripartie,Paris,seed,,,,2020-01-01,https://tripartie.com,COREangels Big Data & AI Europe,E-commerce & Retail,838459733
+Diskyver,diskyver,Lille,seed,,,,2020-01-01,https://www.diskyver.com/,Wesley Clover,SaaS||Cybersecurity||Telecom,844817338
+React Event,react-event,Lille,seed,,,,2020-01-01,https://reactevent.com/,Wesley Clover,Entertainment||SaaS,844821637
+Jolly Mama,jolly-mama,Paris,seed,,,,2020-01-01,https://jollymama.com/,Wind,FemTech||FoodTech,841372212
+Data Legal Drive,data-legal-drive,Paris,seed,,,,2020-01-01,https://datalegaldrive.com/,Wind,SaaS,839793791
+The Bradery,the-bradery,Paris,seed,,,,2020-01-01,https://en.thebradery.com/,Wind,E-commerce & Retail,839442258
+Dromy,dromy,Paris,seed,,,,2020-01-01,https://dromy.fr/,Afri Mobility,Mobility,820408474
+Kinathera,kinathera,Marseille,seed,,,,2020-01-01,https://kinathera.com/,,BioTech,808795140
+Bubble BD,bubble-bd,Rouen,seed,,,,2020-01-01,https://www.bubblebd.com,,E-commerce & Retail||Entertainment||Media,106201650
+Plume,plume,Saint-andré-lez-lille,seed,,,,2020-01-01,https://www.plume-mobility.com/shop/,AA Sons,Mobility,840320998
+Cynoia,cynoia,Marseille,seed,,,,2020-01-01,https://cynoia.com,UGFS,SaaS||Telecom,
+PopScreen Games,popscreen-games,Paris,seed,,,,2020-01-01,http://www.popscreen.io/,,Media||Gaming,888880242
+Luzyne,luzyne,Paris,series_a,,,,2020-12-30,https://www.luzyne.net/fr/,Julien Lopizzo,MarTech,818964488
+SpaceFill,spacefill,Paris,series_a,,,,2020-11-01,http://www.spacefill.fr,Eurazeo||FIEGE,E-commerce & Retail||Mobility,840375166
+Lymo Finance,lymo-finance,Toulouse,series_a,,,,2020-09-03,https://lymo.fr/,Denis Lafont-Trévisan,FinTech||PropTech,812168086
+La Fourche,la-fourche,La Courneuve,series_a,,,,2020-06-29,https://lafourche.fr/,Five Seasons Ventures,E-commerce & Retail,839765062
+Homepilot,homepilot,Vincennes,series_a,,,,2020-04-02,https://www.homepilot.fr/,Baptiste Hamel||Denis Lafont-Trévisan,PropTech,823949813
+Nextstore,nextstore,Paris,undisclosed,,,,2020-08-22,https://nextstore.com,Y Combinator,E-commerce & Retail,
+Amolyt Pharma,amolyt-pharma,,undisclosed,,,,2020-08-08,https://amolytpharma.com,Eurazeo,HealthTech||BioTech,803919729
+Heyday Integrated Circuits,heyday-integrated-circuits,Grasse,undisclosed,,,,2020-08-06,https://www.heyday-ic.com,European Innovation Council,Semiconductors||DeepTech,803183771
+Albéa Group,alba-group,Gennevilliers,undisclosed,,,,2020-07-01,https://www.albea-group.com,Eurazeo,E-commerce & Retail,
+Infra,infra,Bischheim,undisclosed,,,,2020-06-04,https://www.infra.fr/,Bossa Invest,MarTech,314583543
+Shadow,shadow,Paris,undisclosed,,,,2020-06-04,https://shadow.tech/fr-FR,Bossa Invest,SaaS||Gaming||Hardware,813865870
+Ceva Santé Animale,ceva-sant-animale,Libourne,undisclosed,,,,2020-06-01,https://www.ceva.com,Idinvest Partners,BioTech||AgriTech,301763405
+Blocs,blocs,La Défense,undisclosed,,,,2020-03-01,https://www.blocsetcie.com/,Bouygues Telecom Initiatives,Blockchain||SaaS,
+PHENIX,phenix,Paris,undisclosed,,,,2020-02-12,http://www.wearephenix.com/,Danone Manifesto Venture,Recycling||Circular Economy||CleanTech,801333808
+Holoffice,holoffice,Paris,undisclosed,,,,2020-02-01,https://www.holoffice.com/,Acadys,SaaS,853928695
+IZAC,izac,Paris,undisclosed,,,,2020-02-01,https://www.izac.fr/en/,Eurazeo,E-commerce & Retail,449572999
+Internest,internest,Paris,undisclosed,,,,2020-02-01,https://internest.fr,Boundary Holding,SpaceTech & Aerospace||Hardware,817879760
+NUMERICUBE,numericube,Levallois-perret,undisclosed,,,,2020-01-07,https://www.numericube.com/,,SaaS,514036003
+STOA,stoa,Paris,undisclosed,,,,2020-01-01,http://www.stoainfraenergy.com/,South African Housing & Infrastructure Fund,FinTech,833130958
+Leade.rs,leaders,Paris,undisclosed,,,,2020-01-01,http://leade.rs,Cue Ball,Entertainment,819810128
+Laboratories JUVISE Pharmaceuticals,laboratories-juvise-pharmaceuticals,Villeurbanne,undisclosed,,,,2020-02-01,http://www.juvisepharmaceuticals.com,Idinvest Partners,HealthTech||BioTech,509059879
+Haudecoeur,haudecoeur,La Courneuve,undisclosed,,,,2020-09-01,https://www.haudecoeur.fr/,Eurazeo,E-commerce & Retail||FoodTech,662006402
+MediaSchool Group,mediaschool-group,Paris,undisclosed,,,,2020-05-01,http://www.mediaschool.eu,,EdTech||Telecom,490885498
+WORMSENSING,wormsensing,Grenoble,undisclosed,,,,2020-01-08,https://www.wormsensing.com/,CEA Investissement,Semiconductors||DeepTech||SpaceTech & Aerospace||Robotics||Mobility||CleanTech||Energy,880418033
