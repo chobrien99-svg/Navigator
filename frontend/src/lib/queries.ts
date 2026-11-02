@@ -173,9 +173,17 @@ export async function getPersonBySlug(slug: string) {
   return data as Person;
 }
 
-/** The person's email, for the Navigator team only (null for anyone else). */
+/**
+ * The person's email, for the Navigator team only (null for anyone else).
+ * Display only, so a failed lookup just hides the link.
+ */
 export async function getPersonContactEmail(personId: string) {
-  return getPersonEmail(await db(), personId);
+  try {
+    return await getPersonEmail(await db(), personId);
+  } catch (err) {
+    console.error("[queries]", err);
+    return null;
+  }
 }
 
 export async function getPersonOrganizations(personId: string) {
