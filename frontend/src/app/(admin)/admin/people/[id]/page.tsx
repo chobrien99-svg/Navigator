@@ -47,12 +47,20 @@ export default function EditPersonPage() {
     previous_exits: "0",
   });
 
+  // False when the email lookup failed: the field then stays empty and is
+  // left out of the save, so an existing address isn't erased.
+  const [contactLoaded, setContactLoaded] = useState(true);
+
   useEffect(() => {
     async function load() {
-      const [{ data, error: err }, email] = await Promise.all([
+      const [{ data, error: err }, contact] = await Promise.all([
         supabase.from("people").select(PERSON_COLUMNS).eq("id", id).single(),
-        getPersonEmail(supabase, id),
+        getPersonEmail(supabase, id).then(
+          (email) => ({ ok: true, email }),
+          () => ({ ok: false, email: null })
+        ),
       ]);
+      const email = contact.email;
 
       if (err || !data) {
         setError("Person not found");
@@ -76,6 +84,8 @@ export default function EditPersonPage() {
         academic_lab: data.academic_lab ?? "",
         previous_exits: (data.previous_exits ?? 0).toString(),
       });
+      setContactLoaded(contact.ok);
+      if (!contact.ok) setError("Couldn't load the email address, so it won't be changed when you save. Reload to try again.");
       setLoading(false);
     }
     load();
@@ -100,7 +110,7 @@ export default function EditPersonPage() {
           last_name: form.last_name || null,
           linkedin_url: form.linkedin_url || null,
           twitter_url: form.twitter_url || null,
-          email: form.email || null,
+          ...(contactLoaded ? { email: form.email || null } : {}),
           bio: form.bio || null,
           has_phd: form.has_phd,
           is_repeat_founder: form.is_repeat_founder,
@@ -227,6 +237,7 @@ export default function EditPersonPage() {
             label="Email"
             value={form.email}
             onChange={(v) => updateField("email", v)}
+            placeholder={contactLoaded ? undefined : "Couldn't load; won't be changed"}
           />
         </div>
 
