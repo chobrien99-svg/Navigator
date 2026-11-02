@@ -9,7 +9,9 @@ export default async function FundingPage() {
   let error: string | null = null;
 
   try {
-    rounds = await getAllFundingRounds({ limit: 5000 });
+    // Load the full 2020-2026 window (dated newest-first, so a plain limit
+    // would otherwise drop the oldest in-range rounds).
+    rounds = await getAllFundingRounds({ since: "2020-01-01", limit: 8000 });
   } catch (e) {
     error = e instanceof Error ? e.message : "Failed to load funding data";
   }

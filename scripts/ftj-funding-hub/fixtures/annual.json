@@ -1,6 +1,12 @@
 {
   "data": [
     {
+      "year": 2020,
+      "total_disclosed_eur": 5360000000,
+      "round_count": 743,
+      "disclosed_round_count": 606
+    },
+    {
       "year": 2021,
       "total_disclosed_eur": 11760900000,
       "round_count": 988,
@@ -38,8 +44,8 @@
     }
   ],
   "meta": {
-    "from": 2021,
+    "from": 2020,
     "to": 2026,
-    "note": "Snapshot of Navigator per-year totals taken 2026-10-11, for previews only."
+    "note": "Snapshot of Navigator per-year totals (2020 added 2026-11-02 after the 2020 backfill), for previews only."
   }
 }

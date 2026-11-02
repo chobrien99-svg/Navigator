@@ -214,7 +214,7 @@ export async function getPersonExperience(personId: string) {
 
 // ─── Funding ──────────────────────────────────────────────────
 
-export async function getAllFundingRounds(opts?: { limit?: number }) {
+export async function getAllFundingRounds(opts?: { limit?: number; since?: string }) {
   const supabase = await db();
   let query = supabase
     .from("funding_rounds")
@@ -225,6 +225,9 @@ export async function getAllFundingRounds(opts?: { limit?: number }) {
     )
     .order("announced_date", { ascending: false });
 
+  // Bound the window server-side (e.g. "2020-01-01") so the full range loads
+  // rather than being truncated by the row limit against newest-first ordering.
+  if (opts?.since) query = query.gte("announced_date", opts.since);
   if (opts?.limit) query = query.limit(opts.limit);
 
   const { data, error } = await query;
