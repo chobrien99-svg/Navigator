@@ -122,7 +122,7 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
   const rounds = rawRounds as unknown as Round[];
 
   // Filters
-  const [yearRange, setYearRange] = useState<[number, number]>([2020, 2026]);
+  const [yearRange, setYearRange] = useState<[number, number]>([2000, 2026]);
   const [selectedStages, setSelectedStages] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("date");
@@ -134,7 +134,7 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
     const years = rounds
       .map((r) => getYear(r.announced_date))
       .filter((y): y is number => y != null);
-    if (years.length === 0) return [2020, 2026];
+    if (years.length === 0) return [2000, 2026];
     return [Math.min(...years), Math.max(...years)];
   }, [rounds]);
 
@@ -395,7 +395,7 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
             Funding Tracker
           </h1>
           <p className="mt-1 text-sm text-on-surface-variant">
-            French innovation ecosystem capital flows · 2020–2026
+            French innovation ecosystem capital flows · 2000–2026
           </p>
         </div>
 
@@ -485,18 +485,18 @@ export function FundingDashboard({ rounds: rawRounds, error }: Props) {
           <span className="text-xs text-on-surface-variant">From</span>
           <input
             type="number"
-            min={2020}
+            min={2000}
             max={2026}
             value={yearRange[0]}
             onChange={(e) =>
-              setYearRange([parseInt(e.target.value) || 2020, yearRange[1]])
+              setYearRange([parseInt(e.target.value) || 2000, yearRange[1]])
             }
             className="w-16 border-b border-outline-variant/25 bg-transparent py-1 text-center text-sm text-on-surface focus:border-primary focus:outline-none"
           />
           <span className="text-xs text-on-surface-variant">to</span>
           <input
             type="number"
-            min={2020}
+            min={2000}
             max={2026}
             value={yearRange[1]}
             onChange={(e) =>

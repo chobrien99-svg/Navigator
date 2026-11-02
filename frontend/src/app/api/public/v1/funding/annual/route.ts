@@ -7,9 +7,9 @@ import {
 
 export const dynamic = "force-dynamic";
 
-const MAX_SPAN = 15;
+const MAX_SPAN = 30;
 
-// GET /api/public/v1/funding/annual?from=2021&to=2026
+// GET /api/public/v1/funding/annual?from=2000&to=2026
 export async function GET(request: Request) {
   const params = new URL(request.url).searchParams;
   const to = parseYear(params.get("to"));

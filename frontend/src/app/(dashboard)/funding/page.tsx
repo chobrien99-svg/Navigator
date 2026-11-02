@@ -9,9 +9,9 @@ export default async function FundingPage() {
   let error: string | null = null;
 
   try {
-    // Load the full 2020-2026 window (dated newest-first, so a plain limit
-    // would otherwise drop the oldest in-range rounds).
-    rounds = await getAllFundingRounds({ since: "2020-01-01", limit: 8000 });
+    // Load the full 2000-2026 history. getAllFundingRounds pages through
+    // Supabase's 1,000-row response cap; the limit is just a safety ceiling.
+    rounds = await getAllFundingRounds({ limit: 20000 });
   } catch (e) {
     error = e instanceof Error ? e.message : "Failed to load funding data";
   }

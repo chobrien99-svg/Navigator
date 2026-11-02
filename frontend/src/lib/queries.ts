@@ -214,25 +214,39 @@ export async function getPersonExperience(personId: string) {
 
 // ─── Funding ──────────────────────────────────────────────────
 
+// Supabase caps a single response at 1,000 rows, so a plain .limit(n > 1000)
+// is silently truncated. Page through with .range() to load every round.
+const FUNDING_PAGE_SIZE = 1000;
+
 export async function getAllFundingRounds(opts?: { limit?: number; since?: string }) {
   const supabase = await db();
-  let query = supabase
-    .from("funding_rounds")
-    .select(
-      `*,
-      organizations:organization_id(name, slug, organization_type, organization_sectors(is_primary, sectors(name, slug))),
-      funding_round_investors(is_lead, investor_name, organizations:investor_id(name, slug))`
-    )
-    .order("announced_date", { ascending: false });
+  const cap = opts?.limit;
+  const all: FundingRound[] = [];
 
-  // Bound the window server-side (e.g. "2020-01-01") so the full range loads
-  // rather than being truncated by the row limit against newest-first ordering.
-  if (opts?.since) query = query.gte("announced_date", opts.since);
-  if (opts?.limit) query = query.limit(opts.limit);
+  for (let from = 0; ; from += FUNDING_PAGE_SIZE) {
+    let query = supabase
+      .from("funding_rounds")
+      .select(
+        `*,
+        organizations:organization_id(name, slug, organization_type, organization_sectors(is_primary, sectors(name, slug))),
+        funding_round_investors(is_lead, investor_name, organizations:investor_id(name, slug))`
+      )
+      // A stable secondary sort keeps rows from drifting between pages.
+      .order("announced_date", { ascending: false })
+      .order("id")
+      .range(from, from + FUNDING_PAGE_SIZE - 1);
+    if (opts?.since) query = query.gte("announced_date", opts.since);
 
-  const { data, error } = await query;
-  if (error) throw error;
-  return data as FundingRound[];
+    const { data, error } = await query;
+    if (error) throw error;
+    const batch = (data ?? []) as FundingRound[];
+    all.push(...batch);
+
+    if (batch.length < FUNDING_PAGE_SIZE) break; // last page
+    if (cap != null && all.length >= cap) break; // reached requested cap
+  }
+
+  return (cap != null ? all.slice(0, cap) : all) as FundingRound[];
 }
 
 // ─── Programs ────────────────────────────────────────────────
