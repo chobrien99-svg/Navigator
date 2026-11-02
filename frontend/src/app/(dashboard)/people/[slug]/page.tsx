@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getPersonBySlug,
+  getPersonContactEmail,
   getPersonOrganizations,
   getPersonExperience,
 } from "@/lib/queries";
@@ -20,9 +21,10 @@ export default async function PersonProfilePage({
     notFound();
   }
 
-  const [orgRoles, experience] = await Promise.all([
+  const [orgRoles, experience, email] = await Promise.all([
     getPersonOrganizations(person.id),
     getPersonExperience(person.id),
+    getPersonContactEmail(person.id),
   ]);
 
   const currentRoles = orgRoles.filter((r) => r.is_current);
@@ -300,15 +302,15 @@ export default async function PersonProfilePage({
                   Twitter / X
                 </a>
               )}
-              {person.email && (
+              {email && (
                 <a
-                  href={`mailto:${person.email}`}
+                  href={`mailto:${email}`}
                   className="flex items-center gap-2 text-sm text-primary hover:underline"
                 >
                   <span className="material-symbols-outlined text-[16px]">
                     mail
                   </span>
-                  {person.email}
+                  {email}
                 </a>
               )}
             </div>
