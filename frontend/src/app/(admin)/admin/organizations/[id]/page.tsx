@@ -332,6 +332,10 @@ export default function EditOrganizationPage() {
     source_url: "",
   });
 
+  // False when the email lookup failed: the field then stays empty and is
+  // left out of the save, so an existing address isn't erased.
+  const [contactLoaded, setContactLoaded] = useState(true);
+
   useEffect(() => {
     async function load() {
       const [{ data: org, error: orgErr }, contact] = await Promise.all([
@@ -340,7 +344,10 @@ export default function EditOrganizationPage() {
           .select(`${ORGANIZATION_COLUMNS}, cities:city_id(id, name)`)
           .eq("id", id)
           .single(),
-        getOrganizationContact(supabase, id),
+        getOrganizationContact(supabase, id).then(
+          (c) => ({ ok: true, ...c }),
+          () => ({ ok: false, email: null, phone: null })
+        ),
       ]);
 
       if (orgErr || !org) {
@@ -541,6 +548,8 @@ export default function EditOrganizationPage() {
         setEvents(eventsData as OrgEvent[]);
       }
 
+      setContactLoaded(contact.ok);
+      if (!contact.ok) setError("Couldn't load the email address, so it won't be changed when you save. Reload to try again.");
       setLoading(false);
     }
     load();
@@ -572,7 +581,7 @@ export default function EditOrganizationPage() {
           website: form.website || null,
           linkedin_url: form.linkedin_url || null,
           twitter_url: form.twitter_url || null,
-          email: form.email || null,
+          ...(contactLoaded ? { email: form.email || null } : {}),
           country: form.country,
           employee_range: form.employee_range || null,
           founded_year: form.founded_year
@@ -1475,7 +1484,7 @@ export default function EditOrganizationPage() {
           <Field label="Website" value={form.website} onChange={(v) => updateField("website", v)} placeholder="https://..." />
           <Field label="LinkedIn URL" value={form.linkedin_url} onChange={(v) => updateField("linkedin_url", v)} />
           <Field label="Twitter URL" value={form.twitter_url} onChange={(v) => updateField("twitter_url", v)} />
-          <Field label="Email" value={form.email} onChange={(v) => updateField("email", v)} />
+          <Field label="Email" value={form.email} onChange={(v) => updateField("email", v)} placeholder={contactLoaded ? undefined : "Couldn't load; won't be changed"} />
         </div>
 
         {/* Right: Profile / Intelligence — fields vary by organization type */}
