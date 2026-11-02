@@ -137,9 +137,9 @@ for paid-only data.
 - **Quarterly report links**: add each report's URL under `quarterlyReports`
   in `frontend/src/lib/funding-hub/config.json`. They appear in the paid
   module once Navigator redeploys.
-- **Annual chart**: starts at `annualFromYear` (2020; Navigator now carries a
-  full 2020 backfill — ~740 rounds). To show a year Navigator does not cover,
-  add it to `annualOverrides`, for example
+- **Annual chart**: starts at `annualFromYear` (2000; Navigator now carries the
+  full 2000-2026 history). The annual API allows spans up to 30 years. To show a
+  year Navigator does not cover, add it to `annualOverrides`, for example
   `"2020": { "total_disclosed_eur": 1234500000, "round_count": 456, "source": "FTJ 2020 report" }`
   (placeholder numbers),
   and set `annualFromYear` to 2020. Overridden years get an asterisk and their
