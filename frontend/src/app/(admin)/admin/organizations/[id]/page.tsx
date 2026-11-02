@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import { ORGANIZATION_COLUMNS } from "@/lib/columns";
+import { getOrganizationContact } from "@/lib/contact";
 
 interface OrgForm {
   name: string;
@@ -332,11 +334,14 @@ export default function EditOrganizationPage() {
 
   useEffect(() => {
     async function load() {
-      const { data: org, error: orgErr } = await supabase
-        .from("organizations")
-        .select("*, cities:city_id(id, name)")
-        .eq("id", id)
-        .single();
+      const [{ data: org, error: orgErr }, contact] = await Promise.all([
+        supabase
+          .from("organizations")
+          .select(`${ORGANIZATION_COLUMNS}, cities:city_id(id, name)`)
+          .eq("id", id)
+          .single(),
+        getOrganizationContact(supabase, id),
+      ]);
 
       if (orgErr || !org) {
         setError("Organization not found");
@@ -354,7 +359,7 @@ export default function EditOrganizationPage() {
         website: org.website ?? "",
         linkedin_url: org.linkedin_url ?? "",
         twitter_url: org.twitter_url ?? "",
-        email: org.email ?? "",
+        email: contact.email ?? "",
         country: org.country ?? "France",
         employee_range: org.employee_range ?? "",
         founded_year: org.founded_year?.toString() ?? "",
@@ -366,7 +371,7 @@ export default function EditOrganizationPage() {
 
       // City (linked via city_id)
       setCityId(org.city_id ?? null);
-      const cityRel = (org as { cities?: { id: string; name: string } | null }).cities;
+      const cityRel = (org as unknown as { cities?: { id: string; name: string } | null }).cities;
       setCityQuery(cityRel?.name ?? "");
 
       // Load profile

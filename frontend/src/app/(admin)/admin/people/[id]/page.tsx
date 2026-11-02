@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import { PERSON_COLUMNS } from "@/lib/columns";
+import { getPersonEmail } from "@/lib/contact";
 
 interface PersonForm {
   full_name: string;
@@ -47,11 +49,10 @@ export default function EditPersonPage() {
 
   useEffect(() => {
     async function load() {
-      const { data, error: err } = await supabase
-        .from("people")
-        .select("*")
-        .eq("id", id)
-        .single();
+      const [{ data, error: err }, email] = await Promise.all([
+        supabase.from("people").select(PERSON_COLUMNS).eq("id", id).single(),
+        getPersonEmail(supabase, id),
+      ]);
 
       if (err || !data) {
         setError("Person not found");
@@ -66,7 +67,7 @@ export default function EditPersonPage() {
         last_name: data.last_name ?? "",
         linkedin_url: data.linkedin_url ?? "",
         twitter_url: data.twitter_url ?? "",
-        email: data.email ?? "",
+        email: email ?? "",
         bio: data.bio ?? "",
         has_phd: data.has_phd ?? false,
         is_repeat_founder: data.is_repeat_founder ?? false,

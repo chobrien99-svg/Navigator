@@ -77,7 +77,8 @@ export interface Organization {
   description: string | null;
   short_description: string | null;
   website: string | null;
-  email: string | null;
+  /** Not returned by page queries; team only, via lib/contact.ts */
+  email?: string | null;
   linkedin_url: string | null;
   twitter_url: string | null;
   logo_url: string | null;
@@ -123,7 +124,8 @@ export interface Person {
   last_name: string | null;
   linkedin_url: string | null;
   twitter_url: string | null;
-  email: string | null;
+  /** Not returned by page queries; team only, via lib/contact.ts */
+  email?: string | null;
   bio: string | null;
   photo_url: string | null;
   has_phd: boolean;

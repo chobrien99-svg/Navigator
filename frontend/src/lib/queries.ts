@@ -1,4 +1,6 @@
 import { createServerSupabase } from "./supabase-server";
+import { ORGANIZATION_COLUMNS, PERSON_COLUMNS } from "./columns";
+import { getPersonEmail } from "./contact";
 import { fetchDashboardStats } from "./dashboard-stats";
 import type {
   Organization,
@@ -28,7 +30,7 @@ export async function getOrganizations(opts?: {
   let query = supabase
     .from("organizations")
     .select(
-      `*, cities!city_id(name, slug, region), organization_sectors(is_primary, sectors(name, slug))`
+      `${ORGANIZATION_COLUMNS}, cities!city_id(name, slug, region), organization_sectors(is_primary, sectors(name, slug))`
     )
     .order("name");
 
@@ -41,7 +43,7 @@ export async function getOrganizations(opts?: {
 
   const { data, error } = await query;
   if (error) throw error;
-  return data as Organization[];
+  return data as unknown as Organization[];
 }
 
 export async function getOrganizationBySlug(slug: string) {
@@ -49,7 +51,7 @@ export async function getOrganizationBySlug(slug: string) {
   const { data, error } = await supabase
     .from("organizations")
     .select(
-      `*,
+      `${ORGANIZATION_COLUMNS},
       cities!city_id(name, slug, region),
       secondary_city:secondary_city_id(name, slug, region),
       organization_sectors(is_primary, sectors(name, slug)),
@@ -59,7 +61,7 @@ export async function getOrganizationBySlug(slug: string) {
     .single();
 
   if (error) throw error;
-  return data as Organization;
+  return data as unknown as Organization;
 }
 
 export async function getOrganizationFunding(orgId: string) {
@@ -80,7 +82,7 @@ export async function getOrganizationPeople(orgId: string) {
   const supabase = await db();
   const { data, error } = await supabase
     .from("organization_people")
-    .select(`*, people(*)`)
+    .select(`*, people(${PERSON_COLUMNS})`)
     .eq("organization_id", orgId)
     .order("is_founder", { ascending: false });
 
@@ -151,7 +153,7 @@ export async function getInvestorPortfolio(investorId: string) {
 
 export async function getPeople(opts?: { limit?: number }) {
   const supabase = await db();
-  let query = supabase.from("people").select("*").order("full_name");
+  let query = supabase.from("people").select(PERSON_COLUMNS).order("full_name");
   if (opts?.limit) query = query.limit(opts.limit);
 
   const { data, error } = await query;
@@ -163,12 +165,17 @@ export async function getPersonBySlug(slug: string) {
   const supabase = await db();
   const { data, error } = await supabase
     .from("people")
-    .select("*")
+    .select(PERSON_COLUMNS)
     .eq("slug", slug)
     .single();
 
   if (error) throw error;
   return data as Person;
+}
+
+/** The person's email, for the Navigator team only (null for anyone else). */
+export async function getPersonContactEmail(personId: string) {
+  return getPersonEmail(await db(), personId);
 }
 
 export async function getPersonOrganizations(personId: string) {
