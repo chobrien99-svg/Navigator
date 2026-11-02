@@ -1,0 +1,21 @@
+severity,company,slug,current_siren,registry_name,incorporation_date,round_date,days_round_before_incorp,status,naf,note
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,Castalie,castalie,132192295,CASTALIE,2026-10-30,2020-06-04,2339,(not in backfill set),58.29C,
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,Bubble BD,bubble-bd,106201650,BUBBLE & CO,2026-05-27,2020-01-01,2338,verified,56.10C,also name mismatch (brand vs registry)
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,Qobra,qobra,107596769,QOBRA,2026-07-11,2020-08-15,2156,verified,47.91B,
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,TravelSquare,travelsquare,904215829,TRAVELSQUARE,2021-10-12,2020-04-12,548,ceased,58.29A,
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,Search Mobility,search-mobility,909445710,MOBILITY 23,2022-01-17,2020-12-16,397,verified,49.32Z,also name mismatch (brand vs registry)
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,TravelSquare,travelsquare,904215829,TRAVELSQUARE,2021-10-12,2020-11-17,329,ceased,58.29A,
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,Illumo Robotics,illumo-robotics,892634692,ILLUMO ROBOTICS,2021-01-01,2020-04-02,274,verified,62.01Z,
+1-IMPOSSIBLE (incorp after round year) -> fix SIREN,Renée Corner,rene-corner,898272612,RENEE CORNER,2021-04-02,2020-12-16,107,ceased,82.99Z,also name mismatch (brand vs registry)
+2-incorp months after round -> verify SIREN/date,CRYPTONOVAE,cryptonovae,890396187,CRYPTONOVAE,2020-11-02,2020-03-01,246,verified,62.01Z,
+2-incorp months after round -> verify SIREN/date,Residalya,residalya,892316696,HPA,2020-12-22,2020-05-01,235,verified,64.20Z,also name mismatch (brand vs registry)
+2-incorp months after round -> verify SIREN/date,Osée,ose,888450822,OSEE,2020-08-26,2020-05-04,114,verified,47.91B,also name mismatch (brand vs registry)
+2-incorp months after round -> verify SIREN/date,AVATAR MEDICAL,avatar-medical,885007112,AVATAR MEDICAL,2020-07-04,2020-04-03,92,verified,58.29C,
+2-incorp months after round -> verify SIREN/date,Carbon Saver,carbon-saver,890029820,CARBON SAVER,2020-09-30,2020-07-11,81,ceased,62.01Z,
+2-incorp months after round -> verify SIREN/date,Chipiron,chipiron,888822129,CHIPIRON,2020-09-07,2020-07-07,62,verified,26.60Z,
+2-incorp months after round -> verify SIREN/date,DailyLive,dailylive,882343494,DAILYLIVE,2020-03-04,2020-01-20,44,ceased,62.01Z,
+2-incorp months after round -> verify SIREN/date,LeGrosDirect,legrosdirect,884027392,LEGROSDIRECT,2020-03-30,2020-03-01,29,verified,59.11B,
+2-incorp months after round -> verify SIREN/date,LooksGoodAI,looksgoodai,882697998,LOOKSGOODAI FRANCE,2020-03-23,2020-03-03,20,verified,58.29C,
+3-LIKELY round-date placeholder (Jan 1) -> check round date,PopScreen Games,popscreen-games,888880242,POPSCREEN GAMES,2020-09-08,2020-01-01,251,verified,62.01Z,
+3-LIKELY round-date placeholder (Jan 1) -> check round date,ParaSwap,paraswap,888103678,DRIP LABS,2020-08-13,2020-01-01,225,verified,62.01Z,also name mismatch (brand vs registry)
+3-LIKELY round-date placeholder (Jan 1) -> check round date,OverSOC,oversoc,885265405,OVERSOC,2020-07-09,2020-01-01,190,verified,62.01Z,
