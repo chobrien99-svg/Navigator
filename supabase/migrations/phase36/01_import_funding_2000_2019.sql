@@ -143,15 +143,19 @@ WHERE s.announced_date IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM funding_rounds fr WHERE fr.organization_id=r.org_id AND fr.announced_date=s.announced_date AND fr.stage=s.stage::funding_stage)
 ORDER BY r.org_id, s.announced_date, s.stage, s.amount_eur DESC NULLS LAST;
 
--- Step E: investor links (match existing investor orgs by slug; dedup)
+-- Step E: investor links (match existing investor orgs by slug).
+-- DISTINCT ON (round, investor) dedups within this batch (the same investor can
+-- appear on the same deduped round via several staging rows); NOT EXISTS guards
+-- against rows already present. Match rounds on (org, date, stage) only.
 INSERT INTO funding_round_investors (id, funding_round_id, investor_id, is_lead, investor_name, created_at)
-SELECT DISTINCT uuid_generate_v4(), fr.id, inv.id, FALSE, iv.name, NOW()
+SELECT DISTINCT ON (fr.id, inv.id) uuid_generate_v4(), fr.id, inv.id, FALSE, iv.name, NOW()
 FROM stg_hist s
 JOIN _rhist r ON r.slug=s.slug
-JOIN funding_rounds fr ON fr.organization_id=r.org_id AND fr.announced_date=s.announced_date AND fr.stage=s.stage::funding_stage AND fr.source_name=s.source_name
+JOIN funding_rounds fr ON fr.organization_id=r.org_id AND fr.announced_date=s.announced_date AND fr.stage=s.stage::funding_stage
 CROSS JOIN LATERAL unnest(string_to_array(s.investors,'||')) AS iv(name)
 JOIN organizations inv ON inv.slug=lower(regexp_replace(regexp_replace(unaccent(iv.name), '[^a-zA-Z0-9\s-]', '', 'g'), '\s+', '-', 'g'))
-WHERE iv.name<>'' AND NOT EXISTS (SELECT 1 FROM funding_round_investors x WHERE x.funding_round_id=fr.id AND x.investor_id=inv.id);
+WHERE iv.name<>'' AND NOT EXISTS (SELECT 1 FROM funding_round_investors x WHERE x.funding_round_id=fr.id AND x.investor_id=inv.id)
+ORDER BY fr.id, inv.id;
 
 -- Step F: sector links (match existing sectors by slug)
 INSERT INTO organization_sectors (id, organization_id, sector_id, is_primary, created_at)
