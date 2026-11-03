@@ -290,7 +290,7 @@ export const PUBLIC_API_HEADERS = {
 
 export function parseYear(value: string | null): number | null {
   const year = value ? Number(value) : new Date().getFullYear();
-  return Number.isInteger(year) && year >= 2015 && year <= 2100 ? year : null;
+  return Number.isInteger(year) && year >= 1990 && year <= 2100 ? year : null;
 }
 
 export function publicError(message: string, status: number) {

@@ -2,19 +2,19 @@
   "data": [
     {
       "year": 2000,
-      "total_disclosed_eur": 228290000,
+      "total_disclosed_eur": 228300000,
       "round_count": 48,
       "disclosed_round_count": 30
     },
     {
       "year": 2001,
-      "total_disclosed_eur": 128130000,
+      "total_disclosed_eur": 128100000,
       "round_count": 45,
       "disclosed_round_count": 22
     },
     {
       "year": 2002,
-      "total_disclosed_eur": 114960000,
+      "total_disclosed_eur": 115000000,
       "round_count": 31,
       "disclosed_round_count": 17
     },
@@ -26,25 +26,25 @@
     },
     {
       "year": 2004,
-      "total_disclosed_eur": 191580000,
+      "total_disclosed_eur": 191600000,
       "round_count": 45,
       "disclosed_round_count": 28
     },
     {
       "year": 2005,
-      "total_disclosed_eur": 380740000,
+      "total_disclosed_eur": 380700000,
       "round_count": 97,
       "disclosed_round_count": 79
     },
     {
       "year": 2006,
-      "total_disclosed_eur": 447690000,
+      "total_disclosed_eur": 447700000,
       "round_count": 136,
       "disclosed_round_count": 93
     },
     {
       "year": 2007,
-      "total_disclosed_eur": 735330000,
+      "total_disclosed_eur": 735300000,
       "round_count": 181,
       "disclosed_round_count": 126
     },
@@ -56,19 +56,19 @@
     },
     {
       "year": 2009,
-      "total_disclosed_eur": 373440000,
+      "total_disclosed_eur": 373400000,
       "round_count": 183,
       "disclosed_round_count": 122
     },
     {
       "year": 2010,
-      "total_disclosed_eur": 765980000,
+      "total_disclosed_eur": 766000000,
       "round_count": 268,
       "disclosed_round_count": 194
     },
     {
       "year": 2011,
-      "total_disclosed_eur": 588870000,
+      "total_disclosed_eur": 588900000,
       "round_count": 311,
       "disclosed_round_count": 203
     },
@@ -80,85 +80,85 @@
     },
     {
       "year": 2013,
-      "total_disclosed_eur": 970490000,
+      "total_disclosed_eur": 970500000,
       "round_count": 514,
       "disclosed_round_count": 333
     },
     {
       "year": 2014,
-      "total_disclosed_eur": 1292310000,
+      "total_disclosed_eur": 1292300000,
       "round_count": 614,
       "disclosed_round_count": 419
     },
     {
       "year": 2015,
-      "total_disclosed_eur": 2066340000,
+      "total_disclosed_eur": 2066300000,
       "round_count": 820,
       "disclosed_round_count": 582
     },
     {
       "year": 2016,
-      "total_disclosed_eur": 2461480000,
+      "total_disclosed_eur": 2461500000,
       "round_count": 981,
       "disclosed_round_count": 732
     },
     {
       "year": 2017,
-      "total_disclosed_eur": 3103170000,
+      "total_disclosed_eur": 3103200000,
       "round_count": 1258,
       "disclosed_round_count": 954
     },
     {
       "year": 2018,
-      "total_disclosed_eur": 8249700000,
-      "round_count": 951,
+      "total_disclosed_eur": 4036300000,
+      "round_count": 950,
       "disclosed_round_count": 686
     },
     {
       "year": 2019,
-      "total_disclosed_eur": 5353020000,
+      "total_disclosed_eur": 5353000000,
       "round_count": 852,
       "disclosed_round_count": 621
     },
     {
       "year": 2020,
-      "total_disclosed_eur": 5360170000,
+      "total_disclosed_eur": 5360200000,
       "round_count": 743,
       "disclosed_round_count": 606
     },
     {
       "year": 2021,
-      "total_disclosed_eur": 11750380000,
+      "total_disclosed_eur": 11750400000,
       "round_count": 986,
       "disclosed_round_count": 762
     },
     {
       "year": 2022,
-      "total_disclosed_eur": 14708350000,
+      "total_disclosed_eur": 14708400000,
       "round_count": 1248,
       "disclosed_round_count": 1040
     },
     {
       "year": 2023,
-      "total_disclosed_eur": 8069180000,
+      "total_disclosed_eur": 8069200000,
       "round_count": 1022,
       "disclosed_round_count": 900
     },
     {
       "year": 2024,
-      "total_disclosed_eur": 7175290000,
+      "total_disclosed_eur": 7175300000,
       "round_count": 849,
       "disclosed_round_count": 716
     },
     {
       "year": 2025,
-      "total_disclosed_eur": 7874570000,
+      "total_disclosed_eur": 7874600000,
       "round_count": 642,
       "disclosed_round_count": 623
     },
     {
       "year": 2026,
-      "total_disclosed_eur": 10073660000,
+      "total_disclosed_eur": 10073700000,
       "round_count": 452,
       "disclosed_round_count": 417
     }
@@ -166,6 +166,6 @@
   "meta": {
     "from": 2000,
     "to": 2026,
-    "note": "Snapshot of Navigator per-year totals (full 2000-2026 history, taken 2026-11-02), for previews only."
+    "note": "Snapshot of Navigator per-year totals (published rounds) taken 2026-11-03, for previews only."
   }
 }

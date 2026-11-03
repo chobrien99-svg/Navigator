@@ -163,15 +163,25 @@ const STYLE = `<style>
 .ftjf table.ftjf-legend th,.ftjf table.ftjf-legend td{padding-top:8px;padding-bottom:8px}
 .ftjf table.ftjf-legend{max-width:760px}
 .ftjf table.ftjf-legend tbody th{font-weight:600;white-space:nowrap!important}
-.ftjf .ftjf-years{list-style:none;margin:8px 0 0!important;padding:0!important;display:grid;grid-template-columns:repeat(var(--ftjf-n),minmax(0,1fr));gap:0}
-.ftjf .ftjf-year{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0!important;padding:0;font-weight:400}
-.ftjf .ftjf-year-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;width:100%;height:200px;border-bottom:2px solid var(--ftjf-line-strong)}
-.ftjf .ftjf-year-val{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:6px;white-space:nowrap}
-.ftjf .ftjf-year-bar{display:block;width:min(64px,72%);min-height:2px;background:var(--ftjf-red);border-radius:4px 4px 0 0}
-.ftjf .ftjf-year-partial .ftjf-year-bar{background:var(--ftjf-s1)}
-.ftjf .ftjf-year-label{font-size:15px;font-weight:600;margin-top:8px;line-height:1.25}
-.ftjf .ftjf-year-label small{display:block;line-height:1.3;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ftjf-ink-2)}
-.ftjf .ftjf-year-n{font-size:12px;line-height:1.3;color:var(--ftjf-ink-2);margin-top:2px;padding:0 2px}
+.ftjf .ftjf-ychart{margin:6px 0 0}
+.ftjf .ftjf-yb-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ftjf-ink-2);margin:14px 0 4px!important}
+.ftjf .ftjf-ybars,.ftjf .ftjf-yaxis{list-style:none;margin:0!important;padding:0!important;display:grid;grid-template-columns:repeat(var(--ftjf-n),minmax(0,1fr));column-gap:2px}
+.ftjf .ftjf-ybars{align-items:end;padding-top:22px!important;border-bottom:2px solid var(--ftjf-line-strong)}
+.ftjf .ftjf-ybars-eur{height:190px}
+.ftjf .ftjf-ybars-n{height:120px}
+.ftjf .ftjf-yb{position:relative;height:100%;display:flex;align-items:flex-end;margin:0!important;padding:0;cursor:default}
+.ftjf .ftjf-yb-bar{display:block;width:100%;min-height:0;background:var(--ftjf-red);border-radius:2px 2px 0 0}
+.ftjf .ftjf-ybars-n .ftjf-yb-bar{background:var(--ftjf-s4)}
+.ftjf .ftjf-yb-partial .ftjf-yb-bar{background:var(--ftjf-s1)}
+.ftjf .ftjf-yb-val{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(var(--h,0%) + 4px);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;visibility:hidden;pointer-events:none;background:var(--color-background-primary,#fff);padding:0 2px;line-height:1.2;z-index:1}
+.ftjf .ftjf-yb-lab .ftjf-yb-val,.ftjf .ftjf-yb:hover .ftjf-yb-val{visibility:visible}
+.ftjf .ftjf-ybars:hover .ftjf-yb-lab:not(:hover) .ftjf-yb-val{visibility:hidden}
+.ftjf .ftjf-yb:hover .ftjf-yb-bar{filter:brightness(.85)}
+.ftjf .ftjf-yaxis li{margin:0!important;padding:6px 0 0;font-size:12px;font-weight:600;line-height:1.2;text-align:center;white-space:nowrap;overflow:visible;display:flex;justify-content:center}
+.ftjf .ftjf-ytable{margin:16px 0 0}
+.ftjf .ftjf-ytable summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--ftjf-ink)}
+.ftjf .ftjf-ytable table{max-width:520px;margin-top:8px}
+.ftjf .ftjf-ytable th,.ftjf .ftjf-ytable td{padding-top:6px;padding-bottom:6px}
 .ftjf .ftjf-note{margin-top:10px}
 .ftjf .ftjf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:600px){
@@ -182,10 +192,11 @@ const STYLE = `<style>
   .ftjf .ftjf-hide-sm{display:none}
   .ftjf .ftjf-qbar{width:35%}
   .ftjf .ftjf-stack-name{flex-basis:56px}
-  .ftjf .ftjf-year-col{height:150px}
-  .ftjf .ftjf-year-val{font-size:11px}
-  .ftjf .ftjf-year-label{font-size:13px}
-  .ftjf .ftjf-year-n{font-size:10px}
+  .ftjf .ftjf-ybars,.ftjf .ftjf-yaxis{column-gap:1px}
+  .ftjf .ftjf-ybars-eur{height:150px}
+  .ftjf .ftjf-ybars-n{height:100px}
+  .ftjf .ftjf-yb-val{font-size:11px}
+  .ftjf .ftjf-yaxis li{font-size:11px}
 }
 </style>`;
 
@@ -281,10 +292,13 @@ function renderSectorChart(summary, limit = 8) {
 }
 
 // ── Annual chart ─────────────────────────────────────────────
-// Columns of disclosed capital per year. The current year is partial, so it
-// gets a lighter tint plus a "to date" label. Years filled from
-// config.annualOverrides (e.g. a year Navigator does not cover) are marked
-// with an asterisk and their source is printed under the chart.
+// Two column charts sharing one year axis: disclosed capital raised and
+// number of funding rounds per year. With ~25+ years there is no room to
+// print every value, so only the peak year and the current year carry a
+// label; every bar shows its figures on hover, and a collapsible table holds
+// all the numbers (readable by screen readers and search engines).
+// The current year is partial: lighter tint plus "to date". Years filled
+// from config.annualOverrides get an asterisk and a printed source.
 function renderAnnualChart(annual, { currentYear, overrides = {} }) {
   if (!Array.isArray(annual) || annual.length < 2) return "";
   const years = annual.map((y) => {
@@ -293,32 +307,69 @@ function renderAnnualChart(annual, { currentYear, overrides = {} }) {
       ? { ...y, total_disclosed_eur: o.total_disclosed_eur, round_count: o.round_count ?? null, source: o.source || "FTJ" }
       : y;
   });
-  const max = Math.max(1, ...years.map((y) => y.total_disclosed_eur));
   const first = years[0].year;
-  const cols = years
+  const last = years[years.length - 1].year;
+  const hasPartial = years.some((y) => y.year === currentYear);
+  const fmtCount = (n) => Number(n).toLocaleString("en-US");
+  const tip = (y) =>
+    `${y.year}${y.year === currentYear ? " (to date)" : ""}: ${formatEur(y.total_disclosed_eur)}` +
+    (y.round_count != null ? ` raised across ${fmtCount(y.round_count)} rounds` : " raised");
+
+  function panel(title, value, format, cls) {
+    const max = Math.max(1, ...years.map((y) => value(y) ?? 0));
+    const peak = years.reduce((p, y) => ((value(y) ?? 0) > (value(p) ?? 0) ? y : p), years[0]);
+    const bars = years
+      .map((y) => {
+        const v = value(y);
+        const h = v ? Math.max(1, Math.round((v / max) * 100)) : 0;
+        const labelled = y === peak || y.year === currentYear;
+        const cl = ["ftjf-yb", y.year === currentYear ? "ftjf-yb-partial" : "", labelled ? "ftjf-yb-lab" : ""].filter(Boolean).join(" ");
+        return (
+          `<li class="${cl}" style="--h:${h}%" title="${esc(tip(y))}">` +
+          `<span class="ftjf-yb-val">${v == null ? "—" : esc(format(v))}</span>` +
+          `<span class="ftjf-yb-bar" style="height:${h}%"></span></li>`
+        );
+      })
+      .join("");
+    return (
+      `<p class="ftjf-yb-title">${esc(title)}</p>` +
+      `<ol class="ftjf-ybars ${cls}" style="--ftjf-n:${years.length}" aria-hidden="true">${bars}</ol>`
+    );
+  }
+
+  // Year axis: label the first year, every fifth year and the last year;
+  // skip a fifth-year label that would crowd the last one.
+  const axis = years
     .map((y) => {
-      const h = Math.max(1, Math.round((y.total_disclosed_eur / max) * 100));
-      const partial = y.year === currentYear;
+      const show = y.year === first || y.year === last || (y.year % 5 === 0 && last - y.year >= 3 && y.year - first >= 3);
       const mark = y.source ? "*" : "";
-      const rounds = y.round_count != null ? `${Number(y.round_count).toLocaleString("en-US")} rounds` : "";
-      const tip = `${y.year}${partial ? " (to date)" : ""}: ${formatEur(y.total_disclosed_eur)}${rounds ? ` across ${rounds}` : ""}`;
-      return (
-        `<li class="ftjf-year${partial ? " ftjf-year-partial" : ""}" title="${esc(tip)}">` +
-        `<span class="ftjf-year-col"><span class="ftjf-year-val">${esc(formatEur(y.total_disclosed_eur))}</span>` +
-        `<span class="ftjf-year-bar" style="height:${h}%" aria-hidden="true"></span></span>` +
-        `<span class="ftjf-year-label">${esc(y.year)}${mark}${partial ? `<small>to date</small>` : ""}</span>` +
-        (rounds ? `<span class="ftjf-year-n">${esc(rounds)}</span>` : "") +
-        `</li>`
-      );
+      return `<li>${show ? `${esc(y.year)}${mark}` : ""}</li>`;
     })
     .join("");
+
+  const rows = years
+    .map(
+      (y) =>
+        `<tr><th scope="row">${esc(y.year)}${y.source ? "*" : ""}${y.year === currentYear ? " <span class=\"ftjf-muted\">(to date)</span>" : ""}</th>` +
+        `<td class="ftjf-num ftjf-amt">${esc(formatEur(y.total_disclosed_eur))}</td>` +
+        `<td class="ftjf-num">${y.round_count == null ? "—" : esc(fmtCount(y.round_count))}</td></tr>`
+    )
+    .join("");
   const notes = years.filter((y) => y.source).map((y) => `*${esc(y.year)}: ${esc(y.source)}.`);
+
   return (
     `<h2 id="funding-by-year">French startup funding since ${esc(first)}</h2>` +
-    `<p class="ftjf-cap">Disclosed capital raised by French startups each year.` +
-    (years.some((y) => y.year === currentYear) ? ` ${esc(currentYear)} is year to date.` : "") +
-    `</p>` +
-    `<ol class="ftjf-years" style="--ftjf-n:${years.length}">${cols}</ol>` +
+    `<p class="ftjf-cap">Disclosed capital raised and number of funding rounds each year` +
+    (hasPartial ? `. ${esc(currentYear)} is year to date` : "") +
+    `. Hover over a bar for its figures.</p>` +
+    `<div class="ftjf-ychart">` +
+    panel("Capital raised", (y) => y.total_disclosed_eur, formatEur, "ftjf-ybars-eur") +
+    panel("Funding rounds", (y) => y.round_count, fmtCount, "ftjf-ybars-n") +
+    `<ol class="ftjf-yaxis" style="--ftjf-n:${years.length}" aria-hidden="true">${axis}</ol>` +
+    `</div>` +
+    `<details class="ftjf-ytable"><summary>See the figures for every year</summary>` +
+    `<div class="ftjf-scroll"><table><thead><tr><th scope="col">Year</th><th scope="col" class="ftjf-num">Capital raised</th><th scope="col" class="ftjf-num">Rounds</th></tr></thead>` +
+    `<tbody>${rows}</tbody></table></div></details>` +
     (notes.length ? `<p class="ftjf-cap ftjf-note">${notes.join(" ")}</p>` : "")
   );
 }
