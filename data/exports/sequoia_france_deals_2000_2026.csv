@@ -1,29 +1,34 @@
 company,date,stage,round_size_eur_m,sequoia_entity,sequoia_marked_lead
-HELICEO,2016-04,Seed,1.5,Sequoia Capital,no
-Pennylane,2021-01-07,Series A,15,Sequoia Capital,no
-Upway,2021-11-29,Seed,5,Sequoia Capital,no
-Pennylane,2022-01-31,Series B,50,Sequoia Capital,no
-Zefir,2022-02-10,Series A,20,Sequoia Capital,no
-Arkania,2022-03-14,Seed,4.28,Sequoia Capital,no
-Popsink,2022-05-23,Pre-seed,,Sequoia Arc (programme),yes
-Upway,2022-05-31,Series A,23.75,Sequoia Capital,no
-Evy,2022-10-25,Seed,6.5,Sequoia Capital,no
-Elyn,2023-03-07,Pre-seed,2.44,Sequoia Capital,no
-Gladia,2023-06-19,Seed,3.73,Sequoia Capital,no
-Dust,2023-06-27,Seed,5.06,Sequoia Capital,no
-Sourcepulse,2023-09-15,Pre-seed,0.83,Sequoia Capital,no
-Upway,2023-11-16,Series B,27.67,Sequoia Capital,no
-Osium AI,2023-11-22,Seed,2.41,Sequoia Scout (programme),no
-Guided Energy,2024-02-06,Seed,5.2,Sequoia Capital,no
-Pennylane,2024-02-07,Series C,40,Sequoia Capital,no
-Zefir,2024-04-22,Series B,11,Sequoia Capital,no
-Dust,2024-06-27,Series A,15,Sequoia Capital,no
-Pennylane,2025-04,Growth,75,Sequoia Capital,yes
-Grace,2025-04,Seed,5,Sequoia Capital,no
-Wilgo,2025-06,Pre-seed,6,Sequoia Capital,no
-Gigi,2025-09,Seed,3,Sequoia Capital,no
-Zefir,2025-09,Growth,15,Sequoia Capital,no
-Upway,2025-11,Series C,60,Sequoia Capital,no
-Arcads.ai,2025-12,Seed,14,Sequoia Scout Program (programme),no
-Pennylane,2026-01,Growth,175,Sequoia Capital,no
-Dust,2026-05,Series B,34.56,Sequoia Capital,no
+"HELICEO",2016-04-01,seed,1.50,"Sequoia Capital",no
+"Pennylane",2021-01-07,series_a,15.00,"Sequoia Capital",no
+"Upway",2021-11-29,seed,5.00,"Sequoia Capital",no
+"Osol",2021-11-30,seed,3.00,"Sequoia Capital",no
+"Pennylane",2022-01-31,series_b,50.00,"Sequoia Capital",no
+"Zefir",2022-02-10,series_a,20.00,"Sequoia Capital",no
+"Arkania",2022-03-14,seed,4.28,"Sequoia Capital",no
+"Destree",2022-04-20,series_a,,"Sequoia Capital",no
+"Popsink",2022-05-23,pre_seed,,"Sequoia Arc (programme)",yes
+"Upway",2022-05-31,series_a,23.75,"Sequoia Capital",no
+"Evy",2022-10-25,seed,6.50,"Sequoia Capital",no
+"Elyn",2023-03-07,pre_seed,2.44,"Sequoia Capital",no
+"Kovalee",2023-03-15,series_a,7.82,"Sequoia Capital",no
+"Gigi",2023-05-01,seed,3.97,"Sequoia Capital",no
+"Gladia",2023-06-19,seed,3.73,"Sequoia Capital",no
+"Dust",2023-06-27,seed,5.06,"Sequoia Capital",no
+"Sourcepulse",2023-09-15,pre_seed,0.83,"Sequoia Capital",no
+"Upway",2023-11-16,series_b,27.67,"Sequoia Capital",no
+"Osium AI",2023-11-22,seed,2.41,"Sequoia Scout (programme)",no
+"Guided Energy",2024-02-06,seed,5.20,"Sequoia Capital",no
+"Pennylane",2024-02-07,series_c,40.00,"Sequoia Capital",no
+"onibi",2024-03-01,seed,5.62,"Sequoia Capital",no
+"Zefir",2024-04-22,series_b,11.00,"Sequoia Capital",no
+"Dust",2024-06-27,series_a,15.00,"Sequoia Capital",no
+"Grace",2025-04-01,seed,5.00,"Sequoia Capital",no
+"Pennylane",2025-04-01,growth,75.00,"Sequoia Capital",yes
+"Wilgo",2025-06-01,pre_seed,6.00,"Sequoia Capital",no
+"Vocca",2025-09-01,seed,4.70,"Sequoia Scout (programme)",no
+"Zefir",2025-09-01,growth,15.00,"Sequoia Capital",no
+"Upway",2025-11-01,series_c,60.00,"Sequoia Capital",no
+"Arcads.ai",2025-12-01,seed,14.00,"Sequoia Scout Program (programme)",no
+"Pennylane",2026-01-01,growth,175.00,"Sequoia Capital",no
+"Dust",2026-05-01,series_b,34.56,"Sequoia Capital",no
