@@ -370,7 +370,10 @@ export default function EditOrganizationPage() {
         country: org.country ?? "France",
         employee_range: org.employee_range ?? "",
         founded_year: org.founded_year?.toString() ?? "",
-        total_raised_eur: org.total_raised_eur?.toString() ?? "",
+        total_raised_eur:
+          org.total_raised_eur != null
+            ? Math.round(org.total_raised_eur * AMOUNT_MULTIPLIER).toString()
+            : "",
         last_round: org.last_round ?? "",
         fundraising_status: org.fundraising_status ?? "unknown",
         technology_layer: org.technology_layer ?? "",
@@ -587,8 +590,9 @@ export default function EditOrganizationPage() {
           founded_year: form.founded_year
             ? parseInt(form.founded_year)
             : null,
+          // Stored in millions (€M), like funding_rounds.amount_eur; the form takes raw euros.
           total_raised_eur: form.total_raised_eur
-            ? parseFloat(form.total_raised_eur)
+            ? parseFloat(form.total_raised_eur) / AMOUNT_MULTIPLIER
             : null,
           last_round: form.last_round || null,
           fundraising_status: form.fundraising_status || "unknown",
@@ -1460,7 +1464,7 @@ export default function EditOrganizationPage() {
 
           <div className="grid grid-cols-2 gap-4">
             <Field label="Founded Year" value={form.founded_year} onChange={(v) => updateField("founded_year", v)} type="number" />
-            <Field label="Total Raised (EUR)" value={form.total_raised_eur} onChange={(v) => updateField("total_raised_eur", v)} type="number" />
+            <Field label="Total Raised (EUR, raw)" value={form.total_raised_eur} onChange={(v) => updateField("total_raised_eur", v)} type="number" placeholder="e.g. 5000000" />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
