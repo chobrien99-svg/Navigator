@@ -148,3 +148,11 @@ Tabular API tips:
 - Filters are single-column. Use `contains` for names and `exact` for SIREN.
 - Intermittent "Bad Gateway" errors from the MCP clear on retry.
 - ANR surnames are UPPERCASE. ESR `Raison sociale` is UPPERCASE.
+
+## INPI patent database (tested 2026-11-07, patent run)
+- **data.inpi.fr, www.inpi.fr, bases-brevets19e.inpi.fr: BLOCKED** (CONNECT 403 at the proxy).
+- **api-gateway.inpi.fr (INPI "API PI"): reachable but needs an INPI account.** Every data endpoint (e.g. `/services/apidiffusion/api/brevets/search`) returns 401 "Full authentication is required". Access means creating a free INPI account (data.inpi.fr) and logging in with username/password, which returns a session token. Not a simple API key.
+- **static.data.gouv.fr: BLOCKED**, so the bulk parquet dump "Brevets d'invention Francais 1981-2026" (dataset `6a2c13d26ca78616d3f3d51c`, 67 files, ~8 GB) cannot be read.
+- INPI "Publications de demandes de brevets 2020" (resource `eff92b8a-…`) is queryable but has **no applicant column**, so it cannot be matched to companies.
+- Fallback used: MESR "Déposants des brevets" (resource `7744f1fc-f7be-40cb-9511-2ca6e7ce5031`, updated Dec 2025), by SIREN and name. Only new hit: Qynapse (2 families), loaded in `phase38/10_…`.
+- To finish the INPI run: allow-list `data.inpi.fr` and `api-gateway.inpi.fr` (and `static.data.gouv.fr` for the bulk dump), and provide INPI account credentials, or run from an open machine.
