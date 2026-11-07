@@ -137,10 +137,46 @@ line, not the code.
 | curated_lists | yes | yes | name, then resolved | Manual CSV from press releases | For programme laureates with no open data (France 2030 calls, i-Démo) |
 | pappers (optional) | no | yes (state-aid amounts) | SIREN | Paid API | Internal use only: not for republication |
 
-**Curated lists** matter for SMRs: the France 2030 "Réacteurs nucléaires
-innovants" laureates (11 projects in phase 1, €129.8M) exist only in press
-releases. The engine reads a hand-made CSV for these, with a source URL on
-every row, and resolves each name like any other candidate.
+**Curated lists** matter for SMRs. See section 4a for France 2030.
+
+### 4a. France 2030: why it needs special handling
+
+France 2030 is not an agency. It is steered by the **SGPI** (Secrétariat
+général pour l'investissement, under the Prime Minister) and run through four
+operators, each publishing (or not) in its own way:
+
+| Operator | Scope | What is open |
+|---|---|---|
+| ANR | higher education, research, training | ANR_02 "DGPIE" dataset on data.gouv.fr (projects, partners, totals) |
+| ADEME | ecological transition | financial-aid data on data.ademe.fr (to check) |
+| Bpifrance | innovation and industry for businesses | almost nothing at company level |
+| Caisse des Dépôts | territorial and structural investment | a few lists (e.g. "Démonstrateurs ville durable") |
+
+The most complete list is the **laureates page on info.gouv.fr**
+(`/grand-dossier/france-2030/laureats`), filterable by objective. Filtered on
+"Objectif 1" (small innovative reactors) it lists **139 laureates**, against
+the 11 headline reactor projects announced in press releases. The other 128
+are the supply chain and research partners (for example Fonderie Lemer, an
+SME in Carquefou, and Université de Technologie de Troyes), and no other
+source lists them. Each entry gives only: organisation name, project name,
+category (SME, research body…), objective, town and département. Entries are
+not clickable and there is no export.
+
+**Access:** the page is protected by Cloudflare's anti-bot check, so the
+engine does **not** fetch it automatically (it won't bypass a protection the
+site has chosen). Instead:
+1. A person opens the filtered page in a browser, loads all entries, and saves
+   the page (or copies the text) to a file.
+2. The `france2030_page` reader turns that file into rows (name, project,
+   category, objective, town, département).
+3. Each row is resolved to a SIREN with the registry API using **name plus
+   town/département**, which works well even for small suppliers; research
+   bodies resolve to RNSR/Paysage records.
+4. The source (page URL plus save date) is recorded as evidence on every row.
+
+Also worth doing: requesting publication of the list as open data (through
+data.gouv.fr or from the SGPI). A machine-readable list for a €54bn programme
+doesn't exist, which is itself newsworthy.
 
 ---
 
@@ -234,6 +270,13 @@ python -m atlas publish --atlas smr       # report and PDF
 Engineering rules (from TechBio):
 - **Retries everywhere** with growing pauses; several government services drop
   connections.
+- **Save after every entity and resume.** A run must be restartable: each
+  company's result is written as soon as it's fetched, and a re-run skips what
+  is already done. (A TechBio BODACC run lost an hour of results by saving only
+  at the end.)
+- **Respect access controls.** Sites protected by anti-bot checks (e.g.
+  Cloudflare on info.gouv.fr) are handled with a manual export, never by
+  disguising automated requests.
 - **Cache** every response on disk, so a re-run doesn't re-download, and a
   report can be rebuilt offline.
 - **Schema checks:** each module checks that the columns it expects still
@@ -261,9 +304,10 @@ Engineering rules (from TechBio):
 
 ## 11. SMR test: plan and success criteria
 
-1. Write `atlas/topics/smr.yaml` (draft in section 3) and the curated CSV of
-   France 2030 "Réacteurs nucléaires innovants" laureates (phases 1 and 2,
-   with press-release URLs).
+1. Write `atlas/topics/smr.yaml` (draft in section 3). Save the info.gouv.fr
+   laureates page filtered on Objectif 1 (139 entries) and run the
+   `france2030_page` reader; add the press-release details of the 11 headline
+   "Réacteurs nucléaires innovants" projects (phases 1 and 2).
 2. Run discover. Expect: about 10–15 start-ups, CEA and other labs, EDF/Nuward,
    Framatome and other corporates, ANR and Euratom projects, nuclear-class
    patents.
@@ -271,7 +315,8 @@ Engineering rules (from TechBio):
 4. Review with the editor; load; publish the Atlas report.
 
 **The test passes if:**
-- every France 2030 SMR laureate is found and resolved to a SIREN
+- every France 2030 Objectif 1 laureate (139) is resolved to a SIREN or a
+  research-body record, with a list of any that couldn't be resolved
 - each start-up has funding, investors, programme support, patents and EU
   projects where they exist
 - research links to CEA (and other labs) appear with evidence
