@@ -1,0 +1,1817 @@
+<title>SMR Atlas Network</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: masthead + figures, full-width network with side panel, then hubs / reactor developers / projects / method */
+:root{
+ --bg:#f3f5f6; --panel:#ffffff; --fg:#14202a; --muted:#5b6b78; --line:#d5dde3;
+ --accent:#0b6bcb; --accent-soft:#dcebfa;
+ --c-startup:#0b6bcb; --c-corporate:#7a8794; --c-research:#c2410c; --c-univ:#a16207; --c-agency:#6d28d9; --c-proj:#14202a;
+ --display:"Archivo","Arial Narrow",system-ui,sans-serif; --body:"Public Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1419;--panel:#141e25;--fg:#e4ebf0;--muted:#93a3af;--line:#26343e;--accent:#5aa9ff;--accent-soft:#16304a;--c-startup:#5aa9ff;--c-corporate:#9aa7b2;--c-research:#fb8a4c;--c-univ:#e3b341;--c-agency:#b197fc;--c-proj:#e4ebf0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1419;--panel:#141e25;--fg:#e4ebf0;--muted:#93a3af;--line:#26343e;--accent:#5aa9ff;--accent-soft:#16304a;--c-startup:#5aa9ff;--c-corporate:#9aa7b2;--c-research:#fb8a4c;--c-univ:#e3b341;--c-agency:#b197fc;--c-proj:#e4ebf0;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px;display:grid;gap:36px}
+h1,h2{font-family:var(--display);font-stretch:80%;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,48px);font-weight:800;line-height:1.02}
+h2{font-size:24px;font-weight:700}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:68ch;color:var(--muted);margin:10px 0 0}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.fig{background:var(--panel);padding:14px 16px}
+.fig b{display:block;font:700 30px var(--display);font-stretch:80%;font-variant-numeric:tabular-nums}
+.fig span{font-size:13px;color:var(--muted)}
+.netbox{display:grid;grid-template-columns:minmax(0,1fr) 300px;border:1px solid var(--line);background:var(--panel)}
+@media (max-width:860px){.netbox{grid-template-columns:1fr}}
+#net{width:100%;height:620px;display:block;touch-action:none}
+@media (max-width:860px){#net{height:460px}}
+.side{border-left:1px solid var(--line);padding:16px;display:grid;gap:12px;align-content:start;min-width:0;max-height:620px;overflow:auto}
+@media (max-width:860px){.side{border-left:0;border-top:1px solid var(--line);max-height:none}}
+.side h3{margin:0;font:700 20px var(--display);font-stretch:85%}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:13px}.kv dt{color:var(--muted)}.kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 12px var(--mono);padding:3px 7px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer;border-radius:3px}
+.chip:hover,.chip:focus-visible{border-color:var(--accent);outline:none}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);padding:10px 16px;border-top:1px solid var(--line);grid-column:1/-1}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.sq{border-radius:0;transform:rotate(45deg) scale(.8)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);grid-column:1/-1}
+.controls label{font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.controls input[type=search]{font:14px var(--body);padding:6px 8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);min-width:0;width:220px;max-width:100%}
+button.tg{font:500 12px var(--mono);padding:5px 9px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+button.tg[aria-pressed=true]{background:var(--accent-soft);border-color:var(--accent)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.bars{display:grid;gap:6px;margin-top:12px}
+.bar{display:grid;grid-template-columns:150px 1fr 30px;gap:8px;align-items:center;font-size:13px}
+.bar .t{height:12px;background:var(--line)}.bar .t div{height:100%;background:var(--accent)}
+.bar .n{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.tbl{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:560px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.m{font-family:var(--mono);font-size:12px}
+.note{font-size:13px;color:var(--muted);max-width:75ch}
+.note li{margin:4px 0}
+.pill{font:500 11px var(--mono);padding:1px 6px;border-radius:9px;background:var(--accent-soft);color:var(--fg)}
+.pill.warn{background:#f5e3b5;color:#5a4300}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pill.warn{background:#4a3a0a;color:#f5e3b5}}
+:root[data-theme="dark"] .pill.warn{background:#4a3a0a;color:#f5e3b5}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+ <div class="eyebrow">France Navigator · Atlas · test topic</div>
+ <h1>Who builds France's small nuclear reactors</h1>
+ <p class="lede">The laureates of France 2030 Objectif 1 (small, innovative nuclear reactors and better waste management), linked through the projects they share. Each dot is an organisation and each diamond is a funded project. A line means the organisation is a named partner on that project.</p>
+</header>
+<section class="figs" id="figs"></section>
+<section>
+ <div class="netbox">
+  <div class="controls">
+   <label for="q">Find</label><input id="q" type="search" placeholder="Organisation or project">
+   <button class="tg" id="hideCEA" aria-pressed="false">Hide CEA &amp; CNRS</button>
+   <button class="tg" id="onlyReact" aria-pressed="false">Reactor developers only</button>
+  </div>
+  <svg id="net" role="img" aria-label="Network of France 2030 Objectif 1 laureates and their projects"></svg>
+  <aside class="side" id="side"></aside>
+  <div class="legend"><span><i style="background:var(--c-startup)"></i>Startup</span><span><i style="background:var(--c-corporate)"></i>Company</span><span><i style="background:var(--c-research)"></i>Research body</span><span><i style="background:var(--c-univ)"></i>University</span><span><i style="background:var(--c-agency)"></i>Public agency</span><span><i class="sq" style="background:var(--c-proj)"></i>Project</span><span>Dashed line = match still to be confirmed</span></div>
+ </div>
+</section>
+<section class="cols">
+ <div><h2>The hubs</h2><p class="note">Number of the 53 projects each organisation is part of. Group subsidiaries are counted separately.</p><div class="bars" id="hubs"></div></div>
+ <div><h2>Groups, not just entities</h2><p class="note">Counting each group once per project shows how concentrated the programme is.</p><div class="bars" id="groups"></div></div>
+</section>
+<section><h2>The reactor developers</h2><p class="note">Startups and new entities designing a reactor, with their France 2030 project partners and the investors already recorded in Navigator.</p><div class="tbl"><table><thead><tr><th>Developer</th><th>Project</th><th>Project partners</th><th>Investors in Navigator</th></tr></thead><tbody id="react"></tbody></table></div></section>
+<section><h2>All 53 projects</h2><div class="tbl"><table><thead><tr><th>Project</th><th>Partners</th><th>#</th></tr></thead><tbody id="projs"></tbody></table></div></section>
+<section class="note"><h2 style="color:var(--fg)">How this was built</h2><ul>
+<li>Source: the official France 2030 laureates map (info.gouv.fr), filtered on Objectif 1 and exported by hand in November 2026. The map lists 139 rows; one (Innowtech / PACH3) appears twice, so 138 unique rows.</li>
+<li>Each organisation was matched to the national company register (recherche-entreprises.api.gouv.fr) by name and département. 63 matches are high confidence, 4 are medium and 1 (Entreprise Auglans) could not be found. Medium and unconfirmed matches are drawn with dashed lines.</li>
+<li>One row (PALLAS) has a project name but no organisation; it is linked to its four named partners only.</li>
+<li>The map does not give grant amounts, project descriptions or which partner leads. Those are the next things to add.</li>
+<li>Investors come from funding rounds already in France Navigator, not from France 2030.</li>
+</ul></section>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const DATA={
+ "orgs": [
+  {
+   "id": "fonderie-lemer",
+   "name": "Fonderie Lemer",
+   "full": "Fonderie Lemer",
+   "type": "corporate",
+   "status": "active",
+   "city": "Carquefou",
+   "siren": "812250231",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "MoMA",
+    "RPN2"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "cea",
+   "name": "CEA",
+   "full": "CEA (Commissariat à l'énergie atomique et aux énergies alternatives)",
+   "type": "research_lab",
+   "status": "active",
+   "city": "Paris",
+   "siren": "775685019",
+   "note": "French public research body for nuclear and alternative energy, defence, health and digital technologies.",
+   "conf": "high",
+   "projects": [
+    "EPONA",
+    "REGAIN",
+    "RF01",
+    "NEWCLEO LFR 30 MWE",
+    "D-CLIC",
+    "TBATT - DIAMOND",
+    "MIRAGE",
+    "BLUE CAPSULE",
+    "PACH3",
+    "HEXANA",
+    "ECCLOR",
+    "SOLVERIS",
+    "ANAIS",
+    "PROVIDENCE",
+    "ETIS",
+    "SELF",
+    "KRYPTRAP",
+    "ESOP",
+    "PROXIMA",
+    "D-PERLE",
+    "RTG",
+    "STELLARIUM",
+    "PREPAC",
+    "ISAC",
+    "NAAREA FCE 2030",
+    "TARANIS",
+    "MOSARWASTE",
+    "PADAWANN",
+    "ONE"
+   ],
+   "group": "CEA",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "bernardaud",
+   "name": "Bernardaud",
+   "full": "Bernardaud",
+   "type": "corporate",
+   "status": "active",
+   "city": "Limoges",
+   "siren": "755501160",
+   "note": "Limoges porcelain manufacturer.",
+   "conf": "high",
+   "projects": [
+    "PROCER"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "trad-tests-radiations",
+   "name": "TRAD",
+   "full": "TRAD Tests & Radiations",
+   "type": "corporate",
+   "status": "active",
+   "city": "Labège",
+   "siren": "397862038",
+   "note": "Radiation testing and radiation-effects engineering.",
+   "conf": "high",
+   "projects": [
+    "SIMB-AD"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "stmicroelectronics-crolles-2",
+   "name": "STMicro Crolles",
+   "full": "STMicroelectronics (Crolles 2) SAS",
+   "type": "corporate",
+   "status": "active",
+   "city": "Crolles",
+   "siren": "399395581",
+   "note": "Semiconductor fab subsidiary of STMicroelectronics at Crolles.",
+   "conf": "high",
+   "projects": [
+    "TBATT - DIAMOND"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "laboratoire-detalons-dactivite-lea",
+   "name": "LEA",
+   "full": "Laboratoire d'Étalons d'Activité (LEA)",
+   "type": "corporate",
+   "status": "active",
+   "city": "Châtillon",
+   "siren": "538613613",
+   "note": "Producer of radioactive reference sources and standards.",
+   "conf": "high",
+   "projects": [
+    "DNAT"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "nuward",
+   "name": "Nuward",
+   "full": "Nuward",
+   "type": "corporate",
+   "status": "active",
+   "city": "Paris",
+   "siren": "922039904",
+   "note": "EDF subsidiary developing the NUWARD small modular reactor.",
+   "conf": "high",
+   "projects": [
+    "NUWARD"
+   ],
+   "group": "EDF",
+   "reactor": true,
+   "investors": null
+  },
+  {
+   "id": "rousselet-centrifugation",
+   "name": "Rousselet Centrifugation",
+   "full": "Rousselet Centrifugation",
+   "type": "corporate",
+   "status": "active",
+   "city": "Annonay",
+   "siren": "324237254",
+   "note": "Industrial centrifuge manufacturer.",
+   "conf": "high",
+   "projects": [
+    "MIRAGE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "veolia-nuclear-solutions-france",
+   "name": "Veolia Nuclear Solutions",
+   "full": "Veolia Nuclear Solutions France",
+   "type": "corporate",
+   "status": "active",
+   "city": "Chasse-sur-Rhône",
+   "siren": "500803390",
+   "note": "Nuclear decommissioning and waste-treatment arm of Veolia in France.",
+   "conf": "high",
+   "projects": [
+    "SOLVERIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "orano-demantelement",
+   "name": "Orano Démantèlement",
+   "full": "Orano Démantèlement",
+   "type": "corporate",
+   "status": "active",
+   "city": "Châtillon",
+   "siren": "305207169",
+   "note": "Orano subsidiary for nuclear dismantling.",
+   "conf": "high",
+   "projects": [
+    "MoMA",
+    "RPN2",
+    "EcoLAS",
+    "ETIS",
+    "SELF",
+    "VAL'M2 TCN",
+    "TRTAP",
+    "CIMBOOST",
+    "RTG"
+   ],
+   "group": "Orano",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "orano-recyclage",
+   "name": "Orano Recyclage",
+   "full": "Orano Recyclage",
+   "type": "corporate",
+   "status": "active",
+   "city": "Châtillon",
+   "siren": "817439599",
+   "note": "Orano subsidiary for spent-fuel recycling.",
+   "conf": "high",
+   "projects": [
+    "SMETANA",
+    "PROVIDENCE",
+    "R2DS",
+    "MRREP"
+   ],
+   "group": "Orano",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "technetics-group-france",
+   "name": "Technetics Group France",
+   "full": "Technetics Group France",
+   "type": "corporate",
+   "status": "active",
+   "city": "Saint-Étienne",
+   "siren": "400072997",
+   "note": "Maker of high-performance seals and components.",
+   "conf": "high",
+   "projects": [
+    "PACH3"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "socotec-monitoring-france",
+   "name": "Socotec Monitoring France",
+   "full": "Socotec Monitoring France",
+   "type": "corporate",
+   "status": "active",
+   "city": "Guyancourt",
+   "siren": "507759611",
+   "note": "Structural and environmental monitoring services.",
+   "conf": "high",
+   "projects": [
+    "PALLAS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "innowtech",
+   "name": "Innowtech",
+   "full": "Innowtech",
+   "type": "startup",
+   "status": "closed",
+   "city": "Les Angles",
+   "siren": "832780225",
+   "note": "Registered as ceased in the company register.",
+   "conf": "high",
+   "projects": [
+    "PACH3"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "meliad",
+   "name": "Meliad",
+   "full": "Meliad",
+   "type": "corporate",
+   "status": "active",
+   "city": "Les Sorinières",
+   "siren": "510035298",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "EcoLAS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "orano-support",
+   "name": "Orano Support",
+   "full": "Orano Support",
+   "type": "corporate",
+   "status": "active",
+   "city": "Châtillon",
+   "siren": "421356593",
+   "note": "Orano group support and R&D entity.",
+   "conf": "high",
+   "projects": [
+    "EPONA",
+    "REGAIN",
+    "PORTHOS",
+    "PROXIMA",
+    "STELLARIUM",
+    "ISAC",
+    "MOSARWASTE"
+   ],
+   "group": "Orano",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "toulouse-inp",
+   "name": "Toulouse INP",
+   "full": "Toulouse INP (Institut national polytechnique de Toulouse)",
+   "type": "university",
+   "status": "active",
+   "city": "Toulouse",
+   "siren": "193113818",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "D-CLIC",
+    "MIRAGE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "orano-chimie-enrichissement",
+   "name": "Orano Chimie-Enrichissement",
+   "full": "Orano Chimie-Enrichissement",
+   "type": "corporate",
+   "status": "active",
+   "city": "Châtillon",
+   "siren": "817439557",
+   "note": "Orano subsidiary for uranium conversion and enrichment.",
+   "conf": "high",
+   "projects": [
+    "MAEVA2"
+   ],
+   "group": "Orano",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "orano-ds-demantelement-et-services",
+   "name": "Orano DS",
+   "full": "Orano DS – Démantèlement et Services",
+   "type": "corporate",
+   "status": "active",
+   "city": "Massy",
+   "siren": "672008489",
+   "note": "Orano subsidiary for dismantling and nuclear services.",
+   "conf": "high",
+   "projects": [
+    "Dream scanner",
+    "D-PERLE"
+   ],
+   "group": "Orano",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "universite-de-limoges",
+   "name": "Université de Limoges",
+   "full": "Université de Limoges",
+   "type": "university",
+   "status": "active",
+   "city": "Limoges",
+   "siren": "198706699",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "TRTAP"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "irsn",
+   "name": "IRSN",
+   "full": "IRSN (Institut de radioprotection et de sûreté nucléaire)",
+   "type": "research_lab",
+   "status": "active",
+   "city": "Fontenay-aux-Roses",
+   "siren": "440546018",
+   "note": "Public expert body on nuclear and radiation risk; merged with ASN into ASNR on 1 January 2025.",
+   "conf": "high",
+   "projects": [
+    "PALLAS"
+   ],
+   "group": "ASNR",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "asnr",
+   "name": "ASNR",
+   "full": "ASNR (Autorité de sûreté nucléaire et de radioprotection)",
+   "type": "public_agency",
+   "status": "active",
+   "city": "Montrouge",
+   "siren": "130001803",
+   "note": "French nuclear safety and radiation protection authority, formed on 1 January 2025 from the merger of ASN and IRSN.",
+   "conf": "high",
+   "projects": [
+    "Passive-safety research platform (ASNR)"
+   ],
+   "group": "ASNR",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "institut-mines-telecom",
+   "name": "IMT",
+   "full": "Institut Mines-Télécom (IMT)",
+   "type": "university",
+   "status": "active",
+   "city": "Palaiseau",
+   "siren": "180092025",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "MAEVA2"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "framatome",
+   "name": "Framatome",
+   "full": "Framatome",
+   "type": "corporate",
+   "status": "active",
+   "city": "Courbevoie",
+   "siren": "379041395",
+   "note": "Nuclear reactor equipment and fuel company, majority-owned by EDF.",
+   "conf": "high",
+   "projects": [
+    "REGAIN",
+    "ISAC",
+    "MRREP"
+   ],
+   "group": "EDF",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "oakridge-orleans",
+   "name": "Oakridge (Orléans)",
+   "full": "Oakridge (Orléans)",
+   "type": "corporate",
+   "status": "active",
+   "city": "Orléans",
+   "siren": "443647144",
+   "note": "Engineering firm in Orléans (not the US national laboratory).",
+   "conf": "high",
+   "projects": [
+    "PROXIMA"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "aix-marseille-universite",
+   "name": "Aix-Marseille Université",
+   "full": "Aix-Marseille Université",
+   "type": "university",
+   "status": "active",
+   "city": "Marseille",
+   "siren": "130015332",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "MIRAGE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "w-ce-process",
+   "name": "W CE Process",
+   "full": "W CE Process",
+   "type": "corporate",
+   "status": "active",
+   "city": "Bordeaux",
+   "siren": "902610443",
+   "note": "Registered as W CE PROCESS (Process and Wine).",
+   "conf": "high",
+   "projects": [
+    "TRTAP"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "egis-nucleaire",
+   "name": "Egis Nucléaire",
+   "full": "Egis Nucléaire",
+   "type": "corporate",
+   "status": "active",
+   "city": "Montreuil",
+   "siren": "652030677",
+   "note": "Nuclear engineering arm of Egis. France 2030 lists it as EGIS INDUSTRIES.",
+   "conf": "medium",
+   "projects": [
+    "BLUE CAPSULE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "universite-de-technologie-de-troyes",
+   "name": "UTT",
+   "full": "Université de technologie de Troyes (UTT)",
+   "type": "university",
+   "status": "active",
+   "city": "Troyes",
+   "siren": "191010602",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "Dream scanner"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "atlanchim-pharma",
+   "name": "Atlanchim Pharma",
+   "full": "Atlanchim Pharma",
+   "type": "corporate",
+   "status": "active",
+   "city": "Saint-Herblain",
+   "siren": "504005612",
+   "note": "Contract chemistry research.",
+   "conf": "high",
+   "projects": [
+    "ESOP"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "cyclife-france",
+   "name": "Cyclife France",
+   "full": "Cyclife France",
+   "type": "corporate",
+   "status": "active",
+   "city": "Codolet",
+   "siren": "380303107",
+   "note": "EDF group company for nuclear dismantling and waste treatment.",
+   "conf": "medium",
+   "projects": [
+    "ECCLOR"
+   ],
+   "group": "EDF",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "waste2glass",
+   "name": "Waste2Glass",
+   "full": "Waste2Glass",
+   "type": "startup",
+   "status": "active",
+   "city": "Limay",
+   "siren": "909910630",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "RAD2GLASS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "lermat",
+   "name": "LERMAT",
+   "full": "LERMAT (Laboratoire Études Recherche Matériaux)",
+   "type": "corporate",
+   "status": "active",
+   "city": "Arles",
+   "siren": "344297775",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "CIMBOOST"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "eci-meca",
+   "name": "ECI Meca",
+   "full": "ECI Meca",
+   "type": "corporate",
+   "status": "closed",
+   "city": "Vaison-la-Romaine",
+   "siren": "403523525",
+   "note": "Registered as ceased in the company register.",
+   "conf": "high",
+   "projects": [
+    "SOLVERIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "genf",
+   "name": "GENF",
+   "full": "GENF",
+   "type": "startup",
+   "status": "active",
+   "city": "Élancourt",
+   "siren": "913080941",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "TARANIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "thorizon",
+   "name": "Thorizon",
+   "full": "Thorizon",
+   "type": "startup",
+   "status": "active",
+   "city": "Lyon",
+   "siren": "950900720",
+   "note": "French entity of Thorizon, a molten-salt reactor developer.",
+   "conf": "high",
+   "projects": [
+    "PROXIMA"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": null
+  },
+  {
+   "id": "universite-de-rouen-normandie",
+   "name": "Université de Rouen Normandie",
+   "full": "Université de Rouen Normandie",
+   "type": "university",
+   "status": "active",
+   "city": "Mont-Saint-Aignan",
+   "siren": "197619042",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "PADAWANN"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "ecm-technologies",
+   "name": "ECM Technologies",
+   "full": "ECM Technologies",
+   "type": "corporate",
+   "status": "active",
+   "city": "Grenoble",
+   "siren": "478969173",
+   "note": "Industrial furnace maker.",
+   "conf": "high",
+   "projects": [
+    "PROVIDENCE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "curium",
+   "name": "Curium",
+   "full": "Curium",
+   "type": "corporate",
+   "status": "active",
+   "city": "Montagny",
+   "siren": "398750653",
+   "note": "Nuclear medicine and radiopharmaceuticals.",
+   "conf": "high",
+   "projects": [
+    "RPN2",
+    "PACH3"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "assystem-engineering-and-operation-services",
+   "name": "Assystem E&OS",
+   "full": "Assystem Engineering and Operation Services",
+   "type": "corporate",
+   "status": "active",
+   "city": "Courbevoie",
+   "siren": "444159164",
+   "note": "Engineering subsidiary of Assystem, active in nuclear.",
+   "conf": "high",
+   "projects": [
+    "SOLVERIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "centrale-lille-institut",
+   "name": "Centrale Lille Institut",
+   "full": "Centrale Lille Institut",
+   "type": "university",
+   "status": "active",
+   "city": "Villeneuve-d'Ascq",
+   "siren": "195903497",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "PROXIMA"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "brgm",
+   "name": "BRGM",
+   "full": "BRGM",
+   "type": "research_lab",
+   "status": "active",
+   "city": "Orléans",
+   "siren": "582056149",
+   "note": "France's geological survey (Bureau de recherches géologiques et minières).",
+   "conf": "high",
+   "projects": [
+    "SOLVERIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "universite-gustave-eiffel",
+   "name": "Université Gustave Eiffel",
+   "full": "Université Gustave Eiffel",
+   "type": "university",
+   "status": "active",
+   "city": "Champs-sur-Marne",
+   "siren": "130026123",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "PALLAS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "naarea",
+   "name": "Naarea",
+   "full": "Naarea",
+   "type": "startup",
+   "status": "active",
+   "city": "Nanterre",
+   "siren": "882949506",
+   "note": "Developer of a molten-salt micro-reactor.",
+   "conf": "high",
+   "projects": [
+    "NAAREA FCE 2030"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": null
+  },
+  {
+   "id": "rhodia-operations",
+   "name": "Rhodia Operations",
+   "full": "Rhodia Operations",
+   "type": "corporate",
+   "status": "active",
+   "city": "Lyon",
+   "siren": "622037083",
+   "note": "Chemicals company (Solvay / Syensqo group).",
+   "conf": "high",
+   "projects": [
+    "PORTHOS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "itech-instruments",
+   "name": "iTech Instruments",
+   "full": "iTech Instruments",
+   "type": "corporate",
+   "status": "active",
+   "city": "Vitrolles",
+   "siren": "488453283",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "DEMWASTE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "nuvia-protection",
+   "name": "Nuvia Protection",
+   "full": "Nuvia Protection",
+   "type": "corporate",
+   "status": "active",
+   "city": "Morestel",
+   "siren": "918349796",
+   "note": "Registered as NUVIA PROTECTION SERVICES. Nuclear protection services (Vinci group).",
+   "conf": "medium",
+   "projects": [
+    "TREFLE2"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "universite-de-lille",
+   "name": "Université de Lille",
+   "full": "Université de Lille",
+   "type": "university",
+   "status": "active",
+   "city": "Lille",
+   "siren": "130029754",
+   "note": "",
+   "conf": "high",
+   "projects": [
+    "PROXIMA"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "entreprise-auglans",
+   "name": "Entreprise Auglans",
+   "full": "Entreprise Auglans",
+   "type": "corporate",
+   "status": "active",
+   "city": "Millau",
+   "siren": null,
+   "note": "Not found in the company register. France 2030 lists the town as Millau (69); Millau is in Aveyron (12). Needs review.",
+   "conf": "review",
+   "projects": [
+    "PALLAS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "cnrs",
+   "name": "CNRS",
+   "full": "CNRS",
+   "type": "research_lab",
+   "status": "active",
+   "city": "Paris",
+   "siren": "180089013",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "REGAIN",
+    "SIMB-AD",
+    "D-CLIC",
+    "MIRAGE",
+    "PALLAS",
+    "PORTHOS",
+    "SELF",
+    "KRYPTRAP",
+    "MAEVA2",
+    "PREPAC",
+    "ISAC",
+    "SPATIAL",
+    "TARANIS",
+    "MOSARWASTE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "edf",
+   "name": "EDF",
+   "full": "EDF",
+   "type": "corporate",
+   "status": "active",
+   "city": "Paris",
+   "siren": "552081317",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "NUWARD",
+    "SMETANA",
+    "VAL'M2 TCN",
+    "ISAC",
+    "MRREP"
+   ],
+   "group": "EDF",
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "stellaria",
+   "name": "Stellaria",
+   "full": "Stellaria",
+   "type": "startup",
+   "status": "active",
+   "city": "Grenoble",
+   "siren": "952843282",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "STELLARIUM"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "Audacia, CEA Investissement, France 2030, Orano, Schneider Electric, Supernova Invest"
+  },
+  {
+   "id": "blue-capsule-technology",
+   "name": "Blue Capsule",
+   "full": "Blue Capsule",
+   "type": "startup",
+   "status": "active",
+   "city": "Aix-en-Provence",
+   "siren": "921792404",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "BLUE CAPSULE"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "Audacia, CEA Investissement, EREN Groupe, Exergon"
+  },
+  {
+   "id": "amplitude-systemes",
+   "name": "Amplitude",
+   "full": "Amplitude",
+   "type": "corporate",
+   "status": "active",
+   "city": "Pessac",
+   "siren": "441414117",
+   "note": "Already in Navigator.",
+   "conf": "medium",
+   "projects": [
+    "EPONA"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": "Auriga Partners, Cathay Capital"
+  },
+  {
+   "id": "calogena",
+   "name": "Calogena",
+   "full": "Calogena",
+   "type": "startup",
+   "status": "active",
+   "city": "",
+   "siren": "908713043",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "CALOGENA"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "Banque des Territoires, France 2030, Groupe Gorgé, SNEF"
+  },
+  {
+   "id": "cesigma-signals-systems",
+   "name": "Cesigma",
+   "full": "Cesigma",
+   "type": "corporate",
+   "status": "active",
+   "city": "",
+   "siren": "413591215",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "ANAIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "damavan-imaging",
+   "name": "Damavan Imaging",
+   "full": "Damavan Imaging",
+   "type": "startup",
+   "status": "active",
+   "city": "Troyes",
+   "siren": "808383632",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "Dream scanner"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": "Business angels"
+  },
+  {
+   "id": "demboost",
+   "name": "DEMBoost",
+   "full": "DEMBoost",
+   "type": "startup",
+   "status": "active",
+   "city": "Saint-Denis",
+   "siren": "845055938",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "DEMWASTE"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "diamfab",
+   "name": "DiamFab",
+   "full": "DiamFab",
+   "type": "startup",
+   "status": "active",
+   "city": "Grenoble",
+   "siren": "849450705",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "TBATT - DIAMOND"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": "Asterion Ventures, Better Angle, Bpifrance, Grenoble-Alpes Métropole, Hello Tomorrow, Kreaxi"
+  },
+  {
+   "id": "hexana",
+   "name": "Hexana",
+   "full": "Hexana",
+   "type": "startup",
+   "status": "active",
+   "city": "Aix-en-Provence",
+   "siren": "953636149",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "HEXANA"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "Blast Club, Bpifrance, CEA Investissement, Eren Industries, Exergon, France 2030, Groupe M, Région Sud Investissement"
+  },
+  {
+   "id": "jimmy-energy",
+   "name": "Jimmy Energy",
+   "full": "Jimmy Energy",
+   "type": "startup",
+   "status": "active",
+   "city": "",
+   "siren": "892884099",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "GTA"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "ADEME Investissement, Crédit Mutuel Impact, France 2030, Serena"
+  },
+  {
+   "id": "newcleo",
+   "name": "newcleo",
+   "full": "newcleo",
+   "type": "startup",
+   "status": "active",
+   "city": "Paris",
+   "siren": "912522240",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "NEWCLEO LFR 30 MWE"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "Azimut, CERN Pension Fund, Danieli, EXOR, Kairos, NextChem, Walter Tosto and others"
+  },
+  {
+   "id": "otrera",
+   "name": "Otrera",
+   "full": "Otrera",
+   "type": "startup",
+   "status": "active",
+   "city": "Aix-en-Provence",
+   "siren": "924880933",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "ONE"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "CEA Investissement, EDF, Ekium, Exergon, Fortil, France 2030, Groupe ADF, Groupe REEL, SNEF, Ingerop, NGE, Normandie Participations, Onet Technologies"
+  },
+  {
+   "id": "probayes",
+   "name": "Probayes",
+   "full": "Probayes",
+   "type": "corporate",
+   "status": "active",
+   "city": "",
+   "siren": "450538830",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "ETIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "renaissance-fusion",
+   "name": "Renaissance Fusion",
+   "full": "Renaissance Fusion",
+   "type": "startup",
+   "status": "active",
+   "city": "Fontaine",
+   "siren": "885269332",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "RF01"
+   ],
+   "group": null,
+   "reactor": true,
+   "investors": "Crédit Mutuel, HCVC, Lowercarbon Capital, Norrsken VC, Positron Ventures, Unruly Capital"
+  },
+  {
+   "id": "sileane",
+   "name": "Siléane",
+   "full": "Siléane",
+   "type": "corporate",
+   "status": "active",
+   "city": "Saint-Étienne",
+   "siren": "442004461",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "R2DS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": "European Innovation Council, Garibaldi Participations, Siparex"
+  },
+  {
+   "id": "triskem-international",
+   "name": "TrisKem",
+   "full": "TrisKem",
+   "type": "corporate",
+   "status": "active",
+   "city": "",
+   "siren": "493848972",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "RTG"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  },
+  {
+   "id": "tx-4000",
+   "name": "Iumtek (TX 4000)",
+   "full": "Iumtek (TX 4000)",
+   "type": "startup",
+   "status": "active",
+   "city": "Orsay",
+   "siren": "832462162",
+   "note": "Already in Navigator.",
+   "conf": "high",
+   "projects": [
+    "MoMA",
+    "ETIS"
+   ],
+   "group": null,
+   "reactor": false,
+   "investors": null
+  }
+ ],
+ "projects": [
+  {
+   "name": "MoMA",
+   "partners": [
+    "fonderie-lemer",
+    "orano-demantelement",
+    "tx-4000"
+   ]
+  },
+  {
+   "name": "Dream scanner",
+   "partners": [
+    "damavan-imaging",
+    "orano-ds-demantelement-et-services",
+    "universite-de-technologie-de-troyes"
+   ]
+  },
+  {
+   "name": "EPONA",
+   "partners": [
+    "cea",
+    "amplitude-systemes",
+    "orano-support"
+   ]
+  },
+  {
+   "name": "REGAIN",
+   "partners": [
+    "cea",
+    "orano-support",
+    "framatome",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "RPN2",
+   "partners": [
+    "fonderie-lemer",
+    "orano-demantelement",
+    "curium"
+   ]
+  },
+  {
+   "name": "RF01",
+   "partners": [
+    "renaissance-fusion",
+    "cea"
+   ]
+  },
+  {
+   "name": "NEWCLEO LFR 30 MWE",
+   "partners": [
+    "cea",
+    "newcleo"
+   ]
+  },
+  {
+   "name": "PROCER",
+   "partners": [
+    "bernardaud"
+   ]
+  },
+  {
+   "name": "SIMB-AD",
+   "partners": [
+    "trad-tests-radiations",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "D-CLIC",
+   "partners": [
+    "cea",
+    "toulouse-inp",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "TBATT - DIAMOND",
+   "partners": [
+    "stmicroelectronics-crolles-2",
+    "cea",
+    "diamfab"
+   ]
+  },
+  {
+   "name": "DNAT",
+   "partners": [
+    "laboratoire-detalons-dactivite-lea"
+   ]
+  },
+  {
+   "name": "DEMWASTE",
+   "partners": [
+    "demboost",
+    "itech-instruments"
+   ]
+  },
+  {
+   "name": "NUWARD",
+   "partners": [
+    "nuward",
+    "edf"
+   ]
+  },
+  {
+   "name": "MIRAGE",
+   "partners": [
+    "rousselet-centrifugation",
+    "cnrs",
+    "cea",
+    "aix-marseille-universite",
+    "toulouse-inp"
+   ]
+  },
+  {
+   "name": "BLUE CAPSULE",
+   "partners": [
+    "cea",
+    "egis-nucleaire",
+    "blue-capsule-technology"
+   ]
+  },
+  {
+   "name": "PACH3",
+   "partners": [
+    "cea",
+    "technetics-group-france",
+    "innowtech",
+    "curium"
+   ]
+  },
+  {
+   "name": "HEXANA",
+   "partners": [
+    "cea",
+    "hexana"
+   ]
+  },
+  {
+   "name": "ECCLOR",
+   "partners": [
+    "cea",
+    "cyclife-france"
+   ]
+  },
+  {
+   "name": "SOLVERIS",
+   "partners": [
+    "veolia-nuclear-solutions-france",
+    "cea",
+    "eci-meca",
+    "assystem-engineering-and-operation-services",
+    "brgm"
+   ]
+  },
+  {
+   "name": "SMETANA",
+   "partners": [
+    "orano-recyclage",
+    "edf"
+   ]
+  },
+  {
+   "name": "ANAIS",
+   "partners": [
+    "cea",
+    "cesigma-signals-systems"
+   ]
+  },
+  {
+   "name": "PROVIDENCE",
+   "partners": [
+    "cea",
+    "orano-recyclage",
+    "ecm-technologies"
+   ]
+  },
+  {
+   "name": "PALLAS",
+   "partners": [
+    "socotec-monitoring-france",
+    "entreprise-auglans",
+    "irsn",
+    "universite-gustave-eiffel",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "EcoLAS",
+   "partners": [
+    "meliad",
+    "orano-demantelement"
+   ]
+  },
+  {
+   "name": "PORTHOS",
+   "partners": [
+    "orano-support",
+    "cnrs",
+    "rhodia-operations"
+   ]
+  },
+  {
+   "name": "ETIS",
+   "partners": [
+    "orano-demantelement",
+    "tx-4000",
+    "probayes",
+    "cea"
+   ]
+  },
+  {
+   "name": "SELF",
+   "partners": [
+    "cea",
+    "orano-demantelement",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "VAL'M2 TCN",
+   "partners": [
+    "edf",
+    "orano-demantelement"
+   ]
+  },
+  {
+   "name": "KRYPTRAP",
+   "partners": [
+    "cea",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "R2DS",
+   "partners": [
+    "orano-recyclage",
+    "sileane"
+   ]
+  },
+  {
+   "name": "ESOP",
+   "partners": [
+    "cea",
+    "atlanchim-pharma"
+   ]
+  },
+  {
+   "name": "PROXIMA",
+   "partners": [
+    "orano-support",
+    "oakridge-orleans",
+    "cea",
+    "thorizon",
+    "centrale-lille-institut",
+    "universite-de-lille"
+   ]
+  },
+  {
+   "name": "MAEVA2",
+   "partners": [
+    "orano-chimie-enrichissement",
+    "institut-mines-telecom",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "TRTAP",
+   "partners": [
+    "universite-de-limoges",
+    "w-ce-process",
+    "orano-demantelement"
+   ]
+  },
+  {
+   "name": "CIMBOOST",
+   "partners": [
+    "orano-demantelement",
+    "lermat"
+   ]
+  },
+  {
+   "name": "D-PERLE",
+   "partners": [
+    "orano-ds-demantelement-et-services",
+    "cea"
+   ]
+  },
+  {
+   "name": "RTG",
+   "partners": [
+    "triskem-international",
+    "cea",
+    "orano-demantelement"
+   ]
+  },
+  {
+   "name": "Passive-safety research platform (ASNR)",
+   "partners": [
+    "asnr"
+   ]
+  },
+  {
+   "name": "STELLARIUM",
+   "partners": [
+    "stellaria",
+    "orano-support",
+    "cea"
+   ]
+  },
+  {
+   "name": "PREPAC",
+   "partners": [
+    "cea",
+    "cnrs"
+   ]
+  },
+  {
+   "name": "ISAC",
+   "partners": [
+    "framatome",
+    "edf",
+    "cea",
+    "cnrs",
+    "orano-support"
+   ]
+  },
+  {
+   "name": "MRREP",
+   "partners": [
+    "orano-recyclage",
+    "edf",
+    "framatome"
+   ]
+  },
+  {
+   "name": "NAAREA FCE 2030",
+   "partners": [
+    "cea",
+    "naarea"
+   ]
+  },
+  {
+   "name": "SPATIAL",
+   "partners": [
+    "cnrs"
+   ]
+  },
+  {
+   "name": "RAD2GLASS",
+   "partners": [
+    "waste2glass"
+   ]
+  },
+  {
+   "name": "TARANIS",
+   "partners": [
+    "genf",
+    "cnrs",
+    "cea"
+   ]
+  },
+  {
+   "name": "MOSARWASTE",
+   "partners": [
+    "cea",
+    "cnrs",
+    "orano-support"
+   ]
+  },
+  {
+   "name": "PADAWANN",
+   "partners": [
+    "universite-de-rouen-normandie",
+    "cea"
+   ]
+  },
+  {
+   "name": "ONE",
+   "partners": [
+    "cea",
+    "otrera"
+   ]
+  },
+  {
+   "name": "CALOGENA",
+   "partners": [
+    "calogena"
+   ]
+  },
+  {
+   "name": "TREFLE2",
+   "partners": [
+    "nuvia-protection"
+   ]
+  },
+  {
+   "name": "GTA",
+   "partners": [
+    "jimmy-energy"
+   ]
+  }
+ ]
+};
+const O=Object.fromEntries(DATA.orgs.map(o=>[o.id,o]));
+const P=DATA.projects;
+const colorVar={startup:'--c-startup',corporate:'--c-corporate',research_lab:'--c-research',university:'--c-univ',public_agency:'--c-agency'};
+const typeLabel={startup:'Startup',corporate:'Company',research_lab:'Research body',university:'University',public_agency:'Public agency'};
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// figures
+const startups=DATA.orgs.filter(o=>o.type==='startup').length;
+const cea=O.cea.projects.length;
+document.getElementById('figs').innerHTML=[
+ [DATA.orgs.length,'organisations'],[P.length,'projects'],[P.reduce((a,p)=>a+p.partners.length,0),'partner links'],
+ [Math.round(cea/P.length*100)+'%','of projects include CEA'],[startups,'startups']].map(([b,s])=>`<div class="fig"><b>${b}</b><span>${s}</span></div>`).join('');
+// hubs
+const hub=DATA.orgs.map(o=>[o.name,o.projects.length]).sort((a,b)=>b[1]-a[1]).slice(0,10);
+const mx=hub[0][1];
+document.getElementById('hubs').innerHTML=hub.map(([n,v])=>`<div class="bar"><span>${esc(n)}</span><div class="t"><div style="width:${v/mx*100}%"></div></div><span class="n">${v}</span></div>`).join('');
+const gname=o=>o.group||o.name;
+const gc={};P.forEach(p=>new Set(p.partners.map(s=>gname(O[s]))).forEach(g=>gc[g]=(gc[g]||0)+1));
+const gl=Object.entries(gc).sort((a,b)=>b[1]-a[1]).slice(0,6);
+document.getElementById('groups').innerHTML=gl.map(([n,v])=>`<div class="bar"><span>${esc(n)}${n==='Orano'?' (5 entities)':n==='EDF'?' (incl. Framatome, Nuward, Cyclife)':''}</span><div class="t"><div style="width:${v/gl[0][1]*100}%"></div></div><span class="n">${v}</span></div>`).join('');
+// reactor table
+document.getElementById('react').innerHTML=DATA.orgs.filter(o=>o.reactor).sort((a,b)=>a.name.localeCompare(b.name)).map(o=>{
+ const pr=P.filter(p=>p.partners.includes(o.id));
+ return `<tr><td><b>${esc(o.name)}</b><br><span class="note">${esc(o.city||'')}</span></td><td class="m">${pr.map(p=>esc(p.name)).join('<br>')}</td><td>${pr.map(p=>p.partners.filter(s=>s!==o.id).map(s=>esc(O[s].name)).join(', ')||'<span class="note">none named</span>').join('<br>')}</td><td>${o.investors?esc(o.investors):'<span class="note">none recorded</span>'}</td></tr>`}).join('');
+document.getElementById('projs').innerHTML=[...P].sort((a,b)=>b.partners.length-a.partners.length||a.name.localeCompare(b.name)).map(p=>`<tr><td class="m">${esc(p.name)}</td><td>${p.partners.map(s=>`${esc(O[s].name)}${O[s].conf!=='high'?' <span class="pill warn">'+(O[s].conf==='review'?'unconfirmed':'medium')+'</span>':''}`).join(', ')}</td><td class="m">${p.partners.length}</td></tr>`).join('');
+// network
+const svg=d3.select('#net');
+let W=svg.node().clientWidth,H=svg.node().clientHeight;
+const nodes=[...DATA.orgs.map(o=>({id:o.id,kind:'org',o,r:5+Math.sqrt(o.projects.length)*3.2})),...P.map((p,i)=>({id:'p:'+p.name,kind:'proj',p,r:4}))];
+const N=Object.fromEntries(nodes.map(n=>[n.id,n]));
+const links=P.flatMap(p=>p.partners.map(s=>({source:'p:'+p.name,target:s,weak:O[s].conf!=='high'})));
+const g=svg.append('g');
+svg.call(d3.zoom().scaleExtent([.4,4]).on('zoom',e=>g.attr('transform',e.transform)));
+const L=g.append('g').selectAll('line').data(links).join('line').attr('stroke-width',1).attr('stroke-dasharray',d=>d.weak?'3 3':null);
+const nd=g.append('g').selectAll('g').data(nodes).join('g').attr('tabindex',0).attr('role','button').attr('aria-label',d=>d.kind==='org'?d.o.name:'Project '+d.p.name).style('cursor','pointer');
+nd.filter(d=>d.kind==='org').append('circle').attr('r',d=>d.r);
+nd.filter(d=>d.kind==='proj').append('rect').attr('width',7).attr('height',7).attr('x',-3.5).attr('y',-3.5).attr('transform','rotate(45)');
+nd.filter(d=>d.kind==='org'&&(d.o.projects.length>=3||d.o.reactor)).append('text').attr('x',d=>d.r+3).attr('y',4).text(d=>d.o.name).style('font','600 11px var(--body)').attr('paint-order','stroke').attr('stroke-width',3).attr('stroke-linejoin','round');
+function paint(){
+ L.attr('stroke',css('--line'));
+ nd.select('circle').attr('fill',d=>css(colorVar[d.o.type])).attr('stroke',css('--panel')).attr('stroke-width',1.5);
+ nd.select('rect').attr('fill',css('--c-proj'));
+ nd.select('text').attr('fill',css('--fg')).attr('stroke',css('--panel'));
+}
+paint();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',paint);new MutationObserver(paint).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+const sim=d3.forceSimulation(nodes).force('link',d3.forceLink(links).id(d=>d.id).distance(d=>28).strength(.7)).force('charge',d3.forceManyBody().strength(d=>d.kind==='org'?-70-d.r*6:-30)).force('center',d3.forceCenter(W/2,H/2)).force('x',d3.forceX(W/2).strength(.04)).force('y',d3.forceY(H/2).strength(.06)).force('col',d3.forceCollide(d=>d.r+2));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce){sim.stop();for(let i=0;i<300;i++)sim.tick();}
+function tick(){nodes.forEach(d=>{const m=d.r+6;d.x=Math.max(m,Math.min(W-m-(d.kind==='org'&&d.o.projects.length>=3?70:0),d.x));d.y=Math.max(m,Math.min(H-m,d.y))});L.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);nd.attr('transform',d=>`translate(${d.x},${d.y})`)}
+sim.on('tick',tick);tick();
+nd.call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+const side=document.getElementById('side');
+function nbrs(id){const s=new Set([id]);links.forEach(l=>{if(l.source.id===id)s.add(l.target.id);if(l.target.id===id)s.add(l.source.id)});return s}
+function focus(id){
+ if(!id){nd.style('opacity',null);L.style('opacity',null);intro();return}
+ const s=nbrs(id);const s2=new Set(s);if(N[id].kind==='org')s.forEach(x=>nbrs(x).forEach(y=>s2.add(y)));
+ nd.style('opacity',d=>s.has(d.id)?1:s2.has(d.id)?.45:.1);L.style('opacity',l=>(l.source.id===id||l.target.id===id)?1:(s.has(l.source.id)&&s2.has(l.target.id))?.35:.05);
+ const n=N[id];
+ if(n.kind==='org'){const o=n.o;const co=new Set();P.filter(p=>p.partners.includes(o.id)).forEach(p=>p.partners.forEach(x=>x!==o.id&&co.add(x)));
+  side.innerHTML=`<div class="eyebrow">${typeLabel[o.type]}${o.status==='closed'?' · ceased':''}</div><h3>${esc(o.full)}</h3>
+  <dl class="kv"><dt>Town</dt><dd>${esc(o.city||'–')}</dd><dt>SIREN</dt><dd class="m">${esc(o.siren||'not found')}</dd><dt>Match</dt><dd>${o.conf==='high'?'High confidence':o.conf==='medium'?'<span class="pill warn">medium</span>':'<span class="pill warn">unconfirmed</span>'}</dd>${o.group?`<dt>Group</dt><dd>${esc(o.group)}</dd>`:''}${o.investors?`<dt>Investors</dt><dd>${esc(o.investors)}</dd>`:''}</dl>
+  ${o.note&&o.note!=='Already in Navigator.'?`<p class="note" style="margin:0">${esc(o.note)}</p>`:''}
+  <div><div class="eyebrow">Projects (${o.projects.length})</div><div class="chips">${o.projects.map(p=>`<button class="chip" data-id="p:${esc(p)}">${esc(p)}</button>`).join('')}</div></div>
+  <div><div class="eyebrow">Works with (${co.size})</div><div class="chips">${[...co].map(x=>`<button class="chip" data-id="${x}">${esc(O[x].name)}</button>`).join('')}</div></div>`}
+ else{const p=n.p;side.innerHTML=`<div class="eyebrow">France 2030 project</div><h3>${esc(p.name)}</h3><div class="eyebrow">Partners (${p.partners.length})</div><div class="chips">${p.partners.map(x=>`<button class="chip" data-id="${x}">${esc(O[x].name)}</button>`).join('')}</div>`}
+ side.insertAdjacentHTML('beforeend','<button class="tg" data-id="">Clear selection</button>');
+}
+function intro(){side.innerHTML=`<div class="eyebrow">How to read it</div><p class="note" style="margin:0">Select a dot or diamond to see its partners. Drag to rearrange, scroll or pinch to zoom.</p><p class="note" style="margin:0">CEA sits in the middle because it is a partner on ${cea} of the ${P.length} projects. Hide it and CNRS to see the industrial clusters underneath: the Orano dismantling and recycling group, the EDF–Framatome reactor group, and the startups that work with only one or two partners.</p>`}
+intro();
+side.addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)focus(b.dataset.id||null)});
+nd.on('click',(e,d)=>{e.stopPropagation();focus(d.id)}).on('keydown',(e,d)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focus(d.id)}});
+svg.on('click',()=>focus(null));
+// filters
+const st={hide:false,react:false};
+function applyFilter(){
+ const visO=o=>!(st.hide&&(o.id==='cea'||o.id==='cnrs'))&&(!st.react||o.reactor||P.some(p=>p.partners.includes(o.id)&&p.partners.some(x=>O[x].reactor)));
+ const visP=p=>!st.react||p.partners.some(x=>O[x].reactor);
+ nd.style('display',d=>d.kind==='org'?(visO(d.o)?null:'none'):(visP(d.p)?null:'none'));
+ L.style('display',l=>(visP(l.source.p)&&visO(l.target.o))?null:'none');
+ const act=nodes.filter(n=>n.kind==='org'?visO(n.o):visP(n.p)),ids=new Set(act.map(n=>n.id));
+ sim.nodes(act);sim.force('link').links(links.filter(l=>ids.has(l.source.id)&&ids.has(l.target.id)));
+ if(!reduce)sim.alpha(.6).restart();else{for(let i=0;i<200;i++)sim.tick();tick()}
+}
+for(const [btn,key] of [['hideCEA','hide'],['onlyReact','react']]){const b=document.getElementById(btn);b.addEventListener('click',()=>{st[key]=!st[key];b.setAttribute('aria-pressed',st[key]);applyFilter()})}
+document.getElementById('q').addEventListener('input',e=>{const v=e.target.value.trim().toLowerCase();if(!v){focus(null);return}
+ const hit=nodes.find(n=>(n.kind==='org'?n.o.name+' '+n.o.full:n.p.name).toLowerCase().includes(v));if(hit)focus(hit.id)});
+addEventListener('resize',()=>{W=svg.node().clientWidth;H=svg.node().clientHeight;sim.force('center',d3.forceCenter(W/2,H/2)).force('x',d3.forceX(W/2).strength(.04)).force('y',d3.forceY(H/2).strength(.06));if(!reduce)sim.alpha(.3).restart()});
+</script>
