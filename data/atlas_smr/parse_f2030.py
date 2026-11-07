@@ -30,7 +30,7 @@ for r in rows:
     k=(r['organisation'],r['project'],r['town'])
     if k in seen: r['duplicate']=True
     else: seen.add(k); ded.append(r)
-json.dump(ded,open(sys.argv[1]+'/smr_laureates_p3-7.json','w'),ensure_ascii=False,indent=1)
+json.dump(ded,open(sys.argv[1]+'/smr_laureates_all.json','w'),ensure_ascii=False,indent=1)
 print('parsed',len(rows),'unique',len(ded))
 import collections as C
 print(C.Counter(r['category'] for r in ded)); print('per page',C.Counter(r['page'] for r in rows))

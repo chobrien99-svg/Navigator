@@ -2,7 +2,7 @@ import json,sys,os,re,unicodedata,difflib
 sys.path.insert(0,sys.argv[1]+'/run3')
 from nethelper import get_json
 F=sys.argv[1]+'/f2030'; OUT=F+'/resolved'; os.makedirs(OUT,exist_ok=True)
-rows=json.load(open(F+'/smr_laureates_p3-7.json'))
+rows=json.load(open(F+'/smr_laureates_all.json'))
 def norm(s):
     s=unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().upper()
     s=re.sub(r"\b(SAS|SA|SASU|SARL|SE|GIE|EPIC|THE)\b",' ',s); return re.sub(r'[^A-Z0-9]+',' ',s).strip()
