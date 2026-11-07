@@ -1,0 +1,692 @@
+{
+ "912839370": {
+  "name": "HYPRVIEW",
+  "created": "2022-04-22",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75014",
+  "eff": "02",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "899702260": {
+  "name": "PHAGOS (PHAGOS) (PH)",
+  "created": "2021-05-18",
+  "etat": "A",
+  "city": "SAINT-MANDE",
+  "cp": "94160",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 0,
+    "resultat_net": 0
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "977728328": {
+  "name": "BIOLEVATE SAS",
+  "created": "2023-07-04",
+  "etat": "A",
+  "city": "SUCY-EN-BRIE",
+  "cp": "94370",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "801172834": {
+  "name": "DNA SCRIPT",
+  "created": "2014-03-12",
+  "etat": "A",
+  "city": "LE KREMLIN-BICETRE",
+  "cp": "94270",
+  "eff": "22",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 7823358,
+    "resultat_net": -28949283
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "988494795": {
+  "name": "ZEBRAMED (ZEBRAMED)",
+  "created": "2025-06-24",
+  "etat": "A",
+  "city": "EVRY-COURCOURONNES",
+  "cp": "91000",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": null,
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "933242950": {
+  "name": "BRINK THERAPEUTICS",
+  "created": "2024-09-13",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75005",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "847935046": {
+  "name": "WHITELAB GENOMICS",
+  "created": "2019-01-30",
+  "etat": "A",
+  "city": "EVRY-COURCOURONNES",
+  "cp": "91000",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": -2939131
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "838199636": {
+  "name": "AI-BIOPHARMA",
+  "created": "2018-02-15",
+  "etat": "A",
+  "city": "MONTPELLIER",
+  "cp": "34090",
+  "eff": "01",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": -277765
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "840248744": {
+  "name": "NETRI",
+  "created": "2018-06-06",
+  "etat": "A",
+  "city": "LYON",
+  "cp": "69007",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 0,
+    "resultat_net": -1153721
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "934507005": {
+  "name": "NEBULA",
+  "created": "2024-10-21",
+  "etat": "A",
+  "city": "VANDŒUVRE-LES-NANCY",
+  "cp": "54500",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "108637158": {
+  "name": "OPSIN",
+  "created": "2026-08-07",
+  "etat": "A",
+  "city": "GIF-SUR-YVETTE",
+  "cp": "91190",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": null,
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "449727205": {
+  "name": "ARIANA PHARMACEUTICALS",
+  "created": "2003-08-11",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75016",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "908717796": {
+  "name": "KSILINK SERVICES SAS",
+  "created": "2021-12-07",
+  "etat": "A",
+  "city": "STRASBOURG",
+  "cp": "67000",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2022": {
+    "ca": 3257000,
+    "resultat_net": 440864
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "987433596": {
+  "name": "ORIA BIOSCIENCE (OBS)",
+  "created": "2024-03-04",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75005",
+  "eff": "02",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 0,
+    "resultat_net": 0
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "922166996": {
+  "name": "SPORE BIOTECHNOLOGIES",
+  "created": "2022-12-07",
+  "etat": "A",
+  "city": "BOULOGNE-BILLANCOURT",
+  "cp": "92100",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "999724958": {
+  "name": "TYCHOBIO FRANCE",
+  "created": "2025-12-29",
+  "etat": "A",
+  "city": "SAINT-MANDE",
+  "cp": "94160",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": null,
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "982886327": {
+  "name": "INFOCUS THERAPEUTICS SAS",
+  "created": "2023-12-12",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75008",
+  "eff": "01",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "850454513": {
+  "name": "INSILIBIO",
+  "created": "2019-04-30",
+  "etat": "A",
+  "city": "LIMOGES",
+  "cp": "87280",
+  "eff": "03",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "981135361": {
+  "name": "ROSETTA OMICS",
+  "created": "2023-10-30",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75016",
+  "eff": "01",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "993570498": {
+  "name": "TEBUNA BIOSCIENCE",
+  "created": "2025-11-05",
+  "etat": "A",
+  "city": "NICE",
+  "cp": "06000",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": null,
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "892712118": {
+  "name": "PAREAN BIOTECHNOLOGIES",
+  "created": "2021-01-07",
+  "etat": "A",
+  "city": "SAINT-MALO",
+  "cp": "35400",
+  "eff": "02",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2021": {
+    "ca": 126064,
+    "resultat_net": 46490
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "851519702": {
+  "name": "AQEMIA",
+  "created": "2019-06-12",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75001",
+  "eff": "21",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "928114396": {
+  "name": "D&A MEDLABS",
+  "created": "2024-04-25",
+  "etat": "A",
+  "city": "LYON",
+  "cp": "69003",
+  "eff": "01",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "944250448": {
+  "name": "KARAVELA",
+  "created": "2025-05-05",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75013",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": null,
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "979978095": {
+  "name": "BIOPTIMUS",
+  "created": "2023-09-26",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75011",
+  "eff": "03",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": -6208785
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "842270530": {
+  "name": "ARCASCIENCE",
+  "created": "2018-09-06",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75015",
+  "eff": "03",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "802255372": {
+  "name": "ELIGO BIOSCIENCE (ELIGO BIOSCIENCE)",
+  "created": "2014-06-02",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75013",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 0,
+    "resultat_net": -4592226
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "918422742": {
+  "name": "MEDINSIGHTS",
+  "created": "2022-08-11",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75014",
+  "eff": "03",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "884033531": {
+  "name": "ONE BIOSCIENCES",
+  "created": "2020-06-09",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75006",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 207508,
+    "resultat_net": -3493625
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "982570632": {
+  "name": "THEREMIA",
+  "created": "2023-12-08",
+  "etat": "A",
+  "city": "BOULOGNE-BILLANCOURT",
+  "cp": "92100",
+  "eff": "02",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "822393591": {
+  "name": "OWKIN FRANCE",
+  "created": "2016-08-03",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75009",
+  "eff": "32",
+  "eff_year": "2024",
+  "cat": "ETI",
+  "fin": {
+   "2020": {
+    "ca": 9226960,
+    "resultat_net": 1598525
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "801463902": {
+  "name": "CHERRY BIOTECH (CHERRY BIOTECH)",
+  "created": "2014-03-24",
+  "etat": "A",
+  "city": "MONTREUIL",
+  "cp": "93100",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": 1138858
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "981215718": {
+  "name": "RIVERCELL",
+  "created": "2023-10-24",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75014",
+  "eff": "01",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "823189279": {
+  "name": "IKTOS (IKTOS)",
+  "created": "2016-10-17",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75017",
+  "eff": "21",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2022": {
+    "ca": 4457371,
+    "resultat_net": -1314472
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "884940024": {
+  "name": "OKOMERA",
+  "created": "2020-07-08",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75014",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 0,
+    "resultat_net": -1691724
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "941567711": {
+  "name": "BELIVER",
+  "created": "2025-02-19",
+  "etat": "A",
+  "city": "BORDEAUX",
+  "cp": "33000",
+  "eff": "NN",
+  "eff_year": null,
+  "cat": null,
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "523344588": {
+  "name": "EUKARYS",
+  "created": "2010-06-24",
+  "etat": "A",
+  "city": "EVRY-COURCOURONNES",
+  "cp": "91000",
+  "eff": "02",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 12500,
+    "resultat_net": 42498
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "920335072": {
+  "name": "GENERARE BIOSCIENCE (GENERARE BIOSCIENCE)",
+  "created": "2022-10-07",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75014",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": -1026924
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "948448972": {
+  "name": "ORAKL ONCOLOGY",
+  "created": "2023-01-25",
+  "etat": "A",
+  "city": "VILLEJUIF",
+  "cp": "94800",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "832200224": {
+  "name": "MABSILICO",
+  "created": "2017-09-22",
+  "etat": "A",
+  "city": "TOURS",
+  "cp": "37000",
+  "eff": "11",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": 557492
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "902163963": {
+  "name": "INSPEK",
+  "created": "2021-08-06",
+  "etat": "A",
+  "city": "PALAISEAU",
+  "cp": "91120",
+  "eff": "03",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "530983352": {
+  "name": "PEACCEL (PEACCEL)",
+  "created": "2011-03-05",
+  "etat": "A",
+  "city": "SAINT-DENIS",
+  "cp": "97490",
+  "eff": "02",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": null,
+  "ess": false,
+  "mission": false
+ },
+ "883649238": {
+  "name": "QUBIT PHARMACEUTICALS",
+  "created": "2020-04-01",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75014",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2024": {
+    "ca": 187318,
+    "resultat_net": -795896
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "922435433": {
+  "name": "CURE 51",
+  "created": "2022-12-20",
+  "etat": "A",
+  "city": "PARIS",
+  "cp": "75003",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2025": {
+    "ca": 0,
+    "resultat_net": -8473766
+   }
+  },
+  "ess": false,
+  "mission": false
+ },
+ "804776797": {
+  "name": "POIETIS",
+  "created": "2014-09-22",
+  "etat": "A",
+  "city": "PESSAC",
+  "cp": "33600",
+  "eff": "12",
+  "eff_year": "2024",
+  "cat": "PME",
+  "fin": {
+   "2022": {
+    "ca": 6648,
+    "resultat_net": -380589
+   }
+  },
+  "ess": false,
+  "mission": false
+ }
+}

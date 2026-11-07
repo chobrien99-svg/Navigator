@@ -1,0 +1,1098 @@
+[
+ {
+  "org": "whitelab-genomics",
+  "stage": "seed",
+  "eur": 9.5,
+  "date": "2022-09-12",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Y Combinator",
+   "Omnes Capital",
+   "Debiopharm Innovation Fund"
+  ],
+  "lead": [
+   "Debiopharm Innovation Fund"
+  ]
+ },
+ {
+  "org": "whitelab-genomics",
+  "stage": "pre_seed",
+  "eur": 0.47,
+  "date": "2022-03-29",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Y Combinator"
+  ],
+  "lead": [
+   "Y Combinator"
+  ]
+ },
+ {
+  "org": "whitelab-genomics",
+  "stage": "series_b",
+  "eur": 22.36,
+  "date": "2026-10-06",
+  "year": 2026,
+  "est": true,
+  "inv": [
+   "AVP",
+   "Omnes Capital",
+   "Blast Club",
+   "Debiopharm Innovation Fund",
+   "Yaday Health"
+  ],
+  "lead": []
+ },
+ {
+  "org": "rivercell",
+  "stage": "seed",
+  "eur": 21.5,
+  "date": "2026-10-07",
+  "year": 2026,
+  "est": true,
+  "inv": [
+   "HCVC",
+   "HV Capital",
+   "Business Angels",
+   "Bpifrance",
+   "Alven"
+  ],
+  "lead": [
+   "HV Capital"
+  ]
+ },
+ {
+  "org": "aqemia",
+  "stage": "pre_seed",
+  "eur": 1.6,
+  "date": "2019-10-17",
+  "year": 2019,
+  "est": false,
+  "inv": [
+   "Elaia"
+  ],
+  "lead": []
+ },
+ {
+  "org": "aqemia",
+  "stage": "seed",
+  "eur": 8.38,
+  "date": "2021-01-01",
+  "year": 2021,
+  "est": false,
+  "inv": [
+   "Eurazeo",
+   "Elaia"
+  ],
+  "lead": [
+   "Elaia"
+  ]
+ },
+ {
+  "org": "aqemia",
+  "stage": "series_a",
+  "eur": 30.0,
+  "date": "2022-10-19",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Eurazeo",
+   "Bpifrance",
+   "Elaia"
+  ],
+  "lead": [
+   "Eurazeo",
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "aqemia",
+  "stage": "series_a",
+  "eur": 30.0,
+  "date": "2024-01-30",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Eurazeo",
+   "Wendel Growth",
+   "Bpifrance",
+   "Elaia"
+  ],
+  "lead": [
+   "Wendel Growth"
+  ]
+ },
+ {
+  "org": "aqemia",
+  "stage": "series_b",
+  "eur": 36.19,
+  "date": "2024-12-10",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Bpifrance",
+   "Eurazeo",
+   "Wendel Growth",
+   "Cathay Innovation",
+   "Elaia"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "aqemia",
+  "stage": "grant",
+  "eur": 6.85,
+  "date": "2025-04-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "France 2030"
+  ],
+  "lead": []
+ },
+ {
+  "org": "arcascience",
+  "stage": "seed",
+  "eur": 0.62,
+  "date": "2025-06-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Akka"
+  ],
+  "lead": [
+   "Akka"
+  ]
+ },
+ {
+  "org": "arcascience",
+  "stage": "seed",
+  "eur": null,
+  "date": "2023-04-07",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Plug and Play",
+   "Afri Mobility"
+  ],
+  "lead": [
+   "Afri Mobility"
+  ]
+ },
+ {
+  "org": "ariana-pharmaceuticals",
+  "stage": "series_a",
+  "eur": 2.09,
+  "date": "2008-07-01",
+  "year": 2008,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "biolevate",
+  "stage": "seed",
+  "eur": 6.0,
+  "date": "2024-11-25",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "EQT Ventures",
+   "Mehdi Ghissassi",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "biolevate",
+  "stage": "series_a",
+  "eur": 30.0,
+  "date": "2026-09-21",
+  "year": 2026,
+  "est": false,
+  "inv": [
+   "Orange Ventures",
+   "EQT Ventures",
+   "RAISE France",
+   "MSD Global Health Innovation Fund"
+  ],
+  "lead": []
+ },
+ {
+  "org": "bioptimus",
+  "stage": "series_a",
+  "eur": 37.27,
+  "date": "2025-01-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Andera Partners",
+   "Hitachi Ventures",
+   "Sofinnova Partners",
+   "Cathay Innovation",
+   "Emmanuel Cassimatis",
+   "Boom Capital Ventures",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "bioptimus",
+  "stage": "seed",
+  "eur": 32.41,
+  "date": "2024-02-20",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Hummingbird Ventures",
+   "Top Harvest Capital",
+   "Headline",
+   "Frst",
+   "Waiv",
+   "Cathay Innovation",
+   "NJF Capital",
+   "Anthony Sides",
+   "Sofinnova Partners",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Anthony Sides"
+  ]
+ },
+ {
+  "org": "brink-therapeutics",
+  "stage": "seed",
+  "eur": 3.5,
+  "date": "2025-04-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Kurma Partners",
+   "Kima Ventures",
+   "Breega"
+  ],
+  "lead": [
+   "Kurma Partners"
+  ]
+ },
+ {
+  "org": "cherry-biotech",
+  "stage": "seed",
+  "eur": null,
+  "date": "2024-07-15",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "EIC Accelerator"
+  ],
+  "lead": [
+   "EIC Accelerator"
+  ]
+ },
+ {
+  "org": "cure51",
+  "stage": "seed",
+  "eur": 15.0,
+  "date": "2024-03-19",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Xavier Niel",
+   "Life Extension Ventures",
+   "Hitachi Ventures",
+   "Sofinnova Partners",
+   "Olivier Pomel"
+  ],
+  "lead": [
+   "Hitachi Ventures"
+  ]
+ },
+ {
+  "org": "deeplife",
+  "stage": "series_a",
+  "eur": 10.0,
+  "date": "2024-12-11",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Beiersdorf",
+   "YZR Capital",
+   "Prunay",
+   "Turenne Groupe",
+   "Relyens",
+   "Oscar & Paul"
+  ],
+  "lead": [
+   "Beiersdorf"
+  ]
+ },
+ {
+  "org": "deeplife",
+  "stage": "series_a",
+  "eur": 6.0,
+  "date": "2022-10-18",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Entrepreneurs First",
+   "Mid Atlantic Bio Angels",
+   "Kima Ventures",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "dna-script",
+  "stage": "series_c",
+  "eur": 33.25,
+  "date": "2022-01-04",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "T. Rowe Price",
+   "Healthcor Management",
+   "Irving Investors",
+   "eureKARE",
+   "Baillie Gifford"
+  ],
+  "lead": [
+   "Baillie Gifford"
+  ]
+ },
+ {
+  "org": "dna-script",
+  "stage": "undisclosed",
+  "eur": null,
+  "date": "2022-08-27",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Hedonova"
+  ],
+  "lead": [
+   "Hedonova"
+  ]
+ },
+ {
+  "org": "dna-script",
+  "stage": "series_c",
+  "eur": 140.25,
+  "date": "2021-10-26",
+  "year": 2021,
+  "est": false,
+  "inv": [
+   "EQT Life Sciences",
+   "Kurma Partners",
+   "Illumina Ventures",
+   "M Ventures",
+   "Coatue",
+   "Alexandria Venture Investments",
+   "Bpifrance"
+  ],
+  "lead": []
+ },
+ {
+  "org": "dna-script",
+  "stage": "series_b",
+  "eur": 43.78,
+  "date": "2020-07-29",
+  "year": 2020,
+  "est": false,
+  "inv": [
+   "EQT Life Sciences",
+   "Illumina Ventures",
+   "M Ventures",
+   "Bpifrance"
+  ],
+  "lead": []
+ },
+ {
+  "org": "dna-script",
+  "stage": "seed",
+  "eur": 2.5,
+  "date": "2016-06-01",
+  "year": 2016,
+  "est": false,
+  "inv": [
+   "Kurma Partners",
+   "Eurazeo",
+   "Sofinnova Partners"
+  ],
+  "lead": []
+ },
+ {
+  "org": "dna-script",
+  "stage": "series_a",
+  "eur": 11.0,
+  "date": "2017-09-01",
+  "year": 2017,
+  "est": false,
+  "inv": [
+   "Kurma Partners",
+   "Illumina Ventures",
+   "M Ventures",
+   "Eurazeo",
+   "Sofinnova Partners"
+  ],
+  "lead": []
+ },
+ {
+  "org": "dna-script",
+  "stage": "series_b",
+  "eur": 34.39,
+  "date": "2019-05-16",
+  "year": 2019,
+  "est": false,
+  "inv": [
+   "EQT Life Sciences",
+   "Kurma Partners",
+   "Illumina Ventures",
+   "Sofinnova Partners",
+   "Bpifrance",
+   "Idinvest Partners"
+  ],
+  "lead": []
+ },
+ {
+  "org": "endogenebio",
+  "stage": "pre_seed",
+  "eur": 2.88,
+  "date": "2023-06-01",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Zubi Capital",
+   "Entrepreneurs First",
+   "Frontline Ventures",
+   "Atomico"
+  ],
+  "lead": [
+   "Atomico"
+  ]
+ },
+ {
+  "org": "generare",
+  "stage": "series_a",
+  "eur": 15.0,
+  "date": "2026-04-01",
+  "year": 2026,
+  "est": false,
+  "inv": [
+   "Galion.exe",
+   "Vives Partners",
+   "Daphni",
+   "Teampact Ventures",
+   "Alven"
+  ],
+  "lead": [
+   "Daphni",
+   "Alven"
+  ]
+ },
+ {
+  "org": "generare",
+  "stage": "seed",
+  "eur": 5.0,
+  "date": "2024-10-07",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Saras Capital",
+   "Galion.exe",
+   "SynBioVen",
+   "Better Angle",
+   "Teampact Ventures",
+   "Vives Partners"
+  ],
+  "lead": [
+   "Better Angle"
+  ]
+ },
+ {
+  "org": "iktos",
+  "stage": "series_a",
+  "eur": 15.16,
+  "date": "2023-03-09",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Omnes Capital",
+   "M Ventures",
+   "Debiopharm Innovation Fund"
+  ],
+  "lead": [
+   "Debiopharm Innovation Fund"
+  ]
+ },
+ {
+  "org": "iktos",
+  "stage": "seed",
+  "eur": null,
+  "date": "2017-06-01",
+  "year": 2017,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "iktos",
+  "stage": "seed",
+  "eur": null,
+  "date": "2019-01-01",
+  "year": 2019,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "inspek",
+  "stage": "seed",
+  "eur": 3.5,
+  "date": "2024-09-25",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "EIC Accelerator",
+   "Wind",
+   "Breega",
+   "Quantonation"
+  ],
+  "lead": [
+   "Breega"
+  ]
+ },
+ {
+  "org": "karavela",
+  "stage": "pre_seed",
+  "eur": 2.0,
+  "date": "2025-11-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "HCVC",
+   "Business Angels",
+   "Daphni",
+   "First Momentum"
+  ],
+  "lead": [
+   "HCVC"
+  ]
+ },
+ {
+  "org": "netri",
+  "stage": "series_b",
+  "eur": 5.0,
+  "date": "2025-02-01",
+  "year": 2025,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "okomera",
+  "stage": "seed",
+  "eur": 10.31,
+  "date": "2023-12-20",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Berkeley SkyDeck Fund",
+   "Jacques Lewiner",
+   "Polytechnique Ventures",
+   "Berkeley SkyDeck Fund",
+   "Irwan Bello",
+   "Resonance"
+  ],
+  "lead": [
+   "Berkeley SkyDeck Fund"
+  ]
+ },
+ {
+  "org": "one-biosciences",
+  "stage": "series_a",
+  "eur": 15.0,
+  "date": "2025-07-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Blast Club",
+   "Sofinnova Partners",
+   "Adamed Technology",
+   "Redmile Group",
+   "Galion.exe",
+   "Kima Ventures",
+   "Invus"
+  ],
+  "lead": [
+   "Kima Ventures"
+  ]
+ },
+ {
+  "org": "one-biosciences",
+  "stage": "seed",
+  "eur": 4.95,
+  "date": "2023-01-01",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Institut Curie",
+   "Home Biosciences"
+  ],
+  "lead": [
+   "Home Biosciences"
+  ]
+ },
+ {
+  "org": "orakl-oncology",
+  "stage": "seed",
+  "eur": 11.0,
+  "date": "2024-12-03",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Sistafund",
+   "Verve Ventures",
+   "HCVC",
+   "Speedinvest",
+   "Singular",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "orakl-oncology",
+  "stage": "seed",
+  "eur": 2.91,
+  "date": "2023-10-04",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Verve Ventures",
+   "HCVC",
+   "Speedinvest"
+  ],
+  "lead": [
+   "HCVC"
+  ]
+ },
+ {
+  "org": "oria-bioscience",
+  "stage": "seed",
+  "eur": 2.7,
+  "date": "2025-06-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Newfund",
+   "Calyseed",
+   "Galion.exe",
+   "Cenitz"
+  ],
+  "lead": [
+   "Newfund"
+  ]
+ },
+ {
+  "org": "owkin",
+  "stage": "seed",
+  "eur": 1.91,
+  "date": "2016-10-01",
+  "year": 2016,
+  "est": false,
+  "inv": [
+   "NJF Capital",
+   "Shana Fisher"
+  ],
+  "lead": []
+ },
+ {
+  "org": "owkin",
+  "stage": "series_b",
+  "eur": 158.73,
+  "date": "2021-11-10",
+  "year": 2021,
+  "est": false,
+  "inv": [
+   "Sanofi"
+  ],
+  "lead": [
+   "Sanofi"
+  ]
+ },
+ {
+  "org": "owkin",
+  "stage": "series_a",
+  "eur": 9.02,
+  "date": "2018-01-16",
+  "year": 2018,
+  "est": false,
+  "inv": [
+   "Plug and Play",
+   "Otium Capital",
+   "Cathay Innovation",
+   "NJF Capital"
+  ],
+  "lead": [
+   "Otium Capital"
+  ]
+ },
+ {
+  "org": "owkin",
+  "stage": "series_a",
+  "eur": 22.94,
+  "date": "2020-05-01",
+  "year": 2020,
+  "est": false,
+  "inv": [
+   "MACSF",
+   "Eight Roads Ventures",
+   "Bpifrance",
+   "GV (Google Ventures)",
+   "F-Prime Capital"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "owkin",
+  "stage": "series_a",
+  "eur": 15.71,
+  "date": "2020-06-30",
+  "year": 2020,
+  "est": false,
+  "inv": [
+   "Bpifrance",
+   "Mubadala Capital Ventures"
+  ],
+  "lead": [
+   "Bpifrance",
+   "Mubadala Capital Ventures"
+  ]
+ },
+ {
+  "org": "owkin",
+  "stage": "series_b",
+  "eur": 46.73,
+  "date": "2022-06-08",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Bristol Myers Squibb"
+  ],
+  "lead": [
+   "Bristol Myers Squibb"
+  ]
+ },
+ {
+  "org": "phagos",
+  "stage": "series_a",
+  "eur": 25.0,
+  "date": "2025-10-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Founders Capital",
+   "Capagro",
+   "Entrepreneurs First",
+   "Station F",
+   "Hoxton Ventures",
+   "Demeter",
+   "Acurio Ventures",
+   "Citizen Capital",
+   "CapHorn"
+  ],
+  "lead": [
+   "Capagro"
+  ]
+ },
+ {
+  "org": "phagos",
+  "stage": "undisclosed",
+  "eur": null,
+  "date": "2024-08-18",
+  "year": 2024,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "phagos",
+  "stage": "seed",
+  "eur": 2.4,
+  "date": "2022-09-28",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Grant Aarons",
+   "Dhyan VC",
+   "Entrepreneurs First",
+   "Hoxton Ventures",
+   "GROW Agrifoodtech Accelerator",
+   "Demeter",
+   "AgFunder"
+  ],
+  "lead": [
+   "AgFunder"
+  ]
+ },
+ {
+  "org": "phagos",
+  "stage": "pre_seed",
+  "eur": 0.24,
+  "date": "2021-09-11",
+  "year": 2021,
+  "est": false,
+  "inv": [
+   "La French Tech",
+   "Entrepreneurs First",
+   "WILCO",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "poietis",
+  "stage": "series_a",
+  "eur": 5.0,
+  "date": "2018-03-27",
+  "year": 2018,
+  "est": false,
+  "inv": [
+   "WiSEED"
+  ],
+  "lead": []
+ },
+ {
+  "org": "qubit-pharmaceuticals",
+  "stage": "seed",
+  "eur": 16.1,
+  "date": "2022-06-10",
+  "year": 2022,
+  "est": false,
+  "inv": [
+   "Omnes Capital",
+   "XAnge",
+   "Octave Klaba",
+   "European Innovation Council",
+   "Quantonation"
+  ],
+  "lead": [
+   "European Innovation Council"
+  ]
+ },
+ {
+  "org": "scienta-lab",
+  "stage": "seed",
+  "eur": 3.99,
+  "date": "2023-12-05",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Guillaume Amblard",
+   "CentraleSupélec Venture",
+   "Flavien Kulawik"
+  ],
+  "lead": [
+   "CentraleSupélec Venture"
+  ]
+ },
+ {
+  "org": "spore-biotechnologies",
+  "stage": "pre_seed",
+  "eur": 7.98,
+  "date": "2023-12-12",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "LocalGlobe",
+   "EmergingTech Ventures",
+   "Plug and Play",
+   "Mehdi Ghissassi",
+   "Better Angle",
+   "Roxanne Varza",
+   "Eric Carreel",
+   "Saturnin Pugnet",
+   "Kima Ventures",
+   "No Label Ventures",
+   "Famille C Participations"
+  ],
+  "lead": [
+   "Better Angle"
+  ]
+ },
+ {
+  "org": "spore-biotechnologies",
+  "stage": "series_a",
+  "eur": 23.0,
+  "date": "2025-02-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Station F",
+   "Singular",
+   "Famille C Participations",
+   "No Label Ventures"
+  ],
+  "lead": [
+   "Singular"
+  ]
+ },
+ {
+  "org": "theremia",
+  "stage": "seed",
+  "eur": 3.0,
+  "date": "2024-11-07",
+  "year": 2024,
+  "est": false,
+  "inv": [
+   "Salica",
+   "Eurazeo",
+   "Better Angels Ventures",
+   "Entrepreneurs First",
+   "Better Angle",
+   "Tiny Supercomputer Investment Company",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Better Angels Ventures"
+  ]
+ },
+ {
+  "org": "eligo-bioscience",
+  "stage": "series_b",
+  "eur": 27.62,
+  "date": "2023-12-05",
+  "year": 2023,
+  "est": false,
+  "inv": [
+   "Seventure Partners",
+   "Sanofi Ventures",
+   "Khosla Ventures",
+   "Bpifrance"
+  ],
+  "lead": [
+   "Bpifrance"
+  ]
+ },
+ {
+  "org": "eligo-bioscience",
+  "stage": "seed",
+  "eur": 2.6,
+  "date": "2015-07-01",
+  "year": 2015,
+  "est": false,
+  "inv": [
+   "Seventure Partners"
+  ],
+  "lead": []
+ },
+ {
+  "org": "eligo-bioscience",
+  "stage": "seed",
+  "eur": null,
+  "date": "2017-07-01",
+  "year": 2017,
+  "est": false,
+  "inv": [
+   "Khosla Ventures"
+  ],
+  "lead": []
+ },
+ {
+  "org": "eligo-bioscience",
+  "stage": "undisclosed",
+  "eur": 1.8,
+  "date": "2018-04-01",
+  "year": 2018,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "hyprview",
+  "stage": "pre_seed",
+  "eur": 1.4,
+  "date": "2025-12-01",
+  "year": 2025,
+  "est": false,
+  "inv": [
+   "Franck Le Ouay",
+   "Jean-Philippe Vert"
+  ],
+  "lead": []
+ },
+ {
+  "org": "parean-biotechnologies",
+  "stage": "undisclosed",
+  "eur": null,
+  "date": "2023-11-01",
+  "year": 2023,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "peaccel",
+  "stage": "grant",
+  "eur": 1.98,
+  "date": "2018-10-08",
+  "year": 2018,
+  "est": false,
+  "inv": [],
+  "lead": []
+ },
+ {
+  "org": "rosetta-omics",
+  "stage": "pre_seed",
+  "eur": 0.35,
+  "date": "2024-05-01",
+  "year": 2024,
+  "est": true,
+  "inv": [
+   "Business Angels"
+  ],
+  "lead": []
+ },
+ {
+  "org": "tychobio",
+  "stage": "pre_seed",
+  "eur": null,
+  "date": null,
+  "year": null,
+  "est": false,
+  "inv": [
+   "Kima Ventures",
+   "Tiny Supercomputer Investment Company"
+  ],
+  "lead": []
+ },
+ {
+  "org": "owkin",
+  "stage": "series_a",
+  "eur": 15.25,
+  "date": "2018-05-01",
+  "year": 2018,
+  "est": true,
+  "inv": [
+   "GV (Google Ventures)",
+   "F-Prime Capital",
+   "Eight Roads Ventures"
+  ],
+  "lead": []
+ }
+]

@@ -1,0 +1,159 @@
+{
+ "name": "scanR \u2013 dumps d\u00e9normalis\u00e9s",
+ "source": "https://scanr-data.s3.gra.io.cloud.ovh.net/",
+ "prefix": "production/",
+ "format": "jsonl.gz",
+ "generated_at": "2026-10-22",
+ "datasets": [
+  {
+   "id": "publications",
+   "label": "Publications",
+   "file_count": 8,
+   "total_size_bytes": 19641255317,
+   "files": [
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_0.jsonl.gz",
+     "size_bytes": 2505634155,
+     "last_modified": "2026-10-14T00:31:53Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_1.jsonl.gz",
+     "size_bytes": 2512006164,
+     "last_modified": "2026-10-14T00:43:24Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_2.jsonl.gz",
+     "size_bytes": 2503483293,
+     "last_modified": "2026-10-14T00:47:24Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_3.jsonl.gz",
+     "size_bytes": 2507919244,
+     "last_modified": "2026-10-14T00:41:38Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_4.jsonl.gz",
+     "size_bytes": 2502841979,
+     "last_modified": "2026-10-14T00:35:39Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_5.jsonl.gz",
+     "size_bytes": 2504504547,
+     "last_modified": "2026-10-15T11:44:39Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_6.jsonl.gz",
+     "size_bytes": 2503453359,
+     "last_modified": "2026-10-15T11:44:31Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/publications_denormalized_7.jsonl.gz",
+     "size_bytes": 2101412576,
+     "last_modified": "2026-10-15T09:05:42Z"
+    }
+   ]
+  },
+  {
+   "id": "persons",
+   "label": "Personnes",
+   "file_count": 11,
+   "total_size_bytes": 3707914331,
+   "files": [
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_0.jsonl.gz",
+     "size_bytes": 339376293,
+     "last_modified": "2026-06-04T15:21:23Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_1.jsonl.gz",
+     "size_bytes": 342004612,
+     "last_modified": "2026-06-04T15:28:55Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_2.jsonl.gz",
+     "size_bytes": 340977827,
+     "last_modified": "2026-06-04T15:29:10Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_3.jsonl.gz",
+     "size_bytes": 336930470,
+     "last_modified": "2026-06-04T19:50:40Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_4.jsonl.gz",
+     "size_bytes": 338453854,
+     "last_modified": "2026-06-04T20:01:20Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_5.jsonl.gz",
+     "size_bytes": 339423819,
+     "last_modified": "2026-06-04T20:03:19Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_6.jsonl.gz",
+     "size_bytes": 337831140,
+     "last_modified": "2026-06-05T00:21:45Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_7.jsonl.gz",
+     "size_bytes": 340464607,
+     "last_modified": "2026-06-05T00:40:41Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_8.jsonl.gz",
+     "size_bytes": 339117459,
+     "last_modified": "2026-06-05T00:43:52Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_9.jsonl.gz",
+     "size_bytes": 337979313,
+     "last_modified": "2026-06-05T04:59:14Z"
+    },
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/persons_denormalized_10.jsonl.gz",
+     "size_bytes": 315354937,
+     "last_modified": "2026-06-05T05:01:44Z"
+    }
+   ]
+  },
+  {
+   "id": "patents",
+   "label": "Brevets",
+   "file_count": 1,
+   "total_size_bytes": 558164709,
+   "files": [
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/patents_denormalized.jsonl.gz",
+     "size_bytes": 558164709,
+     "last_modified": "2026-06-10T14:39:19Z"
+    }
+   ]
+  },
+  {
+   "id": "projects",
+   "label": "Projets",
+   "file_count": 1,
+   "total_size_bytes": 352892438,
+   "files": [
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/projects_denormalized.jsonl.gz",
+     "size_bytes": 352892438,
+     "last_modified": "2026-10-14T17:33:57Z"
+    }
+   ]
+  },
+  {
+   "id": "organizations",
+   "label": "Organisations",
+   "file_count": 1,
+   "total_size_bytes": 86606585,
+   "files": [
+    {
+     "url": "https://scanr-data.s3.gra.io.cloud.ovh.net/production/organizations_denormalized.jsonl.gz",
+     "size_bytes": 86606585,
+     "last_modified": "2026-09-04T09:47:47Z"
+    }
+   ]
+  }
+ ]
+}

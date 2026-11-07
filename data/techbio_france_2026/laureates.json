@@ -1,0 +1,561 @@
+{
+ "ilab": {
+  "aqemia": [
+   {
+    "year": 2020,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Maximilien Levesque",
+    "project": "Générer plus vite de meilleurs candidats médicaments, grâce à la combinaison d'IA et de mécanique st... | Spin-off de l'École normale supérieure - PSL, co-fondée par Maximilien Levesque et Emmanuelle Martia...",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": "École normale supérieure PSL (0753455Y)",
+    "match": "siren",
+    "confidence": "high",
+    "note": "Summary states spin-off of ENS-PSL (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "cherry-biotech": [
+   {
+    "year": 2016,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Bretagne",
+    "laureate": "Jeremy Cramer",
+    "project": "HomoChipien, nouveau dispositif de test de médicament et diagnostique thérapeutique personnalisé",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed"
+   }
+  ],
+  "cure51": [
+   {
+    "year": 2024,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Nicolas Wolikow",
+    "project": "Cure 51 est une startup TechBio qui développe une plateforme de découverte de cibles thérapeutiques ... (project PANCURE)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "eukarys": [
+   {
+    "year": 2009,
+    "type": "en émergence",
+    "grand_prix": null,
+    "domain": "Pharmacie, Sciences du vivant & Biotechnologies",
+    "region": "Hauts-de-France",
+    "laureate": "Philippe Jais",
+    "project": "Développement de la technologie C3P3 | Le projet Eukaryon/ChimeRNA repose sur le développement de la technologie propriétaire C3P3...",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed"
+   },
+   {
+    "year": 2011,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie, Sciences du vivant & Biotechnologies",
+    "region": "Hauts-de-France",
+    "laureate": "Benjamin Bertrand",
+    "project": "Produits et services en génomique fonctionnelle, et pour le développement et la production de protéin...",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed"
+   }
+  ],
+  "generare": [
+   {
+    "year": 2024,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Guillaume Vandenesch",
+    "project": "Découverte de médicaments encodés dans l'ADN des bactéries du sol (project GENERAREBIO)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed"
+   }
+  ],
+  "infocus-therapeutics-sas": [
+   {
+    "year": 2025,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Numérique, technologies logicielles & communication",
+    "region": "Île-de-France",
+    "laureate": "Emily Hsiao Wei Fang",
+    "project": "InFocus Therapeutics exploite l'intelligence artificielle pour concevoir et développer des petites m... (RNA-targeting small molecules)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "inspek": [
+   {
+    "year": 2022,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Électronique, traitement du signal & instrumentation",
+    "region": "Île-de-France",
+    "laureate": "Jérôme Michon",
+    "project": "Capteurs chimiques sur puce optique pour le suivi en ligne de procédés (bio) chimiques (project NEXTSPEK)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed"
+   }
+  ],
+  "karavela": [
+   {
+    "year": 2026,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Technologies médicales",
+    "region": "Île-de-France",
+    "laureate": "Alexis Thual",
+    "project": "Karavela collecte un très grand jeu de données pour mieux comprendre et modéliser le fonctionnement ... (project KARAVELA SEQ)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "okomera": [
+   {
+    "year": 2019,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Aimée Wessel",
+    "project": "MultiScreen: une technologie microfluidique pour améliorer la prédictivité des tests effectués en la...",
+    "research_unit": "Laboratoire d'hydrodynamique",
+    "research_unit_acronym": "LADHYX",
+    "research_unit_id": "199719344U",
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "(text truncated to ~100 chars by the API)"
+   }
+  ],
+  "orakl-oncology": [
+   {
+    "year": 2024,
+    "type": "création-développement",
+    "grand_prix": "Grand prix",
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Fanny Jaulin",
+    "project": "Accélérer la découverte et assurer le succès en clinique de nouveaux médicaments en oncologie grâce ...",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": "IGR - Institut Gustave Roussy (775741101)",
+    "match": "siren",
+    "confidence": "high",
+    "note": "(text truncated to ~100 chars by the API)"
+   }
+  ],
+  "oria-bioscience": [
+   {
+    "year": 2024,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Alexandre Satinho",
+    "project": "Purification d'organelles en microfluidique pour booster le développement de médicaments en phase d... (project LYFLOW)",
+    "research_unit": "Laboratoire de physique de l'ENS",
+    "research_unit_acronym": "LPENS",
+    "research_unit_id": "201922973T",
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "Laureate (spelled 'Satinho', email asantinho@oriabs.com) is not in the known-people list (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "nebula": [
+   {
+    "year": 2025,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Grand Est",
+    "laureate": "Mounir Tarek",
+    "project": "NEBULA exploite une plateforme d'IA générative brevetée capable de révéler l'ensemble des conformati... (project AFTERS)",
+    "research_unit": "Laboratoire de physique et chimie théoriques",
+    "research_unit_acronym": "LPCT",
+    "research_unit_id": "201822731J",
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "(text truncated to ~100 chars by the API)"
+   }
+  ],
+  "phagos": [
+   {
+    "year": 2022,
+    "type": "création-développement",
+    "grand_prix": "Grand prix",
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Alexandros Pantalis",
+    "project": "Phages thérapies évolutives pour l'élevage – une alternative durable à l'utilisation d'antibiotiques",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed"
+   }
+  ],
+  "poietis": [
+   {
+    "year": 2012,
+    "type": "en émergence",
+    "grand_prix": null,
+    "domain": "Pharmacie, Sciences du vivant & Biotechnologies",
+    "region": "Nouvelle-Aquitaine",
+    "laureate": "Fabien Guillemot",
+    "project": "(no summary in dataset)",
+    "research_unit": "Bioingénierie Tissulaire",
+    "research_unit_acronym": "BIOTIS",
+    "research_unit_id": "201119376T",
+    "structure": "Université de Bordeaux (0333298F)",
+    "match": "siren",
+    "confidence": "high",
+    "note": ""
+   },
+   {
+    "year": 2014,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Technologies médicales",
+    "region": "Nouvelle-Aquitaine",
+    "laureate": "Fabien Guillemot",
+    "project": "Impression 3D de tissus biologiques | Le projet POIETIS vise à favoriser la création d'une entreprise qui valorisera des recherches en ing...",
+    "research_unit": "Bioingénierie Tissulaire",
+    "research_unit_acronym": "BIOTIS",
+    "research_unit_id": "201119376T",
+    "structure": "Université de Bordeaux; INSERM (0333298F;0755364Y)",
+    "match": "siren",
+    "confidence": "high",
+    "note": ""
+   }
+  ],
+  "qubit-pharmaceuticals": [
+   {
+    "year": 2020,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Numérique, technologies logicielles & communication",
+    "region": "Île-de-France",
+    "laureate": "Jean-Philip Piquemal",
+    "project": "Suite logicielle exploitant la puissance de calcul des futurs ordinateurs quantiques pour développer...",
+    "research_unit": "Laboratoire de chimie théorique",
+    "research_unit_acronym": "LCT",
+    "research_unit_id": "199712661E",
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "Laureate email at sorbonne-universite.fr (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "rivercell": [
+   {
+    "year": 2025,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Yann Fleureau",
+    "project": "Blossom Life Sciences développe une bio data foundry qui génère des données biologiques massives via... (project BLOSSOM OPTO)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "SIREN matches but company label is 'BLOSSOM LIFE SCIENCES' (likely former/other name of Rivercell); laureate Yann Fleureau is a known founder"
+   }
+  ],
+  "spore-biotechnologies": [
+   {
+    "year": 2023,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Amine Raji",
+    "project": "Développement d'une nouvelle génération de système de quantification microbiologique instantanée pou... (project SPORE)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "theremia": [
+   {
+    "year": 2025,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Iris Maréchal",
+    "project": "Theremia révolutionne la médecine de précision des maladies du système nerveux central en combinant ... (project THEREMIA DOLIA)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "zebramed": [
+   {
+    "year": 2025,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Valerio Laghi",
+    "project": "ZebraMed transforme données vivantes en décisions cliniques: criblage automatisé à grande échelle, r...",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "No research unit listed (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "beliver": [
+   {
+    "year": 2026,
+    "type": "création-développement",
+    "grand_prix": "Grand prix",
+    "domain": "Technologies médicales",
+    "region": "Nouvelle-Aquitaine",
+    "laureate": "Madeleine Moscatelli",
+    "project": "BeLiver développe un service d'aide à la décision pour les oncologues, prédisant la réponse aux trai... (project HEPERA)",
+    "research_unit": "Institut d'oncologie de Bordeaux",
+    "research_unit_acronym": null,
+    "research_unit_id": "202224190C",
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "(text truncated to ~100 chars by the API)"
+   }
+  ],
+  "scienta-lab": [
+   {
+    "year": 2024,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Technologies médicales",
+    "region": "Île-de-France",
+    "laureate": "Camille Bouget",
+    "project": "Scienta Lab développe un modèle de fondation multimodal propriétaire dédié à la médecine de précisio... (project EVACLINICAL)",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "siren",
+    "confidence": "high",
+    "note": "Laureate Camille Bouget not in known-people list (known: Vincent Bouget) (text truncated to ~100 chars by the API)"
+   }
+  ],
+  "dna-script": [
+   {
+    "year": 2016,
+    "type": "création-développement",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Thomas Ybert",
+    "project": "Une nouvelle génération de technologie de synthèse d'ADN | DNA Script a pour ambition de développer et commercialiser la prochaine génération de technologie de...",
+    "research_unit": "Biologie Structurale des Processus Cellulaires et Maladies Infectieuses",
+    "research_unit_acronym": null,
+    "research_unit_id": "201220447C",
+    "structure": "Université Pierre et Marie Curie; Université Paris Diderot; CNRS; ...",
+    "match": "person_name",
+    "confidence": "high",
+    "note": "Found via founder surname; row SIREN is 801575572 (not 801172834 in our list) but summary names DNA Script explicitly"
+   },
+   {
+    "year": 2014,
+    "type": "en émergence",
+    "grand_prix": null,
+    "domain": "Technologies médicales",
+    "region": "Île-de-France",
+    "laureate": "Thomas Ybert",
+    "project": "Imprimante à ADN",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": null,
+    "match": "person_name",
+    "confidence": "high",
+    "note": "Same founder, same row SIREN 801575572; emergence-stage precursor of DNA Script"
+   }
+  ],
+  "eligo-bioscience": [
+   {
+    "year": 2014,
+    "type": "en émergence",
+    "grand_prix": null,
+    "domain": "Pharmacie & biotechnologies",
+    "region": "Île-de-France",
+    "laureate": "Xavier Duportet",
+    "project": "Cibler les interventions thérapeutiques sur l'espèce bactérienne désirée tout en préservant le reste... | PhageX a pour mission de développer des produits innovants pour manipuler et contrôler...",
+    "research_unit": null,
+    "research_unit_acronym": null,
+    "research_unit_id": null,
+    "structure": "Massachusetts Institute of Technology (grid.116068.8)",
+    "match": "person_name",
+    "confidence": "medium",
+    "note": "JUDGEMENT CALL: Duportet (Eligo co-founder, not in provided people list) won with project 'PhageX' in 2014 — fits Eligo's CRISPR/phage bacterial-targeting tech and founding year; no SIREN on row"
+   }
+  ],
+  "peaccel": [
+   {
+    "year": 2004,
+    "type": "en émergence",
+    "grand_prix": null,
+    "domain": "Biotechnologies et pharmacie",
+    "region": "La Réunion",
+    "laureate": "Bernard Offmann",
+    "project": "mutaGeniX, projet de création d'entreprise de service d'ingénierie des protéines",
+    "research_unit": "Laboratoire de Biochimie et de Génétique Moléculaire",
+    "research_unit_acronym": "LBGM",
+    "research_unit_id": "199814055R",
+    "structure": "Université de La Réunion (9740478B)",
+    "match": "person_name",
+    "confidence": "low",
+    "note": "JUDGEMENT CALL: same founder and protein-engineering theme, but different project name (mutaGeniX) and 2004 predates PEACCEL (SIREN 530983352, ~2011); likely a precursor, not the company itself"
+   }
+  ]
+ },
+ "iphd": {
+  "orakl-oncology": [
+   {
+    "year": 2022,
+    "result": "Lauréat - Grand Prix",
+    "person": "Diane-Laure Pagès",
+    "project": "ORAKL — ORAKL développe des tests fonctionnels de diagnostic in vitro qui prédisent la réponse des patients ...",
+    "laboratoire": "Dynamique des cellules tumorales (202023571N)",
+    "etablissement": "Institut Gustave Roussy",
+    "satt": "Gustave Roussy Transfert",
+    "incubateur": null,
+    "match": "summary",
+    "confidence": "high",
+    "note": "Name not in known-people list; project acronym ORAKL and summary describe Orakl Oncology; consistent with i-Lab row linking Orakl to Gustave Roussy"
+   }
+  ]
+ },
+ "no_match": [
+  "arcascience",
+  "ariana-pharmaceuticals",
+  "biolevate",
+  "bioptimus",
+  "brink-therapeutics",
+  "iktos",
+  "mabsilico-sas",
+  "netri",
+  "one-biosciences",
+  "owkin",
+  "whitelab-genomics",
+  "ai-biopharma",
+  "da-medlabs",
+  "hyprview",
+  "insilibio",
+  "ksilink",
+  "medinsights",
+  "opsin",
+  "parean-biotechnologies",
+  "rosetta-omics",
+  "tebuna",
+  "tychobio",
+  "deeplife",
+  "endogenebio"
+ ],
+ "rejected_candidates": [
+  {
+   "slug": "one-biosciences",
+   "laureate": "David Schilansky",
+   "year": 2021,
+   "company": "Prana Biosciences",
+   "reason": "same person, different company (Home Biosciences studio)"
+  },
+  {
+   "slug": "one-biosciences",
+   "laureate": "Magali Richard",
+   "year": 2024,
+   "company": "Apikal Therapeutics",
+   "reason": "same name/Home Biosciences email, different company; structures CNRS/UP Cité/INSERM"
+  },
+  {
+   "slug": "hyprview",
+   "laureate": "François Outters",
+   "year": 2006,
+   "company": "Viroxis",
+   "reason": "different first name and company"
+  },
+  {
+   "slug": "one-biosciences",
+   "laureate": "Emeline Richard Millot (i-PhD 2019, GlycoFlu)",
+   "reason": "surname-only overlap"
+  },
+  {
+   "slug": "bioptimus/rivercell",
+   "laureate": "Julien Durand (i-PhD 2019, H2O) and 7 i-Lab Durand rows",
+   "reason": "no Eric Durand"
+  }
+ ],
+ "notes": "i-Lab text fields (Moto/Résumé) are truncated to ~100 chars by the Tabular API. SIREN searches with no hit: arcascience, ariana, biolevate, bioptimus, brink, dna-script(801172834), eligo, iktos, mabsilico, netri, one-biosciences, owkin, whitelab, ai-biopharma, da-medlabs, hyprview, insilibio, ksilink, medinsights, opsin, parean, peaccel, rosetta-omics, tebuna, tychobio, deeplife. Name/company 'contains' filter appears case-sensitive, so negative name results are not fully exhaustive."
+}

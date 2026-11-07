@@ -1,0 +1,139 @@
+{
+ "ma_these_180s": {
+  "resource_id": "9614efcc-096f-4e24-beef-b7d5a0765636",
+  "rows_total": 204,
+  "rows_scanned": 204,
+  "columns": [
+   "Type de concours",
+   "Niveau",
+   "Echelle",
+   "Millesime",
+   "Lauréat",
+   "Ordre",
+   "Prix",
+   "Sexe",
+   "Prénom",
+   "Nom",
+   "Prénom Nom",
+   "Compte LinkedIn",
+   "orcid",
+   "idref",
+   "Titre de la thèse",
+   "Lien vers theses.fr",
+   "Code laboratoire",
+   "Laboratoire",
+   "Code établissement",
+   "Etablissement"
+  ],
+  "matches": [],
+  "near_misses": [
+   {
+    "slug": "one-biosciences",
+    "person": "Hedi Ben Brahim",
+    "dataset_name": "Rachida Brahim",
+    "year": 2015,
+    "note": "Surname-only overlap, first name differs; rejected. Laureate, Deuxième prix du jury (sociology, AMU)"
+   },
+   {
+    "slug": "one-biosciences",
+    "person": "Hedi Ben Brahim",
+    "dataset_name": "Eslem Ben Arous",
+    "year": 2019,
+    "note": "Surname-only overlap, first name differs; rejected. Finalist (prehistory, Sorbonne); only shared particle Ben"
+   },
+   {
+    "slug": "hyprview",
+    "person": "François Auvray",
+    "dataset_name": "Nicolas Auvray",
+    "year": 2019,
+    "note": "Surname-only overlap, first name differs; rejected. Finalist (condensed-matter physics, USPC)"
+   },
+   {
+    "slug": "iktos",
+    "person": "Nicolas Do Huu",
+    "dataset_name": "Trong Nguyen-Huu",
+    "year": 2021,
+    "note": "Surname-only overlap, first name differs; rejected. Finalist (plant biology, Champagne-Ardenne)"
+   },
+   {
+    "slug": "phagos",
+    "person": "Adèle James",
+    "dataset_name": "Samantha James",
+    "year": 2016,
+    "note": "Surname-only overlap, first name differs; rejected. Finalist (virology, Univ. Guyane/Institut Pasteur)"
+   },
+   {
+    "slug": "ksilink",
+    "person": "Antoine de Lacombe",
+    "dataset_name": "Mathilde Lacombe",
+    "year": 2026,
+    "note": "Surname-only overlap, first name differs; rejected. Finalist (IPBS Toulouse)"
+   },
+   {
+    "slug": "bioptimus",
+    "person": "Felipe Llinares López",
+    "dataset_name": "Maxime Lopez",
+    "year": 2018,
+    "note": "Surname-only overlap, first name differs; rejected. Finalist (painting cleaning, Paris-Seine)"
+   },
+   {
+    "slug": "parean-biotechnologies",
+    "person": "Hang-Phuong Pham",
+    "dataset_name": "Than Nhat Pham",
+    "year": 2015,
+    "note": "Surname-only overlap (Than Nhat Pham), first name differs; rejected. Finalist (nuclear fuel thermodynamics, UBFC)"
+   }
+  ]
+ },
+ "prix_science_ouverte_these": {
+  "resource_id": "713517d7-26a1-40fd-9677-eb3d379a0ba9",
+  "rows_total": 16,
+  "rows_scanned": 16,
+  "columns": [
+   "Millesime",
+   "Edition",
+   "Résultat",
+   "Sexe",
+   "Prenom",
+   "Nom",
+   "Prenom_nom",
+   "ORCID",
+   "Idref",
+   "Numero national de thèse",
+   "Laboratoire",
+   "ROR Laboratoire",
+   "Etablissement",
+   "ROR Etablissement"
+  ],
+  "matches": [],
+  "near_misses": []
+ },
+ "etoiles_de_l_europe": {
+  "resource_id": "d6e7c119-019b-4ad3-b9c8-65b7eeef4547",
+  "rows_total": 119,
+  "rows_scanned": 119,
+  "columns": [
+   "Type de prix",
+   "Edition",
+   "Mention",
+   "Prénom",
+   "Nom",
+   "Sexe",
+   "IdRef",
+   "projet_acronyme",
+   "projet_titre",
+   "programme_nom",
+   "project_id",
+   "projet_resume",
+   "structure_identifiant",
+   "structure_libelle",
+   "structure_sigle",
+   "commune_nom",
+   "region_nom",
+   "projet_lien_cordis"
+  ],
+  "matches": [],
+  "near_misses": []
+ },
+ "method": "All rows paged via France_Open_Data Tabular API (page_size 100). Accent/case-insensitive token match of every Prénom+Nom against 112 founder names; surname hits reviewed manually (first name required). Thesis titles, labs, establishments, project titles/acronyms/summaries and structure names scanned for 48 company names: no hits."
+}

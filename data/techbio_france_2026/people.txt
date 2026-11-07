@@ -1,0 +1,48 @@
+ai-biopharma: Claire Pierra Rouvière; Cyril Dousson; David Dukhan; Thierry Convard
+aqemia: Maximilien Levesque
+arcascience: Romain Clement
+ariana-pharmaceuticals: Mohammad Afshar
+beliver: Anne-Aurélie Raymond; Frédéric Saltel; Hadrien Mary; Madeleine Moscatelli
+biolevate: Anas Laaroussi; Joël Belafa; Nathan Chen
+bioptimus: David Cahané; Eric Durand; Jean-Philippe Vert; Rodolphe Jenatton; Felipe Llinares López; Zelda Mariet
+brink-therapeutics: Harry Kemble; Jonathan Naccache
+cherry-biotech: Jeremy Cramer
+cure51: Nicolas Wolikow; Simon Istolainen
+da-medlabs: Malick Paye
+deeplife: Jean-Baptiste Morlot; Jonathan Baptista
+dna-script: Sylvain Gariel; Thomas Ybert; Xavier Godron
+eligo-bioscience: David Bikard; Luciano Marraffini; Timothy Lu; Xavier Duportet
+endogenebio: María Teresa Pérez Zaballos; Cristina Fernández Molina
+eukarys: Benjamin Bertrand; Philippe Jais
+generare: Guillaume Vandenesch
+hyprview: François Auvray; Victor Outters
+iktos: Nicolas Do Huu; Quentin Perron; Yann Gaston-Mathé
+infocus-therapeutics-sas: Emily Hsiao Wei Fang
+insilibio: Maxime Jouaud; Patrick Trouillas
+inspek: Jérôme Michon
+karavela: Alexis Thual; Bertrand Thirion; Charles Maussion
+ksilink: Antoine de Lacombe; Mona Boyé; Ulf Nehrbass
+mabsilico-sas: Anne Poupon; Astrid Musnier; Thomas Bourquard; Vincent Puard
+medinsights: Soham Saha; Sophie Ameloot
+nebula: Mounir Tarek
+netri: Thibault Honegger; Florian Larramendy
+okomera: Aimée Wessel
+one-biosciences: David Schilansky; Céline Vallot; Hedi Ben Brahim; Magali Richard
+opsin: Jules Rainon; Lilas Germain; Valentin Uzan
+orakl-oncology: Fanny Jaulin; Diane-Laure Pagès
+oria-bioscience: Abdou Rachid Thiam; Marine Moutia
+owkin: Gilles Wainrib; Thomas Clozel
+parean-biotechnologies: Hang-Phuong Pham; Marwan Touati; Valentin Quiniou
+peaccel: Bernard Offmann; Frédéric Cadet
+phagos: Adèle James; Alexandros Pantalis
+poietis: Fabien Guillemot
+qubit-pharmaceuticals: Jean-Philip Piquemal
+rivercell: Yann Fleureau
+rosetta-omics: Kevin Adam; Wahid Awad
+scienta-lab: Camille Bouget; Julien Duquesne; Vincent Bouget
+spore-biotechnologies: Amine Raji; Mohamed Tazi; Maxime Mistretta
+tebuna: Minyoung Heo
+theremia: Iris Maréchal
+tychobio: Félix Raimundo; Mathurin Dorel
+whitelab-genomics: David Del Bourgo; Julien Cottineau; Lucia Cinquem
+zebramed: Valerio Laghi

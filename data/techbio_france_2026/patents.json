@@ -1,0 +1,3165 @@
+{
+ "companies": {
+  "ai-biopharma": {
+   "siren": "838199636",
+   "n_applications": 3,
+   "n_distinct_applications_incl_name_variants": 4,
+   "n_families": 1,
+   "offices": {
+    "WO": 1,
+    "CN": 1,
+    "EP": 1,
+    "US": 1
+   },
+   "first_year": 2020,
+   "last_year": 2020,
+   "families": [
+    {
+     "family": "68296040",
+     "applications": [
+      "CN202080071276A",
+      "EP20803098A",
+      "US202017769131A",
+      "WO2020079330WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Artificial Biopharmaceuticals Inc (CN filing; likely English name of Ai-biopharma)"
+     ],
+     "co_applicants_checked": true,
+     "title": "ANTI-VIRAL AND HEPATIC-TARGETED DRUGS",
+     "earliest_filing_date": "2020-10-19",
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "1 family; CN application under \"Artificial Biopharmaceuticals Inc\" (likely same entity)."
+  },
+  "aqemia": {
+   "siren": "851519702",
+   "n_applications": 1,
+   "n_distinct_applications_incl_name_variants": 1,
+   "n_families": 1,
+   "offices": {
+    "WO": 1
+   },
+   "first_year": 2024,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "86226464",
+     "applications": [
+      "WO2024058800WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Novalix",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 1 WO family co-filed with Novalix (CRO)."
+  },
+  "ariana-pharmaceuticals": {
+   "siren": "449727205",
+   "n_applications": 18,
+   "n_distinct_applications_incl_name_variants": 18,
+   "n_families": 3,
+   "offices": {
+    "US": 4,
+    "FR": 4,
+    "AU": 3,
+    "WO": 3,
+    "EP": 2,
+    "CA": 2
+   },
+   "first_year": 2011,
+   "last_year": 2021,
+   "families": [
+    {
+     "family": "44992977",
+     "applications": [
+      "AU2012215437A",
+      "CA2826065A",
+      "EP12702842A",
+      "FR1151022A",
+      "US201213984702A",
+      "US201715488614A",
+      "US201916553213A",
+      "US202117563107A",
+      "WO2012052234WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut national de la santé et de la recherche médicale",
+       "siren": "180036048",
+       "paysage_id": "bZiTA",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      },
+      {
+       "name": "Assistance publique - Hôpitaux de Paris",
+       "siren": "267500452",
+       "paysage_id": "Py0K5",
+       "kind": "hospital"
+      },
+      {
+       "name": "BIO-RAD INNOVATIONS",
+       "siren": "331348839",
+       "paysage_id": null,
+       "kind": "company"
+      },
+      {
+       "name": "Bio-Rad Europe",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "COMBINAISON DE BIOMARQUEURS POUR LA DETECTION ET L'EVALUATION D'UNE FIBROSE HEPATIQUE",
+     "earliest_filing_date": "2011-02-09",
+     "domain": null
+    },
+    {
+     "family": "44992978",
+     "applications": [
+      "AU2012215436A",
+      "FR1151028A",
+      "WO2012052232WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut national de la santé et de la recherche médicale",
+       "siren": "180036048",
+       "paysage_id": "bZiTA",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      },
+      {
+       "name": "Assistance publique - Hôpitaux de Paris",
+       "siren": "267500452",
+       "paysage_id": "Py0K5",
+       "kind": "hospital"
+      },
+      {
+       "name": "BIO-RAD INNOVATIONS",
+       "siren": "331348839",
+       "paysage_id": null,
+       "kind": "company"
+      },
+      {
+       "name": "Bio-Rad Europe",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "COMBINAISON DE BIOMARQUEURS POUR LE PRONOSTIC D'UNE REPONSE OU NON-REPONSE A UN TRAITEMENT ANTI-VHC",
+     "earliest_filing_date": "2011-02-09",
+     "domain": null
+    },
+    {
+     "family": "45524644",
+     "applications": [
+      "AU2012215435A",
+      "CA2826062A",
+      "EP12703312A",
+      "FR1151031A",
+      "FR1155004A",
+      "WO2012052231WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut national de la santé et de la recherche médicale",
+       "siren": "180036048",
+       "paysage_id": "bZiTA",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      },
+      {
+       "name": "Assistance publique - Hôpitaux de Paris",
+       "siren": "267500452",
+       "paysage_id": "Py0K5",
+       "kind": "hospital"
+      },
+      {
+       "name": "BIO-RAD INNOVATIONS",
+       "siren": "331348839",
+       "paysage_id": null,
+       "kind": "company"
+      },
+      {
+       "name": "Bio-Rad Europe",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "COMBINAISON DE BIOMARQUEURS POUR LE PRONOSTIC D'UNE REPONSE OU NON-REPONSE A UN TRAITEMENT ANTI-VHC",
+     "earliest_filing_date": "2011-02-09",
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "3 families (2011 HCV/liver-fibrosis biomarkers) co-owned with INSERM, CNRS, AP-HP and Bio-Rad."
+  },
+  "cherry-biotech": {
+   "siren": "801463902",
+   "n_applications": 11,
+   "n_distinct_applications_incl_name_variants": 11,
+   "n_families": 6,
+   "offices": {
+    "EP": 4,
+    "US": 2,
+    "FR": 2,
+    "WO": 2,
+    "ES": 1
+   },
+   "first_year": 2015,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "56464803",
+     "applications": [
+      "FR1500179A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "DISPOSITIF MICROFLUIDIQUE PERMETTANT DE MODIFIER LA GAMME DE PRESSION D'UN SYSTEME DE REGULATION POU...",
+     "earliest_filing_date": "2015-02-02",
+     "domain": null
+    },
+    {
+     "family": "65724141",
+     "applications": [
+      "EP19020108A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "METHODS AND APPARATUS TO PROVIDE ENVIRONMENTAL CONTROL IN BIOLOGICAL SAMPLES CONTAINED IN CELL-CULTU...",
+     "earliest_filing_date": "2019-03-06",
+     "domain": null
+    },
+    {
+     "family": "67262662",
+     "applications": [
+      "EP20163255A",
+      "ES20163255T",
+      "FR1902859A",
+      "US202016824074A",
+      "US202318162198A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Procédé d'enrichissement en gaz et simultanément de déplacement d'un fluide et dispositif pour le co...",
+     "earliest_filing_date": "2019-03-20",
+     "domain": null
+    },
+    {
+     "family": "73039775",
+     "applications": [
+      "EP20020498A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87377935",
+     "applications": [
+      "EP23306001A",
+      "WO2024067421WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "95201513",
+     "applications": [
+      "WO2023000015WRS"
+     ],
+     "co_applicants": [
+      {
+       "name": "Biosense Institute Research Institute For Information Technologies In Biosystems (RS)",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "6 families; Biosense Institute (Serbia) co-applicant on 1 recent WO."
+  },
+  "deeplife": {
+   "siren": "852661230",
+   "n_applications": 3,
+   "n_distinct_applications_incl_name_variants": 3,
+   "n_families": 1,
+   "offices": {
+    "US": 1,
+    "EP": 1,
+    "WO": 1
+   },
+   "first_year": 2021,
+   "last_year": 2021,
+   "families": [
+    {
+     "family": "69845291",
+     "applications": [
+      "EP21703482A",
+      "US202117929015A",
+      "WO2021053231WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "GENERATIVE DIGITAL TWIN OF COMPLEX SYSTEMS",
+     "earliest_filing_date": "2021-02-10",
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "1 family, sole applicant."
+  },
+  "dna-script": {
+   "siren": "801172834",
+   "n_applications": 261,
+   "n_distinct_applications_incl_name_variants": 268,
+   "n_families": 63,
+   "offices": {
+    "WO": 61,
+    "US": 51,
+    "EP": 41,
+    "CA": 24,
+    "CN": 23,
+    "AU": 23,
+    "IL": 14,
+    "KR": 13,
+    "FR": 7,
+    "SG": 6,
+    "DE": 2,
+    "NL": 2,
+    "ES": 1
+   },
+   "first_year": 2014,
+   "last_year": 2025,
+   "families": [
+    {
+     "family": "51610191",
+     "applications": [
+      "AU2015248673A",
+      "CA2945898A",
+      "EP15725739A",
+      "EP19195271A",
+      "FR1453455A",
+      "IL24823416A",
+      "KR20167032133A",
+      "US201515304701A",
+      "US201816216857A",
+      "US202017070707A",
+      "WO2015051022WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "PROCEDE DE SYNTHESE D'ACIDES NUCLEIQUES, NOTAMMENT D'ACIDES NUCLEIQUES DE GRANDE LONGUEUR, UTILISATI...",
+     "earliest_filing_date": "2014-04-17",
+     "domain": null
+    },
+    {
+     "family": "52102784",
+     "applications": [
+      "AU2015310781A",
+      "CA2958135A",
+      "CA3057218A",
+      "EP15766907A",
+      "EP18153938A",
+      "FR1458194A",
+      "IL25053917A",
+      "KR20177009072A",
+      "US201515507853A",
+      "WO2015052310WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "NUCLEOTIDES MODIFIES POUR LA SYNTHESE D'ACIDES NUCLEIQUES, UN KIT RENFERMANT DE TELS NUCLEOTIDES ET ...",
+     "earliest_filing_date": "2014-09-02",
+     "domain": null
+    },
+    {
+     "family": "56263809",
+     "applications": [
+      "FR1650804A",
+      "WO2017050215WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "INSTALLATION POUR LA MISE EN ŒUVRE D'UN PROCEDE DE SYNTHESE ENZYMATIQUE D'ACIDES NUCLEIQUES",
+     "earliest_filing_date": "2016-02-02",
+     "domain": null
+    },
+    {
+     "family": "57348782",
+     "applications": [
+      "AU2017286477A",
+      "AU2023282219A",
+      "CA3024184A",
+      "CN201780037427A",
+      "EP17746156A",
+      "FR1655475A",
+      "FR1756408A",
+      "IL26350318A",
+      "KR20187034921A",
+      "SG10202009688QA",
+      "SG11201809961TA",
+      "US201716309414A",
+      "US202217815490A",
+      "US202318516616A",
+      "WO2017051519WFR"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "VARIANTS OF A DNA POLYMERASE OF THE POLX FAMILY",
+     "earliest_filing_date": "2017-06-13",
+     "domain": null
+    },
+    {
+     "family": "59761887",
+     "applications": [
+      "EP18746717A",
+      "US201816636875A",
+      "US202217858801A",
+      "WO2018071217WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Variants of Family a Dna Polymerase and Uses Thereof",
+     "earliest_filing_date": "2018-08-06",
+     "domain": null
+    },
+    {
+     "family": "61027613",
+     "applications": [
+      "AU2019205606A",
+      "CA3087714A",
+      "CN201980017764A",
+      "EP19700226A",
+      "US201916242904A",
+      "WO2019050334WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "VARIANTS OF TERMINAL DEOXYNUCLEOTIDYL TRANSFERASE AND USES THEREOF",
+     "earliest_filing_date": "2019-01-08",
+     "domain": null
+    },
+    {
+     "family": "63528670",
+     "applications": [
+      "EP19758988A",
+      "US201917270409A",
+      "WO2019073135WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "METHOD FOR PREPARING 3'-O-AMINO-2'-DEOXYRIBONUCLEOSIDE-5'-TRIPHOSPHATE",
+     "earliest_filing_date": "2019-08-29",
+     "domain": null
+    },
+    {
+     "family": "65200741",
+     "applications": [
+      "AU2019417966A",
+      "CA3124763A",
+      "CN201980087736A",
+      "EP19829643A",
+      "IL28444121A",
+      "KR20217022202A",
+      "SG11202106445RA",
+      "US201917419637A",
+      "WO2019087048WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "One pot synthesis of sets of oligonucleotides",
+     "earliest_filing_date": "2019-12-26",
+     "domain": null
+    },
+    {
+     "family": "65635610",
+     "applications": [
+      "AU2020223456A",
+      "CA3129393A",
+      "CN202080013782A",
+      "EP20703474A",
+      "IL28536421A",
+      "KR20217025321A",
+      "SG11202107921SA",
+      "US202016981595A",
+      "US202217837660A",
+      "US202418411522A",
+      "WO2020053417WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "65657408",
+     "applications": [
+      "CN202080013711A",
+      "EP20705916A",
+      "US202017431103A",
+      "US202217726745A",
+      "WO2020053742WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "66668842",
+     "applications": [
+      "EP19177018A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "67436809",
+     "applications": [
+      "AU2019311199A",
+      "CA3106410A",
+      "CN201980062494A",
+      "EP19748705A",
+      "US201917259839A",
+      "US202519087343A",
+      "WO2019068183WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Massively parallel enzymatic synthesis of nucleic acid strands",
+     "earliest_filing_date": "2019-07-05",
+     "domain": null
+    },
+    {
+     "family": "67902356",
+     "applications": [
+      "CN202080062913A",
+      "EP20771251A",
+      "US202017636326A",
+      "WO2020075104WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Dna Sclerepret Company (CN garbled alias of DNA Script)"
+     ],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68062833",
+     "applications": [
+      "AU2020352503A",
+      "CA3151411A",
+      "CN202080066564A",
+      "EP20774982A",
+      "US202017636256A",
+      "WO2020076315WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68536875",
+     "applications": [
+      "AU2019379287A",
+      "CA3119845A",
+      "CN201980089035A",
+      "EP19801879A",
+      "IL28306821A",
+      "SG11202104601PA",
+      "US201917293017A",
+      "US202318504010A",
+      "WO2019081099WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68581348",
+     "applications": [
+      "AU2020384271A",
+      "CA3157418A",
+      "CN202080079169A",
+      "EP20837927A",
+      "IL29287422A",
+      "KR20227019235A",
+      "US202017775845A",
+      "WO2020081485WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68766789",
+     "applications": [
+      "AU2019398307A",
+      "CA3122494A",
+      "CN201980091982A",
+      "EP19813589A",
+      "EP24203665A",
+      "IL28383521A",
+      "KR20217021817A",
+      "SG11202105441WA",
+      "US201916970590A",
+      "US202117192578A",
+      "US202217687128A",
+      "WO2019084347WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68887331",
+     "applications": [
+      "AU2020401269A",
+      "CA3161087A",
+      "CN202080085472A",
+      "EP20819606A",
+      "IL29382022A",
+      "KR20227023746A",
+      "US202017783186A",
+      "WO2020085475WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68917622",
+     "applications": [
+      "CN202080096423A",
+      "EP20823832A",
+      "US202017786344A",
+      "WO2020086135WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "68981481",
+     "applications": [
+      "US201916423972A",
+      "US202016925785A",
+      "US202117544647A",
+      "US202418636074A",
+      "US202519088754A"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Variants of terminal deoxynucleotidyl transferase and uses thereof",
+     "earliest_filing_date": "2019-05-28",
+     "domain": null
+    },
+    {
+     "family": "69845811",
+     "applications": [
+      "CN202180016515A",
+      "EP21706941A",
+      "US202117802485A",
+      "WO2021054278WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "70294935",
+     "applications": [
+      "AU2021246815A",
+      "CA3172698A",
+      "EP21713979A",
+      "IL29681422A",
+      "KR20227037544A",
+      "US202117214245A",
+      "WO2021057835WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "70390759",
+     "applications": [
+      "AU2021260014A",
+      "CA3175780A",
+      "CN202180029834A",
+      "EP21717925A",
+      "IL29742522A",
+      "KR20227040201A",
+      "US202117919649A",
+      "WO2021059861WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "70802875",
+     "applications": [
+      "AU2020281709A",
+      "CA3140498A",
+      "CA3220481A",
+      "CN202080038763A",
+      "EP20727647A",
+      "EP24179144A",
+      "ES20727647T",
+      "WO2020064524WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [
+      "Dna Sclerepret Company (CN garbled alias of DNA Script)"
+     ],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "71103283",
+     "applications": [
+      "AU2021290908A",
+      "CA3182608A",
+      "CN202180042890A",
+      "EP21731194A",
+      "EP25176903A",
+      "IL29916422A",
+      "KR20237001608A",
+      "US202118010424A",
+      "WO2021065904WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "71741809",
+     "applications": [
+      "AU2020319829A",
+      "CA3145783A",
+      "CN202080055871A",
+      "EP20744061A",
+      "IL29012722A",
+      "KR20227006177A",
+      "US202017629316A",
+      "WO2020071314WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "71741810",
+     "applications": [
+      "AU2020319661A",
+      "CA3145912A",
+      "CN202080055865A",
+      "EP20744062A",
+      "IL29019922A",
+      "KR20227006178A",
+      "US202017629322A",
+      "WO2020071316WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "73554343",
+     "applications": [
+      "EP21799213A",
+      "US202118033787A",
+      "WO2021079254WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "73554345",
+     "applications": [
+      "EP21802240A",
+      "US202118034487A",
+      "WO2021079847WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "75588160",
+     "applications": [
+      "AU2022249826A",
+      "CA3210255A",
+      "CN202280025684A",
+      "DE102022107811A",
+      "EP22713690A",
+      "FR2202989A",
+      "NL2031471A",
+      "WO2022058814WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Dna Script Inc (US affiliate)"
+     ],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "76744848",
+     "applications": [
+      "EP21737100A",
+      "US202118014993A",
+      "WO2021069162WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "76807570",
+     "applications": [
+      "AU2022290635A",
+      "CA3221361A",
+      "CN202280040533A",
+      "DE102022114351A",
+      "EP22733593A",
+      "FR2205582A",
+      "NL2032097A",
+      "US202218568729A",
+      "WO2022065839WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Dna Script Inc (US affiliate)"
+     ],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "77447767",
+     "applications": [
+      "EP22754399A",
+      "US202218686319A",
+      "WO2022070699WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "77989821",
+     "applications": [
+      "AU2021347452A",
+      "CA3193386A",
+      "EP21782523A",
+      "US202118027594A",
+      "WO2021076073WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "79601564",
+     "applications": [
+      "EP22817897A",
+      "US202218709291A",
+      "WO2022081551WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "79601951",
+     "applications": [
+      "AU2022388772A",
+      "CA3236657A",
+      "CN202280074737A",
+      "EP22817601A",
+      "US202218709292A",
+      "WO2022081547WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82319792",
+     "applications": [
+      "WO2023056144WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82482550",
+     "applications": [
+      "WO2023056143WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "83438904",
+     "applications": [
+      "WO2023069270WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "83505715",
+     "applications": [
+      "WO2023069277WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84331075",
+     "applications": [
+      "WO2023069281WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84359035",
+     "applications": [
+      "WO2023078926WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84568871",
+     "applications": [
+      "CN202380052013A",
+      "EP23741064A",
+      "WO2023069431WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84785146",
+     "applications": [
+      "WO2023084831WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85076492",
+     "applications": [
+      "WO2023087965WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85175743",
+     "applications": [
+      "WO2023078364WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85199053",
+     "applications": [
+      "WO2024050196WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85283720",
+     "applications": [
+      "WO2024050931WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85505528",
+     "applications": [
+      "WO2023056204WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85505698",
+     "applications": [
+      "EP23709445A",
+      "US202318845784A",
+      "WO2023056160WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85685592",
+     "applications": [
+      "WO2023087966WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87280956",
+     "applications": [
+      "WO2024066486WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87429412",
+     "applications": [
+      "WO2024068301WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "88017973",
+     "applications": [
+      "WO2024071282WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "88778293",
+     "applications": [
+      "WO2024080046WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "88779367",
+     "applications": [
+      "WO2024050477WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "89073124",
+     "applications": [
+      "WO2024080794WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "89076177",
+     "applications": [
+      "WO2023084053WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "89573453",
+     "applications": [
+      "WO2024087133WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "89573933",
+     "applications": [
+      "WO2024087177WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "89662175",
+     "applications": [
+      "WO2024050932WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "89767162",
+     "applications": [
+      "WO2024051963WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "91030388",
+     "applications": [
+      "US202418654906A",
+      "US202418931309A",
+      "WO2024062042WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "63 families via SIREN. Co-applicants checked for a SAMPLE of 20 families (15 earliest + all FR-origin + multi-applicant hints); unsampled families not checked. Institut Pasteur + CNRS co-own the core TdT/polymerase-variant families. CN filings appear under alias \"Dna Script Inc\"/\"Dna Sclerepret Company\"."
+  },
+  "eligo-bioscience": {
+   "siren": "802255372",
+   "n_applications": 156,
+   "n_distinct_applications_incl_name_variants": 157,
+   "n_families": 30,
+   "offices": {
+    "US": 56,
+    "WO": 25,
+    "EP": 20,
+    "IL": 15,
+    "CA": 14,
+    "KR": 11,
+    "CN": 6,
+    "DK": 4,
+    "DE": 4,
+    "ES": 1,
+    "JP": 1
+   },
+   "first_year": 2016,
+   "last_year": 2025,
+   "families": [
+    {
+     "family": "56511555",
+     "applications": [
+      "EP16741899A",
+      "US201615744039A",
+      "US201916671978A",
+      "US202217831507A",
+      "WO2016066702WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "IMPROVING SEQUENCE-SPECIFIC ANTIMICROBIALS BY BLOCKING DNA REPAIR",
+     "earliest_filing_date": "2016-07-13",
+     "domain": null
+    },
+    {
+     "family": "58428223",
+     "applications": [
+      "CA3049511A",
+      "CN201880010298A",
+      "DE18705108T",
+      "DK18705108T",
+      "EP17305126A",
+      "EP18705108A",
+      "IL26793219A",
+      "IL31247624A",
+      "KR20197025232A",
+      "US201816482458A",
+      "US201916527762A",
+      "US202017017111A",
+      "US202117356079A",
+      "US202418582939A",
+      "WO2018052662WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Pasteur",
+       "siren": "775684897",
+       "paysage_id": "Sn8Nt",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "OPTIMIZED VECTOR FOR DELIVERY IN MICROBIAL POPULATIONS",
+     "earliest_filing_date": "2017-02-03",
+     "domain": null
+    },
+    {
+     "family": "62909472",
+     "applications": [
+      "DE18305781T",
+      "DE19732334T",
+      "DK18305781T",
+      "DK19732334T",
+      "EP18305781A",
+      "EP19732334A",
+      "US201916444576A",
+      "US202117406437A",
+      "US202418598495A",
+      "WO2019066104WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "BAKTERIELLES FREISETZUNGSVEHIKEL, VERFAHREN ZUR HERSTELLUNG UND VERWENDUNGEN DAVON [bacterial delivery vehicles, methods of production and uses]",
+     "earliest_filing_date": "2018-06-20",
+     "domain": null
+    },
+    {
+     "family": "68731980",
+     "applications": [
+      "CA3120615A",
+      "CN201980090328A",
+      "EP19812752A",
+      "EP24154185A",
+      "IL28308921A",
+      "KR20217019192A",
+      "US201916696769A",
+      "US202016816675A",
+      "US202117527754A",
+      "US202318301667A",
+      "WO2019082640WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "用于细菌递送媒介物中的嵌合受体结合蛋白 [chimeric receptor-binding proteins for use in bacterial delivery vehicles]",
+     "earliest_filing_date": "2019-11-26",
+     "domain": null
+    },
+    {
+     "family": "69845429",
+     "applications": [
+      "CA3131634A",
+      "CN202080035765A",
+      "EP20711916A",
+      "IL28621921A",
+      "JP2024207723A",
+      "US202016819935A",
+      "US202318154299A",
+      "US202418598135A",
+      "WO2020057112WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "TRANSCRIPTIONAL CONTROL IN PROKARYOTIC CELLS USING DNA-BINDING REPRESSORS",
+     "earliest_filing_date": "2020-03-16",
+     "domain": null
+    },
+    {
+     "family": "71099290",
+     "applications": [
+      "US201916726033A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "71101098",
+     "applications": [
+      "CA3120160A",
+      "CN201980085305A",
+      "EP19829637A",
+      "IL28379621A",
+      "KR20217022651A",
+      "WO2019086990WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "用于细菌递送媒介物中的分支受体结合多亚基蛋白复合物 [branched receptor-binding multi-subunit protein complexes for use in bacterial delivery vehicles]",
+     "earliest_filing_date": "2019-12-23",
+     "domain": null
+    },
+    {
+     "family": "71111434",
+     "applications": [
+      "CA3143081A",
+      "EP20733970A",
+      "IL28873121A",
+      "US202016905656A",
+      "US202217864757A",
+      "WO2020067014WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "BACTERIAL DELIVERY VEHICLES COMPRISING TRACER NUCLEIC ACID SEQUENCES",
+     "earliest_filing_date": "2020-06-18",
+     "domain": null
+    },
+    {
+     "family": "74186654",
+     "applications": [
+      "US202017138084A",
+      "WO2020088043WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "BACTERIAL DELIVERY VEHICLES FOR IN VIVO DELIVERY OF A DNA PAYLOAD",
+     "earliest_filing_date": "2020-12-30",
+     "domain": null
+    },
+    {
+     "family": "75441923",
+     "applications": [
+      "CA3174093A",
+      "CN202180026017A",
+      "EP21717853A",
+      "IL29603722A",
+      "KR20227038312A",
+      "US202117225869A",
+      "US202117501110A",
+      "US202217716313A",
+      "US202218052379A",
+      "US202318319158A",
+      "WO2021059229WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "MODULATION OF MICROBIOTA FUNCTION BY GENE THERAPY OF THE MICROBIOME TO PREVENT, TREAT OR CURE MICROB...",
+     "earliest_filing_date": "2021-04-08",
+     "domain": null
+    },
+    {
+     "family": "76305847",
+     "applications": [
+      "DE21179356T",
+      "DK21179356T",
+      "EP21179356A",
+      "ES21179356T",
+      "US202118001504A",
+      "WO2021065986WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "76845232",
+     "applications": [
+      "US202118001782A",
+      "WO2021068547WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "78006404",
+     "applications": [
+      "US202117225854A",
+      "US202318159482A"
+     ],
+     "co_applicants": [
+      {
+       "name": "Kantonsspital St Gallen (CH)",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "hospital"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "78621842",
+     "applications": [
+      "CA3198876A",
+      "CA3198924A",
+      "EP21807016A",
+      "EP21811262A",
+      "IL30244823A",
+      "IL30244923A",
+      "KR20237016219A",
+      "KR20237018109A",
+      "US202117518936A",
+      "US202117518960A",
+      "US202217821940A",
+      "US202318477069A",
+      "US202318478500A",
+      "US202418617782A",
+      "WO2021080667WEP",
+      "WO2021080675WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "80001285",
+     "applications": [
+      "WO2021087774WEP",
+      "WO2021087775WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "80356412",
+     "applications": [
+      "US202117527766A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "81186023",
+     "applications": [
+      "US202117564625A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "81325167",
+     "applications": [
+      "CA3213821A",
+      "EP22717364A",
+      "IL30583923A",
+      "US202217698091A",
+      "US202218063267A",
+      "WO2022057237WEP",
+      "WO2022057242WEP",
+      "WO2022057247WEP",
+      "WO2022057251WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "81344298",
+     "applications": [
+      "US202217698075A",
+      "US202318185696A",
+      "US202519018554A",
+      "WO2022057233WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "81378844",
+     "applications": [
+      "US202117565060A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82021095",
+     "applications": [
+      "CA3219077A",
+      "CA3219207A",
+      "EP22730074A",
+      "EP22733516A",
+      "IL30814723A",
+      "IL30817223A",
+      "KR20237039930A",
+      "KR20237039931A",
+      "US202217742671A",
+      "US202217742693A",
+      "US202318319918A",
+      "US202318348910A",
+      "US202418424461A",
+      "US202418590560A",
+      "WO2022062983WEP",
+      "WO2022062987WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82309488",
+     "applications": [
+      "CA3164131A",
+      "CN202080097730A",
+      "EP20842245A",
+      "IL29422122A",
+      "KR20227025872A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84331744",
+     "applications": [
+      "WO2022077867WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84332370",
+     "applications": [
+      "WO2022077865WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85798168",
+     "applications": [
+      "US202217938509A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "86056321",
+     "applications": [
+      "US202217938539A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "86146598",
+     "applications": [
+      "US202218067908A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87424019",
+     "applications": [
+      "CA3205876A",
+      "CA3206312A",
+      "EP21847963A",
+      "EP21847964A",
+      "IL30402023A",
+      "IL30405023A",
+      "KR20237025323A",
+      "KR20237025458A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "92108410",
+     "applications": [
+      "US202418782965A",
+      "WO2024071001WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "92799047",
+     "applications": [
+      "US202318348929A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "All 30 families checked. Institut Pasteur co-owns the 2 founding families (2015-2017, CRISPR antimicrobials/delivery vector); Kantonsspital St Gallen co-owns 1 US family."
+  },
+  "endogenebio": {
+   "siren": "910384999",
+   "n_applications": 2,
+   "n_distinct_applications_incl_name_variants": 2,
+   "n_families": 1,
+   "offices": {
+    "WO": 1,
+    "FR": 1
+   },
+   "first_year": 2023,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "90971431",
+     "applications": [
+      "FR2315089A",
+      "WO2024000753WIB"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "SIREN 910384999 no hits; name match \"Endogene Bio\": 1 family (FR2315089 + WO2024000753), sole applicant."
+  },
+  "eukarys": {
+   "siren": "523344588",
+   "n_applications": 23,
+   "n_distinct_applications_incl_name_variants": 24,
+   "n_families": 3,
+   "offices": {
+    "US": 4,
+    "EP": 4,
+    "WO": 3,
+    "AU": 2,
+    "CA": 2,
+    "IL": 2,
+    "CN": 2,
+    "KR": 2,
+    "SG": 1,
+    "DK": 1,
+    "ES": 1
+   },
+   "first_year": 2010,
+   "last_year": 2023,
+   "families": [
+    {
+     "family": "42358243",
+     "applications": [
+      "CA2796175A",
+      "DK11714562T",
+      "EP10305400A",
+      "EP11714562A",
+      "ES11714562T",
+      "IL22235712A",
+      "KR20127030027A",
+      "SG2012076899A",
+      "US201113641584A",
+      "US201514598874A",
+      "WO2011056051WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Capping-prone RNA polymerase enzymes and their applications",
+     "earliest_filing_date": "2010-04-16",
+     "domain": null
+    },
+    {
+     "family": "59772551",
+     "applications": [
+      "AU2018308684A",
+      "CN201880062068A",
+      "EP18743535A",
+      "US201816634429A",
+      "WO2018070479WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "NEW CHIMERIC ENZYMES AND THEIR APPLICATIONS",
+     "earliest_filing_date": "2018-07-27",
+     "domain": null
+    },
+    {
+     "family": "72292480",
+     "applications": [
+      "AU2021322707A",
+      "CA3188036A",
+      "CN202180058077A",
+      "EP21761985A",
+      "IL30013923A",
+      "KR20237006313A",
+      "US202118017967A",
+      "WO2021071698WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Eukaris Ukovanis (CN transliteration of Eukarys)"
+     ],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "3 families, sole applicant (CN alias \"Eukaris Ukovanis\")."
+  },
+  "generare": {
+   "siren": "920335072",
+   "n_applications": 1,
+   "n_distinct_applications_incl_name_variants": 1,
+   "n_families": 1,
+   "offices": {
+    "WO": 1
+   },
+   "first_year": 2025,
+   "last_year": 2025,
+   "families": [
+    {
+     "family": "90122974",
+     "applications": [
+      "WO2025052574WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only (\"Generare Bioscience\"). 1 WO family, sole applicant."
+  },
+  "hyprview": {
+   "siren": "912839370",
+   "n_applications": 2,
+   "n_distinct_applications_incl_name_variants": 2,
+   "n_families": 2,
+   "offices": {
+    "EP": 2
+   },
+   "first_year": 2022,
+   "last_year": 2022,
+   "families": [
+    {
+     "family": "84982264",
+     "applications": [
+      "EP22315340A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "84982284",
+     "applications": [
+      "EP22315339A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 2 EP families, sole applicant."
+  },
+  "iktos": {
+   "siren": "823189279",
+   "n_applications": 1,
+   "n_distinct_applications_incl_name_variants": 1,
+   "n_families": 1,
+   "offices": {
+    "WO": 1
+   },
+   "first_year": 2024,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "86330318",
+     "applications": [
+      "WO2024062085WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Université Évry Paris-Saclay",
+       "siren": "199119751",
+       "paysage_id": "RN4E6",
+       "kind": "university"
+      },
+      {
+       "name": "Institut national de la santé et de la recherche médicale",
+       "siren": "180036048",
+       "paysage_id": "bZiTA",
+       "kind": "research"
+      },
+      {
+       "name": "Synsight Genopole Entreprises",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only (no SIREN on rows). 1 family co-owned with INSERM, Université Évry Paris-Saclay and Synsight (EP filed by Synsight/INSERM/Évry; WO adds Iktos)."
+  },
+  "inspek": {
+   "siren": "902163963",
+   "n_applications": 3,
+   "n_distinct_applications_incl_name_variants": 3,
+   "n_families": 1,
+   "offices": {
+    "FR": 1,
+    "WO": 1,
+    "EP": 1
+   },
+   "first_year": 2023,
+   "last_year": 2023,
+   "families": [
+    {
+     "family": "86604649",
+     "applications": [
+      "EP23837657A",
+      "FR2302333A",
+      "WO2023087454WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 1 family, sole applicant."
+  },
+  "netri": {
+   "siren": "840248744",
+   "n_applications": 28,
+   "n_distinct_applications_incl_name_variants": 28,
+   "n_families": 7,
+   "offices": {
+    "WO": 7,
+    "FR": 7,
+    "EP": 5,
+    "US": 3,
+    "CN": 3,
+    "KR": 2,
+    "IL": 1
+   },
+   "first_year": 2019,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "67107691",
+     "applications": [
+      "CN202080026012A",
+      "EP20705241A",
+      "FR1900801A",
+      "KR20217027529A",
+      "US202017426991A",
+      "WO2020050097WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Procédé de fabrication de dispositifs microfluidiques 3D",
+     "earliest_filing_date": "2019-01-29",
+     "domain": null
+    },
+    {
+     "family": "67107735",
+     "applications": [
+      "CN202080013399A",
+      "EP20706788A",
+      "FR1901210A",
+      "KR20217028698A",
+      "US202017429502A",
+      "WO2020050129WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "Procédé assisté par ordinateur de détermination d'une architecture de circuit microfluidique reprodu...",
+     "earliest_filing_date": "2019-02-07",
+     "domain": null
+    },
+    {
+     "family": "73013619",
+     "applications": [
+      "FR2007653A",
+      "WO2021051253WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82319771",
+     "applications": [
+      "EP23714806A",
+      "FR2202944A",
+      "WO2023050349WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82385469",
+     "applications": [
+      "EP23714807A",
+      "FR2202942A",
+      "WO2023050350WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82594685",
+     "applications": [
+      "CN202380032714A",
+      "EP23709239A",
+      "FR2201131A",
+      "IL31485724A",
+      "US202318836873A",
+      "WO2023050180WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "86657253",
+     "applications": [
+      "FR2300385A",
+      "WO2024050057WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "7 families, sole applicant."
+  },
+  "okomera": {
+   "siren": "884940024",
+   "n_applications": 2,
+   "n_distinct_applications_incl_name_variants": 2,
+   "n_families": 1,
+   "offices": {
+    "EP": 1,
+    "WO": 1
+   },
+   "first_year": 2023,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "87473825",
+     "applications": [
+      "EP23306190A",
+      "WO2024069579WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 1 family, sole applicant."
+  },
+  "one-biosciences": {
+   "siren": "884033531",
+   "n_applications": 2,
+   "n_distinct_applications_incl_name_variants": 2,
+   "n_families": 1,
+   "offices": {
+    "WO": 1,
+    "US": 1
+   },
+   "first_year": 2023,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "91968983",
+     "applications": [
+      "US202318355589A",
+      "WO2024070475WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Institut Curie",
+       "siren": "784257164",
+       "paysage_id": "etRot",
+       "kind": "research"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      },
+      {
+       "name": "Sorbonne Université",
+       "siren": "130023385",
+       "paysage_id": "bxPQe",
+       "kind": "university"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 1 family co-owned with Institut Curie, CNRS, Sorbonne Université."
+  },
+  "owkin": {
+   "siren": "822393591",
+   "n_applications": 37,
+   "n_distinct_applications_incl_name_variants": 24,
+   "n_families": 5,
+   "offices": {
+    "US": 11,
+    "WO": 4,
+    "EP": 4,
+    "CA": 3,
+    "CN": 1,
+    "AU": 1
+   },
+   "first_year": 2020,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "67988947",
+     "applications": [
+      "CA3145371A",
+      "CN202080054276A",
+      "EP20743831A",
+      "US202117183329A",
+      "US202318100543A",
+      "WO2020056037WIB"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Orkin Inc (CN misspelling of Owkin Inc)"
+     ],
+     "co_applicants_checked": true,
+     "title": "SYSTEMS AND METHODS FOR IMAGE PREPROCESSING",
+     "earliest_filing_date": "2020-06-25",
+     "domain": null
+    },
+    {
+     "family": "67997544",
+     "applications": [
+      "CA3145370A",
+      "EP20743827A",
+      "US202117185924A",
+      "US202218091988A",
+      "WO2020056030WIB"
+     ],
+     "co_applicants": [
+      {
+       "name": "Centre de lutte contre le cancer Léon-Bérard",
+       "siren": "779924133",
+       "paysage_id": "rSj62",
+       "kind": "hospital"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "SYSTEMS AND METHODS FOR MESOTHELIOMA FEATURE DETECTION AND ENHANCED PROGNOSIS OR RESPONSE TO TREATME...",
+     "earliest_filing_date": "2020-06-25",
+     "domain": null
+    },
+    {
+     "family": "71836544",
+     "applications": [
+      "US202016778179A",
+      "US202117183321A",
+      "US202218049205A",
+      "US202418751788A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "SYSTEMS AND METHODS FOR IMAGE CLASSIFICATION",
+     "earliest_filing_date": "2020-01-31",
+     "domain": null
+    },
+    {
+     "family": "74141298",
+     "applications": [
+      "CA3203165A",
+      "EP21830571A",
+      "US202118254693A",
+      "WO2021061417WUS"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "78073870",
+     "applications": [
+      "AU2022345851A",
+      "EP22802307A",
+      "US202218186111A",
+      "US202318127566A",
+      "WO2022043692WUS"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "All 5 families checked. Owkin France + Owkin Inc; Centre Léon Bérard co-owns mesothelioma family. Some rows carry no SIREN (Owkin Inc) - added as extra applications. \"Orkin Inc\" = CN misspelling."
+  },
+  "peaccel": {
+   "siren": "530983352",
+   "n_applications": 16,
+   "n_distinct_applications_incl_name_variants": 17,
+   "n_families": 3,
+   "offices": {
+    "EP": 3,
+    "US": 2,
+    "WO": 2,
+    "DK": 2,
+    "BR": 1,
+    "KR": 1,
+    "CN": 1,
+    "SG": 1,
+    "CA": 1,
+    "IL": 1,
+    "AU": 1,
+    "MX": 1
+   },
+   "first_year": 2015,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "52875643",
+     "applications": [
+      "AU2016247474A",
+      "BR112017022196A",
+      "CA2982608A",
+      "CN202210595983A",
+      "DK15305552T",
+      "EP15305552A",
+      "IL25497617A",
+      "KR20177029593A",
+      "MX2017013195A",
+      "SG11201708457VA",
+      "US201615565893A"
+     ],
+     "co_applicants": [],
+     "aliases": [
+      "Piacell Inc (CN transliteration of Peaccel)"
+     ],
+     "co_applicants_checked": true,
+     "title": "Fremgangsmåde og elektronisk system til forudsigelse af mindst en fitnessværdi af et protein... [Method and electronic system for predicting at least one fitness value of a protein]",
+     "earliest_filing_date": "2015-04-14",
+     "domain": null
+    },
+    {
+     "family": "63103878",
+     "applications": [
+      "DK18305994T",
+      "EP18305994A",
+      "US201917261341A",
+      "WO2019069389WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "METHOD AND ELECTRONIC SYSTEM FOR PREDICTING AT LEAST ONE FITNESS VALUE OF A PROTEIN VIA AN EXTENDED ...",
+     "earliest_filing_date": "2018-07-20",
+     "domain": null
+    },
+    {
+     "family": "86383148",
+     "applications": [
+      "EP23305568A",
+      "WO2024059981WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "3 families, sole applicant (CN alias \"Piacell Inc\")."
+  },
+  "poietis": {
+   "siren": "804776797",
+   "n_applications": 56,
+   "n_distinct_applications_incl_name_variants": 56,
+   "n_families": 12,
+   "offices": {
+    "WO": 12,
+    "FR": 11,
+    "US": 8,
+    "EP": 8,
+    "KR": 5,
+    "CN": 4,
+    "ES": 3,
+    "FI": 1,
+    "SI": 1,
+    "PT": 1,
+    "DK": 1,
+    "LT": 1
+   },
+   "first_year": 2017,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "58707847",
+     "applications": [
+      "EP18712975A",
+      "ES18712975T",
+      "FR1752129A",
+      "KR20197030350A",
+      "US201816494649A",
+      "WO2018050533WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "EQUIPEMENT POUR LE TRANSFERT DE BIO-ENCRE",
+     "earliest_filing_date": "2017-03-15",
+     "domain": null
+    },
+    {
+     "family": "58707848",
+     "applications": [
+      "CN201880018035A",
+      "EP18712976A",
+      "ES18712976T",
+      "FR1752130A",
+      "KR20197030352A",
+      "US201816494693A",
+      "WO2018050534WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "PROCEDE DE BIOIMPRESSION",
+     "earliest_filing_date": "2017-03-15",
+     "domain": null
+    },
+    {
+     "family": "59520986",
+     "applications": [
+      "EP18712977A",
+      "ES18712977T",
+      "FR1752131A",
+      "KR20197030353A",
+      "US201816494737A",
+      "WO2018050536WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "EQUIPEMENT ET PROCEDE D'IMPRESSION ADDITIVE",
+     "earliest_filing_date": "2017-03-15",
+     "domain": null
+    },
+    {
+     "family": "63312081",
+     "applications": [
+      "EP19740640A",
+      "FR1854944A",
+      "US201916972105A",
+      "WO2019051367WFR"
+     ],
+     "co_applicants": [
+      {
+       "name": "URGO RECHERCHE INNOVATION ET DEVELOPPEMENT",
+       "siren": "798262713",
+       "paysage_id": null,
+       "kind": "company"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "PANSEMENT CELLULARISE ET SON PROCEDE DE FABRICATION",
+     "earliest_filing_date": "2018-06-07",
+     "domain": null
+    },
+    {
+     "family": "65763556",
+     "applications": [
+      "CN201980068570A",
+      "EP19813109A",
+      "FR1859889A",
+      "KR20217015699A",
+      "US201917287873A",
+      "US202418667541A",
+      "WO2019052541WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "DISPOSITIF DE BIO-IMPRESSION ISOLE",
+     "earliest_filing_date": "2018-10-25",
+     "domain": null
+    },
+    {
+     "family": "66166052",
+     "applications": [
+      "CN201980068583A",
+      "CN202410546728A",
+      "EP19813628A",
+      "FR1859891A",
+      "KR20217015701A",
+      "US201917288467A",
+      "WO2019052542WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "SYSTEME DE BIO-IMPRESSION ROBOTISE",
+     "earliest_filing_date": "2018-10-25",
+     "domain": null
+    },
+    {
+     "family": "67185439",
+     "applications": [
+      "DK20731168T",
+      "EP20731168A",
+      "FI20731168T",
+      "FR1902998A",
+      "LTFR2020050616T",
+      "PT20731168T",
+      "SI202030347T",
+      "US202017439633A",
+      "WO2020050616WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": "CARTOUCHE POUR BIOIMPRESSION",
+     "earliest_filing_date": "2019-03-22",
+     "domain": null
+    },
+    {
+     "family": "74347199",
+     "applications": [
+      "FR2009845A",
+      "WO2021051595WFR"
+     ],
+     "co_applicants": [
+      {
+       "name": "Université de Bordeaux",
+       "siren": "130018351",
+       "paysage_id": "90I54",
+       "kind": "university"
+      },
+      {
+       "name": "Centre hospitalier universitaire de Bordeaux",
+       "siren": "263305823",
+       "paysage_id": "y6vA7",
+       "kind": "hospital"
+      },
+      {
+       "name": "Institut national de la santé et de la recherche médicale",
+       "siren": "180036048",
+       "paysage_id": "bZiTA",
+       "kind": "research"
+      },
+      {
+       "name": "Fondation Bordeaux Université",
+       "siren": "803802107",
+       "paysage_id": "A4Tn5",
+       "kind": "university"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "78827881",
+     "applications": [
+      "EP22744258A",
+      "FR2106803A",
+      "WO2022051206WFR"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "82308492",
+     "applications": [
+      "WO2023067340WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "KU Leuven (BE)",
+       "siren": null,
+       "paysage_id": "3hr5X",
+       "kind": "university"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85222017",
+     "applications": [
+      "FR2210885A",
+      "WO2023079252WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87035965",
+     "applications": [
+      "FR2210891A",
+      "WO2023079253WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "All 12 families checked. Univ. Bordeaux/CHU Bordeaux/INSERM/Fondation Bordeaux Université on 1 family; KU Leuven on 1; URGO R&D (corporate partner) on cellularised dressing family."
+  },
+  "qubit-pharmaceuticals": {
+   "siren": "883649238",
+   "n_applications": 7,
+   "n_distinct_applications_incl_name_variants": 11,
+   "n_families": 7,
+   "offices": {
+    "WO": 7,
+    "EP": 4
+   },
+   "first_year": 2021,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "78483228",
+     "applications": [
+      "EP21306368A",
+      "EP22801349A",
+      "WO2022077414WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      },
+      {
+       "name": "Sorbonne Université",
+       "siren": "130023385",
+       "paysage_id": "bxPQe",
+       "kind": "university"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "85873751",
+     "applications": [
+      "WO2024051574WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87201930",
+     "applications": [
+      "EP23305614A",
+      "WO2024060930WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Pasqal S A S",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      },
+      {
+       "name": "Sorbonne Université",
+       "siren": "130023385",
+       "paysage_id": "bxPQe",
+       "kind": "university"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87202030",
+     "applications": [
+      "EP23305613A",
+      "WO2024060924WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Pasqal S A S",
+       "siren": null,
+       "paysage_id": null,
+       "kind": "company"
+      },
+      {
+       "name": "Sorbonne Université",
+       "siren": "130023385",
+       "paysage_id": "bxPQe",
+       "kind": "university"
+      },
+      {
+       "name": "Centre national de la recherche scientifique",
+       "siren": "180089013",
+       "paysage_id": "n2X5f",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": false,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "87933776",
+     "applications": [
+      "WO2024068523WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "94278613",
+     "applications": [
+      "WO2024088275WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "94283874",
+     "applications": [
+      "WO2024088272WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "siren",
+   "notes": "5 families via SIREN + 2 more under \"Qubit Pharmaceuticals S A S\" (no SIREN) found by name, co-owned with Pasqal, CNRS, Sorbonne. SIREN family 78483228 co-owned with CNRS + Sorbonne Université."
+  },
+  "scienta-lab": {
+   "siren": "900344748",
+   "n_applications": 2,
+   "n_distinct_applications_incl_name_variants": 2,
+   "n_families": 1,
+   "offices": {
+    "FR": 1,
+    "WO": 1
+   },
+   "first_year": 2023,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "88965607",
+     "applications": [
+      "FR2307172A",
+      "WO2024069039WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 1 family, sole applicant."
+  },
+  "spore-biotechnologies": {
+   "siren": "922166996",
+   "n_applications": 3,
+   "n_distinct_applications_incl_name_variants": 3,
+   "n_families": 2,
+   "offices": {
+    "FR": 2,
+    "WO": 1
+   },
+   "first_year": 2024,
+   "last_year": 2025,
+   "families": [
+    {
+     "family": "91620988",
+     "applications": [
+      "FR2400617A",
+      "FR2408282A"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    },
+    {
+     "family": "94476410",
+     "applications": [
+      "WO2025051576WEP"
+     ],
+     "co_applicants": [],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 2 families, sole applicant."
+  },
+  "whitelab-genomics": {
+   "siren": "847935046",
+   "n_applications": 2,
+   "n_distinct_applications_incl_name_variants": 2,
+   "n_families": 1,
+   "offices": {
+    "WO": 1,
+    "EP": 1
+   },
+   "first_year": 2023,
+   "last_year": 2024,
+   "families": [
+    {
+     "family": "86469413",
+     "applications": [
+      "EP23305584A",
+      "WO2024060442WEP"
+     ],
+     "co_applicants": [
+      {
+       "name": "Généthon",
+       "siren": "402187520",
+       "paysage_id": "zEW3d",
+       "kind": "research"
+      }
+     ],
+     "aliases": [],
+     "co_applicants_checked": true,
+     "title": null,
+     "earliest_filing_date": null,
+     "domain": null
+    }
+   ],
+   "matched_by": "name",
+   "notes": "Name match only. 1 family; WO co-owned with Généthon."
+  }
+ },
+ "no_patents": [
+  "arcascience",
+  "beliver",
+  "biolevate",
+  "bioptimus",
+  "brink-therapeutics",
+  "cure51",
+  "da-medlabs",
+  "infocus-therapeutics-sas",
+  "insilibio",
+  "karavela",
+  "ksilink",
+  "mabsilico-sas",
+  "medinsights",
+  "nebula",
+  "opsin",
+  "orakl-oncology",
+  "oria-bioscience",
+  "parean-biotechnologies",
+  "phagos",
+  "rivercell",
+  "rosetta-omics",
+  "tebuna",
+  "theremia",
+  "tychobio",
+  "zebramed"
+ ],
+ "method": {
+  "source": "Déposants des brevets, resource 7744f1fc-f7be-40cb-9511-2ca6e7ce5031 (MESR, data.gouv.fr), queried via France_Open_Data MCP Tabular API",
+  "n_applications": "rows matched by SIREN (applicant rows; an application can appear twice e.g. Owkin France + Owkin Inc). For name matches, distinct applications.",
+  "years": "Parsed from key_appln_nr: FR/EP and EP-validation (T) keys use 2-digit year; US/CN/AU/JP/KR/MX 4-digit; WO keys are PCT application numbers (e.g. WO2017051519WFR = PCT/FR2017/051519) so year = PCT filing year (confirmed against Demandes de brevets dates); CA/IL/NL keys carry no year.",
+  "name_search": "filter contains is case-insensitive (IKTOS==Iktos). Rejected: \"Rivercell\" matched only Nutrivercell (unrelated).",
+  "persons": "No individual-person applicants appeared in any family queried; dataset appears to list only legal entities (or persons are absent)."
+ },
+ "datasets_checked": {
+  "63b4ebd006676a13059dde9a (Déposants des brevets)": "Same dataset as Dataset A: CSV/JSON of applicants + PDF table descriptions (2023-2025 versions); PDFs not readable via MCP. No titles/IPC.",
+  "5892a0cba3a72974c1f0de3c (Les brevets français à l'INPI et l'OEB)": "CSV/JSON (Atlas des brevets aggregate by domain/organism) + methodology docx; NOT available in Tabular API, could not be queried.",
+  "636c694964890a2128f64c85 (Demandes de brevets, older 2022 vintage, resource 40bb9921-...)": "Queryable. Columns: nr_demande_epodoc, date_demande, autorite_demande, nr_publication_demande, nr_famille_docdb, date_publication_demande, date_delivrance, langue_titre_demande, titre_demande. Joinable on nr_famille_docdb -> used for titles + earliest filing dates (up to 10 families/company). Lacks families created ~2021+ (vintage).",
+  "63b4ebd1faf1a9d68d9dde9b (Demandes de brevets, current)": "Resource c2ed174d-... reported as tabular but returned not-found/server errors; not usable.",
+  "636c694a64890a2128f64c86 (Familles de brevets) / 636c694f2caac75716f64c85 (Technologies des familles de brevets, CPC)": "Main CSV resources not available in Tabular API -> no IPC/CPC technology domain could be retrieved; domain left null."
+ }
+}
