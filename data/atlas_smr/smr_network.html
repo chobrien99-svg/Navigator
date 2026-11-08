@@ -886,10 +886,10 @@ const DATA={
    "name": "Naarea",
    "full": "Naarea",
    "type": "startup",
-   "status": "active",
+   "status": "closed",
    "city": "Nanterre",
    "siren": "882949506",
-   "note": "Receivership Sept 2025; court ordered sale to Eneris, Jan 2026 (press reports). Register still lists the company as active.",
+   "note": "Receivership Sept 2025; judicial liquidation 15 Jan 2026, with a sale plan to Eneris Fuels SA (BODACC). Still on the register.",
    "conf": "high",
    "projects": [
     "NAAREA FCE 2030"
@@ -2157,7 +2157,7 @@ document.getElementById('groups').innerHTML=gl.map(([n,v])=>`<div class="bar"><s
 // reactor table
 document.getElementById('react').innerHTML=DATA.orgs.filter(o=>o.reactor).sort((a,b)=>a.name.localeCompare(b.name)).map(o=>{
  const pr=P.filter(p=>p.partners.includes(o.id));
- return `<tr><td><b>${esc(o.name)}</b><br><span class="note">${esc(o.city||'')}</span>${o.note&&o.note!=='Already in Navigator.'&&/Receivership|phase 2/.test(o.note)?'<br><span class="pill warn">'+esc(o.note)+'</span>':''}</td><td class="m">${pr.map(p=>esc(p.name)).join('<br>')}</td><td class="m">${pr.map(aidTxt).join('<br>')}</td><td>${pr.map(p=>p.partners.filter(s=>s!==o.id).map(s=>esc(O[s].name)).join(', ')||'<span class="note">none named</span>').join('<br>')}</td><td>${o.investors?esc(o.investors):'<span class="note">none recorded</span>'}</td></tr>`}).join('');
+ return `<tr><td><b>${esc(o.name)}</b><br><span class="note">${esc(o.city||'')}</span>${o.note&&o.note!=='Already in Navigator.'&&/Receivership|liquidation|phase 2/.test(o.note)?'<br><span class="pill warn">'+esc(o.note)+'</span>':''}</td><td class="m">${pr.map(p=>esc(p.name)).join('<br>')}</td><td class="m">${pr.map(aidTxt).join('<br>')}</td><td>${pr.map(p=>p.partners.filter(s=>s!==o.id).map(s=>esc(O[s].name)).join(', ')||'<span class="note">none named</span>').join('<br>')}</td><td>${o.investors?esc(o.investors):'<span class="note">none recorded</span>'}</td></tr>`}).join('');
 document.getElementById('projs').innerHTML=[...P].sort((a,b)=>((b.aid||[]).reduce((s,x)=>s+x.eur,0)-(a.aid||[]).reduce((s,x)=>s+x.eur,0))||b.partners.length-a.partners.length||a.name.localeCompare(b.name)).map(p=>`<tr><td class="m">${esc(p.name)}</td><td>${p.lead?esc(O[p.lead].name):esc(p.lead_name||'–')}</td><td class="m">${aidTxt(p)}</td><td>${p.partners.map(s=>`${esc(O[s].name)}${O[s].conf!=='high'?' <span class="pill warn">'+(O[s].conf==='review'?'unconfirmed':'medium')+'</span>':''}`).join(', ')}</td></tr>`).join('');
 // network
 const svg=d3.select('#net');
@@ -2193,7 +2193,7 @@ function focus(id){
  nd.style('opacity',d=>s.has(d.id)?1:s2.has(d.id)?.45:.1);L.style('opacity',l=>(l.source.id===id||l.target.id===id)?1:(s.has(l.source.id)&&s2.has(l.target.id))?.35:.05);
  const n=N[id];
  if(n.kind==='org'){const o=n.o;const co=new Set();P.filter(p=>p.partners.includes(o.id)).forEach(p=>p.partners.forEach(x=>x!==o.id&&co.add(x)));
-  side.innerHTML=`<div class="eyebrow">${typeLabel[o.type]}${o.status==='closed'?' · ceased':''}</div><h3>${esc(o.full)}</h3>
+  side.innerHTML=`<div class="eyebrow">${typeLabel[o.type]}${o.status==='closed'?(o.id==='naarea'?' · in liquidation':' · ceased'):''}</div><h3>${esc(o.full)}</h3>
   <dl class="kv"><dt>Town</dt><dd>${esc(o.city||'–')}</dd><dt>SIREN</dt><dd class="m">${esc(o.siren||'not found')}</dd><dt>Match</dt><dd>${o.conf==='high'?'High confidence':o.conf==='medium'?'<span class="pill warn">medium</span>':'<span class="pill warn">unconfirmed</span>'}</dd>${o.group?`<dt>Group</dt><dd>${esc(o.group)}</dd>`:''}${o.investors?`<dt>Investors</dt><dd>${esc(o.investors)}</dd>`:''}</dl>
   ${o.note&&o.note!=='Already in Navigator.'?`<p class="note" style="margin:0">${esc(o.note)}</p>`:''}
   <div><div class="eyebrow">Projects (${o.projects.length})</div><div class="chips">${o.projects.map(p=>`<button class="chip" data-id="p:${esc(p)}">${esc(p)}</button>`).join('')}</div></div>

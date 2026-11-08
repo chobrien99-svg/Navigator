@@ -787,10 +787,10 @@
    "name": "Naarea",
    "full": "Naarea",
    "type": "startup",
-   "status": "active",
+   "status": "closed",
    "city": "Nanterre",
    "siren": "882949506",
-   "note": "Receivership Sept 2025; court ordered sale to Eneris, Jan 2026 (press reports). Register still lists the company as active.",
+   "note": "Receivership Sept 2025; judicial liquidation 15 Jan 2026, with a sale plan to Eneris Fuels SA (BODACC). Still on the register.",
    "conf": "high",
    "projects": [
     "NAAREA FCE 2030"
