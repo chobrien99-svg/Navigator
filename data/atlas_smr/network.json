@@ -790,7 +790,7 @@
    "status": "active",
    "city": "Nanterre",
    "siren": "882949506",
-   "note": "Developer of a molten-salt micro-reactor.",
+   "note": "Receivership Sept 2025; court ordered sale to Eneris, Jan 2026 (press reports). Register still lists the company as active.",
    "conf": "high",
    "projects": [
     "NAAREA FCE 2030"
@@ -1113,7 +1113,7 @@
    "status": "active",
    "city": "Paris",
    "siren": "912522240",
-   "note": "Already in Navigator.",
+   "note": "Said in July 2026 it was not selected for phase 2 of the reactors call.",
    "conf": "high",
    "projects": [
     "NEWCLEO LFR 30 MWE"
@@ -1233,7 +1233,12 @@
     "fonderie-lemer",
     "orano-demantelement",
     "tx-4000"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Method to verify homogeneity of very-low-activity materials so sampling-based release controls are representative.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "Dream scanner",
@@ -1241,7 +1246,12 @@
     "damavan-imaging",
     "orano-ds-demantelement-et-services",
     "universite-de-technologie-de-troyes"
-   ]
+   ],
+   "lead": "damavan-imaging",
+   "lead_name": "Damavan Imaging",
+   "desc": "3D imaging system to characterise radioactivity of waste packages more precisely, avoiding over-classification of packages.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "EPONA",
@@ -1249,7 +1259,12 @@
     "cea",
     "amplitude-systemes",
     "orano-support"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Lab-scale demonstration of laser isotope separation (SILVA route) to purify palladium from La Hague fission products of long-lived Pd-107.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "REGAIN",
@@ -1258,7 +1273,12 @@
     "orano-support",
     "framatome",
     "cnrs"
-   ]
+   ],
+   "lead": "orano-support",
+   "lead_name": "Orano",
+   "desc": "Alternative to compacting fuel hulls: successive decontamination steps to cut their radiological source term and the volume of ultimate (MA-VL) waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RPN2",
@@ -1266,34 +1286,73 @@
     "fonderie-lemer",
     "orano-demantelement",
     "curium"
-   ]
+   ],
+   "lead": "fonderie-lemer",
+   "lead_name": "Fonderie Lemer",
+   "desc": "Melting and recycling very-low-level radioactive lead for reuse inside and outside the nuclear industry.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RF01",
    "partners": [
     "renaissance-fusion",
     "cea"
-   ]
+   ],
+   "lead": "renaissance-fusion",
+   "lead_name": "Renaissance Fusion SAS",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://static1.squarespace.com/static/634e5ea0ef0229323101ddba/t/65699bf60b145a22fa4ce2b5/1701420023171/PR_Renaissance+Fusion+x+France2030_Innovative+Nuclear+Reactors.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "NEWCLEO LFR 30 MWE",
    "partners": [
     "cea",
     "newcleo"
-   ]
+   ],
+   "lead": "newcleo",
+   "lead_name": "newcleo",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 19000000,
+     "phase": null,
+     "conf": "low",
+     "url": "https://www.debatpublic.fr/sites/default/files/2026-09/NEWCLEO-compte-rendu.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "PROCER",
    "partners": [
     "bernardaud"
-   ]
+   ],
+   "lead": "bernardaud",
+   "lead_name": "Bernardaud",
+   "desc": "Pilot line and full-scale production of ceramic over-packs for high-level waste disposal.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SIMB-AD",
    "partners": [
     "trad-tests-radiations",
     "cnrs"
-   ]
+   ],
+   "lead": "cnrs",
+   "lead_name": "CNRS",
+   "desc": "Method (Monte-Carlo plus real-time CMOS neutron detection) to determine pure-beta-emitter activity in cyclotron materials and shielding at dismantling.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "D-CLIC",
@@ -1301,7 +1360,12 @@
     "cea",
     "toulouse-inp",
     "cnrs"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Know-how for managing long-lived radionuclides under strict release limits; could give routes for orphan wastes (e.g. solid traps) or inland reprocessing plants.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "TBATT - DIAMOND",
@@ -1309,27 +1373,54 @@
     "stmicroelectronics-crolles-2",
     "cea",
     "diamfab"
-   ]
+   ],
+   "lead": "diamfab",
+   "lead_name": "DiamFab",
+   "desc": "20-year beta-voltaic micro-batteries using tritium recovered from nuclear waste in a synthetic diamond cell.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "DNAT",
    "partners": [
     "laboratoire-detalons-dactivite-lea"
-   ]
+   ],
+   "lead": null,
+   "lead_name": "Orano",
+   "desc": "Opens a new secure route to take spent French sealed radioactive sources as waste when they cannot go to Andra's existing surface repositories as sources.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "DEMWASTE",
    "partners": [
     "demboost",
     "itech-instruments"
-   ]
+   ],
+   "lead": "demboost",
+   "lead_name": "DEMBoost",
+   "desc": "Device to sort and segregate nuclear waste in a storage room or outdoor area before human intervention, anticipating final conditioning.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "NUWARD",
    "partners": [
     "nuward",
     "edf"
-   ]
+   ],
+   "lead": "nuward",
+   "lead_name": "Nuward (EDF subsidiary)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 300000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.sfen.org/rgn/la-commission-europeenne-valide-le-soutien-etatique-de-300-millions-deuros-a-nuward/"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "MIRAGE",
@@ -1339,7 +1430,12 @@
     "cea",
     "aix-marseille-universite",
     "toulouse-inp"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Micro/millifluidic tool platform to speed development of spent-fuel recycling processes.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "BLUE CAPSULE",
@@ -1347,7 +1443,19 @@
     "cea",
     "egis-nucleaire",
     "blue-capsule-technology"
-   ]
+   ],
+   "lead": "blue-capsule-technology",
+   "lead_name": "Blue Capsule (consortium with Egis Nucléaire and CEA)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.egis-group.com/fr/actualites/blue-capsule-laureat-de-l-appel-a-projets-reacteurs-nucleaires-innovants-du-plan-d-investissement-france-2030"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "PACH3",
@@ -1356,21 +1464,43 @@
     "technetics-group-france",
     "innowtech",
     "curium"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Multi-barrier low-outgassing packages for tritiated waste that has no disposal route.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "HEXANA",
    "partners": [
     "cea",
     "hexana"
-   ]
+   ],
+   "lead": "hexana",
+   "lead_name": "Hexana",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.usinenouvelle.com/article/dans-le-nouveau-nucleaire-le-francais-hexana-veut-doubler-l-americain-terra-power-avec-un-amr-thermique.N2204373"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "ECCLOR",
    "partners": [
     "cea",
     "cyclife-france"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "New route for radiocontaminated organic liquids: decontaminating 3D-printed mineral filters plus plasma-torch destruction.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SOLVERIS",
@@ -1380,21 +1510,36 @@
     "eci-meca",
     "assystem-engineering-and-operation-services",
     "brgm"
-   ]
+   ],
+   "lead": null,
+   "lead_name": "Safe Technologies",
+   "desc": "Industrial remediation of contaminated sites using GeoMelt in-situ vitrification of soils and buried waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SMETANA",
    "partners": [
     "orano-recyclage",
     "edf"
-   ]
+   ],
+   "lead": "edf",
+   "lead_name": "EDF",
+   "desc": "Optimising treatment of spent MOX fuel from first recycling and improving knowledge on fast-reactor fuel fabrication for multi-recycling.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ANAIS",
    "partners": [
     "cea",
     "cesigma-signals-systems"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Transportable, low-dose active neutron interrogation unit in a self-contained container to measure fissile mass (U, Pu) in waste packages.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PROVIDENCE",
@@ -1402,7 +1547,12 @@
     "cea",
     "orano-recyclage",
     "ecm-technologies"
-   ]
+   ],
+   "lead": "orano-recyclage",
+   "lead_name": "Orano",
+   "desc": "Technology bricks and process knowledge to optimise DEM&MELT, an in-can thermal treatment/vitrification tool for intermediate-to-high-level waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PALLAS",
@@ -1412,14 +1562,24 @@
     "irsn",
     "universite-gustave-eiffel",
     "cnrs"
-   ]
+   ],
+   "lead": "irsn",
+   "lead_name": "IRSN",
+   "desc": "Experimental platform to test monitoring solutions for radioactive waste packages inside storage cells.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "EcoLAS",
    "partners": [
     "meliad",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "meliad",
+   "lead_name": "Meliad",
+   "desc": "Laser surface-decontamination technology to downgrade operating/dismantling waste from 'rich' to 'poor' (glovebox decontamination at Orano Melox).",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PORTHOS",
@@ -1427,7 +1587,12 @@
     "orano-support",
     "cnrs",
     "rhodia-operations"
-   ]
+   ],
+   "lead": "orano-support",
+   "lead_name": "Orano",
+   "desc": "Process to produce, purify and condition thorium tetrachloride (ThCl4) for future Pu-Th fuels.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ETIS",
@@ -1436,7 +1601,12 @@
     "tx-4000",
     "probayes",
     "cea"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Fast, precise elemental measurement approach (complementing nuclear measurement) to clear materials for recycling, tested on Orano metal and soil valorisation projects.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SELF",
@@ -1444,35 +1614,67 @@
     "cea",
     "orano-demantelement",
     "cnrs"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Dissolving reactive metallic waste in molten hydroxide salts and re-precipitating it in a less hydrogen-generating form for conditioning.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "VAL'M2 TCN",
    "partners": [
     "edf",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "edf",
+   "lead_name": "EDF (probable)",
+   "desc": "Probably the EDF Technocentre: an industrial site (planned at Fessenheim) to recycle very-low-level (TFA) radioactive metals.",
+   "aid": [
+    {
+     "eur": 18500000,
+     "phase": null,
+     "conf": "low",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "KRYPTRAP",
    "partners": [
     "cea",
     "cnrs"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Separating and trapping krypton from off-gases of fuel-cycle facilities.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "R2DS",
    "partners": [
     "orano-recyclage",
     "sileane"
-   ]
+   ],
+   "lead": "orano-recyclage",
+   "lead_name": "Orano",
+   "desc": "Industrial robotics for retrieving and sorting nuclear waste in hostile environments.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ESOP",
    "partners": [
     "cea",
     "atlanchim-pharma"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Diluent-free extractant system for U/Pu recovery in reprocessing to reduce effluents and fire risk.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PROXIMA",
@@ -1483,7 +1685,19 @@
     "thorizon",
     "centrale-lille-institut",
     "universite-de-lille"
-   ]
+   ],
+   "lead": "thorizon",
+   "lead_name": "Thorizon (consortium with Orano and CEA, plus academic partners)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.businesswire.com/news/home/20240325849615/fr"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "MAEVA2",
@@ -1491,7 +1705,12 @@
     "orano-chimie-enrichissement",
     "institut-mines-telecom",
     "cnrs"
-   ]
+   ],
+   "lead": "orano-chimie-enrichissement",
+   "lead_name": "Orano",
+   "desc": "Using depleted uranium to make high-performance concretes (non-energy valorisation).",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "TRTAP",
@@ -1499,21 +1718,36 @@
     "universite-de-limoges",
     "w-ce-process",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Deploying plasma-torch thermal treatment to vitrify waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "CIMBOOST",
    "partners": [
     "orano-demantelement",
     "lermat"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Continuous cementation process for fine-grained low/intermediate-level radioactive waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "D-PERLE",
    "partners": [
     "orano-ds-demantelement-et-services",
     "cea"
-   ]
+   ],
+   "lead": "orano-ds-demantelement-et-services",
+   "lead_name": "Orano",
+   "desc": "Pilot plant to purify uranium-contaminated perfluoropolyether lubricants that currently have no waste route.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RTG",
@@ -1521,13 +1755,30 @@
     "triskem-international",
     "cea",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Autonomous, wireless power source for Cigéo cell-monitoring sensors over the ~100-year operating life.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "Passive-safety research platform (ASNR)",
    "partners": [
     "asnr"
-   ]
+   ],
+   "lead": "asnr",
+   "lead_name": "IRSN (now ASNR)",
+   "desc": "PASTIS (Passive Systems Thermohydraulic Investigations for Safety): an experimental platform to build the knowledge needed to assess passive safety systems used in most SMR designs, incl. NUWARD.",
+   "aid": [
+    {
+     "eur": 9000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "STELLARIUM",
@@ -1535,14 +1786,31 @@
     "stellaria",
     "orano-support",
     "cea"
-   ]
+   ],
+   "lead": "stellaria",
+   "lead_name": "Stellaria (consortium with Orano and CEA)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.businesswire.com/news/home/20240325849615/fr"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "PREPAC",
    "partners": [
     "cea",
     "cnrs"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Recovering critical metals (Ru, Tc, Mo, Rh, Pd) in reprocessing plants to widen operating margins, cut waste and reuse the metals.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ISAC",
@@ -1552,7 +1820,19 @@
     "cea",
     "cnrs",
     "orano-support"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Feasibility study of transmuting minor actinides (mainly americium) in molten-salt reactors to reduce ultimate waste.",
+   "aid": [
+    {
+     "eur": 14000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_12_20221209_dp_laureats_aap_dechets_nucleaires_vdef.pdf"
+    }
+   ],
+   "call": "waste"
   },
   {
    "name": "MRREP",
@@ -1560,26 +1840,67 @@
     "orano-recyclage",
     "edf",
     "framatome"
-   ]
+   ],
+   "lead": "orano-recyclage",
+   "lead_name": "Orano",
+   "desc": "Studies and develops technical options for multi-recycling nuclear materials in today's pressurised-water reactors, while advancing fast-reactor fuel-cycle technologies.",
+   "aid": [
+    {
+     "eur": 19000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "NAAREA FCE 2030",
    "partners": [
     "cea",
     "naarea"
-   ]
+   ],
+   "lead": "naarea",
+   "lead_name": "Naarea",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.maddyness.com/2023/06/23/naarea-reacteurs-nucleaires/"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "SPATIAL",
    "partners": [
     "cnrs"
-   ]
+   ],
+   "lead": "cnrs",
+   "lead_name": "CNRS",
+   "desc": "Full spatial/energy mapping of reactivity at start-up of accelerator-driven subcritical reactors aimed at transmuting long-lived fission products.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RAD2GLASS",
    "partners": [
     "waste2glass"
-   ]
+   ],
+   "lead": "waste2glass",
+   "lead_name": "Waste2Glass",
+   "desc": "Industrial GeoMelt vitrification of radium-bearing low-level long-lived (FA-VL) waste for final disposal.",
+   "aid": [
+    {
+     "eur": 630000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://nuclearsolutions.veolia.com/en/news/bpifrance-invests-innovative-rad2glass-project-developed-waste2glass-part-france-2030"
+    }
+   ],
+   "call": "waste"
   },
   {
    "name": "TARANIS",
@@ -1587,7 +1908,19 @@
     "genf",
     "cnrs",
     "cea"
-   ]
+   ],
+   "lead": "genf",
+   "lead_name": "GenF",
+   "desc": "Inertial-confinement laser fusion: aims to show economic viability of high-gain D-T fusion and develop an integrated ~1000 MWth reactor concept.",
+   "aid": [
+    {
+     "eur": 3500000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "MOSARWASTE",
@@ -1595,39 +1928,108 @@
     "cea",
     "cnrs",
     "orano-support"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Describes, quantifies and assesses treatment, conditioning, storage and disposal impact of waste streams from a chloride molten-salt actinide-burner reactor.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PADAWANN",
    "partners": [
     "universite-de-rouen-normandie",
     "cea"
-   ]
+   ],
+   "lead": "universite-de-rouen-normandie",
+   "lead_name": "Université de Rouen Normandie (CORIA lab)",
+   "desc": "Feasibility of a pulsed-laser process to decontaminate tritiated parts and dust.",
+   "aid": [
+    {
+     "eur": 1900000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.univ-rouen.fr/actualites/le-projet-padawann-laureat-dans-le-cadre-de-france-2030/"
+    }
+   ],
+   "call": "waste"
   },
   {
    "name": "ONE",
    "partners": [
     "cea",
     "otrera"
-   ]
+   ],
+   "lead": "otrera",
+   "lead_name": "Otrera Nuclear Energy (Otrera New Energy)",
+   "desc": null,
+   "aid": [],
+   "call": "reactors"
   },
   {
    "name": "CALOGENA",
    "partners": [
     "calogena"
-   ]
+   ],
+   "lead": "calogena",
+   "lead_name": "Calogena (Groupe Gorgé)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 5200000,
+     "phase": "phase 1",
+     "conf": "medium",
+     "url": "https://www.connaissancedesenergies.org/afp/nucleaire-letat-renouvelle-son-soutien-deux-projets-de-mini-reacteurs-260310"
+    },
+    {
+     "eur": 48000000,
+     "phase": "phase 2",
+     "conf": "high",
+     "url": "https://www.banquedesterritoires.fr/sites/default/files/2026-04/20260417_CP_Calogena_Groupe_SNEF_Banque_des_Territoires_BPIFRANCE_France2030.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "TREFLE2",
    "partners": [
     "nuvia-protection"
-   ]
+   ],
+   "lead": "nuvia-protection",
+   "lead_name": "Nuvia",
+   "desc": "Finer filtration system for effluents from nuclear-sector laundries.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "GTA",
    "partners": [
     "jimmy-energy"
-   ]
+   ],
+   "lead": "jimmy-energy",
+   "lead_name": "Jimmy Energy SAS",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 32000000,
+     "phase": "phase 1",
+     "conf": "high",
+     "url": "https://www.usinenouvelle.com/article/jimmy-recoit-32-millions-d-euros-de-france-2030-pour-industrialiser-sa-chaudiere-nucleaire.N2198613"
+    },
+    {
+     "eur": 40000000,
+     "phase": "phase 2",
+     "conf": "high",
+     "url": "https://www.connaissancedesenergies.org/afp/nucleaire-letat-renouvelle-son-soutien-deux-projets-de-mini-reacteurs-260310"
+    }
+   ],
+   "call": "reactors"
   }
- ]
+ ],
+ "totals": {
+  "identified": 570730000,
+  "awards": 19,
+  "waste_call": 71700000.0,
+  "reactor_phase1": 129800000.0
+ }
 }

@@ -75,21 +75,24 @@ td.m{font-family:var(--mono);font-size:12px}
   </div>
   <svg id="net" role="img" aria-label="Network of France 2030 Objectif 1 laureates and their projects"></svg>
   <aside class="side" id="side"></aside>
-  <div class="legend"><span><i style="background:var(--c-startup)"></i>Startup</span><span><i style="background:var(--c-corporate)"></i>Company</span><span><i style="background:var(--c-research)"></i>Research body</span><span><i style="background:var(--c-univ)"></i>University</span><span><i style="background:var(--c-agency)"></i>Public agency</span><span><i class="sq" style="background:var(--c-proj)"></i>Project</span><span>Dashed line = match still to be confirmed</span></div>
+  <div class="legend"><span><i style="background:var(--c-startup)"></i>Startup</span><span><i style="background:var(--c-corporate)"></i>Company</span><span><i style="background:var(--c-research)"></i>Research body</span><span><i style="background:var(--c-univ)"></i>University</span><span><i style="background:var(--c-agency)"></i>Public agency</span><span><i class="sq" style="background:var(--c-proj)"></i>Project (bigger = more State aid published)</span><span>Dashed line = match still to be confirmed</span></div>
  </div>
 </section>
 <section class="cols">
  <div><h2>The hubs</h2><p class="note">Number of the 53 projects each organisation is part of. Group subsidiaries are counted separately.</p><div class="bars" id="hubs"></div></div>
  <div><h2>Groups, not just entities</h2><p class="note">Counting each group once per project shows how concentrated the programme is.</p><div class="bars" id="groups"></div></div>
 </section>
-<section><h2>The reactor developers</h2><p class="note">Startups and new entities designing a reactor, with their France 2030 project partners and the investors already recorded in Navigator.</p><div class="tbl"><table><thead><tr><th>Developer</th><th>Project</th><th>Project partners</th><th>Investors in Navigator</th></tr></thead><tbody id="react"></tbody></table></div></section>
-<section><h2>All 53 projects</h2><div class="tbl"><table><thead><tr><th>Project</th><th>Partners</th><th>#</th></tr></thead><tbody id="projs"></tbody></table></div></section>
+<section><h2>The reactor developers</h2><p class="note">Startups and new entities designing a reactor, with their France 2030 project partners and the investors already recorded in Navigator.</p><div class="tbl"><table><thead><tr><th>Developer</th><th>Project</th><th>France 2030 aid</th><th>Project partners</th><th>Investors in Navigator</th></tr></thead><tbody id="react"></tbody></table></div></section>
+<section><h2>All 53 projects</h2><p class="note">Lead partner and State aid where a figure has been published. Amounts marked “to verify” come from press or company sources that could not be checked against an official page.</p><div class="tbl"><table><thead><tr><th>Project</th><th>Lead</th><th>State aid</th><th>Partners</th></tr></thead><tbody id="projs"></tbody></table></div></section>
 <section class="note"><h2 style="color:var(--fg)">How this was built</h2><ul>
 <li>Source: the official France 2030 laureates map (info.gouv.fr), filtered on Objectif 1 and exported by hand in November 2026. The map lists 139 rows; one (Innowtech / PACH3) appears twice, so 138 unique rows.</li>
 <li>Each organisation was matched to the national company register (recherche-entreprises.api.gouv.fr) by name and département. 63 matches are high confidence, 4 are medium and 1 (Entreprise Auglans) could not be found. Medium and unconfirmed matches are drawn with dashed lines.</li>
 <li>One row (PALLAS) has a project name but no organisation; it is linked to its four named partners only.</li>
 <li>The map does not give grant amounts, project descriptions or which partner leads. Those are the next things to add.</li>
 <li>Investors come from funding rounds already in France Navigator, not from France 2030.</li>
+<li>Lead partners for the 38 waste-call projects come from the official press kit of 9 December 2022. The government published only call totals for that call (40 laureates, €71.7M of State aid), so most of those projects have no per-project figure.</li>
+<li>For the reactors call the government published batch totals (€129.8M for 11 phase 1 laureates). Per-project figures come from company releases and the press. NUWARD's €300M is separate State aid approved by the European Commission in April 2024.</li>
+<li>Some sources could only be read as search extracts. Those figures are marked “to verify”. The newcleo figure is disputed (€9.8M to €19.8M depending on the source).</li>
 </ul></section>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
@@ -886,7 +889,7 @@ const DATA={
    "status": "active",
    "city": "Nanterre",
    "siren": "882949506",
-   "note": "Developer of a molten-salt micro-reactor.",
+   "note": "Receivership Sept 2025; court ordered sale to Eneris, Jan 2026 (press reports). Register still lists the company as active.",
    "conf": "high",
    "projects": [
     "NAAREA FCE 2030"
@@ -1209,7 +1212,7 @@ const DATA={
    "status": "active",
    "city": "Paris",
    "siren": "912522240",
-   "note": "Already in Navigator.",
+   "note": "Said in July 2026 it was not selected for phase 2 of the reactors call.",
    "conf": "high",
    "projects": [
     "NEWCLEO LFR 30 MWE"
@@ -1329,7 +1332,12 @@ const DATA={
     "fonderie-lemer",
     "orano-demantelement",
     "tx-4000"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Method to verify homogeneity of very-low-activity materials so sampling-based release controls are representative.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "Dream scanner",
@@ -1337,7 +1345,12 @@ const DATA={
     "damavan-imaging",
     "orano-ds-demantelement-et-services",
     "universite-de-technologie-de-troyes"
-   ]
+   ],
+   "lead": "damavan-imaging",
+   "lead_name": "Damavan Imaging",
+   "desc": "3D imaging system to characterise radioactivity of waste packages more precisely, avoiding over-classification of packages.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "EPONA",
@@ -1345,7 +1358,12 @@ const DATA={
     "cea",
     "amplitude-systemes",
     "orano-support"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Lab-scale demonstration of laser isotope separation (SILVA route) to purify palladium from La Hague fission products of long-lived Pd-107.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "REGAIN",
@@ -1354,7 +1372,12 @@ const DATA={
     "orano-support",
     "framatome",
     "cnrs"
-   ]
+   ],
+   "lead": "orano-support",
+   "lead_name": "Orano",
+   "desc": "Alternative to compacting fuel hulls: successive decontamination steps to cut their radiological source term and the volume of ultimate (MA-VL) waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RPN2",
@@ -1362,34 +1385,73 @@ const DATA={
     "fonderie-lemer",
     "orano-demantelement",
     "curium"
-   ]
+   ],
+   "lead": "fonderie-lemer",
+   "lead_name": "Fonderie Lemer",
+   "desc": "Melting and recycling very-low-level radioactive lead for reuse inside and outside the nuclear industry.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RF01",
    "partners": [
     "renaissance-fusion",
     "cea"
-   ]
+   ],
+   "lead": "renaissance-fusion",
+   "lead_name": "Renaissance Fusion SAS",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://static1.squarespace.com/static/634e5ea0ef0229323101ddba/t/65699bf60b145a22fa4ce2b5/1701420023171/PR_Renaissance+Fusion+x+France2030_Innovative+Nuclear+Reactors.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "NEWCLEO LFR 30 MWE",
    "partners": [
     "cea",
     "newcleo"
-   ]
+   ],
+   "lead": "newcleo",
+   "lead_name": "newcleo",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 19000000,
+     "phase": null,
+     "conf": "low",
+     "url": "https://www.debatpublic.fr/sites/default/files/2026-09/NEWCLEO-compte-rendu.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "PROCER",
    "partners": [
     "bernardaud"
-   ]
+   ],
+   "lead": "bernardaud",
+   "lead_name": "Bernardaud",
+   "desc": "Pilot line and full-scale production of ceramic over-packs for high-level waste disposal.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SIMB-AD",
    "partners": [
     "trad-tests-radiations",
     "cnrs"
-   ]
+   ],
+   "lead": "cnrs",
+   "lead_name": "CNRS",
+   "desc": "Method (Monte-Carlo plus real-time CMOS neutron detection) to determine pure-beta-emitter activity in cyclotron materials and shielding at dismantling.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "D-CLIC",
@@ -1397,7 +1459,12 @@ const DATA={
     "cea",
     "toulouse-inp",
     "cnrs"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Know-how for managing long-lived radionuclides under strict release limits; could give routes for orphan wastes (e.g. solid traps) or inland reprocessing plants.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "TBATT - DIAMOND",
@@ -1405,27 +1472,54 @@ const DATA={
     "stmicroelectronics-crolles-2",
     "cea",
     "diamfab"
-   ]
+   ],
+   "lead": "diamfab",
+   "lead_name": "DiamFab",
+   "desc": "20-year beta-voltaic micro-batteries using tritium recovered from nuclear waste in a synthetic diamond cell.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "DNAT",
    "partners": [
     "laboratoire-detalons-dactivite-lea"
-   ]
+   ],
+   "lead": null,
+   "lead_name": "Orano",
+   "desc": "Opens a new secure route to take spent French sealed radioactive sources as waste when they cannot go to Andra's existing surface repositories as sources.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "DEMWASTE",
    "partners": [
     "demboost",
     "itech-instruments"
-   ]
+   ],
+   "lead": "demboost",
+   "lead_name": "DEMBoost",
+   "desc": "Device to sort and segregate nuclear waste in a storage room or outdoor area before human intervention, anticipating final conditioning.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "NUWARD",
    "partners": [
     "nuward",
     "edf"
-   ]
+   ],
+   "lead": "nuward",
+   "lead_name": "Nuward (EDF subsidiary)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 300000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.sfen.org/rgn/la-commission-europeenne-valide-le-soutien-etatique-de-300-millions-deuros-a-nuward/"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "MIRAGE",
@@ -1435,7 +1529,12 @@ const DATA={
     "cea",
     "aix-marseille-universite",
     "toulouse-inp"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Micro/millifluidic tool platform to speed development of spent-fuel recycling processes.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "BLUE CAPSULE",
@@ -1443,7 +1542,19 @@ const DATA={
     "cea",
     "egis-nucleaire",
     "blue-capsule-technology"
-   ]
+   ],
+   "lead": "blue-capsule-technology",
+   "lead_name": "Blue Capsule (consortium with Egis Nucléaire and CEA)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.egis-group.com/fr/actualites/blue-capsule-laureat-de-l-appel-a-projets-reacteurs-nucleaires-innovants-du-plan-d-investissement-france-2030"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "PACH3",
@@ -1452,21 +1563,43 @@ const DATA={
     "technetics-group-france",
     "innowtech",
     "curium"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Multi-barrier low-outgassing packages for tritiated waste that has no disposal route.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "HEXANA",
    "partners": [
     "cea",
     "hexana"
-   ]
+   ],
+   "lead": "hexana",
+   "lead_name": "Hexana",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.usinenouvelle.com/article/dans-le-nouveau-nucleaire-le-francais-hexana-veut-doubler-l-americain-terra-power-avec-un-amr-thermique.N2204373"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "ECCLOR",
    "partners": [
     "cea",
     "cyclife-france"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "New route for radiocontaminated organic liquids: decontaminating 3D-printed mineral filters plus plasma-torch destruction.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SOLVERIS",
@@ -1476,21 +1609,36 @@ const DATA={
     "eci-meca",
     "assystem-engineering-and-operation-services",
     "brgm"
-   ]
+   ],
+   "lead": null,
+   "lead_name": "Safe Technologies",
+   "desc": "Industrial remediation of contaminated sites using GeoMelt in-situ vitrification of soils and buried waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SMETANA",
    "partners": [
     "orano-recyclage",
     "edf"
-   ]
+   ],
+   "lead": "edf",
+   "lead_name": "EDF",
+   "desc": "Optimising treatment of spent MOX fuel from first recycling and improving knowledge on fast-reactor fuel fabrication for multi-recycling.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ANAIS",
    "partners": [
     "cea",
     "cesigma-signals-systems"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Transportable, low-dose active neutron interrogation unit in a self-contained container to measure fissile mass (U, Pu) in waste packages.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PROVIDENCE",
@@ -1498,7 +1646,12 @@ const DATA={
     "cea",
     "orano-recyclage",
     "ecm-technologies"
-   ]
+   ],
+   "lead": "orano-recyclage",
+   "lead_name": "Orano",
+   "desc": "Technology bricks and process knowledge to optimise DEM&MELT, an in-can thermal treatment/vitrification tool for intermediate-to-high-level waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PALLAS",
@@ -1508,14 +1661,24 @@ const DATA={
     "irsn",
     "universite-gustave-eiffel",
     "cnrs"
-   ]
+   ],
+   "lead": "irsn",
+   "lead_name": "IRSN",
+   "desc": "Experimental platform to test monitoring solutions for radioactive waste packages inside storage cells.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "EcoLAS",
    "partners": [
     "meliad",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "meliad",
+   "lead_name": "Meliad",
+   "desc": "Laser surface-decontamination technology to downgrade operating/dismantling waste from 'rich' to 'poor' (glovebox decontamination at Orano Melox).",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PORTHOS",
@@ -1523,7 +1686,12 @@ const DATA={
     "orano-support",
     "cnrs",
     "rhodia-operations"
-   ]
+   ],
+   "lead": "orano-support",
+   "lead_name": "Orano",
+   "desc": "Process to produce, purify and condition thorium tetrachloride (ThCl4) for future Pu-Th fuels.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ETIS",
@@ -1532,7 +1700,12 @@ const DATA={
     "tx-4000",
     "probayes",
     "cea"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Fast, precise elemental measurement approach (complementing nuclear measurement) to clear materials for recycling, tested on Orano metal and soil valorisation projects.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "SELF",
@@ -1540,35 +1713,67 @@ const DATA={
     "cea",
     "orano-demantelement",
     "cnrs"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Dissolving reactive metallic waste in molten hydroxide salts and re-precipitating it in a less hydrogen-generating form for conditioning.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "VAL'M2 TCN",
    "partners": [
     "edf",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "edf",
+   "lead_name": "EDF (probable)",
+   "desc": "Probably the EDF Technocentre: an industrial site (planned at Fessenheim) to recycle very-low-level (TFA) radioactive metals.",
+   "aid": [
+    {
+     "eur": 18500000,
+     "phase": null,
+     "conf": "low",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "KRYPTRAP",
    "partners": [
     "cea",
     "cnrs"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Separating and trapping krypton from off-gases of fuel-cycle facilities.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "R2DS",
    "partners": [
     "orano-recyclage",
     "sileane"
-   ]
+   ],
+   "lead": "orano-recyclage",
+   "lead_name": "Orano",
+   "desc": "Industrial robotics for retrieving and sorting nuclear waste in hostile environments.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ESOP",
    "partners": [
     "cea",
     "atlanchim-pharma"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Diluent-free extractant system for U/Pu recovery in reprocessing to reduce effluents and fire risk.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PROXIMA",
@@ -1579,7 +1784,19 @@ const DATA={
     "thorizon",
     "centrale-lille-institut",
     "universite-de-lille"
-   ]
+   ],
+   "lead": "thorizon",
+   "lead_name": "Thorizon (consortium with Orano and CEA, plus academic partners)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.businesswire.com/news/home/20240325849615/fr"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "MAEVA2",
@@ -1587,7 +1804,12 @@ const DATA={
     "orano-chimie-enrichissement",
     "institut-mines-telecom",
     "cnrs"
-   ]
+   ],
+   "lead": "orano-chimie-enrichissement",
+   "lead_name": "Orano",
+   "desc": "Using depleted uranium to make high-performance concretes (non-energy valorisation).",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "TRTAP",
@@ -1595,21 +1817,36 @@ const DATA={
     "universite-de-limoges",
     "w-ce-process",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Deploying plasma-torch thermal treatment to vitrify waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "CIMBOOST",
    "partners": [
     "orano-demantelement",
     "lermat"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Continuous cementation process for fine-grained low/intermediate-level radioactive waste.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "D-PERLE",
    "partners": [
     "orano-ds-demantelement-et-services",
     "cea"
-   ]
+   ],
+   "lead": "orano-ds-demantelement-et-services",
+   "lead_name": "Orano",
+   "desc": "Pilot plant to purify uranium-contaminated perfluoropolyether lubricants that currently have no waste route.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RTG",
@@ -1617,13 +1854,30 @@ const DATA={
     "triskem-international",
     "cea",
     "orano-demantelement"
-   ]
+   ],
+   "lead": "orano-demantelement",
+   "lead_name": "Orano",
+   "desc": "Autonomous, wireless power source for Cigéo cell-monitoring sensors over the ~100-year operating life.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "Passive-safety research platform (ASNR)",
    "partners": [
     "asnr"
-   ]
+   ],
+   "lead": "asnr",
+   "lead_name": "IRSN (now ASNR)",
+   "desc": "PASTIS (Passive Systems Thermohydraulic Investigations for Safety): an experimental platform to build the knowledge needed to assess passive safety systems used in most SMR designs, incl. NUWARD.",
+   "aid": [
+    {
+     "eur": 9000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "STELLARIUM",
@@ -1631,14 +1885,31 @@ const DATA={
     "stellaria",
     "orano-support",
     "cea"
-   ]
+   ],
+   "lead": "stellaria",
+   "lead_name": "Stellaria (consortium with Orano and CEA)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.businesswire.com/news/home/20240325849615/fr"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "PREPAC",
    "partners": [
     "cea",
     "cnrs"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Recovering critical metals (Ru, Tc, Mo, Rh, Pd) in reprocessing plants to widen operating margins, cut waste and reuse the metals.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "ISAC",
@@ -1648,7 +1919,19 @@ const DATA={
     "cea",
     "cnrs",
     "orano-support"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Feasibility study of transmuting minor actinides (mainly americium) in molten-salt reactors to reduce ultimate waste.",
+   "aid": [
+    {
+     "eur": 14000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_12_20221209_dp_laureats_aap_dechets_nucleaires_vdef.pdf"
+    }
+   ],
+   "call": "waste"
   },
   {
    "name": "MRREP",
@@ -1656,26 +1939,67 @@ const DATA={
     "orano-recyclage",
     "edf",
     "framatome"
-   ]
+   ],
+   "lead": "orano-recyclage",
+   "lead_name": "Orano",
+   "desc": "Studies and develops technical options for multi-recycling nuclear materials in today's pressurised-water reactors, while advancing fast-reactor fuel-cycle technologies.",
+   "aid": [
+    {
+     "eur": 19000000,
+     "phase": null,
+     "conf": "high",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "other"
   },
   {
    "name": "NAAREA FCE 2030",
    "partners": [
     "cea",
     "naarea"
-   ]
+   ],
+   "lead": "naarea",
+   "lead_name": "Naarea",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 10000000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.maddyness.com/2023/06/23/naarea-reacteurs-nucleaires/"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "SPATIAL",
    "partners": [
     "cnrs"
-   ]
+   ],
+   "lead": "cnrs",
+   "lead_name": "CNRS",
+   "desc": "Full spatial/energy mapping of reactivity at start-up of accelerator-driven subcritical reactors aimed at transmuting long-lived fission products.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "RAD2GLASS",
    "partners": [
     "waste2glass"
-   ]
+   ],
+   "lead": "waste2glass",
+   "lead_name": "Waste2Glass",
+   "desc": "Industrial GeoMelt vitrification of radium-bearing low-level long-lived (FA-VL) waste for final disposal.",
+   "aid": [
+    {
+     "eur": 630000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://nuclearsolutions.veolia.com/en/news/bpifrance-invests-innovative-rad2glass-project-developed-waste2glass-part-france-2030"
+    }
+   ],
+   "call": "waste"
   },
   {
    "name": "TARANIS",
@@ -1683,7 +2007,19 @@ const DATA={
     "genf",
     "cnrs",
     "cea"
-   ]
+   ],
+   "lead": "genf",
+   "lead_name": "GenF",
+   "desc": "Inertial-confinement laser fusion: aims to show economic viability of high-gain D-T fusion and develop an integrated ~1000 MWth reactor concept.",
+   "aid": [
+    {
+     "eur": 3500000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.info.gouv.fr/upload/media/default/0001/09/1f514699f28ae1285b17e91661635c833412c95b.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "MOSARWASTE",
@@ -1691,54 +2027,125 @@ const DATA={
     "cea",
     "cnrs",
     "orano-support"
-   ]
+   ],
+   "lead": "cea",
+   "lead_name": "CEA",
+   "desc": "Describes, quantifies and assesses treatment, conditioning, storage and disposal impact of waste streams from a chloride molten-salt actinide-burner reactor.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "PADAWANN",
    "partners": [
     "universite-de-rouen-normandie",
     "cea"
-   ]
+   ],
+   "lead": "universite-de-rouen-normandie",
+   "lead_name": "Université de Rouen Normandie (CORIA lab)",
+   "desc": "Feasibility of a pulsed-laser process to decontaminate tritiated parts and dust.",
+   "aid": [
+    {
+     "eur": 1900000,
+     "phase": null,
+     "conf": "medium",
+     "url": "https://www.univ-rouen.fr/actualites/le-projet-padawann-laureat-dans-le-cadre-de-france-2030/"
+    }
+   ],
+   "call": "waste"
   },
   {
    "name": "ONE",
    "partners": [
     "cea",
     "otrera"
-   ]
+   ],
+   "lead": "otrera",
+   "lead_name": "Otrera Nuclear Energy (Otrera New Energy)",
+   "desc": null,
+   "aid": [],
+   "call": "reactors"
   },
   {
    "name": "CALOGENA",
    "partners": [
     "calogena"
-   ]
+   ],
+   "lead": "calogena",
+   "lead_name": "Calogena (Groupe Gorgé)",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 5200000,
+     "phase": "phase 1",
+     "conf": "medium",
+     "url": "https://www.connaissancedesenergies.org/afp/nucleaire-letat-renouvelle-son-soutien-deux-projets-de-mini-reacteurs-260310"
+    },
+    {
+     "eur": 48000000,
+     "phase": "phase 2",
+     "conf": "high",
+     "url": "https://www.banquedesterritoires.fr/sites/default/files/2026-04/20260417_CP_Calogena_Groupe_SNEF_Banque_des_Territoires_BPIFRANCE_France2030.pdf"
+    }
+   ],
+   "call": "reactors"
   },
   {
    "name": "TREFLE2",
    "partners": [
     "nuvia-protection"
-   ]
+   ],
+   "lead": "nuvia-protection",
+   "lead_name": "Nuvia",
+   "desc": "Finer filtration system for effluents from nuclear-sector laundries.",
+   "aid": [],
+   "call": "waste"
   },
   {
    "name": "GTA",
    "partners": [
     "jimmy-energy"
-   ]
+   ],
+   "lead": "jimmy-energy",
+   "lead_name": "Jimmy Energy SAS",
+   "desc": null,
+   "aid": [
+    {
+     "eur": 32000000,
+     "phase": "phase 1",
+     "conf": "high",
+     "url": "https://www.usinenouvelle.com/article/jimmy-recoit-32-millions-d-euros-de-france-2030-pour-industrialiser-sa-chaudiere-nucleaire.N2198613"
+    },
+    {
+     "eur": 40000000,
+     "phase": "phase 2",
+     "conf": "high",
+     "url": "https://www.connaissancedesenergies.org/afp/nucleaire-letat-renouvelle-son-soutien-deux-projets-de-mini-reacteurs-260310"
+    }
+   ],
+   "call": "reactors"
   }
- ]
+ ],
+ "totals": {
+  "identified": 570730000,
+  "awards": 19,
+  "waste_call": 71700000.0,
+  "reactor_phase1": 129800000.0
+ }
 };
 const O=Object.fromEntries(DATA.orgs.map(o=>[o.id,o]));
 const P=DATA.projects;
 const colorVar={startup:'--c-startup',corporate:'--c-corporate',research_lab:'--c-research',university:'--c-univ',public_agency:'--c-agency'};
 const typeLabel={startup:'Startup',corporate:'Company',research_lab:'Research body',university:'University',public_agency:'Public agency'};
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt=v=>'€'+(v/1e6).toLocaleString('en-GB',{maximumFractionDigits:2})+'M';
+const aidTxt=p=>p.aid&&p.aid.length?p.aid.map(a=>`${fmt(a.eur)}${a.phase?' ('+a.phase+')':''}${a.conf!=='high'?' <span class="pill warn">to verify</span>':''}`).join('<br>'):'<span class="note">not published</span>';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 // figures
 const startups=DATA.orgs.filter(o=>o.type==='startup').length;
 const cea=O.cea.projects.length;
 document.getElementById('figs').innerHTML=[
  [DATA.orgs.length,'organisations'],[P.length,'projects'],[P.reduce((a,p)=>a+p.partners.length,0),'partner links'],
- [Math.round(cea/P.length*100)+'%','of projects include CEA'],[startups,'startups']].map(([b,s])=>`<div class="fig"><b>${b}</b><span>${s}</span></div>`).join('');
+ [Math.round(cea/P.length*100)+'%','of projects include CEA'],['€'+Math.round(DATA.totals.identified/1e6)+'M','State aid traced to '+DATA.totals.awards+' awards']].map(([b,s])=>`<div class="fig"><b>${b}</b><span>${s}</span></div>`).join('');
 // hubs
 const hub=DATA.orgs.map(o=>[o.name,o.projects.length]).sort((a,b)=>b[1]-a[1]).slice(0,10);
 const mx=hub[0][1];
@@ -1750,12 +2157,12 @@ document.getElementById('groups').innerHTML=gl.map(([n,v])=>`<div class="bar"><s
 // reactor table
 document.getElementById('react').innerHTML=DATA.orgs.filter(o=>o.reactor).sort((a,b)=>a.name.localeCompare(b.name)).map(o=>{
  const pr=P.filter(p=>p.partners.includes(o.id));
- return `<tr><td><b>${esc(o.name)}</b><br><span class="note">${esc(o.city||'')}</span></td><td class="m">${pr.map(p=>esc(p.name)).join('<br>')}</td><td>${pr.map(p=>p.partners.filter(s=>s!==o.id).map(s=>esc(O[s].name)).join(', ')||'<span class="note">none named</span>').join('<br>')}</td><td>${o.investors?esc(o.investors):'<span class="note">none recorded</span>'}</td></tr>`}).join('');
-document.getElementById('projs').innerHTML=[...P].sort((a,b)=>b.partners.length-a.partners.length||a.name.localeCompare(b.name)).map(p=>`<tr><td class="m">${esc(p.name)}</td><td>${p.partners.map(s=>`${esc(O[s].name)}${O[s].conf!=='high'?' <span class="pill warn">'+(O[s].conf==='review'?'unconfirmed':'medium')+'</span>':''}`).join(', ')}</td><td class="m">${p.partners.length}</td></tr>`).join('');
+ return `<tr><td><b>${esc(o.name)}</b><br><span class="note">${esc(o.city||'')}</span>${o.note&&o.note!=='Already in Navigator.'&&/Receivership|phase 2/.test(o.note)?'<br><span class="pill warn">'+esc(o.note)+'</span>':''}</td><td class="m">${pr.map(p=>esc(p.name)).join('<br>')}</td><td class="m">${pr.map(aidTxt).join('<br>')}</td><td>${pr.map(p=>p.partners.filter(s=>s!==o.id).map(s=>esc(O[s].name)).join(', ')||'<span class="note">none named</span>').join('<br>')}</td><td>${o.investors?esc(o.investors):'<span class="note">none recorded</span>'}</td></tr>`}).join('');
+document.getElementById('projs').innerHTML=[...P].sort((a,b)=>((b.aid||[]).reduce((s,x)=>s+x.eur,0)-(a.aid||[]).reduce((s,x)=>s+x.eur,0))||b.partners.length-a.partners.length||a.name.localeCompare(b.name)).map(p=>`<tr><td class="m">${esc(p.name)}</td><td>${p.lead?esc(O[p.lead].name):esc(p.lead_name||'–')}</td><td class="m">${aidTxt(p)}</td><td>${p.partners.map(s=>`${esc(O[s].name)}${O[s].conf!=='high'?' <span class="pill warn">'+(O[s].conf==='review'?'unconfirmed':'medium')+'</span>':''}`).join(', ')}</td></tr>`).join('');
 // network
 const svg=d3.select('#net');
 let W=svg.node().clientWidth,H=svg.node().clientHeight;
-const nodes=[...DATA.orgs.map(o=>({id:o.id,kind:'org',o,r:5+Math.sqrt(o.projects.length)*3.2})),...P.map((p,i)=>({id:'p:'+p.name,kind:'proj',p,r:4}))];
+const nodes=[...DATA.orgs.map(o=>({id:o.id,kind:'org',o,r:5+Math.sqrt(o.projects.length)*3.2})),...P.map((p,i)=>({id:'p:'+p.name,kind:'proj',p,r:4+Math.sqrt(((p.aid||[]).reduce((s,x)=>s+x.eur,0))/1e6)*0.9}))];
 const N=Object.fromEntries(nodes.map(n=>[n.id,n]));
 const links=P.flatMap(p=>p.partners.map(s=>({source:'p:'+p.name,target:s,weak:O[s].conf!=='high'})));
 const g=svg.append('g');
@@ -1763,7 +2170,7 @@ svg.call(d3.zoom().scaleExtent([.4,4]).on('zoom',e=>g.attr('transform',e.transfo
 const L=g.append('g').selectAll('line').data(links).join('line').attr('stroke-width',1).attr('stroke-dasharray',d=>d.weak?'3 3':null);
 const nd=g.append('g').selectAll('g').data(nodes).join('g').attr('tabindex',0).attr('role','button').attr('aria-label',d=>d.kind==='org'?d.o.name:'Project '+d.p.name).style('cursor','pointer');
 nd.filter(d=>d.kind==='org').append('circle').attr('r',d=>d.r);
-nd.filter(d=>d.kind==='proj').append('rect').attr('width',7).attr('height',7).attr('x',-3.5).attr('y',-3.5).attr('transform','rotate(45)');
+nd.filter(d=>d.kind==='proj').append('rect').attr('width',d=>d.r*1.6).attr('height',d=>d.r*1.6).attr('x',d=>-d.r*.8).attr('y',d=>-d.r*.8).attr('transform','rotate(45)');
 nd.filter(d=>d.kind==='org'&&(d.o.projects.length>=3||d.o.reactor)).append('text').attr('x',d=>d.r+3).attr('y',4).text(d=>d.o.name).style('font','600 11px var(--body)').attr('paint-order','stroke').attr('stroke-width',3).attr('stroke-linejoin','round');
 function paint(){
  L.attr('stroke',css('--line'));
@@ -1775,7 +2182,7 @@ paint();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',pai
 const sim=d3.forceSimulation(nodes).force('link',d3.forceLink(links).id(d=>d.id).distance(d=>28).strength(.7)).force('charge',d3.forceManyBody().strength(d=>d.kind==='org'?-70-d.r*6:-30)).force('center',d3.forceCenter(W/2,H/2)).force('x',d3.forceX(W/2).strength(.04)).force('y',d3.forceY(H/2).strength(.06)).force('col',d3.forceCollide(d=>d.r+2));
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(reduce){sim.stop();for(let i=0;i<300;i++)sim.tick();}
-function tick(){nodes.forEach(d=>{const m=d.r+6;d.x=Math.max(m,Math.min(W-m-(d.kind==='org'&&d.o.projects.length>=3?70:0),d.x));d.y=Math.max(m,Math.min(H-m,d.y))});L.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);nd.attr('transform',d=>`translate(${d.x},${d.y})`)}
+function tick(){nodes.forEach(d=>{const m=d.r+6;d.x=Math.max(m,Math.min(W-m-(d.kind==='org'&&(d.o.projects.length>=3||d.o.reactor)?90:0),d.x));d.y=Math.max(m,Math.min(H-m,d.y))});L.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);nd.attr('transform',d=>`translate(${d.x},${d.y})`)}
 sim.on('tick',tick);tick();
 nd.call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
 const side=document.getElementById('side');
@@ -1791,7 +2198,7 @@ function focus(id){
   ${o.note&&o.note!=='Already in Navigator.'?`<p class="note" style="margin:0">${esc(o.note)}</p>`:''}
   <div><div class="eyebrow">Projects (${o.projects.length})</div><div class="chips">${o.projects.map(p=>`<button class="chip" data-id="p:${esc(p)}">${esc(p)}</button>`).join('')}</div></div>
   <div><div class="eyebrow">Works with (${co.size})</div><div class="chips">${[...co].map(x=>`<button class="chip" data-id="${x}">${esc(O[x].name)}</button>`).join('')}</div></div>`}
- else{const p=n.p;side.innerHTML=`<div class="eyebrow">France 2030 project</div><h3>${esc(p.name)}</h3><div class="eyebrow">Partners (${p.partners.length})</div><div class="chips">${p.partners.map(x=>`<button class="chip" data-id="${x}">${esc(O[x].name)}</button>`).join('')}</div>`}
+ else{const p=n.p;side.innerHTML=`<div class="eyebrow">France 2030 project</div><h3>${esc(p.name)}</h3>${p.desc?`<p class="note" style="margin:0">${esc(p.desc)}</p>`:''}<dl class="kv"><dt>Lead</dt><dd>${esc(p.lead?O[p.lead].full:(p.lead_name||'–'))}</dd><dt>State aid</dt><dd>${aidTxt(p)}${p.aid&&p.aid[0]&&p.aid[0].url?` · <a href="${esc(p.aid[0].url)}" target="_blank" rel="noopener">source</a>`:''}</dd></dl><div class="eyebrow">Partners (${p.partners.length})</div><div class="chips">${p.partners.map(x=>`<button class="chip" data-id="${x}">${esc(O[x].name)}</button>`).join('')}</div>`}
  side.insertAdjacentHTML('beforeend','<button class="tg" data-id="">Clear selection</button>');
 }
 function intro(){side.innerHTML=`<div class="eyebrow">How to read it</div><p class="note" style="margin:0">Select a dot or diamond to see its partners. Drag to rearrange, scroll or pinch to zoom.</p><p class="note" style="margin:0">CEA sits in the middle because it is a partner on ${cea} of the ${P.length} projects. Hide it and CNRS to see the industrial clusters underneath: the Orano dismantling and recycling group, the EDF–Framatome reactor group, and the startups that work with only one or two partners.</p>`}
