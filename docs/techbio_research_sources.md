@@ -149,10 +149,11 @@ Tabular API tips:
 - Intermittent "Bad Gateway" errors from the MCP clear on retry.
 - ANR surnames are UPPERCASE. ESR `Raison sociale` is UPPERCASE.
 
-## INPI patent database (tested 2026-11-07, patent run)
-- **data.inpi.fr, www.inpi.fr, bases-brevets19e.inpi.fr: BLOCKED** (CONNECT 403 at the proxy).
-- **api-gateway.inpi.fr (INPI "API PI"): reachable but needs an INPI account.** Every data endpoint (e.g. `/services/apidiffusion/api/brevets/search`) returns 401 "Full authentication is required". Access means creating a free INPI account (data.inpi.fr) and logging in with username/password, which returns a session token. Not a simple API key.
-- **static.data.gouv.fr: BLOCKED**, so the bulk parquet dump "Brevets d'invention Francais 1981-2026" (dataset `6a2c13d26ca78616d3f3d51c`, 67 files, ~8 GB) cannot be read.
-- INPI "Publications de demandes de brevets 2020" (resource `eff92b8a-…`) is queryable but has **no applicant column**, so it cannot be matched to companies.
-- Fallback used: MESR "Déposants des brevets" (resource `7744f1fc-f7be-40cb-9511-2ca6e7ce5031`, updated Dec 2025), by SIREN and name. Only new hit: Qynapse (2 families), loaded in `phase38/10_…`.
-- To finish the INPI run: allow-list `data.inpi.fr` and `api-gateway.inpi.fr` (and `static.data.gouv.fr` for the bulk dump), and provide INPI account credentials, or run from an open machine.
+## INPI patent database (tested 2026-11-07, full patent run done)
+- **Access: WORKS** via `api-gateway.inpi.fr` (INPI "API PI"), logging in with the INPI account stored in the environment variables `INPI_USERNAME` / `INPI_PASSWORD`. (An earlier note here said it was blocked; that was wrong. `data.inpi.fr` itself is blocked, but the API is not.)
+- **Login:** GET any API URL to receive an `XSRF-TOKEN` cookie, then POST `/auth/login` with `{"username","password"}` and header `X-XSRF-TOKEN`. The XSRF token rotates after each response, so resend the latest cookie value on every request. The access token lasts 5 minutes; log in again after that.
+- **Search:** POST `/services/apidiffusion/api/brevets/search` with `{"query":"[DENM=\"COMPANY NAME\"]","collections":["FR","EP","WO"],"position":0,"size":100}`. `DENM` = applicant name (`DEPO` does not work). It returns 204 when there are no hits.
+- **Full record:** GET `/services/apidiffusion/api/brevets/notice/{publicationNumber}` with `Accept: application/xml`. It carries the **DOCDB family-id** (use it for dedup), the title and the applicants. For French filings it also carries the **applicant SIREN** (`<iid>`).
+- **Quota: about 100 full records per hour.** HTTP 429 comes with `X-Rate-Limit-Retry-After-Seconds`. Some records return transient 404/500 errors; retry them later.
+- Coverage: FR, EP and WO publications only (no US-only filings).
+- Results are in `supabase/migrations/phase38/13_…`.
