@@ -157,3 +157,18 @@ Tabular API tips:
 - **Quota: about 100 full records per hour.** HTTP 429 comes with `X-Rate-Limit-Retry-After-Seconds`. Some records return transient 404/500 errors; retry them later.
 - Coverage: FR, EP and WO publications only (no US-only filings).
 - Results are in `supabase/migrations/phase38/13_…`.
+
+## US patents via Google Patents (checked 2026-11-08)
+- **Why Google Patents:** the official US sources (USPTO Open Data Portal at data.uspto.gov/api.uspto.gov, and PatentsView, which is moving into it) need an API key, and none is configured. `patents.google.com` was added to the allowed hosts instead; it needs no key.
+- **Query:** `GET https://patents.google.com/xhr/query?url=assignee%3D<NAME>%26num%3D100&exp=`. It is heavily throttled (HTTP 503); allow about 30 s between requests and back off for minutes at a time.
+- **Scope:** the 26 TechBio companies with no patent on INPI, searched by assignee name (any country, US included).
+- **Result: no genuine patents.** Every hit was a look-alike:
+  - Beliver: a Spanish inventor.
+  - Inato: Japanese inventors.
+  - Helix: Helix Research Institute, Japan.
+  - Nebula: Chinese and US firms.
+  - Karavela: a Ukrainian stevia grower, 1995.
+  - Opsin: Opsin Biotherapeutics, US.
+  - Medlabs: Medlabs Sp. z o.o., Poland.
+  - YoungR: a Beijing tent maker.
+- **Caveats:** this does not cover US applications still under the 18-month secrecy period, or filings made in a founder's name rather than the company's.
