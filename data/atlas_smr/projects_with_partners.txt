@@ -1,0 +1,53 @@
+MoMA | Fonderie Lemer; Orano Démantèlement; Iumtek (TX 4000)
+Dream scanner | Damavan Imaging; Orano DS – Démantèlement et Services; Université de technologie de Troyes (UTT)
+EPONA | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Amplitude; Orano Support
+REGAIN | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Orano Support; Framatome; CNRS
+RPN2 | Fonderie Lemer; Orano Démantèlement; Curium
+RF01 | Renaissance Fusion; CEA (Commissariat à l'énergie atomique et aux énergies alternatives)
+NEWCLEO LFR 30 MWE | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); newcleo
+PROCER | Bernardaud
+SIMB-AD | TRAD Tests & Radiations; CNRS
+D-CLIC | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Toulouse INP (Institut national polytechnique de Toulouse); CNRS
+TBATT - DIAMOND | STMicroelectronics (Crolles 2) SAS; CEA (Commissariat à l'énergie atomique et aux énergies alternatives); DiamFab
+DNAT | Laboratoire d'Étalons d'Activité (LEA)
+DEMWASTE | DEMBoost; iTech Instruments
+NUWARD | Nuward; EDF
+MIRAGE | Rousselet Centrifugation; CNRS; CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Aix-Marseille Université; Toulouse INP (Institut national polytechnique de Toulouse)
+BLUE CAPSULE | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Egis Nucléaire; Blue Capsule
+PACH3 | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Technetics Group France; Innowtech; Curium
+HEXANA | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Hexana
+ECCLOR | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Cyclife France
+SOLVERIS | Veolia Nuclear Solutions France; CEA (Commissariat à l'énergie atomique et aux énergies alternatives); ECI Meca; Assystem Engineering and Operation Services; BRGM
+SMETANA | Orano Recyclage; EDF
+ANAIS | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Cesigma
+PROVIDENCE | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Orano Recyclage; ECM Technologies
+PALLAS | Socotec Monitoring France; Entreprise Auglans; IRSN (Institut de radioprotection et de sûreté nucléaire); Université Gustave Eiffel; CNRS
+EcoLAS | Meliad; Orano Démantèlement
+PORTHOS | Orano Support; CNRS; Rhodia Operations
+ETIS | Orano Démantèlement; Iumtek (TX 4000); Probayes; CEA (Commissariat à l'énergie atomique et aux énergies alternatives)
+SELF | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Orano Démantèlement; CNRS
+VAL'M2 TCN | EDF; Orano Démantèlement
+KRYPTRAP | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); CNRS
+R2DS | Orano Recyclage; Siléane
+ESOP | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Atlanchim Pharma
+PROXIMA | Orano Support; Oakridge (Orléans); CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Thorizon; Centrale Lille Institut; Université de Lille
+MAEVA2 | Orano Chimie-Enrichissement; Institut Mines-Télécom (IMT); CNRS
+TRTAP | Université de Limoges; W CE Process; Orano Démantèlement
+CIMBOOST | Orano Démantèlement; LERMAT (Laboratoire Études Recherche Matériaux)
+D-PERLE | Orano DS – Démantèlement et Services; CEA (Commissariat à l'énergie atomique et aux énergies alternatives)
+RTG | TrisKem; CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Orano Démantèlement
+Passive-safety research platform (ASNR) | ASNR (Autorité de sûreté nucléaire et de radioprotection)
+STELLARIUM | Stellaria; Orano Support; CEA (Commissariat à l'énergie atomique et aux énergies alternatives)
+PREPAC | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); CNRS
+ISAC | Framatome; EDF; CEA (Commissariat à l'énergie atomique et aux énergies alternatives); CNRS; Orano Support
+MRREP | Orano Recyclage; EDF; Framatome
+NAAREA FCE 2030 | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Naarea
+SPATIAL | CNRS
+RAD2GLASS | Waste2Glass
+TARANIS | GENF; CNRS; CEA (Commissariat à l'énergie atomique et aux énergies alternatives)
+MOSARWASTE | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); CNRS; Orano Support
+PADAWANN | Université de Rouen Normandie; CEA (Commissariat à l'énergie atomique et aux énergies alternatives)
+ONE | CEA (Commissariat à l'énergie atomique et aux énergies alternatives); Otrera
+CALOGENA | Calogena
+TREFLE2 | Nuvia Protection
+GTA | Jimmy Energy
