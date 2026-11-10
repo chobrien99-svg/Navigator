@@ -36,7 +36,7 @@ AI-biopharma, BeLiver, D&A MedLabs, Eukarÿs, InFocus Therapeutics, InSiliBio, K
 
 **Lead investor unknown** for 26 of the 72 recorded rounds.
 
-**Possibly missing recent rounds.** No round recorded since mid-2024 for: Ariana Pharma, Cure51, DNA Script, Eligo, Endogene.bio, Iktos, Okomera, Owkin, Parean, Peaccel, Poietis, Qubit, Rosetta Omics, Scienta Lab.
+**Possibly missing recent rounds.** No round recorded since mid-2024 for: Ariana Pharma, Cure51, DNA Script, Eligo, Endogene.bio, Iktos, Okomera, Owkin, Parean, Peaccel, Qubit, Rosetta Omics, Scienta Lab.
 
 ## 2. Public funding
 
