@@ -1,0 +1,24 @@
+[
+ {
+  "nct": "NCT06160596",
+  "title": "Analyzing and Solving Exceptional Long-term Survivors in Solid Tumors With Poor Prognosis",
+  "lead_sponsor": "Cure 51",
+  "collaborators": [
+   "Gustave Roussy, Cancer Campus, Grand Paris",
+   "Centre Leon Berard",
+   "Vall d'Hebron Institute of Oncology",
+   "Istituto Europeo di Oncologia",
+   "Charite University, Berlin, Germany"
+  ],
+  "status": "RECRUITING",
+  "start": "2023-11-01",
+  "phases": null,
+  "type": "OBSERVATIONAL",
+  "conditions": [
+   "Pancreas Adenocarcinoma",
+   "Small-cell Lung Cancer",
+   "Glioblastoma, IDH-wildtype"
+  ],
+  "matched_term": "Cure 51"
+ }
+]

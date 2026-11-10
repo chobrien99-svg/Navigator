@@ -21,3 +21,15 @@ sector-research script.
 | research.json | per-company research-origin summary used in the report |
 
 Large raw dumps (scanR jsonl.gz) are not committed; see manifest.json for URLs.
+
+## Final report pass (10 November 2026)
+| File | Contents |
+|---|---|
+| report/techbio-funding.html | published report (claude.ai artifact HP1GyrsYouAdUHGaZdp54A, private) |
+| report/French-TechBio-Funding-Map-Nov-2026.pdf | the 18-page PDF |
+| report/template.html, payload.json, research.json | page template + the two data blocks (`/*DATA*/`, `/*RDATA*/`) |
+| report/final_build.py, pdf.js | rebuild scripts (patent counts after the INPI run, EU, ANR, CIR, court data) |
+| eu_grants.json | 44 EU grants (company share) loaded by migration 17 |
+| bodacc_ct/ct_*.json | ClinicalTrials.gov hits (Cure51, Owkin) |
+
+Court notices were checked by SIREN via Pappers (BODACC data); the earlier name-based BODACC pull gave false matches and is not used.

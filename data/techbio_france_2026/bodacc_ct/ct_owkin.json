@@ -1,0 +1,17 @@
+[
+ {
+  "nct": "NCT06625203",
+  "title": "A Non-interventional, International, Multicentre Clinical Research Study to Build the Largest Collection of Multimodal Data (Including Clinical Data, Imaging Data and Omics Data) in Oncology",
+  "lead_sponsor": "OWKIN",
+  "collaborators": [],
+  "status": "ACTIVE_NOT_RECRUITING",
+  "start": "2023-05-08",
+  "phases": null,
+  "type": "OBSERVATIONAL",
+  "conditions": [
+   "Diffuse Large B Cell Lymphoma",
+   "Solid Tumor Cancer"
+  ],
+  "matched_term": "Owkin"
+ }
+]
