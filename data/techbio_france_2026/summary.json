@@ -787,9 +787,9 @@
  "eligo-bioscience": {
   "name": "Eligo Bioscience",
   "fy": 2014,
-  "total": 32.02,
+  "total": 36.42,
   "grant_total": 0,
-  "last": "2023-12-05",
+  "last": "2025-05-01",
   "first": "2015-07-01",
   "latest_stage": "series_b",
   "investors": [
@@ -804,7 +804,7 @@
   "status": "active",
   "city": "Paris",
   "seg": "Synthetic biology & genetic medicine",
-  "nrounds": 4
+  "nrounds": 5
  },
  "ai-biopharma": {
   "name": "AI-biopharma",

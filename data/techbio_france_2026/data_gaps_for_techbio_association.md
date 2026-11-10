@@ -15,7 +15,7 @@ AI-biopharma, BeLiver, D&A MedLabs, Eukarÿs, InFocus Therapeutics, InSiliBio, K
 | ArcaScience | Seed | Apr 2023 |
 | Cherry Biotech | Seed | Jul 2024 |
 | DNA Script | Undisclosed round | Aug 2022 |
-| Eligo Bioscience | Seed | Jul 2017 |
+| Eligo Bioscience | Khosla Ventures round | Jul 2017 |
 | Iktos | Seed | Jun 2017 |
 | Iktos | Seed | Jan 2019 |
 | Parean Biotechnologies | Undisclosed round | Nov 2023 |
@@ -26,11 +26,15 @@ AI-biopharma, BeLiver, D&A MedLabs, Eukarÿs, InFocus Therapeutics, InSiliBio, K
 **Amounts that are estimates.**
 - Owkin: $18M of its Series A (GV 2018; F-Prime and Eight Roads 2019) is recorded as one entry, because the split by investor and date was never disclosed.
 - WhiteLab Genomics: October 2026 Series B, converted from $26M.
-- Rosetta Omics: May 2024 pre-seed (€0.35M).
+- Rosetta Omics: May 2024 pre-seed (€0.35M). A 2025 company profile says it was in discussion with investors, which neither confirms nor contradicts this.
+- Eligo Bioscience: the extra $5M in its Series B (extended from $30M to $35M, announced May 2025) is recorded as an estimated €4.4M; the timing and investors are not disclosed.
+- Eligo Bioscience: an April 2018 €1.8M entry (Dealroom, no investor) may be grant funding rather than equity.
 
-**Rounds with no named investor (9).** Ariana Pharma Series A (2008); Eligo (Apr 2018); Iktos seeds (2017, 2019); Netri Series B (Feb 2025); Parean (Nov 2023); Phagos (Aug 2024); Rosetta Omics pre-seed (2024); WhiteLab angel round (2020).
+**Rounds with no named investor (9).** Ariana Pharma Series A (2008); Eligo (Apr 2018); Iktos seeds (2017, 2019); Netri Series B (Feb 2025); Parean (Nov 2023: its first raise, from private investors whose names are undisclosed); Phagos (Aug 2024: Citizen Capital and Capagro II both report 2024 investments, but not for this specific transaction); Rosetta Omics pre-seed (2024); WhiteLab angel round (2020).
 
-**Lead investor unknown** for 25 of the 71 recorded rounds.
+**Leads to confirm.** InFocus Therapeutics: Dealroom lists a $100,000 seed round (date, investor and entity not confirmed). TychoBio: Crunchbase lists Kima Ventures and Tiny Supercomputer Investment Company in a pre-seed, possibly raised by the US entity TychoBio Inc.
+
+**Lead investor unknown** for 26 of the 72 recorded rounds.
 
 **Possibly missing recent rounds.** No round recorded since mid-2024 for: Ariana Pharma, Cure51, DNA Script, Eligo, Endogene.bio, Iktos, Okomera, Owkin, Parean, Peaccel, Poietis, Qubit, Rosetta Omics, Scienta Lab.
 
@@ -38,13 +42,14 @@ AI-biopharma, BeLiver, D&A MedLabs, Eukarÿs, InFocus Therapeutics, InSiliBio, K
 
 - **France 2030 consortia:** Owkin (RHU AI-TRIOMPH and RHU CONDOR) and Qubit (quantum-computing programme): only consortium totals are published, not each company's share.
 - **Other France 2030 and Bpifrance grants:** Aqemia's France 2030 award is recorded; most other companies' Bpifrance or France 2030 grants are not publicly listed.
-- **EIC equity:** EIC Fund investments are not public in open data. Recorded: Qubit €5M (2021). Iktos mentions an option for a further €5M with its 2024–25 EIC grant. Ksilink was selected for a 2024 EIC Accelerator, but no amount is recorded.
+- **EIC equity:** EIC Fund investments are not public in open data. Recorded: Qubit €5M (2021). Iktos mentions an option for a further €5M with its 2024–25 EIC grant. Ksilink was selected for a 2024 EIC Accelerator, but this could not be verified and no amount is recorded.
+- **Ksilink EU funding:** CORDIS lists €159,830 for a participant named KSILINK in the IMPACT project. Which legal entity (the association or the company) received it?
 - **Research tax credit:** 10 companies are approved CIR research bodies. Approval says nothing about the amounts.
 
 ## 3. Company status and events
 
 - **Iktos and Ariana Pharma** are in receivership (since October and September 2026). What is the outlook?
-- **Poietis:** a court-approved sale plan in January 2025, but the buyer is not named in the notice.
+- **Poietis:** the business was taken over by Poietis Biosystems (SIREN 939 889 283, now NGB Biosystems), registered on the day the sale plan was approved, at Poietis's address. Confirmation from the court judgment would close this.
 - **Ksilink:** in liquidation since September 2026. Is any of the activity continuing elsewhere?
 
 ## 4. Founders and teams
