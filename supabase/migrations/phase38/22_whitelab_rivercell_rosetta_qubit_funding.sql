@@ -78,3 +78,9 @@ COMMIT;
 
 SELECT o.slug, fr.announced_date::text d, fr.stage::text s, fr.amount_eur::text a, (SELECT string_agg(i.slug,', ') FROM funding_round_investors x JOIN organizations i ON i.id=x.investor_id WHERE x.funding_round_id=fr.id) inv
 FROM funding_rounds fr JOIN organizations o ON o.id=fr.organization_id WHERE o.slug IN ('whitelab-genomics','rivercell','qubit-pharmaceuticals') ORDER BY 1,2;
+
+-- Addendum (10 Nov 2026, editor): Y Combinator did not take part in WhiteLab's
+-- September 2022 Series A; removed from that round.
+DELETE FROM funding_round_investors fri USING funding_rounds fr, organizations o, organizations i
+WHERE fri.funding_round_id=fr.id AND fr.organization_id=o.id AND fri.investor_id=i.id
+  AND o.slug='whitelab-genomics' AND fr.announced_date='2022-09-12' AND i.slug='y-combinator';
