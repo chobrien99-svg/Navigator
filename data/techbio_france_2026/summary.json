@@ -357,7 +357,7 @@
  "iktos": {
   "name": "Iktos",
   "fy": 2016,
-  "total": 15.16,
+  "total": 15.5,
   "grant_total": 0,
   "last": "2023-03-09",
   "first": "2017-06-01",
@@ -670,13 +670,13 @@
  "qubit-pharmaceuticals": {
   "name": "Qubit Pharmaceuticals",
   "fy": 2020,
-  "total": 16.1,
+  "total": 21.1,
   "grant_total": 0,
   "last": "2022-06-10",
-  "first": "2022-06-10",
+  "first": "2021-06-01",
   "latest_stage": "seed",
   "investors": [
-   "European Innovation Council",
+   "EIC Fund",
    "Octave Klaba",
    "Omnes Capital",
    "Quantonation",
@@ -688,7 +688,7 @@
   "status": "active",
   "city": "Paris",
   "seg": "AI drug & molecule design",
-  "nrounds": 1
+  "nrounds": 2
  },
  "scienta-lab": {
   "name": "Scienta Lab",
