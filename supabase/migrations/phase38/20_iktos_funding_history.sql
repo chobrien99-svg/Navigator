@@ -54,3 +54,27 @@ COMMIT;
 
 SELECT fr.announced_date, fr.stage, fr.amount_eur, (SELECT string_agg(i.name,', ') FROM funding_round_investors x JOIN organizations i ON i.id=x.investor_id WHERE x.funding_round_id=fr.id) inv
 FROM funding_rounds fr JOIN organizations o ON o.id=fr.organization_id WHERE o.slug='iktos' ORDER BY 1;
+
+-- -----------------------------------------------------------------------------
+-- Addendum (10 Nov 2026): Iktos website (team page, milestones)
+--   * Founder titles and bios: Yann Gaston-Mathé (CEO, board member; PhD
+--     organometallic chemistry, Geneva), Quentin Perron (CSO, board observer;
+--     PhD in AI), Nicolas Do Huu (CTO, board member). The PhD-in-AI bio follows
+--     Perron's name on the page; attribution inferred from page layout.
+--   * EIC AIR-3D grant: company says €2.5M grant with option of a further
+--     €5M EIC investment (not recorded as a round); company dates it 2025.
+--   * Event: in-house drug discovery started in 2023.
+-- -----------------------------------------------------------------------------
+BEGIN;
+UPDATE people SET has_phd=TRUE, short_bio='Co-founder and CEO of Iktos (board member). PhD in organometallic chemistry, University of Geneva; medicinal chemist and data scientist.', updated_at=NOW() WHERE slug='yann-gaston-mathe';
+UPDATE people SET has_phd=TRUE, short_bio='Co-founder and CSO of Iktos (board observer); steers R&D and portfolio development and supervises project delivery for partners and customers. PhD in artificial intelligence; previously in software development and R&D, built a distributed computation platform for big-data processing.', updated_at=NOW() WHERE slug='quentin-perron';
+UPDATE people SET short_bio='Co-founder and CTO of Iktos (board member); leads the company''s technology development.', updated_at=NOW() WHERE slug='nicolas-do-huu';
+UPDATE organization_people op SET title=s.t, updated_at=NOW()
+FROM organizations o, people p, (VALUES ('yann-gaston-mathe','Co-founder & CEO; board member'),('quentin-perron','Co-founder & CSO; board observer'),('nicolas-do-huu','Co-founder & CTO; board member')) s(slug,t)
+WHERE op.organization_id=o.id AND op.person_id=p.id AND o.slug='iktos' AND p.slug=s.slug;
+UPDATE grants g SET description=g.description||' Iktos describes it as a €2.5M EIC Accelerator grant "with option to additional €5M investment" (EIC Fund equity option, not recorded as a round) to advance its integrated AI and robotics platform, and dates it 2025; the EU call is HORIZON-EIC-2024-ACCELERATOR-02.', updated_at=NOW()
+FROM organizations o WHERE g.organization_id=o.id AND o.slug='iktos' AND g.grant_name='Horizon Europe – AIR-3D (EIC Accelerator)' AND g.description NOT LIKE '%option to additional%';
+INSERT INTO organization_events (id, organization_id, event_type, event_date, title, description, source_url, source_type, source_name, verification_status, legacy_source, created_at, updated_at)
+SELECT uuid_generate_v4(), o.id, 'pivot'::event_type, '2023-01-01', 'Iktos starts in-house drug discovery', 'Iktos began its own drug-discovery programmes in 2023, alongside its software and services business (company website; year only).', 'https://iktos.ai', 'company_website', 'Iktos website', 'high', 'iktos_funding_november_2026', NOW(), NOW()
+FROM organizations o WHERE o.slug='iktos' AND NOT EXISTS (SELECT 1 FROM organization_events x WHERE x.organization_id=o.id AND x.title='Iktos starts in-house drug discovery');
+COMMIT;
