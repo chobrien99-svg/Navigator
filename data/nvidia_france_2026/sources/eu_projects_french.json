@@ -1,0 +1,373 @@
+[
+ {
+  "acronym": "ESCAPE",
+  "year": 2014,
+  "title": "Energy-efficient SCalable Algorithms for weather Prediction at Exascale",
+  "url": "https://cordis.europa.eu/project/id/671627",
+  "eu_total": 3977952.5,
+  "nvidia_eur": 193335.0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Bull",
+    "eur": 269280.0,
+    "role": "partner"
+   },
+   {
+    "name": "Météo-France",
+    "eur": 293175.0,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 562455.0
+ },
+ {
+  "acronym": "HiPerNav",
+  "year": 2016,
+  "title": "High Performance Soft-tissue Navigation",
+  "url": "https://cordis.europa.eu/project/id/722068",
+  "eu_total": 4041920.04,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "organization partner"
+  ],
+  "french": [
+   {
+    "name": "Université Sorbonne Paris Nord",
+    "eur": 262875.6,
+    "role": "partner"
+   },
+   {
+    "name": "Institut national de recherche en sciences et technologies du numérique",
+    "eur": 525751.2,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 788626.7999999999
+ },
+ {
+  "acronym": "COSINE",
+  "year": 2017,
+  "title": "Training network for COmputational Spectroscopy In Natural sciences and Engineering",
+  "url": "https://cordis.europa.eu/project/id/765739",
+  "eu_total": 3745978.92,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "organization partner"
+  ],
+  "french": [
+   {
+    "name": "École nationale supérieure de chimie de Paris",
+    "eur": 262875.6,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 262875.6
+ },
+ {
+  "acronym": "ACHIEVE",
+  "year": 2017,
+  "title": "AdvanCed Hardware/Software Components for Integrated/Embedded Vision SystEms",
+  "url": "https://cordis.europa.eu/project/id/765866",
+  "eu_total": 2266907.76,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "organization partner"
+  ],
+  "french": [
+   {
+    "name": "Université Clermont Auvergne",
+    "eur": 262875.6,
+    "role": "partner"
+   },
+   {
+    "name": "Université Marie et Louis Pasteur",
+    "eur": 262875.6,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 525751.2
+ },
+ {
+  "acronym": "MELLODDY",
+  "year": 2018,
+  "title": "MachinE Learning Ledger Orchestration for Drug DiscoverY",
+  "url": "https://cordis.europa.eu/project/id/831472",
+  "eu_total": 8000000.0,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Substra",
+    "eur": 858482.0,
+    "role": "partner"
+   },
+   {
+    "name": "Institut de recherches servier",
+    "eur": 0,
+    "role": "partner"
+   },
+   {
+    "name": "Owkin France",
+    "eur": 2683635.0,
+    "role": "coordinator"
+   },
+   {
+    "name": "Iktos",
+    "eur": 343402.0,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 3885519.0
+ },
+ {
+  "acronym": "Rising STARS",
+  "year": 2019,
+  "title": "RISE International Network for Solutions Technologies and Applications of Real-time Systems",
+  "url": "https://cordis.europa.eu/project/id/873120",
+  "eu_total": 634800.0,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Thales group",
+    "eur": 55200.0,
+    "role": "partner"
+   },
+   {
+    "name": "Observatoire de Paris",
+    "eur": 165600.0,
+    "role": "coordinator"
+   },
+   {
+    "name": "ArianeGroup",
+    "eur": 55200.0,
+    "role": "partner"
+   },
+   {
+    "name": "Kalray",
+    "eur": 0,
+    "role": "partner"
+   },
+   {
+    "name": "Institut national des sciences appliquées de Rennes",
+    "eur": 138000.0,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 414000.0
+ },
+ {
+  "acronym": "ELSA",
+  "year": 2021,
+  "title": "European Lighthouse on Secure and Safe AI",
+  "url": "https://cordis.europa.eu/project/id/101070617",
+  "eu_total": 7434058.5,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "associated partner"
+  ],
+  "french": [
+   {
+    "name": "Valeo comfort and driving assistance",
+    "eur": 336250.0,
+    "role": "partner"
+   },
+   {
+    "name": "Yooz",
+    "eur": 75000.0,
+    "role": "partner"
+   },
+   {
+    "name": "Institut national de recherche en sciences et technologies du numérique",
+    "eur": 268750.0,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 680000.0
+ },
+ {
+  "acronym": "MicrocombSys",
+  "year": 2022,
+  "title": "Photonic System Engineering with Microcombs",
+  "url": "https://cordis.europa.eu/project/id/101119968",
+  "eu_total": 2788624.8,
+  "nvidia_eur": 301788.0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Centrale Lyon",
+    "eur": 282693.6,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 282693.6
+ },
+ {
+  "acronym": "ThinkingEarth",
+  "year": 2022,
+  "title": "Copernicus Foundation Models for a Thinking Earth",
+  "url": "https://cordis.europa.eu/project/id/101130544",
+  "eu_total": 2999875.0,
+  "nvidia_eur": 456375.0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Globeeye",
+    "eur": 150625.0,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 150625.0
+ },
+ {
+  "acronym": "CENTRIC",
+  "year": 2022,
+  "title": "Towards an AI-native, user-centric air interface for 6G networks",
+  "url": "https://cordis.europa.eu/project/id/101096379",
+  "eu_total": 4215999.0,
+  "nvidia_eur": 437062.5,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Sequans communications",
+    "eur": 433636.32,
+    "role": "partner"
+   },
+   {
+    "name": "Nokia networks France",
+    "eur": 363120.75,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 796757.0700000001
+ },
+ {
+  "acronym": "EdgeAI-Trust",
+  "year": 2023,
+  "title": "Decentralized Edge Intelligence: Advancing Trust, Safety, and Sustainability in Europe",
+  "url": "https://cordis.europa.eu/project/id/101139892",
+  "eu_total": 11006209.35,
+  "nvidia_eur": 225000.0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Technext",
+    "eur": 109936.75,
+    "role": "partner"
+   },
+   {
+    "name": "Université de Reims Champagne-Ardenne",
+    "eur": 90417.25,
+    "role": "partner"
+   },
+   {
+    "name": "Compagnie vranken",
+    "eur": 36417.19,
+    "role": "partner"
+   },
+   {
+    "name": "Vranken-pommery production",
+    "eur": 158285.0,
+    "role": "partner"
+   },
+   {
+    "name": "Stmicroelectronics (grenoble 2) sas",
+    "eur": 853960.0,
+    "role": "partner"
+   },
+   {
+    "name": "Zettascale technology sarl",
+    "eur": 160468.75,
+    "role": "partner"
+   },
+   {
+    "name": "HawAI.Tech",
+    "eur": 0,
+    "role": "partner"
+   },
+   {
+    "name": "Stmicroelectronics (rousset) sas",
+    "eur": 681468.75,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 2090953.69
+ },
+ {
+  "acronym": "NEWTON",
+  "year": 2024,
+  "title": "NovEl tEchnologies for converged Wireless-opTical cOnfiguratioNs",
+  "url": "https://cordis.europa.eu/project/id/101227315",
+  "eu_total": 4348887.84,
+  "nvidia_eur": 335890.08,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "EURECOM",
+    "eur": 629338.32,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 629338.32
+ },
+ {
+  "acronym": "FLECON-6G",
+  "year": 2024,
+  "title": "Flexible Open Architecture and AI-driven Enabling Technologies for a Novel 6G Connectivity Platform",
+  "url": "https://cordis.europa.eu/project/id/101192462",
+  "eu_total": 7971093.75,
+  "nvidia_eur": 427500.0,
+  "nvidia_role": [
+   "beneficiary"
+  ],
+  "french": [
+   {
+    "name": "Airbus ds slc",
+    "eur": 388125.0,
+    "role": "partner"
+   },
+   {
+    "name": "EURECOM",
+    "eur": 547447.5,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 935572.5
+ },
+ {
+  "acronym": "MINDnet",
+  "year": 2024,
+  "title": "Neuromorphic computing and signal processing training network",
+  "url": "https://cordis.europa.eu/project/id/101226674",
+  "eu_total": 4664170.08,
+  "nvidia_eur": 0,
+  "nvidia_role": [
+   "associated partner"
+  ],
+  "french": [
+   {
+    "name": "NEUROBUS",
+    "eur": 0,
+    "role": "partner"
+   }
+  ],
+  "french_eur": 0
+ }
+]

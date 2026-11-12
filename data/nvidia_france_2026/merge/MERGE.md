@@ -26,7 +26,7 @@ The useful merge sits at the level of **findings**. For each finding in run A, `
 **Found in public records but never covered by FTJ in connection with NVIDIA (11), as possible story leads:**
 - NVIDIA's own French R&D company at Sophia Antipolis: 2024 revenue €27.1M, 50–99 staff. This answers part of B's gap 4, "how many people does Nvidia employ in France".
 - Brunswick's lobbying for NVIDIA over the Arm takeover in 2020–21 (HATVP register).
-- 24 EU research projects with NVIDIA, worth €5.58M to NVIDIA, 14 of them with French partners.
+- 14 EU research projects pairing NVIDIA with French partners: €2.38M of EU money to NVIDIA and €12.0M to the French partners (10 further projects had no French partner).
 - About 295 French papers thanking NVIDIA for donated GPUs.
 - The Moon Surgical Series B, co-led by NVentures in 2023. This is NVIDIA's earliest French venture deal on record, and FTJ's investment table misses it.
 - Public compute purchases: Ifremer's DGX A100 (€274k), GENCI's Dalia system, and TotalEnergies' Pangea 5.
