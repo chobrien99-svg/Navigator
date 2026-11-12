@@ -18,7 +18,7 @@ WHERE NOT EXISTS (SELECT 1 FROM articles a WHERE a.url=x->>'u');
 WITH a AS (SELECT id, summary FROM articles WHERE source_name='HAL (research paper co-authored with NVIDIA)'),
 rules(slug, pat) AS (VALUES
  ('nvidia','%'),('cnrs','%Centre National de la Recherche Scientifique%'),('inria','%Inria%'),
- ('inria','%Institut National de Recherche en Informatique et en Automatique%'),('cea','%Commissariat à l''''énergie atomique%'),
+ ('inria','%Institut National de Recherche en Informatique et en Automatique%'),('cea','%Commissariat à l''énergie atomique%'),
  ('inserm','%Institut National de la Santé et de la Recherche Médicale%'),('centrale-lyon','%École Centrale de Lyon%'),
  ('ecole-normale-superieure-psl','%École normale supérieure - Paris%'),('eurecom','%Eurecom%'),
  ('insa-rennes','%Institut National des Sciences Appliquées - Rennes%'),('universite-paris-saclay','%Université Paris-Saclay%'),
