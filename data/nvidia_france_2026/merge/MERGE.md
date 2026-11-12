@@ -54,4 +54,4 @@ Every company in B's Phase 3 table now has a matching record in Navigator. The t
 
 ## 5. Database
 
-The new findings are not yet loaded into Navigator: the antitrust raid, Sesterce, HPE Grenoble and Pollen Robotics. That can be done next if wanted.
+Loaded into Navigator on 12 Nov 2026 (migration phase38/26): the antitrust raid (2023) and "nearing its end" update (2026) as NVIDIA events; the Sesterce Marseille supercomputer; the HPE × NVIDIA Grenoble AI Factory Lab; and Hugging Face's April 2025 acquisition of Pollen Robotics.
