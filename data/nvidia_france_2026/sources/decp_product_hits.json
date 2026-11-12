@@ -1,0 +1,156 @@
+[
+ {
+  "id": "125000.0",
+  "acheteur_nom": "Appel d'offres ouvert",
+  "titulaire_nom": "32.3",
+  "titulaire_id": "Accord-cadre",
+  "objet": "26",
+  "montant": "2025-07-02",
+  "dateNotification": "Sans objet",
+  "procedure": "Définitif révisable",
+  "codeCPV": "Unitaire"
+ },
+ {
+  "id": "2023100017052100",
+  "acheteur_nom": "Direction Régionale Finances Publiques Île de France et Département Paris",
+  "titulaire_nom": "Envisol",
+  "titulaire_id": "51230832100052",
+  "objet": "Etude \"infos\"pour le site dit des Silos à Versailles (78) (prestations A100 à  A 130)",
+  "montant": "3150.0",
+  "dateNotification": "2023-04-28",
+  "procedure": "",
+  "codeCPV": "70000000"
+ },
+ {
+  "id": "2022S00739",
+  "acheteur_nom": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence)",
+  "titulaire_nom": "Ceva Air & Océan International",
+  "titulaire_id": "55208853602160",
+  "objet": "TRANSPORT AERIEN - 51970 JA - Norvège DGX",
+  "montant": "1610.38",
+  "dateNotification": "2022-11-28",
+  "procedure": "",
+  "codeCPV": "60400000"
+ },
+ {
+  "id": "2022S00671",
+  "acheteur_nom": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence)",
+  "titulaire_nom": "Ceva Air & Océan International",
+  "titulaire_id": "55208853602160",
+  "objet": "TRANSPORT AERIEN ET MARITIME 51164 JA - Grèce DGX",
+  "montant": "1600.0",
+  "dateNotification": "2022-10-26",
+  "procedure": "",
+  "codeCPV": "60400000"
+ },
+ {
+  "id": "2022151140821500",
+  "acheteur_nom": "",
+  "titulaire_nom": "Apave Sudeurope SAS",
+  "titulaire_id": "51872092500032",
+  "objet": "BNT - ACCUEIL ET SOUTIEN BARRACUDA -ADAPTATION DU QUAI OUEST ET DE 2 BAE - Mission de Coordination en matière de Sécurité et de Protection de la Santé (C.S.P.S.)",
+  "montant": "58552.0",
+  "dateNotification": "2022-07-21",
+  "procedure": "Procédure adaptée",
+  "codeCPV": "71317210"
+ },
+ {
+  "id": "2022h2Y75Hw-H100",
+  "acheteur_nom": "Établissement Public du Chateau du Musée et du Domaine National de Versailles",
+  "titulaire_nom": "M P I Action",
+  "titulaire_id": "42249754500026",
+  "objet": "22F016-Lot 2 : Travaux de peinture",
+  "montant": "82782.0",
+  "dateNotification": "2022-06-01",
+  "procedure": "Procédure adaptée",
+  "codeCPV": "45421000"
+ },
+ {
+  "id": "2022S00043",
+  "acheteur_nom": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence)",
+  "titulaire_nom": "Ceva Air & Océan International",
+  "titulaire_id": "55208853602160",
+  "objet": "45462 SD/JA - export Réunion DGX",
+  "montant": "872.0",
+  "dateNotification": "2021-09-29",
+  "procedure": "",
+  "codeCPV": "60400000"
+ },
+ {
+  "id": "2021S00301",
+  "acheteur_nom": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence)",
+  "titulaire_nom": "DSV Road",
+  "titulaire_id": "31179945600018",
+  "objet": "A2714 JA - import US DGX",
+  "montant": "1467.0",
+  "dateNotification": "2021-07-30",
+  "procedure": "",
+  "codeCPV": "60400000"
+ },
+ {
+  "id": "20212021F0975400",
+  "acheteur_nom": "Institut Francais de Recherche pour L Exploitation de la Mer",
+  "titulaire_nom": "Dell.",
+  "titulaire_id": "35152822900088",
+  "objet": "marche subséquent « Projet mise en œuvre solution NVIDIA DGX A100 »  - Fondé sur l’Accord-cadre n°SAJ-PAM-1727 -Relatif à l’acquisition de matériel informatique - MATINFO 4 17/2215771-Lot 4 : Serveurs et solutions d’infrastructures accessoires",
+  "montant": "274191.0",
+  "dateNotification": "2021-05-31",
+  "procedure": "Procédure adaptée",
+  "codeCPV": "48800000"
+ },
+ {
+  "id": "2019-016-A100",
+  "acheteur_nom": "Roche aux Fees Communauté",
+  "titulaire_nom": "Veolia Eau - Compagnie Générale des Eaux",
+  "titulaire_id": "57202552601803",
+  "objet": "Contrôle périodique des installations et le contrôle des installations neuves et réhabilitées dAssainissement Non Collectif (ANC).",
+  "montant": "120000.0",
+  "dateNotification": "2020-02-24",
+  "procedure": "Appel d'offres ouvert",
+  "codeCPV": "71630000"
+ },
+ {
+  "id": "2019M7EY8JpDBS00",
+  "acheteur_nom": "Régie Départementale de Transports des Bouches du Rhône",
+  "titulaire_nom": "Transdev Bouches du Rhône",
+  "titulaire_id": "30330420800026",
+  "objet": "082019-Prestations de transport par autocars sur une partie de la ligne interurbaine Aix en Provence - Gare TGV - Aéroport Marseille Provence (L40 du réseau Lecar)",
+  "montant": "1189534.0",
+  "dateNotification": "2020-02-21",
+  "procedure": "Procédure concurrentielle avec négociation",
+  "codeCPV": "60112000"
+ },
+ {
+  "id": "2019-014-A100",
+  "acheteur_nom": "Roche aux Fees Communauté",
+  "titulaire_nom": "Serval",
+  "titulaire_id": "75344221900022",
+  "objet": "Création et refonte du site internet de Roche aux Fées Communauté et dune usine à sites pour les communes.",
+  "montant": "150000.0",
+  "dateNotification": "2019-09-16",
+  "procedure": "Procédure adaptée",
+  "codeCPV": "72000000"
+ },
+ {
+  "id": "2019AOO2019-A100",
+  "acheteur_nom": "Communauté Communes Vallée du Gapeau",
+  "titulaire_nom": "Dunex",
+  "titulaire_id": "75098905500017",
+  "objet": "Fourniture, génie civil associé et pose de conteneurs enterrés sur le territoire du SITTOMAT",
+  "montant": "320000.0",
+  "dateNotification": "2019-07-24",
+  "procedure": "Appel d'offres ouvert",
+  "codeCPV": "44613800"
+ },
+ {
+  "id": "201920182380400",
+  "acheteur_nom": "Paris Habitat-OPH (Paris Habitat)",
+  "titulaire_nom": "Ciec",
+  "titulaire_id": "43305622300152",
+  "objet": "Lot L40 : Exploitation des installations de production et de distribution de chauffage et d’eau chaude sanitaire des DTES et DTNE",
+  "montant": "3634844.22",
+  "dateNotification": "2019-06-19",
+  "procedure": "Appel d'offres ouvert",
+  "codeCPV": "50721000"
+ }
+]

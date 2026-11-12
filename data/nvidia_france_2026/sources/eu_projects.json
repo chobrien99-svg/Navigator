@@ -1,0 +1,695 @@
+[
+ {
+  "acronym": "HPC-LEAP",
+  "year": 2014,
+  "type": "Horizon 2020",
+  "title": "High Performance Computing in Life Sciences, Engineering And Physics",
+  "budget": 3667663.72,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 17,
+  "url": "https://cordis.europa.eu/project/id/642069"
+ },
+ {
+  "acronym": "ESCAPE",
+  "year": 2014,
+  "type": "Horizon 2020",
+  "title": "Energy-efficient SCalable Algorithms for weather Prediction at Exascale",
+  "budget": 3977952.5,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Suisse",
+    193335.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Bull",
+    269280.0,
+    "partner"
+   ],
+   [
+    "Météo-France",
+    293175.0,
+    "partner"
+   ]
+  ],
+  "n_partners": 12,
+  "url": "https://cordis.europa.eu/project/id/671627"
+ },
+ {
+  "acronym": "HiPerNav",
+  "year": 2016,
+  "type": "Horizon 2020",
+  "title": "High Performance Soft-tissue Navigation",
+  "budget": 4041920.04,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Etats-Unis",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Université Sorbonne Paris Nord",
+    262875.6,
+    "partner"
+   ],
+   [
+    "Institut national de recherche en sciences et technologies du numérique",
+    525751.2,
+    "partner"
+   ]
+  ],
+  "n_partners": 14,
+  "url": "https://cordis.europa.eu/project/id/722068"
+ },
+ {
+  "acronym": "STARS",
+  "year": 2016,
+  "type": "Horizon 2020",
+  "title": "SupercompuTing And Related applicationS Fellows Program",
+  "budget": 2832000.0,
+  "nvidia": [
+   [
+    "Nvidia developpement france sas",
+    "France",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 8,
+  "url": "https://cordis.europa.eu/project/id/754433"
+ },
+ {
+  "acronym": "COSINE",
+  "year": 2017,
+  "type": "Horizon 2020",
+  "title": "Training network for COmputational Spectroscopy In Natural sciences and Engineering",
+  "budget": 3745978.92,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [
+   [
+    "École nationale supérieure de chimie de Paris",
+    262875.6,
+    "partner"
+   ]
+  ],
+  "n_partners": 16,
+  "url": "https://cordis.europa.eu/project/id/765739"
+ },
+ {
+  "acronym": "STIMULATE",
+  "year": 2017,
+  "type": "Horizon 2020",
+  "title": "Simulation in multiscale physical and biological systems",
+  "budget": 3755601.0,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 14,
+  "url": "https://cordis.europa.eu/project/id/765048"
+ },
+ {
+  "acronym": "ACHIEVE",
+  "year": 2017,
+  "type": "Horizon 2020",
+  "title": "AdvanCed Hardware/Software Components for Integrated/Embedded Vision SystEms",
+  "budget": 2266907.76,
+  "nvidia": [
+   [
+    "Nvidia (United Kingdom)",
+    "Royaume-Uni",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Université Clermont Auvergne",
+    262875.6,
+    "partner"
+   ],
+   [
+    "Université Marie et Louis Pasteur",
+    262875.6,
+    "partner"
+   ]
+  ],
+  "n_partners": 11,
+  "url": "https://cordis.europa.eu/project/id/765866"
+ },
+ {
+  "acronym": "EVOCATION",
+  "year": 2018,
+  "type": "Horizon 2020",
+  "title": "Advanced Visual and Geometric Computing for 3D Capture, Display, and Fabrication",
+  "budget": 3639335.04,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 16,
+  "url": "https://cordis.europa.eu/project/id/813170"
+ },
+ {
+  "acronym": "EuroPLEx",
+  "year": 2018,
+  "type": "Horizon 2020",
+  "title": "European network for Particle physics, Lattice field theory and Extreme computing",
+  "budget": 4045159.44,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    null,
+    "partner",
+    "organization partner"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 21,
+  "url": "https://cordis.europa.eu/project/id/813942"
+ },
+ {
+  "acronym": "MELLODDY",
+  "year": 2018,
+  "type": "Horizon 2020",
+  "title": "MachinE Learning Ledger Orchestration for Drug DiscoverY",
+  "budget": 18635465.0,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Suisse",
+    null,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Substra",
+    858482.0,
+    "partner"
+   ],
+   [
+    "Institut de recherches servier",
+    null,
+    "partner"
+   ],
+   [
+    "Owkin France",
+    2683635.0,
+    "coordinator"
+   ],
+   [
+    "Iktos",
+    343402.0,
+    "partner"
+   ]
+  ],
+  "n_partners": 17,
+  "url": "https://cordis.europa.eu/project/id/831472"
+ },
+ {
+  "acronym": "Rising STARS",
+  "year": 2019,
+  "type": "Horizon 2020",
+  "title": "RISE International Network for Solutions Technologies and Applications of Real-time Systems",
+  "budget": 634800.0,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Suisse",
+    null,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Thales group",
+    55200.0,
+    "partner"
+   ],
+   [
+    "Observatoire de Paris",
+    165600.0,
+    "coordinator"
+   ],
+   [
+    "ArianeGroup",
+    55200.0,
+    "partner"
+   ],
+   [
+    "Kalray",
+    null,
+    "partner"
+   ],
+   [
+    "Institut national des sciences appliquées de Rennes",
+    138000.0,
+    "partner"
+   ]
+  ],
+  "n_partners": 12,
+  "url": "https://cordis.europa.eu/project/id/873120"
+ },
+ {
+  "acronym": "ELSA",
+  "year": 2021,
+  "type": "Horizon Europe",
+  "title": "European Lighthouse on Secure and Safe AI",
+  "budget": 7434058.75,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Suisse",
+    null,
+    "partner",
+    "associated partner"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Valeo comfort and driving assistance",
+    336250.0,
+    "partner"
+   ],
+   [
+    "Yooz",
+    75000.0,
+    "partner"
+   ],
+   [
+    "Institut national de recherche en sciences et technologies du numérique",
+    268750.0,
+    "partner"
+   ],
+   [
+    "labo 200818248E from Institut national de recherche en sciences et technologies du numérique",
+    268750.0,
+    "partner"
+   ],
+   [
+    "labo 200818369L from Institut national de recherche en sciences et technologies du numérique",
+    268750.0,
+    "partner"
+   ]
+  ],
+  "n_partners": 28,
+  "url": "https://cordis.europa.eu/project/id/101070617"
+ },
+ {
+  "acronym": "DynAI",
+  "year": 2021,
+  "type": "Horizon Europe",
+  "title": "Omni-Supervised Learning for Dynamic Scene Understanding",
+  "budget": 1500000.0,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Italie",
+    1500000.0,
+    "pi",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 1,
+  "url": "https://cordis.europa.eu/project/id/101043189"
+ },
+ {
+  "acronym": "QUARC",
+  "year": 2021,
+  "type": "Horizon Europe",
+  "title": "Quantum resistant communications: Advance Learning in applied PQC Training",
+  "budget": 2771653.11,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    301788.0,
+    "coordinator",
+    "beneficiary"
+   ],
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    260539.2,
+    "partner",
+    "beneficiary"
+   ],
+   [
+    "Nvidia (United States)",
+    "Italie",
+    259437.6,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 7,
+  "url": "https://cordis.europa.eu/project/id/101073355"
+ },
+ {
+  "acronym": "MicrocombSys",
+  "year": 2022,
+  "type": "Horizon Europe",
+  "title": "Photonic System Engineering with Microcombs",
+  "budget": 3029622.17,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    301788.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Centrale Lyon",
+    282693.6,
+    "partner"
+   ],
+   [
+    "labo 200711932U from Centrale Lyon",
+    282693.6,
+    "partner"
+   ]
+  ],
+  "n_partners": 16,
+  "url": "https://cordis.europa.eu/project/id/101119968"
+ },
+ {
+  "acronym": "ThinkingEarth",
+  "year": 2022,
+  "type": "Horizon Europe",
+  "title": "Copernicus Foundation Models for a Thinking Earth",
+  "budget": 2999875.0,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    407790.0,
+    "partner",
+    "beneficiary"
+   ],
+   [
+    "Nvidia (United States)",
+    "Italie",
+    48585.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Globeeye",
+    150625.0,
+    "partner"
+   ]
+  ],
+  "n_partners": 13,
+  "url": "https://cordis.europa.eu/project/id/101130544"
+ },
+ {
+  "acronym": "CENTRIC",
+  "year": 2022,
+  "type": "Horizon Europe",
+  "title": "Towards an AI-native, user-centric air interface for 6G networks",
+  "budget": 4512778.06,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    437062.5,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Sequans communications",
+    433636.32,
+    "partner"
+   ],
+   [
+    "Nokia networks France",
+    363120.75,
+    "partner"
+   ]
+  ],
+  "n_partners": 13,
+  "url": "https://cordis.europa.eu/project/id/101096379"
+ },
+ {
+  "acronym": "EMPOWER-6G",
+  "year": 2022,
+  "type": "Horizon Europe",
+  "title": "EMPOWER CONVERGED OPTICAL WIRELESS CONFIGURATIONS WITH CELL-FREE TECHNOLOGIES FOR HIGH-DENSITY 6G NETWORKS",
+  "budget": 4692219.43,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    301788.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 10,
+  "url": "https://cordis.europa.eu/project/id/101120332"
+ },
+ {
+  "acronym": "ARISA",
+  "year": 2022,
+  "type": "Autres financements européens",
+  "title": "Artificial Intelligence Skills Alliance",
+  "budget": 3464356.0,
+  "nvidia": [
+   [
+    "NVIDIA GmbH",
+    "Germany",
+    "0",
+    "associatedPartner",
+    null
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 21,
+  "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43353764/101056236/ERASMUS2027"
+ },
+ {
+  "acronym": "EdgeAI-Trust",
+  "year": 2023,
+  "type": "Horizon Europe",
+  "title": "Decentralized Edge Intelligence: Advancing Trust, Safety, and Sustainability in Europe",
+  "budget": 38208291.25,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    225000.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Technext",
+    109936.75,
+    "partner"
+   ],
+   [
+    "Université de Reims Champagne-Ardenne",
+    90417.25,
+    "partner"
+   ],
+   [
+    "labo 202123690N from Université de Reims Champagne-Ardenne",
+    90417.25,
+    "partner"
+   ],
+   [
+    "Compagnie vranken",
+    36417.19,
+    "partner"
+   ],
+   [
+    "Vranken-pommery production",
+    158285.0,
+    "partner"
+   ],
+   [
+    "Stmicroelectronics (grenoble 2) sas",
+    853960.0,
+    "partner"
+   ],
+   [
+    "Zettascale technology sarl",
+    160468.75,
+    "partner"
+   ],
+   [
+    "HawAI.Tech",
+    null,
+    "partner"
+   ],
+   [
+    "Stmicroelectronics (rousset) sas",
+    681468.75,
+    "partner"
+   ]
+  ],
+  "n_partners": 54,
+  "url": "https://cordis.europa.eu/project/id/101139892"
+ },
+ {
+  "acronym": "SMARTY",
+  "year": 2023,
+  "type": "Horizon Europe",
+  "title": "Scalable and Quantum Resilient Heterogeneous Edge Computing enabling Trustworthy AI",
+  "budget": 31999656.45,
+  "nvidia": [
+   [
+    "Nvidia (United States)",
+    "Allemagne",
+    128435.94,
+    "partner",
+    "beneficiary"
+   ],
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    452500.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [],
+  "n_partners": 32,
+  "url": "https://cordis.europa.eu/project/id/101140087"
+ },
+ {
+  "acronym": "NEWTON",
+  "year": 2024,
+  "type": "Horizon Europe",
+  "title": "NovEl tEchnologies for converged Wireless-opTical cOnfiguratioNs",
+  "budget": 5112749.31,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    335890.08,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "EURECOM",
+    629338.32,
+    "partner"
+   ]
+  ],
+  "n_partners": 9,
+  "url": "https://cordis.europa.eu/project/id/101227315"
+ },
+ {
+  "acronym": "FLECON-6G",
+  "year": 2024,
+  "type": "Horizon Europe",
+  "title": "Flexible Open Architecture and AI-driven Enabling Technologies for a Novel 6G Connectivity Platform",
+  "budget": 8633860.0,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    427500.0,
+    "partner",
+    "beneficiary"
+   ]
+  ],
+  "french_partners": [
+   [
+    "Airbus ds slc",
+    388125.0,
+    "partner"
+   ],
+   [
+    "EURECOM",
+    547447.5,
+    "partner"
+   ]
+  ],
+  "n_partners": 19,
+  "url": "https://cordis.europa.eu/project/id/101192462"
+ },
+ {
+  "acronym": "MINDnet",
+  "year": 2024,
+  "type": "Horizon Europe",
+  "title": "Neuromorphic computing and signal processing training network",
+  "budget": 4912232.5,
+  "nvidia": [
+   [
+    "Nvidia denmark aps",
+    "Danemark",
+    null,
+    "partner",
+    "associated partner"
+   ]
+  ],
+  "french_partners": [
+   [
+    "NEUROBUS",
+    null,
+    "partner"
+   ]
+  ],
+  "n_partners": 16,
+  "url": "https://cordis.europa.eu/project/id/101226674"
+ }
+]
