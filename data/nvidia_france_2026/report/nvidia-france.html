@@ -1,151 +1,311 @@
 <title>NVIDIA in France</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap">
 <style>
-/* Layout: one reading column with wide evidence tables; each finding carries a source-strength chip */
+/* Layout: long-read column (serif narrative) with wide evidence panels; sticky section nav; map + timeline as the two interactive set pieces */
 :root{
-  --bg:#f6f7f5; --panel:#ffffff; --fg:#1b2420; --muted:#5b6762; --rule:#d9dfdb;
-  --accent:#2f6b4f; --accent-soft:#e3efe8;
-  --ok:#2f6b4f; --ok-bg:#e3efe8; --mid:#8a5a10; --mid-bg:#f6ecd9; --low:#9b3b2e; --low-bg:#f6e3df; --off:#4b5560; --off-bg:#e7eaed;
+  --bg:#f4f5f7; --panel:#ffffff; --fg:#161b22; --muted:#56606c; --rule:#d8dce2; --soft:#eceff3;
+  --accent:#1d4f7a; --accent-soft:#e2ebf4; --warm:#a3472b; --warm-soft:#f6e6df;
+  --ok:#24613f; --ok-bg:#e1efe6; --mid:#7e5410; --mid-bg:#f4e9d6; --low:#9b3b2e; --low-bg:#f6e3df; --off:#46505b; --off-bg:#e6e9ed;
+  --c-nvidia:#1d4f7a; --c-compute:#6b3fa0; --c-research:#24613f; --c-partner:#a3472b; --c-hub:#161b22;
   --display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
-  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#121715; --panel:#1a211e; --fg:#e4ebe7; --muted:#9aa8a1; --rule:#2c3632;
-  --accent:#7fc7a1; --accent-soft:#1f3329;
-  --ok:#8fd3ad; --ok-bg:#1f3329; --mid:#e3b56a; --mid-bg:#33291a; --low:#ee9a8c; --low-bg:#3a221e; --off:#b4bec8; --off-bg:#262d33; color-scheme:dark}}
+  --bg:#0f1318; --panel:#171c23; --fg:#e6eaef; --muted:#9aa5b1; --rule:#2a313b; --soft:#1e242c;
+  --accent:#8db8e3; --accent-soft:#1b2a3a; --warm:#e79a7d; --warm-soft:#3a2420;
+  --ok:#8fd3ad; --ok-bg:#1d3226; --mid:#e3b56a; --mid-bg:#33291a; --low:#ee9a8c; --low-bg:#3a221e; --off:#b4bec8; --off-bg:#262d33;
+  --c-nvidia:#8db8e3; --c-compute:#c3a1ea; --c-research:#8fd3ad; --c-partner:#e79a7d; --c-hub:#e6eaef; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#121715; --panel:#1a211e; --fg:#e4ebe7; --muted:#9aa8a1; --rule:#2c3632;
-  --accent:#7fc7a1; --accent-soft:#1f3329;
-  --ok:#8fd3ad; --ok-bg:#1f3329; --mid:#e3b56a; --mid-bg:#33291a; --low:#ee9a8c; --low-bg:#3a221e; --off:#b4bec8; --off-bg:#262d33; color-scheme:dark}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55}
-.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px;display:grid;gap:44px}
-header{display:grid;gap:14px}
+  --bg:#0f1318; --panel:#171c23; --fg:#e6eaef; --muted:#9aa5b1; --rule:#2a313b; --soft:#1e242c;
+  --accent:#8db8e3; --accent-soft:#1b2a3a; --warm:#e79a7d; --warm-soft:#3a2420;
+  --ok:#8fd3ad; --ok-bg:#1d3226; --mid:#e3b56a; --mid-bg:#33291a; --low:#ee9a8c; --low-bg:#3a221e; --off:#b4bec8; --off-bg:#262d33;
+  --c-nvidia:#8db8e3; --c-compute:#c3a1ea; --c-research:#8fd3ad; --c-partner:#e79a7d; --c-hub:#e6eaef; color-scheme:dark}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--panel)}
+.wrap{max-width:1060px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 72px;display:grid;gap:56px}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+p{margin:0}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,54px);line-height:1.02;margin:0;text-wrap:balance}
-h2{font-family:var(--display);font-weight:700;font-size:26px;line-height:1.15;margin:0;text-wrap:balance}
-h3{font-family:var(--body);font-weight:600;font-size:16px;margin:0}
-p{margin:0;max-width:68ch}
-.lede{font-size:18px;max-width:64ch}
-section{display:grid;gap:16px}
-.sec-head{display:grid;gap:6px;border-top:2px solid var(--fg);padding-top:12px}
-.sec-head .kicker{color:var(--accent)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.fact{background:var(--panel);padding:16px;display:grid;gap:4px;align-content:start}
-.fact b{font-family:var(--display);font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+/* hero */
+.hero{display:grid;gap:18px;padding-top:44px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,8vw,76px);line-height:.98;margin:0;letter-spacing:-.01em}
+.dek{font-family:var(--display);font-weight:500;font-size:clamp(20px,3vw,26px);line-height:1.25;max-width:34ch;color:var(--muted);text-wrap:balance}
+.lede{display:grid;gap:14px;font-family:var(--serif);font-size:18.5px;line-height:1.65;max-width:66ch}
+.lede p:first-child::first-letter{font-family:var(--display);font-weight:700;float:left;font-size:58px;line-height:.9;padding:6px 8px 0 0;color:var(--accent)}
+.byline{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.alert{border-left:4px solid var(--warm);background:var(--warm-soft);padding:12px 16px;display:grid;gap:4px;max-width:72ch}
+.alert b{font-family:var(--display);font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--warm)}
+/* nav */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-block:1px solid var(--rule);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:8px max(16px,env(safe-area-inset-left,0px));overflow-x:auto;white-space:nowrap}
+nav.toc a{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--muted);padding:4px 8px;border-radius:3px;display:inline-block}
+nav.toc a:hover{color:var(--fg);background:var(--soft)}
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.fact{background:var(--panel);padding:14px 16px;display:grid;gap:4px;align-content:start}
+.fact b{font-family:var(--display);font-size:32px;line-height:1;font-variant-numeric:tabular-nums}
 .fact span{color:var(--muted);font-size:13px}
-.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted);align-items:center}
-.chip{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:2px 7px;border-radius:3px;white-space:nowrap;font-weight:500}
-.c-off{color:var(--ok);background:var(--ok-bg)}
-.c-nav{color:var(--off);background:var(--off-bg)}
-.c-press{color:var(--mid);background:var(--mid-bg)}
-.c-single{color:var(--low);background:var(--low-bg)}
+/* sections */
+section{display:grid;gap:18px;scroll-margin-top:56px}
+.sec-head{display:grid;gap:8px;border-top:3px solid var(--fg);padding-top:14px}
+.sec-head .kicker{color:var(--accent)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4.4vw,40px);line-height:1.05;margin:0;text-wrap:balance}
+h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.2;margin:0}
+h4{font-family:var(--sans);font-weight:600;font-size:15px;margin:0}
+.intro{font-family:var(--serif);font-size:17.5px;line-height:1.65;max-width:66ch;display:grid;gap:12px}
+.prose{font-family:var(--serif);font-size:16.5px;line-height:1.65;max-width:68ch;display:grid;gap:12px}
+blockquote{margin:0;border-left:3px solid var(--accent);padding:4px 0 4px 16px;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;max-width:60ch}
+blockquote cite{display:block;font-style:normal;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:6px}
+.note{font-size:13.5px;color:var(--muted);max-width:76ch}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--rule);padding:16px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+.card .when{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.card p{font-size:14.5px}
+.card.feature{border-top:3px solid var(--accent)}
+.chip{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:2px 7px;border-radius:3px;white-space:nowrap;font-weight:500;vertical-align:1px}
+.c-off{color:var(--ok);background:var(--ok-bg)} .c-nav{color:var(--off);background:var(--off-bg)} .c-press{color:var(--mid);background:var(--mid-bg)} .c-single{color:var(--low);background:var(--low-bg)}
+/* details */
+details{background:var(--panel);border:1px solid var(--rule)}
+details>summary{cursor:pointer;list-style:none;padding:12px 16px;font-family:var(--sans);font-weight:600;font-size:14.5px;display:flex;gap:10px;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"+";font-family:var(--mono);font-weight:500;width:18px;height:18px;display:inline-grid;place-items:center;border:1px solid var(--rule);border-radius:3px;color:var(--accent);flex:none}
+details[open]>summary::before{content:"−"}
+details>summary small{font-weight:400;color:var(--muted);font-size:13px}
+details .body{padding:0 16px 16px;display:grid;gap:12px}
+details.inline{border-left:3px solid var(--accent)}
+/* tables */
 .tbl{overflow-x:auto;border:1px solid var(--rule);background:var(--panel)}
 table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
 th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg)}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--soft)}
 tr:last-child td{border-bottom:0}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 td.date{font-family:var(--mono);font-size:12.5px;white-space:nowrap;color:var(--muted)}
 td small{color:var(--muted);display:block;margin-top:2px}
-a{color:var(--accent);text-underline-offset:2px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.note{font-size:13.5px;color:var(--muted);max-width:76ch}
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-.box{background:var(--panel);border:1px solid var(--rule);padding:16px;display:grid;gap:8px;min-width:0}
-ul{margin:0;padding-left:18px;display:grid;gap:6px}
-li{max-width:72ch}
-.bars{display:grid;gap:4px;font-family:var(--mono);font-size:12px}
-.bar{display:grid;grid-template-columns:44px 1fr 28px;gap:8px;align-items:center}
-.bar i{display:block;height:10px;background:var(--accent);border-radius:1px}
-.bar em{font-style:normal;text-align:right;color:var(--muted)}
-footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:var(--muted);display:grid;gap:8px}
+/* map */
+.mapwrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:760px){.mapwrap{grid-template-columns:1fr}}
+.map{background:var(--panel);border:1px solid var(--rule);padding:8px}
+.map svg{width:100%;height:auto;display:block}
+.map .land{fill:var(--soft);stroke:var(--muted);stroke-width:1}
+.pin{cursor:pointer}
+.pin circle.dot{stroke:var(--panel);stroke-width:2}
+.pin text{font-family:var(--sans);font-size:13px;fill:var(--fg);paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.pin.on circle.ring{stroke:var(--fg);stroke-width:2;fill:none}
+.pin circle.ring{fill:none;stroke:transparent}
+.mapside{display:grid;gap:14px;align-content:start}
+.mapdetail{background:var(--panel);border:1px solid var(--rule);border-top:3px solid var(--fg);padding:16px 18px;display:grid;gap:8px;min-height:150px;align-content:start}
+.mapdetail p{font-family:var(--serif);font-size:16px;line-height:1.55}
+.maplist{display:flex;flex-wrap:wrap;gap:6px}
+.maplist button{all:unset;cursor:pointer;display:inline-flex;gap:7px;align-items:center;padding:6px 10px;border:1px solid var(--rule);background:var(--panel);font-size:13.5px;border-radius:20px}
+.maplist button[aria-pressed="true"]{border-color:var(--fg);background:var(--soft);font-weight:600}
+.maplist button:focus-visible{outline:2px solid var(--accent)}
+.maplist .sw{width:10px;height:10px;border-radius:50%;flex:none}
+.maplist .txt{display:grid;gap:2px}
+.maplist .txt b{font-weight:600}
+.maplist .txt span{color:var(--muted);font-size:13px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:0}
+/* timeline */
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{font-family:var(--mono);font-size:12px;padding:5px 10px;border:1px solid var(--rule);background:var(--panel);color:var(--fg);border-radius:20px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+ol.tl{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:0}
+ol.tl::before{content:"";position:absolute;left:94px;top:6px;bottom:6px;width:2px;background:var(--rule)}
+ol.tl li{display:grid;grid-template-columns:84px 22px minmax(0,1fr);gap:0 8px;padding:8px 0}
+ol.tl li[hidden]{display:none!important}
+ol.tl .d{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;padding-top:2px}
+ol.tl .m{position:relative}
+ol.tl .m::after{content:"";position:absolute;left:5px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--panel);border:2px solid var(--tc,var(--muted))}
+ol.tl li.big .m::after{width:14px;height:14px;left:3px;top:4px;background:var(--tc)}
+ol.tl .t{display:grid;gap:3px}
+ol.tl .t b{font-weight:600;font-size:14.5px}
+ol.tl .t span{font-size:14px;color:var(--muted)}
+ol.tl li.year{padding:16px 0 4px}
+ol.tl li.year .t{font-family:var(--display);font-weight:700;font-size:22px}
+li[data-k="stage"]{--tc:var(--accent)} li[data-k="deal"]{--tc:var(--c-partner)} li[data-k="research"]{--tc:var(--c-research)} li[data-k="scrutiny"]{--tc:var(--warm)} li[data-k="compute"]{--tc:var(--c-compute)}
+footer{border-top:1px solid var(--rule);padding-top:18px;font-size:13px;color:var(--muted);display:grid;gap:10px}
+footer h3{font-size:16px;color:var(--fg)}
 </style>
 
 <div class="wrap">
-<header>
-  <div class="kicker">France Navigator · French Tech Journal · data as of 12 November 2026</div>
+<header class="hero">
+  <div class="kicker">French Tech Journal · France Navigator · 13 November 2026</div>
   <h1>NVIDIA in France</h1>
-  <p class="lede">What the public record shows about NVIDIA's investments, research ties, hardware, programmes and lobbying in France, gathered from the company register, EU and French research databases, public-procurement and lobbying registers, the Navigator database and press coverage.</p>
-  <div class="legend">
-    <span><span class="chip c-off">Official record</span> found in a government or institutional dataset</span>
-    <span><span class="chip c-nav">Navigator</span> already in our database, sourced</span>
-    <span><span class="chip c-press">Press</span> several outlets agree</span>
-    <span><span class="chip c-single">Unconfirmed</span> single or secondary source</span>
+  <p class="dek">Shareholder, supplier, research partner and political ally: how the American chipmaker wove itself into French innovation</p>
+  <div class="lede">
+    <p>When Jensen Huang stepped down as NVIDIA's chief executive on 12 November 2026, he left a company whose reach into France goes far beyond selling the chips that train AI models. In three years NVIDIA has become a shareholder in more than a dozen French and French-founded companies, agreed to buy Hugging Face, and co-founded a giant AI campus outside Paris with the French state bank. Its graphics processors run the country's public supercomputers, its researchers co-sign papers with CNRS and Inria, and its chief executive has become a regular on stage beside Emmanuel Macron and Mistral AI's Arthur Mensch.</p>
+    <p>That footprint has never been assembled in one place. We pieced it together from the company register, EU research and French publication databases, the lobbying and public-procurement registers, French Tech Journal's own reporting and company announcements. One thing runs through all of it: NVIDIA almost never says how much money it puts into any French company, lab or programme.</p>
   </div>
+  <div class="alert"><b>Leadership change</b><p>Huang resigned as CEO and left the board with immediate effect on 12 November, according to NVIDIA's <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm">Form 8-K filing</a>. CFO Colette Kress is interim CEO. Most of the French announcements below were fronted by Huang personally.</p></div>
+  <div class="byline">Sources are marked throughout: <span class="chip c-off">Official record</span> government or institutional data · <span class="chip c-nav">Navigator</span> in our database · <span class="chip c-press">Press</span> several outlets or a company release · <span class="chip c-single">Unconfirmed</span> single or secondary source</div>
 </header>
 
-<section>
+<nav class="toc" aria-label="Sections">
+  <a href="#footprint">Footprint</a><a href="#sophia">Sophia Antipolis</a><a href="#mistral">Mistral AI</a><a href="#investments">Investments</a><a href="#compute">Compute</a><a href="#research">Research</a><a href="#partners">Partners</a><a href="#startups">Start-up programmes</a><a href="#timeline">Timeline</a><a href="#scrutiny">Scrutiny</a><a href="#method">Method</a>
+</nav>
+
+<section id="footprint">
   <div class="facts">
-    <div class="fact"><b>14</b><span>French companies with a reported NVIDIA or NVentures investment, 2023–2026 (all 14 recorded in Navigator)</span></div>
-    <div class="fact"><b>14</b><span>EU research projects in which NVIDIA worked alongside French partners</span></div>
-    <div class="fact"><b>€2.38M</b><span>EU research money paid to NVIDIA in those projects; French partners received €12.0M</span></div>
-    <div class="fact"><b>95</b><span>French-affiliated papers co-authored with NVIDIA staff (HAL)</span></div>
-    <div class="fact"><b>~295</b><span>French papers thanking NVIDIA for donated GPUs</span></div>
-    <div class="fact"><b>0</b><span>public contracts with NVIDIA as the direct supplier (3.48M contract rows checked)</span></div>
+    <div class="fact"><b>14</b><span>French or French-founded companies backed by NVIDIA or NVentures since 2023</span></div>
+    <div class="fact"><b>$12.93bn</b><span>agreed price for Hugging Face, NVIDIA's biggest French-linked deal</span></div>
+    <div class="fact"><b>1,456</b><span>NVIDIA H100 chips added to Jean Zay, France's public AI supercomputer</span></div>
+    <div class="fact"><b>95</b><span>research papers co-signed by NVIDIA and French institutions</span></div>
+    <div class="fact"><b>14</b><span>EU research projects pairing NVIDIA with French partners</span></div>
   </div>
-  <div class="box"><h3>Leadership change, 12 November 2026</h3><p>Jensen Huang stepped down as NVIDIA's chief executive and left its board with immediate effect, according to the company's <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm">Form 8-K filing</a>. CFO Colette Kress is interim CEO and Harvey C. Jones becomes board chair. Huang personally fronted most of the French announcements below, including the October 2026 stakes and his Élysée meeting with Emmanuel Macron. <span class="chip c-off">Official record</span></p></div>
-  <div class="box"><h3>Open antitrust investigation</h3><p>France's competition authority raided NVIDIA's Paris office in September 2023 and has been investigating since. In July 2026 it said the investigation was nearing its end. No charges or decision had been announced as of 12 November 2026. <a href="#influence">Details in section 6</a>. <span class="chip c-press">Press, FTJ</span></p></div>
-  <p class="note">The press items below come from search-engine results; the articles themselves were not opened, so amounts and wording should be checked against the original before publication. NVIDIA's share of most rounds is never disclosed. Round totals describe the whole round, not NVIDIA's cheque.</p>
-</section>
-
-<section>
-  <div class="sec-head"><div class="kicker">1 · Equity</div><h2>Investments in French companies</h2></div>
-  <p>NVIDIA invests directly and through its venture arm, NVentures. In France it has backed AI model makers, quantum and photonics hardware, and since October 2026 consumer and enterprise software.</p>
-  <div class="tbl"><table>
-    <thead><tr><th>Date</th><th>Company</th><th>What NVIDIA did</th><th class="num">Round size</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td class="date">May 2023</td><td>Moon Surgical<small>surgical robotics, Paris</small></td><td>NVentures co-led the Series B with Sofinnova</td><td class="num">$55.4M</td><td><span class="chip c-nav">Navigator</span> <a href="https://jonesday.com/fr/practices/experience/2023/05/sofinnova-and-nventures-colead-554-million-financing-of-moon-surgical">deal page</a></td></tr>
-      <tr><td class="date">Aug 2023</td><td>Hugging Face<small>French-founded, US HQ, large Paris team</small></td><td>Participant in Series D at a $4.5bn valuation</td><td class="num">$235M</td><td><span class="chip c-nav">Navigator</span> <a href="https://techcrunch.com/2023/08/24/hugging-face-raises-235m-from-investors-including-salesforce-and-nvidia">TechCrunch</a></td></tr>
-      <tr><td class="date">Jun 2024</td><td>Mistral AI</td><td>Participant in the General Catalyst-led Series B</td><td class="num">€600M</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">Oct 2024</td><td>Poolside<small>AI coding; French entity POOLSIDE AI, Paris (SIREN 977 666 437)</small></td><td>Participant in Series B; Bloomberg later reported a planned $0.5–1bn follow-on, not confirmed</td><td class="num">$500M</td><td><span class="chip c-nav">Navigator</span> <a href="https://techcrunch.com/2025/10/30/nvidia-is-reportedly-investing-up-to-1-billion-in-poolside">TechCrunch</a></td></tr>
-      <tr><td class="date">Sep 2025</td><td>Mistral AI</td><td>Existing investor in the ASML-led Series C</td><td class="num">€1.7bn</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">Sep 2025</td><td>Scintil Photonics<small>silicon photonics, Grenoble</small></td><td>Participant in Series B</td><td class="num">$58M</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">Late 2025</td><td>Hugging Face</td><td>Offered $500M at a $7bn valuation; founders declined (FT, Jan 2026)</td><td class="num">n/a</td><td><span class="chip c-single">Unconfirmed</span></td></tr>
-      <tr><td class="date">Mar 2026</td><td>AMI Labs<small>Yann LeCun's world-model lab</small></td><td>Participant in a record European seed round</td><td class="num">$1.03bn</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">May 2026</td><td>Alice &amp; Bob<small>quantum computing</small></td><td>NVentures joined an extension of the Series B</td><td class="num">€100M total</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">Jul 2026</td><td>Gradium<small>voice AI, Kyutai spin-off</small></td><td>New investor in a seed extension</td><td class="num">$100M seed total</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">Sep 2026</td><td>Mistral AI</td><td>Reported participant in the Samsung-led Series D</td><td class="num">€3bn</td><td><span class="chip c-nav">Navigator</span> <span class="chip c-single">mainly Sifted</span></td></tr>
-      <tr><td class="date">Oct 2026</td><td>Pigment<small>business planning software</small></td><td>"Planned investment" announced alongside the Series E</td><td class="num">$250M</td><td><span class="chip c-nav">Navigator</span></td></tr>
-      <tr><td class="date">13 Oct 2026</td><td>Doctolib</td><td>Minority stake announced by Jensen Huang in Paris; confirmed by Doctolib</td><td class="num">undisclosed</td><td><span class="chip c-nav">Navigator</span> <a href="https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html">Le Monde Informatique</a></td></tr>
-      <tr><td class="date">13 Oct 2026</td><td>Entalpic<small>AI for materials</small></td><td>Planned minority stake (company had not confirmed to Reuters)</td><td class="num">undisclosed</td><td><span class="chip c-nav">Navigator</span> <a href="https://tech.eu/2026/10/14/nvidia-invests-in-four-french-tech-companies-makes-ps250m-uk-compute-donation/">Tech.eu</a></td></tr>
-      <tr><td class="date">13 Oct 2026</td><td>Genesis AI<small>robotics models, Paris and Silicon Valley</small></td><td>Planned strategic investment</td><td class="num">undisclosed</td><td><span class="chip c-nav">Navigator</span> <a href="https://live.euronext.com/en/financial-news/nvidia-buys-stakes-french-tech-startups-doctolib-genesis-ai">Reuters</a></td></tr>
-    </tbody>
-  </table></div>
-  <div class="two">
-    <div class="box"><h3>Acquisitions</h3>
-      <ul>
-        <li><b>Hugging Face</b>: NVIDIA confirmed on 3 September 2026 an agreement to buy the company for about $12.9bn, with closing expected in the first half of 2027 subject to regulators. <span class="chip c-press">Press</span></li>
-        <li><b>Icera (2011)</b>: NVIDIA's Sophia Antipolis R&amp;D centre came with its purchase of the British modem maker Icera. <span class="chip c-single">Unconfirmed</span> for headcount</li>
-      </ul></div>
-    <div class="box"><h3>No NVIDIA equity found</h3>
-      <p class="note">These companies work with NVIDIA technically, but no NVIDIA shareholding turned up: H Company, Pasqal, Quandela, Bioptimus, Owkin, Wandercraft, Photoroom, Dust, Exotec.</p></div>
+  <div class="sec-head"><div class="kicker">The footprint</div><h2>Where NVIDIA shows up in France</h2></div>
+  <p class="intro">Most of NVIDIA's French presence is concentrated around Paris, where its investments, Mistral's data centres and the national supercomputers sit within an hour of each other. But the trail runs from a research office on the Riviera to a server factory in Angers and an oil major's supercomputer in Pau. Select a place to see what happens there.</p>
+  <div class="mapwrap">
+    <div class="map">
+      <svg viewBox="0 0 600 620" role="img" aria-label="Map of mainland France with places linked to NVIDIA">
+        <path class="land" d="M568.2 477.7L567.2 485.5L567.9 487.9L569.2 489.5L569.9 491.3L571.0 512.4L570.7 514.0L566.2 522.6L565.2 525.0L565.0 535.6L564.2 538.4L562.6 541.2L559.7 550.2L557.2 554.2L550.4 549.2L546.4 547.2L544.5 544.8L543.2 543.2L544.0 541.1L545.9 538.9L546.1 537.2L541.9 535.2L539.9 533.9L539.9 531.6L541.3 528.1L540.7 525.1L538.3 525.3L536.2 524.8L536.1 523.2L537.5 521.3L539.3 518.7L539.2 515.9L537.1 514.7L535.0 512.4L534.2 509.3L535.8 507.1L538.3 505.7L536.5 502.5L535.2 502.5L535.0 500.3L536.9 498.1L539.7 491.4L543.5 488.3L550.1 486.3L552.0 485.4L553.6 483.1L555.5 481.6L557.6 481.8L559.7 482.6L560.9 483.7L562.0 482.6L562.8 479.7L562.3 477.2L562.6 470.2L563.8 466.3L565.8 466.0L567.5 468.2L567.4 470.1L568.0 474.7L568.2 477.7ZM499.0 219.7L494.5 222.1L493.5 224.3L491.8 227.1L488.9 228.3L486.0 228.7L483.6 228.3L482.3 227.2L481.2 225.3L478.2 225.3L475.0 227.3L472.4 230.5L473.2 232.2L475.6 232.7L476.2 234.3L475.4 235.4L474.4 237.3L469.5 242.9L464.6 248.5L463.8 250.2L462.3 251.4L456.0 254.4L455.3 255.6L454.9 260.7L454.3 264.9L449.6 268.7L445.1 272.6L443.9 275.0L443.1 277.7L441.6 280.9L441.3 282.5L443.6 285.2L443.3 287.3L442.7 290.5L440.4 292.8L438.0 294.0L438.0 297.4L439.3 297.9L442.3 297.6L446.5 295.2L449.2 291.9L447.6 288.9L447.7 287.6L451.1 284.3L454.9 282.4L460.5 282.0L467.2 283.1L467.5 285.6L468.2 288.6L469.4 290.7L467.8 296.7L469.0 298.5L470.8 300.7L472.3 302.8L474.4 304.6L476.3 307.7L477.0 309.5L473.9 312.7L469.0 315.6L468.3 317.4L468.4 319.5L469.0 321.2L471.8 323.3L474.7 328.1L476.7 332.4L480.8 336.6L481.9 337.8L480.4 340.6L479.1 346.5L477.4 347.5L475.5 347.8L470.3 352.1L468.0 351.6L464.7 351.7L462.4 353.1L462.6 355.7L464.7 358.2L465.9 360.8L466.4 363.7L468.8 365.7L472.0 366.9L473.9 367.0L475.1 367.8L475.9 368.7L477.2 374.7L476.4 376.2L474.7 376.8L473.6 379.3L471.5 382.9L470.3 385.8L471.6 388.3L472.2 390.2L471.5 392.2L472.4 395.2L475.0 398.2L481.6 402.5L487.9 405.8L489.9 406.4L498.3 404.2L499.8 404.4L500.9 407.1L501.3 408.8L500.3 411.4L498.1 415.2L495.5 418.1L494.1 420.6L494.3 422.9L494.5 425.9L492.5 426.8L491.5 425.7L490.3 426.6L485.9 429.7L482.8 431.6L471.1 443.5L465.6 447.1L464.6 449.1L463.5 453.1L460.3 456.4L457.3 458.0L450.4 459.7L443.3 463.3L440.3 461.8L432.0 461.9L426.9 457.6L417.0 454.8L413.8 448.6L409.4 448.2L406.5 448.4L404.7 447.5L404.2 445.3L404.2 443.2L401.1 444.2L398.7 444.2L397.3 445.0L396.2 446.0L394.9 445.3L394.2 446.8L391.3 447.1L388.2 446.3L380.0 443.1L378.8 442.6L373.2 441.4L371.0 440.1L369.1 436.8L367.6 435.9L361.6 436.8L359.7 439.3L356.9 442.3L337.5 456.8L333.8 462.8L329.7 471.8L329.4 475.9L331.2 489.2L335.2 496.2L335.7 497.9L333.4 497.9L329.7 496.9L326.6 495.9L323.8 496.5L321.0 498.0L318.5 498.8L316.8 499.1L315.6 499.8L315.0 501.5L314.9 502.7L311.8 502.5L304.6 500.0L298.2 498.3L294.3 500.2L291.9 502.0L290.2 501.7L289.0 499.9L288.1 498.1L285.5 496.5L279.8 493.9L280.2 492.7L281.1 491.0L279.9 488.5L274.7 486.8L272.3 486.5L270.7 487.6L269.5 489.0L266.6 483.8L264.6 482.8L261.3 482.6L257.7 481.0L254.0 479.1L244.9 475.9L242.4 475.5L240.8 477.9L240.4 483.3L235.7 484.1L230.5 483.4L228.1 483.7L226.0 483.7L224.0 482.2L215.0 483.9L213.6 483.1L211.4 480.7L208.9 478.7L207.0 477.8L205.4 476.5L203.9 476.4L201.8 477.5L198.7 477.9L196.2 477.9L194.9 478.0L189.1 472.1L188.3 470.5L185.4 470.0L181.9 469.9L173.0 466.1L168.8 463.9L168.3 462.7L166.4 463.7L165.8 465.1L163.6 465.2L162.4 464.4L161.6 463.4L162.4 461.5L163.8 459.1L164.4 456.5L164.3 454.3L162.0 452.8L158.7 452.1L156.3 451.9L153.1 450.6L151.5 449.7L150.1 447.1L150.0 445.2L156.0 443.6L161.5 436.8L166.7 412.2L170.4 383.1L173.1 377.7L176.6 376.1L173.8 372.2L172.0 374.1L171.4 376.3L170.4 377.4L172.4 350.7L173.9 340.9L176.4 330.7L181.6 334.8L185.9 338.9L188.2 342.5L191.0 354.4L193.0 356.9L196.2 359.4L195.0 356.6L192.7 354.6L189.4 338.7L187.3 334.2L183.9 330.5L173.2 322.5L172.2 320.9L171.6 317.9L175.2 318.0L178.3 319.5L177.9 317.8L177.0 316.0L175.6 309.6L174.4 294.5L174.6 291.9L174.0 288.7L170.6 288.1L167.9 287.9L165.0 286.7L150.3 277.8L145.3 268.6L140.1 261.9L138.9 258.9L139.1 255.9L141.7 249.6L139.3 245.6L137.1 244.9L135.0 242.9L136.9 239.6L138.4 237.5L141.3 236.9L145.3 237.7L149.1 239.5L151.9 240.0L143.3 235.0L129.3 236.6L126.2 236.0L123.7 234.9L122.8 231.1L124.8 229.4L126.5 226.3L124.5 224.1L121.8 223.3L117.7 223.4L113.8 224.0L112.9 222.7L115.2 219.2L113.2 217.9L110.5 218.6L106.6 219.2L102.9 218.2L99.4 214.3L97.1 214.3L95.5 214.8L93.1 213.3L90.6 212.9L88.9 213.4L86.4 211.1L71.9 206.5L65.6 206.0L59.9 208.0L56.7 207.4L54.3 204.4L52.4 199.5L43.1 195.7L44.9 193.1L49.2 192.6L54.1 190.8L56.0 188.7L52.1 186.0L49.2 185.4L48.0 184.5L46.8 182.2L48.5 181.1L49.7 181.6L53.2 182.0L59.2 181.5L57.1 179.1L54.7 178.6L53.6 178.0L48.8 177.7L46.5 178.6L41.6 178.2L40.4 175.7L40.0 173.5L41.5 168.7L48.5 164.4L66.0 159.7L73.5 160.3L78.8 159.5L85.1 156.6L87.8 154.0L96.7 152.5L105.1 155.2L113.0 165.4L116.8 168.8L125.8 162.8L139.5 163.0L142.3 166.4L143.3 163.6L145.9 160.2L147.9 161.7L148.9 163.8L163.2 163.2L165.5 162.7L161.6 160.2L158.5 154.4L157.9 133.0L153.9 127.0L149.3 117.5L147.2 111.9L147.1 109.9L147.7 107.1L153.3 107.2L157.6 107.9L165.9 105.8L169.9 107.3L169.6 111.7L170.8 117.3L172.3 119.9L174.3 123.0L181.0 122.7L188.2 124.5L197.3 124.8L210.5 128.0L216.1 126.1L221.6 122.3L232.0 119.7L232.9 118.4L226.9 119.0L221.3 116.5L220.6 113.8L221.3 111.5L223.4 106.1L239.5 97.5L250.8 94.8L262.7 90.2L268.7 85.3L272.7 78.9L274.0 77.6L275.6 76.4L274.0 74.2L275.1 50.2L276.3 45.9L278.6 42.4L282.2 39.7L287.5 36.7L307.3 32.6L310.2 31.0L310.6 33.5L312.1 36.8L313.0 38.5L312.2 40.9L312.9 42.8L315.6 46.3L318.9 49.6L321.8 51.7L324.9 50.9L328.6 48.7L331.8 48.1L333.6 49.7L334.5 50.6L336.5 54.4L337.1 58.2L338.0 61.4L339.6 62.7L345.5 63.1L349.9 64.4L351.1 65.4L352.5 72.5L353.3 73.5L354.5 72.7L355.6 71.6L357.1 71.4L359.6 71.8L363.1 71.9L366.6 72.7L371.4 76.8L371.2 78.1L370.3 80.4L369.9 82.3L372.0 84.9L371.8 87.2L370.4 88.8L370.0 90.1L370.4 91.6L371.5 92.1L378.6 93.0L385.1 92.1L389.3 89.9L389.9 87.6L391.1 84.8L393.5 82.5L395.3 81.8L396.9 82.7L394.2 92.2L396.1 94.7L396.3 98.3L397.1 101.5L399.4 101.4L402.2 102.0L404.2 103.2L406.6 105.0L409.9 106.8L412.4 107.4L413.2 108.9L415.2 110.6L418.1 114.0L420.8 116.4L422.1 116.4L424.6 115.4L428.4 114.9L431.3 115.0L432.5 116.7L435.4 117.5L437.6 119.4L439.5 119.9L441.9 119.4L443.5 117.8L445.7 117.0L448.0 117.3L449.3 118.2L451.9 119.5L453.2 119.3L456.0 120.1L458.9 122.6L460.0 125.2L460.4 126.6L461.6 128.2L466.3 135.3L467.9 135.6L469.5 134.5L470.6 133.0L472.2 132.7L474.6 133.4L476.2 134.2L477.0 137.3L478.6 137.2L480.6 137.0L483.5 137.8L487.8 136.9L491.1 135.6L492.9 135.7L495.7 139.3L498.9 140.6L505.8 141.6L513.3 143.3L516.2 144.7L518.2 145.4L518.5 150.0L510.3 160.1L507.3 163.5L505.7 168.4L504.5 175.7L502.3 182.7L499.0 189.3L497.8 194.4L498.7 197.6L498.2 202.9L496.2 210.0L495.8 215.4L497.1 219.0L499.0 219.7ZM172.8 310.7L171.5 315.4L169.1 311.1L165.8 307.3L165.1 303.8L169.0 305.4L172.8 310.7Z"/>
+        <g id="pins"></g>
+      </svg>
+      <div class="legend"><span><i style="background:var(--c-hub)"></i>Hub</span><span><i style="background:var(--c-nvidia)"></i>NVIDIA's own site</span><span><i style="background:var(--c-compute)"></i>Compute</span><span><i style="background:var(--c-research)"></i>Research</span><span><i style="background:var(--c-partner)"></i>Partners and portfolio</span></div>
+    </div>
+    <div class="mapside"><div class="mapdetail" id="mapdetail" aria-live="polite"><span class="kicker" id="md-cat"></span><h3 id="md-name"></h3><p id="md-text"></p></div><div class="maplist" id="maplist" aria-label="Places"></div></div>
   </div>
 </section>
 
-<section>
-  <div class="sec-head"><div class="kicker">2 · Presence</div><h2>NVIDIA's legal entities in France</h2></div>
-  <div class="tbl"><table>
-    <thead><tr><th>Entity</th><th>SIREN</th><th>What the register says</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td>NVIDIA Développement France SAS</td><td class="date">479 973 455</td><td>R&amp;D company (NAF 72.19Z) at 400 avenue Roumanille, Biot (Sophia Antipolis), created 2 December 2004. 50–99 staff (2024). <b>2024 revenue €27.09M, net income €2.12M</b>, consistent with a cost-plus research subsidiary billing its parent. Presidents: Michael Ching and Mark Hoose.</td><td><span class="chip c-off">Official record</span> company register</td></tr>
-      <tr><td>NVIDIA Ltd (French branch of the UK company)</td><td class="date">432 108 355</td><td>Sales branch (wholesale of electronic equipment, NAF 46.52Z), 50–99 staff. Representatives in France: Paul Schelin and Sonia Mediavilla. BODACC: accounts for 2020–2025 filed in January 2026; management changes in 2026. Office at Le Colisée, Courbevoie (press and job ads).</td><td><span class="chip c-off">Official record</span> register, BODACC</td></tr>
-      <tr><td>NVIDIA Singapore Pte Ltd</td><td class="date">—</td><td>Registered a French tax representative in 2026.</td><td><span class="chip c-off">Official record</span> register</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">Ten NVIDIA patent families filed in 2010–2012 name French-resident inventors (graphics streaming, CPU–GPU memory access, modem communications), which matches the Sophia Antipolis team. No later NVIDIA-owned patents with French inventors appear in scanR, but recent filings stay unpublished for 18 months.</p>
+<section id="sophia">
+  <div class="sec-head"><div class="kicker">1 · A French base</div><h2>From modems to Biot: NVIDIA's quiet research office on the Riviera</h2></div>
+  <div class="intro">
+    <p>NVIDIA runs two companies in France. Its sales arm is a branch of the British subsidiary NVIDIA Ltd, with an office at La Défense in Courbevoie. Its research arm is NVIDIA Développement France, a company of 50 to 99 people in Biot, inside the Sophia Antipolis technology park between Nice and Cannes.</p>
+    <p>The Biot office has had a turbulent history, and what it works on today is not public.</p>
+  </div>
+  <details class="inline">
+    <summary>What is Sophia Antipolis? <small>Europe's best-known science park</small></summary>
+    <div class="body prose">
+      <p>Sophia Antipolis is a technology park founded in 1969 on the plateau above Antibes, spread across Biot, Valbonne, Mougins and neighbouring towns. It hosts research centres of Inria, the engineering school EURECOM and the CNRS alongside chip and telecom companies such as Arm, NXP and Analog Devices. It is one of the few places in France with a deep pool of semiconductor and wireless engineers, which is what first drew NVIDIA there.</p>
+    </div>
+  </details>
+  <div class="grid3">
+    <div class="card"><div class="when">2011</div><h4>Arrival through Icera</h4><p>NVIDIA bought Icera, a British designer of mobile-phone modems, and with it a Sophia Antipolis R&amp;D team of about 60 people. French engineers there are named on NVIDIA patents filed in 2010–2012 for communication systems and remote graphics. <span class="chip c-off">Patents</span></p></div>
+    <div class="card"><div class="when">2015</div><h4>The modem exit</h4><p>When NVIDIA abandoned the modem business in 2015, it cut about 500 jobs worldwide, including roughly 123 in Sophia Antipolis, and announced the closure of the site. <span class="chip c-press">Press</span></p></div>
+    <div class="card"><div class="when">2016 to today</div><h4>A second start in Biot</h4><p>The company register shows NVIDIA Développement France opened a new site at 400 avenue Roumanille in Biot on 25 March 2016. In 2024 it employed 50–99 people and reported revenue of €27.1M and net income of €2.1M, the profile of a subsidiary billing its parent for research work. <span class="chip c-off">Company register</span></p></div>
+  </div>
+  <p class="note"><b>Open question for NVIDIA:</b> what does the Biot team work on, and how many people does NVIDIA employ in France? Its annual accounts do not say, and we found no recent job listings for the site. The register lists the business as research and development in physical and natural sciences.</p>
 </section>
 
-<section>
-  <div class="sec-head"><div class="kicker">3 · Research</div><h2>Research ties with French labs</h2></div>
-  <h3>EU research projects where NVIDIA worked with French partners</h3>
-  <p>The EU funds research through consortia: groups of universities, labs and companies from several countries working on one project. The EU pays each funded member its own share directly. Here NVIDIA was a <b>recipient</b> of EU money, not a funder.</p>
-  <p>Since 2014, NVIDIA subsidiaries (US, UK, Denmark, Germany) have been partners in <b>14 EU projects that also include French partners</b>. In those projects, the EU paid NVIDIA <b>€2.38M</b> across 7 projects and paid the French partners <b>€12.0M</b>. In the other 7, NVIDIA took part without EU funding, or its amount isn't recorded.</p>
-  <div class="tbl"><table>
-    <thead><tr><th>Start</th><th>Project</th><th>French partners (EU funding each)</th><th class="num">To French partners</th><th class="num">To NVIDIA</th></tr></thead>
-    <tbody>
+<section id="mistral">
+  <div class="sec-head"><div class="kicker">2 · The closest partner</div><h2>Mistral AI: shareholder, supplier, co-developer</h2></div>
+  <div class="intro">
+    <p>No French company is more entangled with NVIDIA than Mistral AI. NVIDIA has invested in three of its funding rounds, sells it the chips for its data centres, co-builds models with it, and sits beside it in the joint venture planning France's largest AI campus. Mistral's leadership is open about the dependence.</p>
+  </div>
+  <blockquote>"Owning the chips may come, I think it should come at some point, but for now we are relying on Nvidia."<cite>Arthur Mensch, Mistral AI CEO, as reported by French Tech Journal, May 2026</cite></blockquote>
+  <div class="grid2">
+    <div class="card feature"><h3>The shareholder</h3><p>NVIDIA joined Mistral's €600M Series B in June 2024, returned for the €1.7bn Series C led by ASML in September 2025, and is reported as a participant in the €3bn Series D led by Samsung in September 2026. Its stake and cheque sizes have never been disclosed. <span class="chip c-nav">Navigator</span></p></div>
+    <div class="card feature"><h3>The compute supplier</h3><p>At VivaTech in June 2025, with Emmanuel Macron on stage, NVIDIA and Mistral announced Mistral Compute, a French AI cloud built on 18,000 Grace Blackwell superchips. The first site, at Bruyères-le-Châtel in Essonne, was running by June 2026. Mistral is now aiming for 1 GW of capacity by 2030. <span class="chip c-press">Press</span></p></div>
+    <div class="card feature"><h3>The co-developer</h3><p>The two companies built Mistral NeMo in 2024 on NVIDIA's DGX Cloud and tuned the Mistral 3 family for NVIDIA hardware in 2025. In March 2026 Mistral became a <a href="https://mistral.ai/news/mistral-ai-and-nvidia-partner-to-accelerate-open-frontier-models/">founding member of the Nemotron Coalition</a>, NVIDIA's group of open-model builders. Mistral and NVIDIA alone are co-developing the base model for the coalition's Nemotron 4 family. <span class="chip c-press">Mistral, FTJ</span></p></div>
+    <div class="card feature"><h3>The industrial-AI bet</h3><p>On 21 October 2026, Mistral and NVIDIA <a href="https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/">extended the partnership to engineering simulation</a>. Mistral Large 4 and Mistral's physics-modelling pipelines will run on NVIDIA's CUDA-X libraries and Warp to connect simulation, model training and design in a closed loop. The models will also plug into NVIDIA Omniverse for 3D scene generation. The targets are aerospace, automotive and semiconductors. <span class="chip c-press">Mistral</span></p></div>
+  </div>
+  <details>
+    <summary>Campus IA: the joint venture outside Paris <small>NVIDIA, MGX, Bpifrance and Mistral AI</small></summary>
+    <div class="body prose">
+      <p>At the Choose France summit in May 2025, NVIDIA, Abu Dhabi's MGX fund, the state bank Bpifrance and Mistral AI announced a joint venture to build Europe's largest AI campus at Fouju in Seine-et-Marne, starting at 1.4 GW, with operations from 2028. In June 2026 Bpifrance widened the plan into a national network targeting 3 GW, with a second site to come. École Polytechnique is the academic partner and plans a teaching and research chair.</p>
+      <p>The price tag is unclear. Early reports cited about €8.5bn; French Tech Journal has since reported €50bn (November 2025) and €35bn (May 2026) for the full build-out. NVIDIA's equity share is not public, and Mensch has described Mistral's own stake as small. <span class="chip c-press">Press, FTJ</span></p>
+    </div>
+  </details>
+</section>
+
+<section id="investments">
+  <div class="sec-head"><div class="kicker">3 · The cheque book</div><h2>From one deal to a portfolio</h2></div>
+  <div class="intro">
+    <p>NVIDIA's French portfolio began quietly. In May 2023 its venture arm, NVentures, co-led a $55.4M round in Moon Surgical, a Paris maker of surgical robots. Three years later Huang stood in a hall off Place Vendôme and announced four French stakes in one evening.</p>
+    <p>In between, NVIDIA backed AI model makers, quantum and photonics hardware, voice AI and enterprise software. In every case the amount it put in is undisclosed.</p>
+  </div>
+  <blockquote>"I was here one year ago, and at the time, NVIDIA's investment in Europe was zero… we've invested $8 billion, more than any VC."<cite>Jensen Huang, Paris, 13 October 2026, as reported by French Tech Journal</cite></blockquote>
+  <div class="grid3">
+    <div class="card"><div class="when">September 2026 · pending</div><h4>Hugging Face</h4><p>NVIDIA agreed to buy the French-founded open-source AI platform for about $12.93bn, nearly three times its 2023 valuation, with roughly $1bn in retention bonuses. Closing is expected in 2027 and needs regulatory approval. Pollen Robotics, a Bordeaux start-up that Hugging Face bought in 2025, comes with it. <span class="chip c-press">Press</span></p></div>
+    <div class="card"><div class="when">13 October 2026</div><h4>Doctolib and three AI start-ups</h4><p>At a Paris reception, Huang announced a minority stake in Doctolib, France's medical-booking giant, and planned investments in Pigment, Entalpic and Genesis AI. That evening he met Macron at the Élysée. <span class="chip c-nav">Navigator</span></p></div>
+    <div class="card"><div class="when">March 2026</div><h4>AMI Labs</h4><p>NVIDIA joined the $1.03bn seed round of Yann LeCun's world-model lab, the largest seed round in European history. <span class="chip c-nav">Navigator</span></p></div>
+    <div class="card"><div class="when">May 2026</div><h4>Alice &amp; Bob</h4><p>NVentures joined the quantum-computing start-up's €100M Series B. The deal followed technical work linking Alice &amp; Bob's cat qubits to NVIDIA's CUDA-Q software. <span class="chip c-nav">Navigator</span></p></div>
+    <div class="card"><div class="when">September 2025</div><h4>Scintil Photonics</h4><p>NVIDIA backed this Grenoble maker of silicon photonics for AI data centres, a would-be supplier rather than a rival. <span class="chip c-nav">Navigator</span></p></div>
+    <div class="card"><div class="when">Late 2025 · declined</div><h4>The deal that didn't happen</h4><p>The Financial Times reported that NVIDIA offered to invest $500M in Hugging Face at a $7bn valuation, and that the founders turned it down to avoid a dominant investor. Less than a year later NVIDIA bought the company. <span class="chip c-single">Unconfirmed</span></p></div>
+  </div>
+  <details>
+    <summary>All 14 investments <small>dates, round sizes and sources</small></summary>
+    <div class="body">
+      <div class="tbl"><table>
+        <thead><tr><th>Date</th><th>Company</th><th>What NVIDIA did</th><th class="num">Round size</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td class="date">May 2023</td><td>Moon Surgical<small>surgical robotics, Paris</small></td><td>NVentures co-led the Series B with Sofinnova</td><td class="num">$55.4M</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Aug 2023</td><td>Hugging Face<small>French-founded, US HQ</small></td><td>Participant in Series D at a $4.5bn valuation</td><td class="num">$235M</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Jun 2024</td><td>Mistral AI</td><td>Participant in the General Catalyst-led Series B</td><td class="num">€600M</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Oct 2024</td><td>Poolside<small>AI coding; French company in Paris</small></td><td>Participant in Series B; a further $0.5–1bn was reported in 2025 but not confirmed</td><td class="num">$500M</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Sep 2025</td><td>Mistral AI</td><td>Existing investor in the ASML-led Series C</td><td class="num">€1.7bn</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Sep 2025</td><td>Scintil Photonics<small>Grenoble</small></td><td>Participant in Series B</td><td class="num">$58M</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Mar 2026</td><td>AMI Labs</td><td>Participant in the seed round</td><td class="num">$1.03bn</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">May 2026</td><td>Alice &amp; Bob</td><td>NVentures joined a Series B extension</td><td class="num">€100M total</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Jul 2026</td><td>Gradium<small>voice AI, Kyutai spin-off</small></td><td>New investor in a seed extension</td><td class="num">$100M seed total</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Sep 2026</td><td>Mistral AI</td><td>Reported participant in the Samsung-led Series D</td><td class="num">€3bn</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">Oct 2026</td><td>Pigment</td><td>Planned investment announced alongside the Series E</td><td class="num">$250M</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">13 Oct 2026</td><td>Doctolib</td><td>Minority stake, confirmed by Doctolib</td><td class="num">undisclosed</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">13 Oct 2026</td><td>Entalpic<small>AI for materials</small></td><td>Planned minority stake</td><td class="num">undisclosed</td><td><span class="chip c-nav">Navigator</span></td></tr>
+          <tr><td class="date">13 Oct 2026</td><td>Genesis AI<small>robotics models</small></td><td>Planned strategic investment</td><td class="num">undisclosed</td><td><span class="chip c-nav">Navigator</span></td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">Round sizes are for the whole round. No NVIDIA equity was found in H Company, Pasqal, Quandela, Bioptimus, Owkin, Wandercraft, Photoroom, Dust or Exotec, which all work with NVIDIA technically.</p>
+    </div>
+  </details>
+</section>
+
+<section id="compute">
+  <div class="sec-head"><div class="kicker">4 · The engine room</div><h2>The chips under French AI</h2></div>
+  <div class="intro">
+    <p>NVIDIA's biggest footprint in France is hardware that others buy. The country's public supercomputers, its sovereign-cloud ambitions and its largest corporate AI projects run largely on NVIDIA processors. Yet in 3.48 million French public-procurement records, NVIDIA never appears as the supplier: public buyers go through integrators such as Eviden, HPE and Dell.</p>
+  </div>
+  <div class="grid2">
+    <div class="card feature"><h3>Jean Zay, the public AI workhorse</h3><p>France's main AI supercomputer for researchers and start-ups sits at the CNRS's IDRIS centre in Orsay. In March 2024 GENCI and the CNRS chose Eviden for a France 2030-funded extension that added 1,456 NVIDIA H100 chips to 416 A100s and 1,832 V100s, quadrupling its power to 125.9 petaflops. Project requests went from 72 in 2019 to 1,400 in 2024. About 150 companies have used it, including Valeo for some 30 autonomous-driving projects. <span class="chip c-off">CNRS</span></p></div>
+    <div class="card feature"><h3>Opening the doors to start-ups</h3><p>In November 2025 GENCI's AI Factory France announced Europe's first AI Factory tie-up with NVIDIA's start-up programmes. It went live at VivaTech in June 2026, giving eligible members access to Jean Zay, and NVIDIA joined its advisory committee. In November 2025 GENCI also unveiled Dalia, billed as Europe's first GB200 NVL72 system for open research. <span class="chip c-off">GENCI</span></p></div>
+  </div>
+  <details>
+    <summary>More NVIDIA-powered machines in France <small>corporate, defence and research systems</small></summary>
+    <div class="body">
+      <div class="tbl"><table>
+        <thead><tr><th>Date</th><th>Where</th><th>What</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td class="date">May 2021</td><td>Ifremer</td><td>An NVIDIA DGX A100, bought through Dell for €274,191: the only French public contract that names NVIDIA</td><td><span class="chip c-off">Procurement data</span></td></tr>
+          <tr><td class="date">Oct 2023</td><td>Iliad / Scaleway, Paris</td><td>"Nabuchodonosor": 1,016 H100 chips, offered to start-ups with cloud credits</td><td><span class="chip c-press">NVIDIA blog</span></td></tr>
+          <tr><td class="date">Oct 2024</td><td>Ministry of the Armed Forces (AMIAD)</td><td>Classified defence AI supercomputer by HPE and Orange; reported to use NVIDIA chips, not confirmed officially</td><td><span class="chip c-single">Unconfirmed</span></td></tr>
+          <tr><td class="date">Nov 2024</td><td>Sesterce, Marseille</td><td>H100-based AI supercomputer</td><td><span class="chip c-press">FTJ</span></td></tr>
+          <tr><td class="date">Dec 2025</td><td>HPE, Grenoble</td><td>HPE × NVIDIA AI Factory Lab for testing sovereign AI set-ups, billed as the first in the EU</td><td><span class="chip c-press">HPE</span></td></tr>
+          <tr><td class="date">May 2026</td><td>TotalEnergies, Pau</td><td>Pangea 5 supercomputer with Dell and NVIDIA, over €100M, due 2027</td><td><span class="chip c-press">Press</span></td></tr>
+          <tr><td class="date">Oct 2026</td><td>Bull, Angers</td><td>Assembly of NVIDIA Vera Rubin racks for Europe from 2028</td><td><span class="chip c-press">Press</span></td></tr>
+          <tr><td class="date">Oct 2026</td><td>GENCI × Bristol (ConcordAI)</td><td>Linking Jean Zay and Adastra with the UK's Isambard-AI for federated training, with NVIDIA's technical support</td><td><span class="chip c-off">GENCI</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </details>
+  <p class="note"><b>The exception:</b> France's first exascale machine, Alice Recoque, due at the CEA's TGCC centre in 2026–27, runs on AMD and SiPearl processors. So does the Adastra supercomputer. French public computing is not all NVIDIA.</p>
+</section>
+
+<section id="research">
+  <div class="sec-head"><div class="kicker">5 · In the labs</div><h2>Twenty years of research ties</h2></div>
+  <div class="intro">
+    <p>Long before the AI boom, NVIDIA researchers were writing papers with French scientists. The earliest record in France's open archive, HAL, is a 2005 paper on computer arithmetic with researchers then at ENS Lyon. From 2009 to 2011 a Grenoble Inria team and NVIDIA engineers published "GigaVoxels" and voxel cone tracing, widely cited techniques for real-time lighting.</p>
+    <p>Today the ties run through four channels: co-written papers, EU research projects, university partnerships and hardware donations.</p>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>95 co-written papers</h3><p>French institutions and NVIDIA staff co-signed 95 papers in HAL. CNRS appears on 75 and Inria on 53, followed by Paris-Saclay, Bordeaux, CEA, Centrale Lyon, INSA Rennes and Inserm. Topics range from graphics and supercomputing to medical imaging, 6G and climate models. <span class="chip c-off">HAL</span></p></div>
+    <div class="card"><h3>Reims, the first CUDA university</h3><p>In 2015 the University of Reims became France's first NVIDIA "CUDA Research Center" and opened a GPU application lab at its ROMEO supercomputing centre. From 2017 to 2020 NVIDIA, CEA and Bull were industrial partners in its supercomputing chair. NVIDIA's contribution is not disclosed. <span class="chip c-off">University</span></p></div>
+    <div class="card"><h3>Hardware donations</h3><p>About 295 French papers thank NVIDIA for donated graphics cards from its academic grant programme, peaking in 2018–2020. In October 2026 NVIDIA became a founding member and lead contributor of Fondation Inria's working group on open-source AI. Neither has a published value. <span class="chip c-off">HAL, Fondation Inria</span></p></div>
+    <div class="card"><h3>A personal gift, not a corporate one</h3><p>NVIDIA engineer Franck Diard, a Polytech Nice Sophia graduate, gave €400,000 over four years to the Université Côte d'Azur foundation, funding a supercomputer with NVIDIA chips. The money came from him, not from NVIDIA. <span class="chip c-off">University</span></p></div>
+  </div>
+  <details>
+    <summary>EU research projects where NVIDIA worked with French partners <small>14 projects · €2.38M to NVIDIA · €12.0M to French partners</small></summary>
+    <div class="body">
+      <p class="prose" style="font-size:15px">The EU funds research through consortia of universities, labs and companies from several countries and pays each funded member directly. In these projects NVIDIA was a <b>recipient</b> of EU money alongside French partners, not a funder. NVIDIA was paid in 7 of the 14; in the rest it took part without funding or its amount is not published.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Start</th><th>Project</th><th>French partners (EU funding each)</th><th class="num">To French partners</th><th class="num">To NVIDIA</th></tr></thead>
+        <tbody>
       <tr><td class="date">2014</td><td><a href="https://cordis.europa.eu/project/id/671627">ESCAPE</a><small>energy-efficient weather prediction</small></td><td>Météo-France (€293,175), Bull (€269,280)</td><td class="num">€562,455</td><td class="num">€193,335</td></tr>
       <tr><td class="date">2016</td><td><a href="https://cordis.europa.eu/project/id/722068">HiPerNav</a><small>soft-tissue surgical navigation</small></td><td>Inria (€525,751), Université Sorbonne Paris Nord (€262,876)</td><td class="num">€788,627</td><td class="num">€0<small>unfunded partner</small></td></tr>
       <tr><td class="date">2017</td><td><a href="https://cordis.europa.eu/project/id/765739">COSINE</a><small>computational spectroscopy (training network)</small></td><td>Chimie ParisTech (€262,876)</td><td class="num">€262,876</td><td class="num">€0<small>unfunded partner</small></td></tr>
@@ -161,150 +321,138 @@ footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:va
       <tr><td class="date">2024</td><td><a href="https://cordis.europa.eu/project/id/101192462">FLECON-6G</a><small>6G networks</small></td><td>EURECOM (€547,448), Airbus DS SLC (€388,125)</td><td class="num">€935,572</td><td class="num">€427,500</td></tr>
       <tr><td class="date">2024</td><td><a href="https://cordis.europa.eu/project/id/101226674">MINDnet</a><small>neuromorphic computing (training network)</small></td><td>Neurobus (no EU funds)</td><td class="num">€0</td><td class="num">€0<small>unfunded partner</small></td></tr>
       <tr><td></td><td><b>Total, 14 projects</b></td><td></td><td class="num"><b>€12,005,168</b></td><td class="num"><b>€2,376,951</b></td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">Amounts are the EU contribution to each partner, from scanR and CORDIS. "Unfunded partner" means NVIDIA was a listed partner (for example hosting researchers in a training network) with no EU money. "Not recorded" means NVIDIA was a funded member but no amount is published; MELLODDY was a public-private project in which industry partners contributed in kind. Ten other EU projects involve NVIDIA with no French partner and are left out here, as is the STARS project (2016), whose only French participant was NVIDIA's own French subsidiary. <span class="chip c-off">Official record</span></p>
-
-  <div class="two">
-    <div class="box">
-      <h3>Co-authored papers, by year</h3>
-      <p class="note">95 publications in HAL list both a French institution and NVIDIA as affiliations. CNRS appears on 75, Inria on 53. Other frequent partners: Lyon universities, Inria Grenoble, INSA, Paris-Saclay, CentraleSupélec, Toulouse, Inria Côte d'Azur and Télécom Paris.</p>
-      <div class="bars" role="img" aria-label="Co-authored papers per year: peaks of 11 to 12 in 2017, 2021 and 2024">
-        <div class="bar"><span>≤2016</span><i style="width:100%"></i><em>25</em></div>
-        <div class="bar"><span>2017</span><i style="width:44%"></i><em>11</em></div>
-        <div class="bar"><span>2018–20</span><i style="width:28%"></i><em>7</em></div>
-        <div class="bar"><span>2021</span><i style="width:48%"></i><em>12</em></div>
-        <div class="bar"><span>2022</span><i style="width:40%"></i><em>10</em></div>
-        <div class="bar"><span>2023</span><i style="width:28%"></i><em>7</em></div>
-        <div class="bar"><span>2024</span><i style="width:48%"></i><em>12</em></div>
-        <div class="bar"><span>2025–26</span><i style="width:44%"></i><em>11</em></div>
-      </div>
-      <p class="note"><span class="chip c-off">Official record</span> HAL open archive</p>
+        </tbody>
+      </table></div>
+      <p class="note">Source: scanR and CORDIS. MELLODDY, the drug-discovery project coordinated by Owkin, was a public-private project in which industry partners contributed in kind. <span class="chip c-off">Official record</span></p>
     </div>
-    <div class="box">
-      <h3>Hardware donations and lab collaborations</h3>
-      <ul>
-        <li><b>About 295 French papers</b> in HAL thank NVIDIA Corporation for donated GPUs (its academic hardware grant programme), peaking in 2018–2020. A further 54 HAL records name NVIDIA in their funding field. <span class="chip c-off">Official record</span></li>
-        <li><b>Université de Reims (URCA)</b> was the first French university named an NVIDIA CUDA Research Center. In March 2015 it opened a GPU Computing Application Lab at its ROMEO centre (then France's most powerful NVIDIA Tesla cluster, 260 K20X GPUs); the lab was funded by the region and Reims Métropole, not NVIDIA. <span class="chip c-off">University release</span></li>
-        <li><b>C2I2 industrial chair</b> in supercomputing and industry at URCA, 2017–2020: NVIDIA was an industrial partner with CEA and Bull (chairholder Michaël Krajecki). NVIDIA's contribution is not disclosed. URCA's CReSTIC lab also lists a research contract with NVIDIA in scanR. <span class="chip c-off">University, scanR</span></li>
-        <li><b>Maison de la Simulation</b> (CEA/CNRS, Saclay) hosted an NVIDIA CUDA Quantum workshop for the France Hybrid HPC Quantum Initiative in June 2023. <span class="chip c-off">Official record</span></li>
-        <li><b>Fondation Inria</b> launched a working group on open-source AI adoption on 13 October 2026. NVIDIA is "among the principal contributors and founding members"; Bull, Dassault Systèmes, Hugging Face, Scaleway, Gradium, H Company and others have joined. Findings due spring 2027; NVIDIA's contribution is not stated. The release quotes Nathaniel Ives, NVIDIA's enterprise director for France, Benelux and the Nordics. <span class="chip c-off">Fondation Inria</span></li>
-        <li><b>Inria / Institut Pasteur</b>: Inria team EPIMETHEE's 2025 report lists NVIDIA under bilateral industry contracts, supporting a project on the foetus, with a memorandum with Institut Pasteur planned. No amount. <span class="chip c-off">Inria report</span></li>
-        <li><b>Personal gift, not corporate:</b> Franck Diard, an NVIDIA Distinguished Engineer and Polytech Nice Sophia alumnus, gave €400,000 over four years to Fondation Université Côte d'Azur (announced January 2026). It funded a Lenovo supercomputer with NVIDIA GPUs and fab-lab equipment. <span class="chip c-off">University</span></li>
-      </ul>
-    </div>
+  </details>
+</section>
+
+<section id="partners">
+  <div class="sec-head"><div class="kicker">6 · Corporate partners</div><h2>Inside French industry</h2></div>
+  <div class="intro">
+    <p>NVIDIA's pitch to European industry is that factories, cars and laboratories are the next market for AI. France's industrial champions have signed on one by one, usually in announcements timed to VivaTech or NVIDIA's own conferences.</p>
+  </div>
+  <div class="grid2">
+    <div class="card feature"><h3>Dassault Systèmes</h3><p>In February 2026 the 3D-design leader and NVIDIA announced a long-term partnership to build an industrial AI platform around Dassault's "virtual twins". It runs both ways. NVIDIA adopts Dassault's systems-engineering software to design its own AI factories, and Dassault's cloud arm Outscale builds sovereign AI factories on NVIDIA hardware. The two also combine NVIDIA's BioNeMo with Dassault's BIOVIA software for molecule and materials research. <span class="chip c-press">Dassault Systèmes</span></p></div>
+    <div class="card feature"><h3>Valeo, Stellantis and the self-driving push</h3><p>On 21 October 2026 Valeo said it would develop and industrialise car computers on NVIDIA's Hyperion design for Level 4 autonomous driving. Days later, Wayve, Stellantis and NVIDIA joined the French government on bringing self-driving cars to French roads. Stellantis provides the vehicles, Wayve the driving software and NVIDIA the computing platform. The transport minister promised to adapt regulation; no launch date was given. <span class="chip c-press">Valeo, press</span></p></div>
+    <div class="card"><h3>Schneider Electric</h3><p>At GTC Paris in June 2025, the energy-management group announced reference designs with NVIDIA for AI-factory power and cooling, and a rack system for NVIDIA's GB200 NVL72. <span class="chip c-press">Schneider Electric</span></p></div>
+    <div class="card"><h3>L'Oréal</h3><p>The beauty group uses NVIDIA AI Enterprise for its CreAItech generative 3D content platform and its Noli marketplace, announced at VivaTech 2025. <span class="chip c-press">Press</span></p></div>
+    <div class="card"><h3>The quantum trio</h3><p>France's three leading quantum start-ups, Pasqal, Quandela and Alice &amp; Bob, all connect their machines to NVIDIA's CUDA-Q software and NVQLink interconnect. Only Alice &amp; Bob has NVIDIA as a shareholder. <span class="chip c-press">Company releases</span></p></div>
+    <div class="card"><h3>Health, robotics and media</h3><p>Owkin has used NVIDIA's Clara platform since 2019 and in 2026 began building its OwkinZero biology model with NVIDIA. Wandercraft's humanoid robot runs on NVIDIA's GR00T models. Omi, a Paris maker of AI product imagery, gets NVIDIA chips and engineers through an October 2026 partnership. <span class="chip c-press">Press</span></p></div>
+  </div>
+  <p class="note">Telecoms and cloud: Orange Business and Bouygues Telecom have both launched AI services on NVIDIA infrastructure.</p>
+</section>
+
+<section id="startups">
+  <div class="sec-head"><div class="kicker">7 · Start-up programmes</div><h2>Credits, chips and a seat at the table</h2></div>
+  <div class="intro">
+    <p>Beyond equity, NVIDIA courts French start-ups through free programmes that offer discounts, training and computing credits, and that make NVIDIA's software the default.</p>
+  </div>
+  <div class="grid3">
+    <div class="card"><h4>NVIDIA Inception</h4><p>NVIDIA says more than 700 French companies belong to its free start-up programme, out of more than 4,000 in Europe. Membership means support and discounts, not investment. <span class="chip c-single">NVIDIA's figure</span></p></div>
+    <div class="card"><h4>AI Factory France</h4><p>Since June 2026, Inception members doing open research with R&amp;D in Europe can apply for time on Jean Zay and other public machines. Early users include Pleias and Ryax. <span class="chip c-off">GENCI</span></p></div>
+    <div class="card"><h4>Scaleway and Sofinnova</h4><p>Scaleway has offered Inception members credits on its H100 cluster since November 2023. Sofinnova Partners' life-science portfolio, including Bioptimus and Cure51, received DGX Cloud credits in June 2025. <span class="chip c-press">Press</span></p></div>
   </div>
 </section>
 
-<section>
-  <div class="sec-head"><div class="kicker">4 · Compute</div><h2>NVIDIA hardware in public and strategic computing</h2></div>
-  <p>NVIDIA's biggest footprint in France is its chips. Public buyers acquire them through integrators such as Eviden, HPE and Dell, so NVIDIA itself never appears as the contract holder.</p>
-  <div class="tbl"><table>
-    <thead><tr><th>Date</th><th>Buyer / site</th><th>NVIDIA hardware</th><th>Money</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td class="date">May 2021</td><td>Ifremer (marine research institute)</td><td>NVIDIA DGX A100 system, bought through Dell under the national MATINFO 4 framework</td><td class="num">€274,191</td><td><span class="chip c-off">Official record</span> public-contract data</td></tr>
-      <tr><td class="date">2024–25</td><td>GENCI / CNRS-IDRIS, Jean Zay supercomputer</td><td>Eviden added 1,456 H100 GPUs (alongside 416 A100 and 1,832 V100 already installed), raising capacity from 36.85 to 125.9 petaflops. Chosen March 2024, inaugurated 13 May 2025. Project requests rose from 72 (2019) to 1,400 (2024); about 150 companies have used it since 2019, including Valeo (around 30 projects).</td><td class="num">€40M France 2030 extension</td><td><span class="chip c-off">Official record</span> scanR, CNRS</td></tr>
-      <tr><td class="date">Nov 2025</td><td>GENCI / IDRIS, Dalia</td><td>One GB200 NVL72 rack (72 Blackwell GPUs), billed as Europe's first for open research</td><td class="num">—</td><td><span class="chip c-press">GENCI release</span></td></tr>
-      <tr><td class="date">Oct 2024</td><td>Ministry of the Armed Forces / AMIAD, Asgard</td><td>Classified AI supercomputer by HPE and Orange; La Tribune reported NVIDIA GPUs, official releases do not name them</td><td class="num">reported €600M</td><td><span class="chip c-single">Unconfirmed</span></td></tr>
-      <tr><td class="date">Oct 2023</td><td>Iliad / Scaleway, Paris</td><td>DGX SuperPOD "Nabuchodonosor", 1,016 H100 GPUs</td><td class="num">—</td><td><span class="chip c-press">Press</span></td></tr>
-      <tr><td class="date">Jun 2025</td><td>Mistral Compute, Bruyères-le-Châtel</td><td>18,000 Grace Blackwell superchips; first deployment operational by June 2026</td><td class="num">—</td><td><span class="chip c-press">Press</span></td></tr>
-      <tr><td class="date">May 2025</td><td>Campus IA, Fouju (Seine-et-Marne)</td><td>NVIDIA is a co-founder of the joint venture with MGX, Bpifrance and Mistral AI; 1.4 GW, from 2028</td><td class="num">€8.5bn to €50bn<small>figures conflict</small></td><td><span class="chip c-press">Press</span></td></tr>
-      <tr><td class="date">May 2026</td><td>TotalEnergies, Pau: Pangea 5</td><td>Dell and NVIDIA supercomputer, commissioning 2027</td><td class="num">&gt;€100M</td><td><span class="chip c-press">Press</span></td></tr>
-      <tr><td class="date">Oct 2026</td><td>Bull, Angers factory</td><td>Assembly of Vera Rubin NVL72 racks for Europe</td><td class="num">€80M (Bull's plant)</td><td><span class="chip c-press">Press</span></td></tr>
-    </tbody>
-  </table></div>
-  <div class="two">
-    <div class="box"><h3>UK–France federated AI (ConcordAI)</h3><p>Announced 21 October 2026 at GTC Berlin "with technical support from NVIDIA". GENCI and the Bristol Centre for Supercomputing will link Jean Zay and Adastra with Isambard-AI so models can train across both countries without moving sensitive data, using NVIDIA's open-source FLARE tools. The direct link is targeted for the end of 2026. <span class="chip c-off">GENCI</span></p></div>
-    <div class="box"><h3>Not every French supercomputer is NVIDIA</h3><p>France's first exascale machine, <b>Alice Recoque</b> (TGCC, installed 2026, open to users in 2027), runs on AMD Instinct MI430X GPUs and AMD and SiPearl processors, integrated by Eviden. Adastra also uses non-NVIDIA hardware. <span class="chip c-off">CEA</span></p></div>
+<section id="timeline">
+  <div class="sec-head"><div class="kicker">8 · Timeline</div><h2>Twenty years in France, and three on centre stage</h2></div>
+  <div class="intro"><p>NVIDIA's French story mixes deals with something harder to measure: presence. Huang's appearances with Macron and Mensch, the GTC Paris conference at VivaTech, and the Paris reception of October 2026 did as much to build NVIDIA's standing as any single investment. Filter the timeline to follow one thread.</p></div>
+  <div class="filters" role="group" aria-label="Filter the timeline">
+    <button type="button" data-f="all" aria-pressed="true">All</button>
+    <button type="button" data-f="stage" aria-pressed="false">On stage</button>
+    <button type="button" data-f="deal" aria-pressed="false">Deals</button>
+    <button type="button" data-f="compute" aria-pressed="false">Compute</button>
+    <button type="button" data-f="research" aria-pressed="false">Research</button>
+    <button type="button" data-f="scrutiny" aria-pressed="false">Scrutiny</button>
   </div>
-  <p class="note">Researchers' compute centres also list NVIDIA cards in scanR: IDRIS (Jean Zay V100/A100), ROMEO in Reims (280 P100), CALMIP Toulouse (Turpan, ARM + NVIDIA), ICI Nantes (Tesla K80). Paris-Saclay's shared Ruche cluster at IDRIS (CentraleSupélec, ENS Paris-Saclay, Université Paris-Saclay) has more than 80 NVIDIA A100 and V100 cards (CNRS, July 2024). Four small CNRS freight orders (2021–22) mention "DGX" shipments; it is not certain they are NVIDIA systems.</p>
+  <ol class="tl" id="tl">
+    <li class="year"><span></span><span></span><div class="t">2005–2016</div></li>
+    <li data-k="research"><span class="d">2005</span><span class="m"></span><div class="t"><b>First co-written paper</b><span>Researchers then at ENS Lyon and NVIDIA publish on fast function approximation, the earliest French–NVIDIA paper in HAL.</span></div></li>
+    <li data-k="research"><span class="d">2009–11</span><span class="m"></span><div class="t"><b>GigaVoxels in Grenoble</b><span>Inria Grenoble and NVIDIA co-publish GigaVoxels and voxel cone tracing.</span></div></li>
+    <li data-k="deal"><span class="d">Jun 2011</span><span class="m"></span><div class="t"><b>Icera brings NVIDIA to Sophia Antipolis</b><span>The modem acquisition includes a team of about 60 near Nice.</span></div></li>
+    <li data-k="research"><span class="d">Mar 2015</span><span class="m"></span><div class="t"><b>Reims becomes a CUDA Research Center</b><span>France's first, with a GPU lab at the ROMEO centre.</span></div></li>
+    <li data-k="deal"><span class="d">Sep 2015</span><span class="m"></span><div class="t"><b>Modem exit hits Sophia Antipolis</b><span>About 123 French jobs cut.</span></div></li>
+    <li data-k="deal"><span class="d">Mar 2016</span><span class="m"></span><div class="t"><b>New research site opens in Biot</b><span>NVIDIA Développement France restarts at 400 avenue Roumanille.</span></div></li>
+    <li class="year"><span></span><span></span><div class="t">2017–2022</div></li>
+    <li data-k="research"><span class="d">Jan 2017</span><span class="m"></span><div class="t"><b>Supercomputing chair in Reims</b><span>NVIDIA, CEA and Bull back URCA's C2I2 chair until 2020.</span></div></li>
+    <li data-k="research"><span class="d">2018–20</span><span class="m"></span><div class="t"><b>Peak of GPU donations</b><span>Hundreds of French papers thank NVIDIA for donated graphics cards.</span></div></li>
+    <li data-k="scrutiny"><span class="d">2020–21</span><span class="m"></span><div class="t"><b>Lobbying for the Arm takeover</b><span>PR firm Brunswick lobbies MPs and the Economy ministry for NVIDIA's planned purchase of Arm, abandoned in February 2022.</span></div></li>
+    <li class="year"><span></span><span></span><div class="t">2023–2024</div></li>
+    <li data-k="deal"><span class="d">May 2023</span><span class="m"></span><div class="t"><b>First French venture deal</b><span>NVentures co-leads Moon Surgical's Series B.</span></div></li>
+    <li data-k="scrutiny" class="big"><span class="d">Sep 2023</span><span class="m"></span><div class="t"><b>Competition authority raids NVIDIA's Paris office</b><span>The start of an antitrust investigation still open in 2026.</span></div></li>
+    <li data-k="compute"><span class="d">Oct 2023</span><span class="m"></span><div class="t"><b>Scaleway's H100 supercomputer</b><span>Xavier Niel's Iliad installs 1,016 NVIDIA H100s in Paris.</span></div></li>
+    <li data-k="stage"><span class="d">Nov 2023</span><span class="m"></span><div class="t"><b>Huang appears at Niel's ai-Pulse</b><span>By video, praising European AI weeks after the raid.</span></div></li>
+    <li data-k="compute"><span class="d">Mar 2024</span><span class="m"></span><div class="t"><b>Jean Zay extension chosen</b><span>1,456 H100s ordered through Eviden with France 2030 money.</span></div></li>
+    <li data-k="deal"><span class="d">Jun 2024</span><span class="m"></span><div class="t"><b>NVIDIA invests in Mistral AI</b><span>Participant in the €600M Series B; Mistral NeMo follows in July.</span></div></li>
+    <li class="year"><span></span><span></span><div class="t">2025</div></li>
+    <li data-k="stage"><span class="d">May 2025</span><span class="m"></span><div class="t"><b>Choose France: Campus IA</b><span>NVIDIA, MGX, Bpifrance and Mistral announce the AI campus at Fouju.</span></div></li>
+    <li data-k="stage" class="big"><span class="d">11 Jun 2025</span><span class="m"></span><div class="t"><b>Huang, Macron and Mensch on stage at VivaTech</b><span>GTC Paris launches Mistral Compute; Macron calls the deal historic. Schneider Electric and L'Oréal partnerships announced.</span></div></li>
+    <li data-k="deal"><span class="d">Sep 2025</span><span class="m"></span><div class="t"><b>Mistral Series C and Scintil</b><span>NVIDIA backs Mistral's €1.7bn round and Scintil Photonics.</span></div></li>
+    <li data-k="compute"><span class="d">Nov 2025</span><span class="m"></span><div class="t"><b>AI Factory France meets Inception</b><span>Announced at the Adopt AI Summit chaired by Macron; GENCI unveils Dalia.</span></div></li>
+    <li class="year"><span></span><span></span><div class="t">2026</div></li>
+    <li data-k="deal"><span class="d">Feb 2026</span><span class="m"></span><div class="t"><b>Dassault Systèmes partnership</b><span>Industrial AI and virtual twins.</span></div></li>
+    <li data-k="stage"><span class="d">Mar 2026</span><span class="m"></span><div class="t"><b>Nemotron Coalition and AMI Labs</b><span>Mistral joins NVIDIA's open-model coalition; NVIDIA backs LeCun's $1.03bn seed.</span></div></li>
+    <li data-k="stage"><span class="d">Jun 2026</span><span class="m"></span><div class="t"><b>VivaTech again</b><span>AI Factory France's NVIDIA track goes live; Campus IA grows to a 3 GW national plan.</span></div></li>
+    <li data-k="scrutiny"><span class="d">Jul 2026</span><span class="m"></span><div class="t"><b>Antitrust probe "nearing its end"</b><span>No charges announced.</span></div></li>
+    <li data-k="deal" class="big"><span class="d">Sep 2026</span><span class="m"></span><div class="t"><b>NVIDIA agrees to buy Hugging Face</b><span>$12.93bn; Mistral's €3bn Series D the same month.</span></div></li>
+    <li data-k="stage" class="big"><span class="d">13 Oct 2026</span><span class="m"></span><div class="t"><b>The Paris reception</b><span>Huang announces stakes in Doctolib, Pigment, Entalpic and Genesis AI, then meets Macron at the Élysée. Fondation Inria launches its NVIDIA-backed working group.</span></div></li>
+    <li data-k="stage"><span class="d">21 Oct 2026</span><span class="m"></span><div class="t"><b>GTC Berlin</b><span>Mistral's industrial-engineering deal, Valeo's Hyperion platform, the ConcordAI UK–France link and Omi's partnership.</span></div></li>
+    <li data-k="stage"><span class="d">23 Oct 2026</span><span class="m"></span><div class="t"><b>Self-driving cars with the French government</b><span>Wayve, Stellantis and NVIDIA.</span></div></li>
+    <li data-k="scrutiny" class="big"><span class="d">12 Nov 2026</span><span class="m"></span><div class="t"><b>Jensen Huang resigns</b><span>CFO Colette Kress becomes interim CEO.</span></div></li>
+  </ol>
 </section>
 
-<section>
-  <div class="sec-head"><div class="kicker">5 · Programmes</div><h2>Start-up programmes and partnerships</h2></div>
-  <div class="two">
-    <div class="box"><h3>NVIDIA Inception and compute credits</h3>
-      <ul>
-        <li>NVIDIA says more than <b>700 French companies</b> are members of Inception, its free start-up programme. Navigator records three: Lucé Robotics, Allude and Percisio (unconfirmed). <span class="chip c-single">NVIDIA's own figure</span></li>
-        <li><b>AI Factory France (GENCI) × NVIDIA</b>: announced 25 November 2025 at the Adopt AI Summit as Europe's first AI Factory collaboration with NVIDIA Inception and NVIDIA Connect, and NVIDIA joined AI2F's scientific and industrial advisory committee. It went live at VivaTech in June 2026. Eligible members (open research, R&amp;D in Europe) can apply for supercomputer time, including on Jean Zay; it is not unlimited free compute for every start-up. Early users: Pleias, Nebula, Ryax. <span class="chip c-off">GENCI</span></li>
-        <li><b>Scaleway</b> (November 2023): cloud credits for start-ups on its 1,016-H100 "Nabuchodonosor" cluster, fast-track entry to Inception, and NVIDIA AI Enterprise software on its marketplace. NVIDIA put Inception at more than 4,000 members across Europe. No credit amount is given. <span class="chip c-off">NVIDIA blog</span></li>
-        <li><b>Sofinnova Partners</b>: DGX Cloud credits for portfolio companies incl. Bioptimus and Cure51 (Jun 2025). <span class="chip c-press">Business Wire</span></li>
-      </ul></div>
-    <div class="box"><h3>Corporate and technical partnerships</h3>
-      <ul>
-        <li><b>Mistral AI</b>: Mistral NeMo model (2024), Mistral 3 optimisation (2025), founding member of the Nemotron Coalition (Mar 2026).</li>
-        <li><b>Dassault Systèmes / Outscale</b>: industrial-AI platform and sovereign AI factories (Feb 2026).</li>
-        <li><b>Schneider Electric</b>: data-centre reference designs; <b>L'Oréal</b>: generative 3D content; <b>Orange Business</b>, <b>Bouygues Telecom</b>: cloud and agent platforms.</li>
-        <li><b>Quantum</b>: Pasqal, Alice &amp; Bob and Quandela integrate with CUDA-Q and NVQLink.</li>
-        <li><b>Health and robotics</b>: Owkin (federated learning on Clara; OwkinZero model, January 2026), Wandercraft (Isaac GR00T), Moon Surgical.</li>
-        <li><b>Automotive</b>: Valeo will develop and industrialise car computers on NVIDIA's Hyperion architecture for Level 4 driving (21 October 2026). Wayve, Stellantis and NVIDIA joined the French government on deploying autonomous vehicles (Assises du Véhicule Autonome, about 23 October 2026); no launch date was set.</li>
-        <li><b>Omi</b> (AI product visuals, Paris, about 55 staff): technology partnership announced 21 October 2026 that gives it RTX PRO 6000 Blackwell GPUs and NVIDIA engineers. It is not an investment. <span class="chip c-press">Maddyness</span></li>
-      </ul>
-      <p class="note"><span class="chip c-press">Press</span> company releases and NVIDIA blog</p></div>
+<section id="scrutiny">
+  <div class="sec-head"><div class="kicker">9 · Influence and scrutiny</div><h2>Lobbyists, regulators and open questions</h2></div>
+  <div class="grid2">
+    <div class="card"><h3>An antitrust case still open</h3><p>France's competition authority raided NVIDIA's Paris office in September 2023. In 2024 its president, Benoît Cœuré, told Reuters the company would be charged "if the investigation is fruitful". In July 2026 the authority said the inquiry was nearing its end; reported concerns include developers' dependence on NVIDIA's CUDA software and its investments in AI cloud providers. No charges or decision had been announced by 13 November 2026. <span class="chip c-press">Press, FTJ</span></p></div>
+    <div class="card"><h3>Lobbying on the record</h3><p>France's lobbying register shows the PR firm Brunswick lobbied MPs and the Economy ministry for NVIDIA in 2020–21 on its planned takeover of Arm. NVIDIA Ltd is listed among AmCham France's members. NVIDIA has never registered as a lobbyist in its own name. <span class="chip c-off">HATVP</span></p></div>
   </div>
+  <p class="note">Public money flows mostly toward NVIDIA's hardware rather than to the company itself. We found no French public grant, research tax credit or Bpifrance aid paid to an NVIDIA entity. Its direct public funding in France is the €2.38M it received through EU research projects with French partners.</p>
 </section>
 
-<section>
-  <div class="sec-head" id="influence"><div class="kicker">6 · Influence and scrutiny</div><h2>Lobbying, antitrust and government contacts</h2></div>
-  <div class="two">
-    <div class="box"><h3>HATVP lobbying register</h3>
-      <ul>
-        <li><b>Brunswick</b> declared lobbying for <b>NVIDIA Corporation</b> in 2020 and 2021: "to present the rationale for NVIDIA's planned acquisition of Arm and its impact in France, in the context of prior authorisation of foreign investment." Targets: MPs and senators and their staff, and members of the government or ministerial cabinets (Economy and Finance). The deal was abandoned in February 2022. <span class="chip c-off">Official record</span></li>
-        <li>NVIDIA Ltd (SIREN 432 108 355) has been listed among the member organisations in AmCham France's register entry since 25 February 2022. AmCham lobbies on its members' behalf. <span class="chip c-off">Official record</span></li>
-        <li>We found no lobbying registration by NVIDIA itself. Spending brackets in Brunswick's filings cover all its clients, so no NVIDIA-specific amount exists.</li>
-      </ul></div>
-    <div class="box"><h3>Antitrust investigation</h3>
-      <ul>
-        <li>France's Autorité de la concurrence <b>raided NVIDIA's Paris office in late September 2023</b> as part of an inquiry into the graphics-card and cloud sector. In 2024 its president, Benoît Cœuré, confirmed the probe, telling Reuters NVIDIA would be charged "if the investigation is fruitful". <span class="chip c-press">Press, FTJ</span></li>
-        <li>In July 2026 the regulator said the investigation was "nearing its end". Reported concerns include developers' dependence on CUDA and NVIDIA's investments in AI cloud providers. No statement of objections (the formal charge sheet) or decision had been announced as of 12 November 2026. <span class="chip c-press">Press</span> <a href="https://thenextweb.com/news/france-nvidia-antitrust-probe-nearing-end">The Next Web</a></li>
-        <li>FTJ covered the raid (<a href="https://www.frenchtechjournal.com/france-gaga-ai/">October 2023</a>), the 2024 confirmation and the July 2026 update, but nothing since. The outcome is an open story.</li>
-      </ul></div>
-    <div class="box"><h3>State and Élysée</h3>
-      <ul>
-        <li>Emmanuel Macron appeared on stage with Jensen Huang and Arthur Mensch at VivaTech on 11 June 2025 and called the Mistral–NVIDIA deal historic. <span class="chip c-press">Press</span></li>
-        <li>Huang met Macron at the Élysée on 13 October 2026, the day NVIDIA announced its French stakes. <span class="chip c-press">Press</span></li>
-        <li>Bpifrance is NVIDIA's co-shareholder in Campus IA and its co-investor in Mistral AI. <span class="chip c-press">Press</span></li>
-      </ul></div>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><div class="kicker">7 · Our coverage</div><h2>What French Tech Journal has published</h2></div>
-  <p>136 of FTJ's 1,040 published posts mention NVIDIA. There were none before 2023, then 4 that year, 12 in 2024, 48 in 2025 and 72 in 2026, more than one post in four. Mistral AI, the Hugging Face deal, quantum partnerships and the Paris AI campus are well covered.</p>
-  <div class="two">
-    <div class="box"><h3>In the public record, not yet in FTJ</h3>
-      <ul>
-        <li>NVIDIA's own R&amp;D company at Sophia Antipolis (€27M revenue, 50–99 staff)</li>
-        <li>Brunswick's 2020–21 lobbying for the Arm takeover</li>
-        <li>14 EU research projects with French partners (€2.38M of EU money to NVIDIA) and about 295 papers acknowledging donated GPUs</li>
-        <li>Moon Surgical, NVentures' first French deal on record (2023)</li>
-        <li>Ifremer's DGX purchase, GENCI's Dalia, TotalEnergies' Pangea 5</li>
-        <li>Partnerships with L'Oréal, Owkin and Sofinnova</li>
-      </ul></div>
-    <div class="box"><h3>In FTJ, added to this report</h3>
-      <ul>
-        <li>The 2023 competition-authority raid and the probe since</li>
-        <li>Sesterce's H100 supercomputer in Marseille; OVHcloud H100 instances; the HPE × NVIDIA "AI factory" in Grenoble</li>
-        <li>Pollen Robotics, which comes to NVIDIA with Hugging Face</li>
-        <li>Bloomberg's $14bn report on the Hugging Face price (announced at $12.93bn)</li>
-        <li>Criticism: NVIDIA's rising emissions, bubble risk, and the chip-diversion story behind the CEO's departure</li>
-      </ul></div>
-  </div>
-  <p class="note">The AI campus has been reported at about €8.5bn, and FTJ has cited €35bn (May 2026) and €50bn (Nov 2025). The figures probably cover different phases; confirm before quoting.</p>
-</section>
-
-<section>
-  <div class="sec-head"><div class="kicker">8 · Gaps</div><h2>Where we looked and found nothing</h2></div>
-  <ul>
-    <li><b>French public grants to NVIDIA</b>: no ANR project, no research-tax-credit (CIR/CII) approval, no i-Lab or ministry innovation award, no Bpifrance grant listed for any NVIDIA entity.</li>
-    <li><b>Direct public contracts</b>: NVIDIA is never the contract holder in 3.48 million French public-procurement records (2019–2026).</li>
-    <li><b>Philanthropy</b>: no NVIDIA Foundation activity or corporate cash donation to a French university found. NVIDIA's documented giving is GPU hardware grants, support for Fondation Inria's working group, and an industrial partnership in the Reims C2I2 chair, all with undisclosed amounts. The €400,000 gift to Université Côte d'Azur came from an NVIDIA engineer personally.</li>
-    <li><b>Amounts</b>: NVIDIA's own ticket is undisclosed in every French round listed above.</li>
-  </ul>
-</section>
-
-<footer>
-  <p><b>Sources:</b> recherche-entreprises.api.gouv.fr (company register and filed accounts); BODACC; scanR (projects, patents, organisations, incl. CORDIS data); HAL open archive (affiliation, funding and full-text search); HATVP lobbying register (actions file, June 2025 release); consolidated public-procurement data (DECP, Colmo tabular file, 10 Nov 2026); ANR and research-ministry open data; the France Navigator database; press search results; and French Tech Journal's own archive (136 posts, Ghost, 12 Nov 2026). False matches were removed (INVIDIA Concept, Invidia Productions Audiovisuelles, Envidia Systems, Inventures, PhotonVentures).</p>
-  <p>Raw extracts are saved in the Navigator repository under data/nvidia_france_2026/sources.</p>
+<footer id="method">
+  <h3>How we did this</h3>
+  <p>Data as of 13 November 2026. We searched the French company register and BODACC legal notices; scanR and CORDIS for EU projects and patents; HAL for publications; the HATVP lobbying register; 3.48 million public-procurement records (DECP); ANR and research-ministry open data; the France Navigator database; French Tech Journal's archive (136 posts mentioning NVIDIA); and company announcements and press. False matches with similarly named firms were removed. NVIDIA rarely discloses the size of its French investments, grants or donations, so figures are given only where published.</p>
+  <p>Raw data is held in the Navigator repository under data/nvidia_france_2026.</p>
 </footer>
 </div>
+
+<script>
+(function(){
+  var P=[{"id": "idf", "name": "Paris & Île-de-France", "short": "Paris region", "cat": "hub", "r": 10, "xy": [303.7, 151.5], "lx": -14, "ly": -14, "anchor": "end", "text": "Investments in Mistral AI, Doctolib, Pigment, AMI Labs, Alice & Bob and Gradium; NVIDIA Ltd's office at La Défense; Jean Zay and Dalia at CNRS-IDRIS in Orsay; Mistral Compute at Bruyères-le-Châtel; the planned Campus IA at Fouju; Scaleway's H100 cluster; the Élysée."}, {"id": "biot", "name": "Biot, Sophia Antipolis", "short": "Sophia Antipolis", "cat": "nvidia", "r": 8, "xy": [479.1, 433.8], "lx": -12, "ly": -12, "anchor": "end", "text": "NVIDIA Développement France, NVIDIA's French R&D company: 50–99 staff, €27M revenue in 2024. Nearby: EURECOM (6G EU projects with NVIDIA) and Inria Côte d'Azur (graphics research)."}, {"id": "grenoble", "name": "Grenoble", "cat": "partner", "r": 7, "xy": [428.7, 349.2], "text": "HPE × NVIDIA AI Factory Lab; Scintil Photonics (NVIDIA-backed); STMicroelectronics and Inria Grenoble research."}, {"id": "lyon", "name": "Lyon", "cat": "research", "r": 6, "xy": [396.1, 318.5], "lx": -10, "anchor": "end", "text": "École Centrale de Lyon: MicrocombSys EU project and co-written graphics research."}, {"id": "reims", "name": "Reims", "cat": "research", "r": 6, "xy": [366, 129.9], "text": "France's first NVIDIA CUDA Research Center (2015) and the C2I2 supercomputing chair (2017–2020); Vranken-Pommery in EdgeAI-Trust."}, {"id": "rennes", "name": "Rennes", "cat": "research", "r": 6, "xy": [154.3, 191.9], "lx": -10, "anchor": "end", "text": "INSA Rennes and Inria Rennes: Rising STARS EU project and co-written papers."}, {"id": "brest", "name": "Brest", "cat": "compute", "r": 6, "xy": [50, 176.8], "ly": -10, "text": "Ifremer bought an NVIDIA DGX A100 for €274,191 in 2021, the only French public contract naming NVIDIA."}, {"id": "angers", "name": "Angers", "cat": "partner", "r": 6, "xy": [196.2, 226.3], "text": "Bull's factory will assemble NVIDIA Vera Rubin racks for Europe."}, {"id": "bordeaux", "name": "Bordeaux", "cat": "partner", "r": 6, "xy": [195, 368], "lx": -10, "anchor": "end", "text": "Pollen Robotics, joining NVIDIA through the Hugging Face deal; Inria Bordeaux supercomputing research."}, {"id": "pau", "name": "Pau", "cat": "compute", "r": 6, "xy": [202.8, 451], "lx": -10, "anchor": "end", "text": "TotalEnergies' Pangea 5 supercomputer, built with Dell and NVIDIA, due 2027."}, {"id": "toulouse", "name": "Toulouse", "cat": "research", "r": 6, "xy": [270, 434.8], "text": "CALMIP's Turpan supercomputer (Arm and NVIDIA) and co-written research."}, {"id": "marseille", "name": "Marseille", "cat": "compute", "r": 6, "xy": [415.7, 451], "ly": 18, "text": "Sesterce's NVIDIA H100 AI supercomputer."}];
+  var col={hub:'var(--c-hub)',nvidia:'var(--c-nvidia)',compute:'var(--c-compute)',research:'var(--c-research)',partner:'var(--c-partner)'};
+  var g=document.getElementById('pins'), list=document.getElementById('maplist'), NS='http://www.w3.org/2000/svg';
+  var nodes={}, btns={};
+  var lab={hub:'Hub',nvidia:"NVIDIA's own site",compute:'Compute',research:'Research',partner:'Partners and portfolio'};
+  function sel(id){
+    for(var k in nodes){nodes[k].classList.toggle('on',k===id);btns[k].setAttribute('aria-pressed',k===id?'true':'false');}
+    var p=P.filter(function(x){return x.id===id;})[0];
+    document.getElementById('md-cat').textContent=lab[p.cat]; document.getElementById('md-name').textContent=p.name; document.getElementById('md-text').textContent=p.text;
+  }
+  P.forEach(function(p){
+    var a=document.createElementNS(NS,'g'); a.setAttribute('class','pin'); a.setAttribute('tabindex','-1');
+    var ring=document.createElementNS(NS,'circle'); ring.setAttribute('class','ring'); ring.setAttribute('cx',p.xy[0]); ring.setAttribute('cy',p.xy[1]); ring.setAttribute('r',p.r+5);
+    var c=document.createElementNS(NS,'circle'); c.setAttribute('class','dot'); c.setAttribute('cx',p.xy[0]); c.setAttribute('cy',p.xy[1]); c.setAttribute('r',p.r); c.style.fill=col[p.cat];
+    var t=document.createElementNS(NS,'text'); t.setAttribute('x',p.xy[0]+(p.lx||10)); t.setAttribute('y',p.xy[1]+(p.ly||4)); if(p.anchor) t.setAttribute('text-anchor',p.anchor); t.textContent=p.short||p.name;
+    a.appendChild(ring); a.appendChild(c); a.appendChild(t);
+    a.addEventListener('click',function(){sel(p.id);});
+    g.appendChild(a); nodes[p.id]=a;
+    var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-pressed','false');
+    b.innerHTML='<span class="sw" style="background:'+col[p.cat]+'"></span><span class="nm"></span>';
+    b.querySelector('.nm').textContent=p.name;
+    b.addEventListener('click',function(){sel(p.id);});
+    list.appendChild(b); btns[p.id]=b;
+  });
+  sel('biot');
+  var fb=document.querySelectorAll('.filters button'), items=document.querySelectorAll('#tl li');
+  fb.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    fb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    items.forEach(function(li){ if(li.classList.contains('year')){li.hidden=false;return;} li.hidden=!(f==='all'||li.getAttribute('data-k')===f); });
+    document.querySelectorAll('#tl li.year').forEach(function(y){var n=y.nextElementSibling,any=false;while(n&&!n.classList.contains('year')){if(!n.hidden)any=true;n=n.nextElementSibling;}y.hidden=!any;});
+  });});
+})();
+</script>
