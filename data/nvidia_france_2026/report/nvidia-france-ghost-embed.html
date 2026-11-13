@@ -73,7 +73,9 @@
 .nvf details>summary::before{content:"+";font-family:var(--mono);font-weight:500;width:18px;height:18px;display:inline-grid;place-items:center;border:1px solid var(--rule);border-radius:3px;color:var(--accent);flex:none}
 .nvf details[open]>summary::before{content:"−"}
 .nvf details>summary small{font-weight:400;color:var(--muted);font-size:13px}
-.nvf details ..nvf{padding:0 16px 16px;display:grid;gap:12px}
+.nvf details ..nvf{padding:0 16px 16px;display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.nvf section>*,.nvf details,.nvf details .body>*,.nvf .card,.nvf .grid2>*,.nvf .grid3>*{min-width:0;max-width:100%}
+.nvf .tbl{max-width:100%;-webkit-overflow-scrolling:touch}
 .nvf details.inline{border-left:3px solid var(--accent)}
 .nvf .tbl{overflow-x:auto;border:1px solid var(--rule);background:var(--panel)}
 .nvf table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}

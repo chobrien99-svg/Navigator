@@ -78,7 +78,10 @@ details>summary::-webkit-details-marker{display:none}
 details>summary::before{content:"+";font-family:var(--mono);font-weight:500;width:18px;height:18px;display:inline-grid;place-items:center;border:1px solid var(--rule);border-radius:3px;color:var(--accent);flex:none}
 details[open]>summary::before{content:"−"}
 details>summary small{font-weight:400;color:var(--muted);font-size:13px}
-details .body{padding:0 16px 16px;display:grid;gap:12px}
+details .body{padding:0 16px 16px;display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+/* keep wide tables scrolling inside their box instead of stretching the page */
+section>*,details,details .body>*,.card,.grid2>*,.grid3>*{min-width:0;max-width:100%}
+.tbl{max-width:100%;-webkit-overflow-scrolling:touch}
 details.inline{border-left:3px solid var(--accent)}
 /* tables */
 .tbl{overflow-x:auto;border:1px solid var(--rule);background:var(--panel)}
