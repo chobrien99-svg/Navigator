@@ -1,0 +1,65 @@
+{
+ "entity": {
+  "key": "nvidia",
+  "display_name": "NVIDIA",
+  "navigator_slug": "nvidia",
+  "names": [
+   "NVIDIA",
+   "NVentures"
+  ],
+  "name_exclusions": [
+   "INVIDIA",
+   "ENVIDIA",
+   "INVENTURES"
+  ],
+  "sirens": [
+   "479973455",
+   "432108355"
+  ],
+  "scanr_ids": [
+   "ztr1i",
+   "03jdj4y14",
+   "02kr42612"
+  ],
+  "ror_ids": [
+   "03jdj4y14",
+   "02kr42612"
+  ],
+  "focus_country": "FR",
+  "notes": "SIRENs: NVIDIA Développement France SAS (R&D, Biot) and the French branch of NVIDIA Ltd. scanR/ROR ids: NVIDIA (United States) and NVIDIA (United Kingdom) as found in the November 2026 manual run."
+ },
+ "started_at": "2026-11-17T22:01:17Z",
+ "finished_at": "2026-11-17T22:01:34Z",
+ "sources": {
+  "registry": {
+   "status": "ok",
+   "sirens_requested": 2,
+   "sirens_found": 2,
+   "errors": []
+  },
+  "bodacc": {
+   "status": "ok",
+   "sirens_requested": 2,
+   "sirens_fetched": 2,
+   "notices": 41,
+   "errors": []
+  },
+  "scanr_projects": {
+   "status": "ok",
+   "dump": "projects_denormalized.jsonl.gz",
+   "records_scanned": 173614,
+   "projects_found": 24
+  }
+ },
+ "findings": 86,
+ "findings_by_type": {
+  "establishment": 9,
+  "eu_project": 24,
+  "financials": 1,
+  "legal_entity": 2,
+  "legal_notice": 41,
+  "officer": 8,
+  "related_entity_candidate": 1
+ },
+ "needs_review": 8
+}

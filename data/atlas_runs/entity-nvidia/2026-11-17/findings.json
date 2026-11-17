@@ -1,0 +1,3737 @@
+[
+ {
+  "finding_id": "registry:establishment:43210835500012",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2000-07-04",
+  "date_precision": "day",
+  "title": "NVIDIA LTD: site in abroad",
+  "summary": "Opened 2000-07-04, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "43210835500012",
+   "address": "BERKHIRE RG7 5 AH 11 A 13 THEALE COURT ROYAUME-UNI",
+   "naf": "70.10Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "43210835500012"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:43210835500020",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2000-07-04",
+  "date_precision": "day",
+  "title": "NVIDIA LTD: site in LEVALLOIS-PERRET",
+  "summary": "Opened 2000-07-04, closed 2002-10-01",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "43210835500020",
+   "address": "CHEZ ATEAC 24 RUE JACQUES IBERT 92300 LEVALLOIS-PERRET",
+   "naf": "51.8G",
+   "status": "F",
+   "closed": "2002-10-01"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "43210835500020"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:43210835500038",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2002-10-01",
+  "date_precision": "day",
+  "title": "NVIDIA LTD: site in LEVALLOIS-PERRET",
+  "summary": "Opened 2002-10-01, closed 2009-01-12",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "43210835500038",
+   "address": "53 RUE BAUDIN 92300 LEVALLOIS-PERRET",
+   "naf": "64.20Z",
+   "status": "F",
+   "closed": "2009-01-12"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "43210835500038"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:47997345500013",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2004-12-02",
+  "date_precision": "day",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in MOUGINS",
+  "summary": "Opened 2004-12-02, closed 2005-05-27",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "47997345500013",
+   "address": "ZAC L'ORME E.SPACE BT C 45 ALL DU FONT DE L ORME 06250 MOUGINS",
+   "naf": "51.8M",
+   "status": "F",
+   "closed": "2005-05-27"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "47997345500013"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:47997345500021",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2005-05-27",
+  "date_precision": "day",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in VALBONNE",
+  "summary": "Opened 2005-05-27, closed 2006-09-01",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "47997345500021",
+   "address": "LES DEUX ARCS BAT B 1800 ROUTE DES CRETES 06560 VALBONNE",
+   "naf": "32.2B",
+   "status": "F",
+   "closed": "2006-09-01"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "47997345500021"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:47997345500039",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2006-09-01",
+  "date_precision": "day",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in VALBONNE",
+  "summary": "Opened 2006-09-01, closed 2016-03-25",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "47997345500039",
+   "address": "WTC4 1300 ROUTE DES CRETES 06560 VALBONNE",
+   "naf": "72.19Z",
+   "status": "F",
+   "closed": "2016-03-25"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "47997345500039"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:43210835500046",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2009-01-12",
+  "date_precision": "day",
+  "title": "NVIDIA LTD: site in COURBEVOIE",
+  "summary": "Opened 2009-01-12, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "43210835500046",
+   "address": "8 A 14 - ZAC DANTON 8 AVENUE DE L'ARCHE 92400 COURBEVOIE",
+   "naf": "46.52Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "43210835500046"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:47997345500047",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2016-03-25",
+  "date_precision": "day",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in BIOT",
+  "summary": "Opened 2016-03-25, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "47997345500047",
+   "address": "SOPHIA ANTIPOLIS 400 AVENUE ROUMANILLE 06410 BIOT",
+   "naf": "70.10Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "47997345500047"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:establishment:47997345500054",
+  "entity": "nvidia",
+  "type": "establishment",
+  "date": "2016-03-25",
+  "date_precision": "day",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in BIOT",
+  "summary": "Opened 2016-03-25, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "47997345500054",
+   "address": "VILLAGE ENTREPRISES GREENSIDE B7 E1 400 AVENUE ROUMANILLE 06410 BIOT",
+   "naf": "72.19Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "47997345500054"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:642069",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2015-04-01",
+  "date_precision": "day",
+  "title": "HPC-LEAP: High Performance Computing in Life Sciences, Engineering And Physics",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "HPC-LEAP",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2015-04-01T00:00:00",
+   "end": "2019-03-31T00:00:00",
+   "eu_contribution_total": 3667663.72,
+   "budget_total": 3667663.72,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "DEU"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/642069",
+   "external_id": "642069"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:671627",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2015-10-01",
+  "date_precision": "day",
+  "title": "ESCAPE: Energy-efficient SCalable Algorithms for weather Prediction at Exascale",
+  "summary": "Horizon 2020; NVIDIA received €193,335; 2 FR partner(s) received €562,455.",
+  "amount_eur": 193335.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Météo-France",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 293175.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Bull",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 269280.0,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "ESCAPE",
+   "programme": "Horizon 2020",
+   "action": "RIA",
+   "start": "2015-10-01T00:00:00",
+   "end": "2018-09-30T00:00:00",
+   "eu_contribution_total": 3977952.5,
+   "budget_total": 3977952.5,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 193335.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "CHE"
+    }
+   ],
+   "entity_eur": 193335.0,
+   "focus_partners_eur": 562455.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/671627",
+   "external_id": "671627"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:722068",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2016-11-01",
+  "date_precision": "day",
+  "title": "HiPerNav: High Performance Soft-tissue Navigation",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; 2 FR partner(s) received €788,627.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Institut national de recherche en sciences et technologies du numérique",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 525751.2,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Université Sorbonne Paris Nord",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 262875.6,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "HiPerNav",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2016-11-01T00:00:00",
+   "end": "2021-04-30T00:00:00",
+   "eu_contribution_total": 4041920.04,
+   "budget_total": 4041920.04,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "USA"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 788626.8,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/722068",
+   "external_id": "722068"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:765866",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2017-10-01",
+  "date_precision": "day",
+  "title": "ACHIEVE: AdvanCed Hardware/Software Components for Integrated/Embedded Vision SystEms",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; 2 FR partner(s) received €525,751.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United Kingdom)"
+  },
+  "counterparts": [
+   {
+    "name": "Université Clermont Auvergne",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 262875.6,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Université Marie et Louis Pasteur",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 262875.6,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "ACHIEVE",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2017-10-01T00:00:00",
+   "end": "2022-03-31T00:00:00",
+   "eu_contribution_total": 2266907.76,
+   "budget_total": 2266907.76,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United Kingdom)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "GBR"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 525751.2,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/765866",
+   "external_id": "765866"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:02kr42612",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:754433",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2018-01-01",
+  "date_precision": "day",
+  "title": "STARS: SupercompuTing And Related applicationS Fellows Program",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia developpement france sas"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "STARS",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2018-01-01T00:00:00",
+   "end": "2023-12-31T00:00:00",
+   "eu_contribution_total": 1416000.0,
+   "budget_total": 2832000.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia developpement france sas",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "FRA"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/754433",
+   "external_id": "754433"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:765739",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2018-01-01",
+  "date_precision": "day",
+  "title": "COSINE: Training network for COmputational Spectroscopy In Natural sciences and Engineering",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; 1 FR partner(s) received €262,876.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "École nationale supérieure de chimie de Paris",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 262875.6,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "COSINE",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2018-01-01T00:00:00",
+   "end": "2021-12-31T00:00:00",
+   "eu_contribution_total": 3745978.92,
+   "budget_total": 3745978.92,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "DEU"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 262875.6,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/765739",
+   "external_id": "765739"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:765048",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2018-06-01",
+  "date_precision": "day",
+  "title": "STIMULATE: Simulation in multiscale physical and biological systems",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "STIMULATE",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2018-06-01T00:00:00",
+   "end": "2022-11-30T00:00:00",
+   "eu_contribution_total": 3755601.0,
+   "budget_total": 3755601.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "DEU"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/765048",
+   "external_id": "765048"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:813170",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2018-10-01",
+  "date_precision": "day",
+  "title": "EVOCATION: Advanced Visual and Geometric Computing for 3D Capture, Display, and Fabrication",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "EVOCATION",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2018-10-01T00:00:00",
+   "end": "2023-05-31T00:00:00",
+   "eu_contribution_total": 3639335.04,
+   "budget_total": 3639335.04,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "DEU"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/813170",
+   "external_id": "813170"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:813942",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2019-01-01",
+  "date_precision": "day",
+  "title": "EuroPLEx: European network for Particle physics, Lattice field theory and Extreme computing",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "EuroPLEx",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2019-01-01T00:00:00",
+   "end": "2023-09-30T00:00:00",
+   "eu_contribution_total": 4045159.44,
+   "budget_total": 4045159.44,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "organization partner",
+     "country": "DEU"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/813942",
+   "external_id": "813942"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:831472",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2019-06-01",
+  "date_precision": "day",
+  "title": "MELLODDY: MachinE Learning Ledger Orchestration for Drug DiscoverY",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; 4 FR partner(s) received €3,885,519.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Owkin France",
+    "country": "FR",
+    "role": "coordinator",
+    "amount_eur": 2683635.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Substra",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 858482.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Iktos",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 343402.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Institut de recherches servier",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": null,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "MELLODDY",
+   "programme": "Horizon 2020",
+   "action": "RIA",
+   "start": "2019-06-01T00:00:00",
+   "end": "2022-05-31T00:00:00",
+   "eu_contribution_total": 8000000.0,
+   "budget_total": 18635465.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "CHE"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 3885519.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/831472",
+   "external_id": "831472"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:873120",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2020-02-01",
+  "date_precision": "day",
+  "title": "Rising STARS: RISE International Network for Solutions Technologies and Applications of Real-time Systems",
+  "summary": "Horizon 2020; NVIDIA took part with no EU funding recorded; 5 FR partner(s) received €414,000.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Observatoire de Paris",
+    "country": "FR",
+    "role": "coordinator",
+    "amount_eur": 165600.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Institut national des sciences appliquées de Rennes",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 138000.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Thales group",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 55200.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "ArianeGroup",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 55200.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Kalray",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": null,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "Rising STARS",
+   "programme": "Horizon 2020",
+   "action": "MSCA",
+   "start": "2020-02-01T00:00:00",
+   "end": "2025-11-30T00:00:00",
+   "eu_contribution_total": 634800.0,
+   "budget_total": 634800.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "CHE"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 414000.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/873120",
+   "external_id": "873120"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:03jdj4y14",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101056236",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2022-06-01",
+  "date_precision": "day",
+  "title": "ARISA: Artificial Intelligence Skills Alliance",
+  "summary": "Autres financements européens; NVIDIA took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA GmbH"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "ARISA",
+   "programme": "Autres financements européens",
+   "action": null,
+   "start": "2022-06-01T00:00:00.000+0100",
+   "end": "2026-05-31T00:00:00.000+0100",
+   "eu_contribution_total": 3464356.0,
+   "budget_total": 3464356.0,
+   "entity_participants": [
+    {
+     "name": "NVIDIA GmbH",
+     "eur": 0.0,
+     "role": "associatedPartner",
+     "participates_as": null,
+     "country": "DE"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43353764/101056236/ERASMUS2027",
+   "external_id": "101056236"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101070617",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2022-09-01",
+  "date_precision": "day",
+  "title": "ELSA: European Lighthouse on Secure and Safe AI",
+  "summary": "Horizon Europe; NVIDIA took part with no EU funding recorded; 3 FR partner(s) received €680,000.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Valeo comfort and driving assistance",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 336250.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Institut national de recherche en sciences et technologies du numérique",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 268750.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Yooz",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 75000.0,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "ELSA",
+   "programme": "Horizon Europe",
+   "action": "RIA",
+   "start": "2022-09-01T00:00:00",
+   "end": "2026-08-31T00:00:00",
+   "eu_contribution_total": 7434058.5,
+   "budget_total": 7434058.75,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "associated partner",
+     "country": "CHE"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 680000.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101070617",
+   "external_id": "101070617"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101073355",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2022-09-01",
+  "date_precision": "day",
+  "title": "QUARC: Quantum resistant communications: Advance Learning in applied PQC Training",
+  "summary": "Horizon Europe; NVIDIA received €821,765; no FR partner.",
+  "amount_eur": 821764.8,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia (United States); Nvidia denmark aps"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "QUARC",
+   "programme": "Horizon Europe",
+   "action": "MSCA",
+   "start": "2022-09-01T00:00:00",
+   "end": "2026-08-31T00:00:00",
+   "eu_contribution_total": 2215893.6,
+   "budget_total": 2771653.11,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 301788.0,
+     "role": "coordinator",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    },
+    {
+     "name": "Nvidia (United States)",
+     "eur": 260539.2,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DEU"
+    },
+    {
+     "name": "Nvidia (United States)",
+     "eur": 259437.6,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "ITA"
+    }
+   ],
+   "entity_eur": 821764.8,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101073355",
+   "external_id": "101073355"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101043189",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2023-01-01",
+  "date_precision": "day",
+  "title": "DynAI: Omni-Supervised Learning for Dynamic Scene Understanding",
+  "summary": "Horizon Europe; NVIDIA received €1,500,000; no FR partner.",
+  "amount_eur": 1500000.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "DynAI",
+   "programme": "Horizon Europe",
+   "action": "ERC",
+   "start": "2023-01-01T00:00:00",
+   "end": "2027-12-31T00:00:00",
+   "eu_contribution_total": 1500000.0,
+   "budget_total": 1500000.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 1500000.0,
+     "role": "pi",
+     "participates_as": "beneficiary",
+     "country": "ITA"
+    }
+   ],
+   "entity_eur": 1500000.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101043189",
+   "external_id": "101043189"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101096379",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2023-01-01",
+  "date_precision": "day",
+  "title": "CENTRIC: Towards an AI-native, user-centric air interface for 6G networks",
+  "summary": "Horizon Europe; NVIDIA received €437,062; 2 FR partner(s) received €796,757.",
+  "amount_eur": 437062.5,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Sequans communications",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 433636.32,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Nokia networks France",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 363120.75,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "CENTRIC",
+   "programme": "Horizon Europe",
+   "action": "RIA",
+   "start": "2023-01-01T00:00:00",
+   "end": "2025-06-30T00:00:00",
+   "eu_contribution_total": 4215999.0,
+   "budget_total": 4512778.06,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 437062.5,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DEU"
+    }
+   ],
+   "entity_eur": 437062.5,
+   "focus_partners_eur": 796757.07,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101096379",
+   "external_id": "101096379"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101119968",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2023-10-01",
+  "date_precision": "day",
+  "title": "MicrocombSys: Photonic System Engineering with Microcombs",
+  "summary": "Horizon Europe; NVIDIA received €301,788; 1 FR partner(s) received €282,694.",
+  "amount_eur": 301788.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia denmark aps"
+  },
+  "counterparts": [
+   {
+    "name": "Centrale Lyon",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 282693.6,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "MicrocombSys",
+   "programme": "Horizon Europe",
+   "action": "MSCA",
+   "start": "2023-10-01T00:00:00",
+   "end": "2027-09-30T00:00:00",
+   "eu_contribution_total": 2788624.8,
+   "budget_total": 3029622.17,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 301788.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 301788.0,
+   "focus_partners_eur": 282693.6,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101119968",
+   "external_id": "101119968"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101120332",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2023-10-01",
+  "date_precision": "day",
+  "title": "EMPOWER-6G: EMPOWER CONVERGED OPTICAL WIRELESS CONFIGURATIONS WITH CELL-FREE TECHNOLOGIES FOR HIGH-DENSITY 6G NETWORKS",
+  "summary": "Horizon Europe; NVIDIA received €301,788; no FR partner.",
+  "amount_eur": 301788.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia denmark aps"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "EMPOWER-6G",
+   "programme": "Horizon Europe",
+   "action": "MSCA",
+   "start": "2023-10-01T00:00:00",
+   "end": "2027-09-30T00:00:00",
+   "eu_contribution_total": 3821918.4,
+   "budget_total": 4692219.43,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 301788.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 301788.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101120332",
+   "external_id": "101120332"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101130544",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2024-01-01",
+  "date_precision": "day",
+  "title": "ThinkingEarth: Copernicus Foundation Models for a Thinking Earth",
+  "summary": "Horizon Europe; NVIDIA received €456,375; 1 FR partner(s) received €150,625.",
+  "amount_eur": 456375.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia (United States)"
+  },
+  "counterparts": [
+   {
+    "name": "Globeeye",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 150625.0,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "ThinkingEarth",
+   "programme": "Horizon Europe",
+   "action": "RIA",
+   "start": "2024-01-01T00:00:00",
+   "end": "2026-12-31T00:00:00",
+   "eu_contribution_total": 2999875.0,
+   "budget_total": 2999875.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 407790.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DEU"
+    },
+    {
+     "name": "Nvidia (United States)",
+     "eur": 48585.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "ITA"
+    }
+   ],
+   "entity_eur": 456375.0,
+   "focus_partners_eur": 150625.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101130544",
+   "external_id": "101130544"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101139892",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2024-05-01",
+  "date_precision": "day",
+  "title": "EdgeAI-Trust: Decentralized Edge Intelligence: Advancing Trust, Safety, and Sustainability in Europe",
+  "summary": "Horizon Europe; NVIDIA received €225,000; 8 FR partner(s) received €2,090,954.",
+  "amount_eur": 225000.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia denmark aps"
+  },
+  "counterparts": [
+   {
+    "name": "Stmicroelectronics (grenoble 2) sas",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 853960.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Stmicroelectronics (rousset) sas",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 681468.75,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Zettascale technology sarl",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 160468.75,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Vranken-pommery production",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 158285.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Technext",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 109936.75,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Université de Reims Champagne-Ardenne",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 90417.25,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Compagnie vranken",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 36417.19,
+    "participates_as": "thirdparty"
+   },
+   {
+    "name": "HawAI.Tech",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": null,
+    "participates_as": "associated partner"
+   }
+  ],
+  "facts": {
+   "acronym": "EdgeAI-Trust",
+   "programme": "Horizon Europe",
+   "action": "IA",
+   "start": "2024-05-01T00:00:00",
+   "end": "2027-04-30T00:00:00",
+   "eu_contribution_total": 11006209.35,
+   "budget_total": 38208291.25,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 225000.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 225000.0,
+   "focus_partners_eur": 2090953.69,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101139892",
+   "external_id": "101139892"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101140087",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2024-06-01",
+  "date_precision": "day",
+  "title": "SMARTY: Scalable and Quantum Resilient Heterogeneous Edge Computing enabling Trustworthy AI",
+  "summary": "Horizon Europe; NVIDIA received €580,936; no FR partner.",
+  "amount_eur": 580935.94,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia (United States); Nvidia denmark aps"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "SMARTY",
+   "programme": "Horizon Europe",
+   "action": "IA",
+   "start": "2024-06-01T00:00:00",
+   "end": "2027-05-31T00:00:00",
+   "eu_contribution_total": 9692779.02,
+   "budget_total": 31999656.45,
+   "entity_participants": [
+    {
+     "name": "Nvidia (United States)",
+     "eur": 128435.94,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DEU"
+    },
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 452500.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 580935.94,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101140087",
+   "external_id": "101140087"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "scanr:ztr1i",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101192462",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2025-01-01",
+  "date_precision": "day",
+  "title": "FLECON-6G: Flexible Open Architecture and AI-driven Enabling Technologies for a Novel 6G Connectivity Platform",
+  "summary": "Horizon Europe; NVIDIA received €427,500; 2 FR partner(s) received €935,572.",
+  "amount_eur": 427500.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia denmark aps"
+  },
+  "counterparts": [
+   {
+    "name": "EURECOM",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 547447.5,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Airbus ds slc",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 388125.0,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "FLECON-6G",
+   "programme": "Horizon Europe",
+   "action": "RIA",
+   "start": "2025-01-01T00:00:00",
+   "end": "2027-12-31T00:00:00",
+   "eu_contribution_total": 7971093.75,
+   "budget_total": 8633860.0,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 427500.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 427500.0,
+   "focus_partners_eur": 935572.5,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101192462",
+   "external_id": "101192462"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101226674",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2026-01-01",
+  "date_precision": "day",
+  "title": "MINDnet: Neuromorphic computing and signal processing training network",
+  "summary": "Horizon Europe; NVIDIA took part with no EU funding recorded; 1 FR partner(s) received €0.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Nvidia denmark aps"
+  },
+  "counterparts": [
+   {
+    "name": "NEUROBUS",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": null,
+    "participates_as": "associated partner"
+   }
+  ],
+  "facts": {
+   "acronym": "MINDnet",
+   "programme": "Horizon Europe",
+   "action": "MSCA",
+   "start": "2026-01-01T00:00:00",
+   "end": "2029-12-31T00:00:00",
+   "eu_contribution_total": 4664170.08,
+   "budget_total": 4912232.5,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 0.0,
+     "role": "partner",
+     "participates_as": "associated partner",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101226674",
+   "external_id": "101226674"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101227315",
+  "entity": "nvidia",
+  "type": "eu_project",
+  "date": "2026-03-01",
+  "date_precision": "day",
+  "title": "NEWTON: NovEl tEchnologies for converged Wireless-opTical cOnfiguratioNs",
+  "summary": "Horizon Europe; NVIDIA received €335,890; 1 FR partner(s) received €629,338.",
+  "amount_eur": 335890.08,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Nvidia denmark aps"
+  },
+  "counterparts": [
+   {
+    "name": "EURECOM",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 629338.32,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "NEWTON",
+   "programme": "Horizon Europe",
+   "action": "MSCA",
+   "start": "2026-03-01T00:00:00",
+   "end": "2030-02-28T00:00:00",
+   "eu_contribution_total": 4348887.84,
+   "budget_total": 5112749.31,
+   "entity_participants": [
+    {
+     "name": "Nvidia denmark aps",
+     "eur": 335890.08,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "DNK"
+    }
+   ],
+   "entity_eur": 335890.08,
+   "focus_partners_eur": 629338.32,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101227315",
+   "external_id": "101227315"
+  },
+  "match": {
+   "method": "name",
+   "on": "Nvidia",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants"
+ },
+ {
+  "finding_id": "registry:financials:479973455:2024",
+  "entity": "nvidia",
+  "type": "financials",
+  "date": "2024",
+  "date_precision": "year",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: 2024 accounts",
+  "summary": "Revenue €27,090,409; net income €2,117,867",
+  "amount_eur": 27090409,
+  "amount_basis": "revenue",
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "ca": 27090409,
+   "resultat_net": 2117867
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:2024"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization profile"
+ },
+ {
+  "finding_id": "registry:legal_entity:432108355",
+  "entity": "nvidia",
+  "type": "legal_entity",
+  "date": "2000-07-04",
+  "date_precision": "day",
+  "title": "NVIDIA LTD",
+  "summary": "activity 46.52Z, seat: 11 A 13 THEALE COURT, 50–99 staff (2024), active",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "legal_form_code": "3120",
+   "naf": "46.52Z",
+   "headcount_band": "50–99",
+   "headcount_year": "2024",
+   "seat_address": "BERKHIRE RG7 5 AH 11 A 13 THEALE COURT ROYAUME-UNI",
+   "status": "A",
+   "establishments_open": 2
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "432108355"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "legal_entities"
+ },
+ {
+  "finding_id": "registry:legal_entity:479973455",
+  "entity": "nvidia",
+  "type": "legal_entity",
+  "date": "2004-12-02",
+  "date_precision": "day",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "summary": "activity 72.19Z, seat: BIOT, 50–99 staff (2024), active",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "legal_form_code": "5710",
+   "naf": "72.19Z",
+   "headcount_band": "50–99",
+   "headcount_year": "2024",
+   "seat_address": "SOPHIA ANTIPOLIS 400 AVENUE ROUMANILLE 06410 BIOT",
+   "status": "A",
+   "establishments_open": 2
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "legal_entities"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C2008000398",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2008-01-23",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: ICERA SARL",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2007-03-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "ICERA SARL",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C2008000398",
+   "external_id": "C2008000398"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20090002202",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2009-01-12",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: ICERA SARL",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2008-03-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "ICERA SARL",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20090002202",
+   "external_id": "C20090002202"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20090065220",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2009-09-10",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: ICERA SARL",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2008-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "ICERA SARL",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20090065220",
+   "external_id": "C20090065220"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20100063269",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2010-09-16",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: ICERA SARL",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2009-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "ICERA SARL",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20100063269",
+   "external_id": "C20100063269"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B2011020677",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2011-10-23",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Developpement France SAS",
+  "summary": "Modification de l'adresse du siège. Modification de la forme juridique. Modification de la dénomination. Modification de représentant.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Developpement France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B2011020677",
+   "external_id": "B2011020677"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20110085129",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2011-12-05",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2010-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20110085129",
+   "external_id": "C20110085129"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20120092351",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2012-12-17",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2012-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20120092351",
+   "external_id": "C20120092351"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20130057455",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2013-08-28",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2013-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20130057455",
+   "external_id": "C20130057455"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20140071279",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2014-09-22",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2014-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20140071279",
+   "external_id": "C20140071279"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20150058672",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2015-07-11",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2015-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE GRASSE",
+   "town": "Valbonne",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20150058672",
+   "external_id": "C20150058672"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:A20160090122",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2016-05-06",
+  "date_precision": "day",
+  "title": "Immatriculations: NVIDIA Development France SAS",
+  "summary": "Immatriculation suite à transfert de son siège social hors ressort.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "immatriculation",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20160090122",
+   "external_id": "A20160090122"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20160090107",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2016-05-06",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Transfert de l'établissement principal",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20160090107",
+   "external_id": "B20160090107"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C201600821002",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2016-08-16",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA DEVELOPMENT FRANCE SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2016-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPMENT FRANCE SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C201600821002",
+   "external_id": "C201600821002"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B201601612192",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2016-08-18",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA LTD",
+  "summary": "Modification de représentant..",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE NANTERRE",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201601612192",
+   "external_id": "B201601612192"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20170091847",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2017-09-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA DEVELOPMENT FRANCE SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2017-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPMENT FRANCE SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20170091847",
+   "external_id": "C20170091847"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B201800293684",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2018-02-11",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA LTD",
+  "summary": "Modification de représentant.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE NANTERRE",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800293684",
+   "external_id": "B201800293684"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B2019004388",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2019-03-01",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B2019004388",
+   "external_id": "B2019004388"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20190043118",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2019-03-01",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2018-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20190043118",
+   "external_id": "C20190043118"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20190169527",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2019-09-03",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2019-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20190169527",
+   "external_id": "C20190169527"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20200171162",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2020-09-03",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2020-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20200171162",
+   "external_id": "C20200171162"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202100075812",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2021-01-12",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA LTD",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE NANTERRE",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202100075812",
+   "external_id": "B202100075812"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20210013201",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2021-01-20",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20210013201",
+   "external_id": "B20210013201"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20210182229",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2021-09-17",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2021-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE D'ANTIBES",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20210182229",
+   "external_id": "C20210182229"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20220034216",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2022-02-17",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce d'Antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20220034216",
+   "external_id": "B20220034216"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20220043155",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2022-03-02",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce d'Antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20220043155",
+   "external_id": "B20220043155"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20220066161",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2022-04-03",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce d'Antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20220066161",
+   "external_id": "B20220066161"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20220158475",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2022-08-16",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2022-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce d'antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20220158475",
+   "external_id": "C20220158475"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20230161293",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2023-08-23",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2023-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce d'antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20230161293",
+   "external_id": "C20230161293"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20240045185",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2024-03-05",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA Development France SAS",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce d'Antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20240045185",
+   "external_id": "B20240045185"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20240162153",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2024-08-22",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2024-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce d'antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20240162153",
+   "external_id": "C20240162153"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20250164443",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2025-08-28",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2025-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce d'antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20250164443",
+   "external_id": "C20250164443"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600048751",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-01-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA LTD",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2020-01-26",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de nanterre",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600048751",
+   "external_id": "C202600048751"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600048752",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-01-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA LTD",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2021-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de nanterre",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600048752",
+   "external_id": "C202600048752"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600048753",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-01-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA LTD",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2022-01-30",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de nanterre",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600048753",
+   "external_id": "C202600048753"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600048754",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-01-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA LTD",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2023-01-29",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de nanterre",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600048754",
+   "external_id": "C202600048754"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600048755",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-01-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA LTD",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2024-01-28",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de nanterre",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600048755",
+   "external_id": "C202600048755"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600048756",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-01-08",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA LTD",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2025-01-26",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de nanterre",
+   "town": null,
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600048756",
+   "external_id": "C202600048756"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202600678278",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-04-07",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA LTD",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal des Activités Economiques de Nanterre",
+   "town": "Courbevoie",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202600678278",
+   "external_id": "B202600678278"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202600882626",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-05-09",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA LTD",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal des Activités Economiques de Nanterre",
+   "town": "Courbevoie",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202600882626",
+   "external_id": "B202600882626"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202601642337",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-08-28",
+  "date_precision": "day",
+  "title": "Modifications diverses: NVIDIA LTD",
+  "summary": "Modification survenue sur l'administration.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal des Activités Economiques de Nanterre",
+   "town": "Courbevoie",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202601642337",
+   "external_id": "B202601642337"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C20260203362",
+  "entity": "nvidia",
+  "type": "legal_notice",
+  "date": "2026-10-22",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2026-01-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA Development France SAS",
+   "siren": "479973455"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce d'antibes",
+   "town": "Biot",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C20260203362",
+   "external_id": "C20260203362"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events"
+ },
+ {
+  "finding_id": "registry:officer:432108355:PAUL DAVID SCHELIN:Dirigeant en France d’une personne morale étrangère",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "PAUL DAVID SCHELIN",
+  "summary": "Dirigeant en France d’une personne morale étrangère of NVIDIA LTD",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Dirigeant en France d’une personne morale étrangère",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "432108355:PAUL DAVID SCHELIN:Dirigeant en France d’une personne morale étrangère"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:432108355:SONIA MEDIAVILLA (TALAMELLI):Dirigeant en France d’une personne morale étrangère",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "SONIA MEDIAVILLA (TALAMELLI)",
+  "summary": "Dirigeant en France d’une personne morale étrangère of NVIDIA LTD",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA LTD",
+   "siren": "432108355",
+   "country": "foreign"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Dirigeant en France d’une personne morale étrangère",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/432108355",
+   "external_id": "432108355:SONIA MEDIAVILLA (TALAMELLI):Dirigeant en France d’une personne morale étrangère"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:432108355",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:479973455:DELOITTE & ASSOCIES:Commissaire aux comptes titulaire",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "DELOITTE & ASSOCIES",
+  "summary": "Commissaire aux comptes titulaire of NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Commissaire aux comptes titulaire",
+   "kind": "personne morale"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:DELOITTE & ASSOCIES:Commissaire aux comptes titulaire"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:479973455:MARK STEVEN HOOSE:Président de SAS",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "MARK STEVEN HOOSE",
+  "summary": "Président de SAS of NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Président de SAS",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:MARK STEVEN HOOSE:Président de SAS"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:479973455:MICHAEL DAVID CHING:Président de SAS",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "MICHAEL DAVID CHING",
+  "summary": "Président de SAS of NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Président de SAS",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:MICHAEL DAVID CHING:Président de SAS"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:479973455:PRICEWATERHOUSECOOPERS AUDIT:Commissaire aux comptes titulaire",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "PRICEWATERHOUSECOOPERS AUDIT",
+  "summary": "Commissaire aux comptes titulaire of NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Commissaire aux comptes titulaire",
+   "kind": "personne morale"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:PRICEWATERHOUSECOOPERS AUDIT:Commissaire aux comptes titulaire"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:479973455:REBECCA PETERS:Directeur Général",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "REBECCA PETERS",
+  "summary": "Directeur Général of NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Directeur Général",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:REBECCA PETERS:Directeur Général"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:officer:479973455:SCOTT C GAWEL:Directeur Général",
+  "entity": "nvidia",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "SCOTT C GAWEL",
+  "summary": "Directeur Général of NVIDIA DEVELOPPEMENT FRANCE SAS",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA DEVELOPPEMENT FRANCE SAS",
+   "siren": "479973455",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Directeur Général",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/479973455",
+   "external_id": "479973455:SCOTT C GAWEL:Directeur Général"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:479973455",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people"
+ },
+ {
+  "finding_id": "registry:related_entity_candidate:109111526",
+  "entity": "nvidia",
+  "type": "related_entity_candidate",
+  "date": "2026-08-01",
+  "date_precision": "day",
+  "title": "NVIDIA SINGAPORE PTE. LTD.",
+  "summary": "Another registered company whose name contains 'NVIDIA'. Check whether it belongs to NVIDIA.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "NVIDIA SINGAPORE PTE. LTD.",
+   "siren": "109111526"
+  },
+  "counterparts": [],
+  "facts": {
+   "naf": "62.01Z",
+   "status": "A",
+   "seat": "3/F HARBOUR VIEW I, SHATIN N.T. 12 SCIENCE PARK EAST AVENUE, HONG K 99  HONG-KONG CHINE"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/109111526",
+   "external_id": "109111526"
+  },
+  "match": {
+   "method": "name",
+   "on": "NVIDIA",
+   "level": "low",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "review"
+ }
+]

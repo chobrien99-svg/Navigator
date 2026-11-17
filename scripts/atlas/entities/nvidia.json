@@ -1,0 +1,12 @@
+{
+  "key": "nvidia",
+  "display_name": "NVIDIA",
+  "navigator_slug": "nvidia",
+  "names": ["NVIDIA", "NVentures"],
+  "name_exclusions": ["INVIDIA", "ENVIDIA", "INVENTURES"],
+  "sirens": ["479973455", "432108355"],
+  "scanr_ids": ["ztr1i", "03jdj4y14", "02kr42612"],
+  "ror_ids": ["03jdj4y14", "02kr42612"],
+  "focus_country": "FR",
+  "notes": "SIRENs: NVIDIA Développement France SAS (R&D, Biot) and the French branch of NVIDIA Ltd. scanR/ROR ids: NVIDIA (United States) and NVIDIA (United Kingdom) as found in the November 2026 manual run."
+}
