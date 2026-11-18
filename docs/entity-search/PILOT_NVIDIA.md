@@ -46,3 +46,29 @@ No false matches got through. The exclusion list kept out INVIDIA Concept, Invid
 2. Build the next modules in the order that adds the most: `navigator` (what we already hold), `procurement`, `hal`, `lobbying`, `patents`.
 3. Build the loader: approved findings to an idempotent SQL migration (`legacy_source = 'atlas:entity:<key>'`).
 4. Pilot a second, smaller entity (a French start-up) to check the modules aren't NVIDIA-shaped.
+
+---
+
+## Run 2: all eight sources (18 November 2026)
+
+**Step 1 (review loop) done.** After review, the entity file gained: NVIDIA Denmark's scanR ID, NVIDIA Singapore's SIREN, Icera as a former name, six confirmed HAL structure IDs, and one exclusion (an unrelated "ICERA" research institute). EU-project name-only matches fell from 7 to 0; all 96 co-written papers now match on HAL structure ID.
+
+**Step 2 done.** Five new modules: `navigator`, `patents`, `hal`, `lobbying`, `procurement`. All eight sources ran `ok`: **322 findings in about four minutes**; **111 already in Navigator** (marked ✓ and skipped by review); **71 new findings to review**.
+
+| Source | Findings | Against the manual run |
+|---|---|---|
+| navigator | 60 stored facts | Used to mark 111 findings as already held |
+| registry | 24 (3 companies, accounts, 9 officers, 10 sites) | Matches; now includes the Singapore entity |
+| bodacc | 41 notices | Matches run 1 (manual run had 12) |
+| scanr_projects | 24 EU projects | **Exact match**, totals to the cent; 0 name-only matches |
+| patents | 11 | Manual had 10 genuine plus one false match (Invidia Concept, now excluded); the tool adds a 2010 patent filed under the Icera name |
+| hal | 96 papers, 52 funding mentions, 6 structures | One **new paper** deposited after the manual run. Of the manual run's 54 funding mentions, 3 did not name NVIDIA and 1 had no French institution: the tool's 52 are the correct set |
+| lobbying | 2 actions, 2 client listings | Same as manual: Brunswick for NVIDIA (2020, 2021), AmCham membership |
+| procurement | 5 contracts | Same as manual: Ifremer's DGX A100 (€274,191) plus four CNRS freight entries mentioning "DGX", correctly ranked low |
+
+**What the review queue holds (71):** 52 funding mentions (name matches by design), 11 patents (NVIDIA Corporation has no French SIREN, so applicant matches are by name), 3 lobbying records (same reason), 5 low-confidence contract matches.
+
+**Next refinements**
+- Allow confirmed exact names (e.g. "Nvidia Corporation" as a patent applicant or lobbying client) to count as identifier matches, which would clear 14 of the 71.
+- Treat funding mentions as a summary count by default, with the list available on request.
+- Build the loader (step 3) to turn approved findings into a migration. Candidates from this run: the 41 legal notices, site history, the new paper, and the Icera history as organisation events.

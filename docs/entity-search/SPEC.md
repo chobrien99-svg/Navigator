@@ -1,6 +1,6 @@
 # Entity search: design specification
 
-**Status:** draft v0.1, 17 November 2026. **Owner:** France Navigator.
+**Status:** draft v0.2, 18 November 2026 (v0.1: 17 November). **Owner:** France Navigator.
 **Pilot:** NVIDIA (see `docs/entity-search/PILOT_NVIDIA.md`).
 **Relationship to the Atlas engine:** this is the **single-entity mode** of the Atlas engine described in `docs/atlas_engine_design.md` (the "resolve" and "enrich" stages for one organisation). It lives in the same package (`scripts/atlas/`), uses the same source modules and confidence levels, and defines the **finding** format that every mode (entity, list, topic, and later Radar) shares.
 
@@ -42,11 +42,15 @@ One JSON file per entity, in `scripts/atlas/entities/`.
   "sirens": ["479973455", "432108355"],
   "scanr_ids": ["ztr1i", "02kr42612", "03jdj4y14"],
   "ror_ids": [],
-  "focus_country": "FR"
+  "focus_country": "FR",
+  "product_terms": ["DGX", "Jetson", "CUDA"],
+  "hal_struct_ids": []
 }
 ```
 
-`names` are matched as whole words, case-insensitively; any text that also contains an exclusion is rejected.
+`names` are matched as whole words, case-insensitively; any text that also contains an exclusion is rejected. Former names belong in `names` too (NVIDIA's French R&D company was Icera SARL until 2011).
+
+`product_terms` (case-sensitive) are searched only in public-contract subjects and always give `low` matches. `hal_struct_ids` are HAL structure IDs confirmed by a reviewer; until then HAL matches are `medium`.
 
 ## 4. Output
 
@@ -93,7 +97,7 @@ Mirrors the existing `source_records` table, so Radar can write raw records ther
 - `match.level` describes the **match**, using the Atlas engine's levels: `high` (an identifier matched), `medium` (name plus one strong signal), `low` (name only). `medium` and `low` set `needs_review`.
 - `facts` holds type-specific detail (for example, per-partner funding for an EU project).
 
-### Finding types (v0.1)
+### Finding types (v0.2)
 
 | Type | Connector | Suggested Navigator target |
 |---|---|---|
@@ -104,6 +108,16 @@ Mirrors the existing `source_records` table, so Radar can write raw records ther
 | `related_entity_candidate` | registry | review only |
 | `legal_notice` | bodacc | `organization_events` |
 | `eu_project` | scanr_projects | `projects`, `project_links`, `grants` |
+| `patent` | patents | `patents` |
+| `research_paper` | hal | `articles`, `article_organizations` |
+| `funding_acknowledgement` | hal | review only |
+| `hal_structure` | hal | entity file (`hal_struct_ids`) |
+| `lobbying_registration`, `lobbying_action` | lobbying | `organization_events` |
+| `lobbying_client` | lobbying | `organization_relationships` |
+| `public_contract` | procurement | `organization_events` |
+| `navigator_record` | navigator | already stored |
+
+Every finding also carries `in_navigator` (true when Navigator already holds it, matched by SIREN or source URL), so the review and the loader can skip known facts.
 
 ## 6. Connectors
 
@@ -114,12 +128,12 @@ Each connector is a source module in `scripts/atlas/sources/` with an `enrich(en
 | `registry` | recherche-entreprises.api.gouv.fr | JSON API | SIREN exact; name search for related entities (review only) | v0.1 |
 | `bodacc` | BODACC on Opendatasoft | JSON API, flaky; retries with backoff | SIREN in `registre` | v0.1 |
 | `scanr_projects` | scanR projects dump (CORDIS data) | Bulk `jsonl.gz`, cached locally | scanR/ROR/SIREN IDs, then names | v0.1 |
-| `patents` | scanR patents dump | Bulk | applicant IDs and names | planned |
-| `hal` | api.archives-ouvertes.fr | Solr API | structure names | planned |
-| `lobbying` | HATVP open data | CSV | SIREN, names | planned |
-| `procurement` | DECP consolidated | CSV/Parquet | SIRET/SIREN; product names in contract subject | planned |
+| `patents` | scanR patents dump | Bulk `jsonl.gz`, cached | applicant SIREN, then applicant organisation name | v0.2 |
+| `hal` | api.archives-ouvertes.fr | Solr API (cursor paging) | confirmed HAL structure IDs, then structure names; funding field | v0.2 |
+| `lobbying` | HATVP open data (data.gouv.fr permanent links) | CSV, monthly cache | registrant or client SIREN, then names; beneficiary of actions | v0.2 |
+| `procurement` | DECP consolidated (data.gouv.fr permanent link) | CSV, monthly cache | holder SIRET/SIREN, then holder name, then names or product terms in the subject (low) | v0.2 |
 | `ftj_archive` | Ghost Admin API | API | names | planned |
-| `navigator` | Navigator database | SQL | slug | planned (what we already know) |
+| `navigator` | Navigator database | export file from `scripts/atlas/sql/navigator_entity_export.sql` (direct access once the runner has a Supabase key) | slug | v0.2 |
 | `press` | web search | search API | names | planned, `single` confidence only |
 
 Lessons from the manual runs to build in:

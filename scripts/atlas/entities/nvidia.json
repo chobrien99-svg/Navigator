@@ -2,11 +2,45 @@
   "key": "nvidia",
   "display_name": "NVIDIA",
   "navigator_slug": "nvidia",
-  "names": ["NVIDIA", "NVentures"],
-  "name_exclusions": ["INVIDIA", "ENVIDIA", "INVENTURES"],
-  "sirens": ["479973455", "432108355"],
-  "scanr_ids": ["ztr1i", "03jdj4y14", "02kr42612"],
-  "ror_ids": ["03jdj4y14", "02kr42612"],
+  "names": [
+    "NVIDIA",
+    "NVentures",
+    "Icera"
+  ],
+  "name_exclusions": [
+    "INVIDIA",
+    "ENVIDIA",
+    "INVENTURES",
+    "INSTITUT DU COMPORTEMENT"
+  ],
+  "sirens": [
+    "479973455",
+    "432108355",
+    "109111526"
+  ],
+  "scanr_ids": [
+    "ztr1i",
+    "03jdj4y14",
+    "02kr42612",
+    "915433621"
+  ],
+  "ror_ids": [
+    "03jdj4y14",
+    "02kr42612"
+  ],
   "focus_country": "FR",
-  "notes": "SIRENs: NVIDIA Développement France SAS (R&D, Biot) and the French branch of NVIDIA Ltd. scanR/ROR ids: NVIDIA (United States) and NVIDIA (United Kingdom) as found in the November 2026 manual run."
+  "notes": "SIRENs: NVIDIA Développement France SAS (R&D, Biot) and the French branch of NVIDIA Ltd. scanR/ROR ids: NVIDIA (United States) and NVIDIA (United Kingdom) as found in the November 2026 manual run. Added 18 Nov 2026 after pilot review: NVIDIA Denmark ApS scanR id 915433621; NVIDIA Singapore Pte. Ltd. SIREN (French tax representative registration, Aug 2026). Icera added 18 Nov 2026: NVIDIA's French R&D company was Icera SARL until Oct 2011, and pre-2011 patents list Icera as applicant. product_terms are case-sensitive and only used for public-contract subjects (low confidence). 18 Nov 2026 review: six HAL structures confirmed as NVIDIA's; excluded the unrelated 'Institut du comportement études et recherches appliquées (ICERA)'.",
+  "product_terms": [
+    "DGX",
+    "Jetson",
+    "CUDA"
+  ],
+  "hal_struct_ids": [
+    12319,
+    118452,
+    259811,
+    466802,
+    1347121,
+    1544335
+  ]
 }

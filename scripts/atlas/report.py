@@ -4,7 +4,12 @@ import os
 TYPE_TITLES = {
     "legal_entity": "Registered companies", "financials": "Filed accounts", "officer": "Officers",
     "establishment": "Sites (openings and closures)", "legal_notice": "Legal notices (BODACC)",
-    "eu_project": "Research projects", "related_entity_candidate": "Other companies with a matching name (to check)",
+    "eu_project": "Research projects", "patent": "Patents", "research_paper": "Co-written research papers (HAL)",
+    "funding_acknowledgement": "Papers naming the entity as a funder (HAL)", "hal_structure": "HAL structures (to confirm)",
+    "lobbying_registration": "Lobbying register: own registration", "lobbying_client": "Lobbying register: listed as client or member",
+    "lobbying_action": "Lobbying register: actions on its behalf", "public_contract": "Public contracts",
+    "related_entity_candidate": "Other companies with a matching name (to check)",
+    "navigator_record": "Already in Navigator",
 }
 ORDER = list(TYPE_TITLES)
 
@@ -16,7 +21,8 @@ def _eur(x):
 def write_report(out, entity, manifest, findings):
     L = [f"# {entity['display_name']}: entity search", "",
          f"Run {manifest['started_at']} to {manifest['finished_at']}. "
-         f"{manifest['findings']} findings; {manifest['needs_review']} need review.", "",
+         f"{manifest['findings']} findings; {manifest.get('already_in_navigator', 0)} already in Navigator "
+         f"(marked ✓); {manifest['needs_review']} new findings need review.", "",
          "## Sources", "", "| Source | Status | Detail |", "|---|---|---|"]
     for name, s in manifest["sources"].items():
         detail = ", ".join(f"{k}: {v}" for k, v in s.items() if k not in ("status", "errors"))
@@ -40,13 +46,14 @@ def write_report(out, entity, manifest, findings):
             L += ["", "| Start | Project | To entity | Partners | To partners | Match |", "|---|---|---|---|---|---|"]
             for i in items:
                 parts = "; ".join(c["name"] for c in i["counterparts"]) or "none"
-                L.append(f"| {(i['date'] or '')[:7]} | [{i['facts']['acronym']}]({i['source']['url']}) | {_eur(i['facts']['entity_eur'])} | "
+                known = " ✓" if i.get("in_navigator") else ""
+                L.append(f"| {(i['date'] or '')[:7]} | [{i['facts']['acronym']}]({i['source']['url']}){known} | {_eur(i['facts']['entity_eur'])} | "
                          f"{parts} | {_eur(i['facts']['focus_partners_eur'])} | {i['match']['level']} ({i['match']['on']}) |")
             continue
         L += ["| Date | Finding | Detail | Match |", "|---|---|---|---|"]
         for i in items:
             title = f"[{i['title']}]({i['source']['url']})" if i["source"].get("url") else i["title"]
-            flag = " ⚠ review" if i["match"]["needs_review"] else ""
+            flag = " ✓ in Navigator" if i.get("in_navigator") else (" ⚠ review" if i["match"]["needs_review"] else "")
             L.append(f"| {i['date'] or ''} | {title} | {i['summary']} | {i['match']['level']}{flag} |")
     with open(os.path.join(out, "report.md"), "w") as f:
         f.write("\n".join(L) + "\n")

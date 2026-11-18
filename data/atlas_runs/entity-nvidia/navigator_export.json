@@ -1,0 +1,585 @@
+{
+ "exported_at": "2026-11-18T12:52:47.916229+00:00",
+ "organization": {
+  "id": "cb84a132-9ac2-4e6f-a6c8-33960587459f",
+  "name": "NVIDIA",
+  "slug": "nvidia"
+ },
+ "legal_entities": [
+  {
+   "siren": "479973455",
+   "legal_name": "NVIDIA DEVELOPPEMENT FRANCE",
+   "incorporation_date": "2004-12-02"
+  },
+  {
+   "siren": "432108355",
+   "legal_name": "NVIDIA LTD (succursale française)",
+   "incorporation_date": null
+  }
+ ],
+ "investments": [
+  {
+   "round_id": "993d385c-bcbd-4d7f-9eb5-f72fdb75bc2e",
+   "company": "Moon surgical",
+   "stage": "series_b",
+   "date": "2023-05-17",
+   "amount_eur_m": 51.18,
+   "is_lead": false
+  },
+  {
+   "round_id": "96b9326f-3279-4350-95ea-eed4c3b8be46",
+   "company": "Hugging Face",
+   "stage": "series_d",
+   "date": "2023-08-24",
+   "amount_eur_m": 217,
+   "is_lead": false
+  },
+  {
+   "round_id": "6852b7f4-ada8-4deb-8aa0-f94dc3dceab8",
+   "company": "Mistral AI",
+   "stage": "series_b",
+   "date": "2024-06-11",
+   "amount_eur_m": 468,
+   "is_lead": false
+  },
+  {
+   "round_id": "1921b46d-65c2-41d6-b8a7-98cf0a3dc6f7",
+   "company": "Poolside",
+   "stage": "series_b",
+   "date": "2024-10-02",
+   "amount_eur_m": 453,
+   "is_lead": false
+  },
+  {
+   "round_id": "de3e28e2-aecd-464a-a3b1-f51ea4fe9061",
+   "company": "Scintil Photonics",
+   "stage": "series_b",
+   "date": "2025-09-01",
+   "amount_eur_m": 50,
+   "is_lead": false
+  },
+  {
+   "round_id": "13ef909f-9745-4063-b616-6db136657690",
+   "company": "Mistral AI",
+   "stage": "series_c",
+   "date": "2025-09-01",
+   "amount_eur_m": 1818.18,
+   "is_lead": false
+  },
+  {
+   "round_id": "582102d9-996a-4c70-9cdb-0f127f233908",
+   "company": "AMI Labs",
+   "stage": "seed",
+   "date": "2026-03-01",
+   "amount_eur_m": 890,
+   "is_lead": false
+  },
+  {
+   "round_id": "f3da60cd-aec9-40b2-9c38-7ab8de21578f",
+   "company": "Alice & Bob",
+   "stage": "series_b",
+   "date": "2026-05-01",
+   "amount_eur_m": null,
+   "is_lead": false
+  },
+  {
+   "round_id": "32ea279b-34d5-4186-88dd-9e25e325c8df",
+   "company": "Gradium",
+   "stage": "seed",
+   "date": "2026-07-06",
+   "amount_eur_m": 26.3,
+   "is_lead": false
+  },
+  {
+   "round_id": "80d10738-6729-46c7-9595-c9c1b98ec52b",
+   "company": "Mistral AI",
+   "stage": "series_d",
+   "date": "2026-09-08",
+   "amount_eur_m": 3000,
+   "is_lead": false
+  },
+  {
+   "round_id": "08261e72-21cd-4de8-8999-4d23d7cf5294",
+   "company": "Genesis AI",
+   "stage": "undisclosed",
+   "date": "2026-10-13",
+   "amount_eur_m": null,
+   "is_lead": true
+  },
+  {
+   "round_id": "478d6884-194d-46b2-bbdf-6f4cb9cf0685",
+   "company": "Entalpic",
+   "stage": "undisclosed",
+   "date": "2026-10-13",
+   "amount_eur_m": null,
+   "is_lead": true
+  },
+  {
+   "round_id": "4d695df9-f978-442b-b50b-ee22d67d2ccd",
+   "company": "Doctolib",
+   "stage": "undisclosed",
+   "date": "2026-10-13",
+   "amount_eur_m": null,
+   "is_lead": true
+  },
+  {
+   "round_id": "c0df7689-d73c-4b90-a7ce-5b93aceb985b",
+   "company": "Pigment",
+   "stage": "series_e",
+   "date": "2026-10-21",
+   "amount_eur_m": 223,
+   "is_lead": false
+  }
+ ],
+ "relationships": [
+  {
+   "id": "9fdd34c2-608f-409f-8f19-4414407e9d4c",
+   "type": "subsidiary_of",
+   "direction": "from",
+   "other": "NVentures",
+   "description": "NVentures is NVIDIA's venture capital arm.",
+   "start_date": null
+  },
+  {
+   "id": "17880df9-2d04-4471-b6dd-05a62553db27",
+   "type": "invested_in",
+   "direction": "to",
+   "other": "Doctolib",
+   "description": "Minority stake (announced 13 Oct 2026).",
+   "start_date": "2026-10-13"
+  },
+  {
+   "id": "9e8c78cc-ccf3-4e36-ac55-0a3583faeaca",
+   "type": "invested_in",
+   "direction": "to",
+   "other": "Entalpic",
+   "description": "Planned minority stake (announced 13 Oct 2026).",
+   "start_date": "2026-10-13"
+  },
+  {
+   "id": "6e323dc8-b629-4711-81f5-cd307cc6b1f2",
+   "type": "invested_in",
+   "direction": "to",
+   "other": "Genesis AI",
+   "description": "Planned strategic investment (announced 13 Oct 2026).",
+   "start_date": "2026-10-13"
+  },
+  {
+   "id": "37a3e07b-2df4-41ce-8836-83fe93417574",
+   "type": "acquired",
+   "direction": "to",
+   "other": "Hugging Face",
+   "description": "Acquisition agreement announced 3 Sep 2026, about $12.9bn. Closing expected H1 2027, subject to regulatory approval.",
+   "start_date": "2026-09-03"
+  },
+  {
+   "id": "7d6f3f4f-4eb2-4ffe-8f45-6640234e719e",
+   "type": "invested_in",
+   "direction": "to",
+   "other": "Hugging Face",
+   "description": "Participant in the $235M Series D (Aug 2023).",
+   "start_date": "2023-08-24"
+  },
+  {
+   "id": "824adb92-2cdf-4d0a-b6c1-2d464ff1e0cb",
+   "type": "invested_in",
+   "direction": "to",
+   "other": "Poolside",
+   "description": "Participant in the $500M Series B (Oct 2024).",
+   "start_date": "2024-10-02"
+  },
+  {
+   "id": "215cd3f9-ca85-4f22-8d0f-359b76ac36e0",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "Hewlett Packard Enterprise",
+   "description": "AI Factory Lab in Grenoble (announced 1 Dec 2025).",
+   "start_date": "2025-12-01"
+  },
+  {
+   "id": "05bee937-5288-40a3-bf95-67d684ed381a",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "SESTERCE",
+   "description": "Builds its AI cloud and Marseille supercomputer on NVIDIA H100 GPUs.",
+   "start_date": "2024-11-01"
+  },
+  {
+   "id": "e2413d83-8a41-45c9-96f0-3fa00e01ceb4",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "Université de Reims Champagne-Ardenne",
+   "description": "First French NVIDIA CUDA Research Center (2015).",
+   "start_date": "2015-03-20"
+  },
+  {
+   "id": "58c9dacb-bc66-48c6-87e3-bc91ad977279",
+   "type": "partnered_with",
+   "direction": "to",
+   "other": "Université de Reims Champagne-Ardenne",
+   "description": "Industrial partner of the C2I2 chair (2017-2020).",
+   "start_date": "2017-01-01"
+  },
+  {
+   "id": "eb4498f0-fee2-413c-aff4-0b04794479d4",
+   "type": "partnered_with",
+   "direction": "to",
+   "other": "Fondation Inria",
+   "description": "Founding member of the open-source AI adoption working group (Oct 2026).",
+   "start_date": "2026-10-13"
+  },
+  {
+   "id": "94cf5797-1606-4d49-b30f-581f18d298c4",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "GENCI",
+   "description": "AI Factory France collaboration (Nov 2025); ConcordAI technical support (Oct 2026).",
+   "start_date": "2025-11-25"
+  },
+  {
+   "id": "626a6a2f-d59b-46e5-8294-436ce04f37ab",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "Valeo",
+   "description": "Compute platforms on NVIDIA Hyperion.",
+   "start_date": "2026-10-21"
+  },
+  {
+   "id": "36f7c2e2-3d39-418f-b755-f1d4131de460",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "Stellantis",
+   "description": "Autonomous-vehicle deployment in France with Wayve and NVIDIA.",
+   "start_date": "2026-10-23"
+  },
+  {
+   "id": "1becfa31-349e-4e54-8cc6-d7272831a8d8",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "Wayve",
+   "description": "AI Driver on NVIDIA Hyperion and Halos.",
+   "start_date": "2026-10-23"
+  },
+  {
+   "id": "ba41c904-0f80-4dd1-9761-5dbf2b433211",
+   "type": "partnered_with",
+   "direction": "from",
+   "other": "Omi",
+   "description": "Technology partnership (not an investment).",
+   "start_date": "2026-10-21"
+  }
+ ],
+ "events": [
+  {
+   "id": "923cb5ae-9248-4a95-90bf-4c2cee51066f",
+   "title": "NVIDIA agrees to acquire Hugging Face",
+   "date": "2026-09-03",
+   "description": "",
+   "source_url": "https://siliconangle.com/2026/09/03/nvidia-confirms-12-9b-acquisition-of-ai-hosting-platform-hugging-face/"
+  },
+  {
+   "id": "00d42c44-dff7-4711-8139-6e8ef1d765d0",
+   "title": "Jensen Huang steps down as NVIDIA CEO",
+   "date": "2026-11-12",
+   "description": "",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+  },
+  {
+   "id": "8c73498f-a60c-4eb5-a94d-6bbb7dc48f13",
+   "title": "French competition authority raids NVIDIA's Paris office",
+   "date": "2023-09-27",
+   "description": "",
+   "source_url": "https://www.frenchtechjournal.com/france-gaga-ai/"
+  },
+  {
+   "id": "5290c190-9da0-4580-b3db-087e4facc4e4",
+   "title": "French competition authority says NVIDIA probe is nearing its end",
+   "date": "2026-07-15",
+   "description": "",
+   "source_url": "https://thenextweb.com/news/france-nvidia-antitrust-probe-nearing-end"
+  },
+  {
+   "id": "346ad47f-ee63-47f8-be62-eb686cdee4a1",
+   "title": "HPE and NVIDIA announce AI Factory Lab in Grenoble",
+   "date": "2025-12-01",
+   "description": "",
+   "source_url": "https://www.hpe.com/us/en/newsroom/press-release/2025/12/hpe-and-nvidia-simplify-ai-ready-data-centers-with-secure-next-gen-ai-factories.html"
+  }
+ ],
+ "grants": [
+  {
+   "id": "6c5b1324-96c5-400a-b445-4b77fa55d8a7",
+   "grant_name": "Horizon Europe – NEWTON (Marie Skłodowska-Curie action)",
+   "granting_body": "European Commission",
+   "amount_eur": 335890.08,
+   "awarded_date": "2026-03-01",
+   "source_url": "https://cordis.europa.eu/project/id/101227315"
+  },
+  {
+   "id": "229c0693-52c6-4237-b542-c773ebfa8033",
+   "grant_name": "Horizon Europe – EdgeAI-Trust (Innovation action)",
+   "granting_body": "European Commission",
+   "amount_eur": 225000,
+   "awarded_date": "2024-05-01",
+   "source_url": "https://cordis.europa.eu/project/id/101139892"
+  },
+  {
+   "id": "18b7f316-c26d-480c-adda-18a01fb2f9ef",
+   "grant_name": "Horizon Europe – MicrocombSys (Marie Skłodowska-Curie action)",
+   "granting_body": "European Commission",
+   "amount_eur": 301788,
+   "awarded_date": "2023-10-01",
+   "source_url": "https://cordis.europa.eu/project/id/101119968"
+  },
+  {
+   "id": "0ee64929-e840-40ae-b2d5-ed0228fccf08",
+   "grant_name": "Horizon Europe – ThinkingEarth (Research and Innovation action)",
+   "granting_body": "European Commission",
+   "amount_eur": 456375,
+   "awarded_date": "2024-01-01",
+   "source_url": "https://cordis.europa.eu/project/id/101130544"
+  },
+  {
+   "id": "d4251200-fa11-4aca-9813-ce18a518348d",
+   "grant_name": "Horizon Europe – CENTRIC (Research and Innovation action)",
+   "granting_body": "European Commission",
+   "amount_eur": 437062.5,
+   "awarded_date": "2023-01-01",
+   "source_url": "https://cordis.europa.eu/project/id/101096379"
+  },
+  {
+   "id": "53650eb8-1b83-41e4-b4b4-3ff67798bd5c",
+   "grant_name": "Horizon 2020 – ESCAPE (Research and Innovation action)",
+   "granting_body": "European Commission",
+   "amount_eur": 193335,
+   "awarded_date": "2015-10-01",
+   "source_url": "https://cordis.europa.eu/project/id/671627"
+  },
+  {
+   "id": "14f9326a-96bc-4247-a606-a2dca42bf18f",
+   "grant_name": "Horizon Europe – FLECON-6G (Research and Innovation action)",
+   "granting_body": "European Commission",
+   "amount_eur": 427500,
+   "awarded_date": "2025-01-01",
+   "source_url": "https://cordis.europa.eu/project/id/101192462"
+  }
+ ],
+ "projects": [
+  {
+   "slug": "eu-escape",
+   "name": "ESCAPE",
+   "role": "partner",
+   "start_date": "2015-10-01",
+   "website_url": "https://cordis.europa.eu/project/id/671627"
+  },
+  {
+   "slug": "eu-hipernav",
+   "name": "HiPerNav",
+   "role": "partner",
+   "start_date": "2016-11-01",
+   "website_url": "https://cordis.europa.eu/project/id/722068"
+  },
+  {
+   "slug": "eu-cosine",
+   "name": "COSINE",
+   "role": "partner",
+   "start_date": "2018-01-01",
+   "website_url": "https://cordis.europa.eu/project/id/765739"
+  },
+  {
+   "slug": "eu-achieve",
+   "name": "ACHIEVE",
+   "role": "partner",
+   "start_date": "2017-10-01",
+   "website_url": "https://cordis.europa.eu/project/id/765866"
+  },
+  {
+   "slug": "eu-melloddy",
+   "name": "MELLODDY",
+   "role": "partner",
+   "start_date": "2019-06-01",
+   "website_url": "https://cordis.europa.eu/project/id/831472"
+  },
+  {
+   "slug": "eu-rising-stars",
+   "name": "Rising STARS",
+   "role": "partner",
+   "start_date": "2020-02-01",
+   "website_url": "https://cordis.europa.eu/project/id/873120"
+  },
+  {
+   "slug": "eu-elsa",
+   "name": "ELSA",
+   "role": "partner",
+   "start_date": "2022-09-01",
+   "website_url": "https://cordis.europa.eu/project/id/101070617"
+  },
+  {
+   "slug": "eu-microcombsys",
+   "name": "MicrocombSys",
+   "role": "partner",
+   "start_date": "2023-10-01",
+   "website_url": "https://cordis.europa.eu/project/id/101119968"
+  },
+  {
+   "slug": "eu-thinkingearth",
+   "name": "ThinkingEarth",
+   "role": "partner",
+   "start_date": "2024-01-01",
+   "website_url": "https://cordis.europa.eu/project/id/101130544"
+  },
+  {
+   "slug": "eu-centric",
+   "name": "CENTRIC",
+   "role": "partner",
+   "start_date": "2023-01-01",
+   "website_url": "https://cordis.europa.eu/project/id/101096379"
+  },
+  {
+   "slug": "eu-edgeai-trust",
+   "name": "EdgeAI-Trust",
+   "role": "partner",
+   "start_date": "2024-05-01",
+   "website_url": "https://cordis.europa.eu/project/id/101139892"
+  },
+  {
+   "slug": "eu-newton",
+   "name": "NEWTON",
+   "role": "partner",
+   "start_date": "2026-03-01",
+   "website_url": "https://cordis.europa.eu/project/id/101227315"
+  },
+  {
+   "slug": "eu-flecon-6g",
+   "name": "FLECON-6G",
+   "role": "partner",
+   "start_date": "2025-01-01",
+   "website_url": "https://cordis.europa.eu/project/id/101192462"
+  },
+  {
+   "slug": "eu-mindnet",
+   "name": "MINDnet",
+   "role": "partner",
+   "start_date": "2026-01-01",
+   "website_url": "https://cordis.europa.eu/project/id/101226674"
+  }
+ ],
+ "programs": [],
+ "articles_count": 95,
+ "known_urls": [
+  "https://cea.hal.science/cea-03452243v1",
+  "https://cordis.europa.eu/project/id/101070617",
+  "https://cordis.europa.eu/project/id/101096379",
+  "https://cordis.europa.eu/project/id/101119968",
+  "https://cordis.europa.eu/project/id/101130544",
+  "https://cordis.europa.eu/project/id/101139892",
+  "https://cordis.europa.eu/project/id/101192462",
+  "https://cordis.europa.eu/project/id/101226674",
+  "https://cordis.europa.eu/project/id/101227315",
+  "https://cordis.europa.eu/project/id/671627",
+  "https://cordis.europa.eu/project/id/722068",
+  "https://cordis.europa.eu/project/id/765739",
+  "https://cordis.europa.eu/project/id/765866",
+  "https://cordis.europa.eu/project/id/831472",
+  "https://cordis.europa.eu/project/id/873120",
+  "https://ens-lyon.hal.science/ensl-00000002v1",
+  "https://ens-lyon.hal.science/ensl-00649650v2",
+  "https://hal.science/hal-00765015v1",
+  "https://hal.science/hal-01271717v1",
+  "https://hal.science/hal-01298429v1",
+  "https://hal.science/hal-01354939v1",
+  "https://hal.science/hal-01483753v1",
+  "https://hal.science/hal-01500955v1",
+  "https://hal.science/hal-01579277v1",
+  "https://hal.science/hal-01609446v1",
+  "https://hal.science/hal-01609459v1",
+  "https://hal.science/hal-01635508v1",
+  "https://hal.science/hal-01648100v1",
+  "https://hal.science/hal-01667553v1",
+  "https://hal.science/hal-01704164v1",
+  "https://hal.science/hal-02010086v1",
+  "https://hal.science/hal-02288948v1",
+  "https://hal.science/hal-02430914v1",
+  "https://hal.science/hal-02938099v2",
+  "https://hal.science/hal-03237937v1",
+  "https://hal.science/hal-03358957v1",
+  "https://hal.science/hal-03476708v1",
+  "https://hal.science/hal-03601303v1",
+  "https://hal.science/hal-03664112v1",
+  "https://hal.science/hal-03683790v1",
+  "https://hal.science/hal-03780816v1",
+  "https://hal.science/hal-03910329v1",
+  "https://hal.science/hal-03973243v1",
+  "https://hal.science/hal-04009160v2",
+  "https://hal.science/hal-04125006v1",
+  "https://hal.science/hal-04164243v1",
+  "https://hal.science/hal-04299103v1",
+  "https://hal.science/hal-04321188v1",
+  "https://hal.science/hal-04345927v1",
+  "https://hal.science/hal-04480158v1",
+  "https://hal.science/hal-04525072v1",
+  "https://hal.science/hal-04579665v1",
+  "https://hal.science/hal-04651540v1",
+  "https://hal.science/hal-04715638v1",
+  "https://hal.science/hal-04733065v1",
+  "https://hal.science/hal-04738742v1",
+  "https://hal.science/hal-04762441v1",
+  "https://hal.science/hal-04789353v1",
+  "https://hal.science/hal-04869170v1",
+  "https://hal.science/hal-04902062v1",
+  "https://hal.science/hal-04944072v1",
+  "https://hal.science/hal-05288458v1",
+  "https://hal.science/hal-05325213v1",
+  "https://hal.science/hal-05494490v1",
+  "https://hal.science/hal-05527574v1",
+  "https://hal.science/hal-05578587v1",
+  "https://hal.science/hal-05657595v1",
+  "https://hal.science/hal-05769714v1",
+  "https://hal.science/hal-05827029v1",
+  "https://inria.hal.science/hal-00650173v1",
+  "https://inria.hal.science/hal-00650196v1",
+  "https://inria.hal.science/hal-00650218v1",
+  "https://inria.hal.science/hal-00725477v1",
+  "https://inria.hal.science/hal-00762548v1",
+  "https://inria.hal.science/hal-00911177v1",
+  "https://inria.hal.science/hal-00924259v1",
+  "https://inria.hal.science/hal-00930147v1",
+  "https://inria.hal.science/hal-01017185v1",
+  "https://inria.hal.science/hal-01083080v1",
+  "https://inria.hal.science/hal-01312227v1",
+  "https://inria.hal.science/hal-01585878v1",
+  "https://inria.hal.science/hal-01585892v1",
+  "https://inria.hal.science/hal-01621371v1",
+  "https://inria.hal.science/hal-01676191v1",
+  "https://inria.hal.science/hal-01695622v1",
+  "https://inria.hal.science/hal-02162331v1",
+  "https://inria.hal.science/hal-02403109v1",
+  "https://inria.hal.science/hal-02435407v1",
+  "https://inria.hal.science/hal-02930925v1",
+  "https://inria.hal.science/hal-03172123v1",
+  "https://inria.hal.science/hal-03272502v1",
+  "https://inria.hal.science/hal-03348787v1",
+  "https://inria.hal.science/hal-03482276v1",
+  "https://inria.hal.science/hal-03548298v1",
+  "https://inria.hal.science/hal-03671850v1",
+  "https://inria.hal.science/hal-03709343v1",
+  "https://inria.hal.science/hal-03717062v1",
+  "https://inria.hal.science/hal-04105889v1",
+  "https://inria.hal.science/hal-05132721v1",
+  "https://inria.hal.science/hal-05423293v1",
+  "https://inria.hal.science/hal-05772318v1",
+  "https://inria.hal.science/inria-00345275v1",
+  "https://inria.hal.science/inria-00510233v1",
+  "https://inria.hal.science/inria-00510246v1",
+  "https://inria.hal.science/inria-00516416v1",
+  "https://insu.hal.science/insu-04041377v1",
+  "https://meteofrance.hal.science/meteo-05796490v1",
+  "https://minesparis-psl.hal.science/hal-03122125v1",
+  "https://siliconangle.com/2026/09/03/nvidia-confirms-12-9b-acquisition-of-ai-hosting-platform-hugging-face/",
+  "https://thenextweb.com/news/france-nvidia-antitrust-probe-nearing-end",
+  "https://ut-toulouseinp.hal.science/hal-03296180v3",
+  "https://www.frenchtechjournal.com/france-gaga-ai/",
+  "https://www.hpe.com/us/en/newsroom/press-release/2025/12/hpe-and-nvidia-simplify-ai-ready-data-centers-with-secure-next-gen-ai-factories.html",
+  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+ ]
+}

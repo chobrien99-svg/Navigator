@@ -169,7 +169,8 @@ class RunContext:
         manifest = {"entity": self.entity, "started_at": self.started_at, "finished_at": now_iso(),
                     "sources": self.sources, "findings": len(findings),
                     "findings_by_type": _count(findings, "type"),
-                    "needs_review": sum(1 for x in findings if x["match"]["needs_review"])}
+                    "needs_review": sum(1 for x in findings if x["match"]["needs_review"] and not x.get("in_navigator")),
+                    "already_in_navigator": sum(1 for x in findings if x.get("in_navigator"))}
         with open(os.path.join(self.out_dir, "manifest.json"), "w") as f:
             json.dump(manifest, f, ensure_ascii=False, indent=1)
         return manifest

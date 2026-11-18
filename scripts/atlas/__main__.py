@@ -15,7 +15,7 @@ import sys
 from .core import RunContext
 from .report import write_report
 
-SOURCES = ["registry", "bodacc", "scanr_projects"]
+SOURCES = ["navigator", "registry", "bodacc", "scanr_projects", "patents", "hal", "lobbying", "procurement"]
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 
@@ -37,6 +37,9 @@ def cmd_entity(args):
             continue
         findings += got
         ctx.log(f"{name}: {len(got)} findings ({ctx.sources.get(name, {}).get('status')})")
+    from .sources import navigator
+    known = navigator.annotate(findings, navigator.load(entity))
+    ctx.log(f"already in Navigator: {known} findings")
     findings.sort(key=lambda x: (x["type"], x["date"] or "", x["finding_id"]))
     manifest = ctx.write(findings)
     write_report(out, entity, manifest, findings)

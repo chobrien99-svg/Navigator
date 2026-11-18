@@ -12,6 +12,7 @@ a local copy instead.
 import gzip
 import json
 import os
+import re
 
 from ..core import download, finding, norm_siren, NameMatcher, SourceUnavailable
 
@@ -36,6 +37,9 @@ def _num(x):
 def _ids(p):
     st = p.get("structure") if isinstance(p.get("structure"), dict) else {}
     ids = {("scanr", str(p.get("participant_id") or "")), ("scanr", str(st.get("id") or ""))}
+    for raw in (p.get("participant_id"), st.get("id")):  # French bodies are often keyed by their SIREN
+        if raw and re.fullmatch(r"\d{9}", str(raw)):
+            ids.add(("siren", str(raw)))
     for e in st.get("externalIds") or []:
         t, v = e.get("type"), str(e.get("id") or "")
         if t in ("siren", "siret"):
