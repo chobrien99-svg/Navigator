@@ -1,0 +1,18 @@
+{
+  "key": "iktos",
+  "display_name": "Iktos",
+  "navigator_slug": "iktos",
+  "names": [
+    "Iktos"
+  ],
+  "name_exclusions": [],
+  "sirens": [
+    "823189279"
+  ],
+  "scanr_ids": [],
+  "ror_ids": [],
+  "focus_country": "FR",
+  "product_terms": [],
+  "hal_struct_ids": [],
+  "notes": "Second pilot (18 Nov 2026). AI drug-discovery start-up, Paris; receivership opened 6 Oct 2026. Baseline: TechBio research (data/techbio_france_2026)."
+}

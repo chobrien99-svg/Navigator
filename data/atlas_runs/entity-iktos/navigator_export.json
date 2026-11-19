@@ -1,0 +1,155 @@
+{
+ "exported_at": "2026-11-18T17:51:49.558394+00:00",
+ "organization": {
+  "id": "3138be05-6b7d-4790-8490-e1e48f2af9ab",
+  "name": "Iktos",
+  "slug": "iktos"
+ },
+ "legal_entities": [
+  {
+   "siren": "823189279",
+   "legal_name": "IKTOS",
+   "incorporation_date": null
+  }
+ ],
+ "investments": [],
+ "rounds": [
+  {
+   "date": "2017-06-01",
+   "stage": "seed",
+   "amount_eur_m": null
+  },
+  {
+   "date": "2019-01-01",
+   "stage": "seed",
+   "amount_eur_m": null
+  },
+  {
+   "date": "2021-01-01",
+   "stage": "debt",
+   "amount_eur_m": 0.9
+  },
+  {
+   "date": "2023-03-09",
+   "stage": "series_a",
+   "amount_eur_m": 15.5
+  }
+ ],
+ "relationships": [
+  {
+   "id": "60bd0ed1-9c18-4704-b209-4e3e7c8af420",
+   "type": "partnered_with",
+   "direction": "to",
+   "other": "Inserm",
+   "description": "Patent co-applicant on 1 patent family.",
+   "start_date": null
+  },
+  {
+   "id": "913a591c-2e4a-44ec-810a-d198678e4abd",
+   "type": "partnered_with",
+   "direction": "to",
+   "other": "Université Évry Paris-Saclay",
+   "description": "Patent co-applicant on 1 patent family.",
+   "start_date": null
+  },
+  {
+   "id": "e885b078-c8cb-42be-9e08-4dd4fe9f286e",
+   "type": "partnered_with",
+   "direction": "to",
+   "other": "Synsight Genopole Entreprises",
+   "description": "Patent co-applicant on 1 patent family.",
+   "start_date": null
+  },
+  {
+   "id": "e836256a-057c-43a5-8718-e26d0aa147c5",
+   "type": "incubated_by",
+   "direction": "to",
+   "other": "AGORANOV",
+   "description": "Incubated at Agoranov from February 2018.",
+   "start_date": "2018-02-01"
+  }
+ ],
+ "events": [
+  {
+   "id": "93fd3287-ce8e-47b5-ab60-6833aeacb461",
+   "title": "Iktos placed in receivership (redressement judiciaire)",
+   "date": "2026-10-06",
+   "description": "Paris economic-activities court opened receivership proceedings on 6 October 2026.",
+   "source_url": "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982"
+  },
+  {
+   "id": "652fe038-e40a-4de6-b7d2-d8b2b371a69c",
+   "title": "Iktos starts in-house drug discovery",
+   "date": "2023-01-01",
+   "description": "Company website; year only.",
+   "source_url": "https://iktos.ai"
+  }
+ ],
+ "grants": [
+  {
+   "id": "5d5f4ba6-fc2e-4937-8068-f55de1420bb7",
+   "grant_name": "Horizon 2020 – CARE (Research and Innovation action)",
+   "granting_body": "European Commission (Horizon 2020)",
+   "amount_eur": 391500,
+   "awarded_date": null,
+   "source_url": "https://cordis.europa.eu/project/id/101005077"
+  },
+  {
+   "id": "bb7b2e1d-9636-44f8-a0e3-9376db39bebf",
+   "grant_name": "Horizon 2020 – MELLODDY (Research and Innovation action)",
+   "granting_body": "European Commission (Horizon 2020)",
+   "amount_eur": 343402,
+   "awarded_date": null,
+   "source_url": "https://cordis.europa.eu/project/id/831472"
+  },
+  {
+   "id": "b5a37003-8571-4792-a0f4-6b324b833477",
+   "grant_name": "Horizon Europe – AIR-3D (EIC Accelerator)",
+   "granting_body": "European Commission (European Innovation Council)",
+   "amount_eur": 2499616,
+   "awarded_date": "2024-10-01",
+   "source_url": "https://cordis.europa.eu/project/id/101217538"
+  }
+ ],
+ "projects": [
+  {
+   "slug": "eu-melloddy",
+   "name": "MELLODDY",
+   "role": "partner",
+   "start_date": "2019-06-01",
+   "website_url": "https://cordis.europa.eu/project/id/831472"
+  }
+ ],
+ "programs": [
+  {
+   "edition_id": "e35be236-b798-40c2-816d-4a2b03e458ac",
+   "program": "HEC Challenge+",
+   "role": "Participant"
+  }
+ ],
+ "patents": [
+  {
+   "title": "INHIBITEURS DE MTHFD2 POLYCYCLIQUES ET LEURS UTILISATIONS",
+   "url": null,
+   "number": "WO2025088398WEP"
+  },
+  {
+   "title": "COUPLAGE D'UN MODÈLE GÉNÉRATIF 3D À UN MODULE D'OPTIMISATION DE CONFORMATION SOU",
+   "url": null,
+   "number": "WO2025000524WIB"
+  },
+  {
+   "title": "PROCÉDÉS ET OUTILS POUR DÉTECTER L'IMPACT DE COMPOSÉS SUR DES INTERACTIONS PROTÉ",
+   "url": null,
+   "number": "WO2024062085WEP"
+  }
+ ],
+ "articles_count": 0,
+ "known_urls": [
+  "https://cordis.europa.eu/project/id/101005077",
+  "https://cordis.europa.eu/project/id/101217538",
+  "https://cordis.europa.eu/project/id/831472",
+  "https://iktos.ai",
+  "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982"
+ ]
+}

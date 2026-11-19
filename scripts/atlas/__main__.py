@@ -47,6 +47,20 @@ def cmd_entity(args):
     return 0 if all(s["status"] == "ok" for s in manifest["sources"].values()) else 2
 
 
+def cmd_review(args):
+    from .loader import review
+    counts = review(args.run)
+    print("decisions:", counts, "->", os.path.join(args.run, "decisions.json"), "and review.md")
+    return 0
+
+
+def cmd_load(args):
+    from .loader import load
+    path, used = load(args.run, args.out)
+    print("accepted findings by type:", used, "->", path)
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="atlas")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -54,8 +68,13 @@ def main(argv=None):
     e.add_argument("--entity", required=True, help="entity JSON file")
     e.add_argument("--sources", help="comma-separated subset of: " + ",".join(SOURCES))
     e.add_argument("--out", help="output folder")
+    r = sub.add_parser("review", help="write or update the review decisions for a run")
+    r.add_argument("--run", required=True, help="run folder")
+    ld = sub.add_parser("load", help="write load.sql from accepted findings (does not touch the database)")
+    ld.add_argument("--run", required=True, help="run folder")
+    ld.add_argument("--out", help="output SQL file (default: <run>/load.sql)")
     args = ap.parse_args(argv)
-    return {"entity": cmd_entity}[args.cmd](args)
+    return {"entity": cmd_entity, "review": cmd_review, "load": cmd_load}[args.cmd](args)
 
 
 if __name__ == "__main__":

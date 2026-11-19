@@ -1,0 +1,1934 @@
+{
+ "registry:establishment:43210835500012": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA LTD: site in abroad"
+ },
+ "registry:establishment:43210835500020": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA LTD: site in LEVALLOIS-PERRET"
+ },
+ "registry:establishment:43210835500038": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA LTD: site in LEVALLOIS-PERRET"
+ },
+ "registry:establishment:47997345500013": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in MOUGINS"
+ },
+ "registry:establishment:47997345500021": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in VALBONNE"
+ },
+ "registry:establishment:47997345500039": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in VALBONNE"
+ },
+ "registry:establishment:43210835500046": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA LTD: site in COURBEVOIE"
+ },
+ "registry:establishment:47997345500047": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in BIOT"
+ },
+ "registry:establishment:47997345500054": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in BIOT"
+ },
+ "registry:establishment:10911152600017": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "establishment",
+  "title": "NVIDIA SINGAPORE PTE. LTD.: site in abroad"
+ },
+ "scanr_projects:eu_project:642069": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "HPC-LEAP: High Performance Computing in Life Sciences, Engineering And Physics"
+ },
+ "scanr_projects:eu_project:671627": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "ESCAPE: Energy-efficient SCalable Algorithms for weather Prediction at Exascale"
+ },
+ "scanr_projects:eu_project:722068": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "HiPerNav: High Performance Soft-tissue Navigation"
+ },
+ "scanr_projects:eu_project:765866": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "ACHIEVE: AdvanCed Hardware/Software Components for Integrated/Embedded Vision SystEms"
+ },
+ "scanr_projects:eu_project:754433": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "STARS: SupercompuTing And Related applicationS Fellows Program"
+ },
+ "scanr_projects:eu_project:765739": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "COSINE: Training network for COmputational Spectroscopy In Natural sciences and Engineering"
+ },
+ "scanr_projects:eu_project:765048": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "STIMULATE: Simulation in multiscale physical and biological systems"
+ },
+ "scanr_projects:eu_project:813170": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "EVOCATION: Advanced Visual and Geometric Computing for 3D Capture, Display, and Fabrication"
+ },
+ "scanr_projects:eu_project:813942": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "EuroPLEx: European network for Particle physics, Lattice field theory and Extreme computing"
+ },
+ "scanr_projects:eu_project:831472": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "MELLODDY: MachinE Learning Ledger Orchestration for Drug DiscoverY"
+ },
+ "scanr_projects:eu_project:873120": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "Rising STARS: RISE International Network for Solutions Technologies and Applications of Real-time Systems"
+ },
+ "scanr_projects:eu_project:101056236": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "ARISA: Artificial Intelligence Skills Alliance"
+ },
+ "scanr_projects:eu_project:101070617": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "ELSA: European Lighthouse on Secure and Safe AI"
+ },
+ "scanr_projects:eu_project:101073355": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "QUARC: Quantum resistant communications: Advance Learning in applied PQC Training"
+ },
+ "scanr_projects:eu_project:101043189": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "DynAI: Omni-Supervised Learning for Dynamic Scene Understanding"
+ },
+ "scanr_projects:eu_project:101096379": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "CENTRIC: Towards an AI-native, user-centric air interface for 6G networks"
+ },
+ "scanr_projects:eu_project:101119968": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "MicrocombSys: Photonic System Engineering with Microcombs"
+ },
+ "scanr_projects:eu_project:101120332": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "EMPOWER-6G: EMPOWER CONVERGED OPTICAL WIRELESS CONFIGURATIONS WITH CELL-FREE TECHNOLOGIES FOR HIGH-DENSITY 6G NETWORKS"
+ },
+ "scanr_projects:eu_project:101130544": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "ThinkingEarth: Copernicus Foundation Models for a Thinking Earth"
+ },
+ "scanr_projects:eu_project:101139892": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "EdgeAI-Trust: Decentralized Edge Intelligence: Advancing Trust, Safety, and Sustainability in Europe"
+ },
+ "scanr_projects:eu_project:101140087": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "SMARTY: Scalable and Quantum Resilient Heterogeneous Edge Computing enabling Trustworthy AI"
+ },
+ "scanr_projects:eu_project:101192462": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "FLECON-6G: Flexible Open Architecture and AI-driven Enabling Technologies for a Novel 6G Connectivity Platform"
+ },
+ "scanr_projects:eu_project:101226674": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "MINDnet: Neuromorphic computing and signal processing training network"
+ },
+ "scanr_projects:eu_project:101227315": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "NEWTON: NovEl tEchnologies for converged Wireless-opTical cOnfiguratioNs"
+ },
+ "registry:financials:479973455:2024": {
+  "decision": "skip",
+  "reason": "no table for annual accounts yet",
+  "type": "financials",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: 2024 accounts"
+ },
+ "hal:funding_acknowledgement:hal-00350962": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Using Graphics Processors for Parallelizing Hash-based Data Carving"
+ },
+ "hal:funding_acknowledgement:hal-01152683": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Dense Dynamic Programming on Multi GPU"
+ },
+ "hal:funding_acknowledgement:hal-01151614": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Efficient Implementation of the Simplex Method on a CPU-GPU System"
+ },
+ "hal:funding_acknowledgement:hal-01152223": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Solving knapsack problems on GPU"
+ },
+ "hal:funding_acknowledgement:hal-01152948": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Parallel Branch and Bound on a CPU-GPU System"
+ },
+ "hal:funding_acknowledgement:hal-00732741": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Some examples of instant computations of fluid dynamics on GPU"
+ },
+ "hal:funding_acknowledgement:hal-01149777": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "GPU Implementation of the Branch and Bound method for knapsack problems"
+ },
+ "hal:funding_acknowledgement:hal-01151607": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Recent Advances on GPU Computing in Operations Research"
+ },
+ "hal:funding_acknowledgement:hal-02432711": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Pushing the boundaries of boundary detection using deep learning"
+ },
+ "hal:funding_acknowledgement:hal-01494003": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Facing Realism in Spontaneous Emotion Recognition from Speech: Feature Enhancement by Autoencoder with LSTM Neural Netwo"
+ },
+ "hal:funding_acknowledgement:hal-01486186": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Strength Modelling for Real-World Automatic Continuous Affect Recognition from Audiovisual Signals"
+ },
+ "hal:funding_acknowledgement:hal-04272697": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Understanding Tissue-Specific Gene Regulation"
+ },
+ "hal:funding_acknowledgement:hal-01835425": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Is ATIS too shallow to go deeper for benchmarking Spoken Language Understanding models?"
+ },
+ "hal:funding_acknowledgement:pasteur-03263394": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Supervised machine learning outperforms taxonomy-based environmental DNA metabarcoding applied to biomonitoring"
+ },
+ "hal:funding_acknowledgement:hal-02057378": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Learning Scene Geometry for Visual Localization in Challenging Conditions"
+ },
+ "hal:funding_acknowledgement:hal-03132263": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Geometry-Consistent Generative Adversarial Networks for One-Sided Unsupervised Domain Mapping"
+ },
+ "hal:funding_acknowledgement:hal-02168653": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Object removal from complex videos using a few annotations"
+ },
+ "hal:funding_acknowledgement:hal-02376539": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Classification of diabetes-related retinal diseases using a deep learning approach in optical coherence tomography"
+ },
+ "hal:funding_acknowledgement:hal-02167454": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Effective Rotation-invariant Point CNN with Spherical Harmonics kernels"
+ },
+ "hal:funding_acknowledgement:hal-03159795": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Towards Automated Deep Learning: Analysis of the AutoDL challenge series 2019"
+ },
+ "hal:funding_acknowledgement:cea-02529402": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Exact asymptotics for phase retrieval and compressed sensing with random generative priors"
+ },
+ "hal:funding_acknowledgement:hal-01991652": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Explaining First Impressions: Modeling, Recognizing, and Explaining Apparent Personality from Videos"
+ },
+ "hal:funding_acknowledgement:hal-02941116": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "RegQCNET: Deep quality control for image-to-template brain MRI affine registration"
+ },
+ "hal:funding_acknowledgement:hal-02361464": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Individualized growth prediction of mice skin tumors with maximum likelihood estimators"
+ },
+ "hal:funding_acknowledgement:cea-02529311": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Blind calibration for compressed sensing: State evolution and an online algorithm"
+ },
+ "hal:funding_acknowledgement:hal-03159859": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Guest Editorial: Image and Video Inpainting and Denoising"
+ },
+ "hal:funding_acknowledgement:hal-03086922": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "NCNet: Neighbourhood Consensus Networks for Estimating Image Correspondences"
+ },
+ "hal:funding_acknowledgement:hal-02930959": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "AssemblyNet: A large ensemble of CNNs for 3D whole brain MRI segmentation"
+ },
+ "hal:funding_acknowledgement:hal-02945493": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "ASVspoof 2019: A large-scale public database of synthesized, converted and replayed speech"
+ },
+ "hal:funding_acknowledgement:hal-02931623": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "3D numerical simulation of seagrass movement under waves and currents with GPUSPH"
+ },
+ "hal:funding_acknowledgement:hal-03353572": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Multimodal Gait Recognition Under Missing Modalities"
+ },
+ "hal:funding_acknowledgement:hal-03604113": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Cross-sectional study on exhaled nitric oxide in relation to upper airway inflammatory disorders with regard to asthma a"
+ },
+ "hal:funding_acknowledgement:hal-03886542": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Deep Learning-Based Segmentation of Head and Neck Organs-at-Risk with Clinical Partially Labeled Data"
+ },
+ "hal:funding_acknowledgement:hal-03159824": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "The Tracking Machine Learning challenge : Throughput phase"
+ },
+ "hal:funding_acknowledgement:hal-04070115": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "An interactive tool for visualization and prediction of solar radiation and photovoltaic generation in Colombia"
+ },
+ "hal:funding_acknowledgement:hal-04088339": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Deep learning-based segmentation of prostatic urethra on computed tomography scans for treatment planning"
+ },
+ "hal:funding_acknowledgement:pasteur-05154506": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Genomic assessment of invasion dynamics of SARS-CoV-2 Omicron BA.1"
+ },
+ "hal:funding_acknowledgement:hal-04336658": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Assessment of coronary microcirculation alterations in a porcine model of no-reflow using ultrasound localization micros"
+ },
+ "hal:funding_acknowledgement:hal-04395990": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Reinforcement-learning robotic sailboats: simulator and preliminary results"
+ },
+ "hal:funding_acknowledgement:hal-04911995": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Association between physical activity over a 10-year period and current insomnia symptoms, sleep duration and daytime sl"
+ },
+ "hal:funding_acknowledgement:insu-04537914": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Data availability and requirements relevant for the Ariel space mission and other exoplanet atmosphere applications"
+ },
+ "hal:funding_acknowledgement:hal-04867247": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Photoacoustic characterization of photothermal nanoparticles containing metal-bis(dithiolene) complexes: in vitro valida"
+ },
+ "hal:funding_acknowledgement:hal-04916919": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "DiffTV: Identity-Preserved Thermal-to-Visible Face Translation via Feature Alignment and Dual-Stage Conditions"
+ },
+ "hal:funding_acknowledgement:hal-05148829": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Yara: An Ocean Virtual Environment for Research and Development of Autonomous Sailing Robots and Other Unmanned Surface "
+ },
+ "hal:funding_acknowledgement:hal-05444175": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "NAM: Neural Adjoint Maps for refining shape correspondences"
+ },
+ "hal:funding_acknowledgement:hal-05294091": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "From Gridlock to Grid Asset: Data Centres for Digital Sovereignty, Energy Resilience, and Competitiveness"
+ },
+ "hal:funding_acknowledgement:hal-05502046": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Prompt Searches for Very-high-energy γ-Ray Counterparts to IceCube Astrophysical Neutrino Alerts"
+ },
+ "hal:funding_acknowledgement:hal-05448760": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "A Python/Fortran Implementation of the Lattice‐Boltzmann Kernel on Multiple GPU Using the OpenACC Framework"
+ },
+ "hal:funding_acknowledgement:hal-05499388": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Cross-procedure generalisation of an AI algorithm for surgical step prediction: from distal radius to fibula osteosynthe"
+ },
+ "hal:funding_acknowledgement:hal-05696181": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "WildIng: A Wildlife Image Invariant Representation Model for Geographical Domain Shift"
+ },
+ "hal:funding_acknowledgement:hal-05719551": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Combining artificial intelligence and local ecological knowledge to document the largest ever‐counted cape buffalo mega‐"
+ },
+ "hal:funding_acknowledgement:hal-05835061": {
+  "decision": "skip",
+  "reason": "kept as research evidence only",
+  "type": "funding_acknowledgement",
+  "title": "Elucidating the performance of data assimilation neural networks for chaotic dynamics"
+ },
+ "hal:hal_structure:118452": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "NVIDIA Research [Austin]"
+ },
+ "hal:hal_structure:12319": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "NVIDIA"
+ },
+ "hal:hal_structure:1347121": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "NVIDIA Photonic Systems Lab. [Athens]"
+ },
+ "hal:hal_structure:1544335": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "NVIDIA Corporation, Santa Clara California, United States."
+ },
+ "hal:hal_structure:259811": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "NVIDIA Corporation [Bangalore]"
+ },
+ "hal:hal_structure:466802": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "Nvidia Corporation [Santa Clara]"
+ },
+ "registry:legal_entity:432108355": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_entity",
+  "title": "NVIDIA LTD"
+ },
+ "registry:legal_entity:479973455": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_entity",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS"
+ },
+ "registry:legal_entity:109111526": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_entity",
+  "title": "NVIDIA SINGAPORE PTE. LTD."
+ },
+ "bodacc:legal_notice:C2008000398": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: ICERA SARL"
+ },
+ "bodacc:legal_notice:C20090002202": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: ICERA SARL"
+ },
+ "bodacc:legal_notice:C20090065220": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: ICERA SARL"
+ },
+ "bodacc:legal_notice:C20100063269": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: ICERA SARL"
+ },
+ "bodacc:legal_notice:B2011020677": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Developpement France SAS"
+ },
+ "bodacc:legal_notice:C20110085129": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20120092351": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20130057455": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20140071279": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20150058672": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:A20160090122": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Immatriculations: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:B20160090107": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C201600821002": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA DEVELOPMENT FRANCE SAS"
+ },
+ "bodacc:legal_notice:B201601612192": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C20170091847": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA DEVELOPMENT FRANCE SAS"
+ },
+ "bodacc:legal_notice:B201800293684": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:B2019004388": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20190043118": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20190169527": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20200171162": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:B202100075812": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:B20210013201": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20210182229": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:B20220034216": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:B20220043155": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:B20220066161": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20220158475": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20230161293": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:B20240045185": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20240162153": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C20250164443": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "bodacc:legal_notice:C202600048751": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C202600048752": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C202600048753": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C202600048754": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C202600048755": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C202600048756": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:B202600678278": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:B202600882626": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:B202601642337": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "legal_notice",
+  "title": "Modifications diverses: NVIDIA LTD"
+ },
+ "bodacc:legal_notice:C20260203362": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: NVIDIA Development France SAS"
+ },
+ "lobbying:lobbying_action:action:1149:Présenter la logique du projet d'acquisition de Arm par NVIDIA et son impact en France dans le contexte d'une autorisation préalable d'investissement étranger:2020:2020": {
+  "decision": "pending",
+  "reason": "medium match on NVIDIA",
+  "type": "lobbying_action",
+  "title": "BRUNSWICK lobbying for NVIDIA Corporation"
+ },
+ "lobbying:lobbying_action:action:1149:Présenter la logique du projet d'acquisition d'Arm par NVIDIA et son impact en France dans le contexte d'une autorisation préalable d'investissement étranger et au-delà:2021:2021": {
+  "decision": "pending",
+  "reason": "medium match on NVIDIA",
+  "type": "lobbying_action",
+  "title": "BRUNSWICK lobbying for NVIDIA Corporation"
+ },
+ "lobbying:lobbying_client:client:1149:321736133": {
+  "decision": "pending",
+  "reason": "medium match on NVIDIA Corporation",
+  "type": "lobbying_client",
+  "title": "BRUNSWICK lists NVIDIA Corporation as a client or member"
+ },
+ "lobbying:lobbying_client:client:2015:432108355": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "lobbying_client",
+  "title": "AMERICAIN CHAMBER OF COMMERC lists NVIDIA LTD as a client or member"
+ },
+ "navigator:navigator_record:articles:count": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "95 linked articles"
+ },
+ "navigator:navigator_record:legal_entity:432108355": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "NVIDIA LTD (succursale française)"
+ },
+ "navigator:navigator_record:relationship:9fdd34c2-608f-409f-8f19-4414407e9d4c": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from subsidiary_of NVentures"
+ },
+ "navigator:navigator_record:legal_entity:479973455": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "NVIDIA DEVELOPPEMENT FRANCE"
+ },
+ "navigator:navigator_record:relationship:e2413d83-8a41-45c9-96f0-3fa00e01ceb4": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with Université de Reims Champagne-Ardenne"
+ },
+ "navigator:navigator_record:grant:53650eb8-1b83-41e4-b4b4-3ff67798bd5c": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon 2020 – ESCAPE (Research and Innovation action)"
+ },
+ "navigator:navigator_record:project:eu-escape": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "ESCAPE"
+ },
+ "navigator:navigator_record:project:eu-hipernav": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "HiPerNav"
+ },
+ "navigator:navigator_record:relationship:58c9dacb-bc66-48c6-87e3-bc91ad977279": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to partnered_with Université de Reims Champagne-Ardenne"
+ },
+ "navigator:navigator_record:project:eu-achieve": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "ACHIEVE"
+ },
+ "navigator:navigator_record:project:eu-cosine": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "COSINE"
+ },
+ "navigator:navigator_record:project:eu-melloddy": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "MELLODDY"
+ },
+ "navigator:navigator_record:project:eu-rising-stars": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Rising STARS"
+ },
+ "navigator:navigator_record:project:eu-elsa": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "ELSA"
+ },
+ "navigator:navigator_record:grant:d4251200-fa11-4aca-9813-ce18a518348d": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – CENTRIC (Research and Innovation action)"
+ },
+ "navigator:navigator_record:project:eu-centric": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "CENTRIC"
+ },
+ "navigator:navigator_record:investment:993d385c-bcbd-4d7f-9eb5-f72fdb75bc2e": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Moon surgical (series_b)"
+ },
+ "navigator:navigator_record:investment:96b9326f-3279-4350-95ea-eed4c3b8be46": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Hugging Face (series_d)"
+ },
+ "navigator:navigator_record:relationship:7d6f3f4f-4eb2-4ffe-8f45-6640234e719e": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to invested_in Hugging Face"
+ },
+ "navigator:navigator_record:event:8c73498f-a60c-4eb5-a94d-6bbb7dc48f13": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "French competition authority raids NVIDIA's Paris office"
+ },
+ "navigator:navigator_record:grant:18b7f316-c26d-480c-adda-18a01fb2f9ef": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – MicrocombSys (Marie Skłodowska-Curie action)"
+ },
+ "navigator:navigator_record:project:eu-microcombsys": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "MicrocombSys"
+ },
+ "navigator:navigator_record:grant:0ee64929-e840-40ae-b2d5-ed0228fccf08": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – ThinkingEarth (Research and Innovation action)"
+ },
+ "navigator:navigator_record:project:eu-thinkingearth": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "ThinkingEarth"
+ },
+ "navigator:navigator_record:grant:229c0693-52c6-4237-b542-c773ebfa8033": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – EdgeAI-Trust (Innovation action)"
+ },
+ "navigator:navigator_record:project:eu-edgeai-trust": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "EdgeAI-Trust"
+ },
+ "navigator:navigator_record:investment:6852b7f4-ada8-4deb-8aa0-f94dc3dceab8": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Mistral AI (series_b)"
+ },
+ "navigator:navigator_record:investment:1921b46d-65c2-41d6-b8a7-98cf0a3dc6f7": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Poolside (series_b)"
+ },
+ "navigator:navigator_record:relationship:824adb92-2cdf-4d0a-b6c1-2d464ff1e0cb": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to invested_in Poolside"
+ },
+ "navigator:navigator_record:relationship:05bee937-5288-40a3-bf95-67d684ed381a": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with SESTERCE"
+ },
+ "navigator:navigator_record:grant:14f9326a-96bc-4247-a606-a2dca42bf18f": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – FLECON-6G (Research and Innovation action)"
+ },
+ "navigator:navigator_record:project:eu-flecon-6g": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "FLECON-6G"
+ },
+ "navigator:navigator_record:investment:13ef909f-9745-4063-b616-6db136657690": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Mistral AI (series_c)"
+ },
+ "navigator:navigator_record:investment:de3e28e2-aecd-464a-a3b1-f51ea4fe9061": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Scintil Photonics (series_b)"
+ },
+ "navigator:navigator_record:relationship:94cf5797-1606-4d49-b30f-581f18d298c4": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with GENCI"
+ },
+ "navigator:navigator_record:event:346ad47f-ee63-47f8-be62-eb686cdee4a1": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "HPE and NVIDIA announce AI Factory Lab in Grenoble"
+ },
+ "navigator:navigator_record:relationship:215cd3f9-ca85-4f22-8d0f-359b76ac36e0": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with Hewlett Packard Enterprise"
+ },
+ "navigator:navigator_record:project:eu-mindnet": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "MINDnet"
+ },
+ "navigator:navigator_record:grant:6c5b1324-96c5-400a-b445-4b77fa55d8a7": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – NEWTON (Marie Skłodowska-Curie action)"
+ },
+ "navigator:navigator_record:investment:582102d9-996a-4c70-9cdb-0f127f233908": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in AMI Labs (seed)"
+ },
+ "navigator:navigator_record:project:eu-newton": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "NEWTON"
+ },
+ "navigator:navigator_record:investment:f3da60cd-aec9-40b2-9c38-7ab8de21578f": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Alice & Bob (series_b)"
+ },
+ "navigator:navigator_record:investment:32ea279b-34d5-4186-88dd-9e25e325c8df": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Gradium (seed)"
+ },
+ "navigator:navigator_record:event:5290c190-9da0-4580-b3db-087e4facc4e4": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "French competition authority says NVIDIA probe is nearing its end"
+ },
+ "navigator:navigator_record:event:923cb5ae-9248-4a95-90bf-4c2cee51066f": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "NVIDIA agrees to acquire Hugging Face"
+ },
+ "navigator:navigator_record:relationship:37a3e07b-2df4-41ce-8836-83fe93417574": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to acquired Hugging Face"
+ },
+ "navigator:navigator_record:investment:80d10738-6729-46c7-9595-c9c1b98ec52b": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Mistral AI (series_d)"
+ },
+ "navigator:navigator_record:investment:08261e72-21cd-4de8-8999-4d23d7cf5294": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Genesis AI (undisclosed)"
+ },
+ "navigator:navigator_record:investment:478d6884-194d-46b2-bbdf-6f4cb9cf0685": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Entalpic (undisclosed)"
+ },
+ "navigator:navigator_record:investment:4d695df9-f978-442b-b50b-ee22d67d2ccd": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Doctolib (undisclosed)"
+ },
+ "navigator:navigator_record:relationship:17880df9-2d04-4471-b6dd-05a62553db27": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to invested_in Doctolib"
+ },
+ "navigator:navigator_record:relationship:6e323dc8-b629-4711-81f5-cd307cc6b1f2": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to invested_in Genesis AI"
+ },
+ "navigator:navigator_record:relationship:9e8c78cc-ccf3-4e36-ac55-0a3583faeaca": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to invested_in Entalpic"
+ },
+ "navigator:navigator_record:relationship:eb4498f0-fee2-413c-aff4-0b04794479d4": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to partnered_with Fondation Inria"
+ },
+ "navigator:navigator_record:investment:c0df7689-d73c-4b90-a7ce-5b93aceb985b": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Investor in Pigment (series_e)"
+ },
+ "navigator:navigator_record:relationship:626a6a2f-d59b-46e5-8294-436ce04f37ab": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with Valeo"
+ },
+ "navigator:navigator_record:relationship:ba41c904-0f80-4dd1-9761-5dbf2b433211": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with Omi"
+ },
+ "navigator:navigator_record:relationship:1becfa31-349e-4e54-8cc6-d7272831a8d8": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with Wayve"
+ },
+ "navigator:navigator_record:relationship:36f7c2e2-3d39-418f-b755-f1d4131de460": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "from partnered_with Stellantis"
+ },
+ "navigator:navigator_record:event:00d42c44-dff7-4711-8139-6e8ef1d765d0": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Jensen Huang steps down as NVIDIA CEO"
+ },
+ "registry:officer:109111526:EMMANUEL COTESSAT SOCIÉTÉ D'AVOCATS:Représentant fiscal d’une entreprise personne étrangère sans établissement en France": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "EMMANUEL COTESSAT SOCIÉTÉ D'AVOCATS"
+ },
+ "registry:officer:432108355:PAUL DAVID SCHELIN:Dirigeant en France d’une personne morale étrangère": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "PAUL DAVID SCHELIN"
+ },
+ "registry:officer:432108355:SONIA MEDIAVILLA (TALAMELLI):Dirigeant en France d’une personne morale étrangère": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "SONIA MEDIAVILLA (TALAMELLI)"
+ },
+ "registry:officer:479973455:DELOITTE & ASSOCIES:Commissaire aux comptes titulaire": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "DELOITTE & ASSOCIES"
+ },
+ "registry:officer:479973455:MARK STEVEN HOOSE:Président de SAS": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "MARK STEVEN HOOSE"
+ },
+ "registry:officer:479973455:MICHAEL DAVID CHING:Président de SAS": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "MICHAEL DAVID CHING"
+ },
+ "registry:officer:479973455:PRICEWATERHOUSECOOPERS AUDIT:Commissaire aux comptes titulaire": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "PRICEWATERHOUSECOOPERS AUDIT"
+ },
+ "registry:officer:479973455:REBECCA PETERS:Directeur Général": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "REBECCA PETERS"
+ },
+ "registry:officer:479973455:SCOTT C GAWEL:Directeur Général": {
+  "decision": "skip",
+  "reason": "people records are created by hand",
+  "type": "officer",
+  "title": "SCOTT C GAWEL"
+ },
+ "patents:patent:42110632": {
+  "decision": "pending",
+  "reason": "medium match on Icera",
+  "type": "patent",
+  "title": "Overriding production processor authentication restrictions through remote security unit for development code testing"
+ },
+ "patents:patent:42799527": {
+  "decision": "pending",
+  "reason": "medium match on Icera",
+  "type": "patent",
+  "title": "Adapting transport block size for uplink channel transmission"
+ },
+ "patents:patent:48042018": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Communication system and method"
+ },
+ "patents:patent:48223624": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Communication system and method"
+ },
+ "patents:patent:48571923": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Communication system and method"
+ },
+ "patents:patent:48611385": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "System and method for transmitting graphics rendered on a primary computer to a secondary computer"
+ },
+ "patents:patent:48743867": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Communication system and method"
+ },
+ "patents:patent:49476835": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Compressing graphics data rendered on a primary computer for transmission to a remote computer"
+ },
+ "patents:patent:49384668": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Server based graphics processing techniques"
+ },
+ "patents:patent:47136978": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Error recovery"
+ },
+ "patents:patent:50275620": {
+  "decision": "pending",
+  "reason": "medium match on Nvidia",
+  "type": "patent",
+  "title": "Efficient CPU mailbox read access to GPU memory"
+ },
+ "procurement:public_contract:33071536800297:20212021F0975400:35152822900088": {
+  "decision": "pending",
+  "reason": "low match on NVIDIA",
+  "type": "public_contract",
+  "title": "Institut Francais de Recherche pour L Exploitation de la Mer → Dell."
+ },
+ "procurement:public_contract:18008901303720:2021S00301:31179945600018": {
+  "decision": "pending",
+  "reason": "low match on DGX",
+  "type": "public_contract",
+  "title": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence) → DSV Road"
+ },
+ "procurement:public_contract:18008901303720:2022S00043:55208853602160": {
+  "decision": "pending",
+  "reason": "low match on DGX",
+  "type": "public_contract",
+  "title": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence) → Ceva Air & Océan International"
+ },
+ "procurement:public_contract:18008901303720:2022S00671:55208853602160": {
+  "decision": "pending",
+  "reason": "low match on DGX",
+  "type": "public_contract",
+  "title": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence) → Ceva Air & Océan International"
+ },
+ "procurement:public_contract:18008901303720:2022S00739:55208853602160": {
+  "decision": "pending",
+  "reason": "low match on DGX",
+  "type": "public_contract",
+  "title": "Centre National de la Recherche Scientifique (CNRS MOY1601 Presidence) → Ceva Air & Océan International"
+ },
+ "hal:research_paper:ensl-00000002": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "High-Speed Function Approximation using a Minimax Quadratic Interpolator"
+ },
+ "hal:research_paper:inria-00510246": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Meshless Finite Elements for Hierarchical Global Illumination"
+ },
+ "hal:research_paper:inria-00345275": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "A Meshless Hierarchical Representation for Light Transport"
+ },
+ "hal:research_paper:hal-00924259": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Radiance Space, as Represented by the Visibility 2-Skeleton"
+ },
+ "hal:research_paper:inria-00510233": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Beyond Triangles : GigaVoxels Effects In Video Games"
+ },
+ "hal:research_paper:inria-00516416": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Efficient Rendering of Highly Detailed Volumetric Scenes with GigaVoxels"
+ },
+ "hal:research_paper:hal-00650218": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Interactive Indirect Illumination Using Voxel Cone Tracing: An Insight"
+ },
+ "hal:research_paper:hal-00650196": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Interactive Indirect Illumination Using Voxel Cone Tracing: A Preview"
+ },
+ "hal:research_paper:hal-00650173": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Interactive Indirect Illumination Using Voxel Cone Tracing"
+ },
+ "hal:research_paper:ensl-00649650": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Simultaneous Branch and Warp Interweaving for Sustained GPU Performance"
+ },
+ "hal:research_paper:hal-00725477": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "StarPU-MPI: Task Programming over Clusters of Machines Enhanced with Accelerators"
+ },
+ "hal:research_paper:hal-01298429": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Forward and Adjoint Simulations of Seismic Wave Propagation on Emerging Large-scale GPU Architectures"
+ },
+ "hal:research_paper:hal-00765015": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Forward and adjoint simulations of seismic wave propagation on emerging large-scale GPU architectures"
+ },
+ "hal:research_paper:hal-01579277": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Domain wall motion in nanopillar spin-valves with perpendicular anisotropy driven by spin-transfer torques"
+ },
+ "hal:research_paper:hal-00930147": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Particle-based Anisotropic Surface Meshing"
+ },
+ "hal:research_paper:hal-00762548": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Evaluation of Depth of Field for Depth Perception in DVR"
+ },
+ "hal:research_paper:hal-00911177": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Hybrid Hexagonal/Classical Tiling for GPUs"
+ },
+ "hal:research_paper:hal-01017185": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Low Power Reconfigurable Controllers for Wireless Sensor Network Nodes"
+ },
+ "hal:research_paper:hal-01271717": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Open and interoperable augmented reality"
+ },
+ "hal:research_paper:hal-01083080": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Programming Abstractions for Data Locality"
+ },
+ "hal:research_paper:hal-01500955": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "The SGGX microflake distribution"
+ },
+ "hal:research_paper:hal-02162331": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Proceedings of IEEE 23rd Symposium on Computer Arithmetic"
+ },
+ "hal:research_paper:hal-01312227": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Estimating Local Beckmann Roughness for Complex BSDFs"
+ },
+ "hal:research_paper:hal-01704164": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Leveraging accelerators in the multiple implicitly restarted Arnoldi method with nested subspaces"
+ },
+ "hal:research_paper:hal-01354939": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "The Mont-Blanc prototype: An Alternative Approach for HPC Systems"
+ },
+ "hal:research_paper:hal-01635508": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Sensitive Photoacoustic IR Spectroscopy for the Characterization of Amino/Azido Mixed-Linker Metal-Organic Frameworks"
+ },
+ "hal:research_paper:hal-02010086": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Structured adaptive and random spinners for fast machine learning computations"
+ },
+ "hal:research_paper:hal-01585892": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Focus-tunable and Fixed Lenses and Stereoscopic 3D Displays"
+ },
+ "hal:research_paper:hal-01483753": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Consistent Video Filtering for Camera Arrays"
+ },
+ "hal:research_paper:hal-01609459": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Parallel Modularity Clustering"
+ },
+ "hal:research_paper:hal-01676191": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Aether: An Embedded Domain Specific Sampling Language for Monte Carlo Rendering"
+ },
+ "hal:research_paper:hal-01585878": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Applications of Visual Perception to Virtual Reality Rendering"
+ },
+ "hal:research_paper:hal-01621371": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Trends in Data Locality Abstractions for HPC Systems"
+ },
+ "hal:research_paper:hal-01609446": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Accelerated Hybrid Approach for Spectral Problems Arising in Graph Analytics"
+ },
+ "hal:research_paper:hal-01667553": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Parallel Jaccard and Related Graph Clustering Techniques"
+ },
+ "hal:research_paper:hal-01648100": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Introduction to the Special Section on Computer Arithmetic"
+ },
+ "hal:research_paper:hal-01695622": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Cutting-Edge VR/AR Display Technologies (Gaze-, Accommodation-, Motion-aware and HDR-enabled)"
+ },
+ "hal:research_paper:hal-02288948": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "VIPER: Volume Invariant Position-based Elastic Rods"
+ },
+ "hal:research_paper:hal-02430914": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "SHREC 2019 Track: Online Gesture Recognition"
+ },
+ "hal:research_paper:hal-02403109": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Asynchronous Task-Based Execution of the Reverse Time Migration for the Oil and Gas Industry"
+ },
+ "hal:research_paper:hal-02435407": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Video Face Clustering with Unknown Number of Clusters"
+ },
+ "hal:research_paper:hal-02938099": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "High Intrinsic Dimensionality Facilitates Adversarial Attack: Theoretical Evidence"
+ },
+ "hal:research_paper:hal-02930925": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Glossy Probe Reprojection for Interactive Global Illumination"
+ },
+ "hal:research_paper:cea-03452243": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Going Remote: Challenges and Opportunities to Remote Learning, Work, and Collaboration"
+ },
+ "hal:research_paper:hal-03671850": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Simulation and Synthesis in Medical Imaging"
+ },
+ "hal:research_paper:hal-04125006": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Cascaded Sobol’ Sampling"
+ },
+ "hal:research_paper:hal-03272502": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Video-Based Rendering of Dynamic Stationary Environments from Unsynchronized Inputs"
+ },
+ "hal:research_paper:hal-03348787": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Resiliency in numerical algorithm design for extreme scale simulations"
+ },
+ "hal:research_paper:hal-03973243": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Latent space data assimilation by using deep learning"
+ },
+ "hal:research_paper:hal-03172123": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "On the generalizability of diffusion MRI signal representations across acquisition parameters, sequences and tissue type"
+ },
+ "hal:research_paper:hal-03237937": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Genome-wide bioinformatic analyses predict key host and viral factors in SARS-CoV-2 pathogenesis"
+ },
+ "hal:research_paper:hal-03358957": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Cascaded Sobol' Sampling"
+ },
+ "hal:research_paper:hal-03482276": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "The Emergence of Wireless MAC Protocols with Multi-Agent Reinforcement Learning"
+ },
+ "hal:research_paper:hal-03296180": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Adversarial attacks via backward error analysis"
+ },
+ "hal:research_paper:hal-03476708": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Learning OFDM Waveforms with PAPR and ACLR Constraints"
+ },
+ "hal:research_paper:hal-03683790": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "ALMA-IMF. I. Investigating the origin of stellar masses: Introduction to the Large Program and first results"
+ },
+ "hal:research_paper:hal-03709343": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Advances in Modeling and Simulation"
+ },
+ "hal:research_paper:hal-03717062": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Introduction to the Festschrift"
+ },
+ "hal:research_paper:insu-04041377": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "A high-performance data acquisition on COTS hardware for astronomical instrumentation"
+ },
+ "hal:research_paper:hal-03548298": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Unified Model and Framework for Interactive Mixed Entity Systems"
+ },
+ "hal:research_paper:hal-03122125": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Nonlinear post-selection inference for genome-wide association studies"
+ },
+ "hal:research_paper:hal-03601303": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "SpeechBrain: A General-Purpose Speech Toolkit"
+ },
+ "hal:research_paper:hal-03664112": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "MatBuilder: Mastering Sampling Uniformity Over Projections"
+ },
+ "hal:research_paper:hal-03780816": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "LIPS - Learning Industrial Physical Simulation benchmark suite"
+ },
+ "hal:research_paper:hal-03910329": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "MegaPose: 6D Pose Estimation of Novel Objects via Render & Compare"
+ },
+ "hal:research_paper:hal-04105889": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "MesoGAN: Generative Neural Reflectance Shells"
+ },
+ "hal:research_paper:hal-04525072": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Learn2Reg: Comprehensive Multi-Task Medical Image Registration Challenge, Dataset and Evaluation in the Era of Deep Lear"
+ },
+ "hal:research_paper:hal-04733065": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Data Assimilation Networks"
+ },
+ "hal:research_paper:hal-04321188": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "The Robust Semantic Segmentation UNCV2023 Challenge Results"
+ },
+ "hal:research_paper:hal-04762441": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Compact and low-loss PCM-based silicon photonic MZIs for photonic neural networks"
+ },
+ "hal:research_paper:hal-04299103": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "The 2DECOMP&FFT library: an update with new CPU/GPU capabilities"
+ },
+ "hal:research_paper:hal-04345927": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Understanding metric-related pitfalls in image analysis validation"
+ },
+ "hal:research_paper:hal-04480158": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Understanding metric-related pitfalls in image analysis validation"
+ },
+ "hal:research_paper:hal-04944072": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "ML4PhySim : Machine Learning for Physical Simulations Challenge (The airfoil design)"
+ },
+ "hal:research_paper:hal-04651540": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Multi-Track Timeline Control for Text-Driven 3D Human Motion Generation"
+ },
+ "hal:research_paper:hal-05132721": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "OCTAPUS: Empowering Next Generation Central Offices with Cross-Layer Network Intelligence Towards a Reconfigurable Data "
+ },
+ "hal:research_paper:hal-04009160": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Generator Matrices by Solving Integer Linear Programs"
+ },
+ "hal:research_paper:hal-04715638": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Confidence intervals uncovered: Are we ready for real-world medical imaging AI?"
+ },
+ "hal:research_paper:hal-04902062": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Workflows Community Summit 2024: Future Trends and Challenges in Scientific Workflows"
+ },
+ "hal:research_paper:hal-04738742": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Roadmap on methods and software for electronic structure based simulations in chemistry and materials"
+ },
+ "hal:research_paper:hal-04579665": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Shortcut to Chemically Accurate Quantum Computing via Density-based Basis-set Correction."
+ },
+ "hal:research_paper:hal-04789353": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Promoting best practices in ocean forecasting through an Operational Readiness Level"
+ },
+ "hal:research_paper:hal-04164243": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Principles and Guidelines for Evaluating Social Robot Navigation Algorithms"
+ },
+ "hal:research_paper:hal-04869170": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "NeurIPS 2024 ML4CFD Competition: Harnessing Machine Learning for Computational Fluid Dynamics in Airfoil Design"
+ },
+ "hal:research_paper:hal-05423293": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "PaRSEC: Scalability, flexibility, and hybrid architecture support for task-based applications in ECP"
+ },
+ "hal:research_paper:hal-05325213": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Make me an Expert: Distilling from Generalist Black-Box Models into Specialized Models for Semantic Segmentation"
+ },
+ "hal:research_paper:hal-05288458": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "iKnow-audio: Integrating Knowledge Graphs with Audio-Language Models"
+ },
+ "hal:research_paper:hal-05827029": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Physical models and Monte Carlo estimates for spatial and angular derivatives of the specific intensity"
+ },
+ "hal:research_paper:hal-05869841": {
+  "decision": "accept",
+  "reason": "identifier match",
+  "type": "research_paper",
+  "title": "Validating traces of distributed programs against TLA+ specifications"
+ },
+ "hal:research_paper:hal-05494490": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "ETP4HPC SRA 6 White Paper - Energy Efficiency and Sustainability. ETP4HPC"
+ },
+ "hal:research_paper:hal-05527574": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "ULISSE: Parameter-Efficient Adaptation of Earth Vision Models to Monitor Forest Disturbance in Sentinel-2 time series"
+ },
+ "hal:research_paper:hal-05578587": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Toward an Operational GNN-Based Multimesh Surrogate for Fast Flood Forecasting"
+ },
+ "hal:research_paper:hal-05657595": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "VOX2Surf: Faithful surface extraction from coarse binary voxels"
+ },
+ "hal:research_paper:hal-05772318": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "A Survey of Distributed Asynchronous Many-Task Models and Their Applications"
+ },
+ "hal:research_paper:meteo-05796490": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Probabilistic multi-fidelity climate model parameterization for better generalization"
+ },
+ "hal:research_paper:hal-05769714": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "research_paper",
+  "title": "Scaling Physics-to-Protocol Digital Twins for 5G/6G Networks"
+ }
+}

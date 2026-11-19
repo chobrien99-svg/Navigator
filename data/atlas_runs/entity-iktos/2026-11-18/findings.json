@@ -1,0 +1,3165 @@
+[
+ {
+  "finding_id": "registry:establishment:82318927900016",
+  "entity": "iktos",
+  "type": "establishment",
+  "date": "2016-10-17",
+  "date_precision": "day",
+  "title": "IKTOS (IKTOS): site in PARIS",
+  "summary": "Opened 2016-10-17, closed 2019-06-19",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "82318927900016",
+   "address": "61 RUE BLOMET 75015 PARIS",
+   "naf": "62.01Z",
+   "status": "F",
+   "closed": "2019-06-19"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "82318927900016"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:establishment:82318927900024",
+  "entity": "iktos",
+  "type": "establishment",
+  "date": "2019-06-19",
+  "date_precision": "day",
+  "title": "IKTOS (IKTOS): site in PARIS",
+  "summary": "Opened 2019-06-19, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "82318927900024",
+   "address": "65 RUE DE PRONY 75017 PARIS",
+   "naf": "62.01Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "82318927900024"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:establishment:82318927900032",
+  "entity": "iktos",
+  "type": "establishment",
+  "date": "2022-07-01",
+  "date_precision": "day",
+  "title": "IKTOS (IKTOS): site in VILLEBON-SUR-YVETTE",
+  "summary": "Opened 2022-07-01, closed 2026-08-03",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "82318927900032",
+   "address": "25-27-BATIMENT B 25 AVENUE DU QUEBEC 91140 VILLEBON-SUR-YVETTE",
+   "naf": "72.11Z",
+   "status": "F",
+   "closed": "2026-08-03"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "82318927900032"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:establishment:82318927900040",
+  "entity": "iktos",
+  "type": "establishment",
+  "date": "2024-06-28",
+  "date_precision": "day",
+  "title": "IKTOS (IKTOS): site in EVRY-COURCOURONNES",
+  "summary": "Opened 2024-06-28, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "82318927900040",
+   "address": "BATIMENT MAUPERTUIS RUE DU PERE ANDRE JARLAN 91000 EVRY-COURCOURONNES",
+   "naf": "72.11Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "82318927900040"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:establishment:82318927900057",
+  "entity": "iktos",
+  "type": "establishment",
+  "date": "2026-08-03",
+  "date_precision": "day",
+  "title": "IKTOS (IKTOS): site in LONGJUMEAU",
+  "summary": "Opened 2026-08-03, open",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "siret": "82318927900057",
+   "address": "BATIMENT B9 1 E RUE PDT FRANCOIS MITTERRAND 91160 LONGJUMEAU",
+   "naf": "72.19Z",
+   "status": "A",
+   "closed": null
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "82318927900057"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:831472",
+  "entity": "iktos",
+  "type": "eu_project",
+  "date": "2019-06-01",
+  "date_precision": "day",
+  "title": "MELLODDY: MachinE Learning Ledger Orchestration for Drug DiscoverY",
+  "summary": "Horizon 2020; Iktos received €343,402; 3 FR partner(s) received €3,542,117.",
+  "amount_eur": 343402.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "Owkin France",
+    "country": "FR",
+    "role": "coordinator",
+    "amount_eur": 2683635.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Substra",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 858482.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Institut de recherches servier",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": null,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "MELLODDY",
+   "programme": "Horizon 2020",
+   "action": "RIA",
+   "start": "2019-06-01T00:00:00",
+   "end": "2022-05-31T00:00:00",
+   "eu_contribution_total": 8000000.0,
+   "budget_total": 18635465.0,
+   "entity_participants": [
+    {
+     "name": "Iktos",
+     "eur": 343402.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "FRA"
+    }
+   ],
+   "entity_eur": 343402.0,
+   "focus_partners_eur": 3542117.0,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/831472",
+   "external_id": "831472"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants",
+  "in_navigator": true
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101005077",
+  "entity": "iktos",
+  "type": "eu_project",
+  "date": "2020-04-01",
+  "date_precision": "day",
+  "title": "CARE: Corona Accelerated R&D in Europe",
+  "summary": "Horizon 2020; Iktos received €391,500; 10 FR partner(s) received €11,787,750.",
+  "amount_eur": 391500.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "Institut national de la santé et de la recherche médicale",
+    "country": "FR",
+    "role": "coordinator",
+    "amount_eur": 6630753.05,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 1824570.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Aix-Marseille Université",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 1090486.25,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Université Paris-Est Créteil",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 749060.0,
+    "participates_as": "thirdparty"
+   },
+   {
+    "name": "Centre national de la recherche scientifique",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 501250.0,
+    "participates_as": "thirdparty"
+   },
+   {
+    "name": "Inserm Transfert",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 450000.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Enyo Pharma",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 295996.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Université de Bordeaux",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 133385.0,
+    "participates_as": "thirdparty"
+   },
+   {
+    "name": "Ai-biopharma",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": 112250.0,
+    "participates_as": "beneficiary"
+   },
+   {
+    "name": "Institut de recherches servier",
+    "country": "FR",
+    "role": "partner",
+    "amount_eur": null,
+    "participates_as": "beneficiary"
+   }
+  ],
+  "facts": {
+   "acronym": "CARE",
+   "programme": "Horizon 2020",
+   "action": "RIA",
+   "start": "2020-04-01T00:00:00",
+   "end": "2025-03-31T00:00:00",
+   "eu_contribution_total": 36559186.09,
+   "budget_total": 75906676.07,
+   "entity_participants": [
+    {
+     "name": "Iktos",
+     "eur": 391500.0,
+     "role": "partner",
+     "participates_as": "beneficiary",
+     "country": "FRA"
+    }
+   ],
+   "entity_eur": 391500.0,
+   "focus_partners_eur": 11787750.3,
+   "has_focus_partner": true
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101005077",
+   "external_id": "101005077"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants",
+  "in_navigator": true
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101197269",
+  "entity": "iktos",
+  "type": "eu_project",
+  "date": "2024",
+  "date_precision": "year",
+  "title": "AIR-3D: Iktos Robotics: Integrating AI and Robotics for efficient Drug Design and Discovery",
+  "summary": "Horizon Europe; Iktos took part with no EU funding recorded; no FR partner.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "AIR-3D",
+   "programme": "Horizon Europe",
+   "action": "EIC",
+   "start": null,
+   "end": null,
+   "eu_contribution_total": 2500000.0,
+   "budget_total": 2500000.0,
+   "entity_participants": [
+    {
+     "name": "Iktos",
+     "eur": 0.0,
+     "role": "coordinator",
+     "participates_as": "beneficiary",
+     "country": "FRA"
+    }
+   ],
+   "entity_eur": 0.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101197269",
+   "external_id": "101197269"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "scanr_projects:eu_project:101217538",
+  "entity": "iktos",
+  "type": "eu_project",
+  "date": "2025-08-01",
+  "date_precision": "day",
+  "title": "AIR-3D: Iktos Robotics: Integrating AI and Robotics for efficient Drug Design and Discovery",
+  "summary": "Horizon Europe; Iktos received €2,499,616; no FR partner.",
+  "amount_eur": 2499616.0,
+  "amount_basis": "EU contribution",
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "acronym": "AIR-3D",
+   "programme": "Horizon Europe",
+   "action": "EIC",
+   "start": "2025-08-01T00:00:00",
+   "end": "2027-07-31T00:00:00",
+   "eu_contribution_total": 2499616.0,
+   "budget_total": 3570880.0,
+   "entity_participants": [
+    {
+     "name": "Iktos",
+     "eur": 2499616.0,
+     "role": "coordinator",
+     "participates_as": "beneficiary",
+     "country": "FRA"
+    }
+   ],
+   "entity_eur": 2499616.0,
+   "focus_partners_eur": 0,
+   "has_focus_partner": false
+  },
+  "source": {
+   "connector": "scanr_projects",
+   "name": "scanR (Ministry of Higher Education and Research), CORDIS data",
+   "url": "https://cordis.europa.eu/project/id/101217538",
+   "external_id": "101217538"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "projects, project_links, grants",
+  "in_navigator": true
+ },
+ {
+  "finding_id": "registry:financials:823189279:2022",
+  "entity": "iktos",
+  "type": "financials",
+  "date": "2022",
+  "date_precision": "year",
+  "title": "IKTOS (IKTOS): 2022 accounts",
+  "summary": "Revenue €4,457,371; net income €-1,314,472",
+  "amount_eur": 4457371,
+  "amount_basis": "revenue",
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "ca": 4457371,
+   "resultat_net": -1314472
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:2022"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization profile",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:hal_structure:1192719",
+  "entity": "iktos",
+  "type": "hal_structure",
+  "date": null,
+  "date_precision": null,
+  "title": "Iktos",
+  "summary": "HAL structure 1192719 (institution, fr, INCOMING).",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "hal_struct_id": 1192719,
+   "country": "fr"
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://aurehal.archives-ouvertes.fr/structure/read/id/1192719",
+   "external_id": "1192719"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "entity file (hal_struct_ids)",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:hal_structure:1221456",
+  "entity": "iktos",
+  "type": "hal_structure",
+  "date": null,
+  "date_precision": null,
+  "title": "Iktos SAS, 75017 Paris, France",
+  "summary": "HAL structure 1221456 (institution, fr, INCOMING).",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos SAS, 75017 Paris, France"
+  },
+  "counterparts": [],
+  "facts": {
+   "hal_struct_id": 1221456,
+   "country": "fr"
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://aurehal.archives-ouvertes.fr/structure/read/id/1221456",
+   "external_id": "1221456"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos SAS, 75017 Paris, France",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "entity file (hal_struct_ids)",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:hal_structure:1645589",
+  "entity": "iktos",
+  "type": "hal_structure",
+  "date": null,
+  "date_precision": null,
+  "title": "Iktos AI, Paris",
+  "summary": "HAL structure 1645589 (institution, fr, INCOMING).",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos AI, Paris"
+  },
+  "counterparts": [],
+  "facts": {
+   "hal_struct_id": 1645589,
+   "country": "fr"
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://aurehal.archives-ouvertes.fr/structure/read/id/1645589",
+   "external_id": "1645589"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos AI, Paris",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "entity file (hal_struct_ids)",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:legal_entity:823189279",
+  "entity": "iktos",
+  "type": "legal_entity",
+  "date": "2016-10-17",
+  "date_precision": "day",
+  "title": "IKTOS (IKTOS)",
+  "summary": "activity 62.01Z, seat: PARIS, 50–99 staff (2024), active",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "legal_form_code": "5599",
+   "naf": "62.01Z",
+   "headcount_band": "50–99",
+   "headcount_year": "2024",
+   "seat_address": "65 RUE DE PRONY 75017 PARIS",
+   "status": "A",
+   "establishments_open": 3
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "legal_entities",
+  "in_navigator": true
+ },
+ {
+  "finding_id": "bodacc:legal_notice:A20160212976",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2016-10-28",
+  "date_precision": "day",
+  "title": "Créations: Iktos",
+  "summary": "Immatriculation d'une personne morale (B, C, D) suite à création d'un établissement principal",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "creation",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20160212976",
+   "external_id": "A20160212976"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B20170146695",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2017-08-02",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20170146695",
+   "external_id": "B20170146695"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B201800211135",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2018-01-31",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur la forme juridique et l'administration",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800211135",
+   "external_id": "B201800211135"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B201800211136",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2018-01-31",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800211136",
+   "external_id": "B201800211136"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C2018012911079",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2018-07-18",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2017-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C2018012911079",
+   "external_id": "C2018012911079"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C201901209361",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2019-06-25",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2018-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C201901209361",
+   "external_id": "C201901209361"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B201901551273",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2019-08-13",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation), l'adresse du siège, l'adresse de l'établissement et l'administration",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201901551273",
+   "external_id": "B201901551273"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202001483931",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2020-08-02",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2019-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202001483931",
+   "external_id": "C202001483931"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202100522257",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2021-03-16",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202100522257",
+   "external_id": "B202100522257"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202101142040",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2021-06-13",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202101142040",
+   "external_id": "B202101142040"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202101385339",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2021-07-18",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2020-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202101385339",
+   "external_id": "C202101385339"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202101942597",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2021-10-05",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "GREFFE DU TRIBUNAL DE COMMERCE DE PARIS",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202101942597",
+   "external_id": "B202101942597"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202200582010",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2022-03-23",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202200582010",
+   "external_id": "B202200582010"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202201082011",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2022-06-03",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202201082011",
+   "external_id": "B202201082011"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202201396139",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2022-07-20",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2021-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce de paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202201396139",
+   "external_id": "C202201396139"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202201823570",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2022-09-20",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202201823570",
+   "external_id": "B202201823570"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202202151885",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2022-11-04",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202202151885",
+   "external_id": "B202202151885"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202300862395",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2023-05-02",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation), la forme juridique, l'administration et le représentant permanent",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202300862395",
+   "external_id": "B202300862395"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202301343348",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2023-07-13",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202301343348",
+   "external_id": "B202301343348"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202301415910",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2023-07-25",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2022-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce de paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202301415910",
+   "external_id": "C202301415910"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202401092101",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2024-06-07",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur l'administration",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401092101",
+   "external_id": "B202401092101"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202401141159",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2024-06-14",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur l'administration",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401141159",
+   "external_id": "B202401141159"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202401141160",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2024-06-14",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le capital (augmentation)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401141160",
+   "external_id": "B202401141160"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202401192173",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2024-06-21",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur le représentant permanent",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal de Commerce de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401192173",
+   "external_id": "B202401192173"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202401487183",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2024-08-01",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2023-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal de Commerce de paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202401487183",
+   "external_id": "C202401487183"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202600631310",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2026-04-01",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2024-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202600631310",
+   "external_id": "C202600631310"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202600726264",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2026-04-15",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur l'administration",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal des Activités Economiques de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202600726264",
+   "external_id": "B202600726264"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:C202601789846",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2026-09-17",
+  "date_precision": "day",
+  "title": "Dépôts des comptes: Iktos",
+  "summary": "Accounts filed Comptes annuels et rapports for year ending 2025-12-31",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "dpc",
+   "court": "Greffe du Tribunal des Activités Economiques de paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202601789846",
+   "external_id": "C202601789846"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:B202601791944",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2026-09-18",
+  "date_precision": "day",
+  "title": "Modifications diverses: Iktos",
+  "summary": "modification survenue sur l'administration",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "modification",
+   "court": "Greffe du Tribunal des Activités Economiques de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202601791944",
+   "external_id": "B202601791944"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "bodacc:legal_notice:A202602034982",
+  "entity": "iktos",
+  "type": "legal_notice",
+  "date": "2026-10-22",
+  "date_precision": "day",
+  "title": "Procédures collectives: Iktos",
+  "summary": "Jugement d'ouverture Jugement d'ouverture d'une procédure de redressement judiciaire Jugement prononçant l'ouverture d'une procédure de redressement judiciaire, date de cessation des paiements le 18 septembre 2026, désignant : administrateur SCP d'administrateurs judiciaires Abitbol & rousselet en la personne de Me Joanna Rousselet 38 avenue Hoche 75008 Paris, avec pour mission : d'assister, manda",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos",
+   "siren": "823189279"
+  },
+  "counterparts": [],
+  "facts": {
+   "family": "collective",
+   "court": "Greffe du Tribunal des Activités Economiques de Paris",
+   "town": "Paris",
+   "notice_type": "Avis initial"
+  },
+  "source": {
+   "connector": "bodacc",
+   "name": "BODACC (Bulletin officiel des annonces civiles et commerciales)",
+   "url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602034982",
+   "external_id": "A202602034982"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_events",
+  "in_navigator": true
+ },
+ {
+  "finding_id": "navigator:navigator_record:grant:5d5f4ba6-fc2e-4937-8068-f55de1420bb7",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "Horizon 2020 – CARE (Research and Innovation action)",
+  "summary": "European Commission (Horizon 2020)",
+  "amount_eur": 391500,
+  "amount_basis": "as stored",
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "grant",
+   "url": "https://cordis.europa.eu/project/id/101005077"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "grant:5d5f4ba6-fc2e-4937-8068-f55de1420bb7"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:grant:bb7b2e1d-9636-44f8-a0e3-9376db39bebf",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "Horizon 2020 – MELLODDY (Research and Innovation action)",
+  "summary": "European Commission (Horizon 2020)",
+  "amount_eur": 343402,
+  "amount_basis": "as stored",
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "grant",
+   "url": "https://cordis.europa.eu/project/id/831472"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "grant:bb7b2e1d-9636-44f8-a0e3-9376db39bebf"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:legal_entity:823189279",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "IKTOS",
+  "summary": "SIREN 823189279",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "legal_entity"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "legal_entity:823189279"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:patent:WO2024062085WEP",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "PROCÉDÉS ET OUTILS POUR DÉTECTER L'IMPACT DE COMPOSÉS SUR DES INTERACTIONS PROTÉ",
+  "summary": "Patent WO2024062085WEP",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "patent"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "patent:WO2024062085WEP"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:patent:WO2025000524WIB",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "COUPLAGE D'UN MODÈLE GÉNÉRATIF 3D À UN MODULE D'OPTIMISATION DE CONFORMATION SOU",
+  "summary": "Patent WO2025000524WIB",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "patent"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "patent:WO2025000524WIB"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:patent:WO2025088398WEP",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "INHIBITEURS DE MTHFD2 POLYCYCLIQUES ET LEURS UTILISATIONS",
+  "summary": "Patent WO2025088398WEP",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "patent"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "patent:WO2025088398WEP"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:program:e35be236-b798-40c2-816d-4a2b03e458ac",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "Member of HEC Challenge+",
+  "summary": "Participant",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "program"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "program:e35be236-b798-40c2-816d-4a2b03e458ac"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:relationship:60bd0ed1-9c18-4704-b209-4e3e7c8af420",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "to partnered_with Inserm",
+  "summary": "Patent co-applicant on 1 patent family.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "relationship"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "relationship:60bd0ed1-9c18-4704-b209-4e3e7c8af420"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:relationship:913a591c-2e4a-44ec-810a-d198678e4abd",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "to partnered_with Université Évry Paris-Saclay",
+  "summary": "Patent co-applicant on 1 patent family.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "relationship"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "relationship:913a591c-2e4a-44ec-810a-d198678e4abd"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:relationship:e885b078-c8cb-42be-9e08-4dd4fe9f286e",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": null,
+  "date_precision": null,
+  "title": "to partnered_with Synsight Genopole Entreprises",
+  "summary": "Patent co-applicant on 1 patent family.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "relationship"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "relationship:e885b078-c8cb-42be-9e08-4dd4fe9f286e"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:relationship:e836256a-057c-43a5-8718-e26d0aa147c5",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": "2018-02-01",
+  "date_precision": "day",
+  "title": "to incubated_by AGORANOV",
+  "summary": "Incubated at Agoranov from February 2018.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "relationship"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "relationship:e836256a-057c-43a5-8718-e26d0aa147c5"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:project:eu-melloddy",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": "2019-06-01",
+  "date_precision": "day",
+  "title": "MELLODDY",
+  "summary": "Role: partner",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "project",
+   "url": "https://cordis.europa.eu/project/id/831472"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "project:eu-melloddy"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:event:652fe038-e40a-4de6-b7d2-d8b2b371a69c",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": "2023-01-01",
+  "date_precision": "day",
+  "title": "Iktos starts in-house drug discovery",
+  "summary": "Company website; year only.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "event",
+   "url": "https://iktos.ai"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "event:652fe038-e40a-4de6-b7d2-d8b2b371a69c"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:grant:b5a37003-8571-4792-a0f4-6b324b833477",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": "2024-10-01",
+  "date_precision": "day",
+  "title": "Horizon Europe – AIR-3D (EIC Accelerator)",
+  "summary": "European Commission (European Innovation Council)",
+  "amount_eur": 2499616,
+  "amount_basis": "as stored",
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "grant",
+   "url": "https://cordis.europa.eu/project/id/101217538"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "grant:b5a37003-8571-4792-a0f4-6b324b833477"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "navigator:navigator_record:event:93fd3287-ce8e-47b5-ab60-6833aeacb461",
+  "entity": "iktos",
+  "type": "navigator_record",
+  "date": "2026-10-06",
+  "date_precision": "day",
+  "title": "Iktos placed in receivership (redressement judiciaire)",
+  "summary": "Paris economic-activities court opened receivership proceedings on 6 October 2026.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [],
+  "facts": {
+   "kind": "event",
+   "url": "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982"
+  },
+  "source": {
+   "connector": "navigator",
+   "name": "France Navigator database",
+   "url": null,
+   "external_id": "event:93fd3287-ce8e-47b5-ab60-6833aeacb461"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "navigator:iktos",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "already stored"
+ },
+ {
+  "finding_id": "registry:officer:823189279:CHRISTIAN DANIEL UHRICH:Administrateur",
+  "entity": "iktos",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "CHRISTIAN DANIEL UHRICH",
+  "summary": "Administrateur of IKTOS (IKTOS)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Administrateur",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:CHRISTIAN DANIEL UHRICH:Administrateur"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:officer:823189279:DEBIOPHARM INNOVATION FUND SA:Administrateur",
+  "entity": "iktos",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "DEBIOPHARM INNOVATION FUND SA",
+  "summary": "Administrateur of IKTOS (IKTOS)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Administrateur",
+   "kind": "personne morale"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:DEBIOPHARM INNOVATION FUND SA:Administrateur"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:officer:823189279:LISON CHOURAKI AUDIT:Commissaire aux comptes titulaire",
+  "entity": "iktos",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "LISON CHOURAKI AUDIT",
+  "summary": "Commissaire aux comptes titulaire of IKTOS (IKTOS)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Commissaire aux comptes titulaire",
+   "kind": "personne morale"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:LISON CHOURAKI AUDIT:Commissaire aux comptes titulaire"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:officer:823189279:QUENTIN HUBERT SIMON PERRON:Administrateur",
+  "entity": "iktos",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "QUENTIN HUBERT SIMON PERRON",
+  "summary": "Administrateur of IKTOS (IKTOS)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Administrateur",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:QUENTIN HUBERT SIMON PERRON:Administrateur"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:officer:823189279:ROMAN FLECK:Président du conseil d’administration",
+  "entity": "iktos",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "ROMAN FLECK",
+  "summary": "Président du conseil d’administration of IKTOS (IKTOS)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Président du conseil d’administration",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:ROMAN FLECK:Président du conseil d’administration"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "registry:officer:823189279:YANN CEDRIC GASTON-MATHE (GASTON):Directeur Général",
+  "entity": "iktos",
+  "type": "officer",
+  "date": null,
+  "date_precision": null,
+  "title": "YANN CEDRIC GASTON-MATHE (GASTON)",
+  "summary": "Directeur Général of IKTOS (IKTOS)",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "IKTOS (IKTOS)",
+   "siren": "823189279",
+   "country": "FR"
+  },
+  "counterparts": [],
+  "facts": {
+   "role": "Directeur Général",
+   "kind": "personne physique"
+  },
+  "source": {
+   "connector": "registry",
+   "name": "Recherche d'entreprises (INSEE/INPI)",
+   "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
+   "external_id": "823189279:YANN CEDRIC GASTON-MATHE (GASTON):Directeur Général"
+  },
+  "match": {
+   "method": "identifier",
+   "on": "siren:823189279",
+   "level": "high",
+   "needs_review": false
+  },
+  "confidence": "official",
+  "suggested_target": "organization_people",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "patents:patent:86330318",
+  "entity": "iktos",
+  "type": "patent",
+  "date": "2023-05-02",
+  "date_precision": "day",
+  "title": "METHODS AND TOOLS FOR DETECTING THE IMPACT OF COMPOUNDS ON PROTEIN, RNA OR DNA INTERACTIONS",
+  "summary": "Applicant(s): Iktos. 0 of 10 inventors in FR.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "Institut national de la santé et de la recherche médicale",
+    "role": "co-applicant"
+   },
+   {
+    "name": "Université Évry Paris-Saclay",
+    "role": "co-applicant"
+   },
+   {
+    "name": "Synsight Genopole Entreprises",
+    "role": "co-applicant"
+   }
+  ],
+  "facts": {
+   "family": "592170947",
+   "numbers": [
+    "EP23171184A",
+    "WO2024062085W EP"
+   ],
+   "title_fr": "",
+   "inventors": [
+    "Pastre David",
+    "Craveur Pierrick",
+    "Duez Julien",
+    "Molliex Amandine",
+    "Henrie Helene",
+    "Sanchez Maxime",
+    "Babault Nicolas",
+    "Bollot Guillaume",
+    "Bauvais Cyril",
+    "Craveur Pierrick"
+   ],
+   "inventors_in_focus_country": [],
+   "granted": null,
+   "european": true,
+   "international": true
+  },
+  "source": {
+   "connector": "patents",
+   "name": "scanR patents (INPI/EPO data)",
+   "url": "https://scanr.enseignementsup-recherche.gouv.fr/patents/86330318",
+   "external_id": "86330318"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "patents",
+  "in_navigator": true
+ },
+ {
+  "finding_id": "hal:research_paper:hal-04495209",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2024-03-08",
+  "date_precision": "day",
+  "title": "Advancing Drug-Target Interactions Prediction: Leveraging a Large-Scale Dataset with a Rapid and Robust Chemogenomic Algorithm.",
+  "summary": "preprint by Gwenn Guichaoua, Philippe Pinel, Brice Hoffmann, Chloé-Agathe Azencott and 1 others. With: Iktos.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "Centre de Bioinformatique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Mines Paris - PSL (École nationale supérieure des mines de Paris)",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris Sciences et Lettres",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "UNDEFINED",
+   "authors": [
+    "Gwenn Guichaoua",
+    "Philippe Pinel",
+    "Brice Hoffmann",
+    "Chloé-Agathe Azencott",
+    "Veronique Stoven"
+   ],
+   "entity_structures": [
+    "Iktos"
+   ],
+   "hal_struct_ids": [
+    1192719
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://minesparis-psl.hal.science/hal-04495209v1",
+   "external_id": "hal-04495209"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:research_paper:hal-04879123",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2024-09-05",
+  "date_precision": "day",
+  "title": "Drug–Target Interactions Prediction at Scale: The Komet Algorithm with the LCIdb Dataset",
+  "summary": "journal article by Gwenn Guichaoua, Philippe Pinel, Brice Hoffmann, Chloé-Agathe Azencott and 1 others. With: Iktos SAS, 75017 Paris, France.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos SAS, 75017 Paris, France"
+  },
+  "counterparts": [
+   {
+    "name": "Centre de Bioinformatique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Mines Paris - PSL (École nationale supérieure des mines de Paris)",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris Sciences et Lettres",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "ART",
+   "authors": [
+    "Gwenn Guichaoua",
+    "Philippe Pinel",
+    "Brice Hoffmann",
+    "Chloé-Agathe Azencott",
+    "Véronique Stoven"
+   ],
+   "entity_structures": [
+    "Iktos SAS, 75017 Paris, France"
+   ],
+   "hal_struct_ids": [
+    1221456
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://hal.science/hal-04879123v1",
+   "external_id": "hal-04879123"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos SAS, 75017 Paris, France",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:research_paper:hal-05363718",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2025-06",
+  "date_precision": "month",
+  "title": "Targeting WEE1 kinase as a therapeutic strategy in ATIP3-deficient breast cancers",
+  "summary": "journal article by Maria Haykal, Sylvie Rodrigues-Ferreira, Rania El Botty, Laura Sourd and 4 others. With: Iktos AI, Paris.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos AI, Paris"
+  },
+  "counterparts": [
+   {
+    "name": "Institut Curie [Paris]",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut Gustave Roussy",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut National de la Santé et de la Recherche Médicale",
+    "role": "affiliation"
+   },
+   {
+    "name": "Prédicteurs moléculaires et nouvelles cibles en oncologie",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris-Saclay",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "ART",
+   "authors": [
+    "Maria Haykal",
+    "Sylvie Rodrigues-Ferreira",
+    "Rania El Botty",
+    "Laura Sourd",
+    "Elisabetta Marangoni",
+    "Marie Varin",
+    "Alexis Denis",
+    "Clara Nahmias"
+   ],
+   "entity_structures": [
+    "Iktos AI, Paris"
+   ],
+   "hal_struct_ids": [
+    1645589
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://hal.science/hal-05363718v1",
+   "external_id": "hal-05363718"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos AI, Paris",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:research_paper:hal-05354416",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2025-11-07",
+  "date_precision": "day",
+  "title": "Discovery and chemical biology of CDK8 inhibitors reveals insights for kinase inhibitor development",
+  "summary": "preprint by Franck Borel, Yann-Vaï Le Bihan, Béatrice Foll-Josselin, Thomas Robert and 9 others. With: Iktos AI, Paris.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos AI, Paris"
+  },
+  "counterparts": [
+   {
+    "name": "Centre National de la Recherche Scientifique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Centre de biophysique moléculaire",
+    "role": "affiliation"
+   },
+   {
+    "name": "Commissariat à l'énergie atomique et aux énergies alternatives",
+    "role": "affiliation"
+   },
+   {
+    "name": "Direction de Recherche Fondamentale (CEA)",
+    "role": "affiliation"
+   },
+   {
+    "name": "Direction de Recherche Technologique (CEA)",
+    "role": "affiliation"
+   },
+   {
+    "name": "Equipe labellisée Ligue contre le Cancer",
+    "role": "affiliation"
+   },
+   {
+    "name": "GTP bioways, Labège",
+    "role": "affiliation"
+   },
+   {
+    "name": "Helmholtz Pioneer Campus",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut National de la Santé et de la Recherche Médicale",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de Chimie - CNRS Chimie",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de Génétique Moléculaire de Montpellier",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de Recherche Interdisciplinaire de Grenoble",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de biologie structurale",
+    "role": "affiliation"
+   },
+   {
+    "name": "Laboratoire d'Intégration des Systèmes et des Technologies",
+    "role": "affiliation"
+   },
+   {
+    "name": "Laboratoire de Biologie Intégrative des Modèles Marins",
+    "role": "affiliation"
+   },
+   {
+    "name": "Sorbonne Université",
+    "role": "affiliation"
+   },
+   {
+    "name": "Station biologique de Roscoff = Roscoff Marine Station",
+    "role": "affiliation"
+   },
+   {
+    "name": "The Institute of Cancer Research",
+    "role": "affiliation"
+   },
+   {
+    "name": "UAS Technikum Vienna",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Grenoble Alpes",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Grenoble Alpes [2016-2019]",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université d'Orléans",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université de Montpellier",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université de Tours",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "UNDEFINED",
+   "authors": [
+    "Franck Borel",
+    "Yann-Vaï Le Bihan",
+    "Béatrice Foll-Josselin",
+    "Thomas Robert",
+    "Julien Duez",
+    "Lucie Angevin",
+    "Elisabeth Simboeck",
+    "Susana Prieto",
+    "Elsie Hodimont",
+    "Jean-Luc Ferrer",
+    "Liliana Krasinska",
+    "Sandrine Ruchaud",
+    "Daniel Fisher"
+   ],
+   "entity_structures": [
+    "Iktos AI, Paris"
+   ],
+   "hal_struct_ids": [
+    1645589
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://cnrs.hal.science/hal-05354416v1",
+   "external_id": "hal-05354416"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos AI, Paris",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:research_paper:hal-05762253",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2026",
+  "date_precision": "year",
+  "title": "Deep Learning for BioImaging: What Are We Really Learning?",
+  "summary": "proceedings by Ivan Svatko, Maxime Sanchez, Ihab Bendidi, Gilles Cottrell and 1 others. With: Iktos.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "Centre National de la Recherche Scientifique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Département de Biologie - ENS-PSL",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut Curie [Paris]",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut National de la Santé et de la Recherche Médicale",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de Recherche pour le Développement",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de biologie de l'ENS Paris",
+    "role": "affiliation"
+   },
+   {
+    "name": "Mines Paris - PSL (École nationale supérieure des mines de Paris)",
+    "role": "affiliation"
+   },
+   {
+    "name": "Mère et enfant en milieu tropical : pathogènes, système de santé et transition épidémiologique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Oncologie Computationnelle",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris Cité",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris Sciences et Lettres",
+    "role": "affiliation"
+   },
+   {
+    "name": "École normale supérieure - Paris",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "PROCEEDINGS",
+   "authors": [
+    "Ivan Svatko",
+    "Maxime Sanchez",
+    "Ihab Bendidi",
+    "Gilles Cottrell",
+    "Auguste Genovesio"
+   ],
+   "entity_structures": [
+    "Iktos"
+   ],
+   "hal_struct_ids": [
+    1192719
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://hal.science/hal-05762253v1",
+   "external_id": "hal-05762253"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:research_paper:hal-05501580",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2026-01-13",
+  "date_precision": "day",
+  "title": "Large scale compound selection guided by cell painting reveals activity cliffs and functional relationships",
+  "summary": "journal article by Maxime Sanchez, Nicolas Bourriez, Ihab Bendidi, Ethan Cohen and 6 others. With: Iktos.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "BioImaging Cell and Tissue Core Facility",
+    "role": "affiliation"
+   },
+   {
+    "name": "Cancer et génome: Bioinformatique, biostatistiques et épidémiologie d'un système complexe",
+    "role": "affiliation"
+   },
+   {
+    "name": "Centre National de la Recherche Scientifique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Département de Biologie - ENS-PSL",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut Curie [Paris]",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut National de la Santé et de la Recherche Médicale",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de Recherche pour le Développement",
+    "role": "affiliation"
+   },
+   {
+    "name": "Institut de biologie de l'ENS Paris",
+    "role": "affiliation"
+   },
+   {
+    "name": "Mines Paris - PSL (École nationale supérieure des mines de Paris)",
+    "role": "affiliation"
+   },
+   {
+    "name": "Mère et enfant en milieu tropical : pathogènes, système de santé et transition épidémiologique",
+    "role": "affiliation"
+   },
+   {
+    "name": "Oncologie Computationnelle",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris Cité",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris Sciences et Lettres",
+    "role": "affiliation"
+   },
+   {
+    "name": "École normale supérieure - Paris",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "ART",
+   "authors": [
+    "Maxime Sanchez",
+    "Nicolas Bourriez",
+    "Ihab Bendidi",
+    "Ethan Cohen",
+    "Ivan Svatko",
+    "Elaine del Nery",
+    "Hamza Tajmouati",
+    "Guillaume Bollot",
+    "Laurence Calzone",
+    "Auguste Genovesio"
+   ],
+   "entity_structures": [
+    "Iktos"
+   ],
+   "hal_struct_ids": [
+    1192719
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://hal.science/hal-05501580v1",
+   "external_id": "hal-05501580"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ },
+ {
+  "finding_id": "hal:research_paper:hal-05648874",
+  "entity": "iktos",
+  "type": "research_paper",
+  "date": "2026-06",
+  "date_precision": "month",
+  "title": "RNA-binding protein diversity and NLS arginines regulate FUS mixing in mRNA-rich compartments",
+  "summary": "journal article by Diane Valenti, Vandana Joshi, Serhii Pankivskyi, Hoang Hung Cai and 9 others. With: Iktos.",
+  "amount_eur": null,
+  "amount_basis": null,
+  "subject": {
+   "name": "Iktos"
+  },
+  "counterparts": [
+   {
+    "name": "Institut National de la Santé et de la Recherche Médicale",
+    "role": "affiliation"
+   },
+   {
+    "name": "Structure et activité des biomolécules normales et pathologiques",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université Paris-Saclay",
+    "role": "affiliation"
+   },
+   {
+    "name": "Université d'Évry-Val-d'Essonne",
+    "role": "affiliation"
+   }
+  ],
+  "facts": {
+   "doc_type": "ART",
+   "authors": [
+    "Diane Valenti",
+    "Vandana Joshi",
+    "Serhii Pankivskyi",
+    "Hoang Hung Cai",
+    "Loic Hamon",
+    "Bénédicte Desforges",
+    "Amandine Molliex",
+    "Julien Duez",
+    "Julian Bursztyka",
+    "Laurianne Davignon",
+    "Alexandre Maucuer",
+    "Guillaume Bollot",
+    "David Pastré"
+   ],
+   "entity_structures": [
+    "Iktos"
+   ],
+   "hal_struct_ids": [
+    1192719
+   ]
+  },
+  "source": {
+   "connector": "hal",
+   "name": "HAL open archive (CCSD)",
+   "url": "https://univ-evry.hal.science/hal-05648874v1",
+   "external_id": "hal-05648874"
+  },
+  "match": {
+   "method": "name",
+   "on": "Iktos",
+   "level": "medium",
+   "needs_review": true
+  },
+  "confidence": "official",
+  "suggested_target": "articles, article_organizations",
+  "in_navigator": false
+ }
+]

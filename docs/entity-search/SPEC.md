@@ -145,10 +145,19 @@ Lessons from the manual runs to build in:
 
 ## 7. Review and loading (Navigator)
 
-1. An editor runs the search for an entity.
-2. The editor reads `report.md`. Name-only matches are listed separately.
-3. Approved findings are turned into an idempotent SQL migration (`NOT EXISTS` guards, `legacy_source = 'atlas:entity:<key>'`) by a loader (planned, v0.2).
-4. The migration is committed under `supabase/migrations/` and applied.
+1. An editor runs the search for an entity and reads `report.md`.
+2. `python3 -m atlas review --run <run folder>` writes `decisions.json` (one decision per finding) and `review.md`. Default decisions:
+   - **skip**: already in Navigator (✓), or a type Navigator doesn't store as a record (officers, accounts, funding mentions, HAL structures, related-company candidates).
+   - **reject**: accounts-filing notices (`dpc`), which are routine.
+   - **pending**: anything that needs review (not an identifier match), and EU projects with no French partner.
+   - **accept**: everything else.
+   The editor changes `pending` to `accept` or `reject` in `decisions.json`. Rerunning `review` keeps decisions already made.
+3. `python3 -m atlas load --run <run folder>` writes `load.sql` from the accepted findings. It never touches the database. Every insert carries `legacy_source = 'atlas:entity:<key>'` and `legacy_id = <finding_id>` and is guarded by `NOT EXISTS`, so the file can be applied twice without duplicates.
+   - legal_entity → `legal_entities`; establishment → expansion event (plus a closure event); legal_notice → event (rebrand / shutdown / other); eu_project → project, project link and grant; research_paper → article and article link; patent → `patents`; lobbying and public contracts → events.
+4. Before applying, the SQL is dry-run inside a `DO` block that ends with `RAISE EXCEPTION`, which rolls everything back.
+5. With editor approval, the file is copied to `supabase/migrations/` and applied.
+
+**Matching against Navigator** ("already held"): SIREN for legal entities; patent number (Navigator numbers start with a family member's ID) or French/English title for patents; source URL for everything else, with BODACC's old and new URL formats treated as the same notice.
 
 ## 8. Radar (later)
 
@@ -162,6 +171,8 @@ Lessons from the manual runs to build in:
 ```bash
 cd scripts && python3 -m atlas entity --entity atlas/entities/nvidia.json
 ```
+
+Then `python3 -m atlas review --run DIR` and `python3 -m atlas load --run DIR` (section 7).
 
 Options: `--sources registry,bodacc` to run some modules only; `--out DIR` to change the output folder.
 

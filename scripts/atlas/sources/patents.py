@@ -67,7 +67,7 @@ def enrich(entity, ctx):
                                date=(r.get("applicationDate") or r.get("publicationDate") or "")[:10] or (str(r.get("year")) if r.get("year") else None),
                                subject={"name": "; ".join(own)},
                                counterparts=[{"name": n, "role": "co-applicant"} for n in others],
-                               facts={"family": r.get("inpadocFamily"), "inventors": [i.get("name") for i in inv],
+                               facts={"family": r.get("inpadocFamily"), "numbers": [x.get("id") for x in r.get("patents") or [] if x.get("id")], "title_fr": (r.get("title") or {}).get("fr") if isinstance(r.get("title"), dict) else None, "inventors": [i.get("name") for i in inv],
                                       "inventors_in_focus_country": local, "granted": r.get("grantedDate"),
                                       "european": r.get("isOeb"), "international": r.get("isInternational")},
                                source_name=NAME, url=PAGE.format(pid), match_method=how[0], match_on=how[1],
