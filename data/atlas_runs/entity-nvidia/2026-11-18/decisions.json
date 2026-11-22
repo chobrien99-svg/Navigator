@@ -1,7 +1,7 @@
 {
  "registry:establishment:43210835500012": {
-  "decision": "accept",
-  "reason": "identifier match",
+  "decision": "reject",
+  "reason": "registered office outside France, not a French site",
   "type": "establishment",
   "title": "NVIDIA LTD: site in abroad"
  },
@@ -51,11 +51,12 @@
   "decision": "accept",
   "reason": "identifier match",
   "type": "establishment",
-  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in BIOT"
+  "title": "NVIDIA DEVELOPPEMENT FRANCE SAS: site in BIOT",
+  "title_override": "Opens a second site in Biot (Greenside business park)"
  },
  "registry:establishment:10911152600017": {
-  "decision": "accept",
-  "reason": "identifier match",
+  "decision": "reject",
+  "reason": "registered office outside France, not a French site",
   "type": "establishment",
   "title": "NVIDIA SINGAPORE PTE. LTD.: site in abroad"
  },
@@ -843,7 +844,8 @@
   "decision": "accept",
   "reason": "identifier match",
   "type": "lobbying_client",
-  "title": "AMERICAIN CHAMBER OF COMMERC lists NVIDIA LTD as a client or member"
+  "title": "AMERICAIN CHAMBER OF COMMERC lists NVIDIA LTD as a client or member",
+  "title_override": "NVIDIA Ltd listed as a member of the American Chamber of Commerce in France (lobbying register)"
  },
  "navigator:navigator_record:articles:count": {
   "decision": "skip",

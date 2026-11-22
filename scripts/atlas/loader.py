@@ -29,6 +29,8 @@ def default_decision(f):
         return "skip", "already in Navigator"
     if f["type"] in NOT_LOADABLE:
         return "skip", NOT_LOADABLE[f["type"]]
+    if f["type"] == "establishment" and f["title"].lower().endswith("site in abroad"):
+        return "reject", "registered office outside France, not a French site"
     if f["type"] == "legal_notice" and f["facts"].get("family") == "dpc":
         return "reject", "routine filing of annual accounts"
     if f["type"] == "eu_project" and not f["facts"].get("has_focus_partner"):
@@ -36,6 +38,47 @@ def default_decision(f):
     if f["match"]["needs_review"]:
         return "pending", f"{f['match']['level']} match on {f['match']['on']}"
     return "accept", "identifier match"
+
+
+NOTICE_CHANGES = [  # (text in the BODACC notice, plain-English label), in display order
+    ("capital (augmentation)", "capital increase"),
+    ("capital (réduction)", "capital reduction"),
+    ("capital (diminution)", "capital reduction"),
+    ("dénomination", "name change"),
+    ("adresse du siège", "head office move"),
+    ("transfert de l'établissement principal", "head office move"),
+    ("forme juridique", "change of legal form"),
+    ("administration", "management change"),
+    ("représentant", "management change"),
+]
+
+
+def notice_title(f):
+    """A readable event title for a BODACC notice, e.g. "Capital increase (Iktos)"."""
+    s = (f.get("summary") or "").lower()
+    fam = (f.get("facts") or {}).get("family")
+    name = f["title"].split(": ", 1)[-1].strip().replace(" LTD", " Ltd")
+    if fam == "override":
+        return f["title"]
+    if fam in ("creation", "immatriculation"):
+        what = "Registered after moving its head office" if "transfert" in s else "Company registered"
+    elif fam == "collective":
+        what = ("Receivership opened" if "redressement" in s else "Liquidation" if "liquidation" in s
+                else "Safeguard procedure" if "sauvegarde" in s else "Insolvency proceedings")
+    elif fam == "radiation":
+        what = "Removed from the trade register"
+    elif fam == "vente":
+        what = "Sale or transfer of a business"
+    else:
+        labels = []
+        for needle, label in NOTICE_CHANGES:
+            if needle in s and label not in labels:
+                labels.append(label)
+        if not labels:
+            return f["title"]
+        what = labels[0] if len(labels) == 1 else ", ".join(labels[:-1]) + " and " + labels[-1]
+        what = what[0].upper() + what[1:]
+    return f"{what} ({name})"
 
 
 def review(run):
@@ -56,7 +99,7 @@ def review(run):
         counts[v["decision"]] = counts.get(v["decision"], 0) + 1
     L = ["# Review decisions", "", f"{len(dec)} findings ({new} new since the last review): "
          + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())) + ".", "",
-         "Edit `decisions.json`: change `pending` to `accept` or `reject`. Then run `python3 -m atlas load --run <this folder>`.", ""]
+         "Edit `decisions.json`: change `pending` to `accept` or `reject` (and add `title_override` to reword a title). Then run `python3 -m atlas load --run <this folder>`.", ""]
     byid = {f["finding_id"]: f for f in findings}
     for want in ("pending", "accept"):
         rows = [(k, v) for k, v in dec.items() if v["decision"] == want]
@@ -112,7 +155,8 @@ def sql_for(f, slug, key):
                    f"WHERE {_org(slug)} IS NOT NULL AND NOT EXISTS (SELECT 1 FROM legal_entities WHERE siren = {q(s.get('siren'))});")
     elif t == "establishment":
         town = f["title"].split("site in ", 1)[-1]
-        out.append(_event(slug, key, fid, "expansion", _date(f["date"]), f"Opens a site in {town.title()}",
+        opens = f["title"] if fx.get("family") == "override" else f"Opens a site in {town.title()}"
+        out.append(_event(slug, key, fid, "expansion", _date(f["date"]), opens,
                           f"{f['subject'].get('name')}: {f['summary']}. Address: {fx.get('address')}", src["url"], "registry", src["name"], lvl))
         if fx.get("closed"):
             out.append(_event(slug, key, fid + ":closed", "other", _date(fx["closed"]), f"Closes its site in {town.title()}",
@@ -120,7 +164,7 @@ def sql_for(f, slug, key):
     elif t == "legal_notice":
         s = f["summary"].lower()
         et = "rebrand" if "dénomination" in s else ("shutdown" if "liquidation" in s else "other")
-        out.append(_event(slug, key, fid, et, _date(f["date"]), f["title"], f["summary"], src["url"], "official_gazette", src["name"], lvl))
+        out.append(_event(slug, key, fid, et, _date(f["date"]), notice_title(f), f"BODACC notice: {f['summary']}", src["url"], "official_gazette", src["name"], lvl))
     elif t == "eu_project":
         pslug = "eu-" + str(fx["acronym"]).lower().replace(" ", "-")
         out.append(f"INSERT INTO projects (id, name, slug, summary, sector, commercialization_status, first_evidence_date, is_public, website_url, created_at, updated_at)\n"
@@ -171,6 +215,9 @@ def load(run, out_path=None):
     for f in findings:
         if dec.get(f["finding_id"], {}).get("decision") != "accept":
             continue
+        d = dec[f["finding_id"]]
+        if d.get("title_override"):  # an editor's wording wins over the generated title
+            f = {**f, "title": d["title_override"], "facts": {**f["facts"], "family": "override"}}
         s = sql_for(f, slug, key)
         if s:
             stmts.append(f"-- {f['finding_id']}\n" + "\n".join(s))

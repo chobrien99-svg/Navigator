@@ -37,3 +37,9 @@ All eight sources ran `ok` in about two minutes: **73 findings**, **6 already in
 
 - **Notice titles.** "Modifications diverses: Iktos" ×15 would clutter the timeline. Better: title capital increases "Capital increase" and consider grouping them, or use them as hints of funding rounds to check against Navigator's rounds.
 - **HAL papers** with Iktos as an organisation name only: allow the reviewer to confirm a HAL structure ID (as done for NVIDIA) so future runs match on identifier.
+
+## Loaded (22 November 2026)
+
+Notice titles were rewritten into plain English (e.g. "Capital increase (Iktos)", "Management change (NVIDIA Ltd)"), and the loader now accepts an editor's `title_override` in `decisions.json`. Two NVIDIA "sites" that were really foreign head offices (UK and Hong Kong, listed by the register as "abroad") are now rejected by default.
+
+Applied as `supabase/migrations/phase38/30_atlas_entity_nvidia.sql` (29 events, NVIDIA Singapore's French registration, 1 paper) and `31_atlas_entity_iktos.sql` (27 events). Checked after loading: the rows in the database hash-match the migration files.
