@@ -159,11 +159,25 @@ Lessons from the manual runs to build in:
 
 **Matching against Navigator** ("already held"): SIREN for legal entities; patent number (Navigator numbers start with a family member's ID) or French/English title for patents; source URL for everything else, with BODACC's old and new URL formats treated as the same notice.
 
+### Capital check
+
+BODACC notices state the company's share capital (the face value of its shares, not the money raised). After all sources have run, `capital.py` puts each company's notices in date order and measures every increase against the last known capital:
+
+- **Below 5%:** ignored (typically employees exercising share options).
+- **5% or more:** a `capital_increase` finding, matched one-to-one:
+  1. to a Navigator funding round of an equity stage (debt and grants excluded) announced up to 30 days after or 300 days before the notice; each round explains at most one notice;
+  2. otherwise to a Navigator acquisition or merger within 120 days (shares used as payment);
+  3. otherwise **unexplained**.
+- Matched increases are marked ✓ (nothing to load). Unexplained ones are accepted by default and loaded as **pending leads in `signal_candidates`** (the Radar review queue, `signal_type = 'fundraising'`), never as confirmed rounds.
+
+It needs the Navigator export to include `rounds` and event `type` (`sql/navigator_entity_export.sql`); otherwise it reports `skipped`. This is a natural Radar signal: run on BODACC's daily feed, it flags share issues for watched companies before any announcement.
+
 ## 8. Radar (later)
 
 - The runner gains an `--since` cursor per connector. Cursors are stored in `detection_sources.cursor`.
 - Raw records are written to `source_records`, runs to `ingestion_runs`.
 - Findings not seen before become `detection_candidates` (new organisations) or `signal_candidates` (news about watched organisations), with `candidate_evidence` pointing at the raw record.
+- The capital check (section 7) can run on each new BODACC notice for a watched company.
 - Good Radar sources (fast-moving): BODACC, the company register, procurement, EU grants, competition laureates. Slow sources (HAL, lobbying) stay Navigator-only.
 
 ## 9. Running it

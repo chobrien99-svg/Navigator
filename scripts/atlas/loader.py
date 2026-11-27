@@ -31,6 +31,8 @@ def default_decision(f):
         return "skip", NOT_LOADABLE[f["type"]]
     if f["type"] == "establishment" and f["title"].lower().endswith("site in abroad"):
         return "reject", "registered office outside France, not a French site"
+    if f["type"] == "capital_increase":
+        return "accept", "unexplained share issue: goes to the Radar review queue as a pending lead"
     if f["type"] == "legal_notice" and f["facts"].get("family") == "dpc":
         return "reject", "routine filing of annual accounts"
     if f["type"] == "eu_project" and not f["facts"].get("has_focus_partner"):
@@ -161,6 +163,20 @@ def sql_for(f, slug, key):
         if fx.get("closed"):
             out.append(_event(slug, key, fid + ":closed", "other", _date(fx["closed"]), f"Closes its site in {town.title()}",
                               f"{f['subject'].get('name')}: site opened {f['date']}, closed {fx['closed']}.", src["url"], "registry", src["name"], lvl))
+    elif t == "capital_increase":
+        # an unexplained share issue: a lead for the Radar review queue, never a confirmed round
+        org = _org(slug)
+        out.append(f"INSERT INTO signal_candidates (id, organization_id, source, source_url, source_name, source_published_at, raw_title, raw_excerpt, "
+                   f"signal_type, title, description, signal_date, strength, confidence, ai_reasoning, status, created_at)\n"
+                   f"SELECT uuid_generate_v4(), {org}, 'bodacc', {q(src['url'])}, 'BODACC', {q(_date(f['date']))}::timestamptz, "
+                   f"{q('BODACC: Modifications diverses – ' + str(f['subject'].get('name')))}, "
+                   f"{q(fx.get('notice_summary', '') + '; capital €' + format(fx['capital_before_eur'], ',.0f') + ' → €' + format(fx['capital_after_eur'], ',.0f'))}, "
+                   f"'fundraising'::signal_type, {q('Possible unannounced share issue: ' + f['title'])}, "
+                   f"{q('BODACC shows new shares were issued (share capital +' + format(fx['pct'], '.0f') + '%), but Navigator has no funding round or deal that explains it. Could be an unannounced round, shares used to pay for a deal, or a note conversion. The amount raised is unknown: BODACC gives only the nominal capital.')}, "
+                   f"{q(_date(f['date']))}::date, {2 if fx['pct'] < 15 else 3}, 0.4, "
+                   f"{q('Atlas capital check: increases of 5% or more are compared one-to-one with recorded rounds (up to 30 days before to 300 days after the notice) and with acquisitions or mergers (120 days).')}, "
+                   f"'pending', NOW()\n"
+                   f"WHERE {org} IS NOT NULL AND NOT EXISTS (SELECT 1 FROM signal_candidates WHERE source_url = {q(src['url'])} AND organization_id = {org});")
     elif t == "legal_notice":
         s = f["summary"].lower()
         et = "rebrand" if "dénomination" in s else ("shutdown" if "liquidation" in s else "other")

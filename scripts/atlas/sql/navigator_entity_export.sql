@@ -19,7 +19,12 @@ SELECT json_build_object(
                     FROM organization_relationships x
                     JOIN organizations oo ON oo.id = CASE WHEN x.source_org_id = (SELECT id FROM o) THEN x.target_org_id ELSE x.source_org_id END
                     WHERE (SELECT id FROM o) IN (x.source_org_id, x.target_org_id)),
-  'events', (SELECT coalesce(json_agg(json_build_object('id', id, 'title', title, 'date', event_date, 'description', description, 'source_url', source_url)), '[]')
+  'rounds', (SELECT coalesce(json_agg(json_build_object('id', id, 'stage', stage, 'date', announced_date, 'closed_date', closed_date,
+                'amount_eur_m', amount_eur, 'source_url', source_url) ORDER BY announced_date), '[]')
+             FROM funding_rounds WHERE organization_id = (SELECT id FROM o)),
+  'patents', (SELECT coalesce(json_agg(json_build_object('number', patent_number, 'title', title, 'url', url)), '[]')
+              FROM patents WHERE organization_id = (SELECT id FROM o)),
+  'events', (SELECT coalesce(json_agg(json_build_object('id', id, 'type', event_type, 'title', title, 'date', event_date, 'description', description, 'source_url', source_url)), '[]')
              FROM organization_events WHERE organization_id = (SELECT id FROM o)),
   'grants', (SELECT coalesce(json_agg(json_build_object('id', id, 'grant_name', grant_name, 'granting_body', granting_body,
                 'amount_eur', amount_eur, 'awarded_date', awarded_date, 'source_url', source_url)), '[]')

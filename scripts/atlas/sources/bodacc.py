@@ -1,6 +1,7 @@
 """BODACC legal notices (Opendatasoft mirror of the official bulletin).
 
-Findings: legal_notice (one per notice). Matching: SIREN in the notice's register field (high).
+Findings: legal_notice (one per notice), with the share capital and legal form stated in
+the notice (used by the capital check, capital.py). Matching: SIREN in the notice's register field (high).
 The service often resets connections: http_json retries; failures are reported as 'unavailable'.
 """
 import json
@@ -43,6 +44,22 @@ def _describe(r):
     return "; ".join(b for b in bits if b)[:400]
 
 
+def _capital(r):
+    """Share capital and legal form from the notice's company block, if stated."""
+    lp = _parse(r.get("listepersonnes"))
+    per = lp.get("personne") if isinstance(lp, dict) else None
+    if isinstance(per, list):
+        per = per[0] if per else None
+    if not isinstance(per, dict):
+        return None, None, None
+    cap = per.get("capital") if isinstance(per.get("capital"), dict) else {}
+    try:
+        amount = float(str(cap.get("montantCapital")).replace(" ", "").replace(",", "."))
+    except (TypeError, ValueError):
+        amount = None
+    return amount, cap.get("devise"), per.get("formeJuridique")
+
+
 def _fetch(siren):
     rows, offset = [], 0
     while True:
@@ -70,12 +87,15 @@ def enrich(entity, ctx):
             url = DETAIL.format(nid)
             ctx.save_raw("bodacc", nid, url, r)
             fam = r.get("familleavis_lib") or r.get("familleavis") or "Notice"
+            cap, cur, form = _capital(r)
             out.append(finding(ctx, connector="bodacc", type="legal_notice", ext_id=nid,
                                title=f"{fam}: {r.get('commercant')}",
                                summary=_describe(r) or fam, date=r.get("dateparution"),
                                subject={"name": r.get("commercant"), "siren": siren},
                                facts={"family": r.get("familleavis"), "court": r.get("tribunal"),
-                                      "town": r.get("ville"), "notice_type": r.get("typeavis_lib")},
+                                      "town": r.get("ville"), "notice_type": r.get("typeavis_lib"),
+                                      "capital_eur": cap if cur in (None, "EUR") else None,
+                                      "capital": cap, "currency": cur, "legal_form": form},
                                source_name=NAME, url=url, match_on=f"siren:{siren}",
                                suggested_target="organization_events"))
     n = len([s for s in entity.get("sirens", []) if norm_siren(s)])

@@ -38,8 +38,14 @@ def cmd_entity(args):
         findings += got
         ctx.log(f"{name}: {len(got)} findings ({ctx.sources.get(name, {}).get('status')})")
     from .sources import navigator
-    known = navigator.annotate(findings, navigator.load(entity))
+    nav = navigator.load(entity)
+    known = navigator.annotate(findings, nav)
     ctx.log(f"already in Navigator: {known} findings")
+    from . import capital
+    caps = capital.check(findings, nav, ctx)
+    findings += caps
+    ctx.log(f"capital check: {len(caps)} increases of {capital.MIN_PCT:.0f}%+, "
+            f"{sum(1 for c in caps if not c['in_navigator'])} unexplained")
     findings.sort(key=lambda x: (x["type"], x["date"] or "", x["finding_id"]))
     manifest = ctx.write(findings)
     write_report(out, entity, manifest, findings)

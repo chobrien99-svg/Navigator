@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-11-18T17:51:49.558394+00:00",
+ "exported_at": "2026-11-27T23:06:07.408389+00:00",
  "organization": {
   "id": "3138be05-6b7d-4790-8490-e1e48f2af9ab",
   "name": "Iktos",
@@ -15,24 +15,36 @@
  "investments": [],
  "rounds": [
   {
+   "id": "1c598011-031e-45fd-b9a3-8502f4cef5f9",
+   "stage": "seed",
    "date": "2017-06-01",
-   "stage": "seed",
-   "amount_eur_m": null
+   "closed_date": null,
+   "amount_eur_m": null,
+   "source_url": null
   },
   {
+   "id": "ac6e0c73-fb21-427a-9245-09a5cdb38b9a",
+   "stage": "seed",
    "date": "2019-01-01",
-   "stage": "seed",
-   "amount_eur_m": null
+   "closed_date": null,
+   "amount_eur_m": null,
+   "source_url": null
   },
   {
-   "date": "2021-01-01",
+   "id": "8f3d5f32-76d4-48a4-a7ac-30b518903ea4",
    "stage": "debt",
-   "amount_eur_m": 0.9
+   "date": "2021-01-01",
+   "closed_date": null,
+   "amount_eur_m": 0.9,
+   "source_url": null
   },
   {
-   "date": "2023-03-09",
+   "id": "c989d2d4-db4c-4495-8d21-7ead8f69b7b2",
    "stage": "series_a",
-   "amount_eur_m": 15.5
+   "date": "2023-03-09",
+   "closed_date": null,
+   "amount_eur_m": 15.5,
+   "source_url": null
   }
  ],
  "relationships": [
@@ -67,6 +79,14 @@
    "other": "AGORANOV",
    "description": "Incubated at Agoranov from February 2018.",
    "start_date": "2018-02-01"
+  },
+  {
+   "id": "3ac506af-4a0d-4450-9940-3ec88343dfcd",
+   "type": "acquired",
+   "direction": "to",
+   "other": "Synsight Genopole Entreprises",
+   "description": "Iktos acquired Synsight (Évry) in July 2024 to internalise biological testing. Price not disclosed.",
+   "start_date": "2024-07-08"
   }
  ],
  "events": [
@@ -75,14 +95,240 @@
    "title": "Iktos placed in receivership (redressement judiciaire)",
    "date": "2026-10-06",
    "description": "Paris economic-activities court opened receivership proceedings on 6 October 2026.",
-   "source_url": "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982"
+   "source_url": "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982",
+   "type": "other"
   },
   {
    "id": "652fe038-e40a-4de6-b7d2-d8b2b371a69c",
    "title": "Iktos starts in-house drug discovery",
    "date": "2023-01-01",
    "description": "Company website; year only.",
-   "source_url": "https://iktos.ai"
+   "source_url": "https://iktos.ai",
+   "type": "pivot"
+  },
+  {
+   "id": "registry:establishment:82318927900016",
+   "type": "expansion",
+   "title": "Opens a site in Paris",
+   "date": "2016-10-17",
+   "description": "IKTOS (IKTOS): Opened 2016-10-17, closed 2019-06-19. Address: 61 RUE BLOMET 75015 PARIS",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "registry:establishment:82318927900016:closed",
+   "type": "other",
+   "title": "Closes its site in Paris",
+   "date": "2019-06-19",
+   "description": "IKTOS (IKTOS): site opened 2016-10-17, closed 2019-06-19.",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "registry:establishment:82318927900024",
+   "type": "expansion",
+   "title": "Opens a site in Paris",
+   "date": "2019-06-19",
+   "description": "IKTOS (IKTOS): Opened 2019-06-19, open. Address: 65 RUE DE PRONY 75017 PARIS",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "registry:establishment:82318927900032",
+   "type": "expansion",
+   "title": "Opens a site in Villebon-Sur-Yvette",
+   "date": "2022-07-01",
+   "description": "IKTOS (IKTOS): Opened 2022-07-01, closed 2026-08-03. Address: 25-27-BATIMENT B 25 AVENUE DU QUEBEC 91140 VILLEBON-SUR-YVETTE",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "registry:establishment:82318927900032:closed",
+   "type": "other",
+   "title": "Closes its site in Villebon-Sur-Yvette",
+   "date": "2026-08-03",
+   "description": "IKTOS (IKTOS): site opened 2022-07-01, closed 2026-08-03.",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "registry:establishment:82318927900040",
+   "type": "expansion",
+   "title": "Opens a site in Evry-Courcouronnes",
+   "date": "2024-06-28",
+   "description": "IKTOS (IKTOS): Opened 2024-06-28, open. Address: BATIMENT MAUPERTUIS RUE DU PERE ANDRE JARLAN 91000 EVRY-COURCOURONNES",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "registry:establishment:82318927900057",
+   "type": "expansion",
+   "title": "Opens a site in Longjumeau",
+   "date": "2026-08-03",
+   "description": "IKTOS (IKTOS): Opened 2026-08-03, open. Address: BATIMENT B9 1 E RUE PDT FRANCOIS MITTERRAND 91160 LONGJUMEAU",
+   "source_url": "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279"
+  },
+  {
+   "id": "bodacc:legal_notice:A20160212976",
+   "type": "other",
+   "title": "Company registered (Iktos)",
+   "date": "2016-10-28",
+   "description": "BODACC notice: Immatriculation d'une personne morale (B, C, D) suite à création d'un établissement principal",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20160212976"
+  },
+  {
+   "id": "bodacc:legal_notice:B20170146695",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2017-08-02",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20170146695"
+  },
+  {
+   "id": "bodacc:legal_notice:B201800211135",
+   "type": "other",
+   "title": "Change of legal form and management change (Iktos)",
+   "date": "2018-01-31",
+   "description": "BODACC notice: modification survenue sur la forme juridique et l'administration",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800211135"
+  },
+  {
+   "id": "bodacc:legal_notice:B201800211136",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2018-01-31",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800211136"
+  },
+  {
+   "id": "bodacc:legal_notice:B201901551273",
+   "type": "other",
+   "title": "Capital increase, head office move and management change (Iktos)",
+   "date": "2019-08-13",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation), l'adresse du siège, l'adresse de l'établissement et l'administration",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201901551273"
+  },
+  {
+   "id": "bodacc:legal_notice:B202100522257",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2021-03-16",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202100522257"
+  },
+  {
+   "id": "bodacc:legal_notice:B202101142040",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2021-06-13",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202101142040"
+  },
+  {
+   "id": "bodacc:legal_notice:B202101942597",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2021-10-05",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202101942597"
+  },
+  {
+   "id": "bodacc:legal_notice:B202200582010",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2022-03-23",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202200582010"
+  },
+  {
+   "id": "bodacc:legal_notice:B202201082011",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2022-06-03",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202201082011"
+  },
+  {
+   "id": "bodacc:legal_notice:B202201823570",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2022-09-20",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202201823570"
+  },
+  {
+   "id": "bodacc:legal_notice:B202202151885",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2022-11-04",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202202151885"
+  },
+  {
+   "id": "bodacc:legal_notice:B202300862395",
+   "type": "other",
+   "title": "Capital increase, change of legal form and management change (Iktos)",
+   "date": "2023-05-02",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation), la forme juridique, l'administration et le représentant permanent",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202300862395"
+  },
+  {
+   "id": "bodacc:legal_notice:B202301343348",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2023-07-13",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202301343348"
+  },
+  {
+   "id": "bodacc:legal_notice:B202401092101",
+   "type": "other",
+   "title": "Management change (Iktos)",
+   "date": "2024-06-07",
+   "description": "BODACC notice: modification survenue sur l'administration",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401092101"
+  },
+  {
+   "id": "bodacc:legal_notice:B202401141159",
+   "type": "other",
+   "title": "Management change (Iktos)",
+   "date": "2024-06-14",
+   "description": "BODACC notice: modification survenue sur l'administration",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401141159"
+  },
+  {
+   "id": "bodacc:legal_notice:B202401141160",
+   "type": "other",
+   "title": "Capital increase (Iktos)",
+   "date": "2024-06-14",
+   "description": "BODACC notice: modification survenue sur le capital (augmentation)",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401141160"
+  },
+  {
+   "id": "bodacc:legal_notice:B202401192173",
+   "type": "other",
+   "title": "Management change (Iktos)",
+   "date": "2024-06-21",
+   "description": "BODACC notice: modification survenue sur le représentant permanent",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401192173"
+  },
+  {
+   "id": "bodacc:legal_notice:B202600726264",
+   "type": "other",
+   "title": "Management change (Iktos)",
+   "date": "2026-04-15",
+   "description": "BODACC notice: modification survenue sur l'administration",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202600726264"
+  },
+  {
+   "id": "bodacc:legal_notice:B202601791944",
+   "type": "other",
+   "title": "Management change (Iktos)",
+   "date": "2026-09-18",
+   "description": "BODACC notice: modification survenue sur l'administration",
+   "source_url": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202601791944"
+  },
+  {
+   "id": "dab24d30-1f56-4338-85ec-0c10395e849c",
+   "type": "acquisition",
+   "title": "Iktos acquires Synsight",
+   "date": "2024-07-08",
+   "description": "Iktos bought Synsight (Évry); price not disclosed.",
+   "source_url": "https://debiopharm.com/?p=15604"
   }
  ],
  "grants": [
@@ -146,10 +392,32 @@
  ],
  "articles_count": 0,
  "known_urls": [
+  "https://annuaire-entreprises.data.gouv.fr/entreprise/823189279",
   "https://cordis.europa.eu/project/id/101005077",
   "https://cordis.europa.eu/project/id/101217538",
   "https://cordis.europa.eu/project/id/831472",
+  "https://debiopharm.com/?p=15604",
   "https://iktos.ai",
-  "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982"
+  "https://www.bodacc.fr/annonce/detail-annonce/A/20260203/4982",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20160212976",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B20170146695",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800211135",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201800211136",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B201901551273",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202100522257",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202101142040",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202101942597",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202200582010",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202201082011",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202201823570",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202202151885",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202300862395",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202301343348",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401092101",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401141159",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401141160",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202401192173",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202600726264",
+  "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:B202601791944"
  ]
 }

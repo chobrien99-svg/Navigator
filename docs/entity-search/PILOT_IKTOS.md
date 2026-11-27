@@ -43,3 +43,18 @@ All eight sources ran `ok` in about two minutes: **73 findings**, **6 already in
 Notice titles were rewritten into plain English (e.g. "Capital increase (Iktos)", "Management change (NVIDIA Ltd)"), and the loader now accepts an editor's `title_override` in `decisions.json`. Two NVIDIA "sites" that were really foreign head offices (UK and Hong Kong, listed by the register as "abroad") are now rejected by default.
 
 Applied as `supabase/migrations/phase38/30_atlas_entity_nvidia.sql` (29 events, NVIDIA Singapore's French registration, 1 paper) and `31_atlas_entity_iktos.sql` (27 events). Checked after loading: the rows in the database hash-match the migration files.
+
+## Capital check (27 November 2026)
+
+Comparing the share capital in Iktos's BODACC notices with its funding rounds in Navigator:
+
+| Notice | Share capital | Change | Explained by |
+|---|---|---|---|
+| Aug 2017 | €12,870 → €14,449 | +12% | Seed, June 2017 |
+| Jan 2018 | → €16,352 | +13% | **Nothing**: added to the Radar queue as a pending lead |
+| Aug 2019 | → €19,849 | +21% | Seed, 2019 |
+| 2021–2022 (7 notices), Jul 2023 | small steps | under 0.3% each | Not rounds (option exercises) |
+| May 2023 | → €56,291 | +181% | Series A, March 2023 (€15.5M) |
+| Jun 2024 | → €64,913 | +15% | **Synsight acquisition** (8 July 2024), which Navigator lacked: now added (`phase38/32`) |
+
+The Synsight deal is confirmed by Debiopharm's press release. The register also shows Iktos opening a site in Évry (where Synsight was based) on 28 June 2024. For January 2018, note that Navigator records Iktos joining the Agoranov incubator in February 2018. The tool now runs this check automatically; on the rerun (`2026-11-27`) it reproduced the table above exactly.

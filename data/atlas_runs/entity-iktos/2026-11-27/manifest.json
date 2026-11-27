@@ -1,0 +1,99 @@
+{
+ "entity": {
+  "key": "iktos",
+  "display_name": "Iktos",
+  "navigator_slug": "iktos",
+  "names": [
+   "Iktos"
+  ],
+  "name_exclusions": [],
+  "sirens": [
+   "823189279"
+  ],
+  "scanr_ids": [],
+  "ror_ids": [],
+  "focus_country": "FR",
+  "product_terms": [],
+  "hal_struct_ids": [],
+  "notes": "Second pilot (18 Nov 2026). AI drug-discovery start-up, Paris; receivership opened 6 Oct 2026. Baseline: TechBio research (data/techbio_france_2026)."
+ },
+ "started_at": "2026-11-27T23:06:27Z",
+ "finished_at": "2026-11-27T23:09:55Z",
+ "sources": {
+  "navigator": {
+   "status": "ok",
+   "export": "navigator_export.json",
+   "exported_at": "2026-11-27T23:06:07.408389+00:00",
+   "records": 44
+  },
+  "registry": {
+   "status": "ok",
+   "sirens_requested": 1,
+   "sirens_found": 1,
+   "errors": []
+  },
+  "bodacc": {
+   "status": "ok",
+   "sirens_requested": 1,
+   "sirens_fetched": 1,
+   "notices": 30,
+   "errors": []
+  },
+  "scanr_projects": {
+   "status": "ok",
+   "dump": "projects_denormalized.jsonl.gz",
+   "records_scanned": 173614,
+   "projects_found": 4
+  },
+  "patents": {
+   "status": "ok",
+   "dump": "patents_denormalized.jsonl.gz",
+   "records_scanned": 248417,
+   "patents": 1
+  },
+  "hal": {
+   "status": "ok",
+   "structures": 3,
+   "papers": 7,
+   "funding_mentions": 0
+  },
+  "lobbying": {
+   "status": "ok",
+   "files": [
+    "hatvp_info_2026-11.csv.gz",
+    "hatvp_actions_2026-11.csv.gz"
+   ],
+   "findings": 0
+  },
+  "procurement": {
+   "status": "ok",
+   "file": "decp_2026-11.csv.gz",
+   "rows_scanned": 3480411,
+   "contracts": 0
+  },
+  "capital_check": {
+   "status": "ok",
+   "increases_checked": 5,
+   "matched_round": 3,
+   "matched_deal": 1,
+   "unexplained": 1,
+   "threshold_pct": 5.0
+  }
+ },
+ "findings": 107,
+ "findings_by_type": {
+  "capital_increase": 5,
+  "establishment": 5,
+  "eu_project": 4,
+  "financials": 1,
+  "hal_structure": 3,
+  "legal_entity": 1,
+  "legal_notice": 30,
+  "navigator_record": 44,
+  "officer": 6,
+  "patent": 1,
+  "research_paper": 7
+ },
+ "needs_review": 11,
+ "already_in_navigator": 42
+}

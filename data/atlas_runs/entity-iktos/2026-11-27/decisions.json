@@ -1,0 +1,644 @@
+{
+ "capital_check:capital_increase:B20170146695": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "capital_increase",
+  "title": "Iktos: share capital up 12% (€12,870 → €14,449)"
+ },
+ "capital_check:capital_increase:B201800211136": {
+  "decision": "accept",
+  "reason": "unexplained share issue: goes to the Radar review queue as a pending lead",
+  "type": "capital_increase",
+  "title": "Iktos: share capital up 13% (€14,449 → €16,352)"
+ },
+ "capital_check:capital_increase:B201901551273": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "capital_increase",
+  "title": "Iktos: share capital up 21% (€16,352 → €19,849)"
+ },
+ "capital_check:capital_increase:B202300862395": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "capital_increase",
+  "title": "Iktos: share capital up 181% (€20,040 → €56,291)"
+ },
+ "capital_check:capital_increase:B202401141160": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "capital_increase",
+  "title": "Iktos: share capital up 15% (€56,437 → €64,913)"
+ },
+ "registry:establishment:82318927900016": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "establishment",
+  "title": "IKTOS (IKTOS): site in PARIS"
+ },
+ "registry:establishment:82318927900024": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "establishment",
+  "title": "IKTOS (IKTOS): site in PARIS"
+ },
+ "registry:establishment:82318927900032": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "establishment",
+  "title": "IKTOS (IKTOS): site in VILLEBON-SUR-YVETTE"
+ },
+ "registry:establishment:82318927900040": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "establishment",
+  "title": "IKTOS (IKTOS): site in EVRY-COURCOURONNES"
+ },
+ "registry:establishment:82318927900057": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "establishment",
+  "title": "IKTOS (IKTOS): site in LONGJUMEAU"
+ },
+ "scanr_projects:eu_project:831472": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "MELLODDY: MachinE Learning Ledger Orchestration for Drug DiscoverY"
+ },
+ "scanr_projects:eu_project:101005077": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "CARE: Corona Accelerated R&D in Europe"
+ },
+ "scanr_projects:eu_project:101197269": {
+  "decision": "pending",
+  "reason": "no partner in the focus country",
+  "type": "eu_project",
+  "title": "AIR-3D: Iktos Robotics: Integrating AI and Robotics for efficient Drug Design and Discovery"
+ },
+ "scanr_projects:eu_project:101217538": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "eu_project",
+  "title": "AIR-3D: Iktos Robotics: Integrating AI and Robotics for efficient Drug Design and Discovery"
+ },
+ "registry:financials:823189279:2022": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "financials",
+  "title": "IKTOS (IKTOS): 2022 accounts"
+ },
+ "hal:hal_structure:1192719": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "Iktos"
+ },
+ "hal:hal_structure:1221456": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "Iktos SAS, 75017 Paris, France"
+ },
+ "hal:hal_structure:1645589": {
+  "decision": "skip",
+  "reason": "goes into the entity file, not the database",
+  "type": "hal_structure",
+  "title": "Iktos AI, Paris"
+ },
+ "registry:legal_entity:823189279": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_entity",
+  "title": "IKTOS (IKTOS)"
+ },
+ "bodacc:legal_notice:A20160212976": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Créations: Iktos"
+ },
+ "bodacc:legal_notice:B20170146695": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B201800211135": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B201800211136": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C2018012911079": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:C201901209361": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B201901551273": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C202001483931": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B202100522257": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202101142040": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C202101385339": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B202101942597": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202200582010": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202201082011": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C202201396139": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B202201823570": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202202151885": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202300862395": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202301343348": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C202301415910": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B202401092101": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202401141159": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202401141160": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:B202401192173": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C202401487183": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:C202600631310": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B202600726264": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:C202601789846": {
+  "decision": "reject",
+  "reason": "routine filing of annual accounts",
+  "type": "legal_notice",
+  "title": "Dépôts des comptes: Iktos"
+ },
+ "bodacc:legal_notice:B202601791944": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Modifications diverses: Iktos"
+ },
+ "bodacc:legal_notice:A202602034982": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "legal_notice",
+  "title": "Procédures collectives: Iktos"
+ },
+ "navigator:navigator_record:grant:5d5f4ba6-fc2e-4937-8068-f55de1420bb7": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon 2020 – CARE (Research and Innovation action)"
+ },
+ "navigator:navigator_record:grant:bb7b2e1d-9636-44f8-a0e3-9376db39bebf": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon 2020 – MELLODDY (Research and Innovation action)"
+ },
+ "navigator:navigator_record:legal_entity:823189279": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "IKTOS"
+ },
+ "navigator:navigator_record:patent:WO2024062085WEP": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "PROCÉDÉS ET OUTILS POUR DÉTECTER L'IMPACT DE COMPOSÉS SUR DES INTERACTIONS PROTÉ"
+ },
+ "navigator:navigator_record:patent:WO2025000524WIB": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "COUPLAGE D'UN MODÈLE GÉNÉRATIF 3D À UN MODULE D'OPTIMISATION DE CONFORMATION SOU"
+ },
+ "navigator:navigator_record:patent:WO2025088398WEP": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "INHIBITEURS DE MTHFD2 POLYCYCLIQUES ET LEURS UTILISATIONS"
+ },
+ "navigator:navigator_record:program:e35be236-b798-40c2-816d-4a2b03e458ac": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Member of HEC Challenge+"
+ },
+ "navigator:navigator_record:relationship:60bd0ed1-9c18-4704-b209-4e3e7c8af420": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to partnered_with Inserm"
+ },
+ "navigator:navigator_record:relationship:913a591c-2e4a-44ec-810a-d198678e4abd": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to partnered_with Université Évry Paris-Saclay"
+ },
+ "navigator:navigator_record:relationship:e885b078-c8cb-42be-9e08-4dd4fe9f286e": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to partnered_with Synsight Genopole Entreprises"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900016": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Opens a site in Paris"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:A20160212976": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Company registered (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B20170146695": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B201800211135": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Change of legal form and management change (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B201800211136": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:relationship:e836256a-057c-43a5-8718-e26d0aa147c5": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to incubated_by AGORANOV"
+ },
+ "navigator:navigator_record:project:eu-melloddy": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "MELLODDY"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900016:closed": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Closes its site in Paris"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900024": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Opens a site in Paris"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B201901551273": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase, head office move and management change (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202100522257": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202101142040": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202101942597": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202200582010": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202201082011": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900032": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Opens a site in Villebon-Sur-Yvette"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202201823570": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202202151885": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:652fe038-e40a-4de6-b7d2-d8b2b371a69c": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Iktos starts in-house drug discovery"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202300862395": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase, change of legal form and management change (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202301343348": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202401092101": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Management change (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202401141159": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Management change (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202401141160": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Capital increase (Iktos)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202401192173": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Management change (Iktos)"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900040": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Opens a site in Evry-Courcouronnes"
+ },
+ "navigator:navigator_record:event:dab24d30-1f56-4338-85ec-0c10395e849c": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Iktos acquires Synsight"
+ },
+ "navigator:navigator_record:relationship:3ac506af-4a0d-4450-9940-3ec88343dfcd": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "to acquired Synsight Genopole Entreprises"
+ },
+ "navigator:navigator_record:grant:b5a37003-8571-4792-a0f4-6b324b833477": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Horizon Europe – AIR-3D (EIC Accelerator)"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202600726264": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Management change (Iktos)"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900032:closed": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Closes its site in Villebon-Sur-Yvette"
+ },
+ "navigator:navigator_record:event:registry:establishment:82318927900057": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Opens a site in Longjumeau"
+ },
+ "navigator:navigator_record:event:bodacc:legal_notice:B202601791944": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Management change (Iktos)"
+ },
+ "navigator:navigator_record:event:93fd3287-ce8e-47b5-ab60-6833aeacb461": {
+  "decision": "skip",
+  "reason": "already stored",
+  "type": "navigator_record",
+  "title": "Iktos placed in receivership (redressement judiciaire)"
+ },
+ "registry:officer:823189279:CHRISTIAN DANIEL UHRICH:Administrateur": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "officer",
+  "title": "CHRISTIAN DANIEL UHRICH"
+ },
+ "registry:officer:823189279:DEBIOPHARM INNOVATION FUND SA:Administrateur": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "officer",
+  "title": "DEBIOPHARM INNOVATION FUND SA"
+ },
+ "registry:officer:823189279:LISON CHOURAKI AUDIT:Commissaire aux comptes titulaire": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "officer",
+  "title": "LISON CHOURAKI AUDIT"
+ },
+ "registry:officer:823189279:QUENTIN HUBERT SIMON PERRON:Administrateur": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "officer",
+  "title": "QUENTIN HUBERT SIMON PERRON"
+ },
+ "registry:officer:823189279:ROMAN FLECK:Président du conseil d’administration": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "officer",
+  "title": "ROMAN FLECK"
+ },
+ "registry:officer:823189279:YANN CEDRIC GASTON-MATHE (GASTON):Directeur Général": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "officer",
+  "title": "YANN CEDRIC GASTON-MATHE (GASTON)"
+ },
+ "patents:patent:86330318": {
+  "decision": "skip",
+  "reason": "already in Navigator",
+  "type": "patent",
+  "title": "METHODS AND TOOLS FOR DETECTING THE IMPACT OF COMPOUNDS ON PROTEIN, RNA OR DNA INTERACTIONS"
+ },
+ "hal:research_paper:hal-04495209": {
+  "decision": "pending",
+  "reason": "medium match on Iktos",
+  "type": "research_paper",
+  "title": "Advancing Drug-Target Interactions Prediction: Leveraging a Large-Scale Dataset with a Rapid and Robust Chemogenomic Alg"
+ },
+ "hal:research_paper:hal-04879123": {
+  "decision": "pending",
+  "reason": "medium match on Iktos SAS, 75017 Paris, France",
+  "type": "research_paper",
+  "title": "Drug–Target Interactions Prediction at Scale: The Komet Algorithm with the LCIdb Dataset"
+ },
+ "hal:research_paper:hal-05363718": {
+  "decision": "pending",
+  "reason": "medium match on Iktos AI, Paris",
+  "type": "research_paper",
+  "title": "Targeting WEE1 kinase as a therapeutic strategy in ATIP3-deficient breast cancers"
+ },
+ "hal:research_paper:hal-05354416": {
+  "decision": "pending",
+  "reason": "medium match on Iktos AI, Paris",
+  "type": "research_paper",
+  "title": "Discovery and chemical biology of CDK8 inhibitors reveals insights for kinase inhibitor development"
+ },
+ "hal:research_paper:hal-05762253": {
+  "decision": "pending",
+  "reason": "medium match on Iktos",
+  "type": "research_paper",
+  "title": "Deep Learning for BioImaging: What Are We Really Learning?"
+ },
+ "hal:research_paper:hal-05501580": {
+  "decision": "pending",
+  "reason": "medium match on Iktos",
+  "type": "research_paper",
+  "title": "Large scale compound selection guided by cell painting reveals activity cliffs and functional relationships"
+ },
+ "hal:research_paper:hal-05648874": {
+  "decision": "pending",
+  "reason": "medium match on Iktos",
+  "type": "research_paper",
+  "title": "RNA-binding protein diversity and NLS arginines regulate FUS mixing in mRNA-rich compartments"
+ }
+}
